@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour
         Debug.Log("Saliendo del juego...");
 
         #if UNITY_EDITOR
-            UnityEditor.EditorApplication.ExitPlaymode(); //  salir en el Editor de Unity
+            UnityEditor.EditorApplication.ExitPlaymode(); 
         #else
             Application.Quit(); // Salir juego app
         #endif

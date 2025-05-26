@@ -5,26 +5,26 @@ public class Enemigo : MonoBehaviour
     public float detectionRadius = 5.0f;
     public float attackRadius = 1.0f;
     public float speed = 2.0f;
+    public float attackCooldown = 1.0f;  
 
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
     private bool atacando = false;
-    private Transform player; // Referencia persistente al Player
+    private bool enCooldown = false;
+    private Transform player;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        // Inicializar animaciones en estado Idle
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsAttacking", false);
     }
 
     void Update()
     {
-        // Buscar al Player si aún no está referenciado
         if (player == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -34,7 +34,7 @@ public class Enemigo : MonoBehaviour
             }
             else
             {
-                return; // Si no hay Player, salir del Update
+                return;
             }
         }
 
@@ -47,7 +47,7 @@ public class Enemigo : MonoBehaviour
 
             if (distanceToPlayer < attackRadius)
             {
-                if (!atacando)
+                if (!atacando && !enCooldown)
                 {
                     atacando = true;
                     animator.SetBool("IsWalking", false);
@@ -75,7 +75,13 @@ public class Enemigo : MonoBehaviour
 
     void AtacarJugador()
     {
-        if (player == null) return;
+        atacando = false;
+
+        if (player == null)
+        {
+            animator.SetBool("IsAttacking", false);
+            return;
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -86,19 +92,33 @@ public class Enemigo : MonoBehaviour
             {
                 playerController.RecibeDanio(transform.position, 1);
             }
+
+            StartCoroutine(IniciarCooldown());
         }
         else
         {
             CancelarAtaque();
         }
+
+        animator.SetBool("IsAttacking", false);
     }
 
     void CancelarAtaque()
     {
-        atacando = false;
+        if (atacando)
+        {
+            atacando = false;
+            CancelInvoke(nameof(AtacarJugador));
+        }
+
         animator.SetBool("IsAttacking", false);
-        animator.SetBool("IsWalking", false);
-        CancelInvoke(nameof(AtacarJugador));
+    }
+
+    System.Collections.IEnumerator IniciarCooldown()
+    {
+        enCooldown = true;
+        yield return new WaitForSeconds(attackCooldown);
+        enCooldown = false;
     }
 
     void OnDrawGizmosSelected()
@@ -109,12 +129,47 @@ public class Enemigo : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+   private bool estaMuerto = false;  
+
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (estaMuerto) return;
+
+    if (collision.gameObject.CompareTag("Player") && collision.contacts[0].normal.y < 0)
     {
-        if (collision.gameObject.CompareTag("Player") && collision.contacts[0].normal.y < 0)
-        {
-            Destroy(gameObject);
-        }
+        estaMuerto = true;
+        CancelarAtaque();   
+        StopAllCoroutines(); 
+        StartCoroutine(SquashAndDisappear());
     }
+}
+
+private System.Collections.IEnumerator SquashAndDisappear()
+{
+    // Cambiar a color rojo por daño
+    SpriteRenderer sr = GetComponent<SpriteRenderer>();
+    if (sr != null)
+    {
+        sr.color = Color.red;
+    }
+
+    float duration = 0.2f;
+    float timer = 0f;
+
+    Vector3 originalScale = transform.localScale;
+    Vector3 targetScale = new Vector3(originalScale.x * 1.5f, 0.1f, originalScale.z);
+
+    while (timer < duration)
+    {
+        transform.localScale = Vector3.Lerp(originalScale, targetScale, timer / duration);
+        timer += Time.deltaTime;
+        yield return null;
+    }
+
+    transform.localScale = targetScale;
+    yield return new WaitForSeconds(0.2f); 
+
+    Destroy(gameObject);
+}
 }
 

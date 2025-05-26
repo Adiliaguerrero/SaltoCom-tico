@@ -4,29 +4,29 @@ using System.Collections;
 
 public class DeathZone : MonoBehaviour
 {
-    public GameObject gameOverPanel; // Panel de Game Over
+    public GameObject gameOverPanel;  
 
     private void OnTriggerEnter2D(Collider2D other)
 {
     if (other.CompareTag("Player"))
     {
         Debug.Log("Jugador ha tocado la zona de muerte");
-        Destroy(other.gameObject); // Destruye al jugador
-        StartCoroutine(ShowGameOver()); // Inicia la cuenta regresiva
+        Destroy(other.gameObject);  
+        StartCoroutine(ShowGameOver());  
     }
 }
 
 
     IEnumerator ShowGameOver()
     {
-        yield return new WaitForSeconds(2f); // Espera 3 segundos
-        gameOverPanel.SetActive(true); // Muestra el Panel de Game Over
-        Time.timeScale = 0f; // Pausa el juego
+        yield return new WaitForSeconds(2f); 
+        gameOverPanel.SetActive(true); 
+        Time.timeScale = 0f;  
     }
 
     public void RestartGame()
     {
-        Time.timeScale = 1f; // Reactiva el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia la escena
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 }

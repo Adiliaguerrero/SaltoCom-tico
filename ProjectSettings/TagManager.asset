@@ -3,18 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Suelo
+  - Enemigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Fondo
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Suelo
+  - Jugador
+  - Enemiigos
+  - UI
   - 
   - 
   - 

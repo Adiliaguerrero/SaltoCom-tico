@@ -30,16 +30,16 @@ public class AparicionPersonaje : MonoBehaviour
             return;
         }
 
-        // Instanciar el personaje en la posición de aparición
+        // Instanciar el personaje 
         GameObject personajeInstanciado = Instantiate(personajes[indicePersonaje], puntoAparicion.position, Quaternion.identity);
         
-        // Asegurar que la escala sea correcta
+ 
         personajeInstanciado.transform.localScale = Vector3.one;
 
-        // Verificar posición después de instanciar
+        
         Debug.Log("Personaje instanciado en: " + personajeInstanciado.transform.position);
 
-        // Verificar si el personaje tiene PlayerController
+         
         PlayerController playerController = personajeInstanciado.GetComponent<PlayerController>();
         if (playerController != null)
         {
@@ -50,7 +50,7 @@ public class AparicionPersonaje : MonoBehaviour
             Debug.LogWarning("El personaje instanciado no tiene un PlayerController.");
         }
 
-        // Configurar la cámara para seguir al personaje
+        
         if (camara != null)
         {
             Camara camaraScript = camara.GetComponent<Camara>();

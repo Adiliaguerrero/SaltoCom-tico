@@ -6,10 +6,11 @@ public class PlayerController : MonoBehaviour
     public float fuerzaSalto = 12f;
     public Animator animator;
     public Rigidbody2D rb;
+    public bool puedeMoverse = true;
+
 
     private bool enSuelo = true;
     private Transform detectorSuelo;
-    private LayerMask capaSuelo;
 
     [SerializeField] private float vidaMaxima = 5f;
     public float vida = 5f;
@@ -19,25 +20,21 @@ public class PlayerController : MonoBehaviour
     public float FuerzaRebote = 5f;
     public BarraVida barraVida;
 
+    private CameraShake cameraShake;
+
     void Start()
     {
-        // Buscar automáticamente detector de suelo si no está asignado
         detectorSuelo = transform.Find("DetectorSuelo");
         if (detectorSuelo == null)
         {
             Debug.LogError("No se encontró DetectorSuelo en el personaje instanciado.");
         }
 
-        // Asignar capa de suelo dinámicamente
-        capaSuelo = LayerMask.GetMask("Suelo");
-
-        // Buscar la barra de vida si no está asignada
         if (barraVida == null)
         {
             barraVida = FindObjectOfType<BarraVida>();
         }
 
-        // Asignar el Animator automáticamente si no se asignó en el Inspector
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -51,83 +48,127 @@ public class PlayerController : MonoBehaviour
         {
             barraVida.ActualizarBarra(vida);
         }
+
+        cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    void Update()
-    {
-        if (recibiendoDanio) return;
-
-        // Comprobar si está en el suelo
-        if (detectorSuelo != null)
-        {
-            enSuelo = Physics2D.OverlapCircle(detectorSuelo.position, 0.1f, capaSuelo);
-        }
-
-        float velocidadX = Input.GetAxisRaw("Horizontal");
-
-        if (joystick != null && joystick.Horizontal != 0)
-        {
-            velocidadX = joystick.Horizontal;
-        }
-
-        rb.velocity = new Vector2(velocidadX * velocidad, rb.velocity.y);
-
-        if (animator != null)
-        {
-            animator.SetBool("Movement", velocidadX != 0);
-            animator.SetBool("Jump", !enSuelo); // Mantiene la animación de salto activa solo cuando no está en suelo
-        }
-
-        if (velocidadX > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        else if (velocidadX < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-
-        // Detectar salto
-        if (Input.GetButtonDown("Jump") && enSuelo)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
-            animator.SetTrigger("JumpTrigger"); // Se activa la animación de salto
-        }
-    }
-
-   public void RecibeDanio(Vector2 direccion, int cantDanio)
+void Update()
 {
     if (recibiendoDanio) return;
 
-    recibiendoDanio = true;
-    vida -= cantDanio;
-    vida = Mathf.Clamp(vida, 0f, vidaMaxima); // Asegura que la vida no sea menor a 0
-
-    PlayerPrefs.SetFloat("VidaJugador", vida);
-    PlayerPrefs.Save();
-
-    if (barraVida != null)
+    
+    if (!puedeMoverse)
     {
-        barraVida.ActualizarBarra(vida);
-        
-        // ⚠️ Si la vida llegó a 0, activar Game Over
-        if (vida <= 0)
+      
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        animator.SetBool("Movement", false);
+        return; 
+    }
+
+     
+    if (detectorSuelo != null)
+    {
+        Collider2D[] colisiones = Physics2D.OverlapCircleAll(detectorSuelo.position, 0.1f);
+        enSuelo = false;
+        foreach (var col in colisiones)
         {
-            barraVida.ActivarGameOver();
+            if (col.CompareTag("Suelo"))
+            {
+                enSuelo = true;
+                break;
+            }
         }
     }
-    else
+
+    float velocidadX = Input.GetAxisRaw("Horizontal");
+
+    if (joystick != null && joystick.Horizontal != 0)
     {
-        Debug.LogError("No se encontró la barra de vida en PlayerController.");
+        velocidadX = joystick.Horizontal;
     }
 
-    // Rebote del personaje al recibir daño
-    Vector2 rebote = new Vector2(transform.position.x - direccion.x, 1).normalized;
-    rb.AddForce(rebote * FuerzaRebote * cantDanio, ForceMode2D.Impulse);
+    rb.velocity = new Vector2(velocidadX * velocidad, rb.velocity.y);
 
-    Invoke(nameof(DesactivaDanio), 0.5f);
+    if (animator != null)
+    {
+        animator.SetBool("Movement", velocidadX != 0);
+        animator.SetBool("Jump", !enSuelo);
+    }
+
+    if (velocidadX > 0)
+    {
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+    else if (velocidadX < 0)
+    {
+        transform.localScale = new Vector3(-1f, 1f, 1f);
+    }
+
+     
+    bool saltoSolicitado = Input.GetButtonDown("Jump");
+
+     
+    if (Input.touchCount > 0)
+    {
+        Touch toque = Input.GetTouch(0);
+        if (toque.phase == TouchPhase.Began && toque.position.x > Screen.width / 2)
+        {
+            saltoSolicitado = true;
+        }
+    }
+
+     
+    if (Input.GetMouseButtonDown(0))
+    {
+        if (Input.mousePosition.x > Screen.width / 2)
+        {
+            saltoSolicitado = true;
+        }
+    }
+
+     
+    if (saltoSolicitado && enSuelo)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+        animator.SetTrigger("JumpTrigger");
+    }
 }
 
+
+    public void RecibeDanio(Vector2 direccion, int cantDanio)
+    {
+        if (recibiendoDanio) return;
+
+        recibiendoDanio = true;
+        vida -= cantDanio;
+        vida = Mathf.Clamp(vida, 0f, vidaMaxima);
+
+        PlayerPrefs.SetFloat("VidaJugador", vida);
+        PlayerPrefs.Save();
+
+        if (barraVida != null)
+        {
+            barraVida.ActualizarBarra(vida);
+            if (vida <= 0)
+            {
+                barraVida.ActivarGameOver();
+            }
+        }
+        else
+        {
+            Debug.LogError("No se encontró la barra de vida en PlayerController.");
+        }
+
+        Vector2 rebote = new Vector2(transform.position.x - direccion.x, 1).normalized;
+        rb.AddForce(rebote * FuerzaRebote * cantDanio, ForceMode2D.Impulse);
+
+        if (cameraShake != null)
+        {
+            cameraShake.Sacudir();
+        }
+
+        Invoke(nameof(DesactivaDanio), 0.5f);
+    }
 
     private void DesactivaDanio()
     {
@@ -154,4 +195,32 @@ public class PlayerController : MonoBehaviour
             barraVida.ActualizarBarra(vida);
         }
     }
+
+
+    public void RestaurarVidaParcial(float cantidad)
+{
+    vida += cantidad;
+    vida = Mathf.Clamp(vida, 0f, vidaMaxima); // Evita que supere el máximo
+
+    PlayerPrefs.SetFloat("VidaJugador", vida);
+    PlayerPrefs.Save();
+
+    if (barraVida != null)
+    {
+        barraVida.ActualizarBarra(vida);
+    }
+}
+ 
+  
+#if UNITY_EDITOR
+    
+    private void OnDrawGizmosSelected()
+    {
+        if (detectorSuelo != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(detectorSuelo.position, 0.1f);
+        }
+    }
+#endif
 }
