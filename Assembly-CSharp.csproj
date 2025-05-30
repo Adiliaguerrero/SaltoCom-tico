@@ -5,14 +5,14 @@
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
   </PropertyGroup>
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
-  <PropertyGroup>
- <GenerateDocumentationFile>true</GenerateDocumentationFile>
- <DocumentationFile>bin\YourApi.XML</DocumentationFile>
- <NoWarn>$(NoWarn);1591</NoWarn>
-</PropertyGroup>
   <ItemGroup>
     <ProjectCapability Include="Unity" />
   </ItemGroup>
+  <PropertyGroup>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <DocumentationFile>bin\YourApi.XML</DocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
+</PropertyGroup>
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -100,8 +100,8 @@
     <Compile Include="Assets\Actividades\Paneles1.cs" />
     <Compile Include="Assets\Actividades\Trivia4.cs" />
     <Compile Include="Assets\Script\Escena.cs" />
-    <Compile Include="Assets\Script\BarraVida.cs" />
     <Compile Include="Assets\Script\Configuracion.cs" />
+    <Compile Include="Assets\Script\BarraVida.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Script\CargaBarra.cs" />
     <Compile Include="Assets\Script\Ninja.cs" />
