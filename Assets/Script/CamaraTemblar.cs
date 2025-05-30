@@ -41,8 +41,12 @@ using System.Collections;
     /// <returns>
     /// IEnumerator para el manejo de la corrutina.
     /// </returns>
-
-
+    /// 
+    ///<remarks>
+    /// Durante la duración definida, la cámara se mueve aleatoriamente dentro de un rango determinado por <see cref="magnitud"/>.
+    /// Se utiliza <see cref="Random.Range(float, float)"/> para calcular los desplazamientos en los ejes X y Y.
+    /// El uso de <see cref="Time.deltaTime"/> garantiza que el efecto sea consistente independientemente de la tasa de cuadros.
+    /// </remarks>
     private IEnumerator Shake()
     {
         Vector3 posicionOriginal = transform.localPosition;
