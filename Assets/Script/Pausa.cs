@@ -38,6 +38,9 @@ public class Pausa : MonoBehaviour
         /// <summary>
         /// Reanuda el juego, ocultando el menú de pausa y restableciendo la escala de tiempo.
         /// </summary>
+       /// <remarks>
+        /// Establece <see cref="Time.timeScale"/> a 1 para reanudar la física y animaciones.
+        /// </remarks>
     public void Reanudar()
     {
         MenuPausa.SetActive(false);
