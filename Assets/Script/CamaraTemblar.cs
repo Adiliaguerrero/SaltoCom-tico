@@ -12,16 +12,19 @@ using System.Collections;
     /// </remmark>
     public class CameraShake : MonoBehaviour
 {
-    /// <summary>
-    ///Duración total del efecto de sacudida en segundos.
-    /// </summary>
+        /// <summary>
+        ///Duración total del efecto de sacudida en segundos.
+        /// </summary>
     public float duracion = 0.2f;
 
-    /// <summary>
-    /// Intensidad máxima del movimiento durante la sacudida
-    /// </summary> 
+        /// <summary>
+        /// Intensidad máxima del movimiento durante la sacudida
+        /// </summary> 
     public float magnitud = 0.3f;
 
+        /// <summary>
+        /// Inicia el efecto de sacudida de la cámara.
+        /// </summary>
     public void Sacudir()
     {
         StartCoroutine(Shake());
