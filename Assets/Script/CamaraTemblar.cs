@@ -25,6 +25,11 @@ using System.Collections;
         /// <summary>
         /// Inicia el efecto de sacudida de la cámara.
         /// </summary>
+        /// 
+        /// <remarks>
+        /// Este método inicia la corrutina <see cref="Shake"/> que maneja el efecto para que sacuda.
+        /// Puede ser llamado desde otros scripts cuando se necesite sacudir la cámara.
+        /// </remarks>
     public void Sacudir()
     {
         StartCoroutine(Shake());
