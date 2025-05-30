@@ -10,6 +10,9 @@ using UnityEngine;
     /// </remarks>
 public class Espina : MonoBehaviour
 {
+    /// <summary>
+    /// Cantidad de daño que inflige la espina al jugador.
+    /// </summary>
     public int danio = 1;
 
     private void OnCollisionEnter2D(Collision2D collision)
