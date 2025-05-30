@@ -11,6 +11,9 @@ using UnityEngine;
 
 public class Pausa : MonoBehaviour
 {
+    /// <summary>
+    /// Referencia al GameObject que contiene el menú de pausa (UI).
+    /// </summary>
     public GameObject MenuPausa;
     public bool JuegoPausado = false;
 
