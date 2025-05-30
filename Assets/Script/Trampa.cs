@@ -1,8 +1,13 @@
 using UnityEngine;
 
-/// <summary>
-/// Controla el comportamiento de una trampa con espinas que daña al jugador al colisionar desde arriba.
-/// </summary>
+    /// <summary>
+    /// Controla el comportamiento de una trampa con espinas que daña al jugador al colisionar desde arriba.
+    /// </summary>
+    /// 
+    /// <remarks>
+    /// Requiere que el jugador tenga un componente <see cref="PlayerController"/> con el método 
+    /// <see cref="PlayerController.RecibeDanio(Vector2, int)"/> implementado.
+    /// </remarks>
 public class Espina : MonoBehaviour
 {
     public int danio = 1;
