@@ -51,7 +51,10 @@ public class Pausa : MonoBehaviour
     /// <summary>
     /// Pausa el juego, mostrando el menú de pausa y congelando la escala de tiempo.
     /// </summary>
-    
+    /// 
+    /// <remarks>
+    /// Establece <see cref="Time.timeScale"/> a 0 para pausar la física y animaciones.
+    /// </remarks>
     public void Pausar()
     {
         MenuPausa.SetActive(true);
