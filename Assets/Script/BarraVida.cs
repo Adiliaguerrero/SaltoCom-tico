@@ -7,7 +7,7 @@ public class BarraVida : MonoBehaviour
     private float VidaMaxima = 5f;
 
     public GameObject panelGameOver;     
-    public GameObject imagenAEliminar;    
+    public GameObject imagenAEliminar;     
 
     public void ActualizarBarra(float vidaActual)
     {
@@ -36,7 +36,7 @@ public class BarraVida : MonoBehaviour
 
         if (imagenAEliminar != null)
         {
-            Destroy(imagenAEliminar);  // Destruye la imagen al Game Over
+            Destroy(imagenAEliminar);  
         }
         else
         {

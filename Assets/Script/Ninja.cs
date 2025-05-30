@@ -8,7 +8,7 @@ public class Ninja : MonoBehaviour
     public float attackRadius = 1.0f;
     public float speed = 2.0f;
     public float attackCooldown = 1.0f;
-    public float tiempoAnimacionMuerte = 0.8f;  
+    public float tiempoAnimacionMuerte = 0.8f; // Duración de la animación de muerte
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -128,26 +128,26 @@ public class Ninja : MonoBehaviour
     }
 private void OnCollisionEnter2D(Collision2D collision)
 {
-    
+    // Si ya está muerto, no hacer nada
     if (estaMuerto) return;
 
-     
+    // Verifica si el jugador lo tocó desde arriba
     if (collision.gameObject.CompareTag("Player") && collision.contacts[0].normal.y < -0.5f)
     {
         Debug.Log("¡Enemigo murió!");
 
         estaMuerto = true;
-        CancelarAtaque();  
+        CancelarAtaque(); // Asegúrate de tener este método definido o elimínalo si no aplica
         StopAllCoroutines();
 
- 
+        // Activar animación de muerte (Trigger)
         animator.SetTrigger("Morir");
 
-        
+        // Desactivar colisiones para que no vuelva a activarse
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
-        
+        // Detener cualquier movimiento
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -155,20 +155,20 @@ private void OnCollisionEnter2D(Collision2D collision)
             rb.bodyType = RigidbodyType2D.Static;
         }
 
-        
+        // Iniciar desvanecimiento
         StartCoroutine(DesvanecerYDestruir());
     }
 }
 
 private IEnumerator DesvanecerYDestruir()
 {
-    
+    // Esperar duración de la animación de muerte (ajústalo si es necesario)
     yield return new WaitForSeconds(1.0f);
 
     SpriteRenderer sr = GetComponent<SpriteRenderer>();
     if (sr != null)
     {
-        float duration = 1.5f; 
+        float duration = 1.5f; // segundos para desaparecer
         float elapsed = 0f;
 
         Color originalColor = sr.color;
@@ -182,7 +182,7 @@ private IEnumerator DesvanecerYDestruir()
         }
     }
 
-    
+    // Destruir el objeto al final
     Destroy(gameObject);
 }
 

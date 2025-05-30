@@ -17,17 +17,17 @@ public class Paneles1 : MonoBehaviour
 
     void Start()
     {
-        // Desactivar todos los obejtos al inicio
+        
         panel1.SetActive(false);
         panel2.SetActive(false);
         panel3.SetActive(false);
 
-         
+      
         joystick.SetActive(true);
         imagen1.SetActive(true);
         imagen2.SetActive(true);
 
- 
+        
         GameObject jugador = GameObject.FindGameObjectWithTag("Player");
         if (jugador != null)
         {
@@ -36,7 +36,7 @@ public class Paneles1 : MonoBehaviour
         }
     }
 
-    public void SiguienteTrivia()
+  public void SiguienteTrivia()
 {
     
     GameObject jugador = GameObject.FindGameObjectWithTag("Player");
@@ -60,11 +60,18 @@ public class Paneles1 : MonoBehaviour
         panel2.SetActive(false);
         panel3.SetActive(false);
 
+        
         joystick.SetActive(true);
+        FixedJoystick joyComponent = joystick.GetComponent<FixedJoystick>();
+        if (joyComponent != null)
+        {
+            joyComponent.enabled = true;
+        }
+
         imagen1.SetActive(true);
         imagen2.SetActive(true);
 
-        // Restaurar movimiento al jugador
+     
         if (rbJugador != null)
             rbJugador.bodyType = RigidbodyType2D.Dynamic;
 
@@ -90,7 +97,7 @@ public class Paneles1 : MonoBehaviour
         imagen1.SetActive(!panelActivo);
         imagen2.SetActive(!panelActivo);
 
-        
+      
         if (rbJugador != null)
             rbJugador.bodyType = panelActivo ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
 

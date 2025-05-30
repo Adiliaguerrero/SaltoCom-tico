@@ -23,6 +23,9 @@ public class SistemaDialogo : MonoBehaviour
     [Header("Joystick")]
     public GameObject joystickUI;
 
+    [Header("Audio")]
+    public AudioClip sonidoPanel;  
+
     void Start()
     {
         panelDialogo.SetActive(false);
@@ -59,7 +62,7 @@ public class SistemaDialogo : MonoBehaviour
             }
         }
 
-        // Ocultar y desactivar joystick
+      
         if (joystickUI != null)
         {
             FixedJoystick joystick = joystickUI.GetComponent<FixedJoystick>();
@@ -74,8 +77,14 @@ public class SistemaDialogo : MonoBehaviour
         MostrarLinea();
     }
 
-public void MostrarLinea()
+   public void MostrarLinea()
 {
+    
+    if (sonidoPanel != null && AudioManager.instancia != null)
+    {
+        AudioManager.instancia.ReproducirSonido(sonidoPanel);
+    }
+
     string[] dialogoActual = esReaparicion ? lineasReaparicion : lineasIniciales;
 
     if (indice < dialogoActual.Length)
@@ -91,23 +100,17 @@ public void MostrarLinea()
         if (!esReaparicion)
         {
             if (rbJugadorOriginal != null)
-            {
                 rbJugadorOriginal.bodyType = RigidbodyType2D.Dynamic;
-            }
 
             if (playerController != null)
-            {
                 playerController.puedeMoverse = true;
-            }
 
             if (joystickUI != null)
             {
                 joystickUI.SetActive(true);
                 FixedJoystick joystick = joystickUI.GetComponent<FixedJoystick>();
                 if (joystick != null)
-                {
                     joystick.enabled = true;
-                }
             }
         }
 
@@ -119,11 +122,11 @@ public void MostrarLinea()
             if (nuevoDialogo != null)
             {
                 nuevoDialogo.esReaparicion = true;
-                nuevoDialogo.joystickUI = joystickUI; // Pasar referencia
+                nuevoDialogo.joystickUI = joystickUI;  
             }
         }
 
-        
+       
         if (esReaparicion)
         {
             Paneles1 trivias = FindObjectOfType<Paneles1>();
@@ -132,22 +135,15 @@ public void MostrarLinea()
                 trivias.SiguienteTrivia();
             }
 
-            if (joystickUI != null)
-            {
-                joystickUI.SetActive(true);
-                FixedJoystick joystick = joystickUI.GetComponent<FixedJoystick>();
-                if (joystick != null)
-                {
-                    joystick.enabled = true;
-                }
-            }
-
             
         }
 
         Destroy(gameObject);
     }
 }
+
+    
+
 
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -10,10 +10,11 @@ public class OpcionUnica : MonoBehaviour
     public Button[] botonesOpciones;
     public TextMeshProUGUI retroalimentacionTexto;
 
-    private string pregunta = "En la oración \"Compré lápices, cuadernos, marcadores y borradores\", ¿cuántas comas hay?";
+    public AudioClip sonidoBoton; // Asignalo desde el Inspector
 
+    private string pregunta = "En la oración \"Compré lápices, cuadernos, marcadores y borradores\", ¿cuántas comas hay?";
     private string[] opciones = { "A.Uno.", "B.Dos.", "C.Tres.", "D.Cuatro." };
-    private int indiceRespuestaCorrecta = 1; 
+    private int indiceRespuestaCorrecta = 1;
 
     void Start()
     {
@@ -37,6 +38,9 @@ public class OpcionUnica : MonoBehaviour
 
     void VerificarRespuesta(int indiceSeleccionado)
     {
+       
+        AudioManager.instancia.ReproducirSonido(sonidoBoton);
+
         if (indiceSeleccionado == indiceRespuestaCorrecta)
         {
             retroalimentacionTexto.text = "¡Correcto!";

@@ -5,7 +5,7 @@ public class ColisionadorTrigger2D : MonoBehaviour
 {
     private bool haColisionado = false;
 
-    public GameObject portalPrefab; 
+    public GameObject portalPrefab;  
     public Transform puntoDeAparicionDelPortal;  
 
     public GameObject joystickUI;  
@@ -21,39 +21,40 @@ public class ColisionadorTrigger2D : MonoBehaviour
         {
             haColisionado = true;
 
-            // Ocultar el joystick y desactivar su interactividad
+           
             if (joystickUI != null)
             {
                 FixedJoystick joystick = joystickUI.GetComponent<FixedJoystick>();
                 if (joystick != null)
                 {
-                    joystick.OnPointerUp(null);  
+                    joystick.OnPointerUp(null); 
                     joystick.enabled = false;   
                 }
                 joystickUI.SetActive(false);
             }
 
-            // Congelar personaje
+           
             rbJugador = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rbJugador != null)
             {
                 rbJugador.velocity = Vector2.zero;
                 rbJugador.bodyType = RigidbodyType2D.Static;
             }
- 
+
+            
             playerController = collision.gameObject.GetComponent<PlayerController>();
             if (playerController != null)
             {
                 playerController.puedeMoverse = false;
             }
 
- 
+           
             if (portalPrefab != null && puntoDeAparicionDelPortal != null)
             {
                 Instantiate(portalPrefab, puntoDeAparicionDelPortal.position, Quaternion.identity);
             }
 
-           
+          
             StartCoroutine(EsperarYMostrarDialogo(collision.gameObject));
         }
     }
@@ -67,7 +68,7 @@ public class ColisionadorTrigger2D : MonoBehaviour
         {
             dialogo.MostrarDialogo(() =>
             {
-               
+              
                 if (joystickUI != null)
                 {
                     joystickUI.SetActive(true);
@@ -78,7 +79,7 @@ public class ColisionadorTrigger2D : MonoBehaviour
                     }
                 }
 
-                
+               
                 if (rbJugador != null)
                 {
                     rbJugador.bodyType = RigidbodyType2D.Dynamic;

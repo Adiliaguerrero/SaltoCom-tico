@@ -19,8 +19,8 @@ public class DeathZone : MonoBehaviour
 
     IEnumerator ShowGameOver()
     {
-        yield return new WaitForSeconds(2f); 
-        gameOverPanel.SetActive(true); 
+        yield return new WaitForSeconds(2f);  
+        gameOverPanel.SetActive(true);  
         Time.timeScale = 0f;  
     }
 

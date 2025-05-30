@@ -11,8 +11,10 @@ public class Trivia1 : MonoBehaviour
     public Button botonFalso;
     public TextMeshProUGUI retroalimentacionTexto;
 
+    public AudioClip sonidoBoton; // Asignalo desde el Inspector
+
     public string pregunta = "¿El sol es una estrella?";
-    public bool respuestaCorrecta = true; 
+    public bool respuestaCorrecta = true;
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class Trivia1 : MonoBehaviour
     {
         preguntaTexto.text = pregunta;
         retroalimentacionTexto.text = "";
- 
+
         botonVerdadero.interactable = true;
         botonFalso.interactable = true;
     }
@@ -40,6 +42,8 @@ public class Trivia1 : MonoBehaviour
 
     void SeleccionarRespuesta(bool respuestaUsuario)
     {
+        AudioManager.instancia.ReproducirSonido(sonidoBoton);
+
         if (respuestaUsuario == respuestaCorrecta)
         {
             retroalimentacionTexto.text = "¡Correcto!";

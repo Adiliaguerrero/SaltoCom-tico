@@ -13,18 +13,18 @@ public class Camara : MonoBehaviour
     {
         if (Player2 != null)
         {
-            // Obtener dirección del personaje
+           
             float direccionX = Player2.transform.localScale.x;
             if (direccionX != 0)
             {
                 ultimaDireccionX = direccionX;
             }
 
-          
+         
             Vector3 posicionObjetivo = Player2.transform.position + new Vector3(desplazamiento.x * ultimaDireccionX, desplazamiento.y, 0f);
             posicionObjetivo.z = transform.position.z;
 
-            // Suavizar movimiento de cámara
+          
             transform.position = Vector3.SmoothDamp(transform.position, posicionObjetivo, ref velocidadSuavizado, 2f / suavizado);
         }
     }

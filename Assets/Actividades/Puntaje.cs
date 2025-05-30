@@ -48,11 +48,11 @@ public class PuntosManager : MonoBehaviour
         ActualizarReferencias();
         ActualizarPuntajes();
 
-        
+      
         if (limpiarPuntajeButton != null)
             limpiarPuntajeButton.onClick.AddListener(() => ReproducirSonido(LimpiarPuntaje));
 
- 
+        
         if (cambiarEscenaButton != null)
             cambiarEscenaButton.onClick.AddListener(() => ReproducirSonido(() => StartCoroutine(CambiarEscenaConSonido())));
     }
@@ -65,7 +65,7 @@ public class PuntosManager : MonoBehaviour
 
     void ActualizarReferencias()
     {
-        // Obejtos  texto puntruacion
+       
         BasicoCorrectoText = GameObject.Find("BasicoCorrecto")?.GetComponent<TextMeshProUGUI>();
         BasicoIncorrectoText = GameObject.Find("BasicoIncorrecto")?.GetComponent<TextMeshProUGUI>();
         IntermedioCorrectoText = GameObject.Find("IntermedioCorrecto")?.GetComponent<TextMeshProUGUI>();

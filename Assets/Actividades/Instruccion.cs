@@ -89,7 +89,8 @@ public class InstruccionesVisuales : MonoBehaviour
         }
 
         mano.anchoredPosition = hasta;
- 
+
+        
         t = 0f;
         while (t < duracionAnimacion)
         {

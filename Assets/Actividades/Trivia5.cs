@@ -6,7 +6,9 @@ public class TextoConComasTMP : MonoBehaviour
     public TextMeshProUGUI textoTMP;
     public TextMeshProUGUI textoRetroalimentacion;
     public RectTransform[] espaciosValidos;
-    public Paneles1 Paneles1;  
+    public Paneles1 Paneles1;
+
+    public AudioClip sonidoBoton;  
 
     private string textoOriginal = "Compré plátano [   ] manzana [   ] uvas [   ] peras y pan.";
 
@@ -20,6 +22,8 @@ public class TextoConComasTMP : MonoBehaviour
 
     public void VerificarComas()
     {
+        AudioManager.instancia.ReproducirSonido(sonidoBoton);  
+
         int espaciosOcupados = 0;
         ComaDrag[] todasLasComas = FindObjectsOfType<ComaDrag>();
 
@@ -59,7 +63,6 @@ public class TextoConComasTMP : MonoBehaviour
             Destroy(coma.gameObject);
         }
 
-        
         Invoke("PasarASiguienteTrivia", 2f);
     }
 

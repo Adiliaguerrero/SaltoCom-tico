@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public bool puedeMoverse = true;
+    
 
 
     private bool enSuelo = true;
@@ -56,16 +59,16 @@ void Update()
 {
     if (recibiendoDanio) return;
 
-    
+   
     if (!puedeMoverse)
     {
-      
+        
         rb.velocity = new Vector2(0, rb.velocity.y);
         animator.SetBool("Movement", false);
-        return; 
+        return;  
     }
 
-     
+    
     if (detectorSuelo != null)
     {
         Collider2D[] colisiones = Physics2D.OverlapCircleAll(detectorSuelo.position, 0.1f);
@@ -104,29 +107,37 @@ void Update()
         transform.localScale = new Vector3(-1f, 1f, 1f);
     }
 
-     
+  
     bool saltoSolicitado = Input.GetButtonDown("Jump");
 
-     
-    if (Input.touchCount > 0)
+  if (Input.touchCount > 0)
     {
         Touch toque = Input.GetTouch(0);
+
+       
+        if (EventSystem.current.IsPointerOverGameObject(toque.fingerId))
+            return;
+
         if (toque.phase == TouchPhase.Began && toque.position.x > Screen.width / 2)
         {
             saltoSolicitado = true;
         }
     }
 
-     
+    
     if (Input.GetMouseButtonDown(0))
     {
+     
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (Input.mousePosition.x > Screen.width / 2)
         {
             saltoSolicitado = true;
         }
     }
 
-     
+    
     if (saltoSolicitado && enSuelo)
     {
         rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
@@ -200,7 +211,7 @@ void Update()
     public void RestaurarVidaParcial(float cantidad)
 {
     vida += cantidad;
-    vida = Mathf.Clamp(vida, 0f, vidaMaxima); // Evita que supere el máximo
+    vida = Mathf.Clamp(vida, 0f, vidaMaxima); 
 
     PlayerPrefs.SetFloat("VidaJugador", vida);
     PlayerPrefs.Save();

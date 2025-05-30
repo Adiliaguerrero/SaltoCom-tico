@@ -6,7 +6,7 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector3 originalPosition;
-    private bool yaClonada = false; 
+    private bool yaClonada = false;  
 
     public RectTransform[] dropAreas;
     public Transform padreContenedor;  

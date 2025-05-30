@@ -5,7 +5,7 @@ public class Enemigo : MonoBehaviour
     public float detectionRadius = 5.0f;
     public float attackRadius = 1.0f;
     public float speed = 2.0f;
-    public float attackCooldown = 1.0f;  
+    public float attackCooldown = 1.0f; // Tiempo entre ataques
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -129,7 +129,7 @@ public class Enemigo : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
-   private bool estaMuerto = false;  
+   private bool estaMuerto = false; // Para evitar que muera varias veces
 
 private void OnCollisionEnter2D(Collision2D collision)
 {
@@ -138,15 +138,15 @@ private void OnCollisionEnter2D(Collision2D collision)
     if (collision.gameObject.CompareTag("Player") && collision.contacts[0].normal.y < 0)
     {
         estaMuerto = true;
-        CancelarAtaque();   
-        StopAllCoroutines(); 
+        CancelarAtaque(); // Para cancelar cualquier ataque en curso
+        StopAllCoroutines(); // Por si estaba atacando
         StartCoroutine(SquashAndDisappear());
     }
 }
 
 private System.Collections.IEnumerator SquashAndDisappear()
 {
-    // Cambiar a color rojo por daño
+    // Cambiar a color rojo
     SpriteRenderer sr = GetComponent<SpriteRenderer>();
     if (sr != null)
     {
@@ -167,7 +167,7 @@ private System.Collections.IEnumerator SquashAndDisappear()
     }
 
     transform.localScale = targetScale;
-    yield return new WaitForSeconds(0.2f); 
+    yield return new WaitForSeconds(0.2f); // Espera antes de desaparecer
 
     Destroy(gameObject);
 }

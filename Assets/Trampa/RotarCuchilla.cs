@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RotarCuchilla : MonoBehaviour
 {
-    public float velocidadRotacion = 180f; // Grados por segundo
+    public float velocidadRotacion = 180f;  
 
     void Update()
     {

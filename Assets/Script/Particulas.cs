@@ -11,10 +11,10 @@ public class DestruirParticulasAlColisionar : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        
+       
         if (other.CompareTag("Suelo"))
         {
-            // Destruir las partículas que colisionaron
+       
             ParticleSystem.Particle[] particles = new ParticleSystem.Particle[ps.main.maxParticles];
             int count = ps.GetParticles(particles);
 

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
 
-public class PreguntaOpcionMultiple : MonoBehaviour
+public class PreguntaOpcionMultiple2 : MonoBehaviour
 {
     public Paneles1 Paneles1;
     public TextMeshProUGUI textoPregunta;
@@ -12,9 +12,11 @@ public class PreguntaOpcionMultiple : MonoBehaviour
     public Button botonConfirmar;
     public TextMeshProUGUI textoResultado;
 
-    private string pregunta = "¿Cuáles de estos son textos narrativos?";
-    private string[] opciones = { "Poema", "Cuento", "Receta de cocina", "Fabula" };
-    private int[] indicesCorrectos = { 1, 3 };  
+    public AudioClip sonidoBoton;  
+
+    private string pregunta = "¿Cuál de las siguientes oraciones usa correctamente la coma para separar elementos de una serie?";
+    private string[] opciones = { "A.Me gusta comer pizza hamburguesa y helado.", "B.En el parque hay árboles, flores y bancos.", " C.Compré una camiseta, unos pantalones, y unos zapatos.", "D.Mis colores favoritos son rojo, azul y verde" };
+    private int[] indicesCorrectos = { 0, 3 }; 
 
     private List<int> seleccionadas = new List<int>();
 
@@ -30,6 +32,8 @@ public class PreguntaOpcionMultiple : MonoBehaviour
 
     public void SeleccionarOpcion(int indice)
     {
+        AudioManager.instancia.ReproducirSonido(sonidoBoton);  
+
         if (seleccionadas.Contains(indice))
         {
             seleccionadas.Remove(indice);
@@ -44,6 +48,8 @@ public class PreguntaOpcionMultiple : MonoBehaviour
 
     public void VerificarRespuestas()
     {
+        AudioManager.instancia.ReproducirSonido(sonidoBoton);  
+
         List<int> correctas = new List<int>(indicesCorrectos);
         seleccionadas.Sort();
         correctas.Sort();
@@ -58,7 +64,7 @@ public class PreguntaOpcionMultiple : MonoBehaviour
             }
         }
 
-       
+    
         for (int i = 0; i < botonesOpciones.Length; i++)
         {
             if (seleccionadas.Contains(i))
@@ -78,10 +84,10 @@ public class PreguntaOpcionMultiple : MonoBehaviour
             }
         }
 
-      
+        
         if (correctasSeleccionadas == 2)
         {
-            textoResultado.text = "¡Respuesta correcta!";
+            textoResultado.text = "¡Respuestas correctas";
             IncrementarPuntajeBasicoCorrecto();
         }
         else if (correctasSeleccionadas == 1)
@@ -90,19 +96,17 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         }
         else
         {
-            textoResultado.text = "Respuesta incorrecta.";
+            textoResultado.text = "Respuestas incorrectas.";
             IncrementarPuntajeBasicoIncorrecto();
         }
 
-        
         Invoke("PasarASiguienteTrivia", 2f);
     }
- void PasarASiguienteTrivia()
-{
-    Paneles1.SiguienteTrivia();
-}
 
-
+    void PasarASiguienteTrivia()
+    {
+        Paneles1.SiguienteTrivia();
+    }
 
     private void ActualizarColores()
     {
@@ -118,7 +122,6 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         }
     }
 
-
     void IncrementarPuntajeBasicoCorrecto()
     {
         int puntaje = PlayerPrefs.GetInt("PuntajeCorrectoBasico", 0);
@@ -130,7 +133,4 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         int puntaje = PlayerPrefs.GetInt("PuntajeIncorrectoBasico", 0);
         PlayerPrefs.SetInt("PuntajeIncorrectoBasico", ++puntaje);
     }
-
-    
-
 }
