@@ -48,6 +48,10 @@ public class Pausa : MonoBehaviour
         JuegoPausado = false;
     }
 
+    /// <summary>
+    /// Pausa el juego, mostrando el menú de pausa y congelando la escala de tiempo.
+    /// </summary>
+    
     public void Pausar()
     {
         MenuPausa.SetActive(true);
