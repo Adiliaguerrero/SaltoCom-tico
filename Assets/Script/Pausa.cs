@@ -5,6 +5,9 @@ using UnityEngine;
 /// <summary>
 /// Controla la funcionalidad de pausa en el juego, permitiendo pausar y reanudar la partida.
 /// </summary> 
+/// <remarks>
+/// Requiere que se asigne un GameObject UI como "MenuPausa" en el inspector.
+/// </remarks>
 
 public class Pausa : MonoBehaviour
 {
