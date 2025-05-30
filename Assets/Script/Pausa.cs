@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controla la funcionalidad de pausa en el juego, permitiendo pausar y reanudar la partida.
+/// </summary> 
+
 public class Pausa : MonoBehaviour
 {
     public GameObject MenuPausa;
@@ -10,14 +14,14 @@ public class Pausa : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-        if (JuegoPausado)
-        {
-            Reanudar();
-        }
-        else  
-        {
-            Pausar();
-        }
+            if (JuegoPausado)
+            {
+                Reanudar();
+            }
+            else
+            {
+                Pausar();
+            }
     }
     public void Reanudar()
     {
@@ -26,12 +30,12 @@ public class Pausa : MonoBehaviour
         JuegoPausado = false;
     }
 
-     public void Pausar()
+    public void Pausar()
     {
         MenuPausa.SetActive(true);
         Time.timeScale = 0;
         JuegoPausado = true;
     }
-    
+
 
 }
