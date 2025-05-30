@@ -1,6 +1,15 @@
  using UnityEngine;
 using System.Collections;
 
+    /// <summary>
+    /// Controla un efecto de sacudida en la cámara para simular impactosinfligidos por enemigos u objetos. 
+    /// Este efecto mejora la inmersion visual del jugador.
+    /// </summary>
+    /// 
+    /// <remmark>
+    /// Para que este efecto funcione correctamente, el GameObject que contiene este script debe ser la cámara.
+    /// Puede ser llamado desde otros scripts cuando se detecten eventos como recibir daño por enemigos o trampas.
+    /// </remmark>
 public class CameraShake : MonoBehaviour
 {
     public float duracion = 0.2f;
