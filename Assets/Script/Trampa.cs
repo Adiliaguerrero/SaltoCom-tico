@@ -5,15 +5,23 @@ using UnityEngine;
     /// </summary>
     /// 
     /// <remarks>
-    /// Requiere que el jugador tenga un componente <see cref="PlayerController"/> con el método 
-    /// <see cref="PlayerController.RecibeDanio(Vector2, int)"/> implementado.
+    /// Este script debe colocarse en GameObjects con un <see cref="Collider2D"/> configurado como sólido (no como trigger).
+    /// El objeto del jugador debe tener un componente <see cref="PlayerController"/> para recibir daño correctamente.
     /// </remarks>
 public class Espina : MonoBehaviour
 {
     /// <summary>
     /// Cantidad de daño que inflige la espina al jugador.
     /// </summary>
+
     public int danio = 1;
+
+    /// <summary>
+    /// Se ejecuta automáticamente cuando otro objeto colisiona con este GameObject que contiene un <see cref="Collider2D"/>.
+    /// Si el objeto que colisiona tiene un componente <see cref="PlayerController"/> y el contacto se produce desde arriba,
+    /// el jugador recibe daño.
+    /// </summary>
+    /// <param name="collision"></param>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
