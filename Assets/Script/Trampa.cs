@@ -21,7 +21,7 @@ public class Espina : MonoBehaviour
     /// Si el objeto que colisiona tiene un componente <see cref="PlayerController"/> y el contacto se produce desde arriba,
     /// el jugador recibe daño.
     /// </summary>
-    /// <param name="collision"></param>
+    /// <param name="collision">Información sobre la colisión 2D, incluyendo el objeto que colisionó y los puntos de contacto.</param>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
