@@ -20,6 +20,9 @@ public class Pausa : MonoBehaviour
         /// </summary>
     public bool JuegoPausado = false;
 
+    /// <summary>
+    /// Verifica cada frame si se presiona la tecla 'E' para pausar/reanudar.
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -32,6 +35,9 @@ public class Pausa : MonoBehaviour
                 Pausar();
             }
     }
+        /// <summary>
+        /// Reanuda el juego, ocultando el menú de pausa y restableciendo la escala de tiempo.
+        /// </summary>
     public void Reanudar()
     {
         MenuPausa.SetActive(false);
