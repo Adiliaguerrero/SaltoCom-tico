@@ -34,6 +34,14 @@ using System.Collections;
     {
         StartCoroutine(Shake());
     }
+    /// <summary>
+    /// Corrutina que implementa el efecto de sacudida.
+    /// </summary>
+    /// 
+    /// <returns>
+    /// IEnumerator para el manejo de la corrutina.
+    /// </returns>
+
 
     private IEnumerator Shake()
     {
