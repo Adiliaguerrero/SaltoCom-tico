@@ -22,10 +22,10 @@ public class OpcionUnica3 : MonoBehaviour
     public AudioClip sonidoBoton;  
 
     // Pregunta a mostrar
-    private string pregunta = " ¿Dónde deberías empezar a colocar una coma en la siguiente oración : Traje lápices bolígrafos marcadores y borradores";
+    private string pregunta = " ¿Dónde deberías empezar a colocar una coma en la siguiente oración: Traje lápices bolígrafos marcadores y borradores";
 
     // Opciones de respuesta que se asignan a cada botón
-    private string[] opciones = { "A. Después de lápices", "B.Después de bolígrafos", "C.Después de marcadores.", "D.Despues de borradores." };
+    private string[] opciones = { "A. Después de lápices", "B.Después de bolígrafos", "C.Después de marcadores.", "D.Después de borradores." };
 
     // Índice que representa la opción correcta (en este caso la opción A, índice 0)
     private int indiceRespuestaCorrecta = 0;

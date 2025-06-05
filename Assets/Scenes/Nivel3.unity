@@ -5936,6 +5936,40 @@ PrefabInstance:
       propertyPath: puntoReaparicion
       value: 
       objectReference: {fileID: 1582492384}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: lineasIniciales.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[0]'
+      value: "Ah, viajero\u2026 el Bosque de oto\xF1o alguna vez fue un lugar lleno
+        de sabidur\xEDa y orden."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[2]'
+      value: "Pero ahora, las hojas caen sin direcci\xF3n, como frases sin comas.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[3]'
+      value: "\xA1Solo t\xFA puedes devolverles su lugar y calmar la confusi\xF3n!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[4]'
+      value: "Derrota a los enemigos del viento ca\xF3tico, que revuelven palabras
+        y listas"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasReaparicion.Array.data[0]'
+      value: Hola otra vez.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasReaparicion.Array.data[1]'
+      value: Buena suerte, ya casi regresas a tu hogar.
+      objectReference: {fileID: 0}
     - target: {fileID: 5814621186850303386, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -7675,7 +7709,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1225416025
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0

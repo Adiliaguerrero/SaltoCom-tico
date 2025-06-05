@@ -21,10 +21,10 @@ public class TranscribirOracion3 : MonoBehaviour
     public AudioClip sonidoBoton; 
 
     // Oración que se muestra sin comas para que el usuario la corrija
-    private string oracionSinComas = "Reescriba la siguiente oración colocando la coma en los lugares correctos. \n\"En mi mochila llevo libros cuadernos lapices marcadores y borradores.\"";
+    private string oracionSinComas = "Reescriba la siguiente oración colocando la coma en los lugares correctos. \n\"En mi mochila llevo libros cuadernos lápices marcadores y borradores.\"";
 
     // Oración correcta con la puntuación adecuada para validar la respuesta del usuario
-    private string oracionCorrecta = "En mi mochila llevo libros, cuadernos, lapices, marcadores y borradores.";
+    private string oracionCorrecta = "En mi mochila llevo libros, cuadernos, lápices, marcadores y borradores.";
 
     // Método que se ejecuta al iniciar el script
     void Start()

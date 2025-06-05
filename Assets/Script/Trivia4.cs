@@ -22,14 +22,14 @@ public class OpcionUnica2 : MonoBehaviour
     public AudioClip sonidoBoton;
 
     // Texto de la pregunta que se mostrará al usuario (privado porque no es necesario en Inspector)
-    private string pregunta = "¿Dónde se debería colocar la primera coma?\n\"Compré manzanas, peras uvas y plátanos.\"";
+    private string pregunta = "¿Dónde se debería colocar la primera coma?\n\"Compré manzanas peras uvas y plátanos.\"";
 
     // Array con las opciones de respuesta disponibles para el usuario
     private string[] opciones = {
-        "A.Despues de compre.",
-        "B.Despuesb de manzanas y peras.",
-        "C.Despues de uvas .",
-        "D.Despues de peras y uvas."
+        "A.Después de 'compré'.",
+        "B.Después de 'manzanas' y 'peras'.",
+        "C.Después de 'uvas'.",
+        "D.Después de 'peras' y 'uvas'."
     };
 
     // Índice de la opción correcta (aquí la opción correcta es la 1)

@@ -3480,8 +3480,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5202,7 +5202,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 679281739
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 6
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1, y: 1, z: 0}
@@ -25578,7 +25578,11 @@ PrefabInstance:
       objectReference: {fileID: 497017177}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: lineasIniciales.Array.size
-      value: 5
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: lineasReaparicion.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[0]'
@@ -25590,24 +25594,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[2]'
-      value: Parece que no fue casualidad ,  estos mundos han ocasionado un caos
-        total.
+      value: Parece que no fue casualidad.
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[3]'
-      value: y parece que tambien tu mundo fue afectado.
+      value: Estos saltos han ocasionado un caos total.
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[4]'
-      value: para poder regresar a tu munedo y restaurar el caos total.
+      value: y parece que tambien tu mundo fue afectado.
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[5]'
-      value: Parece que no fue casualidad. Estos mundos han ocasionado uncaos total.
+      value: 'para poder regresar a tu mundo. '
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[6]'
-      value: y parece que tambien tu mundo fue afectado.
+      value: 'Derrota a los enemigos del desorden. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[7]'
+      value: "\xA1Ellos intentan confundir las frases!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[8]'
+      value: Y restaurar el caos total.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasReaparicion.Array.data[0]'
+      value: "Hola de nuevo \xA1Buen trabajo! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasReaparicion.Array.data[1]'
+      value: Ese enemigo del caos ha sido vencido
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasReaparicion.Array.data[2]'
+      value: "\xA1Hasta luego!"
       objectReference: {fileID: 0}
     - target: {fileID: 6121705650035819753, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: m_FlipX

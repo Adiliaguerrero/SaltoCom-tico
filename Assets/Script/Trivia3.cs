@@ -35,7 +35,7 @@ public class PreguntaOpcionMultiple : MonoBehaviour
     private string[] opciones = {
         "A.Me gusta comer pizza hamburguesa y helado.",
         "B.En el parque hay árboles, flores y bancos.",
-        " C.Compré una camiseta, unos pantalones, y unos zapatos.",
+        "C.Compré una camiseta, unos pantalones, y unos zapatos.",
         "D.Mis colores favoritos son rojo, azul y verde"
     };
 

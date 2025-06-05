@@ -20,7 +20,7 @@ public class TextoConComasTMP : MonoBehaviour
     public AudioClip sonidoBoton;
 
     // Texto original que contiene espacios donde irán las comas (representados con [   ])
-    private string textoOriginal = "Compré plátano [   ] manzana [   ] uvas [   ] peras y pan.";
+    private string textoOriginal = "Compré plátanos [   ] manzanas [   ] uvas [   ] peras y pan.";
 
     // Método llamado al iniciar el script
     void Start()

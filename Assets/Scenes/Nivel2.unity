@@ -15859,7 +15859,7 @@ PrefabInstance:
       objectReference: {fileID: 825538239}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: lineasIniciales.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: lineasReaparicion.Array.size
@@ -15867,11 +15867,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasIniciales.Array.data[0]'
-      value: Este es la otra dimension
+      value: "\"\xA1Shhh\u2026 escucha, viajero!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[1]'
+      value: "Aqu\xED, la naturaleza misma se desordena cuando las comas desaparecen."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[2]'
+      value: " \xA1Ay\xFAdame a restaurar la armon\xEDa del bosque!\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
+      propertyPath: 'lineasIniciales.Array.data[3]'
+      value: ' Derrota a los enemigos del desorden que rondan entre los arbustos.'
       objectReference: {fileID: 0}
     - target: {fileID: 5446385994113742250, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: 'lineasReaparicion.Array.data[0]'
-      value: Listo apar las trivias
+      value: "\xBFListo para las pruebas de valent\xEDa?"
       objectReference: {fileID: 0}
     - target: {fileID: 5814621186850303386, guid: 38e64c8df5f8e3449a7e570e82af038b, type: 3}
       propertyPath: m_Constraints
