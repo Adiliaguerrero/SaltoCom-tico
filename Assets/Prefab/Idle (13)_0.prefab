@@ -152,10 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cea74cce6f9bb9458cdcb28840c28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 8
-  fuerzaSalto: 10
+  velocidad: 6
+  fuerzaSalto: 13
   animator: {fileID: 7267530351783666563}
   rb: {fileID: 633120196681613975}
+  puedeMoverse: 1
   vidaMaxima: 5
   vida: 5
   joystick: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}

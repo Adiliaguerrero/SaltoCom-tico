@@ -221,9 +221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 6
-  fuerzaSalto: 10
+  fuerzaSalto: 13
   animator: {fileID: 7362925429544594672}
   rb: {fileID: 8171771254862021081}
+  puedeMoverse: 1
   vidaMaxima: 5
   vida: 5
   joystick: {fileID: 0}

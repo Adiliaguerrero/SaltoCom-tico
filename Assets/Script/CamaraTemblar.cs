@@ -1,33 +1,59 @@
- using UnityEngine;
+// Esta línea dice que vamos a usar las herramientas de Unity.
+using UnityEngine;
+
+// Esta línea permite usar cosas que funcionan paso a paso en el tiempo (corutinas).
 using System.Collections;
 
+ // Esta clase permite que la camara tiemble o se sacuda cuando el personaje recibe daño 
 public class CameraShake : MonoBehaviour
 {
+    // Esta variable pública se puede ver y modificar desde el Inspector en Unity.
+    // Controla cuánto tiempo va a durar la sacudida (por ejemplo, 0.2 segundos).
     public float duracion = 0.2f;
+
+    // Esta variable controla qué tan fuerte será la sacudida (qué tanto se moverá la cámara).
     public float magnitud = 0.3f;
 
+    // Este método se puede llamar desde otro script o desde Unity.
+    // Sirve para comenzar la sacudida de la cámara.
     public void Sacudir()
     {
+        // Aquí empezamos una "corutina", que es como una función que se ejecuta poco a poco con el tiempo.
         StartCoroutine(Shake());
     }
 
+    // Esta es la función que realmente hace que la cámara se sacuda.
+    // IEnumerator permite que esta función se ejecute con pausas entre cada paso (no todo de golpe).
     private IEnumerator Shake()
     {
+        // Guardamos la posición original de la cámara (antes de moverse).
         Vector3 posicionOriginal = transform.localPosition;
 
+        // Creamos una variable llamada "tiempo" que empieza en cero.
         float tiempo = 0f;
 
+        // Esta parte se repite mientras el tiempo total sea menor que la duración de la sacudida.
         while (tiempo < duracion)
         {
+            // Generamos un número al azar entre -1 y 1 para el movimiento horizontal (x).
+            // Lo multiplicamos por la magnitud para controlar qué tan fuerte se mueve.
             float offsetX = Random.Range(-1f, 1f) * magnitud;
+
+            // Lo mismo, pero para el movimiento vertical (y).
             float offsetY = Random.Range(-1f, 1f) * magnitud;
 
+            // Movemos la cámara a una nueva posición sumando el movimiento al azar.
+            // El valor "0" es para no mover la cámara hacia adelante o atrás (eje Z).
             transform.localPosition = posicionOriginal + new Vector3(offsetX, offsetY, 0);
 
+            // Aumentamos el tiempo con el valor del tiempo que ha pasado desde el último cuadro.
             tiempo += Time.deltaTime;
+
+            // Esta línea hace una pequeña pausa hasta el siguiente cuadro (frame).
             yield return null;
         }
 
+        // Al final de la sacudida, regresamos la cámara a su posición original.
         transform.localPosition = posicionOriginal;
     }
 }
