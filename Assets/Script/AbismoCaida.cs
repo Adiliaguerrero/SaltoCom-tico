@@ -45,6 +45,9 @@ public class AbismoCaida : MonoBehaviour
     /// <returns>
     /// Devuelve un <see cref="WaitForSeconds"/> de 2 segundos antes de activar el panel.
     /// </returns>
+    /// <remarks>
+    /// Una vez mostrado el panel, se pausa el tiempo del juego usando <see cref="Time.timeScale"/>.
+    /// </remarks>
     IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(2f);
