@@ -17,7 +17,11 @@ public class AbismoCaida : MonoBehaviour
     /// </summary>
     public GameObject gameOverPanel;
 
-    // Método OnTriggerEnter2D se llama automáticamente y se activa cuando otro objeto entra en el trigger de este objeto (abismo)
+    ///<summary>
+    /// Se ejecuta automáticamente cuando otro objeto con un Collider2D entra en el área del trigger.
+    /// Detecta si el jugador ha caído en el abismo.
+    /// </summary>
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Verificamos si el objeto que entra al abismo tiene la etiqueta "Player"
