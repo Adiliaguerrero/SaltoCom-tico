@@ -27,13 +27,19 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     /// </summary>
     private bool yaClonada = false;
 
-
+    /// <summary>
+    /// Áreas o zonas válidas donde  las comas podran ser soltadas correc3ctamente
+    /// </summary>
     public RectTransform[] dropAreas;
 
-
+    /// <summary>
+    /// Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas
+    /// </summary>    
     public Transform padreContenedor;
-
  
+    /// <summary>
+    /// Inicializa referencias necesarias y guarda la posición original del objeto.
+    /// </summary>
     // Método Start se ejecuta una vez al comenzar la escena o al activarse el objeto
     void Start()
     {
