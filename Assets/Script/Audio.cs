@@ -20,11 +20,11 @@ public class BotonClipControl : MonoBehaviour
     public AudioClip sonidoBoton;  
 
     //  Método Awake se ejecuta al inicio, antes de Start o que comienze el juego.
-    
-    /// <summary>
-    /// Inicializa el AudioManager si no existe en la escena.
-    /// Se ejecuta antes de <see cref="Start"/> y es útil para configuración temprana.
-    /// </summary>
+
+        /// <summary>
+        /// Inicializa el AudioManager si no existe en la escena.
+        /// Se ejecuta antes de <see cref="Start"/> y es útil para configuración temprana.
+        /// </summary>
     private void Awake()
     {
         // Verifica si ya existe una instancia u obejeto del AudioManager en la escena.
@@ -41,18 +41,21 @@ public class BotonClipControl : MonoBehaviour
         }
     }
 
-    // Se llama al inicio de la escena, justo después de Awake. Aquí se configura el botón.
+        /// <summary>
+        /// Se llama al inicio de la escena, justo después de Awake. Aquí se configura el botón.
+        /// </summary>
+    
     private void Start()
     {
         if (botonSonido != null)
-            // Si el botón está asignado, le agrega un listener (evento) que llama al método ToggleSonido cuando se presiona.
             botonSonido.onClick.AddListener(ToggleSonido);
         else
-            // Si no se asignó ningún botón, se muestra una advertencia en la consola.
             Debug.LogWarning("Botón de sonido no asignado.");
     }
 
-    // Este método se llama cuando el botón es presionado. Alterna el estado del sonido y reproduce un clip.
+        /// <summary>
+        /// Alterna el estado del sonido global y reproduce un clip de audio si está asignado.
+        /// </summary>
     private void ToggleSonido()
     {
         // Obtiene el estado actual del sonido (activo o no) desde el AudioManager.
