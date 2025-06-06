@@ -79,51 +79,37 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
         /// </param>
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Vuelve a activar los raycasts para que el objeto vuelva a responder a interacciones
         canvasGroup.blocksRaycasts = true;
 
-        // Bandera que indica si el objeto fue soltado en una zona válida
         bool colocado = false;
 
-        // Recorre cada zona de soltado en las areas válida
         foreach (var area in dropAreas)
         {
-            // Verifica si el objeto fue soltado dentro de una posicion  de las zonas permitidas
             if (RectTransformUtility.RectangleContainsScreenPoint(area, eventData.position, eventData.pressEventCamera))
             {
-                // Coloca el objeto justo en el centro de la zona de destino
                 rectTransform.position = area.position;
 
-                // Marca como colocado exitosamente
                 colocado = true;
 
-                // Si aún no se ha clonado el objeto:
                 if (!yaClonada)
                 {
-                    // Crea una copia del objeto actual dentro del mismo contenedor padre
                     GameObject clon = Instantiate(gameObject, padreContenedor);
 
-                    // Coloca el clon en la posición original
                     clon.transform.position = originalPosition;
 
-                    // Asegura que la escala sea 1 para evitar distorsión visual
                     clon.transform.localScale = Vector3.one;
 
-                    // Accede al script del clon para actualizar sus propiedades internas
                     var clonScript = clon.GetComponent<ComaDrag>();
                     clonScript.originalPosition = clon.transform.position; // Actualiza su nueva posición original
                     clonScript.yaClonada = false; // Permite que el nuevo clon pueda ser clonado también
 
-                    // Marca el objeto original como ya clonado para no crear más copias
                     yaClonada = true;
                 }
 
-                // Ya se colocó correctamente, salimos del ciclo con un breack
                 break;
             }
         }
 
-        // Si el objeto no se soltó en una zona válida, regresa a su posición inicial
         if (!colocado)
         {
             rectTransform.position = originalPosition;
