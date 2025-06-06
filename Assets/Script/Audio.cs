@@ -1,16 +1,25 @@
 using UnityEngine;               
 using UnityEngine.UI;            
 
-/// <summary>
-/// Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonido cuando se pulsa.
-/// </summary>
+    /// <summary>
+    /// Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonido cuando se pulsa.
+    /// </summary>
 
 public class BotonClipControl : MonoBehaviour
-{
-    public Button botonSonido;           // Referencia al botón en la escena que controlará el sonido.
-    public AudioClip sonidoBoton;        // Referencia de un Clip de audio que se reproducirá cuando se presione el botón.
 
+    
+{
+        /// <summary>
+        /// Referencia al botón que se utiliza para controlar el sonido.
+        /// </summary
+    public Button botonSonido;
+
+        /// <summary>
+        /// Clip de sonido que se reproduce cuando se presiona el botón.
+        /// </summary>           
+    public AudioClip sonidoBoton;       
     //  Método Awake se ejecuta al inicio, antes de Start o que comienze el juego , ideal para preparar una funcion en la escena.
+    
     private void Awake()
     {
         // Verifica si ya existe una instancia u obejeto del AudioManager en la escena.
