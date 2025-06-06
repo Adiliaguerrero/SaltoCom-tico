@@ -56,7 +56,14 @@ public class AbismoCaida : MonoBehaviour
 
         Time.timeScale = 0f;
     }
-
+    
+    /// <summary>
+    /// Reinicia la escena actual, restaurando el tiempo y reiniciando el nivel desde el inicio.
+    /// </summary>
+    /// <remarks>
+    /// Este método debe estar vinculado a un botón en el panel de Game Over.
+    /// Utiliza <see cref="SceneManager.GetActiveScene"/> y <see cref="SceneManager.LoadScene(string)"/>.
+    /// </remarks>
     public void RestartGame()
     {
         Time.timeScale = 1f;
