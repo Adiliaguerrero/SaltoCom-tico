@@ -17,9 +17,14 @@ public class BotonClipControl : MonoBehaviour
         /// <summary>
         /// Clip de sonido que se reproduce cuando se presiona el botón.
         /// </summary>           
-    public AudioClip sonidoBoton;       
-    //  Método Awake se ejecuta al inicio, antes de Start o que comienze el juego , ideal para preparar una funcion en la escena.
+    public AudioClip sonidoBoton;  
+
+    //  Método Awake se ejecuta al inicio, antes de Start o que comienze el juego.
     
+    /// <summary>
+    /// Inicializa el AudioManager si no existe en la escena.
+    /// Se ejecuta antes de <see cref="Start"/> y es útil para configuración temprana.
+    /// </summary>
     private void Awake()
     {
         // Verifica si ya existe una instancia u obejeto del AudioManager en la escena.
