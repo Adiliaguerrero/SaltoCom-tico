@@ -42,6 +42,9 @@ public class AbismoCaida : MonoBehaviour
     /// <summary>
     /// Corrutina que espera 2 segundos antes de mostrar el panel de Game Over.
     /// </summary>
+    /// <returns>
+    /// Devuelve un <see cref="WaitForSeconds"/> de 2 segundos antes de activar el panel.
+    /// </returns>
     IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(2f);
