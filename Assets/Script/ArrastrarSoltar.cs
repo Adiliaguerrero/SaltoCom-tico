@@ -22,7 +22,9 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     /// </summary>
     private Vector3 originalPosition;
 
-    
+    /// <summary>
+    /// Evita que el objeto se clone más de una vez al ser soltado 
+    /// </summary>
     private bool yaClonada = false;
 
 
