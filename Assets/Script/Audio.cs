@@ -58,13 +58,10 @@ public class BotonClipControl : MonoBehaviour
         /// </summary>
     private void ToggleSonido()
     {
-        // Obtiene el estado actual del sonido (activo o no) desde el AudioManager.
         bool sonidoActivo = AudioManager.instancia.ObtenerEstadoSonido();
 
-        // Cambia el estado del sonido al valor opuesto (si estaba activo, lo desactiva y viceversa).
         AudioManager.instancia.CambiarEstadoSonido(!sonidoActivo);
 
-        // Si hay un clip asignado, se reproduce usando el AudioManager.
         if (sonidoBoton != null)
         {
             AudioManager.instancia.ReproducirSonido(sonidoBoton);
