@@ -1,0 +1,176 @@
+\doxysection{Paneles1 Class Reference}
+\hypertarget{class_paneles1}{}\label{class_paneles1}\index{Paneles1@{Paneles1}}
+Inheritance diagram for Paneles1\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_paneles1}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_paneles1_a6c8e0a68251948580a968bffc2a709b7}{Siguiente\+Trivia}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}}
+\item 
+Game\+Object \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_paneles1_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_paneles1_a6c8e0a68251948580a968bffc2a709b7}\index{Paneles1@{Paneles1}!SiguienteTrivia@{SiguienteTrivia}}
+\index{SiguienteTrivia@{SiguienteTrivia}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{SiguienteTrivia()}{SiguienteTrivia()}}
+{\footnotesize\ttfamily \label{class_paneles1_a6c8e0a68251948580a968bffc2a709b7} 
+void Paneles1.\+Siguiente\+Trivia (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ obtener\ referencias\ del\ jugador\ por\ si\ no\ estaban\ asignadas\ aún}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ GameObject\ jugador\ =\ GameObject.FindGameObjectWithTag(\textcolor{stringliteral}{"{}Player"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador\ =\ jugador.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ playerController\ =\ jugador.GetComponent<PlayerController>();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ el\ panel\ correspondiente\ según\ el\ índice\ actual}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 0)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(0);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 1)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(1);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 2)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(2);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ ya\ no\ hay\ más\ trivias,\ desactiva\ todos\ los\ paneles\ y\ reactiva\ el\ control\ del\ jugador}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Todas\ las\ trivias\ han\ terminado."{}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ el\ joystick}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ habilitar\ el\ componente\ de\ joystick\ si\ existe}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ FixedJoystick\ joyComponent\ =\ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.GetComponent<FixedJoystick>();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joyComponent\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joyComponent.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ activar\ las\ imágenes}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reactiva\ el\ movimiento\ del\ jugador}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rbJugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador.bodyType\ =\ RigidbodyType2D.Dynamic;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerController\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playerController.puedeMoverse\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aumenta\ el\ contador\ para\ pasar\ a\ la\ siguiente\ trivia\ la\ próxima\ vez}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ triviaActual++;}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_paneles1_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_paneles1_a4a4e32424fca4936a835fa74305a996b}\index{Paneles1@{Paneles1}!imagen1@{imagen1}}
+\index{imagen1@{imagen1}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{imagen1}{imagen1}}
+{\footnotesize\ttfamily \label{class_paneles1_a4a4e32424fca4936a835fa74305a996b} 
+Game\+Object Paneles1.\+imagen1}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+\Hypertarget{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}\index{Paneles1@{Paneles1}!imagen2@{imagen2}}
+\index{imagen2@{imagen2}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{imagen2}{imagen2}}
+{\footnotesize\ttfamily \label{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9} 
+Game\+Object Paneles1.\+imagen2}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+\Hypertarget{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}\index{Paneles1@{Paneles1}!joystick@{joystick}}
+\index{joystick@{joystick}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{joystick}{joystick}}
+{\footnotesize\ttfamily \label{class_paneles1_a9726a1d081588f411f01929f8e9a84a9} 
+Game\+Object Paneles1.\+joystick}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+\Hypertarget{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}\index{Paneles1@{Paneles1}!panel1@{panel1}}
+\index{panel1@{panel1}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{panel1}{panel1}}
+{\footnotesize\ttfamily \label{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6} 
+Game\+Object Paneles1.\+panel1}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+\Hypertarget{class_paneles1_af3b18412cf955c393d13a9bd15edc804}\index{Paneles1@{Paneles1}!panel2@{panel2}}
+\index{panel2@{panel2}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{panel2}{panel2}}
+{\footnotesize\ttfamily \label{class_paneles1_af3b18412cf955c393d13a9bd15edc804} 
+Game\+Object Paneles1.\+panel2}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+\Hypertarget{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}\index{Paneles1@{Paneles1}!panel3@{panel3}}
+\index{panel3@{panel3}!Paneles1@{Paneles1}}
+\doxysubsubsection{\texorpdfstring{panel3}{panel3}}
+{\footnotesize\ttfamily \label{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f} 
+Game\+Object Paneles1.\+panel3}
+
+
+
+Definition at line \mbox{\hyperlink{_paneles1_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_paneles1_8cs_source}{Paneles1.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_paneles1_8cs}{Paneles1.\+cs}}\end{DoxyCompactItemize}

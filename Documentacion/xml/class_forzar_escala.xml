@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_forzar_escala" kind="class" language="C#" prot="public">
+    <compoundname>ForzarEscala</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_forzar_escala_1a02cca4bdb149539ddfa7bdee72ce2cff" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 ForzarEscala.escalaCorrecta</definition>
+        <argsstring></argsstring>
+        <name>escalaCorrecta</name>
+        <qualifiedname>ForzarEscala.escalaCorrecta</qualifiedname>
+        <initializer>= new Vector2(0.48f, 0.45f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ForzarTamaño.cs" line="9" column="20" bodyfile="Assets/Script/ForzarTamaño.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_forzar_escala_1a057859e49de05bf7f64167894c41cc81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ForzarEscala.LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <qualifiedname>ForzarEscala.LateUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ForzarTamaño.cs" line="13" column="18" bodyfile="Assets/Script/ForzarTamaño.cs" bodystart="13" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ForzarEscala</label>
+        <link refid="class_forzar_escala"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ForzarEscala</label>
+        <link refid="class_forzar_escala"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/ForzarTamaño.cs" line="6" column="7" bodyfile="Assets/Script/ForzarTamaño.cs" bodystart="7" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_forzar_escala_1a02cca4bdb149539ddfa7bdee72ce2cff" prot="public" virt="non-virtual"><scope>ForzarEscala</scope><name>escalaCorrecta</name></member>
+      <member refid="class_forzar_escala_1a057859e49de05bf7f64167894c41cc81" prot="private" virt="non-virtual"><scope>ForzarEscala</scope><name>LateUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

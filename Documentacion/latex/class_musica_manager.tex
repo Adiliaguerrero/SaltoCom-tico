@@ -1,0 +1,90 @@
+\doxysection{Musica\+Manager Class Reference}
+\hypertarget{class_musica_manager}{}\label{class_musica_manager}\index{MusicaManager@{MusicaManager}}
+Inheritance diagram for Musica\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_musica_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_musica_manager_a4dbd5693f39d33414f05cc74ff8a183b}{Alternar\+Musica}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{musica\+Fondo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_musica_manager}{Musica\+Manager}} \mbox{\hyperlink{class_musica_manager_a798507bd3844b8928a43931398d4739e}{instancia}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_musica_manager_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_musica_manager_8cs_source}{Musica\+Manager.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_musica_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_musica_manager_a4dbd5693f39d33414f05cc74ff8a183b}\index{MusicaManager@{MusicaManager}!AlternarMusica@{AlternarMusica}}
+\index{AlternarMusica@{AlternarMusica}!MusicaManager@{MusicaManager}}
+\doxysubsubsection{\texorpdfstring{AlternarMusica()}{AlternarMusica()}}
+{\footnotesize\ttfamily \label{class_musica_manager_a4dbd5693f39d33414f05cc74ff8a183b} 
+void Musica\+Manager.\+Alternar\+Musica (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_musica_manager_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_musica_manager_8cs_source}{Musica\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cambia\ el\ estado\ booleano\ a\ su\ valor\ opuesto}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ musicaActiva\ =\ !musicaActiva;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ el\ nuevo\ estado\ en\ PlayerPrefs\ para\ que\ se\ mantenga\ entre\ sesiones}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ PlayerPrefs.SetInt(\textcolor{stringliteral}{"{}MusicaActiva"{}},\ musicaActiva\ ?\ 1\ :\ 0);\ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ el\ nuevo\ estado\ a\ la\ música\ de\ fondo}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ AplicarEstadoMusica();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_musica_manager_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_musica_manager_a798507bd3844b8928a43931398d4739e}\index{MusicaManager@{MusicaManager}!instancia@{instancia}}
+\index{instancia@{instancia}!MusicaManager@{MusicaManager}}
+\doxysubsubsection{\texorpdfstring{instancia}{instancia}}
+{\footnotesize\ttfamily \label{class_musica_manager_a798507bd3844b8928a43931398d4739e} 
+\mbox{\hyperlink{class_musica_manager}{Musica\+Manager}} Musica\+Manager.\+instancia\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_musica_manager_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_musica_manager_8cs_source}{Musica\+Manager.\+cs}}.
+
+\Hypertarget{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}\index{MusicaManager@{MusicaManager}!musicaFondo@{musicaFondo}}
+\index{musicaFondo@{musicaFondo}!MusicaManager@{MusicaManager}}
+\doxysubsubsection{\texorpdfstring{musicaFondo}{musicaFondo}}
+{\footnotesize\ttfamily \label{class_musica_manager_a945f92b6f35199cc287aa876883dd10f} 
+Audio\+Source Musica\+Manager.\+musica\+Fondo}
+
+
+
+Definition at line \mbox{\hyperlink{_musica_manager_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_musica_manager_8cs_source}{Musica\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_musica_manager_8cs}{Musica\+Manager.\+cs}}\end{DoxyCompactItemize}

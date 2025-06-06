@@ -1,0 +1,159 @@
+\doxysection{Barra\+Vida Class Reference}
+\hypertarget{class_barra_vida}{}\label{class_barra_vida}\index{BarraVida@{BarraVida}}
+Inheritance diagram for Barra\+Vida\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barra_vida}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_barra_vida_a0703d20e309ee43765aa88dd03c0b7e6}{Actualizar\+Barra}} (float vida\+Actual)
+\item 
+void \mbox{\hyperlink{class_barra_vida_a11dbbd3b3cf2d658adcf23fce71a3d48}{Activar\+Game\+Over}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_barra_vida_a716f8bb07e88786accab3459bd15873f}{relleno\+Barra\+Vida}}
+\item 
+Game\+Object \mbox{\hyperlink{class_barra_vida_ae919c8cbd88f05e4a1140b181969aca3}{panel\+Game\+Over}}
+\item 
+Game\+Object \mbox{\hyperlink{class_barra_vida_aea5f0961ab4cf297a9b10281f29b1455}{imagen\+AEliminar}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_barra_vida_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_barra_vida_a11dbbd3b3cf2d658adcf23fce71a3d48}\index{BarraVida@{BarraVida}!ActivarGameOver@{ActivarGameOver}}
+\index{ActivarGameOver@{ActivarGameOver}!BarraVida@{BarraVida}}
+\doxysubsubsection{\texorpdfstring{ActivarGameOver()}{ActivarGameOver()}}
+{\footnotesize\ttfamily \label{class_barra_vida_a11dbbd3b3cf2d658adcf23fce71a3d48} 
+void Barra\+Vida.\+Activar\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ Game\ Over\ ya\ fue\ activado,\ evita\ que\ se\ ejecute\ otra\ vez.}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gameOverActivado)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ gameOverActivado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ el\ panel\ de\ Game\ Over\ si\ está\ asignado\ en\ el\ Inspector.}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_barra_vida_ae919c8cbd88f05e4a1140b181969aca3}{panelGameOver}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_barra_vida_ae919c8cbd88f05e4a1140b181969aca3}{panelGameOver}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ está\ asignado,\ muestra\ un\ error\ en\ consola\ para\ que\ el\ desarrollador\ lo\ corrija.}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Panel\ de\ Game\ Over\ no\ asignado."{}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destruye\ la\ imagen\ u\ objeto\ asignado\ para\ eliminarlo\ de\ la\ escena.}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_barra_vida_aea5f0961ab4cf297a9b10281f29b1455}{imagenAEliminar}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_barra_vida_aea5f0961ab4cf297a9b10281f29b1455}{imagenAEliminar}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Muestra\ una\ advertencia\ si\ no\ se\ asignó\ la\ imagen\ para\ eliminar.}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Imagen\ a\ eliminar\ no\ asignada."{}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ en\ la\ escena\ el\ objeto\ con\ el\ tag\ "{}Player"{}\ para\ destruirlo\ (simulando\ la\ muerte).}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ GameObject\ player\ =\ GameObject.FindGameObjectWithTag(\textcolor{stringliteral}{"{}Player"{}});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (player\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(player);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ se\ encuentra\ el\ jugador,\ avisa\ en\ consola.}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}No\ se\ encontró\ un\ objeto\ con\ el\ tag\ 'Player'."{}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_barra_vida_a0703d20e309ee43765aa88dd03c0b7e6}\index{BarraVida@{BarraVida}!ActualizarBarra@{ActualizarBarra}}
+\index{ActualizarBarra@{ActualizarBarra}!BarraVida@{BarraVida}}
+\doxysubsubsection{\texorpdfstring{ActualizarBarra()}{ActualizarBarra()}}
+{\footnotesize\ttfamily \label{class_barra_vida_a0703d20e309ee43765aa88dd03c0b7e6} 
+void Barra\+Vida.\+Actualizar\+Barra (\begin{DoxyParamCaption}\item[{float}]{vida\+Actual}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Limita\ el\ valor\ de\ vidaActual\ para\ que\ no\ sea\ menor\ que\ 0\ ni\ mayor\ que\ VidaMaxima.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ vidaActual\ =\ Mathf.Clamp(vidaActual,\ 0f,\ VidaMaxima);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualiza\ el\ fillAmount\ es\ un\ componente\ \ imagen\ que\ sirve\ para\ el\ relleno\ de\ vida\ del\ Image\ esto\ reflejara\ la\ vida\ \ como\ porcentaje\ (0\ a\ 1).}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ rellenoBarraVida.fillAmount\ =\ vidaActual\ /\ VidaMaxima;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Muestra\ en\ consola\ el\ valor\ actualizado\ de\ la\ barra\ para\ depuración.}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Barra\ de\ vida\ actualizada:\ "{}}\ +\ \mbox{\hyperlink{class_barra_vida_a716f8bb07e88786accab3459bd15873f}{rellenoBarraVida}}.fillAmount);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ vida\ llega\ a\ 0\ o\ menos,\ activa\ la\ pantalla\ de\ Game\ Over.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vidaActual\ <=\ 0f)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_barra_vida_a11dbbd3b3cf2d658adcf23fce71a3d48}{ActivarGameOver}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_barra_vida_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_barra_vida_aea5f0961ab4cf297a9b10281f29b1455}\index{BarraVida@{BarraVida}!imagenAEliminar@{imagenAEliminar}}
+\index{imagenAEliminar@{imagenAEliminar}!BarraVida@{BarraVida}}
+\doxysubsubsection{\texorpdfstring{imagenAEliminar}{imagenAEliminar}}
+{\footnotesize\ttfamily \label{class_barra_vida_aea5f0961ab4cf297a9b10281f29b1455} 
+Game\+Object Barra\+Vida.\+imagen\+AEliminar}
+
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+\Hypertarget{class_barra_vida_ae919c8cbd88f05e4a1140b181969aca3}\index{BarraVida@{BarraVida}!panelGameOver@{panelGameOver}}
+\index{panelGameOver@{panelGameOver}!BarraVida@{BarraVida}}
+\doxysubsubsection{\texorpdfstring{panelGameOver}{panelGameOver}}
+{\footnotesize\ttfamily \label{class_barra_vida_ae919c8cbd88f05e4a1140b181969aca3} 
+Game\+Object Barra\+Vida.\+panel\+Game\+Over}
+
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+\Hypertarget{class_barra_vida_a716f8bb07e88786accab3459bd15873f}\index{BarraVida@{BarraVida}!rellenoBarraVida@{rellenoBarraVida}}
+\index{rellenoBarraVida@{rellenoBarraVida}!BarraVida@{BarraVida}}
+\doxysubsubsection{\texorpdfstring{rellenoBarraVida}{rellenoBarraVida}}
+{\footnotesize\ttfamily \label{class_barra_vida_a716f8bb07e88786accab3459bd15873f} 
+Image Barra\+Vida.\+relleno\+Barra\+Vida}
+
+
+
+Definition at line \mbox{\hyperlink{_barra_vida_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_barra_vida_8cs_source}{Barra\+Vida.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_barra_vida_8cs}{Barra\+Vida.\+cs}}\end{DoxyCompactItemize}

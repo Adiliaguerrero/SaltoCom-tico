@@ -1,0 +1,117 @@
+\doxysection{Menu\+Controller Class Reference}
+\hypertarget{class_menu_controller}{}\label{class_menu_controller}\index{MenuController@{MenuController}}
+Inheritance diagram for Menu\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menu_controller_aa2b3f331725788163115d327cba8120c}{Ir\+AInicio}} ()
+\item 
+void \mbox{\hyperlink{class_menu_controller_a80cbb79a80231ddadb26e5267bd1099a}{Ir\+ALogros}} ()
+\item 
+void \mbox{\hyperlink{class_menu_controller_abce5f2b82bc49a20b910748210f08382}{Salir\+Del\+Juego}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonido\+Boton}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_menu_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_menu_8cs_source}{Menu.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_menu_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_controller_aa2b3f331725788163115d327cba8120c}\index{MenuController@{MenuController}!IrAInicio@{IrAInicio}}
+\index{IrAInicio@{IrAInicio}!MenuController@{MenuController}}
+\doxysubsubsection{\texorpdfstring{IrAInicio()}{IrAInicio()}}
+{\footnotesize\ttfamily \label{class_menu_controller_aa2b3f331725788163115d327cba8120c} 
+void Menu\+Controller.\+Ir\+AInicio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_menu_8cs_source}{Menu.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ usando\ el\ AudioManager\ singleton}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ una\ corutina\ para\ cargar\ la\ escena\ llamada\ "{}Dialogo"{}\ después\ de\ esperar\ el\ tiempo\ que\ dura\ el\ sonido}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ StartCoroutine(CargarEscenaConDelay(\textcolor{stringliteral}{"{}Dialogo"{}},\ \mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}}.length));}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_menu_controller_a80cbb79a80231ddadb26e5267bd1099a}\index{MenuController@{MenuController}!IrALogros@{IrALogros}}
+\index{IrALogros@{IrALogros}!MenuController@{MenuController}}
+\doxysubsubsection{\texorpdfstring{IrALogros()}{IrALogros()}}
+{\footnotesize\ttfamily \label{class_menu_controller_a80cbb79a80231ddadb26e5267bd1099a} 
+void Menu\+Controller.\+Ir\+ALogros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_menu_8cs_source}{Menu.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ la\ corutina\ para\ cargar\ la\ escena\ llamada\ "{}Logros"{}\ tras\ esperar\ el\ tiempo\ del\ sonido}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ StartCoroutine(CargarEscenaConDelay(\textcolor{stringliteral}{"{}Logros"{}},\ \mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}}.length));}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_menu_controller_abce5f2b82bc49a20b910748210f08382}\index{MenuController@{MenuController}!SalirDelJuego@{SalirDelJuego}}
+\index{SalirDelJuego@{SalirDelJuego}!MenuController@{MenuController}}
+\doxysubsubsection{\texorpdfstring{SalirDelJuego()}{SalirDelJuego()}}
+{\footnotesize\ttfamily \label{class_menu_controller_abce5f2b82bc49a20b910748210f08382} 
+void Menu\+Controller.\+Salir\+Del\+Juego (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_menu_8cs_source}{Menu.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ antes\ de\ salir}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ la\ corutina\ que\ cerrará\ el\ juego\ después\ de\ esperar\ la\ duración\ del\ sonido}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ StartCoroutine(SalirConDelay(\mbox{\hyperlink{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}{sonidoBoton}}.length));}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_menu_controller_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24}\index{MenuController@{MenuController}!sonidoBoton@{sonidoBoton}}
+\index{sonidoBoton@{sonidoBoton}!MenuController@{MenuController}}
+\doxysubsubsection{\texorpdfstring{sonidoBoton}{sonidoBoton}}
+{\footnotesize\ttfamily \label{class_menu_controller_a3971c1d71ea1570d304e166f0cd6ae24} 
+Audio\+Clip Menu\+Controller.\+sonido\+Boton}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_menu_8cs_source}{Menu.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_menu_8cs}{Menu.\+cs}}\end{DoxyCompactItemize}

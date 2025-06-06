@@ -1,0 +1,83 @@
+\doxysection{Musica\+Manager.\+cs}
+\hypertarget{_musica_manager_8cs_source}{}\label{_musica_manager_8cs_source}\index{Assets/Script/MusicaManager.cs@{Assets/Script/MusicaManager.cs}}
+\mbox{\hyperlink{_musica_manager_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importamos\ el\ espacio\ de\ nombres\ de\ Unity}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00004}00004\ \textcolor{comment}{//\ Esta\ clase\ gestiona\ la\ música\ de\ fondo\ glo0bal\ en\ el\ juego\ y\ la\ mantiene\ persistente\ entre\ escenas}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00005}\mbox{\hyperlink{class_musica_manager}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_musica_manager}{MusicaManager}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Instancia\ estática\ del\ MusicaManager\ (patrón\ Singleton)}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00008}\mbox{\hyperlink{class_musica_manager_a798507bd3844b8928a43931398d4739e}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_musica_manager}{MusicaManager}}\ \mbox{\hyperlink{class_musica_manager_a798507bd3844b8928a43931398d4739e}{instancia}};\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ Componente\ AudioSource\ que\ reproduce\ la\ música\ de\ fondo}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00011}\mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ AudioSource\ \mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{musicaFondo}};\ \ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00013}00013\ \ \ \ \ \textcolor{comment}{//\ Variable\ booleana\ que\ indica\ si\ la\ música\ está\ activa\ o\ no}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ musicaActiva;\ \ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Método\ Awake\ que\ se\ ejecuta\ al\ cargar\ el\ objeto\ (antes\ de\ Start)}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ hay\ una\ instancia\ activa,\ esta\ se\ convierte\ en\ la\ principal}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_musica_manager_a798507bd3844b8928a43931398d4739e}{instancia}}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_musica_manager_a798507bd3844b8928a43931398d4739e}{instancia}}\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Evita\ que\ este\ objeto\ se\ destruya\ al\ cambiar\ de\ escena}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(gameObject);\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ ya\ existe\ una\ instancia,\ destruye\ esta\ para\ evitar\ duplicados}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(gameObject);\ \ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carga\ el\ estado\ guardado\ de\ la\ música\ (1\ =\ activa,\ 0\ =\ desactivada)}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ musicaActiva\ =\ PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}MusicaActiva"{}},\ 1)\ ==\ 1;\ \ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ el\ estado\ guardado\ a\ la\ música\ de\ fondo}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ AplicarEstadoMusica();}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Método\ público\ que\ alterna\ el\ estado\ de\ la\ música\ (encendida/apagada)}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00042}\mbox{\hyperlink{class_musica_manager_a4dbd5693f39d33414f05cc74ff8a183b}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_musica_manager_a4dbd5693f39d33414f05cc74ff8a183b}{AlternarMusica}}()}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cambia\ el\ estado\ booleano\ a\ su\ valor\ opuesto}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ musicaActiva\ =\ !musicaActiva;}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ el\ nuevo\ estado\ en\ PlayerPrefs\ para\ que\ se\ mantenga\ entre\ sesiones}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ PlayerPrefs.SetInt(\textcolor{stringliteral}{"{}MusicaActiva"{}},\ musicaActiva\ ?\ 1\ :\ 0);\ \ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ el\ nuevo\ estado\ a\ la\ música\ de\ fondo}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ AplicarEstadoMusica();}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Método\ privado\ que\ aplica\ el\ estado\ de\ la\ música\ al\ componente\ AudioSource}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AplicarEstadoMusica()}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ que\ el\ componente\ de\ música\ esté\ asignado}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{musicaFondo}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ música\ está\ activa}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (musicaActiva)}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ está\ sonando,\ la\ reproduce}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{musicaFondo}}.isPlaying)\ \mbox{\hyperlink{class_musica_manager_a945f92b6f35199cc287aa876883dd10f}{musicaFondo}}.Play();}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asegura\ que\ el\ volumen\ esté\ al\ máximo}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ musicaFondo.volume\ =\ 1f;\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ música\ está\ desactivada,\ baja\ el\ volumen\ a\ cero}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ musicaFondo.volume\ =\ 0f;\ }
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_musica_manager_8cs_source_l00077}00077\ \}}
+
+\end{DoxyCode}

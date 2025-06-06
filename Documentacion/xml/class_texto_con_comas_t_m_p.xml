@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_texto_con_comas_t_m_p" kind="class" language="C#" prot="public">
+    <compoundname>TextoConComasTMP</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1ad85e04ae670f2176fd58897e31ae2d56" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI TextoConComasTMP.textoTMP</definition>
+        <argsstring></argsstring>
+        <name>textoTMP</name>
+        <qualifiedname>TextoConComasTMP.textoTMP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="8" column="28" bodyfile="Assets/Script/Trivia5.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1a862ae23b6eba3c78f3e82d78ce4588c8" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI TextoConComasTMP.textoRetroalimentacion</definition>
+        <argsstring></argsstring>
+        <name>textoRetroalimentacion</name>
+        <qualifiedname>TextoConComasTMP.textoRetroalimentacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="11" column="28" bodyfile="Assets/Script/Trivia5.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1a15c2d189fa3d55505bb060b7e25d09c1" prot="public" static="no" mutable="no">
+        <type>RectTransform[]</type>
+        <definition>RectTransform [] TextoConComasTMP.espaciosValidos</definition>
+        <argsstring></argsstring>
+        <name>espaciosValidos</name>
+        <qualifiedname>TextoConComasTMP.espaciosValidos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="14" column="26" bodyfile="Assets/Script/Trivia5.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1ac6fb08d62dd712581a35eb2edf2973b1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_paneles1" kindref="compound">Paneles1</ref></type>
+        <definition>Paneles1 TextoConComasTMP.Paneles1</definition>
+        <argsstring></argsstring>
+        <name>Paneles1</name>
+        <qualifiedname>TextoConComasTMP.Paneles1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="17" column="21" bodyfile="Assets/Script/Trivia5.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1ac9173116d2b94f311b34552bd4aeea11" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip TextoConComasTMP.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>TextoConComasTMP.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="20" column="22" bodyfile="Assets/Script/Trivia5.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_texto_con_comas_t_m_p_1a5d03a57303c741e6bf4995f2c2cc7fce" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string TextoConComasTMP.textoOriginal</definition>
+        <argsstring></argsstring>
+        <name>textoOriginal</name>
+        <qualifiedname>TextoConComasTMP.textoOriginal</qualifiedname>
+        <initializer>= &quot;Compré plátanos [   ] manzanas [   ] uvas [   ] peras y pan.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="23" column="20" bodyfile="Assets/Script/Trivia5.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_texto_con_comas_t_m_p_1ae2f616203f6cae0a3af19c2540e87676" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextoConComasTMP.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>TextoConComasTMP.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="26" column="10" bodyfile="Assets/Script/Trivia5.cs" bodystart="26" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texto_con_comas_t_m_p_1a87c21fbef36df3911f916343acfcf840" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextoConComasTMP.PasarASiguienteTrivia</definition>
+        <argsstring>()</argsstring>
+        <name>PasarASiguienteTrivia</name>
+        <qualifiedname>TextoConComasTMP.PasarASiguienteTrivia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="102" column="10" bodyfile="Assets/Script/Trivia5.cs" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texto_con_comas_t_m_p_1aa51f1c01a24bce521d3022f6c50a445a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextoConComasTMP.IncrementarPuntajeIntermedioCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeIntermedioCorrecto</name>
+        <qualifiedname>TextoConComasTMP.IncrementarPuntajeIntermedioCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="111" column="10" bodyfile="Assets/Script/Trivia5.cs" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texto_con_comas_t_m_p_1a45a59090032483a7408d0b49d011c45e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextoConComasTMP.IncrementarPuntajeIntermedioIncorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeIntermedioIncorrecto</name>
+        <qualifiedname>TextoConComasTMP.IncrementarPuntajeIntermedioIncorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="118" column="10" bodyfile="Assets/Script/Trivia5.cs" bodystart="118" bodyend="122"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_texto_con_comas_t_m_p_1a03bdd64d982783231d31487b52dac021" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TextoConComasTMP.VerificarComas</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarComas</name>
+        <qualifiedname>TextoConComasTMP.VerificarComas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia5.cs" line="37" column="17" bodyfile="Assets/Script/Trivia5.cs" bodystart="37" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>TextoConComasTMP</label>
+        <link refid="class_texto_con_comas_t_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>Paneles1</label>
+        <link refid="class_paneles1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TextoConComasTMP</label>
+        <link refid="class_texto_con_comas_t_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Paneles1</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Trivia5.cs" line="5" column="7" bodyfile="Assets/Script/Trivia5.cs" bodystart="6" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_texto_con_comas_t_m_p_1a15c2d189fa3d55505bb060b7e25d09c1" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>espaciosValidos</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1aa51f1c01a24bce521d3022f6c50a445a" prot="private" virt="non-virtual"><scope>TextoConComasTMP</scope><name>IncrementarPuntajeIntermedioCorrecto</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1a45a59090032483a7408d0b49d011c45e" prot="private" virt="non-virtual"><scope>TextoConComasTMP</scope><name>IncrementarPuntajeIntermedioIncorrecto</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1ac6fb08d62dd712581a35eb2edf2973b1" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>Paneles1</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1a87c21fbef36df3911f916343acfcf840" prot="private" virt="non-virtual"><scope>TextoConComasTMP</scope><name>PasarASiguienteTrivia</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1ac9173116d2b94f311b34552bd4aeea11" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>sonidoBoton</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1ae2f616203f6cae0a3af19c2540e87676" prot="private" virt="non-virtual"><scope>TextoConComasTMP</scope><name>Start</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1a5d03a57303c741e6bf4995f2c2cc7fce" prot="private" virt="non-virtual"><scope>TextoConComasTMP</scope><name>textoOriginal</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1a862ae23b6eba3c78f3e82d78ce4588c8" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>textoRetroalimentacion</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1ad85e04ae670f2176fd58897e31ae2d56" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>textoTMP</name></member>
+      <member refid="class_texto_con_comas_t_m_p_1a03bdd64d982783231d31487b52dac021" prot="public" virt="non-virtual"><scope>TextoConComasTMP</scope><name>VerificarComas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

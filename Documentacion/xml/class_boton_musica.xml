@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_boton_musica" kind="class" language="C#" prot="public">
+    <compoundname>BotonMusica</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject BotonMusica.musicaManagerPrefab</definition>
+        <argsstring></argsstring>
+        <name>musicaManagerPrefab</name>
+        <qualifiedname>BotonMusica.musicaManagerPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="9" column="23" bodyfile="Assets/Script/Musica.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button BotonMusica.boton</definition>
+        <argsstring></argsstring>
+        <name>boton</name>
+        <qualifiedname>BotonMusica.boton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="15" column="19" bodyfile="Assets/Script/Musica.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boton_musica_1aec7dd394eedbaf287fd7d4e098cc1849" prot="private" static="no" mutable="no">
+        <type><ref refid="class_musica_manager" kindref="compound">MusicaManager</ref></type>
+        <definition>MusicaManager BotonMusica.musicaManager</definition>
+        <argsstring></argsstring>
+        <name>musicaManager</name>
+        <qualifiedname>BotonMusica.musicaManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="12" column="27" bodyfile="Assets/Script/Musica.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boton_musica_1aa420ea6b1c0ca151bcded668ffc75ea9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BotonMusica.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>BotonMusica.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="18" column="18" bodyfile="Assets/Script/Musica.cs" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boton_musica_1a1c8aa1454b9aaf10ac817a1385c89256" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BotonMusica.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>BotonMusica.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="32" column="18" bodyfile="Assets/Script/Musica.cs" bodystart="32" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boton_musica_1a8419c2d6141c048c1f8e4de96b1caa71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BotonMusica.OnClick</definition>
+        <argsstring>()</argsstring>
+        <name>OnClick</name>
+        <qualifiedname>BotonMusica.OnClick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Musica.cs" line="45" column="17" bodyfile="Assets/Script/Musica.cs" bodystart="45" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BotonMusica</label>
+        <link refid="class_boton_musica"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BotonMusica</label>
+        <link refid="class_boton_musica"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Musica.cs" line="6" column="7" bodyfile="Assets/Script/Musica.cs" bodystart="7" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_boton_musica_1aa420ea6b1c0ca151bcded668ffc75ea9" prot="private" virt="non-virtual"><scope>BotonMusica</scope><name>Awake</name></member>
+      <member refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" prot="public" virt="non-virtual"><scope>BotonMusica</scope><name>boton</name></member>
+      <member refid="class_boton_musica_1aec7dd394eedbaf287fd7d4e098cc1849" prot="private" virt="non-virtual"><scope>BotonMusica</scope><name>musicaManager</name></member>
+      <member refid="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" prot="public" virt="non-virtual"><scope>BotonMusica</scope><name>musicaManagerPrefab</name></member>
+      <member refid="class_boton_musica_1a8419c2d6141c048c1f8e4de96b1caa71" prot="public" virt="non-virtual"><scope>BotonMusica</scope><name>OnClick</name></member>
+      <member refid="class_boton_musica_1a1c8aa1454b9aaf10ac817a1385c89256" prot="private" virt="non-virtual"><scope>BotonMusica</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

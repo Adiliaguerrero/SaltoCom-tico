@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_camara_8cs" kind="file" language="C#">
+    <compoundname>Camara.cs</compoundname>
+    <innerclass refid="class_camara" prot="public">Camara</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>controla<sp/>el<sp/>movimiento<sp/>de<sp/>la<sp/>cámara<sp/>para<sp/>que<sp/>siga<sp/>suavemente<sp/>al<sp/>jugador<sp/>o<sp/>personaje<sp/>jugable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_camara" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_camara" kindref="compound">Camara</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>objeto<sp/>jugador<sp/>que<sp/>la<sp/>cámara<sp/>seguirá</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" kindref="member">Player2</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Controla<sp/>la<sp/>suavidad<sp/>del<sp/>movimiento<sp/>de<sp/>la<sp/>cámara<sp/>(valor<sp/>más<sp/>alto<sp/>=<sp/>movimiento<sp/>más<sp/>suave)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_camara_1a10100e406eb82a9c1ba16789a2ed32c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_camara_1a10100e406eb82a9c1ba16789a2ed32c9" kindref="member">suavizado</ref><sp/>=<sp/>5f;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Desplazamiento<sp/>de<sp/>la<sp/>cámara<sp/>respecto<sp/>al<sp/>jugador<sp/>(eje<sp/>X<sp/>e<sp/>Y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_camara_1ab46c6317d7732b4012d45f43ddea97af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Vector2<sp/><ref refid="class_camara_1ab46c6317d7732b4012d45f43ddea97af" kindref="member">desplazamiento</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(2f,<sp/>1f);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variable<sp/>interna<sp/>para<sp/>almacenar<sp/>la<sp/>velocidad<sp/>usada<sp/>por<sp/>SmoothDamp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Vector3<sp/>velocidadSuavizado<sp/>=<sp/>Vector3.zero;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Última<sp/>dirección<sp/>horizontal<sp/>conocida<sp/>del<sp/>jugador<sp/>para<sp/>posicionar<sp/>la<sp/>cámara<sp/>adelante</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ultimaDireccionX<sp/>=<sp/>1f;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Metodo<sp/>LateUpdate<sp/>se<sp/>llama<sp/>después<sp/>de<sp/>Update<sp/>cada<sp/>frame<sp/>o<sp/>segundo,<sp/>ideal<sp/>para<sp/>seguir<sp/>al<sp/>jugador<sp/>sin<sp/>retrasos<sp/>visuales</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LateUpdate()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Comprobar<sp/>que<sp/>el<sp/>jugador<sp/>no<sp/>sea<sp/>null<sp/>o<sp/>no<sp/>extista<sp/><sp/>para<sp/>evitar<sp/>errores</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" kindref="member">Player2</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Obtener<sp/>la<sp/>dirección<sp/>horizontal<sp/>actual<sp/>basada<sp/>en<sp/>la<sp/>escala<sp/>X<sp/>del<sp/>jugador<sp/>(puede<sp/>ser<sp/>1<sp/>o<sp/>-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>direccionX<sp/>=<sp/><ref refid="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" kindref="member">Player2</ref>.transform.localScale.x;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actualizar<sp/>la<sp/>última<sp/>dirección<sp/>sólo<sp/>si<sp/>no<sp/>es<sp/>cero<sp/>(para<sp/>evitar<sp/>errores)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direccionX<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ultimaDireccionX<sp/>=<sp/>direccionX;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calcular<sp/>la<sp/>posición<sp/>objetivo<sp/>sumando<sp/>el<sp/>desplazamiento<sp/>ajustado<sp/>por<sp/>la<sp/>dirección<sp/>del<sp/>jugador</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>posicionObjetivo<sp/>=<sp/>Player2.transform.position<sp/>+<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector3(<ref refid="class_camara_1ab46c6317d7732b4012d45f43ddea97af" kindref="member">desplazamiento</ref>.x<sp/>*<sp/>ultimaDireccionX,<sp/><ref refid="class_camara_1ab46c6317d7732b4012d45f43ddea97af" kindref="member">desplazamiento</ref>.y,<sp/>0f);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mantener<sp/>la<sp/>posición<sp/>Z<sp/>actual<sp/>para<sp/>no<sp/>cambiar<sp/>la<sp/>profundidad<sp/>de<sp/>la<sp/>cámara</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>posicionObjetivo.z<sp/>=<sp/>transform.position.z;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mover<sp/>la<sp/>cámara<sp/>suavemente<sp/>desde<sp/>su<sp/>posición<sp/>actual<sp/>hacia<sp/>la<sp/>posición<sp/>objetivo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.position<sp/>=<sp/>Vector3.SmoothDamp(transform.position,<sp/>posicionObjetivo,<sp/>ref<sp/>velocidadSuavizado,<sp/>2f<sp/>/<sp/><ref refid="class_camara_1a10100e406eb82a9c1ba16789a2ed32c9" kindref="member">suavizado</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/Camara.cs"/>
+  </compounddef>
+</doxygen>

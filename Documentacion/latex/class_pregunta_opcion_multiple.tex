@@ -1,0 +1,235 @@
+\doxysection{Pregunta\+Opcion\+Multiple Class Reference}
+\hypertarget{class_pregunta_opcion_multiple}{}\label{class_pregunta_opcion_multiple}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+Inheritance diagram for Pregunta\+Opcion\+Multiple\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pregunta_opcion_multiple}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pregunta_opcion_multiple_a2e7f88d0c71d63b7354e71e93424a4d8}{Seleccionar\+Opcion}} (int indice)
+\item 
+void \mbox{\hyperlink{class_pregunta_opcion_multiple_a750cac89a494d0f7fffa38990824acd4}{Verificar\+Respuestas}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} \mbox{\hyperlink{class_pregunta_opcion_multiple_abce8c33147a0f11e80766ad26978a2ea}{Paneles1}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_pregunta_opcion_multiple_a87b89b8e53e73a4b1da407cfc9a2caff}{texto\+Pregunta}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pregunta_opcion_multiple_a3ad75ae34bb87b4f74b386fdbc931374}{botones\+Opciones}}
+\item 
+Text\+Mesh\+Pro\+UGUI\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9}{textos\+Opciones}}
+\item 
+Button \mbox{\hyperlink{class_pregunta_opcion_multiple_a74acdf99c0d603ed5679b1712cdc089a}{boton\+Confirmar}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_pregunta_opcion_multiple_a1d64ed1738108314ddc46dab5c550b12}{texto\+Resultado}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_pregunta_opcion_multiple_af22788fb0908c8f06bfb6087bb8454a0}{sonido\+Boton}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_pregunta_opcion_multiple_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pregunta_opcion_multiple_a2e7f88d0c71d63b7354e71e93424a4d8}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!SeleccionarOpcion@{SeleccionarOpcion}}
+\index{SeleccionarOpcion@{SeleccionarOpcion}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{SeleccionarOpcion()}{SeleccionarOpcion()}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a2e7f88d0c71d63b7354e71e93424a4d8} 
+void Pregunta\+Opcion\+Multiple.\+Seleccionar\+Opcion (\begin{DoxyParamCaption}\item[{int}]{indice}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ usando\ el\ AudioManager\ global}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_pregunta_opcion_multiple_af22788fb0908c8f06bfb6087bb8454a0}{sonidoBoton}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ opción\ ya\ estaba\ seleccionada,\ la\ elimina\ (toggle)}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (seleccionadas.Contains(indice))}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ seleccionadas.Remove(indice);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ está\ seleccionada\ y\ aún\ no\ hay\ 2\ seleccionadas,\ la\ añade}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (seleccionadas.Count\ <\ 2)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ seleccionadas.Add(indice);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualiza\ los\ colores\ para\ reflejar\ las\ opciones\ seleccionadas}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_pregunta_opcion_multiple_a750cac89a494d0f7fffa38990824acd4}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!VerificarRespuestas@{VerificarRespuestas}}
+\index{VerificarRespuestas@{VerificarRespuestas}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{VerificarRespuestas()}{VerificarRespuestas()}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a750cac89a494d0f7fffa38990824acd4} 
+void Pregunta\+Opcion\+Multiple.\+Verificar\+Respuestas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ al\ confirmar}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_pregunta_opcion_multiple_af22788fb0908c8f06bfb6087bb8454a0}{sonidoBoton}});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creamos\ una\ copia\ de\ las\ respuestas\ correctas\ para\ trabajar\ con\ ellas}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ List<int>\ correctas\ =\ \textcolor{keyword}{new}\ List<int>(indicesCorrectos);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ordenamos\ ambas\ listas\ para\ facilitar\ la\ comparación}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ seleccionadas.Sort();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ correctas.Sort();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Contador\ de\ respuestas\ correctas\ seleccionadas\ por\ el\ usuario}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ correctasSeleccionadas\ =\ 0;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recorremos\ las\ opciones\ seleccionadas\ para\ contar\ cuántas\ son\ correctas}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ seleccionadas.Count;\ i++)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (correctas.Contains(seleccionadas[i]))}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ correctasSeleccionadas++;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cambiamos\ el\ color\ del\ texto\ de\ cada\ opción\ según\ si\ fue\ correcta,\ incorrecta\ o\ no\ seleccionada}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_pregunta_opcion_multiple_a3ad75ae34bb87b4f74b386fdbc931374}{botonesOpciones}}.Length;\ i++)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (seleccionadas.Contains(i))}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (correctas.Contains(i))}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ está\ seleccionada\ y\ es\ correcta,\ pone\ el\ texto\ en\ verde}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9}{textosOpciones}}[i].color\ =\ Color.green;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ está\ seleccionada\ pero\ es\ incorrecta,\ pone\ el\ texto\ en\ rojo}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9}{textosOpciones}}[i].color\ =\ Color.red;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ está\ seleccionada,\ el\ texto\ permanece\ blanco}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9}{textosOpciones}}[i].color\ =\ Color.white;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Determina\ el\ mensaje\ a\ mostrar\ según\ cuántas\ respuestas\ correctas\ haya\ seleccionado\ el\ usuario}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (correctasSeleccionadas\ ==\ 2)}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ textoResultado.text\ =\ \textcolor{stringliteral}{"{}¡Respuestas\ correctas!"{}};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeBasicoCorrecto();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (correctasSeleccionadas\ ==\ 1)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ textoResultado.text\ =\ \textcolor{stringliteral}{"{}Al\ menos\ una\ opción\ es\ correcta."{}};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ textoResultado.text\ =\ \textcolor{stringliteral}{"{}Respuestas\ incorrectas."{}};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeBasicoIncorrecto();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invoca\ el\ método\ para\ pasar\ a\ la\ siguiente\ trivia\ después\ de\ 2\ segundos}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}PasarASiguienteTrivia"{}},\ 2f);}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_pregunta_opcion_multiple_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_pregunta_opcion_multiple_a74acdf99c0d603ed5679b1712cdc089a}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!botonConfirmar@{botonConfirmar}}
+\index{botonConfirmar@{botonConfirmar}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{botonConfirmar}{botonConfirmar}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a74acdf99c0d603ed5679b1712cdc089a} 
+Button Pregunta\+Opcion\+Multiple.\+boton\+Confirmar}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_a3ad75ae34bb87b4f74b386fdbc931374}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!botonesOpciones@{botonesOpciones}}
+\index{botonesOpciones@{botonesOpciones}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{botonesOpciones}{botonesOpciones}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a3ad75ae34bb87b4f74b386fdbc931374} 
+Button \mbox{[}$\,$\mbox{]} Pregunta\+Opcion\+Multiple.\+botones\+Opciones}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_abce8c33147a0f11e80766ad26978a2ea}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!Paneles1@{Paneles1}}
+\index{Paneles1@{Paneles1}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{Paneles1}{Paneles1}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_abce8c33147a0f11e80766ad26978a2ea} 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} Pregunta\+Opcion\+Multiple.\+Paneles1}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_af22788fb0908c8f06bfb6087bb8454a0}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!sonidoBoton@{sonidoBoton}}
+\index{sonidoBoton@{sonidoBoton}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{sonidoBoton}{sonidoBoton}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_af22788fb0908c8f06bfb6087bb8454a0} 
+Audio\+Clip Pregunta\+Opcion\+Multiple.\+sonido\+Boton}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_a87b89b8e53e73a4b1da407cfc9a2caff}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!textoPregunta@{textoPregunta}}
+\index{textoPregunta@{textoPregunta}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{textoPregunta}{textoPregunta}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a87b89b8e53e73a4b1da407cfc9a2caff} 
+Text\+Mesh\+Pro\+UGUI Pregunta\+Opcion\+Multiple.\+texto\+Pregunta}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_a1d64ed1738108314ddc46dab5c550b12}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!textoResultado@{textoResultado}}
+\index{textoResultado@{textoResultado}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{textoResultado}{textoResultado}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_a1d64ed1738108314ddc46dab5c550b12} 
+Text\+Mesh\+Pro\+UGUI Pregunta\+Opcion\+Multiple.\+texto\+Resultado}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+\Hypertarget{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9}\index{PreguntaOpcionMultiple@{PreguntaOpcionMultiple}!textosOpciones@{textosOpciones}}
+\index{textosOpciones@{textosOpciones}!PreguntaOpcionMultiple@{PreguntaOpcionMultiple}}
+\doxysubsubsection{\texorpdfstring{textosOpciones}{textosOpciones}}
+{\footnotesize\ttfamily \label{class_pregunta_opcion_multiple_aa9ccedb8beb61b0b90bf551b1916e2b9} 
+Text\+Mesh\+Pro\+UGUI \mbox{[}$\,$\mbox{]} Pregunta\+Opcion\+Multiple.\+textos\+Opciones}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia3_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_trivia3_8cs_source}{Trivia3.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_trivia3_8cs}{Trivia3.\+cs}}\end{DoxyCompactItemize}

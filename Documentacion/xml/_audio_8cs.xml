@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_audio_8cs" kind="file" language="C#">
+    <compoundname>Audio.cs</compoundname>
+    <innerclass refid="class_boton_clip_control" prot="public">BotonClipControl</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_u_i">UnityEngine::UI</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Importa<sp/>la<sp/>biblioteca<sp/>principal<sp/>de<sp/>Unity<sp/>para<sp/>funciones<sp/>básicas<sp/>del<sp/>motor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.UI;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Importa<sp/>la<sp/>biblioteca<sp/>de<sp/>UI,<sp/>necesaria<sp/>para<sp/>trabajar<sp/>con<sp/>botones<sp/>y<sp/>otros<sp/>elementos<sp/>gráficos.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>controla<sp/>un<sp/>botón<sp/>que<sp/>permite<sp/>activar/desactivar<sp/>el<sp/>sonido<sp/>y<sp/>reproducir<sp/>un<sp/>efecto<sp/>de<sp/>sonido<sp/>cuando<sp/>se<sp/>pulsa.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_boton_clip_control" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boton_clip_control" kindref="compound">BotonClipControl</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="class_boton_clip_control_1aa782427cbca519cb24551e787da39564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Button<sp/><ref refid="class_boton_clip_control_1aa782427cbca519cb24551e787da39564" kindref="member">botonSonido</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>botón<sp/>en<sp/>la<sp/>escena<sp/>que<sp/>controlará<sp/>el<sp/>sonido.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_boton_clip_control_1acaea4f565c696a65bd2bc36b216e964c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioClip<sp/><ref refid="class_boton_clip_control_1acaea4f565c696a65bd2bc36b216e964c" kindref="member">sonidoBoton</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>de<sp/>un<sp/>Clip<sp/>de<sp/>audio<sp/>que<sp/>se<sp/>reproducirá<sp/>cuando<sp/>se<sp/>presione<sp/>el<sp/>botón.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Método<sp/>Awake<sp/>se<sp/>ejecuta<sp/>al<sp/>inicio,<sp/>antes<sp/>de<sp/>Start<sp/>o<sp/>que<sp/>comienze<sp/>el<sp/>juego<sp/>,<sp/>ideal<sp/>para<sp/>preparar<sp/>una<sp/>funcion<sp/>en<sp/>la<sp/>escena.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Awake()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>si<sp/>ya<sp/>existe<sp/>una<sp/>instancia<sp/>u<sp/>obejeto<sp/>del<sp/>AudioManager<sp/>en<sp/>la<sp/>escena.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_audio_manager" kindref="compound">AudioManager</ref>.<ref refid="class_audio_manager_1ac112d1957778ad900886e38e20628fd6" kindref="member">instancia</ref><sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>no<sp/>existe,<sp/>crea<sp/>un<sp/>nuevo<sp/>GameObject<sp/>llamado<sp/>&quot;AudioManager&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GameObject<sp/>audioManagerObj<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>GameObject(</highlight><highlight class="stringliteral">&quot;AudioManager&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Le<sp/>agrega<sp/>el<sp/>componente<sp/>AudioManager<sp/>para<sp/>controlar<sp/>el<sp/>sonido<sp/>global.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManagerObj.AddComponent&lt;<ref refid="class_audio_manager" kindref="compound">AudioManager</ref>&gt;();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>asegura<sp/>de<sp/>que<sp/>el<sp/>AudioManager<sp/>no<sp/>se<sp/>destruya<sp/>al<sp/>cambiar<sp/>de<sp/>escena.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DontDestroyOnLoad(audioManagerObj);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>llama<sp/>al<sp/>inicio<sp/>de<sp/>la<sp/>escena,<sp/>justo<sp/>después<sp/>de<sp/>Awake.<sp/>Aquí<sp/>se<sp/>configura<sp/>el<sp/>botón.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Start()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_boton_clip_control_1aa782427cbca519cb24551e787da39564" kindref="member">botonSonido</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>el<sp/>botón<sp/>está<sp/>asignado,<sp/>le<sp/>agrega<sp/>un<sp/>listener<sp/>(evento)<sp/>que<sp/>llama<sp/>al<sp/>método<sp/>ToggleSonido<sp/>cuando<sp/>se<sp/>presiona.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_boton_clip_control_1aa782427cbca519cb24551e787da39564" kindref="member">botonSonido</ref>.onClick.AddListener(ToggleSonido);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>no<sp/>se<sp/>asignó<sp/>ningún<sp/>botón,<sp/>se<sp/>muestra<sp/>una<sp/>advertencia<sp/>en<sp/>la<sp/>consola.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug.LogWarning(</highlight><highlight class="stringliteral">&quot;Botón<sp/>de<sp/>sonido<sp/>no<sp/>asignado.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Este<sp/>método<sp/>se<sp/>llama<sp/>cuando<sp/>el<sp/>botón<sp/>es<sp/>presionado.<sp/>Alterna<sp/>el<sp/>estado<sp/>del<sp/>sonido<sp/>y<sp/>reproduce<sp/>un<sp/>clip.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ToggleSonido()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Obtiene<sp/>el<sp/>estado<sp/>actual<sp/>del<sp/>sonido<sp/>(activo<sp/>o<sp/>no)<sp/>desde<sp/>el<sp/>AudioManager.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sonidoActivo<sp/>=<sp/>AudioManager.instancia.ObtenerEstadoSonido();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cambia<sp/>el<sp/>estado<sp/>del<sp/>sonido<sp/>al<sp/>valor<sp/>opuesto<sp/>(si<sp/>estaba<sp/>activo,<sp/>lo<sp/>desactiva<sp/>y<sp/>viceversa).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AudioManager.instancia.CambiarEstadoSonido(!sonidoActivo);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>hay<sp/>un<sp/>clip<sp/>asignado,<sp/>se<sp/>reproduce<sp/>usando<sp/>el<sp/>AudioManager.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_boton_clip_control_1acaea4f565c696a65bd2bc36b216e964c" kindref="member">sonidoBoton</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AudioManager.instancia.ReproducirSonido(<ref refid="class_boton_clip_control_1acaea4f565c696a65bd2bc36b216e964c" kindref="member">sonidoBoton</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/Audio.cs"/>
+  </compounddef>
+</doxygen>

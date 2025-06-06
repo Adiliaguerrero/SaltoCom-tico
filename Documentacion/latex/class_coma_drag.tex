@@ -1,0 +1,150 @@
+\doxysection{Coma\+Drag Class Reference}
+\hypertarget{class_coma_drag}{}\label{class_coma_drag}\index{ComaDrag@{ComaDrag}}
+Inheritance diagram for Coma\+Drag\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coma_drag}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_coma_drag_acc2bd41e568f778a5e5bbbf8781a7096}{On\+Drag}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \mbox{\hyperlink{class_coma_drag_a82610b6ac5e1e277bb71835e20d5e652}{On\+End\+Drag}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Rect\+Transform\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_coma_drag_a670d7540186e07ca8ffc79203872af28}{drop\+Areas}}
+\item 
+Transform \mbox{\hyperlink{class_coma_drag_a34a81acdb61fda66dcd45b3e171efaec}{padre\+Contenedor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_arrastrar_soltar_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_arrastrar_soltar_8cs_source}{Arrastrar\+Soltar.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_coma_drag_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coma_drag_acc2bd41e568f778a5e5bbbf8781a7096}\index{ComaDrag@{ComaDrag}!OnDrag@{OnDrag}}
+\index{OnDrag@{OnDrag}!ComaDrag@{ComaDrag}}
+\doxysubsubsection{\texorpdfstring{OnDrag()}{OnDrag()}}
+{\footnotesize\ttfamily \label{class_coma_drag_acc2bd41e568f778a5e5bbbf8781a7096} 
+void Coma\+Drag.\+On\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arrastrar_soltar_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_arrastrar_soltar_8cs_source}{Arrastrar\+Soltar.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualiza\ la\ posición\ del\ objeto\ al\ seguir\ la\ posición\ del\ puntero\ o\ dedo\ en\ pantalla}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ rectTransform.position\ =\ eventData.position;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Desactiva\ temporalmente\ los\ raycasts\ para\ que\ el\ objeto\ no\ interfiera\ con\ detección\ de\ áreas\ debajo}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ canvasGroup.blocksRaycasts\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_coma_drag_a82610b6ac5e1e277bb71835e20d5e652}\index{ComaDrag@{ComaDrag}!OnEndDrag@{OnEndDrag}}
+\index{OnEndDrag@{OnEndDrag}!ComaDrag@{ComaDrag}}
+\doxysubsubsection{\texorpdfstring{OnEndDrag()}{OnEndDrag()}}
+{\footnotesize\ttfamily \label{class_coma_drag_a82610b6ac5e1e277bb71835e20d5e652} 
+void Coma\+Drag.\+On\+End\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_arrastrar_soltar_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_arrastrar_soltar_8cs_source}{Arrastrar\+Soltar.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ activar\ los\ raycasts\ para\ que\ el\ objeto\ vuelva\ a\ responder\ a\ interacciones}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ canvasGroup.blocksRaycasts\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bandera\ que\ indica\ si\ el\ objeto\ fue\ soltado\ en\ una\ zona\ válida}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ colocado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recorre\ cada\ zona\ de\ soltado\ en\ las\ areas\ válida}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ area\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_coma_drag_a670d7540186e07ca8ffc79203872af28}{dropAreas}})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ si\ el\ objeto\ fue\ soltado\ dentro\ de\ una\ posicion\ \ de\ las\ zonas\ permitidas}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (RectTransformUtility.RectangleContainsScreenPoint(area,\ eventData.position,\ eventData.pressEventCamera))}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Coloca\ el\ objeto\ justo\ en\ el\ centro\ de\ la\ zona\ de\ destino}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rectTransform.position\ =\ area.position;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ como\ colocado\ exitosamente}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ colocado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ aún\ no\ se\ ha\ clonado\ el\ objeto:}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!yaClonada)}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Crea\ una\ copia\ del\ objeto\ actual\ dentro\ del\ mismo\ contenedor\ padre}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ clon\ =\ Instantiate(gameObject,\ \mbox{\hyperlink{class_coma_drag_a34a81acdb61fda66dcd45b3e171efaec}{padreContenedor}});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Coloca\ el\ clon\ en\ la\ posición\ original}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clon.transform.position\ =\ originalPosition;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asegura\ que\ la\ escala\ sea\ 1\ para\ evitar\ distorsión\ visual}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clon.transform.localScale\ =\ Vector3.one;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Accede\ al\ script\ del\ clon\ para\ actualizar\ sus\ propiedades\ internas}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ clonScript\ =\ clon.GetComponent<ComaDrag>();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clonScript.originalPosition\ =\ clon.transform.position;\ \textcolor{comment}{//\ Actualiza\ su\ nueva\ posición\ original}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clonScript.yaClonada\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Permite\ que\ el\ nuevo\ clon\ pueda\ ser\ clonado\ también}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ el\ objeto\ original\ como\ ya\ clonado\ para\ no\ crear\ más\ copias}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yaClonada\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ya\ se\ colocó\ correctamente,\ salimos\ del\ ciclo\ con\ un\ breack}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ objeto\ no\ se\ soltó\ en\ una\ zona\ válida,\ regresa\ a\ su\ posición\ inicial}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colocado)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ rectTransform.position\ =\ originalPosition;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_coma_drag_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_coma_drag_a670d7540186e07ca8ffc79203872af28}\index{ComaDrag@{ComaDrag}!dropAreas@{dropAreas}}
+\index{dropAreas@{dropAreas}!ComaDrag@{ComaDrag}}
+\doxysubsubsection{\texorpdfstring{dropAreas}{dropAreas}}
+{\footnotesize\ttfamily \label{class_coma_drag_a670d7540186e07ca8ffc79203872af28} 
+Rect\+Transform \mbox{[}$\,$\mbox{]} Coma\+Drag.\+drop\+Areas}
+
+
+
+Definition at line \mbox{\hyperlink{_arrastrar_soltar_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_arrastrar_soltar_8cs_source}{Arrastrar\+Soltar.\+cs}}.
+
+\Hypertarget{class_coma_drag_a34a81acdb61fda66dcd45b3e171efaec}\index{ComaDrag@{ComaDrag}!padreContenedor@{padreContenedor}}
+\index{padreContenedor@{padreContenedor}!ComaDrag@{ComaDrag}}
+\doxysubsubsection{\texorpdfstring{padreContenedor}{padreContenedor}}
+{\footnotesize\ttfamily \label{class_coma_drag_a34a81acdb61fda66dcd45b3e171efaec} 
+Transform Coma\+Drag.\+padre\+Contenedor}
+
+
+
+Definition at line \mbox{\hyperlink{_arrastrar_soltar_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_arrastrar_soltar_8cs_source}{Arrastrar\+Soltar.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_arrastrar_soltar_8cs}{Arrastrar\+Soltar.\+cs}}\end{DoxyCompactItemize}

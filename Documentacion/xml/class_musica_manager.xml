@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_musica_manager" kind="class" language="C#" prot="public">
+    <compoundname>MusicaManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_musica_manager_1a798507bd3844b8928a43931398d4739e" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_musica_manager" kindref="compound">MusicaManager</ref></type>
+        <definition>MusicaManager MusicaManager.instancia</definition>
+        <argsstring></argsstring>
+        <name>instancia</name>
+        <qualifiedname>MusicaManager.instancia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="8" column="33" bodyfile="Assets/Script/MusicaManager.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_musica_manager_1a945f92b6f35199cc287aa876883dd10f" prot="public" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource MusicaManager.musicaFondo</definition>
+        <argsstring></argsstring>
+        <name>musicaFondo</name>
+        <qualifiedname>MusicaManager.musicaFondo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="11" column="24" bodyfile="Assets/Script/MusicaManager.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_musica_manager_1a7fca98025a6dcad71bb63088f907b3aa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MusicaManager.musicaActiva</definition>
+        <argsstring></argsstring>
+        <name>musicaActiva</name>
+        <qualifiedname>MusicaManager.musicaActiva</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="14" column="18" bodyfile="Assets/Script/MusicaManager.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_musica_manager_1a2b60f9427a1a80b3ebb14c9501d8ee88" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MusicaManager.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>MusicaManager.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="17" column="18" bodyfile="Assets/Script/MusicaManager.cs" bodystart="17" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_musica_manager_1a03fd96a5eb7ff1703f7bb205df576d94" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MusicaManager.AplicarEstadoMusica</definition>
+        <argsstring>()</argsstring>
+        <name>AplicarEstadoMusica</name>
+        <qualifiedname>MusicaManager.AplicarEstadoMusica</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="56" column="18" bodyfile="Assets/Script/MusicaManager.cs" bodystart="56" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_musica_manager_1a4dbd5693f39d33414f05cc74ff8a183b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MusicaManager.AlternarMusica</definition>
+        <argsstring>()</argsstring>
+        <name>AlternarMusica</name>
+        <qualifiedname>MusicaManager.AlternarMusica</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/MusicaManager.cs" line="42" column="17" bodyfile="Assets/Script/MusicaManager.cs" bodystart="42" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>MusicaManager</label>
+        <link refid="class_musica_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>MusicaManager</label>
+        <link refid="class_musica_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>instancia</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/MusicaManager.cs" line="5" column="7" bodyfile="Assets/Script/MusicaManager.cs" bodystart="6" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_musica_manager_1a4dbd5693f39d33414f05cc74ff8a183b" prot="public" virt="non-virtual"><scope>MusicaManager</scope><name>AlternarMusica</name></member>
+      <member refid="class_musica_manager_1a03fd96a5eb7ff1703f7bb205df576d94" prot="private" virt="non-virtual"><scope>MusicaManager</scope><name>AplicarEstadoMusica</name></member>
+      <member refid="class_musica_manager_1a2b60f9427a1a80b3ebb14c9501d8ee88" prot="private" virt="non-virtual"><scope>MusicaManager</scope><name>Awake</name></member>
+      <member refid="class_musica_manager_1a798507bd3844b8928a43931398d4739e" prot="public" virt="non-virtual"><scope>MusicaManager</scope><name>instancia</name></member>
+      <member refid="class_musica_manager_1a7fca98025a6dcad71bb63088f907b3aa" prot="private" virt="non-virtual"><scope>MusicaManager</scope><name>musicaActiva</name></member>
+      <member refid="class_musica_manager_1a945f92b6f35199cc287aa876883dd10f" prot="public" virt="non-virtual"><scope>MusicaManager</scope><name>musicaFondo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

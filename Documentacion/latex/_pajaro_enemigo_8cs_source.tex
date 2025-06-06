@@ -1,0 +1,111 @@
+\doxysection{Pajaro\+Enemigo.\+cs}
+\hypertarget{_pajaro_enemigo_8cs_source}{}\label{_pajaro_enemigo_8cs_source}\index{Assets/Script/PajaroEnemigo.cs@{Assets/Script/PajaroEnemigo.cs}}
+\mbox{\hyperlink{_pajaro_enemigo_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importamos\ el\ espacio\ de\ nombres\ principal\ de\ Unity}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00004}00004\ \textcolor{comment}{//\ Importamos\ el\ espacio\ de\ nombres\ para\ usar\ corrutinas}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00007}00007\ \textcolor{comment}{//\ \ Clase\ gestiona\ el\ comportamiento\ de\ un\ pájaro\ enemigo\ que\ se\ mueve\ de\ un\ lado\ a\ otro\ ,\ dañando\ al\ jugador\ al\ tocarlo}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00008}\mbox{\hyperlink{class_pajaro_enemigo}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pajaro_enemigo}{PajaroEnemigo}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ Sección\ en\ el\ Inspector\ para\ ajustar\ el\ movimiento\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00011}00011\ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Movimiento"{}})]}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00013}00013\ \ \ \ \ \textcolor{comment}{//\ Velocidad\ de\ movimiento\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00014}\mbox{\hyperlink{class_pajaro_enemigo_ab82d49e8b100fb72320ce32fee0b6b05}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_pajaro_enemigo_ab82d49e8b100fb72320ce32fee0b6b05}{velocidad}}\ =\ 2f;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Distancia\ total\ que\ recorre\ en\ cada\ dirección\ antes\ de\ voltearse}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00017}\mbox{\hyperlink{class_pajaro_enemigo_a9b5c927118bdf4177c5a432cf5bec0e1}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_pajaro_enemigo_a9b5c927118bdf4177c5a432cf5bec0e1}{distanciaVuelo}}\ =\ 5f;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Tiempo\ que\ espera\ antes\ de\ cambiar\ de\ dirección}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00020}\mbox{\hyperlink{class_pajaro_enemigo_a11f9ae6e43c65ecc227db304b35fa0e8}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_pajaro_enemigo_a11f9ae6e43c65ecc227db304b35fa0e8}{tiempoEspera}}\ =\ 2f;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Sección\ en\ el\ Inspector\ para\ ajustar\ el\ daño\ que\ causa}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00023}00023\ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Daño"{}})]}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Cantidad\ de\ daño\ que\ inflige\ al\ jugador\ al\ tocarlo}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00026}\mbox{\hyperlink{class_pajaro_enemigo_aceb1231f8167df291b2253a58aed8b16}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pajaro_enemigo_aceb1231f8167df291b2253a58aed8b16}{danio}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ posición\ inicial\ para\ calcular\ el\ vuelo}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ posicionInicial;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ Indica\ si\ el\ pájaro\ se\ está\ moviendo\ hacia\ la\ derecha}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ moviendoDerecha\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ Método\ Start\ se\ ejecuta\ al\ iniciar\ la\ escena}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ posición\ inicial\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ posicionInicial\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ la\ rutina\ de\ vuelo\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ StartCoroutine(RutinaVuelo());}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Corrutina\ que\ controla\ el\ movimiento\ de\ ida\ y\ vuelta\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00045}00045\ \ \ \ \ IEnumerator\ RutinaVuelo()}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcula\ la\ posición\ X\ objetivo\ según\ la\ dirección\ actual}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ objetivoX\ =\ moviendoDerecha\ ?\ posicionInicial.x\ +\ \mbox{\hyperlink{class_pajaro_enemigo_a9b5c927118bdf4177c5a432cf5bec0e1}{distanciaVuelo}}\ :\ posicionInicial.x\ -\/\ \mbox{\hyperlink{class_pajaro_enemigo_a9b5c927118bdf4177c5a432cf5bec0e1}{distanciaVuelo}};}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mientras\ no\ haya\ llegado\ al\ objetivo,\ se\ sigue\ moviendo\ en\ esa\ dirección}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (Mathf.Abs(transform.position.x\ -\/\ objetivoX)\ >\ 0.1f)}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ la\ dirección\ de\ movimiento\ (derecha\ o\ izquierda)}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ direccion\ =\ moviendoDerecha\ ?\ Vector3.right\ :\ Vector3.left;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mueve\ al\ pájaro\ en\ la\ dirección\ correspondiente}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transform.Translate(direccion\ *\ \mbox{\hyperlink{class_pajaro_enemigo_ab82d49e8b100fb72320ce32fee0b6b05}{velocidad}}\ *\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Espera\ un\ frame\ antes\ de\ continuar\ (para\ que\ la\ animación\ sea\ fluida)}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Espera\ el\ tiempo\ definido\ antes\ de\ cambiar\ de\ dirección}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(\mbox{\hyperlink{class_pajaro_enemigo_a11f9ae6e43c65ecc227db304b35fa0e8}{tiempoEspera}});}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cambia\ la\ dirección\ de\ movimiento}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ moviendoDerecha\ =\ !moviendoDerecha;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invierte\ la\ escala\ del\ objeto\ para\ que\ se\ voltee\ visualmente}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ Voltear();}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ voltea\ la\ escala\ horizontal\ del\ pájaro}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{void}\ Voltear()}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Toma\ la\ escala\ actual}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ Vector3\ escala\ =\ transform.localScale;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invierte\ el\ eje\ X}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ escala.x\ *=\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ la\ nueva\ escala\ para\ voltear\ el\ sprite}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ transform.localScale\ =\ escala;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ se\ ejecuta\ al\ detectar\ una\ colisión\ con\ otro\ collider\ (modo\ Trigger)}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnTriggerEnter2D(Collider2D\ otro)}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Intenta\ obtener\ el\ componente\ PlayerController\ del\ objeto\ que\ colisionó}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ PlayerController\ jugador\ =\ otro.GetComponent<PlayerController>();}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ se\ encontró\ al\ jugador,\ le\ aplica\ daño}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ la\ posición\ del\ enemigo\ para\ determinar\ la\ dirección\ del\ daño}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ direccionDanio\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ al\ método\ del\ jugador\ para\ recibir\ daño}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ jugador.\mbox{\hyperlink{class_player_controller_a0329f53e40e6dffbd41deb0011fd4840}{RecibeDanio}}(direccionDanio,\ \mbox{\hyperlink{class_pajaro_enemigo_aceb1231f8167df291b2253a58aed8b16}{danio}});}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pajaro_enemigo_8cs_source_l00105}00105\ \}}
+
+\end{DoxyCode}

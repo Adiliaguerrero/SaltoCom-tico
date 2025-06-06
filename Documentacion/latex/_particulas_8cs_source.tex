@@ -1,0 +1,50 @@
+\doxysection{Particulas.\+cs}
+\hypertarget{_particulas_8cs_source}{}\label{_particulas_8cs_source}\index{Assets/Script/Particulas.cs@{Assets/Script/Particulas.cs}}
+\mbox{\hyperlink{_particulas_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00003}00003\ \textcolor{comment}{//\ Esta\ clase\ permite\ eliminar\ las\ partículas\ de\ un\ ParticleSystem\ cuando\ colisionan\ con\ un\ objeto\ etiquetado\ como\ "{}Suelo"{}}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00004}\mbox{\hyperlink{class_destruir_particulas_al_colisionar}{00004}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_destruir_particulas_al_colisionar}{DestruirParticulasAlColisionar}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ Referencia\ al\ componente\ ParticleSystem\ del\ objeto}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{private}\ ParticleSystem\ ps;}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Se\ llama\ al\ iniciar\ el\ script}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ y\ guarda\ el\ ParticleSystem\ adjunto\ a\ este\ GameObject}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ ps\ =\ GetComponent<ParticleSystem>();}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Metodo\ OnParticleCollision\ Se\ llama\ automáticamente\ cuando\ una\ partícula\ del\ ParticleSystem\ colisiona\ con\ otro\ objeto}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ OnParticleCollision(GameObject\ other)}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ si\ el\ objeto\ con\ el\ que\ colisiona\ tiene\ la\ etiqueta\ "{}Suelo"{}}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (other.CompareTag(\textcolor{stringliteral}{"{}Suelo"{}}))}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Crea\ un\ arreglo\ para\ almacenar\ todas\ las\ partículas\ activas\ actualmente}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ ParticleSystem.Particle[]\ particles\ =\ \textcolor{keyword}{new}\ ParticleSystem.Particle[ps.main.maxParticles];}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ todas\ las\ partículas\ activas\ y\ devuelve\ su\ cantidad\ en\ 'count'}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ ps.GetParticles(particles);}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recorre\ todas\ las\ partículas\ para\ modificar\ su\ tiempo\ de\ vida\ restante}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ partícula\ todavía\ está\ viva\ (no\ ha\ terminado\ su\ vida)}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (particles[i].remainingLifetime\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fuerza\ a\ que\ la\ partícula\ expire\ inmediatamente,\ lo\ que\ la\ eliminará\ visualmente}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ particles[i].remainingLifetime\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ los\ cambios\ hechos\ al\ arreglo\ de\ partículas\ de\ vuelta\ al\ ParticleSystem}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ ps.SetParticles(particles,\ count);}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{_particulas_8cs_source_l00044}00044\ }
+
+\end{DoxyCode}

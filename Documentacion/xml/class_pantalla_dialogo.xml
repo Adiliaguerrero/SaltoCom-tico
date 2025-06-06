@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_pantalla_dialogo" kind="class" language="C#" prot="public">
+    <compoundname>PantallaDialogo</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a11e1e3cfe4dd87e67a32a2cf45122956" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text PantallaDialogo.textoPantalla</definition>
+        <argsstring></argsstring>
+        <name>textoPantalla</name>
+        <qualifiedname>PantallaDialogo.textoPantalla</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="12" column="21" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a5849cdf517bf5b9318bc5285022cd4ae" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] PantallaDialogo.dialogos</definition>
+        <argsstring></argsstring>
+        <name>dialogos</name>
+        <qualifiedname>PantallaDialogo.dialogos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="16" column="19" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1ade0fd938ac2b31492f17eb2e10a5b76e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PantallaDialogo.tiempoEntreLetras</definition>
+        <argsstring></argsstring>
+        <name>tiempoEntreLetras</name>
+        <qualifiedname>PantallaDialogo.tiempoEntreLetras</qualifiedname>
+        <initializer>= 0.05f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="19" column="18" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a78be9ad2e23aa429a9cf8e51060d5642" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PantallaDialogo.tiempoEntreDialogos</definition>
+        <argsstring></argsstring>
+        <name>tiempoEntreDialogos</name>
+        <qualifiedname>PantallaDialogo.tiempoEntreDialogos</qualifiedname>
+        <initializer>= 3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="22" column="18" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a40eaf4c46b9ac96a1b85a03a6f092879" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text PantallaDialogo.puntosCargaTexto</definition>
+        <argsstring></argsstring>
+        <name>puntosCargaTexto</name>
+        <qualifiedname>PantallaDialogo.puntosCargaTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="25" column="21" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a82d58fd4fdba695240e2bb7d41ce56ce" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PantallaDialogo.tiempoAntesCambioEscena</definition>
+        <argsstring></argsstring>
+        <name>tiempoAntesCambioEscena</name>
+        <qualifiedname>PantallaDialogo.tiempoAntesCambioEscena</qualifiedname>
+        <initializer>= 2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="28" column="18" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pantalla_dialogo_1a3cc024907357a5028c31d304a30a4b87" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PantallaDialogo.nombreEscenaSiguiente</definition>
+        <argsstring></argsstring>
+        <name>nombreEscenaSiguiente</name>
+        <qualifiedname>PantallaDialogo.nombreEscenaSiguiente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="31" column="19" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pantalla_dialogo_1ad2255c8e844e4085fbfe4f670ce67f40" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PantallaDialogo.indiceDialogo</definition>
+        <argsstring></argsstring>
+        <name>indiceDialogo</name>
+        <qualifiedname>PantallaDialogo.indiceDialogo</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="34" column="17" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pantalla_dialogo_1aa80ba61cdb1bff2ded62a3f260907e73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PantallaDialogo.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PantallaDialogo.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="37" column="10" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pantalla_dialogo_1a9e27663ed8532e6f7d9110458ddaadaa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator PantallaDialogo.MostrarDialogo</definition>
+        <argsstring>()</argsstring>
+        <name>MostrarDialogo</name>
+        <qualifiedname>PantallaDialogo.MostrarDialogo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="45" column="17" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="45" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pantalla_dialogo_1ace6979983e9b7cbd057934513cefeefc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator PantallaDialogo.AnimarPuntos</definition>
+        <argsstring>()</argsstring>
+        <name>AnimarPuntos</name>
+        <qualifiedname>PantallaDialogo.AnimarPuntos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/PantallaDialogo.cs" line="77" column="17" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="77" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PantallaDialogo</label>
+        <link refid="class_pantalla_dialogo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PantallaDialogo</label>
+        <link refid="class_pantalla_dialogo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/PantallaDialogo.cs" line="9" column="7" bodyfile="Assets/Script/PantallaDialogo.cs" bodystart="10" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_pantalla_dialogo_1ace6979983e9b7cbd057934513cefeefc" prot="private" virt="non-virtual"><scope>PantallaDialogo</scope><name>AnimarPuntos</name></member>
+      <member refid="class_pantalla_dialogo_1a5849cdf517bf5b9318bc5285022cd4ae" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>dialogos</name></member>
+      <member refid="class_pantalla_dialogo_1ad2255c8e844e4085fbfe4f670ce67f40" prot="private" virt="non-virtual"><scope>PantallaDialogo</scope><name>indiceDialogo</name></member>
+      <member refid="class_pantalla_dialogo_1a9e27663ed8532e6f7d9110458ddaadaa" prot="private" virt="non-virtual"><scope>PantallaDialogo</scope><name>MostrarDialogo</name></member>
+      <member refid="class_pantalla_dialogo_1a3cc024907357a5028c31d304a30a4b87" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>nombreEscenaSiguiente</name></member>
+      <member refid="class_pantalla_dialogo_1a40eaf4c46b9ac96a1b85a03a6f092879" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>puntosCargaTexto</name></member>
+      <member refid="class_pantalla_dialogo_1aa80ba61cdb1bff2ded62a3f260907e73" prot="private" virt="non-virtual"><scope>PantallaDialogo</scope><name>Start</name></member>
+      <member refid="class_pantalla_dialogo_1a11e1e3cfe4dd87e67a32a2cf45122956" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>textoPantalla</name></member>
+      <member refid="class_pantalla_dialogo_1a82d58fd4fdba695240e2bb7d41ce56ce" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>tiempoAntesCambioEscena</name></member>
+      <member refid="class_pantalla_dialogo_1a78be9ad2e23aa429a9cf8e51060d5642" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>tiempoEntreDialogos</name></member>
+      <member refid="class_pantalla_dialogo_1ade0fd938ac2b31492f17eb2e10a5b76e" prot="public" virt="non-virtual"><scope>PantallaDialogo</scope><name>tiempoEntreLetras</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

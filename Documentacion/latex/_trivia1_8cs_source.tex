@@ -1,0 +1,138 @@
+\doxysection{Trivia1.\+cs}
+\hypertarget{_trivia1_8cs_source}{}\label{_trivia1_8cs_source}\index{Assets/Script/Trivia1.cs@{Assets/Script/Trivia1.cs}}
+\mbox{\hyperlink{_trivia1_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importamos\ las\ librerías\ necesarias\ para\ trabajar\ con\ Unity,\ UI\ y\ TextMeshPro}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Funciones\ básicas\ y\ objetos\ de\ Unity}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.UI;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Para\ manejar\ componentes\ UI\ como\ botones}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }TMPro;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Para\ manejar\ textos\ con\ TextMeshPro}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00006}00006\ \textcolor{comment}{//\ Esta\ clase\ \ controla\ una\ pregunta\ \ con\ opciones\ de\ Verdadero\ y\ Falso}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00007}\mbox{\hyperlink{class_trivia1}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_trivia1}{Trivia1}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Referencia\ al\ controlador\ de\ paneles\ para\ avanzar\ entre\ preguntas}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00010}\mbox{\hyperlink{class_trivia1_a95309334386c421a19cdb9d279ce0d8e}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_trivia1_a95309334386c421a19cdb9d279ce0d8e}{Paneles1}}\ \mbox{\hyperlink{class_trivia1_a95309334386c421a19cdb9d279ce0d8e}{Paneles1}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//\ Componente\ TextMeshPro\ donde\ se\ mostrará\ la\ pregunta}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00013}\mbox{\hyperlink{class_trivia1_a0ef1789f7e160be9fa1850f6eb2218e6}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ TextMeshProUGUI\ \mbox{\hyperlink{class_trivia1_a0ef1789f7e160be9fa1850f6eb2218e6}{preguntaTexto}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ Botón\ para\ seleccionar\ "{}Verdadero"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00016}\mbox{\hyperlink{class_trivia1_a58050b83948132b6537fd86b54fbfde8}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ Button\ \mbox{\hyperlink{class_trivia1_a58050b83948132b6537fd86b54fbfde8}{botonVerdadero}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ Botón\ para\ seleccionar\ "{}Falso"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00019}\mbox{\hyperlink{class_trivia1_a23f8ec3296ecbc0befc876a58e224442}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ Button\ \mbox{\hyperlink{class_trivia1_a23f8ec3296ecbc0befc876a58e224442}{botonFalso}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ Texto\ donde\ se\ mostrará\ la\ retroalimentación\ (correcto\ o\ incorrecto)}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00022}\mbox{\hyperlink{class_trivia1_ac208d801d5863436a51ba53038b33437}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ TextMeshProUGUI\ \mbox{\hyperlink{class_trivia1_ac208d801d5863436a51ba53038b33437}{retroalimentacionTexto}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Clip\ de\ audio\ que\ se\ reproduce\ al\ pulsar\ cualquier\ botón,\ asignado\ desde\ el\ Inspector}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00025}\mbox{\hyperlink{class_trivia1_a16ec03356d3efedee23362908aa30f25}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ AudioClip\ \mbox{\hyperlink{class_trivia1_a16ec03356d3efedee23362908aa30f25}{sonidoBoton}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Texto\ que\ contiene\ la\ pregunta\ de\ la\ trivia}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00028}\mbox{\hyperlink{class_trivia1_a393690f12cb359ff3f5a1f42afc68b74}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_trivia1_a393690f12cb359ff3f5a1f42afc68b74}{pregunta}}\ =\ \textcolor{stringliteral}{"{}¿El\ sol\ es\ una\ estrella?"{}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Valor\ booleano\ que\ indica\ cuál\ es\ la\ respuesta\ correcta\ (true\ =\ Verdadero,\ false\ =\ Falso)}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00031}\mbox{\hyperlink{class_trivia1_ae6e1860dff66dfb14b0e338e052e0c5b}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_trivia1_ae6e1860dff66dfb14b0e338e052e0c5b}{respuestaCorrecta}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ se\ ejecuta\ al\ iniciar\ el\ script}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ al\ método\ para\ mostrar\ la\ pregunta\ en\ pantalla\ y\ preparar\ la\ UI}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ MostrarPregunta();}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ muestra\ la\ pregunta\ y\ limpia\ cualquier\ retroalimentación\ }}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ MostrarPregunta()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asigna\ el\ texto\ de\ la\ pregunta\ al\ componente\ correspondiente}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ preguntaTexto.text\ =\ \mbox{\hyperlink{class_trivia1_a393690f12cb359ff3f5a1f42afc68b74}{pregunta}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Limpia\ el\ texto\ de\ retroalimentación\ para\ que\ no\ muestre\ nada\ al\ iniciar}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ retroalimentacionTexto.text\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Habilita\ ambos\ botones\ para\ que\ el\ usuario\ pueda\ seleccionar\ una\ respuesta}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ botonVerdadero.interactable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ botonFalso.interactable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Método\ público\ que\ se\ llama\ cuando\ el\ usuario\ presiona\ el\ botón\ "{}Verdadero"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00055}\mbox{\hyperlink{class_trivia1_a6b53d0deb54ef58fa566a88913da5ed4}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_trivia1_a6b53d0deb54ef58fa566a88913da5ed4}{PresionarVerdadero}}()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ a\ la\ función\ para\ evaluar\ la\ respuesta,\ pasando\ true\ porque\ eligió\ "{}Verdadero"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ SeleccionarRespuesta(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Método\ público\ que\ se\ llama\ cuando\ el\ usuario\ presiona\ el\ botón\ "{}Falso"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00062}\mbox{\hyperlink{class_trivia1_aa3b1be5a76fedff58842fb6284544e7e}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_trivia1_aa3b1be5a76fedff58842fb6284544e7e}{PresionarFalso}}()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ a\ la\ función\ para\ evaluar\ la\ respuesta,\ pasando\ false\ porque\ eligió\ "{}Falso"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ SeleccionarRespuesta(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ Método\ privado\ que\ maneja\ la\ lógica\ para\ evaluar\ la\ respuesta\ del\ usuario}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ SeleccionarRespuesta(\textcolor{keywordtype}{bool}\ respuestaUsuario)}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00070}00070\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ usando\ el\ AudioManager\ global}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audio_manager}{AudioManager}}.\mbox{\hyperlink{class_audio_manager_ac112d1957778ad900886e38e20628fd6}{instancia}}.\mbox{\hyperlink{class_audio_manager_a79bab6d2dc9af3c3a27d587ab2a32f57}{ReproducirSonido}}(\mbox{\hyperlink{class_trivia1_a16ec03356d3efedee23362908aa30f25}{sonidoBoton}});}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compara\ la\ respuesta\ del\ usuario\ con\ la\ respuesta\ correcta}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (respuestaUsuario\ ==\ \mbox{\hyperlink{class_trivia1_ae6e1860dff66dfb14b0e338e052e0c5b}{respuestaCorrecta}})}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ es\ correcta,\ muestra\ el\ mensaje\ "{}¡Correcto!"{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ retroalimentacionTexto.text\ =\ \textcolor{stringliteral}{"{}¡Correcto!"{}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aumenta\ el\ puntaje\ de\ respuestas\ correctas}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeBasicoCorrecto();}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ es\ incorrecta,\ muestra\ el\ mensaje\ "{}Incorrecto."{}}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ retroalimentacionTexto.text\ =\ \textcolor{stringliteral}{"{}Incorrecto."{}};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aumenta\ el\ puntaje\ de\ respuestas\ incorrectas}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeBasicoIncorrecto();}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deshabilita\ los\ botones\ para\ que\ el\ usuario\ no\ pueda\ cambiar\ la\ respuesta}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ botonVerdadero.interactable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ botonFalso.interactable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ al\ método\ para\ pasar\ a\ la\ siguiente\ trivia\ después\ de\ 2\ segundos}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}PasarASiguienteTrivia"{}},\ 2f);}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ avanza\ a\ la\ siguiente\ pregunta\ de\ trivia\ usando\ el\ controlador\ de\ paneles}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00101}00101\ \ \ \ \ \textcolor{keywordtype}{void}\ PasarASiguienteTrivia()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ al\ método\ SiguienteTrivia\ del\ controlador\ Paneles1}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_trivia1_a95309334386c421a19cdb9d279ce0d8e}{Paneles1}}.SiguienteTrivia();}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ incrementa\ el\ puntaje\ guardado\ en\ PlayerPrefs\ para\ respuestas\ correctas}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{void}\ IncrementarPuntajeBasicoCorrecto()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00109}00109\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ el\ puntaje\ actual\ de\ respuestas\ correctas,\ si\ no\ existe\ devuelve\ 0}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ puntaje\ =\ PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}PuntajeCorrectoBasico"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ en\ 1\ el\ puntaje}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ puntaje++;}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ el\ nuevo\ puntaje\ actualizado\ en\ PlayerPrefs}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ PlayerPrefs.SetInt(\textcolor{stringliteral}{"{}PuntajeCorrectoBasico"{}},\ puntaje);}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ incrementa\ el\ puntaje\ guardado\ en\ PlayerPrefs\ para\ respuestas\ incorrectas}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00121}00121\ \ \ \ \ \textcolor{keywordtype}{void}\ IncrementarPuntajeBasicoIncorrecto()}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00122}00122\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ el\ puntaje\ actual\ de\ respuestas\ incorrectas,\ si\ no\ existe\ devuelve\ 0}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ puntaje\ =\ PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}PuntajeIncorrectoBasico"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ en\ 1\ el\ puntaje}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ puntaje++;}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ el\ nuevo\ puntaje\ actualizado\ en\ PlayerPrefs}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ PlayerPrefs.SetInt(\textcolor{stringliteral}{"{}PuntajeIncorrectoBasico"{}},\ puntaje);}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trivia1_8cs_source_l00132}00132\ \}}
+
+\end{DoxyCode}

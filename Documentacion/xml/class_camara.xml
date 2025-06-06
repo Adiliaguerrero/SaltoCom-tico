@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_camara" kind="class" language="C#" prot="public">
+    <compoundname>Camara</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Camara.Player2</definition>
+        <argsstring></argsstring>
+        <name>Player2</name>
+        <qualifiedname>Camara.Player2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="9" column="23" bodyfile="Assets/Script/Camara.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_camara_1a10100e406eb82a9c1ba16789a2ed32c9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camara.suavizado</definition>
+        <argsstring></argsstring>
+        <name>suavizado</name>
+        <qualifiedname>Camara.suavizado</qualifiedname>
+        <initializer>= 5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="12" column="18" bodyfile="Assets/Script/Camara.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_camara_1ab46c6317d7732b4012d45f43ddea97af" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 Camara.desplazamiento</definition>
+        <argsstring></argsstring>
+        <name>desplazamiento</name>
+        <qualifiedname>Camara.desplazamiento</qualifiedname>
+        <initializer>= new Vector2(2f, 1f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="15" column="20" bodyfile="Assets/Script/Camara.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_camara_1a4e3143acc67a9b0c0a68593fca83e7b9" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Camara.velocidadSuavizado</definition>
+        <argsstring></argsstring>
+        <name>velocidadSuavizado</name>
+        <qualifiedname>Camara.velocidadSuavizado</qualifiedname>
+        <initializer>= Vector3.zero</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="18" column="21" bodyfile="Assets/Script/Camara.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_camara_1ad49c315667fa375837196c47a74f997d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camara.ultimaDireccionX</definition>
+        <argsstring></argsstring>
+        <name>ultimaDireccionX</name>
+        <qualifiedname>Camara.ultimaDireccionX</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="21" column="19" bodyfile="Assets/Script/Camara.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_camara_1abf779e459fa41e35d764dc53f2cfab40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camara.LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <qualifiedname>Camara.LateUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Camara.cs" line="24" column="10" bodyfile="Assets/Script/Camara.cs" bodystart="24" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Camara</label>
+        <link refid="class_camara"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Camara</label>
+        <link refid="class_camara"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Camara.cs" line="6" column="7" bodyfile="Assets/Script/Camara.cs" bodystart="7" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_camara_1ab46c6317d7732b4012d45f43ddea97af" prot="public" virt="non-virtual"><scope>Camara</scope><name>desplazamiento</name></member>
+      <member refid="class_camara_1abf779e459fa41e35d764dc53f2cfab40" prot="private" virt="non-virtual"><scope>Camara</scope><name>LateUpdate</name></member>
+      <member refid="class_camara_1a8d5ccd1ec7673520e0309a1b1ad1add1" prot="public" virt="non-virtual"><scope>Camara</scope><name>Player2</name></member>
+      <member refid="class_camara_1a10100e406eb82a9c1ba16789a2ed32c9" prot="public" virt="non-virtual"><scope>Camara</scope><name>suavizado</name></member>
+      <member refid="class_camara_1ad49c315667fa375837196c47a74f997d" prot="private" virt="non-virtual"><scope>Camara</scope><name>ultimaDireccionX</name></member>
+      <member refid="class_camara_1a4e3143acc67a9b0c0a68593fca83e7b9" prot="private" virt="non-virtual"><scope>Camara</scope><name>velocidadSuavizado</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

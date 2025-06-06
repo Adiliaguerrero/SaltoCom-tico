@@ -1,0 +1,113 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+Inheritance diagram for Audio\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_aba79eea3842530b82f73e77eda36d2a0}{Cambiar\+Estado\+Sonido}} (bool estado)
+\item 
+void \mbox{\hyperlink{class_audio_manager_a79bab6d2dc9af3c3a27d587ab2a32f57}{Reproducir\+Sonido}} (Audio\+Clip clip)
+\item 
+bool \mbox{\hyperlink{class_audio_manager_a894636d6991c11ba8044eb40a85b84fb}{Obtener\+Estado\+Sonido}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} \mbox{\hyperlink{class_audio_manager_ac112d1957778ad900886e38e20628fd6}{instancia}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_audio_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_aba79eea3842530b82f73e77eda36d2a0}\index{AudioManager@{AudioManager}!CambiarEstadoSonido@{CambiarEstadoSonido}}
+\index{CambiarEstadoSonido@{CambiarEstadoSonido}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{CambiarEstadoSonido()}{CambiarEstadoSonido()}}
+{\footnotesize\ttfamily \label{class_audio_manager_aba79eea3842530b82f73e77eda36d2a0} 
+void Audio\+Manager.\+Cambiar\+Estado\+Sonido (\begin{DoxyParamCaption}\item[{bool}]{estado}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ sonidosActivos\ =\ estado;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ el\ estado\ como\ entero:\ 1\ si\ está\ activo,\ 0\ si\ está\ inactivo.}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ PlayerPrefs.SetInt(\textcolor{stringliteral}{"{}SonidosActivos"{}},\ sonidosActivos\ ?\ 1\ :\ 0);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();\ \textcolor{comment}{//\ Asegura\ que\ la\ preferencia\ se\ escriba\ en\ disco.}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_audio_manager_a894636d6991c11ba8044eb40a85b84fb}\index{AudioManager@{AudioManager}!ObtenerEstadoSonido@{ObtenerEstadoSonido}}
+\index{ObtenerEstadoSonido@{ObtenerEstadoSonido}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{ObtenerEstadoSonido()}{ObtenerEstadoSonido()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a894636d6991c11ba8044eb40a85b84fb} 
+bool Audio\+Manager.\+Obtener\+Estado\+Sonido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sonidosActivos;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_audio_manager_a79bab6d2dc9af3c3a27d587ab2a32f57}\index{AudioManager@{AudioManager}!ReproducirSonido@{ReproducirSonido}}
+\index{ReproducirSonido@{ReproducirSonido}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{ReproducirSonido()}{ReproducirSonido()}}
+{\footnotesize\ttfamily \label{class_audio_manager_a79bab6d2dc9af3c3a27d587ab2a32f57} 
+void Audio\+Manager.\+Reproducir\+Sonido (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sonidosActivos\ \&\&\ clip\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PlayOneShot\ reproduce\ el\ clip\ una\ vez\ sin\ interrumpir\ otros\ sonidos.}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ audioSource.PlayOneShot(clip);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_audio_manager_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_audio_manager_ac112d1957778ad900886e38e20628fd6}\index{AudioManager@{AudioManager}!instancia@{instancia}}
+\index{instancia@{instancia}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{instancia}{instancia}}
+{\footnotesize\ttfamily \label{class_audio_manager_ac112d1957778ad900886e38e20628fd6} 
+\mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} Audio\+Manager.\+instancia\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_audio_manager_8cs}{Audio\+Manager.\+cs}}\end{DoxyCompactItemize}

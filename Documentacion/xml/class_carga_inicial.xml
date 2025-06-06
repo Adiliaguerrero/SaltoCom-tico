@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_carga_inicial" kind="class" language="C#" prot="public">
+    <compoundname>CargaInicial</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_carga_inicial_1a76b8ad70f3a82d8389e1b337e88ede66" prot="public" static="no" mutable="no">
+        <type>Slider</type>
+        <definition>Slider CargaInicial.slider</definition>
+        <argsstring></argsstring>
+        <name>slider</name>
+        <qualifiedname>CargaInicial.slider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="13" column="19" bodyfile="Assets/Script/CargaBarra.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_carga_inicial_1a6822859abb1db039703b28673a739d42" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CargaInicial.tiempoCarga</definition>
+        <argsstring></argsstring>
+        <name>tiempoCarga</name>
+        <qualifiedname>CargaInicial.tiempoCarga</qualifiedname>
+        <initializer>= 5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="16" column="18" bodyfile="Assets/Script/CargaBarra.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_carga_inicial_1aa223bd682fbb5f2985ed053acc0176d1" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI CargaInicial.textoCarga</definition>
+        <argsstring></argsstring>
+        <name>textoCarga</name>
+        <qualifiedname>CargaInicial.textoCarga</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="19" column="28" bodyfile="Assets/Script/CargaBarra.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_carga_inicial_1ad9366ac31537ad04af26a9c0157e5f54" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string CargaInicial.nombreEscena</definition>
+        <argsstring></argsstring>
+        <name>nombreEscena</name>
+        <qualifiedname>CargaInicial.nombreEscena</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="22" column="19" bodyfile="Assets/Script/CargaBarra.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_carga_inicial_1a4176950cabd521285697699a30cd3d8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CargaInicial.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>CargaInicial.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="25" column="10" bodyfile="Assets/Script/CargaBarra.cs" bodystart="25" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_carga_inicial_1afa268d1894610ec53e18267cd09a3a54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator CargaInicial.Cargar</definition>
+        <argsstring>()</argsstring>
+        <name>Cargar</name>
+        <qualifiedname>CargaInicial.Cargar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="41" column="17" bodyfile="Assets/Script/CargaBarra.cs" bodystart="41" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_carga_inicial_1a6be1f306d40b62384e3b44f14d68808c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CargaInicial.OnCargaCompleta</definition>
+        <argsstring>()</argsstring>
+        <name>OnCargaCompleta</name>
+        <qualifiedname>CargaInicial.OnCargaCompleta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/CargaBarra.cs" line="96" column="10" bodyfile="Assets/Script/CargaBarra.cs" bodystart="96" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CargaInicial</label>
+        <link refid="class_carga_inicial"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CargaInicial</label>
+        <link refid="class_carga_inicial"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/CargaBarra.cs" line="9" column="7" bodyfile="Assets/Script/CargaBarra.cs" bodystart="10" bodyend="113"/>
+    <listofallmembers>
+      <member refid="class_carga_inicial_1afa268d1894610ec53e18267cd09a3a54" prot="private" virt="non-virtual"><scope>CargaInicial</scope><name>Cargar</name></member>
+      <member refid="class_carga_inicial_1ad9366ac31537ad04af26a9c0157e5f54" prot="public" virt="non-virtual"><scope>CargaInicial</scope><name>nombreEscena</name></member>
+      <member refid="class_carga_inicial_1a6be1f306d40b62384e3b44f14d68808c" prot="private" virt="non-virtual"><scope>CargaInicial</scope><name>OnCargaCompleta</name></member>
+      <member refid="class_carga_inicial_1a76b8ad70f3a82d8389e1b337e88ede66" prot="public" virt="non-virtual"><scope>CargaInicial</scope><name>slider</name></member>
+      <member refid="class_carga_inicial_1a4176950cabd521285697699a30cd3d8e" prot="private" virt="non-virtual"><scope>CargaInicial</scope><name>Start</name></member>
+      <member refid="class_carga_inicial_1aa223bd682fbb5f2985ed053acc0176d1" prot="public" virt="non-virtual"><scope>CargaInicial</scope><name>textoCarga</name></member>
+      <member refid="class_carga_inicial_1a6822859abb1db039703b28673a739d42" prot="public" virt="non-virtual"><scope>CargaInicial</scope><name>tiempoCarga</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

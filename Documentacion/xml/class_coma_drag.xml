@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_coma_drag" kind="class" language="C#" prot="public">
+    <compoundname>ComaDrag</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IDragHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">IEndDragHandler</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_coma_drag_1ab390fe78f7549110e86d24ec9d4cc2c2" prot="private" static="no" mutable="no">
+        <type>RectTransform</type>
+        <definition>RectTransform ComaDrag.rectTransform</definition>
+        <argsstring></argsstring>
+        <name>rectTransform</name>
+        <qualifiedname>ComaDrag.rectTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="11" column="27" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_coma_drag_1ac946a6c613ebef06f821cf7e05b64aa3" prot="private" static="no" mutable="no">
+        <type>CanvasGroup</type>
+        <definition>CanvasGroup ComaDrag.canvasGroup</definition>
+        <argsstring></argsstring>
+        <name>canvasGroup</name>
+        <qualifiedname>ComaDrag.canvasGroup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="14" column="25" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_coma_drag_1a8892cb527e65a4444d78256f783ec959" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 ComaDrag.originalPosition</definition>
+        <argsstring></argsstring>
+        <name>originalPosition</name>
+        <qualifiedname>ComaDrag.originalPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="17" column="21" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_coma_drag_1ac823516f681677b3d810e2decb004eb3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ComaDrag.yaClonada</definition>
+        <argsstring></argsstring>
+        <name>yaClonada</name>
+        <qualifiedname>ComaDrag.yaClonada</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="20" column="18" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_coma_drag_1a670d7540186e07ca8ffc79203872af28" prot="public" static="no" mutable="no">
+        <type>RectTransform[]</type>
+        <definition>RectTransform [] ComaDrag.dropAreas</definition>
+        <argsstring></argsstring>
+        <name>dropAreas</name>
+        <qualifiedname>ComaDrag.dropAreas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="23" column="26" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform ComaDrag.padreContenedor</definition>
+        <argsstring></argsstring>
+        <name>padreContenedor</name>
+        <qualifiedname>ComaDrag.padreContenedor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="26" column="22" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_coma_drag_1af70802dcf901b5157f553fcf970653e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComaDrag.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ComaDrag.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="29" column="10" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="29" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_coma_drag_1acc2bd41e568f778a5e5bbbf8781a7096" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComaDrag.OnDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnDrag</name>
+        <qualifiedname>ComaDrag.OnDrag</qualifiedname>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="46" column="17" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="46" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coma_drag_1a82610b6ac5e1e277bb71835e20d5e652" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComaDrag.OnEndDrag</definition>
+        <argsstring>(PointerEventData eventData)</argsstring>
+        <name>OnEndDrag</name>
+        <qualifiedname>ComaDrag.OnEndDrag</qualifiedname>
+        <param>
+          <type>PointerEventData</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ArrastrarSoltar.cs" line="56" column="17" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="56" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ComaDrag</label>
+        <link refid="class_coma_drag"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IDragHandler</label>
+      </node>
+      <node id="4">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ComaDrag</label>
+        <link refid="class_coma_drag"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IDragHandler</label>
+      </node>
+      <node id="4">
+        <label>IEndDragHandler</label>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/ArrastrarSoltar.cs" line="8" column="7" bodyfile="Assets/Script/ArrastrarSoltar.cs" bodystart="9" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_coma_drag_1ac946a6c613ebef06f821cf7e05b64aa3" prot="private" virt="non-virtual"><scope>ComaDrag</scope><name>canvasGroup</name></member>
+      <member refid="class_coma_drag_1a670d7540186e07ca8ffc79203872af28" prot="public" virt="non-virtual"><scope>ComaDrag</scope><name>dropAreas</name></member>
+      <member refid="class_coma_drag_1acc2bd41e568f778a5e5bbbf8781a7096" prot="public" virt="non-virtual"><scope>ComaDrag</scope><name>OnDrag</name></member>
+      <member refid="class_coma_drag_1a82610b6ac5e1e277bb71835e20d5e652" prot="public" virt="non-virtual"><scope>ComaDrag</scope><name>OnEndDrag</name></member>
+      <member refid="class_coma_drag_1a8892cb527e65a4444d78256f783ec959" prot="private" virt="non-virtual"><scope>ComaDrag</scope><name>originalPosition</name></member>
+      <member refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" prot="public" virt="non-virtual"><scope>ComaDrag</scope><name>padreContenedor</name></member>
+      <member refid="class_coma_drag_1ab390fe78f7549110e86d24ec9d4cc2c2" prot="private" virt="non-virtual"><scope>ComaDrag</scope><name>rectTransform</name></member>
+      <member refid="class_coma_drag_1af70802dcf901b5157f553fcf970653e1" prot="private" virt="non-virtual"><scope>ComaDrag</scope><name>Start</name></member>
+      <member refid="class_coma_drag_1ac823516f681677b3d810e2decb004eb3" prot="private" virt="non-virtual"><scope>ComaDrag</scope><name>yaClonada</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_rotar_cuchilla_8cs" kind="file" language="C#">
+    <compoundname>RotarCuchilla.cs</compoundname>
+    <innerclass refid="class_rotar_cuchilla" prot="public">RotarCuchilla</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Importamos<sp/>el<sp/>espacio<sp/>de<sp/>nombres<sp/>necesario<sp/>para<sp/>trabajar<sp/>con<sp/>Unity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>trampa<sp/>hace<sp/>que<sp/>un<sp/>objeto<sp/>gire<sp/>continuamente<sp/>para<sp/>hacer<sp/>daño<sp/>sobre<sp/>su<sp/>eje<sp/>Z<sp/>con<sp/>una<sp/>velocidad<sp/>configurable<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_rotar_cuchilla" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rotar_cuchilla" kindref="compound">RotarCuchilla</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Velocidad<sp/>de<sp/>rotación<sp/>en<sp/>grados<sp/>por<sp/>segundo<sp/>(ajustable<sp/>desde<sp/>el<sp/>Inspector)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_rotar_cuchilla_1ac135b99b5220c748ec2ef41d78de0b84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rotar_cuchilla_1ac135b99b5220c748ec2ef41d78de0b84" kindref="member">velocidadRotacion</ref><sp/>=<sp/>180f;<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>llamado<sp/>una<sp/>vez<sp/>por<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Update()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Rotamos<sp/>el<sp/>objeto<sp/>alrededor<sp/>del<sp/>eje<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>velocidadRotacion<sp/>*<sp/>Time.deltaTime<sp/>asegura<sp/>que<sp/>la<sp/>rotación<sp/>sea<sp/>independiente<sp/>del<sp/>frame<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.Rotate(0f,<sp/>0f,<sp/><ref refid="class_rotar_cuchilla_1ac135b99b5220c748ec2ef41d78de0b84" kindref="member">velocidadRotacion</ref><sp/>*<sp/>Time.deltaTime);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/RotarCuchilla.cs"/>
+  </compounddef>
+</doxygen>

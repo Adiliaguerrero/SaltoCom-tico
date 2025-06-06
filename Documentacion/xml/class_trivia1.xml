@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_trivia1" kind="class" language="C#" prot="public">
+    <compoundname>Trivia1</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_trivia1_1a95309334386c421a19cdb9d279ce0d8e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_paneles1" kindref="compound">Paneles1</ref></type>
+        <definition>Paneles1 Trivia1.Paneles1</definition>
+        <argsstring></argsstring>
+        <name>Paneles1</name>
+        <qualifiedname>Trivia1.Paneles1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="10" column="21" bodyfile="Assets/Script/Trivia1.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1a0ef1789f7e160be9fa1850f6eb2218e6" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Trivia1.preguntaTexto</definition>
+        <argsstring></argsstring>
+        <name>preguntaTexto</name>
+        <qualifiedname>Trivia1.preguntaTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="13" column="28" bodyfile="Assets/Script/Trivia1.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1a58050b83948132b6537fd86b54fbfde8" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Trivia1.botonVerdadero</definition>
+        <argsstring></argsstring>
+        <name>botonVerdadero</name>
+        <qualifiedname>Trivia1.botonVerdadero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="16" column="19" bodyfile="Assets/Script/Trivia1.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1a23f8ec3296ecbc0befc876a58e224442" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Trivia1.botonFalso</definition>
+        <argsstring></argsstring>
+        <name>botonFalso</name>
+        <qualifiedname>Trivia1.botonFalso</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="19" column="19" bodyfile="Assets/Script/Trivia1.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1ac208d801d5863436a51ba53038b33437" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Trivia1.retroalimentacionTexto</definition>
+        <argsstring></argsstring>
+        <name>retroalimentacionTexto</name>
+        <qualifiedname>Trivia1.retroalimentacionTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="22" column="28" bodyfile="Assets/Script/Trivia1.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1a16ec03356d3efedee23362908aa30f25" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip Trivia1.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>Trivia1.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="25" column="22" bodyfile="Assets/Script/Trivia1.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1a393690f12cb359ff3f5a1f42afc68b74" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Trivia1.pregunta</definition>
+        <argsstring></argsstring>
+        <name>pregunta</name>
+        <qualifiedname>Trivia1.pregunta</qualifiedname>
+        <initializer>= &quot;¿El sol es una estrella?&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="28" column="19" bodyfile="Assets/Script/Trivia1.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trivia1_1ae6e1860dff66dfb14b0e338e052e0c5b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Trivia1.respuestaCorrecta</definition>
+        <argsstring></argsstring>
+        <name>respuestaCorrecta</name>
+        <qualifiedname>Trivia1.respuestaCorrecta</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="31" column="17" bodyfile="Assets/Script/Trivia1.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_trivia1_1a81dedfd057276dda5d8db55a9199a657" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Trivia1.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="34" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1a738009efb3ff859cf005febbc6b7aa0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.MostrarPregunta</definition>
+        <argsstring>()</argsstring>
+        <name>MostrarPregunta</name>
+        <qualifiedname>Trivia1.MostrarPregunta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="41" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="41" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1abd7aebffeae6776b4edfe80bc288ab99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.SeleccionarRespuesta</definition>
+        <argsstring>(bool respuestaUsuario)</argsstring>
+        <name>SeleccionarRespuesta</name>
+        <qualifiedname>Trivia1.SeleccionarRespuesta</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>respuestaUsuario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="69" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="69" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1ab9643db0ad69310e288cfcb0854f17a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.PasarASiguienteTrivia</definition>
+        <argsstring>()</argsstring>
+        <name>PasarASiguienteTrivia</name>
+        <qualifiedname>Trivia1.PasarASiguienteTrivia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="101" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1a619f1be9dba9ee547a65dd8035bf7113" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.IncrementarPuntajeBasicoCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeBasicoCorrecto</name>
+        <qualifiedname>Trivia1.IncrementarPuntajeBasicoCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="108" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="108" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1ac46ade6ad24eea81da3f2cd2f722b1ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.IncrementarPuntajeBasicoIncorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeBasicoIncorrecto</name>
+        <qualifiedname>Trivia1.IncrementarPuntajeBasicoIncorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="121" column="10" bodyfile="Assets/Script/Trivia1.cs" bodystart="121" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_trivia1_1a6b53d0deb54ef58fa566a88913da5ed4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.PresionarVerdadero</definition>
+        <argsstring>()</argsstring>
+        <name>PresionarVerdadero</name>
+        <qualifiedname>Trivia1.PresionarVerdadero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="55" column="17" bodyfile="Assets/Script/Trivia1.cs" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trivia1_1aa3b1be5a76fedff58842fb6284544e7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trivia1.PresionarFalso</definition>
+        <argsstring>()</argsstring>
+        <name>PresionarFalso</name>
+        <qualifiedname>Trivia1.PresionarFalso</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia1.cs" line="62" column="17" bodyfile="Assets/Script/Trivia1.cs" bodystart="62" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Trivia1</label>
+        <link refid="class_trivia1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>Paneles1</label>
+        <link refid="class_paneles1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Trivia1</label>
+        <link refid="class_trivia1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Paneles1</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Trivia1.cs" line="7" column="7" bodyfile="Assets/Script/Trivia1.cs" bodystart="8" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_trivia1_1a23f8ec3296ecbc0befc876a58e224442" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>botonFalso</name></member>
+      <member refid="class_trivia1_1a58050b83948132b6537fd86b54fbfde8" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>botonVerdadero</name></member>
+      <member refid="class_trivia1_1a619f1be9dba9ee547a65dd8035bf7113" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>IncrementarPuntajeBasicoCorrecto</name></member>
+      <member refid="class_trivia1_1ac46ade6ad24eea81da3f2cd2f722b1ef" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>IncrementarPuntajeBasicoIncorrecto</name></member>
+      <member refid="class_trivia1_1a738009efb3ff859cf005febbc6b7aa0c" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>MostrarPregunta</name></member>
+      <member refid="class_trivia1_1a95309334386c421a19cdb9d279ce0d8e" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>Paneles1</name></member>
+      <member refid="class_trivia1_1ab9643db0ad69310e288cfcb0854f17a3" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>PasarASiguienteTrivia</name></member>
+      <member refid="class_trivia1_1a393690f12cb359ff3f5a1f42afc68b74" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>pregunta</name></member>
+      <member refid="class_trivia1_1a0ef1789f7e160be9fa1850f6eb2218e6" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>preguntaTexto</name></member>
+      <member refid="class_trivia1_1aa3b1be5a76fedff58842fb6284544e7e" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>PresionarFalso</name></member>
+      <member refid="class_trivia1_1a6b53d0deb54ef58fa566a88913da5ed4" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>PresionarVerdadero</name></member>
+      <member refid="class_trivia1_1ae6e1860dff66dfb14b0e338e052e0c5b" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>respuestaCorrecta</name></member>
+      <member refid="class_trivia1_1ac208d801d5863436a51ba53038b33437" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>retroalimentacionTexto</name></member>
+      <member refid="class_trivia1_1abd7aebffeae6776b4edfe80bc288ab99" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>SeleccionarRespuesta</name></member>
+      <member refid="class_trivia1_1a16ec03356d3efedee23362908aa30f25" prot="public" virt="non-virtual"><scope>Trivia1</scope><name>sonidoBoton</name></member>
+      <member refid="class_trivia1_1a81dedfd057276dda5d8db55a9199a657" prot="private" virt="non-virtual"><scope>Trivia1</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

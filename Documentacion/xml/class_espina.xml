@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_espina" kind="class" language="C#" prot="public">
+    <compoundname>Espina</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_espina_1a1cd63f32d0aed2a406716fbdbd3ed263" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Espina.danio</definition>
+        <argsstring></argsstring>
+        <name>danio</name>
+        <qualifiedname>Espina.danio</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trampa.cs" line="8" column="16" bodyfile="Assets/Script/Trampa.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_espina_1ab0609b67f27d27ae42f810b17f0a6924" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Espina.OnCollisionEnter2D</definition>
+        <argsstring>(Collision2D collision)</argsstring>
+        <name>OnCollisionEnter2D</name>
+        <qualifiedname>Espina.OnCollisionEnter2D</qualifiedname>
+        <param>
+          <type>Collision2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trampa.cs" line="11" column="18" bodyfile="Assets/Script/Trampa.cs" bodystart="11" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Espina</label>
+        <link refid="class_espina"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Espina</label>
+        <link refid="class_espina"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Trampa.cs" line="5" column="7" bodyfile="Assets/Script/Trampa.cs" bodystart="6" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_espina_1a1cd63f32d0aed2a406716fbdbd3ed263" prot="public" virt="non-virtual"><scope>Espina</scope><name>danio</name></member>
+      <member refid="class_espina_1ab0609b67f27d27ae42f810b17f0a6924" prot="private" virt="non-virtual"><scope>Espina</scope><name>OnCollisionEnter2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

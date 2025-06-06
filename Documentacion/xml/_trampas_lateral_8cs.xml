@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_trampas_lateral_8cs" kind="file" language="C#">
+    <compoundname>TrampasLateral.cs</compoundname>
+    <innerclass refid="class_cuchilla" prot="public">Cuchilla</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Importamos<sp/>la<sp/>librería<sp/>principal<sp/>de<sp/>Unity<sp/>para<sp/>usar<sp/>funciones<sp/>básicas<sp/>y<sp/>detectar<sp/>colisiones</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>representa<sp/>una<sp/>cuchilla<sp/>que<sp/>inflige<sp/>daño<sp/>al<sp/>jugador<sp/>cuando<sp/>colisionan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_cuchilla" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cuchilla" kindref="compound">Cuchilla</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cantidad<sp/>de<sp/>daño<sp/>que<sp/>la<sp/>cuchilla<sp/>inflige<sp/>al<sp/>jugador<sp/>al<sp/>tocarlo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_cuchilla_1a8fc5bd5bf6b7a44c874d0a91183f7446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_cuchilla_1a8fc5bd5bf6b7a44c874d0a91183f7446" kindref="member">danio</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>que<sp/>se<sp/>ejecuta<sp/>automáticamente<sp/>cuando<sp/>otro<sp/>objeto<sp/>colisiona<sp/>con<sp/>este<sp/>objeto<sp/>(usando<sp/>Rigidbody2D<sp/>y<sp/>Collider2D)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnCollisionEnter2D(Collision2D<sp/>collision)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Intentamos<sp/>obtener<sp/>el<sp/>componente<sp/>PlayerController<sp/>del<sp/>objeto<sp/>que<sp/>colisionó,<sp/>para<sp/>verificar<sp/>si<sp/>es<sp/>el<sp/>jugador</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref><sp/>jugador<sp/>=<sp/>collision.gameObject.GetComponent&lt;<ref refid="class_player_controller" kindref="compound">PlayerController</ref>&gt;();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>el<sp/>objeto<sp/>que<sp/>colisionó<sp/>es<sp/>el<sp/>jugador</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jugador<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Definimos<sp/>la<sp/>posición<sp/>actual<sp/>de<sp/>la<sp/>cuchilla<sp/>para<sp/>usar<sp/>como<sp/>dirección<sp/>del<sp/>daño</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>direccionDanio<sp/>=<sp/>transform.position;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Llamamos<sp/>al<sp/>método<sp/>del<sp/>jugador<sp/>para<sp/>que<sp/>reciba<sp/>daño,<sp/>pasando<sp/>la<sp/>dirección<sp/>y<sp/>la<sp/>cantidad<sp/>de<sp/>daño</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jugador.<ref refid="class_player_controller_1a0329f53e40e6dffbd41deb0011fd4840" kindref="member">RecibeDanio</ref>(direccionDanio,<sp/><ref refid="class_cuchilla_1a8fc5bd5bf6b7a44c874d0a91183f7446" kindref="member">danio</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/TrampasLateral.cs"/>
+  </compounddef>
+</doxygen>

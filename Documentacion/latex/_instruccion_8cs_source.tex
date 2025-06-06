@@ -1,0 +1,174 @@
+\doxysection{Instruccion.\+cs}
+\hypertarget{_instruccion_8cs_source}{}\label{_instruccion_8cs_source}\index{Assets/Script/Instruccion.cs@{Assets/Script/Instruccion.cs}}
+\mbox{\hyperlink{_instruccion_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importamos\ los\ espacios\ de\ nombres\ necesarios\ de\ Unity}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00005}00005\ \textcolor{comment}{//\ Esta\ clase\ gestiona\ una\ instruccion\ visual\ en\ el\ manejo\ de\ controles\ en\ pantalla\ usando\ imágenes\ animadas\ de\ manos}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00006}\mbox{\hyperlink{class_instrucciones_visuales}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_instrucciones_visuales}{InstruccionesVisuales}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ Referencia\ publica\ al\ asingnar\ en\ el\ isnpector\ la\ imagen\ de\ la\ mano\ izquierda}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00009}\mbox{\hyperlink{class_instrucciones_visuales_a91be4f38d045f32dfb67fba02b6d4dfd}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_instrucciones_visuales_a91be4f38d045f32dfb67fba02b6d4dfd}{manoIzquierda}};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00011}00011\ \ \ \ \textcolor{comment}{//\ Referencia\ publica\ al\ asingnar\ en\ el\ isnpector\ a\ la\ imagen\ de\ la\ mano\ derecha}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00012}\mbox{\hyperlink{class_instrucciones_visuales_af7cc0d2836346cf47a4a4f444ce7ab47}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_instrucciones_visuales_af7cc0d2836346cf47a4a4f444ce7ab47}{manoDerecha}};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00014}00014\ \ \textcolor{comment}{//\ Referencia\ publica\ al\ asingnar\ en\ el\ isnpector\ de\ la\ mano\ que\ indica\ toque}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00015}\mbox{\hyperlink{class_instrucciones_visuales_a455df330fe004b7568953598663861c6}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ Image\ \mbox{\hyperlink{class_instrucciones_visuales_a455df330fe004b7568953598663861c6}{manoTocar}};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Tiempo\ que\ tarda\ la\ animación\ de\ cada\ mano\ en\ completarse}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00018}\mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{duracionAnimacion}}\ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Cantidad\ de\ desplazamiento\ que\ realiza\ cada\ mano\ al\ animarse}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00021}\mbox{\hyperlink{class_instrucciones_visuales_abf8cf0eacf4f8f70696239ada80e5b9b}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_instrucciones_visuales_abf8cf0eacf4f8f70696239ada80e5b9b}{desplazamiento}}\ =\ 50f;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00023}00023\ \ \ \textcolor{comment}{//\ Referencia\ publica\ al\ asingnar\ en\ el\ isnpector\ para\ el\ joystick\ virtual\ utilizado\ para\ detectar\ movimiento}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00024}\mbox{\hyperlink{class_instrucciones_visuales_a1ac697defcec82cc09622f1c2684798f}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ Joystick\ \mbox{\hyperlink{class_instrucciones_visuales_a1ac697defcec82cc09622f1c2684798f}{joystick}};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Controla\ si\ la\ mano\ izquierda\ ya\ fue\ eliminada}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ izquierdaMostrada\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ Controla\ si\ la\ mano\ derecha\ ya\ fue\ eliminada}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ derechaMostrada\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Controla\ si\ la\ mano\ de\ toque\ ya\ fue\ eliminada}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ tocarMostrado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ se\ ejecuta\ al\ iniciar\ la\ escena}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ animación\ para\ la\ mano\ izquierda\ hacia\ la\ izquierda}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ AnimarMovimiento(\mbox{\hyperlink{class_instrucciones_visuales_a91be4f38d045f32dfb67fba02b6d4dfd}{manoIzquierda}}.rectTransform,\ -\/\mbox{\hyperlink{class_instrucciones_visuales_abf8cf0eacf4f8f70696239ada80e5b9b}{desplazamiento}});}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ animación\ para\ la\ mano\ derecha\ hacia\ la\ derecha}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ AnimarMovimiento(\mbox{\hyperlink{class_instrucciones_visuales_af7cc0d2836346cf47a4a4f444ce7ab47}{manoDerecha}}.rectTransform,\ \mbox{\hyperlink{class_instrucciones_visuales_abf8cf0eacf4f8f70696239ada80e5b9b}{desplazamiento}});}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inicia\ animación\ para\ la\ mano\ de\ toque\ hacia\ abajo}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ AnimarToque(\mbox{\hyperlink{class_instrucciones_visuales_a455df330fe004b7568953598663861c6}{manoTocar}}.rectTransform);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ se\ ejecuta\ una\ vez\ por\ frame}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ el\ valor\ horizontal\ del\ joystick\ (si\ existe)}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ horizontal\ =\ \mbox{\hyperlink{class_instrucciones_visuales_a1ac697defcec82cc09622f1c2684798f}{joystick}}\ !=\ \textcolor{keyword}{null}\ ?\ joystick.Horizontal\ :\ 0f;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ joystick\ se\ mueve\ hacia\ la\ izquierda\ y\ la\ mano\ izquierda\ aún\ está\ visible}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (horizontal\ <\ -\/0.5f\ \&\&\ izquierdaMostrada)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ la\ mano\ izquierda\ como\ eliminada\ y\ destruye\ su\ objeto}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ izquierdaMostrada\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_instrucciones_visuales_a91be4f38d045f32dfb67fba02b6d4dfd}{manoIzquierda}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ joystick\ se\ mueve\ hacia\ la\ derecha\ y\ la\ mano\ derecha\ aún\ está\ visible}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (horizontal\ >\ 0.5f\ \&\&\ derechaMostrada)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ la\ mano\ derecha\ como\ eliminada\ y\ destruye\ su\ objeto}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ derechaMostrada\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_instrucciones_visuales_af7cc0d2836346cf47a4a4f444ce7ab47}{manoDerecha}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ se\ detecta\ un\ toque\ en\ pantalla\ y\ la\ mano\ de\ toque\ aún\ está\ visible}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.touchCount\ >\ 0\ \&\&\ tocarMostrado)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ obtiene\ el\ primer\ toque}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ Touch\ toque\ =\ Input.GetTouch(0);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ toque\ ha\ comenzado\ y\ está\ en\ la\ parte\ derecha\ de\ la\ pantalla}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toque.phase\ ==\ TouchPhase.Began\ \&\&\ toque.position.x\ >\ Screen.width\ /\ 2)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ la\ mano\ de\ toque\ como\ eliminada\ y\ destruye\ su\ objeto}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tocarMostrado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_instrucciones_visuales_a455df330fe004b7568953598663861c6}{manoTocar}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00084}00084\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Simula\ el\ comportamiento\ táctil\ con\ el\ clic\ del\ mouse\ en\ el\ editor\ de\ Unity}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetMouseButtonDown(0)\ \&\&\ tocarMostrado)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ obtiene\ la\ posición\ del\ clic}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ mousePos\ =\ Input.mousePosition;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ clic\ está\ en\ el\ lado\ derecho\ de\ la\ pantalla}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mousePos.x\ >\ Screen.width\ /\ 2)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca\ la\ mano\ de\ toque\ como\ eliminada\ y\ destruye\ su\ objeto}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tocarMostrado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(\mbox{\hyperlink{class_instrucciones_visuales_a455df330fe004b7568953598663861c6}{manoTocar}}.gameObject);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00099}00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ inicia\ la\ animación\ de\ movimiento\ horizontal\ de\ una\ mano}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00103}00103\ \ \ \ \ \textcolor{keywordtype}{void}\ AnimarMovimiento(RectTransform\ mano,\ \textcolor{keywordtype}{float}\ direccionX)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00104}00104\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ posición\ inicial}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ Vector3\ inicio\ =\ mano.anchoredPosition;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcula\ la\ posición\ de\ destino\ aplicando\ el\ desplazamiento\ en\ X}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ Vector3\ destino\ =\ inicio\ +\ \textcolor{keyword}{new}\ Vector3(direccionX,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ a\ la\ corrutina\ para\ mover\ la\ mano\ entre\ inicio\ y\ destino}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ StartCoroutine(MoverMano(mano,\ inicio,\ destino));}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ inicia\ la\ animación\ de\ movimiento\ vertical\ (toque)\ de\ una\ mano}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{void}\ AnimarToque(RectTransform\ mano)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00117}00117\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ posición\ inicial}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ Vector3\ inicio\ =\ mano.anchoredPosition;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcula\ la\ posición\ de\ destino\ aplicando\ el\ desplazamiento\ en\ Y\ hacia\ abajo}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ Vector3\ destino\ =\ inicio\ +\ \textcolor{keyword}{new}\ Vector3(0,\ -\/\mbox{\hyperlink{class_instrucciones_visuales_abf8cf0eacf4f8f70696239ada80e5b9b}{desplazamiento}},\ 0);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ a\ la\ corrutina\ para\ mover\ la\ mano\ entre\ inicio\ y\ destino}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ StartCoroutine(MoverMano(mano,\ inicio,\ destino));}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00128}00128\ \ \ \ \ \textcolor{comment}{//\ Corrutina\ que\ mueve\ una\ mano\ de\ una\ posición\ a\ otra,\ y\ luego\ regresa,\ en\ bucle}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00129}00129\ \ \ \ \ System.Collections.IEnumerator\ MoverMano(RectTransform\ mano,\ Vector3\ desde,\ Vector3\ hasta)}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00130}00130\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Contador\ de\ tiempo}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Movimiento\ hacia\ el\ destino}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (t\ <\ \mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{duracionAnimacion}})}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interpola\ la\ posición\ entre\ inicio\ y\ destino\ según\ el\ tiempo\ transcurrido}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ mano.anchoredPosition\ =\ Vector3.Lerp(desde,\ hasta,\ t\ /\ \mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{duracionAnimacion}});}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ t\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asegura\ que\ la\ posición\ final\ sea\ exacta}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ mano.anchoredPosition\ =\ hasta;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reinicia\ el\ contador\ de\ tiempo}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ t\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Movimiento\ de\ regreso\ hacia\ la\ posición\ original}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (t\ <\ \mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{duracionAnimacion}})}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interpola\ la\ posición\ desde\ el\ destino\ de\ vuelta\ al\ origen}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ mano.anchoredPosition\ =\ Vector3.Lerp(hasta,\ desde,\ t\ /\ \mbox{\hyperlink{class_instrucciones_visuales_a117e22f5649c57e5d89bd08f474af8d2}{duracionAnimacion}});}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ t\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asegura\ que\ la\ posición\ final\ sea\ exacta}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ mano.anchoredPosition\ =\ desde;}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Espera\ un\ breve\ momento\ antes\ de\ repetir\ la\ animación}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(0.5f);}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ mano\ aún\ no\ ha\ sido\ destruida,\ repite\ la\ animación\ en\ bucle}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mano\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(MoverMano(mano,\ desde,\ hasta));}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00167}00167\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruccion_8cs_source_l00168}00168\ \}}
+
+\end{DoxyCode}

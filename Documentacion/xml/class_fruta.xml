@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_fruta" kind="class" language="C#" prot="public">
+    <compoundname>Fruta</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_fruta_1a9290fd150b0b2cb436d20132d0dfde69" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Fruta.cantidadVida</definition>
+        <argsstring></argsstring>
+        <name>cantidadVida</name>
+        <qualifiedname>Fruta.cantidadVida</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Fruta.cs" line="8" column="18" bodyfile="Assets/Script/Fruta.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fruta_1ac0fdba6914251ad6e594aca1033eec7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Fruta.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D collision)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>Fruta.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Fruta.cs" line="11" column="18" bodyfile="Assets/Script/Fruta.cs" bodystart="11" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Fruta</label>
+        <link refid="class_fruta"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Fruta</label>
+        <link refid="class_fruta"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Fruta.cs" line="5" column="7" bodyfile="Assets/Script/Fruta.cs" bodystart="6" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_fruta_1a9290fd150b0b2cb436d20132d0dfde69" prot="public" virt="non-virtual"><scope>Fruta</scope><name>cantidadVida</name></member>
+      <member refid="class_fruta_1ac0fdba6914251ad6e594aca1033eec7e" prot="private" virt="non-virtual"><scope>Fruta</scope><name>OnTriggerEnter2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

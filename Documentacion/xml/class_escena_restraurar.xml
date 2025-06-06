@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_escena_restraurar" kind="class" language="C#" prot="public">
+    <compoundname>EscenaRestraurar</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_escena_restraurar_1a44d1887096456208956e4160f39caa3e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string EscenaRestraurar.escena1</definition>
+        <argsstring></argsstring>
+        <name>escena1</name>
+        <qualifiedname>EscenaRestraurar.escena1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/EscenaRestraurar.cs" line="11" column="19" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_escena_restraurar_1aeb97509f566a779c3a61472974b48e0d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string EscenaRestraurar.escena2</definition>
+        <argsstring></argsstring>
+        <name>escena2</name>
+        <qualifiedname>EscenaRestraurar.escena2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/EscenaRestraurar.cs" line="14" column="19" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip EscenaRestraurar.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>EscenaRestraurar.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/EscenaRestraurar.cs" line="17" column="22" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_escena_restraurar_1ab0130cf3027ff93fdf2516239a69680e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EscenaRestraurar.CargarEscena1</definition>
+        <argsstring>()</argsstring>
+        <name>CargarEscena1</name>
+        <qualifiedname>EscenaRestraurar.CargarEscena1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/EscenaRestraurar.cs" line="20" column="17" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_escena_restraurar_1a2f7e18e43b212c7fa93bb379130a82bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EscenaRestraurar.CargarEscena2</definition>
+        <argsstring>()</argsstring>
+        <name>CargarEscena2</name>
+        <qualifiedname>EscenaRestraurar.CargarEscena2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/EscenaRestraurar.cs" line="30" column="17" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="30" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EscenaRestraurar</label>
+        <link refid="class_escena_restraurar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EscenaRestraurar</label>
+        <link refid="class_escena_restraurar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/EscenaRestraurar.cs" line="8" column="7" bodyfile="Assets/Script/EscenaRestraurar.cs" bodystart="9" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_escena_restraurar_1ab0130cf3027ff93fdf2516239a69680e" prot="public" virt="non-virtual"><scope>EscenaRestraurar</scope><name>CargarEscena1</name></member>
+      <member refid="class_escena_restraurar_1a2f7e18e43b212c7fa93bb379130a82bc" prot="public" virt="non-virtual"><scope>EscenaRestraurar</scope><name>CargarEscena2</name></member>
+      <member refid="class_escena_restraurar_1a44d1887096456208956e4160f39caa3e" prot="public" virt="non-virtual"><scope>EscenaRestraurar</scope><name>escena1</name></member>
+      <member refid="class_escena_restraurar_1aeb97509f566a779c3a61472974b48e0d" prot="public" virt="non-virtual"><scope>EscenaRestraurar</scope><name>escena2</name></member>
+      <member refid="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" prot="public" virt="non-virtual"><scope>EscenaRestraurar</scope><name>sonidoBoton</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

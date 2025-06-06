@@ -1,0 +1,266 @@
+\doxysection{Player\+Controller Class Reference}
+\hypertarget{class_player_controller}{}\label{class_player_controller}\index{PlayerController@{PlayerController}}
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller_a0329f53e40e6dffbd41deb0011fd4840}{Recibe\+Danio}} (Vector2 direccion, int cant\+Danio)
+\item 
+void \mbox{\hyperlink{class_player_controller_aa2309df47ec0b422ac2d2987196ee4d2}{Restaurar\+Vida}} ()
+\item 
+void \mbox{\hyperlink{class_player_controller_ae72a8621ff71be31adbb70738a9a0b79}{Restaurar\+Vida\+Parcial}} (float cantidad)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_controller_a03e7fa279c5e3053e43b870c6f6bc826}{velocidad}} = 5f
+\item 
+float \mbox{\hyperlink{class_player_controller_a57283fb6f5a78a8663be9995acdea49c}{fuerza\+Salto}} = 12f
+\item 
+Animator \mbox{\hyperlink{class_player_controller_af24a8820ce6558138208255b27d948d3}{animator}}
+\item 
+Rigidbody2D \mbox{\hyperlink{class_player_controller_af656c35d14d18c09958ce86e6fb874d1}{rb}}
+\item 
+bool \mbox{\hyperlink{class_player_controller_aeb12a6cb2c5386cb09a23868d5a89a5e}{puede\+Moverse}} = true
+\item 
+float \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}} = 5f
+\item 
+Joystick \mbox{\hyperlink{class_player_controller_a6faf51b0ca7a800c3ff7b6967a17caa3}{joystick}}
+\item 
+float \mbox{\hyperlink{class_player_controller_a0f0f8da9666cf0beeee49aa552bcab0b}{Fuerza\+Rebote}} = 5f
+\item 
+\mbox{\hyperlink{class_barra_vida}{Barra\+Vida}} \mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barra\+Vida}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_controller_a0329f53e40e6dffbd41deb0011fd4840}\index{PlayerController@{PlayerController}!RecibeDanio@{RecibeDanio}}
+\index{RecibeDanio@{RecibeDanio}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{RecibeDanio()}{RecibeDanio()}}
+{\footnotesize\ttfamily \label{class_player_controller_a0329f53e40e6dffbd41deb0011fd4840} 
+void Player\+Controller.\+Recibe\+Danio (\begin{DoxyParamCaption}\item[{Vector2}]{direccion}{, }\item[{int}]{cant\+Danio}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ ya\ está\ recibiendo\ daño,\ no\ hacer\ nada}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recibiendoDanio)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ marca\ como\ que\ está\ recibiendo\ daño}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ recibiendoDanio\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ resta\ vida\ y\ se\ limita\ entre\ 0\ y\ el\ máximo}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ -\/=\ cantDanio;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ =\ Mathf.Clamp(\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}},\ 0f,\ vidaMaxima);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ vida\ actual\ en\ PlayerPrefs}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ PlayerPrefs.SetFloat(\textcolor{stringliteral}{"{}VidaJugador"{}},\ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ hay\ barra\ de\ vida,\ se\ actualiza\ y\ verifica\ si\ hay\ game\ over}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}.ActualizarBarra(\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ <=\ 0)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}.ActivarGameOver();}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Muestra\ error\ si\ no\ hay\ barra\ de\ vida\ asignada}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}No\ se\ encontró\ la\ barra\ de\ vida\ en\ PlayerController."{}});}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aplica\ rebote\ al\ personaje\ en\ dirección\ opuesta\ al\ daño\ recibido}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ Vector2\ rebote\ =\ \textcolor{keyword}{new}\ Vector2(transform.position.x\ -\/\ direccion.x,\ 1).normalized;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_af656c35d14d18c09958ce86e6fb874d1}{rb}}.AddForce(rebote\ *\ \mbox{\hyperlink{class_player_controller_a0f0f8da9666cf0beeee49aa552bcab0b}{FuerzaRebote}}\ *\ cantDanio,\ ForceMode2D.Impulse);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ hay\ efecto\ de\ cámara,\ se\ activa\ sacudida}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cameraShake\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ cameraShake.Sacudir();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Desactiva\ el\ estado\ de\ daño\ después\ de\ un\ breve\ tiempo}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ Invoke(nameof(DesactivaDanio),\ 0.5f);}
+\DoxyCodeLine{00218\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_player_controller_aa2309df47ec0b422ac2d2987196ee4d2}\index{PlayerController@{PlayerController}!RestaurarVida@{RestaurarVida}}
+\index{RestaurarVida@{RestaurarVida}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{RestaurarVida()}{RestaurarVida()}}
+{\footnotesize\ttfamily \label{class_player_controller_aa2309df47ec0b422ac2d2987196ee4d2} 
+void Player\+Controller.\+Restaurar\+Vida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00236}{236}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Restaura\ la\ vida\ al\ valor\ máximo}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ =\ vidaMaxima;}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ nueva\ vida\ en\ PlayerPrefs}}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ PlayerPrefs.SetFloat(\textcolor{stringliteral}{"{}VidaJugador"{}},\ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualiza\ la\ barra\ de\ vida\ si\ está\ presente}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}.ActualizarBarra(\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_player_controller_ae72a8621ff71be31adbb70738a9a0b79}\index{PlayerController@{PlayerController}!RestaurarVidaParcial@{RestaurarVidaParcial}}
+\index{RestaurarVidaParcial@{RestaurarVidaParcial}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{RestaurarVidaParcial()}{RestaurarVidaParcial()}}
+{\footnotesize\ttfamily \label{class_player_controller_ae72a8621ff71be31adbb70738a9a0b79} 
+void Player\+Controller.\+Restaurar\+Vida\+Parcial (\begin{DoxyParamCaption}\item[{float}]{cantidad}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00253}{253}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00254\ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aumenta\ la\ vida\ con\ la\ cantidad\ indicada}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ +=\ cantidad;}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asegura\ que\ la\ vida\ no\ exceda\ el\ máximo\ ni\ sea\ menor\ que\ 0}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}}\ =\ Mathf.Clamp(\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}},\ 0f,\ vidaMaxima);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ la\ vida\ actual\ en\ PlayerPrefs}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ PlayerPrefs.SetFloat(\textcolor{stringliteral}{"{}VidaJugador"{}},\ \mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ PlayerPrefs.Save();}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ hay\ una\ barra\ de\ vida,\ se\ actualiza}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}{barraVida}}.ActualizarBarra(\mbox{\hyperlink{class_player_controller_a68e47063ed5ab53162264270614172b4}{vida}});}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_player_controller_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_player_controller_af24a8820ce6558138208255b27d948d3}\index{PlayerController@{PlayerController}!animator@{animator}}
+\index{animator@{animator}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily \label{class_player_controller_af24a8820ce6558138208255b27d948d3} 
+Animator Player\+Controller.\+animator}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70}\index{PlayerController@{PlayerController}!barraVida@{barraVida}}
+\index{barraVida@{barraVida}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{barraVida}{barraVida}}
+{\footnotesize\ttfamily \label{class_player_controller_ab4e29b23e841f5c6449579a14d41ef70} 
+\mbox{\hyperlink{class_barra_vida}{Barra\+Vida}} Player\+Controller.\+barra\+Vida}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_a0f0f8da9666cf0beeee49aa552bcab0b}\index{PlayerController@{PlayerController}!FuerzaRebote@{FuerzaRebote}}
+\index{FuerzaRebote@{FuerzaRebote}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{FuerzaRebote}{FuerzaRebote}}
+{\footnotesize\ttfamily \label{class_player_controller_a0f0f8da9666cf0beeee49aa552bcab0b} 
+float Player\+Controller.\+Fuerza\+Rebote = 5f}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_a57283fb6f5a78a8663be9995acdea49c}\index{PlayerController@{PlayerController}!fuerzaSalto@{fuerzaSalto}}
+\index{fuerzaSalto@{fuerzaSalto}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{fuerzaSalto}{fuerzaSalto}}
+{\footnotesize\ttfamily \label{class_player_controller_a57283fb6f5a78a8663be9995acdea49c} 
+float Player\+Controller.\+fuerza\+Salto = 12f}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_a6faf51b0ca7a800c3ff7b6967a17caa3}\index{PlayerController@{PlayerController}!joystick@{joystick}}
+\index{joystick@{joystick}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{joystick}{joystick}}
+{\footnotesize\ttfamily \label{class_player_controller_a6faf51b0ca7a800c3ff7b6967a17caa3} 
+Joystick Player\+Controller.\+joystick}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_aeb12a6cb2c5386cb09a23868d5a89a5e}\index{PlayerController@{PlayerController}!puedeMoverse@{puedeMoverse}}
+\index{puedeMoverse@{puedeMoverse}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{puedeMoverse}{puedeMoverse}}
+{\footnotesize\ttfamily \label{class_player_controller_aeb12a6cb2c5386cb09a23868d5a89a5e} 
+bool Player\+Controller.\+puede\+Moverse = true}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_af656c35d14d18c09958ce86e6fb874d1}\index{PlayerController@{PlayerController}!rb@{rb}}
+\index{rb@{rb}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{rb}{rb}}
+{\footnotesize\ttfamily \label{class_player_controller_af656c35d14d18c09958ce86e6fb874d1} 
+Rigidbody2D Player\+Controller.\+rb}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_a03e7fa279c5e3053e43b870c6f6bc826}\index{PlayerController@{PlayerController}!velocidad@{velocidad}}
+\index{velocidad@{velocidad}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{velocidad}{velocidad}}
+{\footnotesize\ttfamily \label{class_player_controller_a03e7fa279c5e3053e43b870c6f6bc826} 
+float Player\+Controller.\+velocidad = 5f}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+\Hypertarget{class_player_controller_a68e47063ed5ab53162264270614172b4}\index{PlayerController@{PlayerController}!vida@{vida}}
+\index{vida@{vida}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{vida}{vida}}
+{\footnotesize\ttfamily \label{class_player_controller_a68e47063ed5ab53162264270614172b4} 
+float Player\+Controller.\+vida = 5f}
+
+
+
+Definition at line \mbox{\hyperlink{_personaje_controller_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_personaje_controller_8cs_source}{Personaje\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_personaje_controller_8cs}{Personaje\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_004655f1e8b2fa1f445114117a3053f4" kind="dir">
+    <compoundname>Assets/Script</compoundname>
+    <innerfile refid="_abismo_caida_8cs">AbismoCaida.cs</innerfile>
+    <innerfile refid="_arrastrar_soltar_8cs">ArrastrarSoltar.cs</innerfile>
+    <innerfile refid="_audio_8cs">Audio.cs</innerfile>
+    <innerfile refid="_audio_manager_8cs">AudioManager.cs</innerfile>
+    <innerfile refid="_barra_vida_8cs">BarraVida.cs</innerfile>
+    <innerfile refid="_camara_8cs">Camara.cs</innerfile>
+    <innerfile refid="_camara_temblar_8cs">CamaraTemblar.cs</innerfile>
+    <innerfile refid="_carga_barra_8cs">CargaBarra.cs</innerfile>
+    <innerfile refid="_colisiion_obj_8cs">ColisiionObj.cs</innerfile>
+    <innerfile refid="_configuracion_8cs">Configuracion.cs</innerfile>
+    <innerfile refid="_dialog_contr_8cs">DialogContr.cs</innerfile>
+    <innerfile refid="_escena_restraurar_8cs">EscenaRestraurar.cs</innerfile>
+    <innerfile refid="_forzar_tama_xC3_xB1o_8cs">ForzarTamaño.cs</innerfile>
+    <innerfile refid="_fruta_8cs">Fruta.cs</innerfile>
+    <innerfile refid="_inicio_perso_8cs">InicioPerso.cs</innerfile>
+    <innerfile refid="_instruccion_8cs">Instruccion.cs</innerfile>
+    <innerfile refid="_menu_8cs">Menu.cs</innerfile>
+    <innerfile refid="_musica_8cs">Musica.cs</innerfile>
+    <innerfile refid="_musica_manager_8cs">MusicaManager.cs</innerfile>
+    <innerfile refid="_ninja_8cs">Ninja.cs</innerfile>
+    <innerfile refid="_pajaro_enemigo_8cs">PajaroEnemigo.cs</innerfile>
+    <innerfile refid="_paneles1_8cs">Paneles1.cs</innerfile>
+    <innerfile refid="_pantalla_dialogo_8cs">PantallaDialogo.cs</innerfile>
+    <innerfile refid="_particulas_8cs">Particulas.cs</innerfile>
+    <innerfile refid="_personaje_controller_8cs">PersonajeController.cs</innerfile>
+    <innerfile refid="_portales_8cs">Portales.cs</innerfile>
+    <innerfile refid="_puntaje_8cs">Puntaje.cs</innerfile>
+    <innerfile refid="_rotar_cuchilla_8cs">RotarCuchilla.cs</innerfile>
+    <innerfile refid="_selector_8cs">Selector.cs</innerfile>
+    <innerfile refid="_sistema_dailogo_8cs">SistemaDailogo.cs</innerfile>
+    <innerfile refid="_trampa_8cs">Trampa.cs</innerfile>
+    <innerfile refid="_trampas_lateral_8cs">TrampasLateral.cs</innerfile>
+    <innerfile refid="_trivia1_8cs">Trivia1.cs</innerfile>
+    <innerfile refid="_trivia2_8cs">Trivia2.cs</innerfile>
+    <innerfile refid="_trivia3_8cs">Trivia3.cs</innerfile>
+    <innerfile refid="_trivia4_8cs">Trivia4.cs</innerfile>
+    <innerfile refid="_trivia5_8cs">Trivia5.cs</innerfile>
+    <innerfile refid="_trivia6_8cs">Trivia6.cs</innerfile>
+    <innerfile refid="_trivia7_8cs">Trivia7.cs</innerfile>
+    <innerfile refid="_trivia8_8cs">Trivia8.cs</innerfile>
+    <innerfile refid="_trivia9_8cs">Trivia9.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Assets/Script/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_selector_personaje" kind="class" language="C#" prot="public">
+    <compoundname>SelectorPersonaje</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_selector_personaje_1a7b8672547cf0403ab52b3a3c94bb4ef9" prot="public" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] SelectorPersonaje.personajes</definition>
+        <argsstring></argsstring>
+        <name>personajes</name>
+        <qualifiedname>SelectorPersonaje.personajes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="12" column="23" bodyfile="Assets/Script/Selector.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1a6cdb7130267c7cd9df6bd60329bd259e" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] SelectorPersonaje.nombresPersonajes</definition>
+        <argsstring></argsstring>
+        <name>nombresPersonajes</name>
+        <qualifiedname>SelectorPersonaje.nombresPersonajes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="15" column="19" bodyfile="Assets/Script/Selector.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1afe3546ceb2ac87c414cfd81c72690a90" prot="public" static="no" mutable="no">
+        <type>Image</type>
+        <definition>Image SelectorPersonaje.imagenPersonaje</definition>
+        <argsstring></argsstring>
+        <name>imagenPersonaje</name>
+        <qualifiedname>SelectorPersonaje.imagenPersonaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="18" column="18" bodyfile="Assets/Script/Selector.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1ae0a9bff6b054ba50e9a0c57e308279a5" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button SelectorPersonaje.siguienteButton</definition>
+        <argsstring></argsstring>
+        <name>siguienteButton</name>
+        <qualifiedname>SelectorPersonaje.siguienteButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="24" column="19" bodyfile="Assets/Script/Selector.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1a3daee2648113b4f2fdc6db516a501745" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button SelectorPersonaje.anteriorButton</definition>
+        <argsstring></argsstring>
+        <name>anteriorButton</name>
+        <qualifiedname>SelectorPersonaje.anteriorButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="25" column="19" bodyfile="Assets/Script/Selector.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1a152b3cae172e00487a7beae751b237e5" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button SelectorPersonaje.seleccionarButton</definition>
+        <argsstring></argsstring>
+        <name>seleccionarButton</name>
+        <qualifiedname>SelectorPersonaje.seleccionarButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="26" column="19" bodyfile="Assets/Script/Selector.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1abc0be0bd6c22ec7a25da04037c6e219f" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text SelectorPersonaje.nombrePersonajeTexto</definition>
+        <argsstring></argsstring>
+        <name>nombrePersonajeTexto</name>
+        <qualifiedname>SelectorPersonaje.nombrePersonajeTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="29" column="21" bodyfile="Assets/Script/Selector.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_selector_personaje_1afb846de560f448259439b2aca008616a" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip SelectorPersonaje.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>SelectorPersonaje.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="33" column="22" bodyfile="Assets/Script/Selector.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_selector_personaje_1a874ae89d8fd2a9a6716d8d43bbbe4517" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SelectorPersonaje.indicePersonaje</definition>
+        <argsstring></argsstring>
+        <name>indicePersonaje</name>
+        <qualifiedname>SelectorPersonaje.indicePersonaje</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="21" column="17" bodyfile="Assets/Script/Selector.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_selector_personaje_1aa627d5ac9a85f752d64ce4a6f81d4804" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.SiguientePersonaje</definition>
+        <argsstring>()</argsstring>
+        <name>SiguientePersonaje</name>
+        <qualifiedname>SelectorPersonaje.SiguientePersonaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="36" column="17" bodyfile="Assets/Script/Selector.cs" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_selector_personaje_1afc303c94dd5b485a296d8f34b29beb52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.AnteriorPersonaje</definition>
+        <argsstring>()</argsstring>
+        <name>AnteriorPersonaje</name>
+        <qualifiedname>SelectorPersonaje.AnteriorPersonaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="47" column="17" bodyfile="Assets/Script/Selector.cs" bodystart="47" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_selector_personaje_1a65b42b4780b03cdab6fdd17998282e9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.SeleccionarPersonaje</definition>
+        <argsstring>()</argsstring>
+        <name>SeleccionarPersonaje</name>
+        <qualifiedname>SelectorPersonaje.SeleccionarPersonaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="77" column="17" bodyfile="Assets/Script/Selector.cs" bodystart="77" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_selector_personaje_1a0f5216e38287b3567201b0a7892db60c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.CambiarPersonaje</definition>
+        <argsstring>()</argsstring>
+        <name>CambiarPersonaje</name>
+        <qualifiedname>SelectorPersonaje.CambiarPersonaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="58" column="18" bodyfile="Assets/Script/Selector.cs" bodystart="58" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_selector_personaje_1a0443554faaca901e55d20af1ae1146da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>SelectorPersonaje.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="90" column="10" bodyfile="Assets/Script/Selector.cs" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_selector_personaje_1a2e94a913a2b296ed9617fb8621fb1ad6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectorPersonaje.ReproducirSonidoBoton</definition>
+        <argsstring>()</argsstring>
+        <name>ReproducirSonidoBoton</name>
+        <qualifiedname>SelectorPersonaje.ReproducirSonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Selector.cs" line="100" column="18" bodyfile="Assets/Script/Selector.cs" bodystart="100" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SelectorPersonaje</label>
+        <link refid="class_selector_personaje"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SelectorPersonaje</label>
+        <link refid="class_selector_personaje"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Selector.cs" line="9" column="7" bodyfile="Assets/Script/Selector.cs" bodystart="10" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_selector_personaje_1a3daee2648113b4f2fdc6db516a501745" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>anteriorButton</name></member>
+      <member refid="class_selector_personaje_1afc303c94dd5b485a296d8f34b29beb52" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>AnteriorPersonaje</name></member>
+      <member refid="class_selector_personaje_1a0f5216e38287b3567201b0a7892db60c" prot="private" virt="non-virtual"><scope>SelectorPersonaje</scope><name>CambiarPersonaje</name></member>
+      <member refid="class_selector_personaje_1afe3546ceb2ac87c414cfd81c72690a90" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>imagenPersonaje</name></member>
+      <member refid="class_selector_personaje_1a874ae89d8fd2a9a6716d8d43bbbe4517" prot="private" virt="non-virtual"><scope>SelectorPersonaje</scope><name>indicePersonaje</name></member>
+      <member refid="class_selector_personaje_1abc0be0bd6c22ec7a25da04037c6e219f" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>nombrePersonajeTexto</name></member>
+      <member refid="class_selector_personaje_1a6cdb7130267c7cd9df6bd60329bd259e" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>nombresPersonajes</name></member>
+      <member refid="class_selector_personaje_1a7b8672547cf0403ab52b3a3c94bb4ef9" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>personajes</name></member>
+      <member refid="class_selector_personaje_1a2e94a913a2b296ed9617fb8621fb1ad6" prot="private" virt="non-virtual"><scope>SelectorPersonaje</scope><name>ReproducirSonidoBoton</name></member>
+      <member refid="class_selector_personaje_1a152b3cae172e00487a7beae751b237e5" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>seleccionarButton</name></member>
+      <member refid="class_selector_personaje_1a65b42b4780b03cdab6fdd17998282e9f" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>SeleccionarPersonaje</name></member>
+      <member refid="class_selector_personaje_1ae0a9bff6b054ba50e9a0c57e308279a5" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>siguienteButton</name></member>
+      <member refid="class_selector_personaje_1aa627d5ac9a85f752d64ce4a6f81d4804" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>SiguientePersonaje</name></member>
+      <member refid="class_selector_personaje_1afb846de560f448259439b2aca008616a" prot="public" virt="non-virtual"><scope>SelectorPersonaje</scope><name>sonidoBoton</name></member>
+      <member refid="class_selector_personaje_1a0443554faaca901e55d20af1ae1146da" prot="private" virt="non-virtual"><scope>SelectorPersonaje</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,23 @@
+\doxysection{Rotar\+Cuchilla.\+cs}
+\hypertarget{_rotar_cuchilla_8cs_source}{}\label{_rotar_cuchilla_8cs_source}\index{Assets/Script/RotarCuchilla.cs@{Assets/Script/RotarCuchilla.cs}}
+\mbox{\hyperlink{_rotar_cuchilla_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importamos\ el\ espacio\ de\ nombres\ necesario\ para\ trabajar\ con\ Unity}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00004}00004\ \textcolor{comment}{//\ Esta\ clase\ trampa\ hace\ que\ un\ objeto\ gire\ continuamente\ para\ hacer\ daño\ sobre\ su\ eje\ Z\ con\ una\ velocidad\ configurable\ }}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00005}\mbox{\hyperlink{class_rotar_cuchilla}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rotar_cuchilla}{RotarCuchilla}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Velocidad\ de\ rotación\ en\ grados\ por\ segundo\ (ajustable\ desde\ el\ Inspector)}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00008}\mbox{\hyperlink{class_rotar_cuchilla_ac135b99b5220c748ec2ef41d78de0b84}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_rotar_cuchilla_ac135b99b5220c748ec2ef41d78de0b84}{velocidadRotacion}}\ =\ 180f;\ \ }
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ Método\ llamado\ una\ vez\ por\ frame}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rotamos\ el\ objeto\ alrededor\ del\ eje\ Z}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ velocidadRotacion\ *\ Time.deltaTime\ asegura\ que\ la\ rotación\ sea\ independiente\ del\ frame\ rate}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ transform.Rotate(0f,\ 0f,\ \mbox{\hyperlink{class_rotar_cuchilla_ac135b99b5220c748ec2ef41d78de0b84}{velocidadRotacion}}\ *\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rotar_cuchilla_8cs_source_l00017}00017\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_transcribir_oracion3" kind="class" language="C#" prot="public">
+    <compoundname>TranscribirOracion3</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_transcribir_oracion3_1af87661cf8cf3d4cd0e74da0d25635c79" prot="public" static="no" mutable="no">
+        <type><ref refid="class_paneles1" kindref="compound">Paneles1</ref></type>
+        <definition>Paneles1 TranscribirOracion3.Paneles1</definition>
+        <argsstring></argsstring>
+        <name>Paneles1</name>
+        <qualifiedname>TranscribirOracion3.Paneles1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="9" column="21" bodyfile="Assets/Script/Trivia7.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transcribir_oracion3_1a95c0896424cf83a1d7ea26b7ceb51b32" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text TranscribirOracion3.textoOracion</definition>
+        <argsstring></argsstring>
+        <name>textoOracion</name>
+        <qualifiedname>TranscribirOracion3.textoOracion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="12" column="21" bodyfile="Assets/Script/Trivia7.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transcribir_oracion3_1abcfe56cfb03f80310635e62ee5cee4c2" prot="public" static="no" mutable="no">
+        <type>TMP_InputField</type>
+        <definition>TMP_InputField TranscribirOracion3.campoRespuesta</definition>
+        <argsstring></argsstring>
+        <name>campoRespuesta</name>
+        <qualifiedname>TranscribirOracion3.campoRespuesta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="15" column="27" bodyfile="Assets/Script/Trivia7.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transcribir_oracion3_1aa949c78a7228c26c07a89e37b0fc2165" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text TranscribirOracion3.textoRetroalimentacion</definition>
+        <argsstring></argsstring>
+        <name>textoRetroalimentacion</name>
+        <qualifiedname>TranscribirOracion3.textoRetroalimentacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="18" column="21" bodyfile="Assets/Script/Trivia7.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transcribir_oracion3_1a43841c9deec898241e91dabdefaa7971" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip TranscribirOracion3.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>TranscribirOracion3.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="21" column="22" bodyfile="Assets/Script/Trivia7.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_transcribir_oracion3_1adefaf491a58deffaeb825e5a5bc33631" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string TranscribirOracion3.oracionSinComas</definition>
+        <argsstring></argsstring>
+        <name>oracionSinComas</name>
+        <qualifiedname>TranscribirOracion3.oracionSinComas</qualifiedname>
+        <initializer>= &quot;Reescriba la siguiente oración colocando la coma en los lugares correctos. \n\&quot;En mi mochila llevo libros cuadernos lápices marcadores y borradores.\&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="24" column="20" bodyfile="Assets/Script/Trivia7.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_transcribir_oracion3_1a2999acc2c93baae42ef49989904b55f4" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string TranscribirOracion3.oracionCorrecta</definition>
+        <argsstring></argsstring>
+        <name>oracionCorrecta</name>
+        <qualifiedname>TranscribirOracion3.oracionCorrecta</qualifiedname>
+        <initializer>= &quot;En mi mochila llevo libros, cuadernos, lápices, marcadores y borradores.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="27" column="20" bodyfile="Assets/Script/Trivia7.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_transcribir_oracion3_1a94db5dc623f08e3ec6923c7651e7e30e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TranscribirOracion3.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>TranscribirOracion3.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="30" column="10" bodyfile="Assets/Script/Trivia7.cs" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transcribir_oracion3_1a8fd6488eda3a1ca9da812af3f09d1be8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TranscribirOracion3.PasarASiguienteTrivia</definition>
+        <argsstring>()</argsstring>
+        <name>PasarASiguienteTrivia</name>
+        <qualifiedname>TranscribirOracion3.PasarASiguienteTrivia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="74" column="10" bodyfile="Assets/Script/Trivia7.cs" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transcribir_oracion3_1a43cb6c1768dbe7de9197051db351c95e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TranscribirOracion3.IncrementarPuntajeAvanzadoCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeAvanzadoCorrecto</name>
+        <qualifiedname>TranscribirOracion3.IncrementarPuntajeAvanzadoCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="81" column="10" bodyfile="Assets/Script/Trivia7.cs" bodystart="81" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_transcribir_oracion3_1a19d02b44470d016e6b5f04bd376b259a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TranscribirOracion3.IncrementarPuntajeAvanzadoIncorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeAvanzadoIncorrecto</name>
+        <qualifiedname>TranscribirOracion3.IncrementarPuntajeAvanzadoIncorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="94" column="10" bodyfile="Assets/Script/Trivia7.cs" bodystart="94" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_transcribir_oracion3_1a27ce3412e08b817ecab1ca6fe6af899a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TranscribirOracion3.VerificarRespuesta</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarRespuesta</name>
+        <qualifiedname>TranscribirOracion3.VerificarRespuesta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia7.cs" line="43" column="17" bodyfile="Assets/Script/Trivia7.cs" bodystart="43" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>TranscribirOracion3</label>
+        <link refid="class_transcribir_oracion3"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>Paneles1</label>
+        <link refid="class_paneles1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TranscribirOracion3</label>
+        <link refid="class_transcribir_oracion3"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Paneles1</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Trivia7.cs" line="6" column="7" bodyfile="Assets/Script/Trivia7.cs" bodystart="7" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_transcribir_oracion3_1abcfe56cfb03f80310635e62ee5cee4c2" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>campoRespuesta</name></member>
+      <member refid="class_transcribir_oracion3_1a43cb6c1768dbe7de9197051db351c95e" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>IncrementarPuntajeAvanzadoCorrecto</name></member>
+      <member refid="class_transcribir_oracion3_1a19d02b44470d016e6b5f04bd376b259a" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>IncrementarPuntajeAvanzadoIncorrecto</name></member>
+      <member refid="class_transcribir_oracion3_1a2999acc2c93baae42ef49989904b55f4" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>oracionCorrecta</name></member>
+      <member refid="class_transcribir_oracion3_1adefaf491a58deffaeb825e5a5bc33631" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>oracionSinComas</name></member>
+      <member refid="class_transcribir_oracion3_1af87661cf8cf3d4cd0e74da0d25635c79" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>Paneles1</name></member>
+      <member refid="class_transcribir_oracion3_1a8fd6488eda3a1ca9da812af3f09d1be8" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>PasarASiguienteTrivia</name></member>
+      <member refid="class_transcribir_oracion3_1a43841c9deec898241e91dabdefaa7971" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>sonidoBoton</name></member>
+      <member refid="class_transcribir_oracion3_1a94db5dc623f08e3ec6923c7651e7e30e" prot="private" virt="non-virtual"><scope>TranscribirOracion3</scope><name>Start</name></member>
+      <member refid="class_transcribir_oracion3_1a95c0896424cf83a1d7ea26b7ceb51b32" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>textoOracion</name></member>
+      <member refid="class_transcribir_oracion3_1aa949c78a7228c26c07a89e37b0fc2165" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>textoRetroalimentacion</name></member>
+      <member refid="class_transcribir_oracion3_1a27ce3412e08b817ecab1ca6fe6af899a" prot="public" virt="non-virtual"><scope>TranscribirOracion3</scope><name>VerificarRespuesta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

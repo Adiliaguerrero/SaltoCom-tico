@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_aparicion_personaje" kind="class" language="C#" prot="public">
+    <compoundname>AparicionPersonaje</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_aparicion_personaje_1ab03885d56e82db222f851f974ce15643" prot="public" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] AparicionPersonaje.personajes</definition>
+        <argsstring></argsstring>
+        <name>personajes</name>
+        <qualifiedname>AparicionPersonaje.personajes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/InicioPerso.cs" line="8" column="23" bodyfile="Assets/Script/InicioPerso.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aparicion_personaje_1a4de4b1603a7a7eb86569c660f8c2e100" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform AparicionPersonaje.puntoAparicion</definition>
+        <argsstring></argsstring>
+        <name>puntoAparicion</name>
+        <qualifiedname>AparicionPersonaje.puntoAparicion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/InicioPerso.cs" line="11" column="22" bodyfile="Assets/Script/InicioPerso.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aparicion_personaje_1a89f60862111227897dd0a3e1fd0109df" prot="public" static="no" mutable="no">
+        <type>Joystick</type>
+        <definition>Joystick AparicionPersonaje.joystick</definition>
+        <argsstring></argsstring>
+        <name>joystick</name>
+        <qualifiedname>AparicionPersonaje.joystick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/InicioPerso.cs" line="14" column="21" bodyfile="Assets/Script/InicioPerso.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_aparicion_personaje_1adce94405f233ab9d09152470f7b1cc87" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject AparicionPersonaje.camara</definition>
+        <argsstring></argsstring>
+        <name>camara</name>
+        <qualifiedname>AparicionPersonaje.camara</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/InicioPerso.cs" line="17" column="23" bodyfile="Assets/Script/InicioPerso.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_aparicion_personaje_1aad05e73afb0faefac4275843b8a97915" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AparicionPersonaje.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>AparicionPersonaje.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/InicioPerso.cs" line="20" column="10" bodyfile="Assets/Script/InicioPerso.cs" bodystart="20" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AparicionPersonaje</label>
+        <link refid="class_aparicion_personaje"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AparicionPersonaje</label>
+        <link refid="class_aparicion_personaje"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/InicioPerso.cs" line="5" column="7" bodyfile="Assets/Script/InicioPerso.cs" bodystart="6" bodyend="85"/>
+    <listofallmembers>
+      <member refid="class_aparicion_personaje_1adce94405f233ab9d09152470f7b1cc87" prot="public" virt="non-virtual"><scope>AparicionPersonaje</scope><name>camara</name></member>
+      <member refid="class_aparicion_personaje_1a89f60862111227897dd0a3e1fd0109df" prot="public" virt="non-virtual"><scope>AparicionPersonaje</scope><name>joystick</name></member>
+      <member refid="class_aparicion_personaje_1ab03885d56e82db222f851f974ce15643" prot="public" virt="non-virtual"><scope>AparicionPersonaje</scope><name>personajes</name></member>
+      <member refid="class_aparicion_personaje_1a4de4b1603a7a7eb86569c660f8c2e100" prot="public" virt="non-virtual"><scope>AparicionPersonaje</scope><name>puntoAparicion</name></member>
+      <member refid="class_aparicion_personaje_1aad05e73afb0faefac4275843b8a97915" prot="private" virt="non-virtual"><scope>AparicionPersonaje</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

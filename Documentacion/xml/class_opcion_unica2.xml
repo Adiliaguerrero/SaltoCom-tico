@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_opcion_unica2" kind="class" language="C#" prot="public">
+    <compoundname>OpcionUnica2</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_opcion_unica2_1acf4e9a6da1fcbdbd0788872f4c06dd27" prot="public" static="no" mutable="no">
+        <type><ref refid="class_paneles1" kindref="compound">Paneles1</ref></type>
+        <definition>Paneles1 OpcionUnica2.Paneles1</definition>
+        <argsstring></argsstring>
+        <name>Paneles1</name>
+        <qualifiedname>OpcionUnica2.Paneles1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="10" column="21" bodyfile="Assets/Script/Trivia4.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1a3a61d938844bc9a4ca21fc6077290ba4" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text OpcionUnica2.preguntaTexto</definition>
+        <argsstring></argsstring>
+        <name>preguntaTexto</name>
+        <qualifiedname>OpcionUnica2.preguntaTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="13" column="21" bodyfile="Assets/Script/Trivia4.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1a42dcb3470de7f098ef670e523dc25018" prot="public" static="no" mutable="no">
+        <type>Button[]</type>
+        <definition>Button [] OpcionUnica2.botonesOpciones</definition>
+        <argsstring></argsstring>
+        <name>botonesOpciones</name>
+        <qualifiedname>OpcionUnica2.botonesOpciones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="16" column="19" bodyfile="Assets/Script/Trivia4.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1a554beecfcfd522ee2f6129103da83b0d" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI OpcionUnica2.retroalimentacionTexto</definition>
+        <argsstring></argsstring>
+        <name>retroalimentacionTexto</name>
+        <qualifiedname>OpcionUnica2.retroalimentacionTexto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="19" column="28" bodyfile="Assets/Script/Trivia4.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1ad7fa0fb9e1ff872d2da15afd102b2b65" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip OpcionUnica2.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>OpcionUnica2.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="22" column="22" bodyfile="Assets/Script/Trivia4.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_opcion_unica2_1afa50189d588375e5b7438745ba251c6c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string OpcionUnica2.pregunta</definition>
+        <argsstring></argsstring>
+        <name>pregunta</name>
+        <qualifiedname>OpcionUnica2.pregunta</qualifiedname>
+        <initializer>= &quot;¿Dónde se debería colocar la primera coma?\n\&quot;Compré manzanas peras uvas y plátanos.\&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="25" column="20" bodyfile="Assets/Script/Trivia4.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1ab952c27dbb86cc3cea9f83eb759165bb" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] OpcionUnica2.opciones</definition>
+        <argsstring></argsstring>
+        <name>opciones</name>
+        <qualifiedname>OpcionUnica2.opciones</qualifiedname>
+        <initializer>= {
+        &quot;A.Después de &apos;compré&apos;.&quot;,
+        &quot;B.Después de &apos;manzanas&apos; y &apos;peras&apos;.&quot;,
+        &quot;C.Después de &apos;uvas&apos;.&quot;,
+        &quot;D.Después de &apos;peras&apos; y &apos;uvas&apos;.&quot;
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="28" column="20" bodyfile="Assets/Script/Trivia4.cs" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_opcion_unica2_1aaf61c1a724a4d5a0721e42adfff9040f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int OpcionUnica2.indiceRespuestaCorrecta</definition>
+        <argsstring></argsstring>
+        <name>indiceRespuestaCorrecta</name>
+        <qualifiedname>OpcionUnica2.indiceRespuestaCorrecta</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="36" column="17" bodyfile="Assets/Script/Trivia4.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_opcion_unica2_1a22306d4509d8f13a7322ff1edccd7029" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>OpcionUnica2.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="39" column="10" bodyfile="Assets/Script/Trivia4.cs" bodystart="39" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1ac5da9bad4567460eac25132e8ebb31eb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.VerificarRespuesta</definition>
+        <argsstring>(int indiceSeleccionado)</argsstring>
+        <name>VerificarRespuesta</name>
+        <qualifiedname>OpcionUnica2.VerificarRespuesta</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>indiceSeleccionado</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="67" column="10" bodyfile="Assets/Script/Trivia4.cs" bodystart="67" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1a744b47d64925a2d167e54f268f78a28b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.PasarASiguienteTrivia</definition>
+        <argsstring>()</argsstring>
+        <name>PasarASiguienteTrivia</name>
+        <qualifiedname>OpcionUnica2.PasarASiguienteTrivia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="97" column="10" bodyfile="Assets/Script/Trivia4.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1af6a087a21deb35bc3f30c6c3c8b5b1b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.IncrementarPuntajeIntermedioCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeIntermedioCorrecto</name>
+        <qualifiedname>OpcionUnica2.IncrementarPuntajeIntermedioCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="103" column="10" bodyfile="Assets/Script/Trivia4.cs" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1a149ece7af27c9540cf5a0aa4167e0be1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.IncrementarPuntajeIntermedioIncorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementarPuntajeIntermedioIncorrecto</name>
+        <qualifiedname>OpcionUnica2.IncrementarPuntajeIntermedioIncorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="110" column="10" bodyfile="Assets/Script/Trivia4.cs" bodystart="110" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_opcion_unica2_1aaba611ee550c0a83f42aef839de19b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.SeleccionarOpcion0</definition>
+        <argsstring>()</argsstring>
+        <name>SeleccionarOpcion0</name>
+        <qualifiedname>OpcionUnica2.SeleccionarOpcion0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="61" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1a6e8cd1a2e7e57e68bbb33d75545a5ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.SeleccionarOpcion1</definition>
+        <argsstring>()</argsstring>
+        <name>SeleccionarOpcion1</name>
+        <qualifiedname>OpcionUnica2.SeleccionarOpcion1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="62" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1a9a868006b762b4afcb93d61f626511b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.SeleccionarOpcion2</definition>
+        <argsstring>()</argsstring>
+        <name>SeleccionarOpcion2</name>
+        <qualifiedname>OpcionUnica2.SeleccionarOpcion2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="63" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_opcion_unica2_1acd49887e441e8c7d43c0af0a16ebe8de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpcionUnica2.SeleccionarOpcion3</definition>
+        <argsstring>()</argsstring>
+        <name>SeleccionarOpcion3</name>
+        <qualifiedname>OpcionUnica2.SeleccionarOpcion3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Trivia4.cs" line="64" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>OpcionUnica2</label>
+        <link refid="class_opcion_unica2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>OpcionUnica2</label>
+        <link refid="class_opcion_unica2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Paneles1</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Paneles1</label>
+        <link refid="class_paneles1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Trivia4.cs" line="7" column="7" bodyfile="Assets/Script/Trivia4.cs" bodystart="8" bodyend="115"/>
+    <listofallmembers>
+      <member refid="class_opcion_unica2_1a42dcb3470de7f098ef670e523dc25018" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>botonesOpciones</name></member>
+      <member refid="class_opcion_unica2_1af6a087a21deb35bc3f30c6c3c8b5b1b2" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>IncrementarPuntajeIntermedioCorrecto</name></member>
+      <member refid="class_opcion_unica2_1a149ece7af27c9540cf5a0aa4167e0be1" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>IncrementarPuntajeIntermedioIncorrecto</name></member>
+      <member refid="class_opcion_unica2_1aaf61c1a724a4d5a0721e42adfff9040f" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>indiceRespuestaCorrecta</name></member>
+      <member refid="class_opcion_unica2_1ab952c27dbb86cc3cea9f83eb759165bb" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>opciones</name></member>
+      <member refid="class_opcion_unica2_1acf4e9a6da1fcbdbd0788872f4c06dd27" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>Paneles1</name></member>
+      <member refid="class_opcion_unica2_1a744b47d64925a2d167e54f268f78a28b" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>PasarASiguienteTrivia</name></member>
+      <member refid="class_opcion_unica2_1afa50189d588375e5b7438745ba251c6c" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>pregunta</name></member>
+      <member refid="class_opcion_unica2_1a3a61d938844bc9a4ca21fc6077290ba4" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>preguntaTexto</name></member>
+      <member refid="class_opcion_unica2_1a554beecfcfd522ee2f6129103da83b0d" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>retroalimentacionTexto</name></member>
+      <member refid="class_opcion_unica2_1aaba611ee550c0a83f42aef839de19b05" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>SeleccionarOpcion0</name></member>
+      <member refid="class_opcion_unica2_1a6e8cd1a2e7e57e68bbb33d75545a5ae6" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>SeleccionarOpcion1</name></member>
+      <member refid="class_opcion_unica2_1a9a868006b762b4afcb93d61f626511b2" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>SeleccionarOpcion2</name></member>
+      <member refid="class_opcion_unica2_1acd49887e441e8c7d43c0af0a16ebe8de" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>SeleccionarOpcion3</name></member>
+      <member refid="class_opcion_unica2_1ad7fa0fb9e1ff872d2da15afd102b2b65" prot="public" virt="non-virtual"><scope>OpcionUnica2</scope><name>sonidoBoton</name></member>
+      <member refid="class_opcion_unica2_1a22306d4509d8f13a7322ff1edccd7029" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>Start</name></member>
+      <member refid="class_opcion_unica2_1ac5da9bad4567460eac25132e8ebb31eb" prot="private" virt="non-virtual"><scope>OpcionUnica2</scope><name>VerificarRespuesta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_colisionador_trigger2_d_1_1_dummy_mono_behaviour" kind="class" language="C#" prot="private">
+    <compoundname>ColisionadorTrigger2D::DummyMonoBehaviour</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ColisionadorTrigger2D.DummyMonoBehaviour</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ColisionadorTrigger2D.DummyMonoBehaviour</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/ColisiionObj.cs" line="189" column="12" bodyfile="Assets/Script/ColisiionObj.cs" bodystart="189" bodyend="189"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

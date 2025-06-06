@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_configuracion_u_i" kind="class" language="C#" prot="public">
+    <compoundname>ConfiguracionUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_configuracion_u_i_1a874b6c5066cc185d8f3b1814147e7af4" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ConfiguracionUI.panelConfiguracion</definition>
+        <argsstring></argsstring>
+        <name>panelConfiguracion</name>
+        <qualifiedname>ConfiguracionUI.panelConfiguracion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="10" column="23" bodyfile="Assets/Script/Configuracion.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1a656636c0defa36180fc586cb18087931" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ConfiguracionUI.botonAbrir</definition>
+        <argsstring></argsstring>
+        <name>botonAbrir</name>
+        <qualifiedname>ConfiguracionUI.botonAbrir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="13" column="19" bodyfile="Assets/Script/Configuracion.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1acc81335cccf043d64560951affbc7a59" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ConfiguracionUI.botonCerrar</definition>
+        <argsstring></argsstring>
+        <name>botonCerrar</name>
+        <qualifiedname>ConfiguracionUI.botonCerrar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="16" column="19" bodyfile="Assets/Script/Configuracion.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1afc351a843cdc3dce9aa0e2493ec48cf8" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ConfiguracionUI.panelCreditos</definition>
+        <argsstring></argsstring>
+        <name>panelCreditos</name>
+        <qualifiedname>ConfiguracionUI.panelCreditos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="19" column="23" bodyfile="Assets/Script/Configuracion.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1ae65645163c0a4457c3e9d944420ce948" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ConfiguracionUI.botonCreditosAbrir</definition>
+        <argsstring></argsstring>
+        <name>botonCreditosAbrir</name>
+        <qualifiedname>ConfiguracionUI.botonCreditosAbrir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="22" column="19" bodyfile="Assets/Script/Configuracion.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1a8fc5e2bda981a2527531a20a78d9bc4e" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ConfiguracionUI.botonCreditosCerrar</definition>
+        <argsstring></argsstring>
+        <name>botonCreditosCerrar</name>
+        <qualifiedname>ConfiguracionUI.botonCreditosCerrar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="25" column="19" bodyfile="Assets/Script/Configuracion.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_configuracion_u_i_1a3f48867cd2151933dc049b7c32b1a281" prot="public" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip ConfiguracionUI.sonidoBoton</definition>
+        <argsstring></argsstring>
+        <name>sonidoBoton</name>
+        <qualifiedname>ConfiguracionUI.sonidoBoton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="28" column="22" bodyfile="Assets/Script/Configuracion.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_configuracion_u_i_1aede1a8021ead3e1ce35384eeb4871156" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfiguracionUI.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ConfiguracionUI.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="31" column="10" bodyfile="Assets/Script/Configuracion.cs" bodystart="31" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_configuracion_u_i_1a56f16e89b5b197663a2b29b341d7751a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfiguracionUI.AbrirConfiguracion</definition>
+        <argsstring>()</argsstring>
+        <name>AbrirConfiguracion</name>
+        <qualifiedname>ConfiguracionUI.AbrirConfiguracion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="53" column="10" bodyfile="Assets/Script/Configuracion.cs" bodystart="53" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_configuracion_u_i_1a3fee6f634a29b8cd87be947ed300df61" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfiguracionUI.CerrarConfiguracion</definition>
+        <argsstring>()</argsstring>
+        <name>CerrarConfiguracion</name>
+        <qualifiedname>ConfiguracionUI.CerrarConfiguracion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="66" column="10" bodyfile="Assets/Script/Configuracion.cs" bodystart="66" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_configuracion_u_i_1a7db7fce20afdeb7cd9df73674d92f190" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfiguracionUI.AbrirCreditos</definition>
+        <argsstring>()</argsstring>
+        <name>AbrirCreditos</name>
+        <qualifiedname>ConfiguracionUI.AbrirCreditos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="79" column="10" bodyfile="Assets/Script/Configuracion.cs" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_configuracion_u_i_1abcb78832379c7a8e049b291d535cdf6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfiguracionUI.CerrarCreditos</definition>
+        <argsstring>()</argsstring>
+        <name>CerrarCreditos</name>
+        <qualifiedname>ConfiguracionUI.CerrarCreditos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/Configuracion.cs" line="89" column="10" bodyfile="Assets/Script/Configuracion.cs" bodystart="89" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ConfiguracionUI</label>
+        <link refid="class_configuracion_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ConfiguracionUI</label>
+        <link refid="class_configuracion_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/Configuracion.cs" line="7" column="7" bodyfile="Assets/Script/Configuracion.cs" bodystart="8" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_configuracion_u_i_1a56f16e89b5b197663a2b29b341d7751a" prot="private" virt="non-virtual"><scope>ConfiguracionUI</scope><name>AbrirConfiguracion</name></member>
+      <member refid="class_configuracion_u_i_1a7db7fce20afdeb7cd9df73674d92f190" prot="private" virt="non-virtual"><scope>ConfiguracionUI</scope><name>AbrirCreditos</name></member>
+      <member refid="class_configuracion_u_i_1a656636c0defa36180fc586cb18087931" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>botonAbrir</name></member>
+      <member refid="class_configuracion_u_i_1acc81335cccf043d64560951affbc7a59" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>botonCerrar</name></member>
+      <member refid="class_configuracion_u_i_1ae65645163c0a4457c3e9d944420ce948" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>botonCreditosAbrir</name></member>
+      <member refid="class_configuracion_u_i_1a8fc5e2bda981a2527531a20a78d9bc4e" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>botonCreditosCerrar</name></member>
+      <member refid="class_configuracion_u_i_1a3fee6f634a29b8cd87be947ed300df61" prot="private" virt="non-virtual"><scope>ConfiguracionUI</scope><name>CerrarConfiguracion</name></member>
+      <member refid="class_configuracion_u_i_1abcb78832379c7a8e049b291d535cdf6c" prot="private" virt="non-virtual"><scope>ConfiguracionUI</scope><name>CerrarCreditos</name></member>
+      <member refid="class_configuracion_u_i_1a874b6c5066cc185d8f3b1814147e7af4" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>panelConfiguracion</name></member>
+      <member refid="class_configuracion_u_i_1afc351a843cdc3dce9aa0e2493ec48cf8" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>panelCreditos</name></member>
+      <member refid="class_configuracion_u_i_1a3f48867cd2151933dc049b7c32b1a281" prot="public" virt="non-virtual"><scope>ConfiguracionUI</scope><name>sonidoBoton</name></member>
+      <member refid="class_configuracion_u_i_1aede1a8021ead3e1ce35384eeb4871156" prot="private" virt="non-virtual"><scope>ConfiguracionUI</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

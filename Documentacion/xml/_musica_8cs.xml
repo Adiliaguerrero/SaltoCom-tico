@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_musica_8cs" kind="file" language="C#">
+    <compoundname>Musica.cs</compoundname>
+    <innerclass refid="class_boton_musica" prot="public">BotonMusica</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Importamos<sp/>los<sp/>espacios<sp/>de<sp/>nombres<sp/>necesarios<sp/>de<sp/>Unity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.UI;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>controla<sp/>la<sp/>interaccion<sp/>del<sp/>botón<sp/>que<sp/>activa<sp/>o<sp/>desactiva<sp/>la<sp/>música<sp/>del<sp/>juego</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_boton_musica" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boton_musica" kindref="compound">BotonMusica</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>prefab<sp/>que<sp/>contiene<sp/>el<sp/>controlador<sp/>de<sp/>música</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" kindref="member">musicaManagerPrefab</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>script<sp/>MusicaManager<sp/>que<sp/>maneja<sp/>la<sp/>música<sp/>de<sp/>fondo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_musica_manager" kindref="compound">MusicaManager</ref><sp/>musicaManager;<sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>botón<sp/>que<sp/>ejecuta<sp/>la<sp/>acción<sp/>de<sp/>alternar<sp/>la<sp/>música</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Button<sp/><ref refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" kindref="member">boton</ref>;<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>que<sp/>se<sp/>ejecuta<sp/>cuando<sp/>se<sp/>instancia<sp/>el<sp/>objeto<sp/>(antes<sp/>de<sp/>Start)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Awake()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>si<sp/>no<sp/>existe<sp/>una<sp/>instancia<sp/>de<sp/>MusicaManager<sp/>y<sp/>si<sp/>se<sp/>asignó<sp/>un<sp/>prefab</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_musica_manager" kindref="compound">MusicaManager</ref>.<ref refid="class_musica_manager_1a798507bd3844b8928a43931398d4739e" kindref="member">instancia</ref><sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" kindref="member">musicaManagerPrefab</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instancia<sp/>el<sp/>prefab<sp/>del<sp/>manager<sp/>de<sp/>música<sp/>para<sp/>asegurar<sp/>que<sp/>esté<sp/>en<sp/>la<sp/>escena</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Instantiate(<ref refid="class_boton_musica_1afcfe69edd6eadc3d4f0abe3391686810" kindref="member">musicaManagerPrefab</ref>);<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Obtiene<sp/>la<sp/>instancia<sp/>actual<sp/>del<sp/>MusicaManager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>musicaManager<sp/>=<sp/><ref refid="class_musica_manager" kindref="compound">MusicaManager</ref>.<ref refid="class_musica_manager_1a798507bd3844b8928a43931398d4739e" kindref="member">instancia</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>que<sp/>se<sp/>ejecuta<sp/>al<sp/>iniciar<sp/>la<sp/>escena<sp/>(después<sp/>de<sp/>Awake)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Start()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>no<sp/>se<sp/>asignó<sp/>el<sp/>botón<sp/>desde<sp/>el<sp/>Inspector,<sp/>lo<sp/>busca<sp/>automáticamente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" kindref="member">boton</ref><sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" kindref="member">boton</ref><sp/>=<sp/>GetComponent&lt;Button&gt;();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Asigna<sp/>el<sp/>método<sp/>OnClick<sp/>al<sp/>evento<sp/>del<sp/>botón</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_boton_musica_1a9c65d0ae30c7fb0c1ebb9c3ce445bead" kindref="member">boton</ref>.onClick.AddListener(<ref refid="class_boton_musica_1a8419c2d6141c048c1f8e4de96b1caa71" kindref="member">OnClick</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>que<sp/>se<sp/>ejecuta<sp/>al<sp/>hacer<sp/>clic<sp/>en<sp/>el<sp/>botón</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_boton_musica_1a8419c2d6141c048c1f8e4de96b1caa71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boton_musica_1a8419c2d6141c048c1f8e4de96b1caa71" kindref="member">OnClick</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>hay<sp/>una<sp/>instancia<sp/>válida<sp/>del<sp/>manager<sp/>de<sp/>música</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(musicaManager<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Llama<sp/>al<sp/>método<sp/>que<sp/>alterna<sp/>(activa<sp/>o<sp/>desactiva)<sp/>la<sp/>música</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>musicaManager.AlternarMusica();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/Musica.cs"/>
+  </compounddef>
+</doxygen>

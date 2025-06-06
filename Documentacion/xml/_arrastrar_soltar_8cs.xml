@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_arrastrar_soltar_8cs" kind="file" language="C#">
+    <compoundname>ArrastrarSoltar.cs</compoundname>
+    <innerclass refid="class_coma_drag" prot="public">ComaDrag</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_event_systems">UnityEngine::EventSystems</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Importa<sp/>el<sp/>espacio<sp/>de<sp/>nombres<sp/>principal<sp/>de<sp/>Unity<sp/>(acceso<sp/>a<sp/>componentes<sp/>como<sp/>Transform,<sp/>GameObject,<sp/>etc.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Importa<sp/>las<sp/>interfaces<sp/>para<sp/>manejo<sp/>de<sp/>eventos<sp/>del<sp/>sistema<sp/>UI<sp/>(como<sp/>arrastrar<sp/>y<sp/>soltar)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.EventSystems;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>permite<sp/>arrastrar<sp/>un<sp/>objeto<sp/>UI,<sp/>soltarlo<sp/>en<sp/>áreas<sp/>específicas<sp/>y<sp/>clonar<sp/>el<sp/>objeto<sp/>si<sp/>es<sp/>soltado<sp/>correctamente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_coma_drag" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_coma_drag" kindref="compound">ComaDrag</ref><sp/>:<sp/>MonoBehaviour,<sp/>IDragHandler,<sp/>IEndDragHandler</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>componente<sp/>RectTransform<sp/>del<sp/>objeto<sp/>(necesario<sp/>para<sp/>mover<sp/>objetos<sp/>UI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>RectTransform<sp/>rectTransform;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Grupo<sp/>de<sp/>configuración<sp/>de<sp/>unity<sp/>para<sp/>controlar<sp/>el<sp/>raycasts<sp/>(esto<sp/>ara<sp/>permitir<sp/>o<sp/>bloquear<sp/>clics/interacciones)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>CanvasGroup<sp/>canvasGroup;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Guarda<sp/>la<sp/>posición<sp/>original<sp/>del<sp/>objeto<sp/>antes<sp/>de<sp/>arrastrarlo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Vector3<sp/>originalPosition;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Evita<sp/>que<sp/>el<sp/>objeto<sp/>se<sp/>clone<sp/>más<sp/>de<sp/>una<sp/>vez<sp/>al<sp/>ser<sp/>soltado<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>yaClonada<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Áreas<sp/>o<sp/>zonas<sp/>válidas<sp/>donde<sp/><sp/>las<sp/>comas<sp/>podran<sp/>ser<sp/>soltadas<sp/>correc3ctamente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_coma_drag_1a670d7540186e07ca8ffc79203872af28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>RectTransform[]<sp/><ref refid="class_coma_drag_1a670d7540186e07ca8ffc79203872af28" kindref="member">dropAreas</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Contenedor<sp/>que<sp/>servira<sp/>como<sp/>obejto<sp/>padre<sp/>donde<sp/>se<sp/>instanciarán<sp/>o<sp/>crearan<sp/>mas<sp/>comas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Transform<sp/><ref refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" kindref="member">padreContenedor</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>Start<sp/>se<sp/>ejecuta<sp/>una<sp/>vez<sp/>al<sp/>comenzar<sp/>la<sp/>escena<sp/>o<sp/>al<sp/>activarse<sp/>el<sp/>objeto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Start()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>obtiene<sp/>el<sp/>componente<sp/>RectTransform<sp/>del<sp/>objeto<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectTransform<sp/>=<sp/>GetComponent&lt;RectTransform&gt;();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Se<sp/>obtiene<sp/>el<sp/>CanvasGroup<sp/>para<sp/>controlar<sp/>si<sp/>bloquea<sp/>raycasts<sp/>(clics)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvasGroup<sp/>=<sp/>GetComponent&lt;CanvasGroup&gt;();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Guarda<sp/>la<sp/>posición<sp/>original<sp/>del<sp/>objeto<sp/>para<sp/>poder<sp/>volver<sp/>si<sp/>no<sp/>se<sp/>suelta<sp/>la<sp/>coma<sp/>en<sp/>una<sp/>area<sp/>valida</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>originalPosition<sp/>=<sp/>transform.position;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>no<sp/>se<sp/>ha<sp/>asignado<sp/>un<sp/>contenedor<sp/>,<sp/>se<sp/>toma<sp/>el<sp/>padre<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" kindref="member">padreContenedor</ref><sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" kindref="member">padreContenedor</ref><sp/>=<sp/>transform.parent;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>OnDrag<sp/>se<sp/>ejecuta<sp/>mientras<sp/>se<sp/>esta<sp/>arrastrando<sp/>la<sp/>coma<sp/>(requerido<sp/>por<sp/>IDragHandler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_coma_drag_1acc2bd41e568f778a5e5bbbf8781a7096" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_coma_drag_1acc2bd41e568f778a5e5bbbf8781a7096" kindref="member">OnDrag</ref>(PointerEventData<sp/>eventData)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actualiza<sp/>la<sp/>posición<sp/>del<sp/>objeto<sp/>al<sp/>seguir<sp/>la<sp/>posición<sp/>del<sp/>puntero<sp/>o<sp/>dedo<sp/>en<sp/>pantalla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectTransform.position<sp/>=<sp/>eventData.position;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Desactiva<sp/>temporalmente<sp/>los<sp/>raycasts<sp/>para<sp/>que<sp/>el<sp/>objeto<sp/>no<sp/>interfiera<sp/>con<sp/>detección<sp/>de<sp/>áreas<sp/>debajo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvasGroup.blocksRaycasts<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Método<sp/>OnEndDrag<sp/>se<sp/>ejecuta<sp/>cuando<sp/>se<sp/>suelta<sp/>el<sp/>objeto<sp/>coma<sp/>después<sp/>de<sp/>arrastrarlo<sp/>(requerido<sp/>por<sp/>IEndDragHandler)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_coma_drag_1a82610b6ac5e1e277bb71835e20d5e652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_coma_drag_1a82610b6ac5e1e277bb71835e20d5e652" kindref="member">OnEndDrag</ref>(PointerEventData<sp/>eventData)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vuelve<sp/>a<sp/>activar<sp/>los<sp/>raycasts<sp/>para<sp/>que<sp/>el<sp/>objeto<sp/>vuelva<sp/>a<sp/>responder<sp/>a<sp/>interacciones</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvasGroup.blocksRaycasts<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bandera<sp/>que<sp/>indica<sp/>si<sp/>el<sp/>objeto<sp/>fue<sp/>soltado<sp/>en<sp/>una<sp/>zona<sp/>válida</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>colocado<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recorre<sp/>cada<sp/>zona<sp/>de<sp/>soltado<sp/>en<sp/>las<sp/>areas<sp/>válida</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(var<sp/>area<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/><ref refid="class_coma_drag_1a670d7540186e07ca8ffc79203872af28" kindref="member">dropAreas</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>si<sp/>el<sp/>objeto<sp/>fue<sp/>soltado<sp/>dentro<sp/>de<sp/>una<sp/>posicion<sp/><sp/>de<sp/>las<sp/>zonas<sp/>permitidas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(RectTransformUtility.RectangleContainsScreenPoint(area,<sp/>eventData.position,<sp/>eventData.pressEventCamera))</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Coloca<sp/>el<sp/>objeto<sp/>justo<sp/>en<sp/>el<sp/>centro<sp/>de<sp/>la<sp/>zona<sp/>de<sp/>destino</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectTransform.position<sp/>=<sp/>area.position;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Marca<sp/>como<sp/>colocado<sp/>exitosamente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colocado<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>aún<sp/>no<sp/>se<sp/>ha<sp/>clonado<sp/>el<sp/>objeto:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!yaClonada)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Crea<sp/>una<sp/>copia<sp/>del<sp/>objeto<sp/>actual<sp/>dentro<sp/>del<sp/>mismo<sp/>contenedor<sp/>padre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GameObject<sp/>clon<sp/>=<sp/>Instantiate(gameObject,<sp/><ref refid="class_coma_drag_1a34a81acdb61fda66dcd45b3e171efaec" kindref="member">padreContenedor</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Coloca<sp/>el<sp/>clon<sp/>en<sp/>la<sp/>posición<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clon.transform.position<sp/>=<sp/>originalPosition;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Asegura<sp/>que<sp/>la<sp/>escala<sp/>sea<sp/>1<sp/>para<sp/>evitar<sp/>distorsión<sp/>visual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clon.transform.localScale<sp/>=<sp/>Vector3.one;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Accede<sp/>al<sp/>script<sp/>del<sp/>clon<sp/>para<sp/>actualizar<sp/>sus<sp/>propiedades<sp/>internas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>clonScript<sp/>=<sp/>clon.GetComponent&lt;<ref refid="class_coma_drag" kindref="compound">ComaDrag</ref>&gt;();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clonScript.originalPosition<sp/>=<sp/>clon.transform.position;<sp/></highlight><highlight class="comment">//<sp/>Actualiza<sp/>su<sp/>nueva<sp/>posición<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clonScript.yaClonada<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Permite<sp/>que<sp/>el<sp/>nuevo<sp/>clon<sp/>pueda<sp/>ser<sp/>clonado<sp/>también</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Marca<sp/>el<sp/>objeto<sp/>original<sp/>como<sp/>ya<sp/>clonado<sp/>para<sp/>no<sp/>crear<sp/>más<sp/>copias</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yaClonada<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ya<sp/>se<sp/>colocó<sp/>correctamente,<sp/>salimos<sp/>del<sp/>ciclo<sp/>con<sp/>un<sp/>breack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>el<sp/>objeto<sp/>no<sp/>se<sp/>soltó<sp/>en<sp/>una<sp/>zona<sp/>válida,<sp/>regresa<sp/>a<sp/>su<sp/>posición<sp/>inicial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!colocado)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectTransform.position<sp/>=<sp/>originalPosition;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/ArrastrarSoltar.cs"/>
+  </compounddef>
+</doxygen>

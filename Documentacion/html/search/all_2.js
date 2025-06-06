@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['camara_0',['Camara',['../class_camara.html',1,'']]],
+  ['camara_1',['camara',['../class_aparicion_personaje.html#adce94405f233ab9d09152470f7b1cc87',1,'AparicionPersonaje']]],
+  ['camara_2ecs_2',['Camara.cs',['../_camara_8cs.html',1,'']]],
+  ['camaratemblar_2ecs_3',['CamaraTemblar.cs',['../_camara_temblar_8cs.html',1,'']]],
+  ['cambiarescena_4',['CambiarEscena',['../class_puntos_manager.html#a40d5c21cc53db9ffba26a890e828cb6c',1,'PuntosManager']]],
+  ['cambiarescenabutton_5',['cambiarEscenaButton',['../class_puntos_manager.html#a827a383c535cc529d5f5d6d97a53a2ba',1,'PuntosManager']]],
+  ['cambiarestadosonido_6',['CambiarEstadoSonido',['../class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0',1,'AudioManager']]],
+  ['camerashake_7',['CameraShake',['../class_camera_shake.html',1,'']]],
+  ['camporespuesta_8',['campoRespuesta',['../class_transcribir_oracion2.html#a37eff0834892a6891ac59df31beacac4',1,'TranscribirOracion2.campoRespuesta'],['../class_transcribir_oracion3.html#abcfe56cfb03f80310635e62ee5cee4c2',1,'TranscribirOracion3.campoRespuesta']]],
+  ['cantidadvida_9',['cantidadVida',['../class_fruta.html#a9290fd150b0b2cb436d20132d0dfde69',1,'Fruta']]],
+  ['cargabarra_2ecs_10',['CargaBarra.cs',['../_carga_barra_8cs.html',1,'']]],
+  ['cargainicial_11',['CargaInicial',['../class_carga_inicial.html',1,'']]],
+  ['cargarescena1_12',['CargarEscena1',['../class_escena_restraurar.html#ab0130cf3027ff93fdf2516239a69680e',1,'EscenaRestraurar']]],
+  ['cargarescena2_13',['CargarEscena2',['../class_escena_restraurar.html#a2f7e18e43b212c7fa93bb379130a82bc',1,'EscenaRestraurar']]],
+  ['colisiionobj_2ecs_14',['ColisiionObj.cs',['../_colisiion_obj_8cs.html',1,'']]],
+  ['colisionadortrigger2d_15',['ColisionadorTrigger2D',['../class_colisionador_trigger2_d.html',1,'']]],
+  ['comadrag_16',['ComaDrag',['../class_coma_drag.html',1,'']]],
+  ['configuracion_2ecs_17',['Configuracion.cs',['../_configuracion_8cs.html',1,'']]],
+  ['configuracionui_18',['ConfiguracionUI',['../class_configuracion_u_i.html',1,'']]],
+  ['cuchilla_19',['Cuchilla',['../class_cuchilla.html',1,'']]]
+];

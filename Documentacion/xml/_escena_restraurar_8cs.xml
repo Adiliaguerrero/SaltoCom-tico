@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_escena_restraurar_8cs" kind="file" language="C#">
+    <compoundname>EscenaRestraurar.cs</compoundname>
+    <innerclass refid="class_escena_restraurar" prot="public">EscenaRestraurar</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.SceneManagement;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Esta<sp/>clase<sp/>permite<sp/>recargar<sp/>una<sp/>escena<sp/>actual<sp/>o<sp/>cambiar<sp/>a<sp/>otra<sp/>escena<sp/>específica</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_escena_restraurar" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_escena_restraurar" kindref="compound">EscenaRestraurar</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nombre<sp/>de<sp/>la<sp/>primera<sp/>escena<sp/>que<sp/>se<sp/>restaura<sp/>en<sp/>el<sp/>juego<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_escena_restraurar_1a44d1887096456208956e4160f39caa3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_escena_restraurar_1a44d1887096456208956e4160f39caa3e" kindref="member">escena1</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nombre<sp/>de<sp/>la<sp/>segunda<sp/>escena<sp/>a<sp/>cargar<sp/>que<sp/>mandara<sp/>al<sp/>menu<sp/>principal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_escena_restraurar_1aeb97509f566a779c3a61472974b48e0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_escena_restraurar_1aeb97509f566a779c3a61472974b48e0d" kindref="member">escena2</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clip<sp/>de<sp/>sonido<sp/>que<sp/>se<sp/>reproducirá<sp/>al<sp/>presionar<sp/>cualquier<sp/>botón</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioClip<sp/><ref refid="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" kindref="member">sonidoBoton</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>público<sp/>para<sp/>cargar<sp/>la<sp/>primera<sp/>escena<sp/>cuando<sp/>se<sp/>presione<sp/>el<sp/>botón<sp/>correspondiente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_escena_restraurar_1ab0130cf3027ff93fdf2516239a69680e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_escena_restraurar_1ab0130cf3027ff93fdf2516239a69680e" kindref="member">CargarEscena1</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reproduce<sp/>el<sp/>sonido<sp/>usando<sp/>el<sp/>sistema<sp/>de<sp/>AudioManager<sp/>global</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_audio_manager" kindref="compound">AudioManager</ref>.<ref refid="class_audio_manager_1ac112d1957778ad900886e38e20628fd6" kindref="member">instancia</ref>.<ref refid="class_audio_manager_1a79bab6d2dc9af3c3a27d587ab2a32f57" kindref="member">ReproducirSonido</ref>(<ref refid="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" kindref="member">sonidoBoton</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Carga<sp/>la<sp/>escena<sp/>cuyo<sp/>nombre<sp/>está<sp/>escrito<sp/>en<sp/>&quot;escena1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneManager.LoadScene(<ref refid="class_escena_restraurar_1a44d1887096456208956e4160f39caa3e" kindref="member">escena1</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>público<sp/>para<sp/>cargar<sp/>la<sp/>segunda<sp/>escena<sp/>cuando<sp/>se<sp/>presione<sp/>su<sp/>botón</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_escena_restraurar_1a2f7e18e43b212c7fa93bb379130a82bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_escena_restraurar_1a2f7e18e43b212c7fa93bb379130a82bc" kindref="member">CargarEscena2</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reproduce<sp/>el<sp/>sonido<sp/>usando<sp/>el<sp/>sistema<sp/>de<sp/>AudioManager<sp/>global</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_audio_manager" kindref="compound">AudioManager</ref>.<ref refid="class_audio_manager_1ac112d1957778ad900886e38e20628fd6" kindref="member">instancia</ref>.<ref refid="class_audio_manager_1a79bab6d2dc9af3c3a27d587ab2a32f57" kindref="member">ReproducirSonido</ref>(<ref refid="class_escena_restraurar_1aba96c50a2acf797afec1eaab8c72c85e" kindref="member">sonidoBoton</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Carga<sp/>la<sp/>escena<sp/>cuyo<sp/>nombre<sp/>está<sp/>escrito<sp/>en<sp/>&quot;escena2&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneManager.LoadScene(<ref refid="class_escena_restraurar_1aeb97509f566a779c3a61472974b48e0d" kindref="member">escena2</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/EscenaRestraurar.cs"/>
+  </compounddef>
+</doxygen>

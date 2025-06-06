@@ -1,0 +1,174 @@
+\doxysection{Texto\+Con\+Comas\+TMP Class Reference}
+\hypertarget{class_texto_con_comas_t_m_p}{}\label{class_texto_con_comas_t_m_p}\index{TextoConComasTMP@{TextoConComasTMP}}
+Inheritance diagram for Texto\+Con\+Comas\+TMP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_texto_con_comas_t_m_p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_texto_con_comas_t_m_p_a03bdd64d982783231d31487b52dac021}{Verificar\+Comas}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_texto_con_comas_t_m_p_ad85e04ae670f2176fd58897e31ae2d56}{texto\+TMP}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8}{texto\+Retroalimentacion}}
+\item 
+Rect\+Transform\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_texto_con_comas_t_m_p_a15c2d189fa3d55505bb060b7e25d09c1}{espacios\+Validos}}
+\item 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} \mbox{\hyperlink{class_texto_con_comas_t_m_p_ac6fb08d62dd712581a35eb2edf2973b1}{Paneles1}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_texto_con_comas_t_m_p_ac9173116d2b94f311b34552bd4aeea11}{sonido\+Boton}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_texto_con_comas_t_m_p_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_texto_con_comas_t_m_p_a03bdd64d982783231d31487b52dac021}\index{TextoConComasTMP@{TextoConComasTMP}!VerificarComas@{VerificarComas}}
+\index{VerificarComas@{VerificarComas}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{VerificarComas()}{VerificarComas()}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_a03bdd64d982783231d31487b52dac021} 
+void Texto\+Con\+Comas\+TMP.\+Verificar\+Comas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproducimos\ el\ sonido\ al\ verificar}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_texto_con_comas_t_m_p_ac9173116d2b94f311b34552bd4aeea11}{sonidoBoton}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Contador\ de\ espacios\ donde\ se\ haya\ detectado\ una\ coma\ correctamente\ posicionada}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ espaciosOcupados\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buscamos\ todos\ los\ objetos\ que\ tengan\ el\ componente\ ComaDrag\ (las\ comas\ que\ se\ arrastran)}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ ComaDrag[]\ todasLasComas\ =\ FindObjectsOfType<ComaDrag>();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recorremos\ cada\ espacio\ válido\ para\ verificar\ si\ alguna\ coma\ está\ suficientemente\ cerca}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ espacio\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_texto_con_comas_t_m_p_a15c2d189fa3d55505bb060b7e25d09c1}{espaciosValidos}})}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ coma\ \textcolor{keywordflow}{in}\ todasLasComas)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ la\ distancia\ entre\ la\ coma\ y\ el\ espacio\ es\ menor\ a\ 0.1\ unidades,\ consideramos\ que\ la\ coma\ está\ en\ el\ lugar\ correcto}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Vector3.Distance(coma.transform.position,\ espacio.position)\ <\ 0.1f)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ espaciosOcupados++;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \ \textcolor{comment}{//\ Salimos\ del\ loop\ para\ la\ siguiente\ posición\ válida,\ porque\ ya\ encontramos\ una\ coma\ aquí}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ el\ texto\ de\ retroalimentación\ está\ asignado,\ lo\ mostramos}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8}{textoRetroalimentacion}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8}{textoRetroalimentacion}}.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificamos\ si\ el\ número\ de\ comas\ colocadas\ coincide\ con\ la\ cantidad\ de\ espacios\ válidos}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (espaciosOcupados\ ==\ \mbox{\hyperlink{class_texto_con_comas_t_m_p_a15c2d189fa3d55505bb060b7e25d09c1}{espaciosValidos}}.Length)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mensaje\ en\ consola\ para\ debug\ (puedes\ eliminarlo\ si\ quieres)}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}¡Comas\ correctamente\ colocadas!"{}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Actualizamos\ el\ texto\ para\ mostrarlo\ con\ las\ comas\ correctas\ ya\ colocadas}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ textoTMP.text\ =\ \textcolor{stringliteral}{"{}Compré\ plátano,\ manzana,\ uvas,\ peras\ y\ pan."{}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mostramos\ retroalimentación\ positiva}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8}{textoRetroalimentacion}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textoRetroalimentacion.text\ =\ \textcolor{stringliteral}{"{}¡Muy\ bien!\ Has\ colocado\ correctamente\ las\ comas."{}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementamos\ puntaje\ de\ respuestas\ correctas}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeIntermedioCorrecto();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ no\ están\ todas\ las\ comas\ bien\ colocadas,\ mostramos\ retroalimentación\ negativa}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ textoRetroalimentacion.text\ =\ \textcolor{stringliteral}{"{}Incorrecto.\ No\ has\ colocado\ todas\ las\ comas\ correctamente."{}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementamos\ puntaje\ de\ respuestas\ incorrectas}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeIntermedioIncorrecto();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Eliminamos\ todas\ las\ comas\ (objetos\ ComaDrag)\ de\ la\ escena\ para\ evitar\ que\ queden\ tras\ la\ verificación}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ coma\ \textcolor{keywordflow}{in}\ todasLasComas)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(coma.gameObject);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llamamos\ para\ pasar\ a\ la\ siguiente\ pregunta\ o\ escena\ después\ de\ 2\ segundos}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}PasarASiguienteTrivia"{}},\ 2f);}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_texto_con_comas_t_m_p_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_texto_con_comas_t_m_p_a15c2d189fa3d55505bb060b7e25d09c1}\index{TextoConComasTMP@{TextoConComasTMP}!espaciosValidos@{espaciosValidos}}
+\index{espaciosValidos@{espaciosValidos}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{espaciosValidos}{espaciosValidos}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_a15c2d189fa3d55505bb060b7e25d09c1} 
+Rect\+Transform \mbox{[}$\,$\mbox{]} Texto\+Con\+Comas\+TMP.\+espacios\+Validos}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+\Hypertarget{class_texto_con_comas_t_m_p_ac6fb08d62dd712581a35eb2edf2973b1}\index{TextoConComasTMP@{TextoConComasTMP}!Paneles1@{Paneles1}}
+\index{Paneles1@{Paneles1}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{Paneles1}{Paneles1}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_ac6fb08d62dd712581a35eb2edf2973b1} 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} Texto\+Con\+Comas\+TMP.\+Paneles1}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+\Hypertarget{class_texto_con_comas_t_m_p_ac9173116d2b94f311b34552bd4aeea11}\index{TextoConComasTMP@{TextoConComasTMP}!sonidoBoton@{sonidoBoton}}
+\index{sonidoBoton@{sonidoBoton}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{sonidoBoton}{sonidoBoton}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_ac9173116d2b94f311b34552bd4aeea11} 
+Audio\+Clip Texto\+Con\+Comas\+TMP.\+sonido\+Boton}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+\Hypertarget{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8}\index{TextoConComasTMP@{TextoConComasTMP}!textoRetroalimentacion@{textoRetroalimentacion}}
+\index{textoRetroalimentacion@{textoRetroalimentacion}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{textoRetroalimentacion}{textoRetroalimentacion}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_a862ae23b6eba3c78f3e82d78ce4588c8} 
+Text\+Mesh\+Pro\+UGUI Texto\+Con\+Comas\+TMP.\+texto\+Retroalimentacion}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+\Hypertarget{class_texto_con_comas_t_m_p_ad85e04ae670f2176fd58897e31ae2d56}\index{TextoConComasTMP@{TextoConComasTMP}!textoTMP@{textoTMP}}
+\index{textoTMP@{textoTMP}!TextoConComasTMP@{TextoConComasTMP}}
+\doxysubsubsection{\texorpdfstring{textoTMP}{textoTMP}}
+{\footnotesize\ttfamily \label{class_texto_con_comas_t_m_p_ad85e04ae670f2176fd58897e31ae2d56} 
+Text\+Mesh\+Pro\+UGUI Texto\+Con\+Comas\+TMP.\+texto\+TMP}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia5_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_trivia5_8cs_source}{Trivia5.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_trivia5_8cs}{Trivia5.\+cs}}\end{DoxyCompactItemize}

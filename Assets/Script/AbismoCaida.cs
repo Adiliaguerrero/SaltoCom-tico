@@ -1,8 +1,7 @@
 
-using UnityEngine; // Importa las herramientas principales de Unity (Componentes, GameObject, Transform, etc.)
-using UnityEngine.SceneManagement; // Permite gestionar escenas (cargar, reiniciar, etc.)
-using System.Collections; // Necesario para usar corrutinas (funciones que permiten pausas temporales)
-
+using UnityEngine; 
+using UnityEngine.SceneManagement; 
+using System.Collections; 
 
 //Este clase permite que el personaje muera por un abismo de caida 
 public class AbismoCaida : MonoBehaviour

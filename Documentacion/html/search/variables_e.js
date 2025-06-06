@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['seleccionarbutton_0',['seleccionarButton',['../class_selector_personaje.html#a152b3cae172e00487a7beae751b237e5',1,'SelectorPersonaje']]],
+  ['siguientebutton_1',['siguienteButton',['../class_selector_personaje.html#ae0a9bff6b054ba50e9a0c57e308279a5',1,'SelectorPersonaje']]],
+  ['slider_2',['slider',['../class_carga_inicial.html#a76b8ad70f3a82d8389e1b337e88ede66',1,'CargaInicial']]],
+  ['sonidoboton_3',['sonidoBoton',['../class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c',1,'BotonClipControl.sonidoBoton'],['../class_configuracion_u_i.html#a3f48867cd2151933dc049b7c32b1a281',1,'ConfiguracionUI.sonidoBoton'],['../class_escena_restraurar.html#aba96c50a2acf797afec1eaab8c72c85e',1,'EscenaRestraurar.sonidoBoton'],['../class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24',1,'MenuController.sonidoBoton'],['../class_selector_personaje.html#afb846de560f448259439b2aca008616a',1,'SelectorPersonaje.sonidoBoton'],['../class_trivia1.html#a16ec03356d3efedee23362908aa30f25',1,'Trivia1.sonidoBoton'],['../class_opcion_unica.html#a786abebd39d6d97007c4b1b745753461',1,'OpcionUnica.sonidoBoton'],['../class_pregunta_opcion_multiple.html#af22788fb0908c8f06bfb6087bb8454a0',1,'PreguntaOpcionMultiple.sonidoBoton'],['../class_opcion_unica2.html#ad7fa0fb9e1ff872d2da15afd102b2b65',1,'OpcionUnica2.sonidoBoton'],['../class_texto_con_comas_t_m_p.html#ac9173116d2b94f311b34552bd4aeea11',1,'TextoConComasTMP.sonidoBoton'],['../class_transcribir_oracion2.html#a0f7a0d391d723182a4596f074bf9be9e',1,'TranscribirOracion2.sonidoBoton'],['../class_transcribir_oracion3.html#a43841c9deec898241e91dabdefaa7971',1,'TranscribirOracion3.sonidoBoton'],['../class_opcion_unica3.html#afcc74aa9d300627a035a95d3452cb39a',1,'OpcionUnica3.sonidoBoton']]],
+  ['sonidopanel_4',['sonidoPanel',['../class_sistema_dialogo.html#ab47bc2b13b27da77695a8686e22d1514',1,'SistemaDialogo']]],
+  ['speed_5',['speed',['../class_ninja.html#afa384eb5ef9119060c3f35e83b402d95',1,'Ninja']]],
+  ['suavizado_6',['suavizado',['../class_camara.html#a10100e406eb82a9c1ba16789a2ed32c9',1,'Camara']]]
+];

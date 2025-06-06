@@ -1,0 +1,140 @@
+\doxysection{Transcribir\+Oracion2 Class Reference}
+\hypertarget{class_transcribir_oracion2}{}\label{class_transcribir_oracion2}\index{TranscribirOracion2@{TranscribirOracion2}}
+Inheritance diagram for Transcribir\+Oracion2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transcribir_oracion2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_transcribir_oracion2_a3016ac6e4bb4c07e8bd6c667bdba6bda}{Verificar\+Respuesta}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} \mbox{\hyperlink{class_transcribir_oracion2_a8411f26e766b971ebabe1d3e39665a68}{Paneles1}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_transcribir_oracion2_ad1ded7a632224f285f19c489fc2b0d28}{texto\+Oracion}}
+\item 
+TMP\+\_\+\+Input\+Field \mbox{\hyperlink{class_transcribir_oracion2_a37eff0834892a6891ac59df31beacac4}{campo\+Respuesta}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_transcribir_oracion2_a5bc8c27e60c60dea802feabca9ef009b}{texto\+Retroalimentacion}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_transcribir_oracion2_a0f7a0d391d723182a4596f074bf9be9e}{sonido\+Boton}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_transcribir_oracion2_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transcribir_oracion2_a3016ac6e4bb4c07e8bd6c667bdba6bda}\index{TranscribirOracion2@{TranscribirOracion2}!VerificarRespuesta@{VerificarRespuesta}}
+\index{VerificarRespuesta@{VerificarRespuesta}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{VerificarRespuesta()}{VerificarRespuesta()}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_a3016ac6e4bb4c07e8bd6c667bdba6bda} 
+void Transcribir\+Oracion2.\+Verificar\+Respuesta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reproduce\ el\ sonido\ del\ botón\ usando\ el\ AudioManager\ global}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ AudioManager.instancia.ReproducirSonido(\mbox{\hyperlink{class_transcribir_oracion2_a0f7a0d391d723182a4596f074bf9be9e}{sonidoBoton}});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtiene\ la\ respuesta\ del\ usuario\ y\ elimina\ espacios\ al\ inicio\ y\ final}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ respuestaUsuario\ =\ \mbox{\hyperlink{class_transcribir_oracion2_a37eff0834892a6891ac59df31beacac4}{campoRespuesta}}.text.Trim();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compara\ la\ respuesta\ del\ usuario\ con\ la\ oración\ correcta}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (respuestaUsuario\ ==\ oracionCorrecta)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ es\ correcta,\ muestra\ el\ mensaje\ "{}¡Correcto!"{}}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ textoRetroalimentacion.text\ =\ \textcolor{stringliteral}{"{}¡Correcto!\ "{}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ el\ puntaje\ de\ respuestas\ correctas\ en\ nivel\ intermedio}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeIntermedioCorrecto();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ es\ incorrecta,\ muestra\ el\ mensaje\ "{}Incorrecto."{}}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ textoRetroalimentacion.text\ =\ \textcolor{stringliteral}{"{}Incorrecto.\ "{}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Incrementa\ el\ puntaje\ de\ respuestas\ incorrectas\ en\ nivel\ intermedio}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ IncrementarPuntajeIntermedioIncorrecto();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Llama\ al\ método\ para\ pasar\ a\ la\ siguiente\ trivia\ después\ de\ 2\ segundos}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Invoke(\textcolor{stringliteral}{"{}PasarASiguienteTrivia"{}},\ 2f);}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_transcribir_oracion2_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{class_transcribir_oracion2_a37eff0834892a6891ac59df31beacac4}\index{TranscribirOracion2@{TranscribirOracion2}!campoRespuesta@{campoRespuesta}}
+\index{campoRespuesta@{campoRespuesta}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{campoRespuesta}{campoRespuesta}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_a37eff0834892a6891ac59df31beacac4} 
+TMP\+\_\+\+Input\+Field Transcribir\+Oracion2.\+campo\+Respuesta}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+\Hypertarget{class_transcribir_oracion2_a8411f26e766b971ebabe1d3e39665a68}\index{TranscribirOracion2@{TranscribirOracion2}!Paneles1@{Paneles1}}
+\index{Paneles1@{Paneles1}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{Paneles1}{Paneles1}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_a8411f26e766b971ebabe1d3e39665a68} 
+\mbox{\hyperlink{class_paneles1}{Paneles1}} Transcribir\+Oracion2.\+Paneles1}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+\Hypertarget{class_transcribir_oracion2_a0f7a0d391d723182a4596f074bf9be9e}\index{TranscribirOracion2@{TranscribirOracion2}!sonidoBoton@{sonidoBoton}}
+\index{sonidoBoton@{sonidoBoton}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{sonidoBoton}{sonidoBoton}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_a0f7a0d391d723182a4596f074bf9be9e} 
+Audio\+Clip Transcribir\+Oracion2.\+sonido\+Boton}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+\Hypertarget{class_transcribir_oracion2_ad1ded7a632224f285f19c489fc2b0d28}\index{TranscribirOracion2@{TranscribirOracion2}!textoOracion@{textoOracion}}
+\index{textoOracion@{textoOracion}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{textoOracion}{textoOracion}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_ad1ded7a632224f285f19c489fc2b0d28} 
+TMP\+\_\+\+Text Transcribir\+Oracion2.\+texto\+Oracion}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+\Hypertarget{class_transcribir_oracion2_a5bc8c27e60c60dea802feabca9ef009b}\index{TranscribirOracion2@{TranscribirOracion2}!textoRetroalimentacion@{textoRetroalimentacion}}
+\index{textoRetroalimentacion@{textoRetroalimentacion}!TranscribirOracion2@{TranscribirOracion2}}
+\doxysubsubsection{\texorpdfstring{textoRetroalimentacion}{textoRetroalimentacion}}
+{\footnotesize\ttfamily \label{class_transcribir_oracion2_a5bc8c27e60c60dea802feabca9ef009b} 
+TMP\+\_\+\+Text Transcribir\+Oracion2.\+texto\+Retroalimentacion}
+
+
+
+Definition at line \mbox{\hyperlink{_trivia6_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_trivia6_8cs_source}{Trivia6.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Script/\mbox{\hyperlink{_trivia6_8cs}{Trivia6.\+cs}}\end{DoxyCompactItemize}

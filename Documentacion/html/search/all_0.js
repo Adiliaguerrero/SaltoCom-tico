@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['abismocaida_0',['AbismoCaida',['../class_abismo_caida.html',1,'']]],
+  ['abismocaida_2ecs_1',['AbismoCaida.cs',['../_abismo_caida_8cs.html',1,'']]],
+  ['activardialogo_2',['ActivarDialogo',['../class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0',1,'SistemaDialogo']]],
+  ['activargameover_3',['ActivarGameOver',['../class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48',1,'BarraVida']]],
+  ['actualizarbarra_4',['ActualizarBarra',['../class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6',1,'BarraVida']]],
+  ['actualizarpuntajes_5',['ActualizarPuntajes',['../class_puntos_manager.html#a858e875328e084f4db16111b7bd530a1',1,'PuntosManager']]],
+  ['alternarmusica_6',['AlternarMusica',['../class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b',1,'MusicaManager']]],
+  ['animator_7',['animator',['../class_player_controller.html#af24a8820ce6558138208255b27d948d3',1,'PlayerController']]],
+  ['anteriorbutton_8',['anteriorButton',['../class_selector_personaje.html#a3daee2648113b4f2fdc6db516a501745',1,'SelectorPersonaje']]],
+  ['anteriorpersonaje_9',['AnteriorPersonaje',['../class_selector_personaje.html#afc303c94dd5b485a296d8f34b29beb52',1,'SelectorPersonaje']]],
+  ['aparicionpersonaje_10',['AparicionPersonaje',['../class_aparicion_personaje.html',1,'']]],
+  ['arrastrarsoltar_2ecs_11',['ArrastrarSoltar.cs',['../_arrastrar_soltar_8cs.html',1,'']]],
+  ['attackcooldown_12',['attackCooldown',['../class_ninja.html#a958a7f2654ecc5c5aee8cf85b97a8b5c',1,'Ninja']]],
+  ['attackradius_13',['attackRadius',['../class_ninja.html#a0b8fd1cc8651a2549b440629e5addad1',1,'Ninja']]],
+  ['audio_2ecs_14',['Audio.cs',['../_audio_8cs.html',1,'']]],
+  ['audiomanager_15',['AudioManager',['../class_audio_manager.html',1,'']]],
+  ['audiomanager_2ecs_16',['AudioManager.cs',['../_audio_manager_8cs.html',1,'']]],
+  ['avanzadocorrectotext_17',['AvanzadoCorrectoText',['../class_puntos_manager.html#a63f7133b04b21313e69e7115e6fdabd3',1,'PuntosManager']]],
+  ['avanzadoincorrectotext_18',['AvanzadoIncorrectoText',['../class_puntos_manager.html#a58dcb3a6ad84a06b1114766e0ecf0d24',1,'PuntosManager']]]
+];

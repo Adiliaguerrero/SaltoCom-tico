@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_abismo_caida" kind="class" language="C#" prot="public">
+    <compoundname>AbismoCaida</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_abismo_caida_1ab810370d2a20b0284140e4fdbd51f523" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject AbismoCaida.gameOverPanel</definition>
+        <argsstring></argsstring>
+        <name>gameOverPanel</name>
+        <qualifiedname>AbismoCaida.gameOverPanel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/AbismoCaida.cs" line="11" column="23" bodyfile="Assets/Script/AbismoCaida.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_abismo_caida_1a8677dd2f9d62df40b7cfede9fa5a72bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbismoCaida.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>AbismoCaida.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/AbismoCaida.cs" line="14" column="18" bodyfile="Assets/Script/AbismoCaida.cs" bodystart="14" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abismo_caida_1aa5b72db0f0d733d86ad8cfa6d7f25db4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator AbismoCaida.ShowGameOver</definition>
+        <argsstring>()</argsstring>
+        <name>ShowGameOver</name>
+        <qualifiedname>AbismoCaida.ShowGameOver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/AbismoCaida.cs" line="31" column="17" bodyfile="Assets/Script/AbismoCaida.cs" bodystart="31" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abismo_caida_1af04d1da03001883982584f9156cd0378" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbismoCaida.RestartGame</definition>
+        <argsstring>()</argsstring>
+        <name>RestartGame</name>
+        <qualifiedname>AbismoCaida.RestartGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/AbismoCaida.cs" line="44" column="17" bodyfile="Assets/Script/AbismoCaida.cs" bodystart="44" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbismoCaida</label>
+        <link refid="class_abismo_caida"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AbismoCaida</label>
+        <link refid="class_abismo_caida"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/AbismoCaida.cs" line="8" column="7" bodyfile="Assets/Script/AbismoCaida.cs" bodystart="9" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_abismo_caida_1ab810370d2a20b0284140e4fdbd51f523" prot="public" virt="non-virtual"><scope>AbismoCaida</scope><name>gameOverPanel</name></member>
+      <member refid="class_abismo_caida_1a8677dd2f9d62df40b7cfede9fa5a72bc" prot="private" virt="non-virtual"><scope>AbismoCaida</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_abismo_caida_1af04d1da03001883982584f9156cd0378" prot="public" virt="non-virtual"><scope>AbismoCaida</scope><name>RestartGame</name></member>
+      <member refid="class_abismo_caida_1aa5b72db0f0d733d86ad8cfa6d7f25db4" prot="private" virt="non-virtual"><scope>AbismoCaida</scope><name>ShowGameOver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

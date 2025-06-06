@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_abismo_caida_8cs" kind="file" language="C#">
+    <compoundname>AbismoCaida.cs</compoundname>
+    <innerclass refid="class_abismo_caida" prot="public">AbismoCaida</innerclass>
+    <innernamespace refid="namespace_unity_engine">UnityEngine</innernamespace>
+    <innernamespace refid="namespace_unity_engine_1_1_scene_management">UnityEngine::SceneManagement</innernamespace>
+    <innernamespace refid="namespace_system_1_1_collections">System::Collections</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;<sp/></highlight><highlight class="comment">//<sp/>Importa<sp/>las<sp/>herramientas<sp/>principales<sp/>de<sp/>Unity<sp/>(Componentes,<sp/>GameObject,<sp/>Transform,<sp/>etc.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.SceneManagement;<sp/></highlight><highlight class="comment">//<sp/>Permite<sp/>gestionar<sp/>escenas<sp/>(cargar,<sp/>reiniciar,<sp/>etc.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections;<sp/></highlight><highlight class="comment">//<sp/>Necesario<sp/>para<sp/>usar<sp/>corrutinas<sp/>(funciones<sp/>que<sp/>permiten<sp/>pausas<sp/>temporales)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//Este<sp/>clase<sp/>permite<sp/>que<sp/>el<sp/>personaje<sp/>muera<sp/>por<sp/>un<sp/>abismo<sp/>de<sp/>caida<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_abismo_caida" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_abismo_caida" kindref="compound">AbismoCaida</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Referencia<sp/>al<sp/>panel<sp/>de<sp/>Game<sp/>Over<sp/>(se<sp/>activa<sp/>cuando<sp/>el<sp/>jugador<sp/>muere)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_abismo_caida_1ab810370d2a20b0284140e4fdbd51f523" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_abismo_caida_1ab810370d2a20b0284140e4fdbd51f523" kindref="member">gameOverPanel</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>OnTriggerEnter2D<sp/>se<sp/>llama<sp/>automáticamente<sp/>y<sp/>se<sp/>activa<sp/>cuando<sp/>otro<sp/>objeto<sp/>entra<sp/>en<sp/>el<sp/>trigger<sp/>de<sp/>este<sp/>objeto<sp/>(abismo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnTriggerEnter2D(Collider2D<sp/>other)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verificamos<sp/>si<sp/>el<sp/>objeto<sp/>que<sp/>entra<sp/>al<sp/>abismo<sp/>tiene<sp/>la<sp/>etiqueta<sp/>&quot;Player&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(other.CompareTag(</highlight><highlight class="stringliteral">&quot;Player&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Muestra<sp/>un<sp/>mensaje<sp/>en<sp/>la<sp/>consola<sp/>indicando<sp/>que<sp/>el<sp/>jugador<sp/>cayó</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Debug.Log(</highlight><highlight class="stringliteral">&quot;Jugador<sp/>ha<sp/>tocado<sp/>la<sp/>zona<sp/>de<sp/>muerte&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Destruye<sp/>el<sp/>objeto<sp/>del<sp/>jugador<sp/>(lo<sp/>elimina<sp/>de<sp/>la<sp/>escena)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Destroy(other.gameObject);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inicia<sp/>una<sp/>corrutina<sp/>que<sp/>mostrará<sp/>el<sp/>panel<sp/>de<sp/>Game<sp/>Over<sp/>luego<sp/>de<sp/>2<sp/>segundos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StartCoroutine(ShowGameOver());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Corrutina<sp/>que<sp/>espera<sp/>2<sp/>segundos<sp/>antes<sp/>de<sp/>mostrar<sp/>el<sp/>panel<sp/>de<sp/>Game<sp/>Over</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>IEnumerator<sp/>ShowGameOver()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Espera<sp/>2<sp/>segundos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yield<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WaitForSeconds(2f);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Activa<sp/>el<sp/>panel<sp/>de<sp/>Game<sp/>Over<sp/>para<sp/>que<sp/>sea<sp/>visible<sp/>en<sp/>pantalla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_abismo_caida_1ab810370d2a20b0284140e4fdbd51f523" kindref="member">gameOverPanel</ref>.SetActive(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Detiene<sp/>el<sp/>tiempo<sp/>del<sp/>juego<sp/>(pausa<sp/>todos<sp/>los<sp/>objetos<sp/>y<sp/>animaciones<sp/>excepto<sp/>la<sp/>UI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Time.timeScale<sp/>=<sp/>0f;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Método<sp/>público<sp/>que<sp/>se<sp/>puede<sp/>llamar<sp/>desde<sp/>un<sp/>botón<sp/>para<sp/>reiniciar<sp/>el<sp/>juego</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_abismo_caida_1af04d1da03001883982584f9156cd0378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_abismo_caida_1af04d1da03001883982584f9156cd0378" kindref="member">RestartGame</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reactiva<sp/>el<sp/>tiempo<sp/>del<sp/>juego<sp/>(lo<sp/>normaliza)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Time.timeScale<sp/>=<sp/>1f;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recarga<sp/>la<sp/>escena<sp/>actual<sp/>(reinicia<sp/>el<sp/>nivel)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneManager.LoadScene(SceneManager.GetActiveScene().name);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Assets/Script/AbismoCaida.cs"/>
+  </compounddef>
+</doxygen>

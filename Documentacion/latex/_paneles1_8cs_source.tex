@@ -1,0 +1,133 @@
+\doxysection{Paneles1.\+cs}
+\hypertarget{_paneles1_8cs_source}{}\label{_paneles1_8cs_source}\index{Assets/Script/Paneles1.cs@{Assets/Script/Paneles1.cs}}
+\mbox{\hyperlink{_paneles1_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00001}00001\ \textcolor{comment}{//\ Importa\ el\ espacio\ de\ nombres\ de\ Unity\ necesario\ para\ manipular\ objetos\ y\ componentes}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00004}00004\ \textcolor{comment}{//\ Esta\ clase\ controla\ la\ activación\ y\ interaccion\ de\ paneles\ tipo\ trivias}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00005}\mbox{\hyperlink{class_paneles1}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_paneles1}{Paneles1}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Paneles\ que\ se\ activan\ uno\ por\ uno}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00008}\mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00009}\mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00010}\mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00012}00012\ \ \ \ \ \textcolor{comment}{//\ Elementos\ de\ la\ interfaz\ que\ se\ desactivan\ mientras\ los\ paneles\ están\ activos}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00013}\mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00014}\mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00015}\mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Índice\ que\ lleva\ el\ seguimiento\ de\ la\ trivia\ actual}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ triviaActual\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Referencia\ al\ Rigidbody2D\ del\ jugador\ para\ congelarlo\ o\ activarlo}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ Rigidbody2D\ rbJugador;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Referencia\ al\ script\ del\ jugador\ para\ habilitar\ o\ deshabilitar\ su\ movimiento}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_player_controller}{PlayerController}}\ playerController;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Método\ que\ se\ ejecuta\ al\ iniciar\ la\ escena}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Desactiva\ todos\ los\ paneles\ al\ iniciar}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ joystick\ e\ imágenes\ al\ inicio}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ al\ jugador\ en\ la\ escena\ por\ su\ tag\ y\ obtiene\ sus\ componentes}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ GameObject\ jugador\ =\ GameObject.FindGameObjectWithTag(\textcolor{stringliteral}{"{}Player"{}});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador\ =\ jugador.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ playerController\ =\ jugador.GetComponent<\mbox{\hyperlink{class_player_controller}{PlayerController}}>();}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Método\ público\ que\ avanza\ a\ la\ siguiente\ trivia\ cuando\ se\ llama\ desde\ un\ botón}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00049}\mbox{\hyperlink{class_paneles1_a6c8e0a68251948580a968bffc2a709b7}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paneles1_a6c8e0a68251948580a968bffc2a709b7}{SiguienteTrivia}}()}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ obtener\ referencias\ del\ jugador\ por\ si\ no\ estaban\ asignadas\ aún}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ GameObject\ jugador\ =\ GameObject.FindGameObjectWithTag(\textcolor{stringliteral}{"{}Player"{}});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador\ =\ jugador.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ playerController\ =\ jugador.GetComponent<\mbox{\hyperlink{class_player_controller}{PlayerController}}>();}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ el\ panel\ correspondiente\ según\ el\ índice\ actual}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(0);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(1);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (triviaActual\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ ActivarPanel(2);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ ya\ no\ hay\ más\ trivias,\ desactiva\ todos\ los\ paneles\ y\ reactiva\ el\ control\ del\ jugador}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Todas\ las\ trivias\ han\ terminado."{}});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ el\ joystick}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ habilitar\ el\ componente\ de\ joystick\ si\ existe}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ FixedJoystick\ joyComponent\ =\ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.GetComponent<FixedJoystick>();}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (joyComponent\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joyComponent.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vuelve\ a\ activar\ las\ imágenes}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reactiva\ el\ movimiento\ del\ jugador}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rbJugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador.bodyType\ =\ RigidbodyType2D.Dynamic;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerController\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playerController.puedeMoverse\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Aumenta\ el\ contador\ para\ pasar\ a\ la\ siguiente\ trivia\ la\ próxima\ vez}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ triviaActual++;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Método\ privado\ que\ activa\ uno\ de\ los\ tres\ paneles\ y\ ajusta\ el\ estado\ del\ jugador}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ActivarPanel(\textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Activa\ solo\ el\ panel\ correspondiente\ al\ índice,\ desactivando\ los\ otros}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a1f9bd1b0f2b5a082f1146529bbefccb6}{panel1}}.SetActive(index\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_af3b18412cf955c393d13a9bd15edc804}{panel2}}.SetActive(index\ ==\ 1);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}.SetActive(index\ ==\ 2);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ si\ alguno\ de\ los\ paneles\ está\ activo}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ panelActivo\ =\ panel1.activeSelf\ ||\ panel2.activeSelf\ ||\ \mbox{\hyperlink{class_paneles1_ad628fbc096ce9aa8df481e3c29ce665f}{panel3}}.activeSelf;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ hay\ un\ panel\ activo,\ desactiva\ joystick\ e\ imágenes;\ si\ no,\ los\ activa}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a9726a1d081588f411f01929f8e9a84a9}{joystick}}.SetActive(!panelActivo);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_a4a4e32424fca4936a835fa74305a996b}{imagen1}}.SetActive(!panelActivo);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paneles1_aa739f5a1685c1daf0ef172aa443f85c9}{imagen2}}.SetActive(!panelActivo);}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ hay\ panel\ activo,\ congela\ al\ jugador;\ si\ no,\ lo\ libera}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rbJugador\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ rbJugador.bodyType\ =\ panelActivo\ ?\ RigidbodyType2D.Static\ :\ RigidbodyType2D.Dynamic;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Habilita\ o\ deshabilita\ el\ movimiento\ del\ jugador\ según\ si\ hay\ un\ panel\ activo}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerController\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ playerController.puedeMoverse\ =\ !panelActivo;}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paneles1_8cs_source_l00127}00127\ \}}
+
+\end{DoxyCode}

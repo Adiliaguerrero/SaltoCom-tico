@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_colisionador_trigger2_d_1_1_portal_trigger" kind="class" language="C#" prot="private">
+    <compoundname>ColisionadorTrigger2D::PortalTrigger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_colisionador_trigger2_d_1_1_portal_trigger_1a47fe3f59ea0b050a2e197c0dcba5ea3f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ColisionadorTrigger2D.PortalTrigger.nombreEscena</definition>
+        <argsstring></argsstring>
+        <name>nombreEscena</name>
+        <qualifiedname>ColisionadorTrigger2D.PortalTrigger.nombreEscena</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ColisiionObj.cs" line="126" column="23" bodyfile="Assets/Script/ColisiionObj.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_colisionador_trigger2_d_1_1_portal_trigger_1ab374db8e0df22f64f0fc6ac2383953db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ColisionadorTrigger2D.PortalTrigger.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>ColisionadorTrigger2D.PortalTrigger.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Assets/Script/ColisiionObj.cs" line="129" column="22" bodyfile="Assets/Script/ColisiionObj.cs" bodystart="129" bodyend="145"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ColisionadorTrigger2D.PortalTrigger</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ColisionadorTrigger2D.PortalTrigger</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Assets/Script/ColisiionObj.cs" line="123" column="12" bodyfile="Assets/Script/ColisiionObj.cs" bodystart="124" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_colisionador_trigger2_d_1_1_portal_trigger_1a47fe3f59ea0b050a2e197c0dcba5ea3f" prot="public" virt="non-virtual"><scope>ColisionadorTrigger2D::PortalTrigger</scope><name>nombreEscena</name></member>
+      <member refid="class_colisionador_trigger2_d_1_1_portal_trigger_1ab374db8e0df22f64f0fc6ac2383953db" prot="private" virt="non-virtual"><scope>ColisionadorTrigger2D::PortalTrigger</scope><name>OnTriggerEnter2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
