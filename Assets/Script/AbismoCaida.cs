@@ -12,7 +12,9 @@ using System.Collections;
 /// </remarks>
 public class AbismoCaida : MonoBehaviour
 {
-    // Referencia al panel de Game Over (se activa cuando el jugador muere)
+    /// <summary>
+    /// Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo.
+    /// </summary>
     public GameObject gameOverPanel;
 
     // Método OnTriggerEnter2D se llama automáticamente y se activa cuando otro objeto entra en el trigger de este objeto (abismo)
