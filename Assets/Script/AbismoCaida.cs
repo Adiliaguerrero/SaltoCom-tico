@@ -1,9 +1,15 @@
-
 using UnityEngine; 
 using UnityEngine.SceneManagement; 
-using System.Collections; 
+using System.Collections;
 
-//Este clase permite que el personaje muera por un abismo de caida 
+/// <summary>
+/// Controla el comportamiento del abismo de caída. 
+/// Si el jugador entra en contacto con esta zona, el personaje muere y se muestra el panel de Game Over.
+/// </summary>
+/// <remarks>
+/// Esta clase debe ser añadida a un GameObject con un Collider2D marcado como "Trigger".
+/// Se utiliza <see cref="OnTriggerEnter2D(Collider2D)"/> para detectar la colisión del jugador.
+/// </remarks>
 public class AbismoCaida : MonoBehaviour
 {
     // Referencia al panel de Game Over (se activa cuando el jugador muere)
