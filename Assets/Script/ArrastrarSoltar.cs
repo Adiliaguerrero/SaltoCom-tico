@@ -1,10 +1,9 @@
-// Importa el espacio de nombres principal de Unity (acceso a componentes como Transform, GameObject, etc.)
 using UnityEngine;
-
-// Importa las interfaces para manejo de eventos del sistema UI (como arrastrar y soltar)
 using UnityEngine.EventSystems;
 
-// Esta clase permite arrastrar un objeto UI, soltarlo en áreas específicas y clonar el objeto si es soltado correctamente
+/// <summary>
+/// Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma.
+/// </summary>
 public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     // Referencia al componente RectTransform del objeto (necesario para mover objetos UI)
