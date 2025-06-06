@@ -8,7 +8,7 @@
 
 ---
 
-## 📚 Descripción
+##  Descripción
 
 *Salto Comático* es un juego interactivo y educativo diseñado para **niños** que están aprendiendo las reglas básicas de la puntuación, especialmente el uso de la coma para separar elementos en una serie.
 
@@ -16,7 +16,7 @@ Controla a tu personaje en un mundo colorido, supera obstáculos, resuelve trivi
 
 ---
 
-## 🎮 Características principales
+##  Características principales
 
 - Modo de aventura con niveles progresivos.
 - Trivias interactivas sobre el uso correcto de la coma.
@@ -26,13 +26,13 @@ Controla a tu personaje en un mundo colorido, supera obstáculos, resuelve trivi
 
 ---
 
-## 🧒 Categoría
+##  Categoría
 
 **Educativo | Juego para niños +8 | Lengua y Gramática**
 
 ---
 
-## ⚙️ Especificaciones técnicas
+##  Especificaciones técnicas
 
 - **Plataforma:** Android (.APK)
 - **Requisitos mínimos:**
@@ -45,7 +45,7 @@ Controla a tu personaje en un mundo colorido, supera obstáculos, resuelve trivi
 
 ---
 
-## 🚀 Instalación
+##  Instalación
 
 1. Descarga el archivo `.apk` desde el repositorio o sitio oficial.
 2. Activa la opción **"Instalar desde fuentes desconocidas"** en tu dispositivo Android.
@@ -54,7 +54,7 @@ Controla a tu personaje en un mundo colorido, supera obstáculos, resuelve trivi
 
 ---
 
-## ✉️ Contacto
+##  Contacto
 
 Para sugerencias, comentarios o soporte:
 
@@ -69,13 +69,13 @@ Correo: guerreroadilia37@gmail.com
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto se distribuye con fines educativos. Puedes usarlo, modificarlo y compartirlo con fines no comerciales, citando a los desarrolladores.
 
 ---
 
-## 🛠 En desarrollo
+##  En desarrollo
 
 Este juego está en constante mejora. Próximas funciones:
 
