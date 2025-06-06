@@ -43,6 +43,7 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
     // Método Start se ejecuta una vez al comenzar la escena o al activarse el objeto
     void Start()
     {
+        
         // Se obtiene el componente RectTransform del objeto actual
         rectTransform = GetComponent<RectTransform>();
 
@@ -52,12 +53,16 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
         // Guarda la posición original del objeto para poder volver si no se suelta la coma en una area valida
         originalPosition = transform.position;
 
-        // Si no se ha asignado un contenedor , se toma el padre actual
         if (padreContenedor == null)
             padreContenedor = transform.parent;
     }
 
-    // Método OnDrag se ejecuta mientras se esta arrastrando la coma (requerido por IDragHandler)
+
+        /// <summary>
+        /// Mueve el objeto siguiendo el puntero mientras se arrastra.
+        /// </summary>
+        /// <param name="eventData">Datos del evento de arrastre.
+        /// </param>
     public void OnDrag(PointerEventData eventData)
     {
         // Actualiza la posición del objeto al seguir la posición del puntero o dedo en pantalla
@@ -67,7 +72,11 @@ public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
         canvasGroup.blocksRaycasts = false;
     }
 
-    //  Método OnEndDrag se ejecuta cuando se suelta el objeto coma después de arrastrarlo (requerido por IEndDragHandler)
+        /// <summary>
+        /// Se ejecuta al soltar el objeto. Verifica si fue colocado en una zona válida y, si es así, clona una nueva coma.
+        /// </summary>
+        /// <param name="eventData">Datos del evento al soltar el objeto.
+        /// </param>
     public void OnEndDrag(PointerEventData eventData)
     {
         // Vuelve a activar los raycasts para que el objeto vuelva a responder a interacciones
