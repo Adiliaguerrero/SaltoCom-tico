@@ -1,7 +1,10 @@
-using UnityEngine;                // Importa la biblioteca principal de Unity para funciones básicas del motor.
-using UnityEngine.UI;            // Importa la biblioteca de UI, necesaria para trabajar con botones y otros elementos gráficos.
+using UnityEngine;               
+using UnityEngine.UI;            
 
-// Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonido cuando se pulsa.
+/// <summary>
+/// Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonido cuando se pulsa.
+/// </summary>
+
 public class BotonClipControl : MonoBehaviour
 {
     public Button botonSonido;           // Referencia al botón en la escena que controlará el sonido.
