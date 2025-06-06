@@ -27,7 +27,6 @@ public class AbismoCaida : MonoBehaviour
     /// <remarks>
     /// Si el objeto tiene la etiqueta "Player", se elimina de la escena y se inicia la rutina de Game Over.
     /// </remarks>
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -40,6 +39,9 @@ public class AbismoCaida : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Corrutina que espera 2 segundos antes de mostrar el panel de Game Over.
+    /// </summary>
     IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(2f);
