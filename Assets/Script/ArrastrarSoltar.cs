@@ -1,29 +1,37 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma.
-/// </summary>
+    /// <summary>
+    /// Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma.
+    /// </summary>
+
 public class ComaDrag : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    // Referencia al componente RectTransform del objeto (necesario para mover objetos UI)
+    /// <summary>
+    /// Referencia al componente RectTransform del objeto actual.
+    /// </summary>
     private RectTransform rectTransform;
 
-    // Grupo de configuración de unity para controlar el raycasts (esto ara permitir o bloquear clics/interacciones)
+    /// <summary>
+    /// Componente que controla si el objeto bloquea interacciones de clic mientras se arrastra.
+    /// </summary>
     private CanvasGroup canvasGroup;
 
-    // Guarda la posición original del objeto antes de arrastrarlo
+    /// <summary>
+    /// Posición inicial del objeto coma, para restaurarla si no se coloca correctamente.
+    /// </summary>
     private Vector3 originalPosition;
 
-    // Evita que el objeto se clone más de una vez al ser soltado 
+    
     private bool yaClonada = false;
 
-    // Áreas o zonas válidas donde  las comas podran ser soltadas correc3ctamente
+
     public RectTransform[] dropAreas;
 
-    // Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas
+
     public Transform padreContenedor;
 
+ 
     // Método Start se ejecuta una vez al comenzar la escena o al activarse el objeto
     void Start()
     {
