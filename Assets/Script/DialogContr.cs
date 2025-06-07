@@ -1,9 +1,8 @@
 
-// Importamos librerías necesarias para el manejo de listas, corutinas y Unity
-using System.Collections;                // Para usar corutinas (funciones que se ejecutan en varios frames)
-using System.Collections.Generic;        // Para usar Listas genéricas, en este caso para las líneas de diálogo
-using UnityEngine;                       // Funciones básicas y objetos de Unity
-using TMPro;                            // Para usar TextMeshPro, que mejora la visualización de texto
+using System.Collections;               
+using System.Collections.Generic;        
+using UnityEngine;
+using TMPro;                          
 
 // Esta clase controla la visualización de un sistema de dialogo de texto despues de activarse un portal 
 public class DialogoController : MonoBehaviour
