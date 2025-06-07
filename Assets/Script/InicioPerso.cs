@@ -40,6 +40,13 @@ public class AparicionPersonaje : MonoBehaviour
     public GameObject camara;
 
     // Método Start que se ejecuta automáticamente al iniciar la escena
+    
+        /// <summary>
+        /// Instancia el personaje seleccionado y configura sus dependencias.
+        /// </summary>
+        /// <remarks>
+        /// Recupera el índice del personaje desde PlayerPrefs, instancia el personaje, asigna joystick y configura la cámara.
+        /// </remarks>
     void Start()
     {
         // Validación: Verifica si el arreglo de personajes está vacío o no fue asignado
