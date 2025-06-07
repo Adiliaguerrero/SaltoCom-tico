@@ -1,22 +1,25 @@
-// Importamos las librerías necesarias para usar las funciones básicas y componentes de Unity
-using UnityEngine;                  // Funciones básicas de Unity
-using UnityEngine.UI;               // Para manejar elementos UI como Slider (barra de progreso)
-using TMPro;                       // Para usar TextMeshPro, que mejora la visualización de texto
-using System.Collections;          // Para usar corutinas (funciones que se ejecutan en varios frames)
-using UnityEngine.SceneManagement; // Para cambiar entre escenas del juego
+using UnityEngine;                 
+using UnityEngine.UI;              
+using TMPro;                       
+using System.Collections;          
+using UnityEngine.SceneManagement;
 
 // Esta clase permite controlar una barra de carga con slider para cmbiar de escena hacia el menu princi8pal
+    /// <summary>
+    /// Controla la simulación de una barra de carga con un <see cref="Slider"/> y texto porcentual,
+    /// que culmina cargando una nueva escena.
+    /// </summary>
 public class CargaInicial : MonoBehaviour
 {
     // Variable pública para asignar desde el Inspector la barra deslizante (slider)
     // Representa visualmente el progreso de carga, va de 0 a 1
-    public Slider slider;  
+    public Slider slider;
 
     // Variable pública para indicar cuánto durará la simulación de carga en segundos
-    public float tiempoCarga = 5f;  
+    public float tiempoCarga = 5f;
 
     // Variable pública para asignar desde el Inspector el texto que mostrará el porcentaje de carga
-    public TextMeshProUGUI textoCarga;  
+    public TextMeshProUGUI textoCarga;
 
     // Variable pública para asignar el nombre de la escena que se cargará al terminar la carga
     public string nombreEscena;
@@ -67,7 +70,7 @@ public class CargaInicial : MonoBehaviour
             }
 
             // Esperamos al siguiente frame para continuar con el bucle (deja que Unity actualice la pantalla)
-            yield return null;  
+            yield return null;
         }
 
         // Cuando termina el tiempo de carga, nos aseguramos de mostrar el 100% en el texto
