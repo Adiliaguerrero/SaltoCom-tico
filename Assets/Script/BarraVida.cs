@@ -1,7 +1,11 @@
-using UnityEngine;       // Librería principal de Unity para componentes y funciones base.
-using UnityEngine.UI;    // Librería necesaria para trabajar con UI, en este caso la barra de vida (Image).
+using UnityEngine;       
+using UnityEngine.UI;
+
 
 // Esta clase para controlar el sistema de vida del jugador y activar el obejto llamado game over
+    /// <summary>
+    /// Controla el sistema de vida del jugador y activa el panel de Game Over cuando la vida llega a cero.
+    /// </summary>
 public class BarraVida : MonoBehaviour
 {
     public Image rellenoBarraVida;  // Referencia al componente Image que representa el relleno de la barra de vida.
