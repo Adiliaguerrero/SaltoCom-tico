@@ -62,7 +62,14 @@ public class ConfiguracionUI : MonoBehaviour
     /// <seealso cref="AudioManager.ReproducirSonido(AudioClip)"/>
     public AudioClip sonidoBoton;
 
-    // Método Start se ejecuta automáticamente al iniciar el juego o activar este objeto
+
+        /// <summary>
+        /// Se ejecuta al iniciar el objeto y configura la visibilidad de los paneles
+        /// y la asignación de eventos a los botones.
+        /// </summary>
+        /// <remarks>
+        /// Este método desactiva inicialmente los paneles y vincula los métodos a los botones.
+        /// </remarks>
     void Start()
     {
         // Ocultamos el panel de configuración para que no se vea al comenzar el juego
