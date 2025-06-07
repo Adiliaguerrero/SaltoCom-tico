@@ -63,10 +63,8 @@ public class DialogoController : MonoBehaviour
         /// </exception>
     public void MostrarDialogo(System.Action alTerminar)
     {
-        // Activamos el panel para que el diálogo se muestre en pantalla
         panelDialogo.SetActive(true);
 
-        // Iniciamos la corutina MostrarLineas para mostrar las líneas de diálogo una a una
         StartCoroutine(MostrarLineas(alTerminar));
     }
 
@@ -81,23 +79,17 @@ public class DialogoController : MonoBehaviour
         /// <seealso cref="IEnumerator"/>
     private IEnumerator MostrarLineas(System.Action callback)
     {
-        // Recorremos cada línea en la lista lineasDialogo
         foreach (string linea in lineasDialogo)
         {
-            // Actualizamos el texto mostrado con la línea actual
             textoDialogo.text = linea;
 
-            // Esperamos el tiempo definido antes de mostrar la siguiente línea
             yield return new WaitForSeconds(tiempoEntreLineas);
         }
 
-        // Al terminar todas las líneas, limpiamos el texto para que no quede nada visible
         textoDialogo.text = "";
 
-        // Ocultamos el panel del diálogo para que desaparezca de la pantalla
         panelDialogo.SetActive(false);
 
-        // Invocamos la función callback si fue asignada, para avisar que el diálogo terminó
         callback?.Invoke();
     }
 }
