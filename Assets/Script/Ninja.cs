@@ -195,7 +195,12 @@ public class Ninja : MonoBehaviour
         enCooldown = false; // Se puede volver a atacar
     }
 
-    // Método que se ejecuta cuando ocurre una colisión con este objeto
+    /// <summary>
+    /// Maneja la lógica cuando el ninja colisiona con el jugador desde abajo, provocando su muerte.
+    /// </summary>
+    /// <param name="collision">Información sobre la colisión detectada.
+    /// </param>
+    /// 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Si el ninja ya está muerto, no hace nada
