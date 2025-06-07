@@ -3,8 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Esta clase permite recargar una escena actual o cambiar a otra escena específica
-
+    /// <summary>
+    /// Permite recargar una escena actual o cambiar a otra escena específica mediante botones.
+    /// </summary>
+    /// <remarks>
+    /// Usa <see cref="SceneManager"/> para cambiar entre escenas y <see cref="AudioManager"/> para reproducir efectos de sonido al hacer clic.
+    /// </remarks>
+    /// <example>
+    /// Este script puede estar vinculado a botones de UI:
+    /// <code>
+    /// public EscenaRestraurar escenaController;
+    /// escenaController.CargarEscena1();
+    /// </code>
+    /// </example>
+    /// <seealso cref="SceneManager"/>
+    /// <seealso cref="AudioManager"/>
 public class EscenaRestraurar : MonoBehaviour
 {
     // Nombre de la primera escena que se restaura en el juego  
