@@ -14,26 +14,43 @@ using UnityEngine.SceneManagement;
     /// </remarks>
 public class PantallaDialogo : MonoBehaviour
 {
-    // Referencia al componente TMP_Text donde se mostrarán los diálogos
+    /// <summary>
+    /// Componente de texto donde se muestra el diálogo actual.
+    /// </summary>
     public TMP_Text textoPantalla;
 
-    // Arreglo de cadenas que contiene todas las líneas de diálogo que se mostrarán
+    /// <summary>
+    /// Arreglo de líneas de diálogo a mostrar.
+    /// </summary>
     [TextArea(2, 5)]
     public string[] dialogos;
 
-    // Tiempo que se espera entre cada letra al mostrar el texto (efecto de máquina de escribir)
+
+        /// <summary>
+        /// Tiempo de espera entre cada letra del texto (efecto de máquina de escribir).
+        /// </summary>
     public float tiempoEntreLetras = 0.05f;
 
-    // Tiempo que se espera entre cada línea de diálogo
+
+        /// <summary>
+        /// Tiempo de espera entre cada línea de diálogo.
+        /// </summary>
     public float tiempoEntreDialogos = 3f;
 
-    // Texto que mostrará puntos animados como indicador de carga
+        /// <summary>
+        /// Texto que muestra una animación de puntos suspensivos como indicador de carga.
+        /// </summary>
     public TMP_Text puntosCargaTexto;
 
-    // Tiempo a esperar después de mostrar los puntos antes de cambiar de escena
+    
+        /// <summary>
+        /// Tiempo que se espera después de los puntos antes de cambiar de escena.
+        /// </summary>
     public float tiempoAntesCambioEscena = 2f;
 
-    // Nombre de la escena que se cargará al finalizar todos los diálogos
+        /// <summary>
+        /// Nombre de la escena que se cargará una vez finalizada toda la secuencia de diálogo.
+        /// </summary>
     public string nombreEscenaSiguiente;
 
     // Índice para llevar el control de qué línea de diálogo se está mostrando
