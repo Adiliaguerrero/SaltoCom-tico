@@ -9,15 +9,39 @@ using TMPro;
     /// </summary>
 public class PuntosManager : MonoBehaviour
 {
-    // Instancia estática para implementar Singleton y mantener el objeto vivo entre escenas
-    public static PuntosManager instancia;
+    /// <summary>
+    /// Instancia estática única del gestor de puntos.
+    /// </summary>
+public static PuntosManager instancia;
 
-    // Referencias a los textos que mostrarán los puntajes (TextMeshProUGUI)
+        /// <summary>
+        /// Texto que muestra el número de respuestas correctas en nivel básico.
+        /// </summary>
     public TextMeshProUGUI BasicoCorrectoText;
+
+        /// <summary>
+        /// Texto que muestra el número de respuestas incorrectas en nivel básico.
+        /// </summary>
     public TextMeshProUGUI BasicoIncorrectoText;
+
+        /// <summary>
+        /// Texto que muestra el número de respuestas correctas en nivel intermedio.
+        /// </summary>
     public TextMeshProUGUI IntermedioCorrectoText;
+
+        /// <summary>
+        /// Texto que muestra el número de respuestas incorrectas en nivel intermedio.
+        /// </summary>
     public TextMeshProUGUI IntermedioIncorrectoText;
+
+        /// <summary>
+        /// Texto que muestra el número de respuestas correctas en nivel avanzado.
+        /// </summary>
     public TextMeshProUGUI AvanzadoCorrectoText;
+
+        /// <summary>
+        /// Texto que muestra el número de respuestas incorrectas en nivel avanzado.
+        /// </summary>
     public TextMeshProUGUI AvanzadoIncorrectoText;
 
     // Referencias a botones para limpiar puntajes y cambiar de escena
