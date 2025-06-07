@@ -1,9 +1,17 @@
 
-// Importamos las librerías necesarias para usar funciones de Unity y manejar UI (botones, paneles)
-using UnityEngine;          // Funciones básicas y objetos de Unity
-using UnityEngine.UI;       // Para manejar componentes de interfaz gráfica, como botones y paneles
+using UnityEngine;          
+using UnityEngine.UI;
 
 // Esta clase controla la gestion de configuración y créditos, así como los botones para abrirlos y cerrarlos
+    /// <summary>
+    /// Controla la visualización de los paneles de configuración y créditos,
+    /// así como la asignación de eventos a los botones respectivos.
+    /// </summary>
+    /// <remarks>
+    /// Este script debe estar asignado a un GameObject en la escena.
+    /// Asegúrate de asignar correctamente los objetos del Inspector antes de ejecutar.
+    /// </remarks>
+    /// <seealso cref="AudioManager"/>
 public class ConfiguracionUI : MonoBehaviour
 {
     // Panel que contiene las opciones de configuración, asignado desde el Inspector
