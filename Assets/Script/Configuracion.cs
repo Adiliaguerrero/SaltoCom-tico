@@ -34,7 +34,13 @@ public class ConfiguracionUI : MonoBehaviour
     /// </summary>
     public Button botonCerrar;
 
-    // Panel que muestra los créditos del juego, asignado desde el Inspector
+
+    /// <summary>
+    /// Panel que muestra los créditos del juego.
+    /// </summary>
+    /// <value>
+    /// Se recomienda desactivarlo en el inicio del juego.
+    /// </value>
     public GameObject panelCreditos;
 
     // Botón que abre el panel de créditos
