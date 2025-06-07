@@ -20,13 +20,32 @@ using UnityEngine.SceneManagement;
     /// <seealso cref="AudioManager"/>
 public class EscenaRestraurar : MonoBehaviour
 {
-    // Nombre de la primera escena que se restaura en el juego  
+    // Nombre de la primera escena que se restaura en el juego
+        /// <summary>
+        /// Nombre de la primera escena a cargar cuando se pulsa el primer botón.
+        /// </summary>
+        /// <value>
+        /// Nombre exacto de la escena tal como aparece en el Build Settings.
+        /// </value>
     public string escena1;
 
     // Nombre de la segunda escena a cargar que mandara al menu principal
+        
+        /// <summary>
+        /// Nombre de la segunda escena, normalmente el menú principal.
+        /// </summary>
+        /// <value>
+        /// Debe coincidir con el nombre definido en el sistema de escenas.
+        /// </value>
     public string escena2;
 
     // Clip de sonido que se reproducirá al presionar cualquier botón
+        /// <summary>
+        /// Sonido que se reproducirá al pulsar un botón de cambio de escena.
+        /// </summary>
+        /// <remarks>
+        /// Debe ser asignado en el Inspector
+        /// </remarks>
     public AudioClip sonidoBoton;
 
     // Método público para cargar la primera escena cuando se presione el botón correspondiente
