@@ -11,22 +11,28 @@ using System.Collections;
     /// </remarks>
 public class PajaroEnemigo : MonoBehaviour
 {
-    // Sección en el Inspector para ajustar el movimiento del pájaro
+    
+    /// <summary>
+    /// Velocidad de movimiento del pájaro.
+    /// </summary>
     [Header("Movimiento")]
-
-    // Velocidad de movimiento del pájaro
     public float velocidad = 2f;
 
-    // Distancia total que recorre en cada dirección antes de voltearse
+    /// <summary>
+    /// Distancia máxima que el pájaro recorre en una dirección antes de cambiar.
+    /// </summary>
     public float distanciaVuelo = 5f;
 
     // Tiempo que espera antes de cambiar de dirección
+    /// <summary>
+    /// Tiempo de espera antes de invertir la dirección del vuelo.
+    /// </summary>
     public float tiempoEspera = 2f;
 
-    // Sección en el Inspector para ajustar el daño que causa
+    /// <summary>
+    /// Cantidad de daño que se aplica al jugador al entrar en contacto.
+    /// </summary>
     [Header("Daño")]
-
-    // Cantidad de daño que inflige al jugador al tocarlo
     public int danio = 1;
 
     // Guarda la posición inicial para calcular el vuelo
