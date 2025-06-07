@@ -71,7 +71,9 @@ public class InstruccionesVisuales : MonoBehaviour
         AnimarToque(manoTocar.rectTransform);
     }
 
-    // Método que se ejecuta una vez por frame
+    /// <summary>
+    /// Verifica la interacción del jugador y elimina las instrucciones visuales correspondientes.
+    /// </summary>
     void Update()
     {
         // Obtiene el valor horizontal del joystick (si existe)
