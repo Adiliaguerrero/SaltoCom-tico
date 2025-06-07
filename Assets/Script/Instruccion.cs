@@ -128,6 +128,12 @@ public class InstruccionesVisuales : MonoBehaviour
     }
 
     // Método que inicia la animación de movimiento horizontal de una mano
+    
+    /// <summary>
+    /// Anima una mano con movimiento horizontal hacia una dirección específica.
+    /// </summary>
+    /// <param name="mano">RectTransform de la mano a animar.</param>
+    /// <param name="direccionX">Desplazamiento horizontal.</param>
     void AnimarMovimiento(RectTransform mano, float direccionX)
     {
         // Guarda la posición inicial
