@@ -24,7 +24,14 @@ public class Fruta : MonoBehaviour
         /// </value>
     public float cantidadVida = 1f;
 
-    // Método OnTriggerEnter2 se activa automáticamente cuando otro collider entra en contacto con la fruta (marcado como Trigger)
+
+        /// <summary>
+        /// Se ejecuta automáticamente cuando otro objeto con Collider2D entra en el trigger de la fruta.
+        /// </summary>
+        /// <param name="collision">El objeto que colisionó con la fruta.</param>
+        /// <remarks>
+        /// Si el objeto colisionado tiene la etiqueta "Player" y contiene un <see cref="PlayerController"/>, restaurará su vida y se destruirá esta fruta.
+        /// </remarks>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Muestra en la consola con qué objeto colisionó la fruta (útil para depuración)
