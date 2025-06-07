@@ -34,13 +34,10 @@ public class PlayerController : MonoBehaviour
         /// </summary>
     public bool puedeMoverse = true;
 
-    // Variable interna que indica si el personaje está tocando el suelo
     private bool enSuelo = true;
 
-    // Transform que sirve para detectar si el personaje está en el suelo
     private Transform detectorSuelo;
 
-    // Vida máxima que puede tener el personaje
     [SerializeField] private float vidaMaxima = 5f;
 
 
@@ -55,7 +52,6 @@ public class PlayerController : MonoBehaviour
          /// </summary>
     public Joystick joystick;
 
-    // Controla si el personaje está recibiendo daño para evitar múltiples impactos simultáneos
     private bool recibiendoDanio = false;
 
     /// <summary>
@@ -75,39 +71,32 @@ public class PlayerController : MonoBehaviour
         /// </summary>
     void Start()
     {
-        // Busca el objeto hijo llamado "DetectorSuelo" para detectar colisiones con el suelo
         detectorSuelo = transform.Find("DetectorSuelo");
         if (detectorSuelo == null)
         {
             Debug.LogError("No se encontró DetectorSuelo en el personaje instanciado.");
         }
 
-        // Si no se asignó la barra de vida desde el Inspector, intenta buscarla en la escena
         if (barraVida == null)
         {
             barraVida = FindObjectOfType<BarraVida>();
         }
 
-        // Si no se asignó el Animator, lo obtiene automáticamente del GameObject
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
 
-        // Inicializa la vida actual con el valor máximo
         vida = vidaMaxima;
 
-        // Guarda la vida actual del jugador en PlayerPrefs para mantenerla persistente
         PlayerPrefs.SetFloat("VidaJugador", vida);
         PlayerPrefs.Save();
 
-        // Actualiza la barra de vida en la interfaz
         if (barraVida != null)
         {
             barraVida.ActualizarBarra(vida);
         }
 
-        // Obtiene la referencia al script de sacudida de cámara desde la cámara principal
         cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
@@ -157,19 +146,15 @@ public class PlayerController : MonoBehaviour
     else if (velocidadX < 0)
         transform.localScale = new Vector3(-1f, 1f, 1f);
 
-    // variable para Salto solicitado  
     bool saltoSolicitado = Input.GetButtonDown("Jump");
 
-    // ✅ Detecta todos los toques en pantalla (móvil)
     for (int i = 0; i < Input.touchCount; i++)
     {
         Touch toque = Input.GetTouch(i);
 
-        // Ignora si está tocando  objetos de la UI
         if (EventSystem.current.IsPointerOverGameObject(toque.fingerId))
             continue;
 
-        //  Solo si el toque está en el lado derecho de la pantalla salta
         if (toque.phase == TouchPhase.Began && toque.position.x > Screen.width / 2)
         {
             saltoSolicitado = true;
@@ -177,7 +162,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Permite salto con clic de mouse (útil para pruebas en PC)
     if (Input.GetMouseButtonDown(0))
     {
         if (!EventSystem.current.IsPointerOverGameObject() && Input.mousePosition.x > Screen.width / 2)
@@ -200,21 +184,16 @@ public class PlayerController : MonoBehaviour
         /// <param name="cantDanio">Cantidad de daño recibido.</param>
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
-        // Si ya está recibiendo daño, no hacer nada
         if (recibiendoDanio) return;
 
-        // Se marca como que está recibiendo daño
         recibiendoDanio = true;
 
-        // Se resta vida y se limita entre 0 y el máximo
         vida -= cantDanio;
         vida = Mathf.Clamp(vida, 0f, vidaMaxima);
 
-        // Guarda la vida actual en PlayerPrefs
         PlayerPrefs.SetFloat("VidaJugador", vida);
         PlayerPrefs.Save();
 
-        // Si hay barra de vida, se actualiza y verifica si hay game over
         if (barraVida != null)
         {
             barraVida.ActualizarBarra(vida);
@@ -229,17 +208,14 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("No se encontró la barra de vida en PlayerController.");
         }
 
-        // Aplica rebote al personaje en dirección opuesta al daño recibido
         Vector2 rebote = new Vector2(transform.position.x - direccion.x, 1).normalized;
         rb.AddForce(rebote * FuerzaRebote * cantDanio, ForceMode2D.Impulse);
 
-        // Si hay efecto de cámara, se activa sacudida
         if (cameraShake != null)
         {
             cameraShake.Sacudir();
         }
 
-        // Desactiva el estado de daño después de un breve tiempo
         Invoke(nameof(DesactivaDanio), 0.5f);
     }
 
@@ -251,7 +227,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnValidate()
     {
-        // Asegura que la vida no exceda los límites y actualiza la barra en el editor
         if (barraVida != null)
         {
             vida = Mathf.Clamp(vida, 0f, vidaMaxima);
@@ -264,14 +239,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void RestaurarVida()
     {
-        // Restaura la vida al valor máximo
         vida = vidaMaxima;
 
-        // Guarda la nueva vida en PlayerPrefs
         PlayerPrefs.SetFloat("VidaJugador", vida);
         PlayerPrefs.Save();
 
-        // Actualiza la barra de vida si está presente
         if (barraVida != null)
         {
             barraVida.ActualizarBarra(vida);
@@ -282,17 +254,13 @@ public class PlayerController : MonoBehaviour
     /// <param name="cantidad">Cantidad de vida a restaurar.</param>
     public void RestaurarVidaParcial(float cantidad)
     {
-        // Aumenta la vida con la cantidad indicada
         vida += cantidad;
 
-        // Asegura que la vida no exceda el máximo ni sea menor que 0
         vida = Mathf.Clamp(vida, 0f, vidaMaxima);
 
-        // Guarda la vida actual en PlayerPrefs
         PlayerPrefs.SetFloat("VidaJugador", vida);
         PlayerPrefs.Save();
 
-        // Si hay una barra de vida, se actualiza
         if (barraVida != null)
         {
             barraVida.ActualizarBarra(vida);
@@ -302,7 +270,6 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
-        // Dibuja un gizmo rojo en la posición del detector de suelo para visualizarlo en el editor
         if (detectorSuelo != null)
         {
             Gizmos.color = Color.red;
