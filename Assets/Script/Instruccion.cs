@@ -126,8 +126,6 @@ public class InstruccionesVisuales : MonoBehaviour
         }
 #endif
     }
-
-    // Método que inicia la animación de movimiento horizontal de una mano
     
     /// <summary>
     /// Anima una mano con movimiento horizontal hacia una dirección específica.
@@ -146,7 +144,11 @@ public class InstruccionesVisuales : MonoBehaviour
         StartCoroutine(MoverMano(mano, inicio, destino));
     }
 
-    // Método que inicia la animación de movimiento vertical (toque) de una mano
+    
+    /// <summary>
+    /// Anima la mano de toque con un movimiento vertical hacia abajo.
+    /// </summary>
+    /// <param name="mano">RectTransform de la mano de toque.</param>
     void AnimarToque(RectTransform mano)
     {
         // Guarda la posición inicial
