@@ -14,7 +14,12 @@ using UnityEngine.UI;
     /// <seealso cref="AudioManager"/>
 public class ConfiguracionUI : MonoBehaviour
 {
-    // Panel que contiene las opciones de configuración, asignado desde el Inspector
+
+    /// <summary>
+    /// Panel que contiene las opciones de configuración.
+    /// </summary>
+    /// <value>Debe estar desactivado al inicio del juego.
+    /// </value>
     public GameObject panelConfiguracion;
 
     // Botón que abre el panel de configuración
