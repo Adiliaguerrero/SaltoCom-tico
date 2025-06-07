@@ -1,7 +1,6 @@
 using UnityEngine;                       
 using UnityEngine.SceneManagement;
 
-// Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego
     /// <summary>
     /// Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego.
     /// </summary>
@@ -12,7 +11,10 @@ public class MenuController : MonoBehaviour
     /// </summary>
     public AudioClip sonidoBoton;
 
-    // Método público que se llama para ir a la escena de selección de niveles o inicio
+    
+    /// <summary>
+    /// Método que se llama para ir a la escena de introducción o selección de niveles.
+    /// </summary>
     public void IrAInicio()
     {
         // Reproduce el sonido del botón usando el AudioManager singleton
