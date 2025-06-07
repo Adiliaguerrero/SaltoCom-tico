@@ -11,16 +11,21 @@ public class Camara : MonoBehaviour
         /// </summary>
     public GameObject Player2;
 
-    // Controla la suavidad del movimiento de la cámara (valor más alto = movimiento más suave)
+
         /// <summary>
         /// Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave.
         /// </summary>
     public float suavizado = 5f;
 
-    // Desplazamiento de la cámara respecto al jugador (eje X e Y)
+        /// <summary>
+        /// Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él.
+        /// </summary>
     public Vector2 desplazamiento = new Vector2(2f, 1f);
 
-    // Variable interna para almacenar la velocidad usada por SmoothDamp
+
+        /// <summary>
+        /// Velocidad utilizada internamente por SmoothDamp para interpolar posiciones.
+        /// </summary>
     private Vector3 velocidadSuavizado = Vector3.zero;
 
     // Última dirección horizontal conocida del jugador para posicionar la cámara adelante
