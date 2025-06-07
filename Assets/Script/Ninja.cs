@@ -182,7 +182,12 @@ public class Ninja : MonoBehaviour
         animator.SetBool("IsAttacking", false); // Detiene la animación de ataque
     }
 
-    // Corrutina que inicia un cooldown entre ataques
+    /// <summary>
+    /// Inicia un período de espera entre ataques para evitar ataques consecutivos inmediatos.
+    /// </summary>
+    /// <returns>
+    /// Una corrutina que espera el tiempo definido antes de permitir otro ataque.
+    /// </returns>
     System.Collections.IEnumerator IniciarCooldown()
     {
         enCooldown = true; // Activa el cooldown
