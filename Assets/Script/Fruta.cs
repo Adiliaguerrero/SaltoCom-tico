@@ -1,7 +1,18 @@
-// Importamos las funciones esenciales de Unity
 using UnityEngine;
 
 // Esta clase permite dar una Cantidad de vida que esta fruta  puede restaurará al jugador cuando la recoja
+
+
+    /// <summary>
+    /// Representa una fruta recolectable que restaura vida al jugador al entrar en contacto.
+    /// </summary>
+    /// <remarks>
+    /// Este script debe estar adjunto a un objeto con un Collider2D marcado como Trigger.
+    /// Se espera que el jugador tenga un componente <see cref="PlayerController"/> con el método <c>RestaurarVidaParcial</c>.
+    /// </remarks>
+    /// <example>
+    /// Asigna este script a una fruta y asegúrate de configurar <see cref="cantidadVida"/> desde el Inspector.
+    /// </example>
 public class Fruta : MonoBehaviour
 {
     // Referencia publica para determinar cuanta vida restaura 
