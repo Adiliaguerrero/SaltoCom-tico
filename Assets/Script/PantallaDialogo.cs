@@ -5,7 +5,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Esta clase controla una secuencia de diálogos que se muestran en pantalla letra por letra y puntos de carga animados.
- 
+    /// <summary>
+    /// Controla la presentación secuencial de diálogos en pantalla, letra por letra, con una animación de puntos al final y cambio automático de escena.
+    /// </summary>
+    /// <remarks>
+    /// Ideal para escenas introductorias o transiciones narrativas.
+    /// Utiliza corutinas para mostrar texto gradualmente y gestionar tiempos.
+    /// </remarks>
 public class PantallaDialogo : MonoBehaviour
 {
     // Referencia al componente TMP_Text donde se mostrarán los diálogos
