@@ -40,34 +40,25 @@ public class CameraShake : MonoBehaviour
         /// </returns>
     private IEnumerator Shake()
     {
-        // Guardamos la posición original de la cámara (antes de moverse).
         Vector3 posicionOriginal = transform.localPosition;
 
-        // Creamos una variable llamada "tiempo" que empieza en cero.
         float tiempo = 0f;
 
-        // Esta parte se repite mientras el tiempo total sea menor que la duración de la sacudida.
         while (tiempo < duracion)
         {
-            // Generamos un número al azar entre -1 y 1 para el movimiento horizontal (x).
-            // Lo multiplicamos por la magnitud para controlar qué tan fuerte se mueve.
+
             float offsetX = Random.Range(-1f, 1f) * magnitud;
 
-            // Lo mismo, pero para el movimiento vertical (y).
             float offsetY = Random.Range(-1f, 1f) * magnitud;
 
-            // Movemos la cámara a una nueva posición sumando el movimiento al azar.
-            // El valor "0" es para no mover la cámara hacia adelante o atrás (eje Z).
+
             transform.localPosition = posicionOriginal + new Vector3(offsetX, offsetY, 0);
 
-            // Aumentamos el tiempo con el valor del tiempo que ha pasado desde el último cuadro.
             tiempo += Time.deltaTime;
 
-            // Esta línea hace una pequeña pausa hasta el siguiente cuadro (frame).
             yield return null;
         }
 
-        // Al final de la sacudida, regresamos la cámara a su posición original.
         transform.localPosition = posicionOriginal;
     }
 }
