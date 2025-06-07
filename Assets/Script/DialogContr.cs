@@ -1,10 +1,24 @@
-
 using System.Collections;               
 using System.Collections.Generic;        
 using UnityEngine;
-using TMPro;                          
+using TMPro;
 
-// Esta clase controla la visualización de un sistema de dialogo de texto despues de activarse un portal 
+ 
+    /// <summary>
+    /// Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.
+    /// </summary>
+    /// <remarks>
+    /// Este componente se encarga de mostrar líneas de diálogo una por una en un panel UI,
+    /// utilizando un <see cref="TextMeshProUGUI"/> y un panel contenedor.
+    /// </remarks>
+    /// <example>
+    /// Para mostrar el diálogo desde otro script:
+    /// <code>
+    /// var dialogo = FindObjectOfType&lt;DialogoController&gt;();
+    /// dialogo.MostrarDialogo(() => Debug.Log("Diálogo finalizado"));
+    /// </code>
+    /// </example>
+    /// <seealso cref="TextMeshProUGUI"/>
 public class DialogoController : MonoBehaviour
 {
     // Panel que contiene todo el diálogo, que se mostrará y ocultará, asignado desde el Inspector
