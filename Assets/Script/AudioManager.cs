@@ -82,13 +82,11 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.Save(); // Asegura que la preferencia se escriba en disco.
     }
 
-    // Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
-    /// <summary>
-    /// Obtiene el estado actual de los sonidos.
+
+/// <summary>
+    /// Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
     /// </summary>
-    /// <returns>
-    /// <c>true</c> si los sonidos están activos; de lo contrario, <c>false</c>.
-    /// </returns>
+    /// <param name="clip">Clip de audio a reproducir.</param>
     public void ReproducirSonido(AudioClip clip)
     {
         if (sonidosActivos && clip != null)
