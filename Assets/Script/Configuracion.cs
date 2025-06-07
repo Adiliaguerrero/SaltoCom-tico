@@ -22,10 +22,16 @@ public class ConfiguracionUI : MonoBehaviour
     /// </value>
     public GameObject panelConfiguracion;
 
-    // Botón que abre el panel de configuración
+
+    /// <summary>
+    /// Botón que abre el panel de configuración.
+    /// </summary>
     public Button botonAbrir;
 
-    // Botón que cierra el panel de configuración
+    
+    /// <summary>
+    /// Botón que cierra el panel de configuración.
+    /// </summary>
     public Button botonCerrar;
 
     // Panel que muestra los créditos del juego, asignado desde el Inspector
