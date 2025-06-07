@@ -77,6 +77,9 @@ public class Paneles1 : MonoBehaviour
     }
 
     // Método público que avanza a la siguiente trivia cuando se llama desde un botón
+        /// <summary>
+        /// Método público que se llama desde un botón para avanzar a la siguiente trivia.
+        /// </summary>
     public void SiguienteTrivia()
     {
         // Vuelve a obtener referencias del jugador por si no estaban asignadas aún
