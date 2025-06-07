@@ -14,9 +14,12 @@ public class AudioManager : MonoBehaviour
         /// <summary>
         /// Instancia única del AudioManager en la escena (patrón Singleton).
         /// </summary>
-    public static AudioManager instancia;  // Singleton: referencia estática a la única instancia de AudioManager.
+    public static AudioManager instancia; 
 
-    private AudioSource audioSource;  // Componente que reproduce los clips de audio.
+        /// <summary>
+        /// Componente que permite reproducir sonidos en la escena.
+        /// </summary>
+    private AudioSource audioSource;  
 
     // Awake se ejecuta cuando se instancia el objeto en la escena, antes de Start.
     private void Awake()
