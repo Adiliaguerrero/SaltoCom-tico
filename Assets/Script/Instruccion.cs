@@ -40,13 +40,20 @@ public class InstruccionesVisuales : MonoBehaviour
     /// </summary>
     public Joystick joystick;
 
-    // Controla si la mano izquierda ya fue eliminada
+    /// <summary>
+    /// Indica si la mano izquierda sigue activa en pantalla.
+    /// </summary>
     private bool izquierdaMostrada = true;
 
-    // Controla si la mano derecha ya fue eliminada
+    
+    /// <summary>
+    /// Indica si la mano derecha sigue activa en pantalla.
+    /// </summary>
     private bool derechaMostrada = true;
 
-    // Controla si la mano de toque ya fue eliminada
+    /// <summary>
+    /// Indica si la mano de toque sigue activa en pantalla.
+    /// </summary>
     private bool tocarMostrado = true;
 
     // Método que se ejecuta al iniciar la escena
