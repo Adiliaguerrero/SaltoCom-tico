@@ -28,10 +28,17 @@ public class Camara : MonoBehaviour
         /// </summary>
     private Vector3 velocidadSuavizado = Vector3.zero;
 
-    // Última dirección horizontal conocida del jugador para posicionar la cámara adelante
+        /// <summary>
+        /// Última dirección horizontal conocida del jugador para que la cámara mire hacia adelante.
+        /// </summary>
     private float ultimaDireccionX = 1f;
 
     // Metodo LateUpdate se llama después de Update cada frame o segundo, ideal para seguir al jugador sin retrasos visuales
+
+    /// <summary>
+    /// Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena.
+    /// Ideal para seguir al jugador sin causar saltos o retrasos visuales.
+    /// </summary>
     void LateUpdate()
     {
         // Comprobar que el jugador no sea null o no extista  para evitar errores
