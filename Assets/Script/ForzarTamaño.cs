@@ -23,8 +23,15 @@ public class ForzarEscala : MonoBehaviour
     /// </value>
     public Vector2 escalaCorrecta = new Vector2(0.48f, 0.45f);
 
-    // Este método se llama una vez por frame, pero después de que todos los demás métodos Update hayan sido ejecutados
-    // Se utiliza para asegurar que la escala se aplique correctamente al final del frame
+
+
+        /// <summary>
+        /// Se llama automáticamente después de todos los métodos Update.
+        /// Aplica la escala fija y ajusta la orientación según la dirección.
+        /// </summary>
+        /// <remarks>
+        /// Si el objeto está volteado horizontalmente, se conserva esa inversión al aplicar la escala.
+        /// </remarks>
     private void LateUpdate()
     {
         // Determina si el objeto está mirando hacia la derecha (1) o hacia la izquierda (-1) según su escala en X
