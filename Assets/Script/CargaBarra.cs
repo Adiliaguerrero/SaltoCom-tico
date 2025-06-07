@@ -35,7 +35,6 @@ public class CargaInicial : MonoBehaviour
         /// </summary>
     public string nombreEscena;
 
-    // Método Start se ejecuta automáticamente cuando comienza la escena o juego
         /// <summary>
         /// Se ejecuta al iniciar la escena. Verifica referencias y comienza la carga simulada.
         /// </summary>
@@ -54,7 +53,14 @@ public class CargaInicial : MonoBehaviour
         }
     }
 
-    // Corutina que simula la barra de carga y actualiza el texto durante el proceso
+
+
+        /// <summary>
+        /// Corrutina que simula una barra de carga progresiva y muestra el porcentaje en texto.
+        /// </summary>
+        /// <returns>
+        /// Enumerator para ejecución por frames.
+        /// </returns>
     IEnumerator Cargar()
     {
         // Variable para llevar el tiempo que ha pasado desde que empezó la carga
