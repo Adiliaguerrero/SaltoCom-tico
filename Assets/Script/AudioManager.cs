@@ -50,6 +50,10 @@ public class AudioManager : MonoBehaviour
         CargarEstadoSonido();
     }
 
+        /// <summary>
+        /// Carga la preferencia de sonido del jugador desde PlayerPrefs.
+        /// Si no hay preferencia guardada, los sonidos se activan por defecto.
+        /// </summary>
     // Este método verifica si existe una preferencia guardada y la carga. Si no, activa sonidos por defecto.
     private void CargarEstadoSonido()
     {
