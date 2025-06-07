@@ -6,7 +6,10 @@ using UnityEngine;
 /// </summary>
 public class AudioManager : MonoBehaviour
 {
-    private bool sonidosActivos = true;  // Variable que determina si los sonidos están habilitados o no.
+        /// <summary>
+        /// Determina si los sonidos están habilitados o deshabilitados.
+        /// </summary>.
+    private bool sonidosActivos = true; 
 
     public static AudioManager instancia;  // Singleton: referencia estática a la única instancia de AudioManager.
 
