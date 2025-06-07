@@ -13,11 +13,18 @@ public class CameraShake : MonoBehaviour
         /// </summary>
     public float duracion = 0.2f;
 
-    // Esta variable controla qué tan fuerte será la sacudida (qué tanto se moverá la cámara).
+        /// <summary>
+        /// Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara.
+        /// </summary>
     public float magnitud = 0.3f;
 
     // Este método se puede llamar desde otro script o desde Unity.
     // Sirve para comenzar la sacudida de la cámara.
+
+        /// <summary>
+        /// Método público que inicia el efecto de sacudida de la cámara.
+        /// Puede ser llamado desde otros scripts o eventos del juego.
+        /// </summary>
     public void Sacudir()
     {
         // Aquí empezamos una "corutina", que es como una función que se ejecuta poco a poco con el tiempo.
