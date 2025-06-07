@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-// Esta clase maneja la colisión del jugador con un objeto marcado con trigger para activar un portal
-// detiene al jugador y cambia de escena mostrando un mensaje en la nueva escena
 
     /// <summary>
     /// Maneja la colisión del jugador con un objeto trigger que activa un portal,
@@ -12,7 +10,10 @@ using TMPro;
     /// </summary>
 public class ColisionadorTrigger2D : MonoBehaviour
 {
-    // Variable para evitar múltiples colisiones
+  
+        /// <summary>
+        /// Controla si ya ha ocurrido la colisión para evitar múltiples activaciones.
+        /// </summary>
     private bool haColisionado = false;
 
     // Referencia al portal que ya está en la escena (asegúrate que esté desactivado inicialmente)
