@@ -114,7 +114,13 @@ public class ConfiguracionUI : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    // Función que se llama para ocultar el panel de configuración
+    
+        /// <summary>
+        /// Oculta el panel de configuración, reproduce un sonido y reanuda el juego.
+        /// </summary>
+        /// <example>
+        /// Este método se llama al presionar el botón <c>botonCerrar</c>.
+        /// </example>
     void CerrarConfiguracion()
     {
         // Reproducimos el sonido de botón para retroalimentar la acción de cerrar
