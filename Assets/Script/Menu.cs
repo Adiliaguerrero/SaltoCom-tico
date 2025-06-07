@@ -36,7 +36,10 @@ public class MenuController : MonoBehaviour
         StartCoroutine(CargarEscenaConDelay("Logros", sonidoBoton.length));
     }
 
-    // Método público para salir del juego cuando el jugador lo solicita
+    
+        /// <summary>
+        /// Método que se llama para salir del juego.
+        /// </summary>
     public void SalirDelJuego()
     {
         // Reproduce el sonido del botón antes de salir
