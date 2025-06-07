@@ -21,6 +21,10 @@ public class BarraVida : MonoBehaviour
         /// Panel de Game Over que se muestra cuando el jugador pierde.
         /// </summary>
     public GameObject panelGameOver;      // Panel UI que se muestra cuando el jugador pierde (Game Over).
+
+        /// <summary>
+        /// Imagen u objeto que debe ser eliminado al activarse el Game Over.
+        /// </summary>
     public GameObject imagenAEliminar;    // Imagen u objeto que debe eliminarse al perder.
 
     private bool gameOverActivado = false;  // Bandera boleana  para evitar activar Game Over varias veces.
