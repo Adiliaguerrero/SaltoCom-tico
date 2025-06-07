@@ -1,17 +1,20 @@
-// Importamos los espacios de nombres necesarios de Unity
 using UnityEngine;
 using UnityEngine.UI;
 
 // Esta clase gestiona una instruccion visual en el manejo de controles en pantalla usando imágenes animadas de manos
+
+    /// <summary>
+    /// Esta clase gestiona una instrucción visual en el manejo de controles en pantalla usando imágenes animadas de manos.
+    /// </summary>
 public class InstruccionesVisuales : MonoBehaviour
 {
     // Referencia publica al asingnar en el isnpector la imagen de la mano izquierda
     public Image manoIzquierda;
 
-   // Referencia publica al asingnar en el isnpector a la imagen de la mano derecha
+    // Referencia publica al asingnar en el isnpector a la imagen de la mano derecha
     public Image manoDerecha;
 
- // Referencia publica al asingnar en el isnpector de la mano que indica toque
+    // Referencia publica al asingnar en el isnpector de la mano que indica toque
     public Image manoTocar;
 
     // Tiempo que tarda la animación de cada mano en completarse
@@ -20,7 +23,7 @@ public class InstruccionesVisuales : MonoBehaviour
     // Cantidad de desplazamiento que realiza cada mano al animarse
     public float desplazamiento = 50f;
 
-  // Referencia publica al asingnar en el isnpector para el joystick virtual utilizado para detectar movimiento
+    // Referencia publica al asingnar en el isnpector para el joystick virtual utilizado para detectar movimiento
     public Joystick joystick;
 
     // Controla si la mano izquierda ya fue eliminada
