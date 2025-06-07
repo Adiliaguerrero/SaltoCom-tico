@@ -32,7 +32,12 @@ public class BarraVida : MonoBehaviour
         /// </summary>
     private bool gameOverActivado = false; 
 
-
+        /// <summary>
+        /// Actualiza visualmente la barra de vida del jugador.
+        /// Si la vida es igual o menor a cero, se activa el panel de Game Over.
+        /// </summary>
+        /// <param name="vidaActual">Valor actual de la vida del jugador.
+        /// </param>
     // Método público para la barra de vida  que actualizara visualmente con el daño.
     public void ActualizarBarra(float vidaActual)
     {
