@@ -6,7 +6,9 @@ using UnityEngine.UI;
     /// </summary>
 public class BotonMusica : MonoBehaviour
 {
-    // Referencia al prefab que contiene el controlador de música
+    /// <summary>
+    /// Prefab que contiene el controlador de música a instanciar si no existe.
+    /// </summary>
     public GameObject musicaManagerPrefab;
 
     // Referencia al script MusicaManager que maneja la música de fondo
