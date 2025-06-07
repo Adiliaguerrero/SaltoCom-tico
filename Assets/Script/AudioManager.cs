@@ -69,22 +69,26 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Método público para activar o desactivar el sonido y guardar la preferencia del jugador.
-        /// <summary>
-        /// Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.
-        /// </summary>
-        /// <param name="estado">Nuevo estado del sonido: <c>true</c> para activar, <c>false</c> para desactivar.
-        /// </param>
+    /// <summary>
+    /// Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.
+    /// </summary>
+    /// <param name="estado">Nuevo estado del sonido: <c>true</c> para activar, <c>false</c> para desactivar.
+    /// </param>
     public void CambiarEstadoSonido(bool estado)
     {
         sonidosActivos = estado;
 
-        // Guarda el estado como entero: 1 si está activo, 0 si está inactivo.
         PlayerPrefs.SetInt("SonidosActivos", sonidosActivos ? 1 : 0);
         PlayerPrefs.Save(); // Asegura que la preferencia se escriba en disco.
     }
 
     // Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
+    /// <summary>
+    /// Obtiene el estado actual de los sonidos.
+    /// </summary>
+    /// <returns>
+    /// <c>true</c> si los sonidos están activos; de lo contrario, <c>false</c>.
+    /// </returns>
     public void ReproducirSonido(AudioClip clip)
     {
         if (sonidosActivos && clip != null)
