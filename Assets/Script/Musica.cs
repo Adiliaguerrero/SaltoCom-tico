@@ -53,7 +53,9 @@ public class BotonMusica : MonoBehaviour
         boton.onClick.AddListener(OnClick);
     }
 
-    // Método que se ejecuta al hacer clic en el botón
+    /// <summary>
+    /// Método que se llama al hacer clic en el botón para alternar el estado de la música.
+    /// </summary>
     public void OnClick()
     {
         // Si hay una instancia válida del manager de música
