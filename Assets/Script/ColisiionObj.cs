@@ -146,6 +146,9 @@ public class ColisionadorTrigger2D : MonoBehaviour
     }
 
     // Clase interna que detecta la entrada del jugador en el portal y realiza el cambio de escena
+        /// <summary>
+        /// Clase interna que detecta la entrada al portal y realiza el cambio de escena.
+        /// </summary>
     private class PortalTrigger : MonoBehaviour
     {
         // Nombre de la escena destino
