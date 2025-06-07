@@ -223,6 +223,14 @@ public class ColisionadorTrigger2D : MonoBehaviour
     }
 
     // Corrutina que desactiva el objeto de texto luego de un tiempo de espera
+        /// <summary>
+        /// Corrutina que desactiva el texto tras cierto tiempo.
+        /// </summary>
+        /// <param name="obj">Objeto de texto a desactivar.</param>
+        /// <param name="delay">Tiempo en segundos antes de desactivarlo.</param>
+        /// <returns>
+        /// Enumerator para la corrutina.
+        /// </returns>
     private static IEnumerator DesactivarTexto(GameObject obj, float delay)
     {
         yield return new WaitForSeconds(delay);
