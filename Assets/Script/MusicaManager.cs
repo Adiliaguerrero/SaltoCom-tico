@@ -12,7 +12,9 @@ public class MusicaManager : MonoBehaviour
     /// </summary>
     public static MusicaManager instancia;
 
-    // Componente AudioSource que reproduce la música de fondo
+    /// <summary>
+    /// Componente <see cref="AudioSource"/> que reproduce la música de fondo.
+    /// </summary>
     public AudioSource musicaFondo;
 
     // Variable booleana que indica si la música está activa o no
