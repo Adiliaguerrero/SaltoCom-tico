@@ -51,6 +51,12 @@ public class ColisionadorTrigger2D : MonoBehaviour
     private static bool mostrarMensaje = false; // Controla si se debe mostrar el mensaje
 
     // Detecta cuando un objeto colisiona con este trigger
+
+    /// <summary>
+    /// Detecta colisiones físicas con el trigger.
+    /// </summary>
+    /// <param name="collision">Datos de la colisión.
+    /// </param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Si ya colisionó antes, no hacer nada
