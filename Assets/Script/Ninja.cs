@@ -23,10 +23,14 @@ public class Ninja : MonoBehaviour
         /// </summary>
     public float speed = 2.0f;
 
-    // Tiempo de espera entre ataques (en segundos)
+        /// <summary>
+        /// Tiempo de espera entre ataques consecutivos.
+        /// </summary>
     public float attackCooldown = 1.0f;
 
-    // Tiempo que dura la animación de muerte antes de destruir al ninja
+        /// <summary>
+        /// Tiempo que dura la animación de muerte antes de eliminar al ninja.
+        /// </summary>
     public float tiempoAnimacionMuerte = 0.8f;
 
     // Referencias internas a componentes
