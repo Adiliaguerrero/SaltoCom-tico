@@ -1,10 +1,14 @@
-// Importamos el espacio de nombres principal de Unity
 using UnityEngine;
-
-// Importamos el espacio de nombres para usar corrutinas
 using System.Collections;
 
-//  Clase gestiona el comportamiento de un pájaro enemigo que se mueve de un lado a otro , dañando al jugador al tocarlo
+
+    /// <summary>
+    /// Gestiona el comportamiento de un pájaro enemigo que se mueve horizontalmente y daña al jugador al contacto.
+    /// </summary>
+    /// <remarks>
+    /// El pájaro vuela de un lado a otro en un rango definido y cambia de dirección tras un tiempo de espera.
+    /// Si colisiona con el jugador, le inflige daño usando el método <c>RecibeDanio</c>.
+    /// </remarks>
 public class PajaroEnemigo : MonoBehaviour
 {
     // Sección en el Inspector para ajustar el movimiento del pájaro
