@@ -41,10 +41,8 @@ public class BarraVida : MonoBehaviour
     // Método público para la barra de vida  que actualizara visualmente con el daño.
     public void ActualizarBarra(float vidaActual)
     {
-        // Limita el valor de vidaActual para que no sea menor que 0 ni mayor que VidaMaxima.
         vidaActual = Mathf.Clamp(vidaActual, 0f, VidaMaxima);
 
-        // Actualiza el fillAmount es un componente  imagen que sirve para el relleno de vida del Image esto reflejara la vida  como porcentaje (0 a 1).
         rellenoBarraVida.fillAmount = vidaActual / VidaMaxima;
 
         // Muestra en consola el valor actualizado de la barra para depuración.
@@ -58,6 +56,10 @@ public class BarraVida : MonoBehaviour
     }
 
     // Método para activar la pantalla de Game Over y realizar acciones relacionadas.
+    
+        /// <summary>
+        /// Activa la interfaz de Game Over, destruye objetos asociados y elimina al jugador de la escena.
+        /// </summary>
     public void ActivarGameOver()
     {
         // Si el Game Over ya fue activado, evita que se ejecute otra vez.
