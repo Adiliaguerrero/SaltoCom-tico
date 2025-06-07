@@ -16,7 +16,9 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     private MusicaManager musicaManager;
 
-    // Referencia al botón que ejecuta la acción de alternar la música
+    /// <summary>
+    /// Referencia al componente Button que ejecuta la acción de alternar la música.
+    /// </summary>
     public Button boton;
 
     // Método que se ejecuta cuando se instancia el objeto (antes de Start)
