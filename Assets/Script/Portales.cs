@@ -1,10 +1,11 @@
-// Importamos los espacios de nombres necesarios para trabajar con escenas y texto en Unity
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-// Esta clase controla el cambio de escena cuando el jugador  entra en contacto con un portal,
-// y muestra un mensaje emergente temporal al llegar a la nueva escena.
+/// <summary>
+/// Controla el cambio de escena al entrar en contacto con un portal.
+/// Muestra un mensaje de bienvenida temporal en la nueva escena.
+/// </summary>
 public class PortalCambioEscena : MonoBehaviour
 {
     // Nombre de la escena a la que se cambiará al colisionar con el portal
