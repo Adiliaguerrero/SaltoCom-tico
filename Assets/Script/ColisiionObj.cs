@@ -222,7 +222,6 @@ public class ColisionadorTrigger2D : MonoBehaviour
         }
     }
 
-    // Corrutina que desactiva el objeto de texto luego de un tiempo de espera
         /// <summary>
         /// Corrutina que desactiva el texto tras cierto tiempo.
         /// </summary>
@@ -237,6 +236,9 @@ public class ColisionadorTrigger2D : MonoBehaviour
         obj.SetActive(false);
     }
 
-    // Clase auxiliar para poder arrancar corrutinas desde objetos sin MonoBehaviour
+
+        /// <summary>
+        /// Clase auxiliar para correr corrutinas desde objetos que no sean MonoBehaviour.
+        /// </summary>
     private class DummyMonoBehaviour : MonoBehaviour { }
 }
