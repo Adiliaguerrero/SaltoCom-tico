@@ -42,7 +42,10 @@ public class Ninja : MonoBehaviour
     private Transform player;           // Referencia a la posición del jugador
     private bool estaMuerto = false;    // Indica si el ninja ya ha muerto
 
-    // Este método se llama al iniciar el juego
+
+        /// <summary>
+        /// Inicializa componentes del ninja y animaciones al comenzar el juego.
+        /// </summary>
     void Start()
     {
         // Obtenemos referencias a los componentes necesarios del objeto
