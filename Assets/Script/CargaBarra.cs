@@ -4,7 +4,6 @@ using TMPro;
 using System.Collections;          
 using UnityEngine.SceneManagement;
 
-// Esta clase permite controlar una barra de carga con slider para cmbiar de escena hacia el menu princi8pal
     /// <summary>
     /// Controla la simulación de una barra de carga con un <see cref="Slider"/> y texto porcentual,
     /// que culmina cargando una nueva escena.
@@ -13,15 +12,27 @@ public class CargaInicial : MonoBehaviour
 {
     // Variable pública para asignar desde el Inspector la barra deslizante (slider)
     // Representa visualmente el progreso de carga, va de 0 a 1
+        /// <summary>
+        /// Referencia al componente Slider que representa visualmente el progreso de carga.
+        /// </summary>
     public Slider slider;
 
-    // Variable pública para indicar cuánto durará la simulación de carga en segundos
+    
+        /// <summary>
+        /// Tiempo total (en segundos) que durará la simulación de carga.
+        /// </summary>
     public float tiempoCarga = 5f;
 
-    // Variable pública para asignar desde el Inspector el texto que mostrará el porcentaje de carga
+   
+        /// <summary>
+        /// Texto que mostrará el porcentaje de carga en pantalla.
+        /// </summary>
     public TextMeshProUGUI textoCarga;
 
-    // Variable pública para asignar el nombre de la escena que se cargará al terminar la carga
+
+        /// <summary>
+        /// Nombre de la escena que se cargará al completar la carga.
+        /// </summary>
     public string nombreEscena;
 
     // Método Start se ejecuta automáticamente cuando comienza la escena o juego
