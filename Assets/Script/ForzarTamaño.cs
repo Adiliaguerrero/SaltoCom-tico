@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Esta clase se encarga de mantener una escala fija en el objeto al que está asignado,
 
     /// <summary>
     /// Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha).
@@ -34,10 +33,8 @@ public class ForzarEscala : MonoBehaviour
         /// </remarks>
     private void LateUpdate()
     {
-        // Determina si el objeto está mirando hacia la derecha (1) o hacia la izquierda (-1) según su escala en X
         float direccion = transform.localScale.x >= 0 ? 1 : -1;
 
-        // Aplica la escala correcta, manteniendo la dirección original del objeto (positiva o negativa en X)
         transform.localScale = new Vector3(escalaCorrecta.x * direccion, escalaCorrecta.y, 1f);
     }
 }
