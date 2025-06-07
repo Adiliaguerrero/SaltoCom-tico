@@ -1,8 +1,8 @@
-using UnityEngine;
+using UnityEngine;  
 
-// Esta clase controla el movimiento de la cámara para que siga suavemente al jugador o personaje jugable.
-  
-
+    /// <summary>
+    /// Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento.
+    /// </summary>
 public class Camara : MonoBehaviour
 {
     // Referencia al objeto jugador que la cámara seguirá
