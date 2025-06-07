@@ -1,6 +1,12 @@
 using UnityEngine;
 
-// Esta clase permite eliminar las partículas de un ParticleSystem cuando colisionan con un objeto etiquetado como "Suelo"
+    /// <summary>
+    /// Elimina visualmente las partículas de un <see cref="ParticleSystem"/> cuando colisionan con un objeto etiquetado como "Suelo".
+    /// </summary>
+    /// <remarks>
+    /// Utiliza el evento <c>OnParticleCollision</c> para detectar colisiones y forzar la expiración de las partículas activas.
+    /// Requiere que el <c>GameObject</c> tenga un componente <c>ParticleSystem</c> y colisionadores configurados.
+    /// </remarks>
 public class DestruirParticulasAlColisionar : MonoBehaviour
 {
     // Referencia al componente ParticleSystem del objeto
