@@ -91,7 +91,17 @@ public class ConfiguracionUI : MonoBehaviour
         botonCreditosCerrar.onClick.AddListener(CerrarCreditos);
     }
 
-    // Función que se llama para mostrar el panel de configuración
+    
+    
+        /// <summary>
+        /// Muestra el panel de configuración, reproduce un sonido y pausa el juego.
+        /// </summary>
+        /// <example>
+        /// Este método se llama automáticamente al hacer clic en el botón <c>botonAbrir</c>.
+        /// </example>
+        /// <exception cref="System.NullReferenceException">
+        /// Se lanza si el <c>AudioManager</c> o el <c>panelConfiguracion</c> no están asignados.
+        /// </exception>
     void AbrirConfiguracion()
     {
         // Reproducimos el sonido de botón para indicar que se pulsó correctamente
