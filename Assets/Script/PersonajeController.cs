@@ -19,19 +19,16 @@ public class PlayerController : MonoBehaviour
         /// </summary>
     public float fuerzaSalto = 12f;
 
-    // Referencia al Animator para controlar las animaciones
         /// <summary>
         /// Referencia al Animator para controlar animaciones.
         /// </summary>
     public Animator animator;
 
-    // Referencia al Rigidbody2D para la física del personaje
         /// <summary>
         /// Referencia al Rigidbody2D para aplicar físicas.
         /// </summary>
     public Rigidbody2D rb;
 
-    // Controla si el personaje puede moverse o no
         /// <summary>
         /// Determina si el personaje puede moverse.
         /// </summary>
@@ -46,19 +43,29 @@ public class PlayerController : MonoBehaviour
     // Vida máxima que puede tener el personaje
     [SerializeField] private float vidaMaxima = 5f;
 
-    // Vida actual del personaje
+
+        /// <summary>
+        /// Vida actual del personaje.
+        /// </summary>
     public float vida = 5f;
 
-    // Referencia al joystick para controles táctiles
+
+         /// <summary>
+         /// Referencia al joystick para controles móviles.
+         /// </summary>
     public Joystick joystick;
 
     // Controla si el personaje está recibiendo daño para evitar múltiples impactos simultáneos
     private bool recibiendoDanio = false;
 
-    // Fuerza del rebote que se aplica al personaje cuando recibe daño
+    /// <summary>
+    /// Fuerza del rebote al recibir daño.
+    /// </summary>
     public float FuerzaRebote = 5f;
 
-    // Referencia a la barra de vida para actualizar la interfaz
+    /// <summary>
+    /// Referencia al componente que controla la barra de vida.
+    /// </summary>
     public BarraVida barraVida;
 
     // Referencia al script de sacudida de cámara para efectos visuales al recibir daño
