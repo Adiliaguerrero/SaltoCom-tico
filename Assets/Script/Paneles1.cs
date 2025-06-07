@@ -58,17 +58,14 @@ public class Paneles1 : MonoBehaviour
         /// </summary>
     void Start()
     {
-        // Desactiva todos los paneles al iniciar
         panel1.SetActive(false);
         panel2.SetActive(false);
         panel3.SetActive(false);
 
-        // Activa joystick e imágenes al inicio
         joystick.SetActive(true);
         imagen1.SetActive(true);
         imagen2.SetActive(true);
 
-        // Busca al jugador en la escena por su tag y obtiene sus componentes
         GameObject jugador = GameObject.FindGameObjectWithTag("Player");
         if (jugador != null)
         {
@@ -82,7 +79,6 @@ public class Paneles1 : MonoBehaviour
         /// </summary>
     public void SiguienteTrivia()
     {
-        // Vuelve a obtener referencias del jugador por si no estaban asignadas aún
         GameObject jugador = GameObject.FindGameObjectWithTag("Player");
         if (jugador != null)
         {
@@ -90,7 +86,6 @@ public class Paneles1 : MonoBehaviour
             playerController = jugador.GetComponent<PlayerController>();
         }
 
-        // Activa el panel correspondiente según el índice actual
         if (triviaActual == 0)
             ActivarPanel(0);
         else if (triviaActual == 1)
@@ -99,17 +94,14 @@ public class Paneles1 : MonoBehaviour
             ActivarPanel(2);
         else
         {
-            // Si ya no hay más trivias, desactiva todos los paneles y reactiva el control del jugador
             Debug.Log("Todas las trivias han terminado.");
 
             panel1.SetActive(false);
             panel2.SetActive(false);
             panel3.SetActive(false);
 
-            // Activa el joystick
             joystick.SetActive(true);
 
-            // Vuelve a habilitar el componente de joystick si existe
             FixedJoystick joyComponent = joystick.GetComponent<FixedJoystick>();
             if (joyComponent != null)
             {
@@ -135,7 +127,6 @@ public class Paneles1 : MonoBehaviour
 
     private void ActivarPanel(int index)
     {
-        // Activa solo el panel correspondiente al índice, desactivando los otros
         panel1.SetActive(index == 0);
         panel2.SetActive(index == 1);
         panel3.SetActive(index == 2);
