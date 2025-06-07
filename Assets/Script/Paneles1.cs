@@ -44,9 +44,11 @@ public class Paneles1 : MonoBehaviour
     public GameObject imagen2;
 
     // Índice que lleva el seguimiento de la trivia actual
+        /// <summary>
+        /// Índice de la trivia actualmente mostrada.
+        /// </summary>
     private int triviaActual = 0;
 
-    // Referencia al Rigidbody2D del jugador para congelarlo o activarlo
     private Rigidbody2D rbJugador;
 
     // Referencia al script del jugador para habilitar o deshabilitar su movimiento
