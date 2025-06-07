@@ -12,6 +12,9 @@ public class Camara : MonoBehaviour
     public GameObject Player2;
 
     // Controla la suavidad del movimiento de la cámara (valor más alto = movimiento más suave)
+        /// <summary>
+        /// Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave.
+        /// </summary>
     public float suavizado = 5f;
 
     // Desplazamiento de la cámara respecto al jugador (eje X e Y)
