@@ -2,14 +2,15 @@ using UnityEngine;
 
 using System.Collections;
 
-// Esta clase permite que la camara tiemble o se sacuda cuando el personaje recibe daño 
     /// <summary>
     /// Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños.
     /// </summary>
 public class CameraShake : MonoBehaviour
 {
-    // Esta variable pública se puede ver y modificar desde el Inspector en Unity.
-    // Controla cuánto tiempo va a durar la sacudida (por ejemplo, 0.2 segundos).
+
+        /// <summary>
+        /// Duración total de la sacudida en segundos.
+        /// </summary>
     public float duracion = 0.2f;
 
     // Esta variable controla qué tan fuerte será la sacudida (qué tanto se moverá la cámara).
