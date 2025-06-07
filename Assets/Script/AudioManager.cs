@@ -69,11 +69,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.
-    /// </summary>
-    /// <param name="estado">Nuevo estado del sonido: <c>true</c> para activar, <c>false</c> para desactivar.
-    /// </param>
+        /// <summary>
+        /// Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.
+        /// </summary>
+        /// <param name="estado">Nuevo estado del sonido: <c>true</c> para activar, <c>false</c> para desactivar.
+        /// </param>
     public void CambiarEstadoSonido(bool estado)
     {
         sonidosActivos = estado;
@@ -83,10 +83,10 @@ public class AudioManager : MonoBehaviour
     }
 
 
-/// <summary>
-    /// Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
-    /// </summary>
-    /// <param name="clip">Clip de audio a reproducir.</param>
+        /// <summary>
+        /// Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
+        /// </summary>
+        /// <param name="clip">Clip de audio a reproducir.</param>
     public void ReproducirSonido(AudioClip clip)
     {
         if (sonidosActivos && clip != null)
@@ -96,6 +96,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Obtiene el estado actual de los sonidos.
+    /// </summary>
+    /// <returns>
+    /// <c>true</c> si los sonidos están activos; de lo contrario, <c>false</c>.
+    /// </returns>
     // Devuelve el estado actual de los sonidos (true = activos, false = inactivos).
     public bool ObtenerEstadoSonido()
     {
