@@ -1,9 +1,9 @@
-// Importamos las librerías necesarias para trabajar con funciones principales de Unity y para usar corrutinas
 using UnityEngine;
 using System.Collections;
 
-// Esta clase gestiona el comportamiento de un enemigo tipo "Ninja"
-// Se encarga de detectar al jugador, moverse hacia él, atacarlo y reproducir animaciones correspondientes mediante parametros
+    /// <summary>
+    /// Controla el comportamiento de un enemigo tipo Ninja, incluyendo detección del jugador, movimiento, ataque y muerte.
+    /// </summary>
 public class Ninja : MonoBehaviour
 {
     // Distancia máxima para detectar al jugador
