@@ -15,7 +15,13 @@ using UnityEngine;
     /// </example>
 public class Fruta : MonoBehaviour
 {
-    // Referencia publica para determinar cuanta vida restaura 
+
+        /// <summary>
+        /// Cantidad de vida que esta fruta restaurará al jugador.
+        /// </summary>
+        /// <value>
+        /// Valor en puntos de vida, por defecto 1.
+        /// </value>
     public float cantidadVida = 1f;
 
     // Método OnTriggerEnter2 se activa automáticamente cuando otro collider entra en contacto con la fruta (marcado como Trigger)
