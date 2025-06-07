@@ -17,10 +17,8 @@ public class MenuController : MonoBehaviour
         /// </summary>
     public void IrAInicio()
     {
-        // Reproduce el sonido del botón usando el AudioManager singleton
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Inicia una corutina para cargar la escena llamada "Dialogo" después de esperar el tiempo que dura el sonido
         StartCoroutine(CargarEscenaConDelay("Dialogo", sonidoBoton.length));
     }
 
@@ -29,10 +27,8 @@ public class MenuController : MonoBehaviour
         /// </summary>
     public void IrALogros()
     {
-        // Reproduce el sonido del botón
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Inicia la corutina para cargar la escena llamada "Logros" tras esperar el tiempo del sonido
         StartCoroutine(CargarEscenaConDelay("Logros", sonidoBoton.length));
     }
 
@@ -42,10 +38,8 @@ public class MenuController : MonoBehaviour
         /// </summary>
     public void SalirDelJuego()
     {
-        // Reproduce el sonido del botón antes de salir
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Inicia la corutina que cerrará el juego después de esperar la duración del sonido
         StartCoroutine(SalirConDelay(sonidoBoton.length));
     }
 
@@ -59,15 +53,11 @@ public class MenuController : MonoBehaviour
     /// <returns>IEnumerator para control de la corrutina.</returns>
     private System.Collections.IEnumerator CargarEscenaConDelay(string nombreEscena, float delay)
     {
-        // Espera el tiempo especificado (delay) en segundos antes de continuar
         yield return new WaitForSeconds(delay);
 
-        // Carga la escena cuyo nombre se pasó como parámetro
         SceneManager.LoadScene(nombreEscena);
     }
 
-    // Corutina privada para salir del juego con un retraso
-    // Recibe el tiempo que debe esperar antes de cerrar la aplicación
 
     /// <summary>
     /// Corrutina que espera un tiempo antes de cerrar la aplicación.
@@ -78,15 +68,11 @@ public class MenuController : MonoBehaviour
     /// </returns>
     private System.Collections.IEnumerator SalirConDelay(float delay)
     {
-        // Espera el tiempo especificado antes de salir
         yield return new WaitForSeconds(delay);
 
-        // Muestra un mensaje en la consola para indicar que se está saliendo del juego (útil para pruebas)
         Debug.Log("Saliendo del juego...");
 
-        // Condicional para detectar si estamos en el editor de Unity o en la aplicación compilada
 #if UNITY_EDITOR
-        // Si estamos en el editor, detenemos el modo de juego sin cerrar el editor
         UnityEditor.EditorApplication.ExitPlaymode();
 #else
             // Cerramos la aplicación (funciona en Android y PC)
