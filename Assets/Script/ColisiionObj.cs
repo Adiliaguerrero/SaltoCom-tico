@@ -145,16 +145,23 @@ public class ColisionadorTrigger2D : MonoBehaviour
         }
     }
 
-    // Clase interna que detecta la entrada del jugador en el portal y realiza el cambio de escena
         /// <summary>
         /// Clase interna que detecta la entrada al portal y realiza el cambio de escena.
         /// </summary>
     private class PortalTrigger : MonoBehaviour
     {
-        // Nombre de la escena destino
+       
+            /// <summary>
+            /// Nombre de la escena destino.
+            /// </summary>
         public string nombreEscena;
 
-        // Detecta cuando el jugador entra en el portal
+
+            /// <summary>
+            /// Detecta si el jugador entra al área del portal.
+            /// </summary>
+            /// <param name="other">Collider del objeto entrante.
+            /// </param>
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
