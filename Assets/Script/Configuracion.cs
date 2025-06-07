@@ -149,7 +149,13 @@ public class ConfiguracionUI : MonoBehaviour
         panelCreditos.SetActive(true);
     }
 
-    // Función que se llama para ocultar el panel de créditos
+    
+        /// <summary>
+        /// Oculta el panel de créditos y reproduce un sonido.
+        /// </summary>
+        /// <remarks>
+        /// Se recomienda ocultar el panel con animación si deseas una mejor experiencia de usuario.
+        /// </remarks>
     void CerrarCreditos()
     {
         // Reproducimos el sonido de botón
