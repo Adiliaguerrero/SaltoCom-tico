@@ -1,4 +1,3 @@
-// Importamos las librerías necesarias para manejar colisiones, escenas y textos UI con TextMeshPro
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +5,11 @@ using TMPro;
 
 // Esta clase maneja la colisión del jugador con un objeto marcado con trigger para activar un portal
 // detiene al jugador y cambia de escena mostrando un mensaje en la nueva escena
+
+    /// <summary>
+    /// Maneja la colisión del jugador con un objeto trigger que activa un portal,
+    /// detiene al jugador y cambia de escena mostrando un mensaje de bienvenida.
+    /// </summary>
 public class ColisionadorTrigger2D : MonoBehaviour
 {
     // Variable para evitar múltiples colisiones
