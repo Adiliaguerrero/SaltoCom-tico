@@ -259,6 +259,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Restaura la vida del personaje a su valor máximo.
+    /// </summary>
     public void RestaurarVida()
     {
         // Restaura la vida al valor máximo
@@ -275,7 +278,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    /// <summary>Restaura una cantidad parcial de vida al personaje.</summary>
+    /// <param name="cantidad">Cantidad de vida a restaurar.</param>
     public void RestaurarVidaParcial(float cantidad)
     {
         // Aumenta la vida con la cantidad indicada
