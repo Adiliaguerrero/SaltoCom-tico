@@ -33,7 +33,6 @@ public class Camara : MonoBehaviour
         /// </summary>
     private float ultimaDireccionX = 1f;
 
-    // Metodo LateUpdate se llama después de Update cada frame o segundo, ideal para seguir al jugador sin retrasos visuales
 
     /// <summary>
     /// Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena.
@@ -41,25 +40,19 @@ public class Camara : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-        // Comprobar que el jugador no sea null o no extista  para evitar errores
         if (Player2 != null)
         {
-            // Obtener la dirección horizontal actual basada en la escala X del jugador (puede ser 1 o -1)
             float direccionX = Player2.transform.localScale.x;
 
-            // Actualizar la última dirección sólo si no es cero (para evitar errores)
             if (direccionX != 0)
             {
                 ultimaDireccionX = direccionX;
             }
 
-            // Calcular la posición objetivo sumando el desplazamiento ajustado por la dirección del jugador
             Vector3 posicionObjetivo = Player2.transform.position + new Vector3(desplazamiento.x * ultimaDireccionX, desplazamiento.y, 0f);
 
-            // Mantener la posición Z actual para no cambiar la profundidad de la cámara
             posicionObjetivo.z = transform.position.z;
 
-            // Mover la cámara suavemente desde su posición actual hacia la posición objetivo
             transform.position = Vector3.SmoothDamp(transform.position, posicionObjetivo, ref velocidadSuavizado, 2f / suavizado);
         }
     }
