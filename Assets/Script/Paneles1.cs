@@ -10,13 +10,37 @@ using UnityEngine;
 public class Paneles1 : MonoBehaviour
 {
     // Paneles que se activan uno por uno
+        /// <summary>
+        /// Primer panel de trivia.
+        /// </summary>
     public GameObject panel1;
+
+        /// <summary>
+        /// Segundo panel de trivia.
+        /// </summary>
     public GameObject panel2;
+
+        /// <summary>
+        /// Tercer panel de trivia.
+        /// </summary>
     public GameObject panel3;
 
     // Elementos de la interfaz que se desactivan mientras los paneles están activos
+        /// <summary>
+        /// Joystick virtual que se desactiva durante la trivia.
+        /// </summary>
     public GameObject joystick;
+
+    
+        /// <summary>
+        /// Primer elemento visual auxiliar de la interfaz.
+        /// </summary>
     public GameObject imagen1;
+
+
+        /// <summary>
+        /// Segundo elemento visual auxiliar de la interfaz.
+        /// </summary>
     public GameObject imagen2;
 
     // Índice que lleva el seguimiento de la trivia actual
