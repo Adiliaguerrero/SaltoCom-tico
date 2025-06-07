@@ -66,7 +66,9 @@ public class MusicaManager : MonoBehaviour
         AplicarEstadoMusica();
     }
 
-    // Método privado que aplica el estado de la música al componente AudioSource
+        /// <summary>
+        /// Aplica el estado actual de la música al componente <see cref="AudioSource"/>.
+        /// </summary>
     private void AplicarEstadoMusica()
     {
         // Verifica que el componente de música esté asignado
