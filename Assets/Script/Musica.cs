@@ -38,7 +38,9 @@ public class BotonMusica : MonoBehaviour
         musicaManager = MusicaManager.instancia;
     }
 
-    // Método que se ejecuta al iniciar la escena (después de Awake)
+    /// <summary>
+    /// Se ejecuta al comenzar la escena, después de Awake.
+    /// </summary>
     private void Start()
     {
         // Si no se asignó el botón desde el Inspector, lo busca automáticamente
