@@ -72,22 +72,16 @@ public class ConfiguracionUI : MonoBehaviour
         /// </remarks>
     void Start()
     {
-        // Ocultamos el panel de configuración para que no se vea al comenzar el juego
         panelConfiguracion.SetActive(false);
 
-        // Ocultamos también el panel de créditos para que no aparezca visible al iniciar
         panelCreditos.SetActive(false);
 
-        // Agregamos a botonAbrir la función AbrirConfiguracion para que se llame al hacer clic en ese botón
         botonAbrir.onClick.AddListener(AbrirConfiguracion);
 
-        // Agregamos a botonCerrar la función CerrarConfiguracion para cerrar el panel al hacer clic
         botonCerrar.onClick.AddListener(CerrarConfiguracion);
 
-        // Agregamos a botonCreditosAbrir la función AbrirCreditos para mostrar créditos al pulsar el botón
         botonCreditosAbrir.onClick.AddListener(AbrirCreditos);
 
-        // Agregamos a botonCreditosCerrar la función CerrarCreditos para ocultar los créditos al pulsar
         botonCreditosCerrar.onClick.AddListener(CerrarCreditos);
     }
 
@@ -104,13 +98,10 @@ public class ConfiguracionUI : MonoBehaviour
         /// </exception>
     void AbrirConfiguracion()
     {
-        // Reproducimos el sonido de botón para indicar que se pulsó correctamente
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Activamos (mostramos) el panel de configuración
         panelConfiguracion.SetActive(true);
 
-        // Pausamos el juego para que el jugador pueda modificar la configuración sin que avance el tiempo
         Time.timeScale = 0f;
     }
 
@@ -123,13 +114,10 @@ public class ConfiguracionUI : MonoBehaviour
         /// </example>
     void CerrarConfiguracion()
     {
-        // Reproducimos el sonido de botón para retroalimentar la acción de cerrar
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Desactivamos (ocultamos) el panel de configuración
         panelConfiguracion.SetActive(false);
 
-        // Reanudamos el tiempo normal del juego para que todo continúe normalmente
         Time.timeScale = 1f;
     }
 
@@ -142,10 +130,8 @@ public class ConfiguracionUI : MonoBehaviour
         /// </remarks>
     void AbrirCreditos()
     {
-        // Reproducimos el sonido de botón
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Mostramos el panel de créditos
         panelCreditos.SetActive(true);
     }
 
@@ -158,10 +144,8 @@ public class ConfiguracionUI : MonoBehaviour
         /// </remarks>
     void CerrarCreditos()
     {
-        // Reproducimos el sonido de botón
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Ocultamos el panel de los créditos
         panelCreditos.SetActive(false);
     }
 }
