@@ -68,9 +68,8 @@ public class PantallaDialogo : MonoBehaviour
     {
         while (indiceDialogo < dialogos.Length)
         {
-            textoPantalla.text = ""; // Limpia el texto actual
-            string linea = dialogos[indiceDialogo]; // Obtiene la línea actual
-
+            textoPantalla.text = ""; 
+            string linea = dialogos[indiceDialogo]; 
             foreach (char letra in linea)
             {
                 textoPantalla.text += letra;
