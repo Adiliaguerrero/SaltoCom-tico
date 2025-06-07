@@ -1,8 +1,6 @@
 using UnityEngine;
 
 // Esta clase se encarga de mantener una escala fija en el objeto al que está asignado,
-// permitiendo que se voltee horizontalmente si es necesario (por ejemplo, al mirar hacia la izquierda o derecha)
-
 
     /// <summary>
     /// Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha).
@@ -16,7 +14,13 @@ using UnityEngine;
     /// </example>
 public class ForzarEscala : MonoBehaviour
 {
-    // Variable pública que permite definir desde el Inspector la escala correcta del objeto (X, Y)
+
+    /// <summary>
+    /// Escala correcta que debe aplicarse al objeto en los ejes X e Y.
+    /// </summary>
+    /// <value>
+    /// Vector2 con la escala deseada. El valor X puede invertirse internamente para reflejar la dirección.
+    /// </value>
     public Vector2 escalaCorrecta = new Vector2(0.48f, 0.45f);
 
     // Este método se llama una vez por frame, pero después de que todos los demás métodos Update hayan sido ejecutados
