@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-   // Esta Clase responsable de gestionar el comportamiento integral del personaje, abarcando desplazamiento horizontal,
-// mecánicas de salto, control de animaciones, sistema de salud y la perdida de  vida por daño.
-// Incluye compatibilidad con entradas de teclado, joystick y pantallas táctiles.
 
-
+    /// <summary>
+    /// Gestiona el comportamiento integral del personaje.
+    /// Incluye movimiento, salto, animaciones, sistema de vida, daño, entrada táctil y compatibilidad con joystick.
+    /// </summary>
 public class PlayerController : MonoBehaviour
 {
     // Velocidad horizontal del personaje
