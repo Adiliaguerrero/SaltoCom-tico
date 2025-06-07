@@ -54,6 +54,7 @@ public class EscenaRestraurar : MonoBehaviour
         /// </summary>
         /// <exception cref="System.ArgumentException">Se lanza si el nombre de la escena está vacío o nulo.
         /// </exception>
+        
     public void CargarEscena1()
     {
         // Reproduce el sonido usando el sistema de AudioManager global
@@ -64,6 +65,11 @@ public class EscenaRestraurar : MonoBehaviour
     }
 
     // Método público para cargar la segunda escena cuando se presione su botón
+        /// <summary>
+        /// Carga la escena almacenada en <see cref="escena2"/> y reproduce el sonido de botón.
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Se lanza si el nombre de la escena está vacío o nulo.
+        /// </exception>
     public void CargarEscena2()
     {
         // Reproduce el sonido usando el sistema de AudioManager global
