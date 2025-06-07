@@ -19,9 +19,13 @@ public class AudioManager : MonoBehaviour
         /// <summary>
         /// Componente que permite reproducir sonidos en la escena.
         /// </summary>
-    private AudioSource audioSource;  
+    private AudioSource audioSource;
 
-    // Awake se ejecuta cuando se instancia el objeto en la escena, antes de Start.
+
+        /// <summary>
+        /// Awake se ejecuta cuando se instancia el objeto en la escena, antes de Start.
+        /// Se ejecuta al iniciar el objeto. Establece el Singleton, configura el AudioSource y carga preferencias.
+        /// </summary>
     private void Awake()
     {
         // Si no existe ninguna instancia del AudioManager, esta se convierte en la principal.
