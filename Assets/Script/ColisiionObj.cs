@@ -181,7 +181,15 @@ public class ColisionadorTrigger2D : MonoBehaviour
         }
     }
 
-    // Método estático que se ejecuta al cargar una nueva escena
+
+    /// <summary>
+    /// Método ejecutado al cargar una nueva escena.
+    /// Busca y muestra el mensaje de bienvenida si está activado.
+    /// </summary>
+    /// <param name="scene">Escena cargada.
+    /// </param>
+    /// <param name="mode">Modo de carga.
+    /// </param>
     private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (mostrarMensaje)
