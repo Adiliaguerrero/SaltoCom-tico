@@ -33,14 +33,14 @@ public class Ninja : MonoBehaviour
         /// </summary>
     public float tiempoAnimacionMuerte = 0.8f;
 
-    // Referencias internas a componentes
-    private Rigidbody2D rb;              // Para controlar el movimiento del ninja
-    private Vector2 movement;           // Dirección del movimiento horizontal
-    private Animator animator;          // Para manejar animaciones del ninja
-    private bool atacando = false;      // Indica si el ninja está en proceso de ataque
-    private bool enCooldown = false;    // Controla el tiempo de espera entre ataques
-    private Transform player;           // Referencia a la posición del jugador
-    private bool estaMuerto = false;    // Indica si el ninja ya ha muerto
+   
+    private Rigidbody2D rb;              
+    private Vector2 movement;           
+    private Animator animator;          
+    private bool atacando = false;      
+    private bool enCooldown = false;    
+    private Transform player;          
+    private bool estaMuerto = false;    
 
 
         /// <summary>
@@ -58,6 +58,9 @@ public class Ninja : MonoBehaviour
     }
 
     // Este método se ejecuta una vez por frame
+        /// <summary>
+        /// Lógica de detección, movimiento y ataque que se ejecuta cada frame.
+        /// </summary>
     void Update()
     {
         // Si el ninja está muerto, no hace nada más
