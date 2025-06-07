@@ -127,7 +127,6 @@ public class Ninja : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
 
-    // Método que se llama para ejecutar el ataque al jugador
         /// <summary>
         /// Ejecuta el ataque al jugador si está dentro del rango.
         /// </summary>
@@ -169,7 +168,9 @@ public class Ninja : MonoBehaviour
         animator.SetBool("IsAttacking", false);
     }
 
-    // Método para cancelar un ataque en progreso
+    /// <summary>
+    /// Cancela un ataque en curso y detiene su animación.
+    /// </summary>
     void CancelarAtaque()
     {
         if (atacando)
