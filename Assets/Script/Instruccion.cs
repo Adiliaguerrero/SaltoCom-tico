@@ -56,7 +56,9 @@ public class InstruccionesVisuales : MonoBehaviour
     /// </summary>
     private bool tocarMostrado = true;
 
-    // Método que se ejecuta al iniciar la escena
+    /// <summary>
+    /// Inicializa las animaciones de manos al comenzar la escena.
+    /// </summary>
     void Start()
     {
         // Inicia animación para la mano izquierda hacia la izquierda
