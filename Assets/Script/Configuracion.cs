@@ -133,7 +133,13 @@ public class ConfiguracionUI : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Función que se llama para mostrar el panel de créditos
+
+        /// <summary>
+        /// Muestra el panel de créditos y reproduce un sonido.
+        /// </summary>
+        /// <remarks>
+        /// El tiempo del juego no se pausa al mostrar créditos.
+        /// </remarks>
     void AbrirCreditos()
     {
         // Reproducimos el sonido de botón
