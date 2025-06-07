@@ -31,18 +31,36 @@ public class DialogoController : MonoBehaviour
     public GameObject panelDialogo;
 
     // Componente TextMeshProUGUI donde se mostrará cada línea del diálogo
+        /// <summary>
+        /// Componente de texto TMP que mostrará cada línea del diálogo.
+        /// </summary>
     public TextMeshProUGUI textoDialogo;
 
-    // Lista pública que contiene todas las líneas de diálogo a mostrar
-    // El atributo [TextArea(2, 4)] permite editar mejor en el Inspector, mostrando un área de texto con entre 2 y 4 líneas visibles
-    [TextArea(2, 4)]
+        /// <summary>
+        /// Lista de líneas que serán mostradas una a una en el diálogo.
+        /// </summary>
+        /// <remarks>
+        /// El atributo <c>[TextArea]</c> permite una mejor edición en el Inspector.
+        /// </remarks>
+        [TextArea(2, 4)]
     public List<string> lineasDialogo;
 
-    // Tiempo en segundos que permanecerá visible cada línea antes de pasar a la siguiente
+    
+        /// <summary>
+        /// Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.
+        /// </summary>
     public float tiempoEntreLineas = 2f;
 
-    // Método público que inicia la muestra del diálogo
-    // Recibe un parámetro de tipo System.Action llamado 'alTerminar', que es una función que se ejecutará cuando termine el diálogo
+        /// <summary>
+        /// Inicia la visualización del diálogo.
+        /// </summary>
+        /// <param name="alTerminar">Acción a ejecutar cuando termine el diálogo.</param>
+        /// <remarks>
+        /// Esta función activa el panel y comienza a mostrar las líneas mediante una corrutina.
+        /// </remarks>
+        /// <exception cref="System.NullReferenceException">
+        /// Se lanza si <see cref="textoDialogo"/> no está asignado en el Inspector.
+        /// </exception>
     public void MostrarDialogo(System.Action alTerminar)
     {
         // Activamos el panel para que el diálogo se muestre en pantalla
