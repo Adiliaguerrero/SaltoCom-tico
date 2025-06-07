@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
     /// </summary>
 public class MenuController : MonoBehaviour
 {
-    /// <summary>
-    /// Sonido que se reproduce al pulsar un botón del menú.
-    /// </summary>
+        /// <summary>
+        /// Sonido que se reproduce al pulsar un botón del menú.
+        /// </summary>
     public AudioClip sonidoBoton;
 
     
-    /// <summary>
-    /// Método que se llama para ir a la escena de introducción o selección de niveles.
-    /// </summary>
+        /// <summary>
+        /// Método que se llama para ir a la escena de introducción o selección de niveles.
+        /// </summary>
     public void IrAInicio()
     {
         // Reproduce el sonido del botón usando el AudioManager singleton
@@ -24,7 +24,9 @@ public class MenuController : MonoBehaviour
         StartCoroutine(CargarEscenaConDelay("Dialogo", sonidoBoton.length));
     }
 
-    // Método público que se llama para ir a la escena de logros o estadísticas del juego
+        /// <summary>
+        /// Método que se llama para ir a la escena de logros o estadísticas del juego.
+        /// </summary>
     public void IrALogros()
     {
         // Reproduce el sonido del botón
