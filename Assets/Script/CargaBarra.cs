@@ -36,6 +36,9 @@ public class CargaInicial : MonoBehaviour
     public string nombreEscena;
 
     // Método Start se ejecuta automáticamente cuando comienza la escena o juego
+        /// <summary>
+        /// Se ejecuta al iniciar la escena. Verifica referencias y comienza la carga simulada.
+        /// </summary>
     void Start()
     {
         // Verificamos si el slider fue asignado correctamente en el Inspector
