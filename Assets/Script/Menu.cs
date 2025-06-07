@@ -1,8 +1,10 @@
-// Importamos las librerías necesarias para usar funciones básicas de Unity y para manejar cambios de escenas
-using UnityEngine;                       // Funciones básicas y objetos de Unity
-using UnityEngine.SceneManagement;      // Para cambiar entre escenas del juego
+using UnityEngine;                       
+using UnityEngine.SceneManagement;
 
 // Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego
+    /// <summary>
+    /// Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego.
+    /// </summary>
 public class MenuController : MonoBehaviour
 {
     // Variable pública para asignar desde el Inspector el sonido que se reproduce al pulsar un botón
@@ -60,12 +62,12 @@ public class MenuController : MonoBehaviour
         Debug.Log("Saliendo del juego...");
 
         // Condicional para detectar si estamos en el editor de Unity o en la aplicación compilada
-        #if UNITY_EDITOR
-            // Si estamos en el editor, detenemos el modo de juego sin cerrar el editor
-            UnityEditor.EditorApplication.ExitPlaymode();
-        #else
+#if UNITY_EDITOR
+        // Si estamos en el editor, detenemos el modo de juego sin cerrar el editor
+        UnityEditor.EditorApplication.ExitPlaymode();
+#else
             // Cerramos la aplicación (funciona en Android y PC)
             Application.Quit();
-        #endif
+#endif
     }
 }
