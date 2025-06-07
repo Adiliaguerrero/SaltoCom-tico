@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
         /// </summary>.
     private bool sonidosActivos = true; 
 
+        /// <summary>
+        /// Instancia única del AudioManager en la escena (patrón Singleton).
+        /// </summary>
     public static AudioManager instancia;  // Singleton: referencia estática a la única instancia de AudioManager.
 
     private AudioSource audioSource;  // Componente que reproduce los clips de audio.
