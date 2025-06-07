@@ -51,10 +51,11 @@ public class Paneles1 : MonoBehaviour
 
     private Rigidbody2D rbJugador;
 
-    // Referencia al script del jugador para habilitar o deshabilitar su movimiento
     private PlayerController playerController;
 
-    // Método que se ejecuta al iniciar la escena
+        /// <summary>
+        /// Inicializa referencias, desactiva paneles y activa elementos de interfaz al iniciar la escena.
+        /// </summary>
     void Start()
     {
         // Desactiva todos los paneles al iniciar
@@ -76,7 +77,6 @@ public class Paneles1 : MonoBehaviour
         }
     }
 
-    // Método público que avanza a la siguiente trivia cuando se llama desde un botón
         /// <summary>
         /// Método público que se llama desde un botón para avanzar a la siguiente trivia.
         /// </summary>
@@ -130,11 +130,9 @@ public class Paneles1 : MonoBehaviour
             return;
         }
 
-        // Aumenta el contador para pasar a la siguiente trivia la próxima vez
         triviaActual++;
     }
 
-    // Método privado que activa uno de los tres paneles y ajusta el estado del jugador
     private void ActivarPanel(int index)
     {
         // Activa solo el panel correspondiente al índice, desactivando los otros
@@ -142,19 +140,15 @@ public class Paneles1 : MonoBehaviour
         panel2.SetActive(index == 1);
         panel3.SetActive(index == 2);
 
-        // Verifica si alguno de los paneles está activo
         bool panelActivo = panel1.activeSelf || panel2.activeSelf || panel3.activeSelf;
 
-        // Si hay un panel activo, desactiva joystick e imágenes; si no, los activa
         joystick.SetActive(!panelActivo);
         imagen1.SetActive(!panelActivo);
         imagen2.SetActive(!panelActivo);
 
-        // Si hay panel activo, congela al jugador; si no, lo libera
         if (rbJugador != null)
             rbJugador.bodyType = panelActivo ? RigidbodyType2D.Static : RigidbodyType2D.Dynamic;
 
-        // Habilita o deshabilita el movimiento del jugador según si hay un panel activo
         if (playerController != null)
             playerController.puedeMoverse = !panelActivo;
     }
