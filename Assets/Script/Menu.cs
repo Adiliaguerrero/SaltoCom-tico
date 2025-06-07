@@ -49,8 +49,15 @@ public class MenuController : MonoBehaviour
         StartCoroutine(SalirConDelay(sonidoBoton.length));
     }
 
-    // Corutina privada para cargar una escena con un retraso específico
+
     // Recibe el nombre de la escena y el tiempo que debe esperar antes de cargarla
+
+    /// <summary>
+    /// Corrutina que espera un tiempo específico antes de cargar una escena.
+    /// </summary>
+    /// <param name="nombreEscena">Nombre de la escena a cargar.</param>
+    /// <param name="delay">Duración de la espera antes de cargar la escena.</param>
+    /// <returns>IEnumerator para control de la corrutina.</returns>
     private System.Collections.IEnumerator CargarEscenaConDelay(string nombreEscena, float delay)
     {
         // Espera el tiempo especificado (delay) en segundos antes de continuar
