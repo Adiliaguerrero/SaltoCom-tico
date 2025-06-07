@@ -235,7 +235,11 @@ public class Ninja : MonoBehaviour
         }
     }
 
-    // Corrutina que hace desaparecer al enemigo suavemente antes de destruirlo
+    /// <summary>
+    /// Corrutina que desvanecerá suavemente al ninja antes de destruirlo.
+    /// </summary>
+    /// <returns>Una corrutina que se ejecuta durante el proceso de desaparición.
+    /// </returns>
     private IEnumerator DesvanecerYDestruir()
     {
         // Espera 1 segundo antes de comenzar la desaparición
