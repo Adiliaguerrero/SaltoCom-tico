@@ -21,14 +21,21 @@ public class ColisionadorTrigger2D : MonoBehaviour
         /// </summary>
     public GameObject portal;
 
-    // Referencia al UI del joystick para deshabilitarlo al cambiar de escena
+
         /// <summary>
         /// Interfaz del joystick, que será deshabilitada al cambiar de escena.
         /// </summary>
     public GameObject joystickUI;
 
     // Referencias internas para manipular el Rigidbody y el controlador del jugador
+        /// <summary>
+        /// Referencia al Rigidbody2D del jugador.
+        /// </summary>
     private Rigidbody2D rbJugador;
+
+        /// <summary>
+        /// Referencia al script de control del jugador.
+        /// </summary>
     private PlayerController playerController;
 
     // Nombre de la escena a la que se desea cambiar, asignado en el Inspector
