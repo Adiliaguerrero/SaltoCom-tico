@@ -5,7 +5,10 @@ using UnityEngine;
     /// </summary>
 public class Camara : MonoBehaviour
 {
-    // Referencia al objeto jugador que la cámara seguirá
+
+        /// <summary>
+        /// Objeto del jugador que la cámara debe seguir.
+        /// </summary>
     public GameObject Player2;
 
     // Controla la suavidad del movimiento de la cámara (valor más alto = movimiento más suave)
