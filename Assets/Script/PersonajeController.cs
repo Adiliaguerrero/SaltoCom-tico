@@ -8,19 +8,33 @@ using UnityEngine.EventSystems;
     /// </summary>
 public class PlayerController : MonoBehaviour
 {
-    // Velocidad horizontal del personaje
+
+        /// <summary>
+        /// Velocidad horizontal del personaje.
+        /// </summary>
     public float velocidad = 5f;
 
-    // Fuerza aplicada para el salto del personaje
+        /// <summary>
+        /// Fuerza aplicada para el salto del personaje.
+        /// </summary>
     public float fuerzaSalto = 12f;
 
     // Referencia al Animator para controlar las animaciones
+        /// <summary>
+        /// Referencia al Animator para controlar animaciones.
+        /// </summary>
     public Animator animator;
 
     // Referencia al Rigidbody2D para la física del personaje
+        /// <summary>
+        /// Referencia al Rigidbody2D para aplicar físicas.
+        /// </summary>
     public Rigidbody2D rb;
 
     // Controla si el personaje puede moverse o no
+        /// <summary>
+        /// Determina si el personaje puede moverse.
+        /// </summary>
     public bool puedeMoverse = true;
 
     // Variable interna que indica si el personaje está tocando el suelo
