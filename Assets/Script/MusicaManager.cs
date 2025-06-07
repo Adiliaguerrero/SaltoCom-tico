@@ -17,7 +17,9 @@ public class MusicaManager : MonoBehaviour
     /// </summary>
     public AudioSource musicaFondo;
 
-    // Variable booleana que indica si la música está activa o no
+    /// <summary>
+    /// Variable booleana que indica si la música está activa o no.
+    /// </summary>
     private bool musicaActiva;
 
     // Método Awake que se ejecuta al cargar el objeto (antes de Start)
