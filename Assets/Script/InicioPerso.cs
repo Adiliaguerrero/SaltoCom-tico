@@ -2,27 +2,41 @@ using UnityEngine;
 
 // Esta clase gestiona la aparición o instanciacion del personaje elegido al iniciar la escena
 
-/// <summary>
-/// Gestiona la aparición del personaje seleccionado al iniciar la escena.
-/// </summary>
-/// <remarks>
-/// Instancia el prefab correspondiente desde un arreglo de personajes, asigna joystick y configura la cámara para seguir al jugador.
-/// </remarks>
-/// <example>
-/// Asigna este script a un GameObject vacío y configura los prefabs de personajes, punto de aparición, joystick y cámara desde el Inspector.
-/// </example>
+    /// <summary>
+    /// Gestiona la aparición del personaje seleccionado al iniciar la escena.
+    /// </summary>
+    /// <remarks>
+    /// Instancia el prefab correspondiente desde un arreglo de personajes, asigna joystick y configura la cámara para seguir al jugador.
+    /// </remarks>
+    /// <example>
+    /// Asigna este script a un GameObject vacío y configura los prefabs de personajes, punto de aparición, joystick y cámara desde el Inspector.
+    /// </example>
 public class AparicionPersonaje : MonoBehaviour
 {
-    // Arreglo de prefabs de personajes disponibles para el jugador
+
+        /// <summary>
+        /// Arreglo de prefabs disponibles para el jugador.
+        /// </summary>
+        /// <value>
+        /// Cada elemento del arreglo representa un personaje seleccionable.
+        /// </value>
     public GameObject[] personajes;
 
-    // Punto en la escena donde aparecerá el personaje
+
+        /// <summary>
+        /// Posición donde aparecerá el personaje instanciado.
+        /// </summary>
     public Transform puntoAparicion;
 
-    // Referencia al joystick (control táctil para mover al personaje)
+        /// <summary>
+        /// Referencia al joystick usado para controlar al personaje.
+        /// </summary>
     public Joystick joystick;
 
-    // Referencia a la cámara del juego que debe seguir al personaje
+
+        /// <summary>
+        /// Objeto de cámara que seguirá al personaje instanciado.
+        /// </summary>
     public GameObject camara;
 
     // Método Start que se ejecuta automáticamente al iniciar la escena
