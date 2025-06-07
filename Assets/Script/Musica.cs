@@ -11,7 +11,9 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     public GameObject musicaManagerPrefab;
 
-    // Referencia al script MusicaManager que maneja la música de fondo
+    /// <summary>
+    /// Referencia al script que gestiona la música de fondo en el juego.
+    /// </summary>
     private MusicaManager musicaManager;
 
     // Referencia al botón que ejecuta la acción de alternar la música
