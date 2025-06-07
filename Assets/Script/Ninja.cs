@@ -6,13 +6,21 @@ using System.Collections;
     /// </summary>
 public class Ninja : MonoBehaviour
 {
-    // Distancia máxima para detectar al jugador
+    
+        /// <summary>
+        /// Distancia máxima a la que el ninja puede detectar al jugador.
+        /// </summary>
     public float detectionRadius = 5.0f;
 
     // Distancia mínima para iniciar el ataque al jugador
+        /// <summary>
+        /// Distancia mínima para que el ninja inicie un ataque.
+        /// </summary>
     public float attackRadius = 1.0f;
 
-    // Velocidad de movimiento del ninja
+        /// <summary>
+        /// Velocidad de movimiento del ninja.
+        /// </summary>
     public float speed = 2.0f;
 
     // Tiempo de espera entre ataques (en segundos)
