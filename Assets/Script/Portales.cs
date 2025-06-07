@@ -8,16 +8,24 @@ using TMPro;
 /// </summary>
 public class PortalCambioEscena : MonoBehaviour
 {
-    // Nombre de la escena a la que se cambiará al colisionar con el portal
+    /// <summary>
+    /// Nombre de la escena de destino a cargar al colisionar con el portal.
+    /// </summary>
     public string nombreEscenaDestino;
 
-    // Nombre del objeto TextMeshPro que mostrará el mensaje de bienvenida en la nueva escena
+    /// <summary>
+    /// Nombre del objeto que contiene el texto de bienvenida en la nueva escena.
+    /// </summary>
     public string nombreObjetoTextoBienvenida;
 
-    // Mensaje de bienvenida que se mostrará al llegar a la nueva escena
+    /// <summary>
+    /// Mensaje de bienvenida que se mostrará al llegar a la nueva escena.
+    /// </summary>
     public string mensajeBienvenida = "¡Bienvenido!";
 
-    // Duración en segundos que el mensaje de bienvenida permanecerá visible
+    /// <summary>
+    /// Duración (en segundos) del mensaje de bienvenida.
+    /// </summary>
     public float duracionMensaje = 3f;
 
     // Variables estáticas para transferir información entre escenas (ya que los datos públicos no persisten automáticamente)
