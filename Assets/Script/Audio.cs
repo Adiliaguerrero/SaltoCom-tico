@@ -11,7 +11,7 @@ public class BotonClipControl : MonoBehaviour
 {
         /// <summary>
         /// Referencia al botón que se utiliza para controlar el sonido.
-        /// </summary
+        /// </summary>
     public Button botonSonido;
 
         /// <summary>

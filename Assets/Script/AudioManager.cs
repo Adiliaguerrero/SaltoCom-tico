@@ -1,8 +1,9 @@
-using UnityEngine;  // Importa la librería principal de Unity necesaria para todos los componentes del motor.
+using UnityEngine;  
 
-// Esta clase  controla la gestión global  de tdoasb las escenas de los efectos de sonido en el juego.
-// Incluye funcionalidades para reproducir sonidos, activarlos/desactivarlos y guardar esa preferencia.
-
+/// <summary>
+/// Gestiona globalmente el sistema de sonido del juego.
+/// Permite activar o desactivar sonidos, reproducir clips de audio y guardar preferencias del jugador.
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
     private bool sonidosActivos = true;  // Variable que determina si los sonidos están habilitados o no.
