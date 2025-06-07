@@ -23,6 +23,9 @@ public class MusicaManager : MonoBehaviour
     private bool musicaActiva;
 
     // Método Awake que se ejecuta al cargar el objeto (antes de Start)
+    /// <summary>
+    /// Se ejecuta al cargar el objeto. Inicializa la instancia Singleton y aplica el estado de la música.
+    /// </summary>
     private void Awake()
     {
         // Si no hay una instancia activa, esta se convierte en la principal
