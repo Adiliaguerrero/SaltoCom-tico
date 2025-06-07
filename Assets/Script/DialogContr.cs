@@ -21,7 +21,6 @@ using TMPro;
     /// <seealso cref="TextMeshProUGUI"/>
 public class DialogoController : MonoBehaviour
 {
-        // Panel que contiene todo el diálogo, que se mostrará y ocultará, asignado desde el Inspector
         /// <summary>
         /// Panel de UI que contiene el diálogo completo, incluyendo fondo y texto.
         /// </summary>
@@ -30,7 +29,6 @@ public class DialogoController : MonoBehaviour
         /// </remarks>
     public GameObject panelDialogo;
 
-    // Componente TextMeshProUGUI donde se mostrará cada línea del diálogo
         /// <summary>
         /// Componente de texto TMP que mostrará cada línea del diálogo.
         /// </summary>
