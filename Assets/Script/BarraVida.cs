@@ -15,19 +15,23 @@ public class BarraVida : MonoBehaviour
         /// <summary>
         /// Valor máximo de vida que puede tener el jugador.
         /// </summary>
-    private float VidaMaxima = 5f;  .
+    private float VidaMaxima = 5f;  
 
         /// <summary>
         /// Panel de Game Over que se muestra cuando el jugador pierde.
         /// </summary>
-    public GameObject panelGameOver;      // Panel UI que se muestra cuando el jugador pierde (Game Over).
+    public GameObject panelGameOver;      
 
         /// <summary>
         /// Imagen u objeto que debe ser eliminado al activarse el Game Over.
         /// </summary>
-    public GameObject imagenAEliminar;    // Imagen u objeto que debe eliminarse al perder.
+    public GameObject imagenAEliminar;    
 
-    private bool gameOverActivado = false;  // Bandera boleana  para evitar activar Game Over varias veces.
+        /// <summary>
+        /// Bandera booleana para evitar que se active el Game Over más de una vez.
+        /// </summary>
+    private bool gameOverActivado = false; 
+
 
     // Método público para la barra de vida  que actualizara visualmente con el daño.
     public void ActualizarBarra(float vidaActual)
