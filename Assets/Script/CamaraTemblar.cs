@@ -1,10 +1,11 @@
-// Esta línea dice que vamos a usar las herramientas de Unity.
 using UnityEngine;
 
-// Esta línea permite usar cosas que funcionan paso a paso en el tiempo (corutinas).
 using System.Collections;
 
- // Esta clase permite que la camara tiemble o se sacuda cuando el personaje recibe daño 
+// Esta clase permite que la camara tiemble o se sacuda cuando el personaje recibe daño 
+    /// <summary>
+    /// Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños.
+    /// </summary>
 public class CameraShake : MonoBehaviour
 {
     // Esta variable pública se puede ver y modificar desde el Inspector en Unity.
