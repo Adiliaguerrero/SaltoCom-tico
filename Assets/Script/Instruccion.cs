@@ -8,22 +8,36 @@ using UnityEngine.UI;
     /// </summary>
 public class InstruccionesVisuales : MonoBehaviour
 {
-    // Referencia publica al asingnar en el isnpector la imagen de la mano izquierda
+    /// <summary>
+    /// Imagen de la mano izquierda mostrada en pantalla.
+    /// </summary>
     public Image manoIzquierda;
 
-    // Referencia publica al asingnar en el isnpector a la imagen de la mano derecha
+    
+    /// <summary>
+    /// Imagen de la mano derecha mostrada en pantalla.
+    /// </summary>
     public Image manoDerecha;
 
-    // Referencia publica al asingnar en el isnpector de la mano que indica toque
+    /// <summary>
+    /// Imagen de la mano que indica el toque en pantalla.
+    /// </summary>
     public Image manoTocar;
 
-    // Tiempo que tarda la animación de cada mano en completarse
+
+    /// <summary>
+    /// Duración de la animación para cada mano.
+    /// </summary>
     public float duracionAnimacion = 1f;
 
-    // Cantidad de desplazamiento que realiza cada mano al animarse
+    /// <summary>
+    /// Cantidad de desplazamiento que realiza cada mano en su animación.
+    /// </summary>
     public float desplazamiento = 50f;
 
-    // Referencia publica al asingnar en el isnpector para el joystick virtual utilizado para detectar movimiento
+    /// <summary>
+    /// Referencia al joystick utilizado para detectar movimientos.
+    /// </summary>
     public Joystick joystick;
 
     // Controla si la mano izquierda ya fue eliminada
