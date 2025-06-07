@@ -1,10 +1,12 @@
-// Importamos los espacios de nombres necesarios para trabajar con UI, escenas y texto en Unity
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-// Esta clase gestiona la puntuación total de las trivias mostrada en la UI, limpiar la puntuacion y ir al menu principal
+    /// <summary>
+    /// Gestiona la puntuación de trivias, actualización de UI, reinicio de puntajes y navegación al menú.
+    /// Implementa un patrón Singleton para persistencia entre escenas.
+    /// </summary>
 public class PuntosManager : MonoBehaviour
 {
     // Instancia estática para implementar Singleton y mantener el objeto vivo entre escenas
