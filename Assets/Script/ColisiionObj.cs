@@ -16,7 +16,9 @@ public class ColisionadorTrigger2D : MonoBehaviour
         /// </summary>
     private bool haColisionado = false;
 
-    // Referencia al portal que ya está en la escena (asegúrate que esté desactivado inicialmente)
+        /// <summary>
+        /// Portal que se activará para permitir el cambio de escena.
+        /// </summary>
     public GameObject portal;
 
     // Referencia al UI del joystick para deshabilitarlo al cambiar de escena
