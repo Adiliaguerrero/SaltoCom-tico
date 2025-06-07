@@ -38,7 +38,10 @@ public class ColisionadorTrigger2D : MonoBehaviour
         /// </summary>
     private PlayerController playerController;
 
-    // Nombre de la escena a la que se desea cambiar, asignado en el Inspector
+   
+        /// <summary>
+        /// Nombre de la escena destino, asignado desde el Inspector.
+        /// </summary>
     public string nombreEscena = "Escena";
 
     // Variables estáticas para pasar el mensaje a mostrar en la escena destino
