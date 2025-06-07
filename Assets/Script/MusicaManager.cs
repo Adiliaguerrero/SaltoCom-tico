@@ -22,30 +22,25 @@ public class MusicaManager : MonoBehaviour
     /// </summary>
     private bool musicaActiva;
 
-        /// <summary>
-        /// Se ejecuta al cargar el objeto. Inicializa la instancia Singleton y aplica el estado de la música.
-        /// </summary>
+    /// <summary>
+    /// Se ejecuta al cargar el objeto. Inicializa la instancia Singleton y aplica el estado de la música.
+    /// </summary>
     private void Awake()
     {
-        // Si no hay una instancia activa, esta se convierte en la principal
         if (instancia == null)
         {
             instancia = this;
 
-            // Evita que este objeto se destruya al cambiar de escena
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            // Si ya existe una instancia, destruye esta para evitar duplicados
             Destroy(gameObject);
             return;
         }
 
-        // Carga el estado guardado de la música (1 = activa, 0 = desactivada)
         musicaActiva = PlayerPrefs.GetInt("MusicaActiva", 1) == 1;
 
-        // Aplica el estado guardado a la música de fondo
         AplicarEstadoMusica();
     }
 
@@ -55,14 +50,11 @@ public class MusicaManager : MonoBehaviour
         /// </summary>
     public void AlternarMusica()
     {
-        // Cambia el estado booleano a su valor opuesto
         musicaActiva = !musicaActiva;
 
-        // Guarda el nuevo estado en PlayerPrefs para que se mantenga entre sesiones
         PlayerPrefs.SetInt("MusicaActiva", musicaActiva ? 1 : 0);
         PlayerPrefs.Save();
 
-        // Aplica el nuevo estado a la música de fondo
         AplicarEstadoMusica();
     }
 
@@ -71,21 +63,16 @@ public class MusicaManager : MonoBehaviour
         /// </summary>
     private void AplicarEstadoMusica()
     {
-        // Verifica que el componente de música esté asignado
         if (musicaFondo != null)
         {
-            // Si la música está activa
             if (musicaActiva)
             {
-                // Si no está sonando, la reproduce
                 if (!musicaFondo.isPlaying) musicaFondo.Play();
 
-                // Asegura que el volumen esté al máximo
                 musicaFondo.volume = 1f;
             }
             else
             {
-                // Si la música está desactivada, baja el volumen a cero
                 musicaFondo.volume = 0f;
             }
         }
