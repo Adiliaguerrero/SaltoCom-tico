@@ -50,7 +50,6 @@ public class ColisionadorTrigger2D : MonoBehaviour
     private static float duracionMensaje = 3f; // Duración que estará visible el mensaje
     private static bool mostrarMensaje = false; // Controla si se debe mostrar el mensaje
 
-    // Detecta cuando un objeto colisiona con este trigger
 
     /// <summary>
     /// Detecta colisiones físicas con el trigger.
@@ -59,7 +58,6 @@ public class ColisionadorTrigger2D : MonoBehaviour
     /// </param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si ya colisionó antes, no hacer nada
         if (haColisionado) return;
 
         // Verifica que el objeto que colisiona sea el jugador (por etiqueta)
@@ -112,7 +110,9 @@ public class ColisionadorTrigger2D : MonoBehaviour
         }
     }
 
-    // Corrutina que espera unos segundos antes de mostrar diálogo o continuar
+        /// <summary>
+        /// Corrutina que espera unos segundos antes de mostrar el diálogo o continuar.
+        /// </summary>
     private IEnumerator EsperarYMostrarDialogo()
     {
         yield return new WaitForSeconds(3f);
