@@ -128,6 +128,9 @@ public class Ninja : MonoBehaviour
     }
 
     // Método que se llama para ejecutar el ataque al jugador
+        /// <summary>
+        /// Ejecuta el ataque al jugador si está dentro del rango.
+        /// </summary>
     void AtacarJugador()
     {
         atacando = false;  // Se marca que ya no se está atacando
