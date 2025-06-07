@@ -116,6 +116,9 @@ public class CargaInicial : MonoBehaviour
     }
 
     // Método que se ejecuta cuando la carga ha finalizado y cambia de escena
+        /// <summary>
+        /// Cambia a la escena especificada una vez completada la simulación de carga.
+        /// </summary>
     void OnCargaCompleta()
     {
         // Imprime en la consola que la carga terminó, útil para depuración
