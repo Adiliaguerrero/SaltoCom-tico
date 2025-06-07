@@ -1,7 +1,16 @@
-// Importamos el espacio de nombres de Unity
 using UnityEngine;
 
 // Esta clase gestiona la aparición o instanciacion del personaje elegido al iniciar la escena
+
+/// <summary>
+/// Gestiona la aparición del personaje seleccionado al iniciar la escena.
+/// </summary>
+/// <remarks>
+/// Instancia el prefab correspondiente desde un arreglo de personajes, asigna joystick y configura la cámara para seguir al jugador.
+/// </remarks>
+/// <example>
+/// Asigna este script a un GameObject vacío y configura los prefabs de personajes, punto de aparición, joystick y cámara desde el Inspector.
+/// </example>
 public class AparicionPersonaje : MonoBehaviour
 {
     // Arreglo de prefabs de personajes disponibles para el jugador
