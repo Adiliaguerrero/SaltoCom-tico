@@ -1,7 +1,12 @@
-// Importa el espacio de nombres de Unity necesario para manipular objetos y componentes
 using UnityEngine;
 
-// Esta clase controla la activación y interaccion de paneles tipo trivias
+    /// <summary>
+    /// Controla la activación secuencial de paneles tipo trivia y gestiona el estado del jugador durante su visualización.
+    /// </summary>
+    /// <remarks>
+    /// Los paneles de trivia se activan uno por uno al presionar un botón.
+    /// Durante la visualización, se desactivan elementos de la interfaz y se congela al jugador.
+    /// </remarks>
 public class Paneles1 : MonoBehaviour
 {
     // Paneles que se activan uno por uno
