@@ -1,8 +1,19 @@
-// Importamos la librería principal de Unity para trabajar con componentes y funciones del motor
 using UnityEngine;
 
 // Esta clase se encarga de mantener una escala fija en el objeto al que está asignado,
 // permitiendo que se voltee horizontalmente si es necesario (por ejemplo, al mirar hacia la izquierda o derecha)
+
+
+    /// <summary>
+    /// Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha).
+    /// </summary>
+    /// <remarks>
+    /// Se recomienda usar este script para personajes o sprites que deban conservar su tamaño original sin distorsión,
+    /// pero aún puedan girar horizontalmente.
+    /// </remarks>
+    /// <example>
+    /// Asigna este script a un GameObject y configura su <see cref="escalaCorrecta"/> desde el Inspector.
+    /// </example>
 public class ForzarEscala : MonoBehaviour
 {
     // Variable pública que permite definir desde el Inspector la escala correcta del objeto (X, Y)
