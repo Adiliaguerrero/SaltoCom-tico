@@ -49,6 +49,11 @@ public class EscenaRestraurar : MonoBehaviour
     public AudioClip sonidoBoton;
 
     // Método público para cargar la primera escena cuando se presione el botón correspondiente
+        /// <summary>
+        /// Carga la escena almacenada en <see cref="escena1"/> y reproduce el sonido de botón.
+        /// </summary>
+        /// <exception cref="System.ArgumentException">Se lanza si el nombre de la escena está vacío o nulo.
+        /// </exception>
     public void CargarEscena1()
     {
         // Reproduce el sonido usando el sistema de AudioManager global
