@@ -1,13 +1,15 @@
 using UnityEngine;
 
 
-/// <summary>
-/// Esta clase gestiona la música de fondo global en el juego.
-/// Implementa el patrón Singleton para mantenerse persistente entre escenas.
-/// </summary>
+    /// <summary>
+    /// Esta clase gestiona la música de fondo global en el juego.
+    /// Implementa el patrón Singleton para mantenerse persistente entre escenas.
+    /// </summary>
 public class MusicaManager : MonoBehaviour
 {
-    // Instancia estática del MusicaManager (patrón Singleton)
+    /// <summary>
+    /// Instancia estática del <see cref="MusicaManager"/> para aplicar el patrón Singleton.
+    /// </summary>
     public static MusicaManager instancia;
 
     // Componente AudioSource que reproduce la música de fondo
