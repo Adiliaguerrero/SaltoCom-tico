@@ -21,7 +21,10 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     public Button boton;
 
-    // Método que se ejecuta cuando se instancia el objeto (antes de Start)
+    
+    /// <summary>
+    /// Se ejecuta al instanciar el objeto, antes de Start.
+    /// </summary>
     private void Awake()
     {
         // Verifica si no existe una instancia de MusicaManager y si se asignó un prefab
