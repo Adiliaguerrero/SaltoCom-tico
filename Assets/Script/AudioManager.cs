@@ -28,25 +28,20 @@ public class AudioManager : MonoBehaviour
         /// </summary>
     private void Awake()
     {
-        // Si no existe ninguna instancia del AudioManager, esta se convierte en la principal.
         if (instancia == null)
         {
             instancia = this;
 
-            // Evita que este objeto se destruya al cambiar de escena.
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            // Si ya existe una instancia, destruye esta para mantener una sola.
             Destroy(gameObject);
             return; // Sale del método para evitar ejecutar el resto del código.
         }
 
-        // Agrega automáticamente un componente AudioSource al objeto, si no lo tiene.
         audioSource = gameObject.AddComponent<AudioSource>();
 
-        // Carga el estado del sonido guardado en las preferencias del jugador.
         CargarEstadoSonido();
     }
 
@@ -59,12 +54,10 @@ public class AudioManager : MonoBehaviour
         // Verifica si hay una clave guardada llamada "SonidosActivos"
         if (PlayerPrefs.HasKey("SonidosActivos"))
         {
-            // Si existe, asigna el valor (1 = true, 0 = false)
             sonidosActivos = PlayerPrefs.GetInt("SonidosActivos") == 1;
         }
         else
         {
-            // Si no existe la clave, se activan los sonidos por defecto.
             sonidosActivos = true;
         }
     }
@@ -91,7 +84,6 @@ public class AudioManager : MonoBehaviour
     {
         if (sonidosActivos && clip != null)
         {
-            // PlayOneShot reproduce el clip una vez sin interrumpir otros sonidos.
             audioSource.PlayOneShot(clip);
         }
     }
