@@ -68,10 +68,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public BarraVida barraVida;
 
-    // Referencia al script de sacudida de cámara para efectos visuales al recibir daño
     private CameraShake cameraShake;
 
-    // Método Start: se ejecuta al iniciar la escena o activar el objeto
+        /// <summary>
+        /// Inicializa variables y referencias necesarias al comenzar la escena.
+        /// </summary>
     void Start()
     {
         // Busca el objeto hijo llamado "DetectorSuelo" para detectar colisiones con el suelo
@@ -192,7 +193,11 @@ public class PlayerController : MonoBehaviour
     }
 }
 
-
+        /// <summary>
+        /// Gestiona la recepción de daño por parte del personaje.
+        /// </summary>
+        /// <param name="direccion">Dirección del daño recibido.</param>
+        /// <param name="cantDanio">Cantidad de daño recibido.</param>
     public void RecibeDanio(Vector2 direccion, int cantDanio)
     {
         // Si ya está recibiendo daño, no hacer nada
