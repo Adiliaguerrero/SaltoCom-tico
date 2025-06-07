@@ -27,14 +27,11 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        // Verifica si no existe una instancia de MusicaManager y si se asignó un prefab
         if (MusicaManager.instancia == null && musicaManagerPrefab != null)
         {
-            // Instancia el prefab del manager de música para asegurar que esté en la escena
             Instantiate(musicaManagerPrefab);
         }
 
-        // Obtiene la instancia actual del MusicaManager
         musicaManager = MusicaManager.instancia;
     }
 
@@ -43,13 +40,11 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        // Si no se asignó el botón desde el Inspector, lo busca automáticamente
         if (boton == null)
         {
             boton = GetComponent<Button>();
         }
 
-        // Asigna el método OnClick al evento del botón
         boton.onClick.AddListener(OnClick);
     }
 
@@ -58,10 +53,8 @@ public class BotonMusica : MonoBehaviour
     /// </summary>
     public void OnClick()
     {
-        // Si hay una instancia válida del manager de música
         if (musicaManager != null)
         {
-            // Llama al método que alterna (activa o desactiva) la música
             musicaManager.AlternarMusica();
         }
     }
