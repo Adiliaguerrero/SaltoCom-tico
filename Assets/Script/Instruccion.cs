@@ -161,7 +161,13 @@ public class InstruccionesVisuales : MonoBehaviour
         StartCoroutine(MoverMano(mano, inicio, destino));
     }
 
-    // Corrutina que mueve una mano de una posición a otra, y luego regresa, en bucle
+    /// <summary>
+    /// Corrutina que mueve la mano entre dos posiciones y repite la animación en bucle.
+    /// </summary>
+    /// <param name="mano">RectTransform de la mano a animar.</param>
+    /// <param name="desde">Posición inicial.</param>
+    /// <param name="hasta">Posición final.</param>
+    /// <returns>IEnumerator para control de corrutina.</returns>
     System.Collections.IEnumerator MoverMano(RectTransform mano, Vector3 desde, Vector3 hasta)
     {
         // Contador de tiempo
