@@ -70,8 +70,15 @@ public class DialogoController : MonoBehaviour
         StartCoroutine(MostrarLineas(alTerminar));
     }
 
-    // Corutina privada que muestra las líneas del diálogo una a una, esperando un tiempo entre ellas
-    // Recibe un parámetro 'callback', que es la función que se ejecutará al terminar todas las líneas
+        /// <summary>
+        /// Corrutina que recorre cada línea del diálogo y la muestra en pantalla con una pausa entre cada una.
+        /// </summary>
+        /// <param name="callback">Función a invocar al finalizar el diálogo.</param>
+        /// <returns>Un enumerador para manejar el retardo entre líneas.</returns>
+        /// <remarks>
+        /// Al terminar el diálogo, limpia el texto y desactiva el panel.
+        /// </remarks>
+        /// <seealso cref="IEnumerator"/>
     private IEnumerator MostrarLineas(System.Action callback)
     {
         // Recorremos cada línea en la lista lineasDialogo
