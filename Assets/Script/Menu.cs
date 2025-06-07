@@ -50,7 +50,6 @@ public class MenuController : MonoBehaviour
     }
 
 
-    // Recibe el nombre de la escena y el tiempo que debe esperar antes de cargarla
 
     /// <summary>
     /// Corrutina que espera un tiempo específico antes de cargar una escena.
@@ -69,6 +68,14 @@ public class MenuController : MonoBehaviour
 
     // Corutina privada para salir del juego con un retraso
     // Recibe el tiempo que debe esperar antes de cerrar la aplicación
+
+    /// <summary>
+    /// Corrutina que espera un tiempo antes de cerrar la aplicación.
+    /// </summary>
+    /// <param name="delay">Duración de la espera antes de cerrar la aplicación.</param>
+    /// <returns>
+    /// IEnumerator para control de la corrutina.
+    /// </returns>
     private System.Collections.IEnumerator SalirConDelay(float delay)
     {
         // Espera el tiempo especificado antes de salir
