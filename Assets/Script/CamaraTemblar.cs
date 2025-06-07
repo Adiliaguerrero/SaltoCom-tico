@@ -18,8 +18,6 @@ public class CameraShake : MonoBehaviour
         /// </summary>
     public float magnitud = 0.3f;
 
-    // Este método se puede llamar desde otro script o desde Unity.
-    // Sirve para comenzar la sacudida de la cámara.
 
         /// <summary>
         /// Método público que inicia el efecto de sacudida de la cámara.
@@ -33,6 +31,13 @@ public class CameraShake : MonoBehaviour
 
     // Esta es la función que realmente hace que la cámara se sacuda.
     // IEnumerator permite que esta función se ejecute con pausas entre cada paso (no todo de golpe).
+
+        /// <summary>
+        /// Corrutina que implementa la sacudida de la cámara durante el tiempo definido.
+        /// </summary>
+        /// <returns>
+        /// Devuelve un enumerador necesario para la ejecución como corrutina.
+        /// </returns>
     private IEnumerator Shake()
     {
         // Guardamos la posición original de la cámara (antes de moverse).
