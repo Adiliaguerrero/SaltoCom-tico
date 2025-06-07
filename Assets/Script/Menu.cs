@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
     /// </summary>
 public class MenuController : MonoBehaviour
 {
-    // Variable pública para asignar desde el Inspector el sonido que se reproduce al pulsar un botón
+    /// <summary>
+    /// Sonido que se reproduce al pulsar un botón del menú.
+    /// </summary>
     public AudioClip sonidoBoton;
 
     // Método público que se llama para ir a la escena de selección de niveles o inicio
