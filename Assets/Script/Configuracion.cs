@@ -43,13 +43,23 @@ public class ConfiguracionUI : MonoBehaviour
     /// </value>
     public GameObject panelCreditos;
 
-    // Botón que abre el panel de créditos
+
+    /// <summary>
+    /// Botón que abre el panel de créditos.
+    /// </summary>
     public Button botonCreditosAbrir;
 
-    // Botón que cierra el panel de créditos
+   
+    /// <summary>
+    /// Botón que cierra el panel de créditos.
+    /// </summary>
     public Button botonCreditosCerrar;
 
-    // Sonido que se reproduce al pulsar cualquier botón, asignado desde el Inspector
+
+    /// <summary>
+    /// Sonido que se reproduce al presionar cualquier botón.
+    /// </summary>
+    /// <seealso cref="AudioManager.ReproducirSonido(AudioClip)"/>
     public AudioClip sonidoBoton;
 
     // Método Start se ejecuta automáticamente al iniciar el juego o activar este objeto
