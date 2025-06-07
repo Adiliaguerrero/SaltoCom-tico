@@ -1,9 +1,9 @@
 using UnityEngine;  
 
-/// <summary>
-/// Gestiona globalmente el sistema de sonido del juego.
-/// Permite activar o desactivar sonidos, reproducir clips de audio y guardar preferencias del jugador.
-/// </summary>
+    /// <summary>
+    /// Gestiona globalmente el sistema de sonido del juego.
+    /// Permite activar o desactivar sonidos, reproducir clips de audio y guardar preferencias del jugador.
+    /// </summary>
 public class AudioManager : MonoBehaviour
 {
         /// <summary>

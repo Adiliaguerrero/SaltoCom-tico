@@ -1,9 +1,0 @@
-Nombre del proyecto: SaltoComático
-Integrantes: Tiffany Molina
-Adilia Guerrero
-José Ramírez
-Descripción: Videojuego de aventura educativa donde el jugador supera obstáculos, resuelve trivias y aprende nuevos conocimientos en cada nivel.
-Objetivos: 
-- Enseñar de manera divertida la coma para separar elementos de una serie.
-- Mejorar habilidades de resolución de problemas.
-- Fomentar el interés por el aprendizaje.

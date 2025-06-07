@@ -7,11 +7,14 @@ using UnityEngine.UI;
     /// </summary>
 public class BarraVida : MonoBehaviour
 {
-    /// <summary>
-    /// Imagen que representa el relleno de la barra de vida en la interfaz gráfica.
-    /// </summary>
+        /// <summary>
+        /// Imagen que representa el relleno de la barra de vida en la interfaz gráfica.
+        /// </summary>
     public Image rellenoBarraVida;  // Referencia al componente Image que representa el relleno de la barra de vida.
 
+        /// <summary>
+        /// Valor máximo de vida que puede tener el jugador.
+        /// </summary>
     private float VidaMaxima = 5f;  // Vida  que puede tener el jugador. Valor fijo.
 
     public GameObject panelGameOver;      // Panel UI que se muestra cuando el jugador pierde (Game Over).
