@@ -1,18 +1,19 @@
-// Importamos los espacios de nombres necesarios de Unity
 using UnityEngine;
 using UnityEngine.UI;
 
-// Esta clase controla la interaccion del botón que activa o desactiva la música del juego
+    /// <summary>
+    /// Esta clase controla la interacción del botón que activa o desactiva la música del juego.
+    /// </summary>
 public class BotonMusica : MonoBehaviour
 {
     // Referencia al prefab que contiene el controlador de música
-    public GameObject musicaManagerPrefab;  
+    public GameObject musicaManagerPrefab;
 
     // Referencia al script MusicaManager que maneja la música de fondo
-    private MusicaManager musicaManager;  
+    private MusicaManager musicaManager;
 
     // Referencia al botón que ejecuta la acción de alternar la música
-    public Button boton; 
+    public Button boton;
 
     // Método que se ejecuta cuando se instancia el objeto (antes de Start)
     private void Awake()
@@ -21,7 +22,7 @@ public class BotonMusica : MonoBehaviour
         if (MusicaManager.instancia == null && musicaManagerPrefab != null)
         {
             // Instancia el prefab del manager de música para asegurar que esté en la escena
-            Instantiate(musicaManagerPrefab);  
+            Instantiate(musicaManagerPrefab);
         }
 
         // Obtiene la instancia actual del MusicaManager
