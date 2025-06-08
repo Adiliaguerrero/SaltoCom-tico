@@ -10,20 +10,39 @@ using UnityEngine.EventSystems;
     /// </summary>
 public class UnirFrasesInteractivo : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar en la trivia o actividades
+    /// <summary>
+    /// Controlador de paneles que gestiona la transición entre trivias o actividades.
+    /// </summary>
     public Paneles1 Paneles1;
 
-    // Texto de la frase sin comas que se muestra a la izquierda
+    /// <summary>
+    /// Texto de la frase sin comas que se muestra a la izquierda.
+    /// </summary>
     public TMP_Text textoIzquierdo;
-    // Array de textos con opciones que contienen comas, mostrados a la derecha
+
+    /// <summary>
+    /// Arreglo de textos con opciones que contienen comas, mostrados a la derecha.
+    /// </summary>
     public TMP_Text[] textosDerechos;
-    // Texto donde se mostrará el resultado o retroalimentación al usuario
+    
+    /// <summary>
+    /// Texto donde se muestra el resultado o retroalimentación al usuario.
+    /// </summary>
     public TMP_Text textoResultado;
-    // Imagen que representa la línea que se dibuja al unir frases
+
+   /// <summary>
+   /// Imagen que representa la línea que se dibuja al unir frases.
+   /// </summary>
     public Image imagenLinea;
-    // Punto de inicio para la línea cuando se arrastra desde el texto izquierdo
+
+        /// <summary>
+        /// Punto de inicio manual para la línea cuando se arrastra desde el texto izquierdo.
+        /// </summary>
     public Transform puntoInicioManual;
-    // Array de puntos de inicio para las opciones de texto derecho (alineación visual)
+
+    /// <summary>
+    /// Arreglo de puntos de inicio visual para las opciones del lado derecho.
+    /// </summary>
     public Transform[] puntosDerechos;
 
     // Variables internas para controlar la interacción de arrastre y unión
