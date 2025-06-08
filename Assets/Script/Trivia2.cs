@@ -61,10 +61,26 @@ public class OpcionUnica : MonoBehaviour
         }
     }
 
-    // Métodos públicos que se llaman desde los botones para seleccionar cada opción
+
+        /// <summary>
+        /// Método público que se llama cuando el jugador selecciona la primera opción.
+        /// </summary>
     public void SeleccionarOpcion0() => VerificarRespuesta(0);
+
+    
+        /// <summary>
+        /// Método público que se llama cuando el jugador selecciona la segunda opción.
+        /// </summary>
     public void SeleccionarOpcion1() => VerificarRespuesta(1);
+
+        /// <summary>
+        /// Método público que se llama cuando el jugador selecciona la tercera opción.
+        /// </summary>
     public void SeleccionarOpcion2() => VerificarRespuesta(2);
+
+        /// <summary>
+        /// Método público que se llama cuando el jugador selecciona la cuarta opción.
+        /// </summary>
     public void SeleccionarOpcion3() => VerificarRespuesta(3);
 
     // Método privado que verifica si la opción seleccionada es correcta o no
