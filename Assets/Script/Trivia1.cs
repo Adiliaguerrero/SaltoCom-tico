@@ -1,9 +1,10 @@
-// Importamos las librerías necesarias para trabajar con Unity, UI y TextMeshPro
-using UnityEngine;               // Funciones básicas y objetos de Unity
-using UnityEngine.UI;            // Para manejar componentes UI como botones
-using TMPro;                     // Para manejar textos con TextMeshPro
+using UnityEngine;               
+using UnityEngine.UI;          
+using TMPro;
 
-// Esta clase  controla una pregunta  con opciones de Verdadero y Falso
+    /// <summary>
+    /// Controla una pregunta de tipo Verdadero/Falso en una trivia.
+    /// </summary>
 public class Trivia1 : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar entre preguntas
