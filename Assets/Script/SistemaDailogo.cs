@@ -71,7 +71,6 @@ public class SistemaDialogo : MonoBehaviour
         /// </summary>
     public AudioClip sonidoPanel;
 
-    // Método que se llama al iniciar el juego o la escena
     void Start()
     {
         // Oculta el panel de diálogo para que no se vea al inicio
@@ -85,7 +84,9 @@ public class SistemaDialogo : MonoBehaviour
         }
     }
 
-    // Método público que activa el diálogo cuando el jugador interactúa con el NPC
+        /// <summary>
+        /// Activa el sistema de diálogo, bloqueando al jugador y mostrando las líneas de texto.
+        /// </summary>
     public void ActivarDialogo()
     {
         // Si el diálogo ya se inició, no se vuelve a activar
@@ -136,7 +137,9 @@ public class SistemaDialogo : MonoBehaviour
         MostrarLinea();
     }
 
-    // Método que muestra la siguiente línea de diálogo
+        /// <summary>
+        /// Muestra la siguiente línea de diálogo con animación de escritura y gestiona el fin del diálogo.
+        /// </summary>
     public void MostrarLinea()
     {
         // Reproduce el sonido asociado al avance de diálogo si está configurado y el AudioManager existe
