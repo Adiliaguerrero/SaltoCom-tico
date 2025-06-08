@@ -32,13 +32,10 @@ public class TranscribirOracion2 : MonoBehaviour
     /// </summary>
     public AudioClip sonidoBoton;
 
-    // Oración que se muestra sin comas, para que el usuario la corrija
     private string oracionSinComas = "Reescriba la siguiente oración colocando la coma en los lugares correctos \n\"En cuanto me levanté me bañé comí y cepillé mis dientes.\"";
 
-    // Oración correcta con la puntuación adecuada para validar la respuesta del usuario
     private string oracionCorrecta = "En cuanto me levanté me bañé, comí y cepillé mis dientes.";
 
-    // Método que se ejecuta al iniciar el script
     void Start()
     {
         // Asigna la oración sin comas al texto visible
@@ -51,7 +48,9 @@ public class TranscribirOracion2 : MonoBehaviour
         campoRespuesta.text = "";
     }
 
-    // Método público que verifica si la respuesta del usuario es correcta o no
+    /// <summary>
+    /// Verifica si la respuesta ingresada por el usuario coincide con la oración correcta.
+    /// </summary>
     public void VerificarRespuesta()
     {
         // Reproduce el sonido del botón usando el AudioManager global
