@@ -1,8 +1,9 @@
-// Importamos las librerías necesarias para Unity y TextMeshPro
-using UnityEngine;              // Funciones básicas y objetos de Unity
-using TMPro;                   // Para manejar textos y campos de entrada con TextMeshPro
+using UnityEngine;
+using TMPro;                  
 
-// Clase que controla la transcripción de una oración con sus comas correspondientes
+/// <summary>
+/// Controla la transcripción de una oración en la que el usuario debe colocar correctamente las comas.
+/// </summary>
 public class TranscribirOracion2 : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar entre preguntas
@@ -18,7 +19,7 @@ public class TranscribirOracion2 : MonoBehaviour
     public TMP_Text textoRetroalimentacion;
 
     // Clip de audio que se reproducirá al pulsar el botón, asignado desde el Inspector
-    public AudioClip sonidoBoton; 
+    public AudioClip sonidoBoton;
 
     // Oración que se muestra sin comas, para que el usuario la corrija
     private string oracionSinComas = "Reescriba la siguiente oración colocando la coma en los lugares correctos \n\"En cuanto me levanté me bañé comí y cepillé mis dientes.\"";
