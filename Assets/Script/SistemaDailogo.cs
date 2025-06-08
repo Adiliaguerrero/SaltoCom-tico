@@ -1,11 +1,13 @@
-// Importamos las librerías necesarias para usar funciones básicas de Unity, manejo de UI y corrutinas
 using UnityEngine;
-using TMPro;                 // Para manejar textos con TextMeshPro
-using UnityEngine.UI;        // Para manejar UI, como botones
-using System.Collections;    // Para usar corrutinas
+using TMPro;                 
+using UnityEngine.UI;       
+using System.Collections;
 
-// Esta clase controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,
-// el bloqueo del movimiento del jugador mientras se muestra el diálogo, y la reaparición del NPC con un diálogo diferente
+
+/// <summary>
+/// Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,
+/// el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC.
+/// </summary>
 public class SistemaDialogo : MonoBehaviour
 {
     // Panel que contiene la UI del diálogo (texto y botón)
