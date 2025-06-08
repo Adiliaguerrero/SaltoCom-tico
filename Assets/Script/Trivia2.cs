@@ -41,19 +41,14 @@ public class OpcionUnica : MonoBehaviour
 
     void Start()
     {
-        // Asigna el texto de la pregunta al componente correspondiente
         preguntaTexto.text = pregunta;
 
-        // Limpia el texto de retroalimentación para que no muestre nada al iniciar
         retroalimentacionTexto.text = "";
 
-        // Recorre el array de botones para asignarles el texto correspondiente
         for (int i = 0; i < botonesOpciones.Length; i++)
         {
-            // Obtiene el componente TextMeshPro hijo dentro del botón
             TextMeshProUGUI textoBoton = botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>();
 
-            // Si el componente existe, asigna el texto de la opción correspondiente
             if (textoBoton != null)
             {
                 textoBoton.text = opciones[i];
@@ -83,70 +78,51 @@ public class OpcionUnica : MonoBehaviour
         /// </summary>
     public void SeleccionarOpcion3() => VerificarRespuesta(3);
 
-    // Método privado que verifica si la opción seleccionada es correcta o no
     void VerificarRespuesta(int indiceSeleccionado)
     {
-        // Reproduce el sonido del botón usando el AudioManager global
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Compara el índice seleccionado con el índice de la respuesta correcta
         if (indiceSeleccionado == indiceRespuestaCorrecta)
         {
-            // Si es correcta, muestra el mensaje "¡Correcto!"
             retroalimentacionTexto.text = "¡Correcto!";
 
-            // Incrementa el puntaje de respuestas correctas
             IncrementarPuntajeBasicoCorrecto();
         }
         else
         {
-            // Si es incorrecta, muestra el mensaje "Incorrecto."
             retroalimentacionTexto.text = "Incorrecto.";
 
-            // Incrementa el puntaje de respuestas incorrectas
             IncrementarPuntajeBasicoIncorrecto();
         }
 
-        // Deshabilita todos los botones para evitar cambiar la respuesta
         foreach (Button b in botonesOpciones)
         {
             b.interactable = false;
         }
 
-        // Llama al método para pasar a la siguiente trivia después de 2 segundos
         Invoke("PasarASiguienteTrivia", 2f);
     }
 
-    // Método que avanza a la siguiente pregunta de trivia usando el controlador de paneles
     void PasarASiguienteTrivia()
     {
-        // Llama al método SiguienteTrivia del controlador Paneles1
         Paneles1.SiguienteTrivia();
     }
 
-    // Método que incrementa el puntaje guardado en PlayerPrefs para respuestas correctas
     void IncrementarPuntajeBasicoCorrecto()
     {
-        // Obtiene el puntaje actual de respuestas correctas, si no existe devuelve 0
         int puntajeCorrectoBasico = PlayerPrefs.GetInt("PuntajeCorrectoBasico", 0);
 
-        // Incrementa en 1 el puntaje
         puntajeCorrectoBasico++;
 
-        // Guarda el nuevo puntaje actualizado en PlayerPrefs
         PlayerPrefs.SetInt("PuntajeCorrectoBasico", puntajeCorrectoBasico);
     }
 
-    // Método que incrementa el puntaje guardado en PlayerPrefs para respuestas incorrectas
     void IncrementarPuntajeBasicoIncorrecto()
     {
-        // Obtiene el puntaje actual de respuestas incorrectas, si no existe devuelve 0
         int puntajeIncorrectoBasico = PlayerPrefs.GetInt("PuntajeIncorrectoBasico", 0);
 
-        // Incrementa en 1 el puntaje
         puntajeIncorrectoBasico++;
 
-        // Guarda el nuevo puntaje actualizado en PlayerPrefs
         PlayerPrefs.SetInt("PuntajeIncorrectoBasico", puntajeIncorrectoBasico);
     }
 }
