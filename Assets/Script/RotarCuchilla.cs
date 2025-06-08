@@ -7,6 +7,10 @@ using UnityEngine;
 public class RotarCuchilla : MonoBehaviour
 {
     // Velocidad de rotación en grados por segundo (ajustable desde el Inspector)
+        /// <summary>
+        /// Velocidad de rotación en grados por segundo.
+        /// Puede configurarse desde el Inspector de Unity.
+        /// </summary>
     public float velocidadRotacion = 180f;
 
     // Método llamado una vez por frame
