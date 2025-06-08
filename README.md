@@ -54,6 +54,16 @@ Controla a tu personaje en un mundo colorido, supera obstáculos, resuelve trivi
 
 ---
 
+## Solución de Problemas
+
+| Problema                             | Solución sugerida                                  |
+|-------------------------------------|----------------------------------------------------|
+| La app no se instala                | Verifica que esté activada la opción de fuentes desconocidas. |
+| El juego se cierra inesperadamente | Cierra otras apps y libera RAM.                    |
+| No hay sonido                       | Revisa el volumen del dispositivo.                 |
+| No aparecen trivias                 | Reinstala la aplicación.                           |
+
+
 ##  Contacto
 
 Para sugerencias, comentarios o soporte:
