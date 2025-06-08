@@ -1,10 +1,13 @@
-// Importamos las librerías necesarias para Unity, UI y TextMeshPro
-using UnityEngine;               // Funciones básicas y objetos de Unity
-using UnityEngine.UI;            // Para manejar componentes UI como botones
-using TMPro;                    // Para textos con TextMeshPro
-using System.Collections.Generic; // Para usar listas genéricas
+using UnityEngine;             
+using UnityEngine.UI;           
+using TMPro;                    
+using System.Collections.Generic;
 
 // Clase que controla una pregunta de opción múltiple con botones seleccionables
+
+    /// <summary>
+    /// Controla una pregunta de opción múltiple, permite seleccionar varias respuestas y muestra retroalimentación.
+    /// </summary>
 public class PreguntaOpcionMultiple : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar entre preguntas
@@ -76,7 +79,7 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         }
 
         // Actualiza los colores para reflejar las opciones seleccionadas
-        
+
     }
 
     // Método que verifica las respuestas seleccionadas al confirmar
@@ -153,7 +156,7 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         Paneles1.SiguienteTrivia();
     }
 
-   
+
 
     // Incrementa el puntaje de respuestas correctas en PlayerPrefs
     void IncrementarPuntajeBasicoCorrecto()
