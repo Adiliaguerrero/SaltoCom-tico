@@ -7,19 +7,29 @@ using TMPro;
     /// </summary>
 public class TextoConComasTMP : MonoBehaviour
 {
-    // Referencia al componente TextMeshProUGUI que contiene el texto con espacios para comas
+    /// <summary>
+    /// Componente TextMeshProUGUI que contiene el texto con espacios para colocar comas.
+    /// </summary>
     public TextMeshProUGUI textoTMP;
 
-    // Texto para mostrar retroalimentación al usuario (correcto o incorrecto)
+    /// <summary>
+    /// Texto que muestra la retroalimentación sobre el resultado de la verificación.
+    /// </summary>
     public TextMeshProUGUI textoRetroalimentacion;
 
-    // Array con los espacios (posiciones) válidos donde se deben colocar las comas (RectTransform de UI)
+    /// <summary>
+    /// Arreglo de RectTransforms que representan las posiciones válidas donde deben ir las comas.
+    /// </summary>
     public RectTransform[] espaciosValidos;
 
-    // Referencia para manejar el avance entre preguntas o escenas
+    /// <summary>
+    /// Referencia al controlador de paneles encargado de avanzar entre preguntas o escenas.
+    /// </summary> 
     public Paneles1 Paneles1;
 
-    // Audio que se reproduce al verificar las comas
+    /// <summary>
+    /// Clip de sonido que se reproduce al verificar las comas.
+    /// </summary>
     public AudioClip sonidoBoton;
 
     // Texto original que contiene espacios donde irán las comas (representados con [   ])
