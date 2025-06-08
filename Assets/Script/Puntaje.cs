@@ -140,6 +140,9 @@ public static PuntosManager instancia;
     }
 
     // Metodo que actualiza o cambia los textos de puntajes con los valores guardados en PlayerPrefs
+    /// <summary>
+    /// Actualiza los textos en pantalla con los valores almacenados en PlayerPrefs.
+    /// </summary>
     public void ActualizarPuntajes()
     {
         if (BasicoCorrectoText != null)
@@ -161,7 +164,9 @@ public static PuntosManager instancia;
             AvanzadoIncorrectoText.text = PlayerPrefs.GetInt("PuntajeIncorrectoAvanzado", 0).ToString();
     }
 
-    // Método para limpiar los puntajes guardados en PlayerPrefs y actualizar la UI
+        /// <summary>
+        /// Reinicia todos los puntajes guardados en PlayerPrefs y actualiza la UI.
+        /// </summary>
     public void LimpiarPuntaje()
     {
         PlayerPrefs.SetInt("PuntajeCorrectoBasico", 0);
