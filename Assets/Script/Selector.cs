@@ -41,14 +41,21 @@ public class SelectorPersonaje : MonoBehaviour
         /// </summary>
     public Button seleccionarButton;
 
-    // Texto UI para mostrar el nombre del personaje seleccionado
+        /// <summary>
+        /// Texto UI para mostrar el nombre del personaje seleccionado.
+        /// </summary>
     public TMP_Text nombrePersonajeTexto;
 
+
+    /// <summary>
+    /// Sonido que se reproduce al interactuar con los botones.
+    /// </summary>
     [Header("Audio")]
-    // Sonido que se reproduce al presionar los botones
     public AudioClip sonidoBoton;
 
-    // Método para avanzar al siguiente personaje en la lista
+        /// <summary>
+        /// Avanza al siguiente personaje disponible en el array de personajes.
+        /// </summary>
     public void SiguientePersonaje()
     {
         ReproducirSonidoBoton();
@@ -59,7 +66,9 @@ public class SelectorPersonaje : MonoBehaviour
         CambiarPersonaje();
     }
 
-    // Método para retroceder al personaje anterior en la lista
+        /// <summary>
+        /// Retrocede al personaje anterior en la lista de selección.
+        /// </summary>
     public void AnteriorPersonaje()
     {
         ReproducirSonidoBoton();
@@ -70,15 +79,12 @@ public class SelectorPersonaje : MonoBehaviour
         CambiarPersonaje();
     }
 
-    // Actualiza la imagen y el nombre del personaje mostrado en pantalla
     private void CambiarPersonaje()
     {
         GameObject personajeSeleccionado = personajes[indicePersonaje];
 
-        // Asignamos el sprite del personaje actual a la imagen UI
         imagenPersonaje.sprite = personajeSeleccionado.GetComponent<SpriteRenderer>().sprite;
 
-        // Actualizamos el texto con el nombre del personaje, o "Desconocido" si no hay nombre asignado
         if (indicePersonaje < nombresPersonajes.Length)
         {
             nombrePersonajeTexto.text = nombresPersonajes[indicePersonaje];
@@ -89,7 +95,10 @@ public class SelectorPersonaje : MonoBehaviour
         }
     }
 
-    // Método para confirmar la selección del personaje y cargar la escena "Aventura"
+
+        /// <summary>
+        /// Guarda el personaje seleccionado en PlayerPrefs y carga la escena de aventura.
+        /// </summary>
     public void SeleccionarPersonaje()
     {
         ReproducirSonidoBoton();
@@ -102,7 +111,6 @@ public class SelectorPersonaje : MonoBehaviour
         SceneManager.LoadScene("Aventura");
     }
 
-    // Inicialización: asignamos los métodos a los botones y actualizamos la UI para mostrar el personaje inicial
     void Start()
     {
         siguienteButton.onClick.AddListener(SiguientePersonaje);
@@ -112,7 +120,6 @@ public class SelectorPersonaje : MonoBehaviour
         CambiarPersonaje();
     }
 
-    // Reproduce un sonido de botón, si está asignado y hay un AudioManager disponible
     private void ReproducirSonidoBoton()
     {
         if (sonidoBoton != null && AudioManager.instancia != null)
