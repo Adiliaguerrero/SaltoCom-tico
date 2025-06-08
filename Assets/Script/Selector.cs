@@ -1,11 +1,12 @@
-// Importamos el espacio de nombres necesario para trabajar con Unity
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-// Esta clase permite seleccionar un personaje jugable, mostrando su imagen y nombre correspondiente, 
-//  guardando la selección para cargar una escena de aventura con el personaje elegido.
+    /// <summary>
+    /// Permite al jugador seleccionar un personaje, mostrando su sprite e información,
+    /// y luego carga la escena de aventura con el personaje elegido.
+    /// </summary>
 public class SelectorPersonaje : MonoBehaviour
 {
     // Array con los personajes disponibles (GameObjects con SpriteRenderer)
@@ -30,7 +31,7 @@ public class SelectorPersonaje : MonoBehaviour
 
     [Header("Audio")]
     // Sonido que se reproduce al presionar los botones
-    public AudioClip sonidoBoton; 
+    public AudioClip sonidoBoton;
 
     // Método para avanzar al siguiente personaje en la lista
     public void SiguientePersonaje()
