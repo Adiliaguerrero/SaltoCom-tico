@@ -44,14 +44,24 @@ public static PuntosManager instancia;
         /// </summary>
     public TextMeshProUGUI AvanzadoIncorrectoText;
 
-    // Referencias a botones para limpiar puntajes y cambiar de escena
+        /// <summary>
+        /// Botón para limpiar los puntajes acumulados.
+        /// </summary>
     public Button limpiarPuntajeButton;
+        /// <summary>
+        /// Botón para cambiar a otra escena.
+        /// </summary>
     public Button cambiarEscenaButton;
 
-    // Clip de audio que se reproducirá al presionar un botón
+        /// <summary>
+        /// Clip de audio que se reproducirá al presionar un botón.
+        /// </summary>
     public AudioClip botonSonido;
 
-    // Nombre de la escena a cargar al cambiar escena
+    
+        /// <summary>
+        /// Nombre de la escena a cargar cuando se presione el botón de cambiar escena.
+        /// </summary>
     public string nombreEscena;
 
     // Método llamado automáticamente por Unity al instanciar este objeto
