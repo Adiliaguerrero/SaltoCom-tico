@@ -40,13 +40,13 @@ public class PreguntaOpcionMultiple : MonoBehaviour
     /// </summary>
     public TextMeshProUGUI textoResultado;
 
-    // Clip de audio que se reproducirá al pulsar cualquier botón, asignado desde el Inspector
+    /// <summary>
+    /// Clip de audio que se reproduce al seleccionar o confirmar una opción.
+    /// </summary>
     public AudioClip sonidoBoton;
 
-    // Pregunta que se mostrará al usuario (privada porque no es necesaria en Inspector)
     private string pregunta = "¿Cuál de las siguientes oraciones usa correctamente la coma para separar elementos de una serie?";
 
-    // Array con las opciones que aparecerán en los botones
     private string[] opciones = {
         "A.Me gusta comer pizza hamburguesa y helado.",
         "B.En el parque hay árboles, flores y bancos.",
@@ -54,13 +54,10 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         "D.Mis colores favoritos son rojo, azul y verde"
     };
 
-    // Índices de las opciones correctas (aquí son dos opciones correctas: la 0 y la 3)
     private int[] indicesCorrectos = { 0, 3 };
 
-    // Lista para almacenar los índices de las opciones que el usuario ha seleccionado
     private List<int> seleccionadas = new List<int>();
 
-    // Método que se ejecuta al iniciar el script
     void Start()
     {
         // Asigna el texto de la pregunta al componente correspondiente
@@ -73,7 +70,7 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         }
     }
 
-    // Método público llamado al seleccionar una opción, con el índice de la opción
+
     public void SeleccionarOpcion(int indice)
     {
         // Reproduce el sonido del botón usando el AudioManager global
