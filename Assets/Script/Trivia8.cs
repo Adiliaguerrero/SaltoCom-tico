@@ -64,10 +64,25 @@ public class OpcionUnica3 : MonoBehaviour
         }
     }
 
-    // Métodos públicos para cada botón que llaman a VerificarRespuesta con el índice correspondiente
+
+    /// <summary>
+    /// Método invocado al seleccionar la opción A (índice 0).
+    /// </summary>
     public void SeleccionarOpcion0() => VerificarRespuesta(0);
+
+    /// <summary>
+    /// Método invocado al seleccionar la opción B (índice 1).
+    /// </summary>
     public void SeleccionarOpcion1() => VerificarRespuesta(1);
+
+    /// <summary>
+    /// Método invocado al seleccionar la opción C (índice 2).
+    /// </summary>
     public void SeleccionarOpcion2() => VerificarRespuesta(2);
+
+    /// <summary>
+    /// Método invocado al seleccionar la opción D (índice 3).
+    /// </summary>
     public void SeleccionarOpcion3() => VerificarRespuesta(3);
 
     // Método que verifica si la opción seleccionada es la correcta
