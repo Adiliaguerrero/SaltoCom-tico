@@ -6,19 +6,30 @@ using TMPro;
 /// </summary>
 public class TranscribirOracion2 : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas
+    /// <summary>
+    /// Referencia al controlador de paneles para avanzar entre preguntas o escenas.
+    /// </summary>
     public Paneles1 Paneles1;
 
-    // Componente TMP_Text donde se mostrará la oración sin comas
-    public TMP_Text textoOracion;
+    /// <summary>
+    /// Componente TMP_Text donde se muestra la oración original sin comas.
+    /// </summary>
+        public TMP_Text textoOracion;
 
-    // Campo de entrada TMP_InputField donde el usuario escribirá la respuesta
+    /// <summary>
+    /// Campo de entrada donde el usuario debe escribir la oración corregida con comas.
+    /// </summary>
     public TMP_InputField campoRespuesta;
 
-    // Texto TMP donde se mostrará la retroalimentación (correcto o incorrecto)
+    /// <summary>
+    /// Texto que muestra la retroalimentación tras verificar la respuesta (correcta o incorrecta).
+    /// </summary>
     public TMP_Text textoRetroalimentacion;
 
-    // Clip de audio que se reproducirá al pulsar el botón, asignado desde el Inspector
+   
+    /// <summary>
+    /// Sonido que se reproduce al verificar la respuesta, asignado desde el Inspector.
+    /// </summary>
     public AudioClip sonidoBoton;
 
     // Oración que se muestra sin comas, para que el usuario la corrija
