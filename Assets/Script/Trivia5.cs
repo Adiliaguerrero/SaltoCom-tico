@@ -32,7 +32,6 @@ public class TextoConComasTMP : MonoBehaviour
     /// </summary>
     public AudioClip sonidoBoton;
 
-    // Texto original que contiene espacios donde irán las comas (representados con [   ])
     private string textoOriginal = "Compré plátanos [   ] manzanas [   ] uvas [   ] peras y pan.";
 
     // Método llamado al iniciar el script
@@ -46,7 +45,9 @@ public class TextoConComasTMP : MonoBehaviour
             textoRetroalimentacion.gameObject.SetActive(false);
     }
 
-    // Método que verifica si las comas han sido colocadas correctamente en todos los espacios válidos
+    /// <summary>
+    /// Verifica si las comas han sido colocadas correctamente en los espacios válidos.
+    /// </summary>
     public void VerificarComas()
     {
         // Reproducimos el sonido al verificar
