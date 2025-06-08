@@ -13,28 +13,32 @@ public class OpcionUnica : MonoBehaviour
         /// </summary>
     public Paneles1 Paneles1;
 
-    // Componente TextMeshPro donde se mostrará la pregunta
+        /// <summary>
+        /// Componente de texto donde se mostrará la pregunta.
+        /// </summary>    
     public TMP_Text preguntaTexto;
 
-    // Array con los botones que representan las opciones para responder
+        /// <summary>
+        /// Botones que representan las posibles respuestas.
+        /// </summary>
     public Button[] botonesOpciones;
 
-    // Texto donde se mostrará la retroalimentación (correcto o incorrecto)
+        /// <summary>
+        /// Texto para mostrar si la respuesta fue correcta o incorrecta.
+        /// </summary> 
     public TextMeshProUGUI retroalimentacionTexto;
 
-    // Clip de audio que se reproducirá al pulsar cualquier botón, asignado desde el Inspector
+        /// <summary>
+        /// Clip de sonido que se reproduce al seleccionar una opción.
+        /// </summary>
     public AudioClip sonidoBoton;
 
-    // Pregunta que se mostrará al usuario (privada porque no es necesaria en Inspector)
     private string pregunta = "En la oración \"Compré lápices, cuadernos, marcadores y borradores\", ¿cuántas comas hay?";
 
-    // Array con las opciones que aparecerán en los botones
     private string[] opciones = { "A.Uno.", "B.Dos.", "C.Tres.", "D.Cuatro." };
 
-    // Índice que indica cuál opción es la correcta (comienza en 0)
     private int indiceRespuestaCorrecta = 1; // La opción correcta es "B.Dos."
 
-    // Método que se ejecuta al iniciar el script
     void Start()
     {
         // Asigna el texto de la pregunta al componente correspondiente
