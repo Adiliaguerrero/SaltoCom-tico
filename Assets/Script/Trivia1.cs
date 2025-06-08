@@ -33,12 +33,20 @@ public class Trivia1 : MonoBehaviour
     /// </summary>
     public TextMeshProUGUI retroalimentacionTexto;
 
+
+    /// <summary>
+    /// Clip de audio que se reproduce al pulsar cualquier botón.
+    /// </summary>
     public AudioClip sonidoBoton;
 
-
+    /// <summary>
+    /// Texto que contiene la pregunta de la trivia.
+    /// </summary>
     public string pregunta = "¿El sol es una estrella?";
 
-    
+    /// <summary>
+    /// Valor booleano que indica cuál es la respuesta correcta.
+    /// </summary>
     public bool respuestaCorrecta = true;
 
     // Método que se ejecuta al iniciar el script
