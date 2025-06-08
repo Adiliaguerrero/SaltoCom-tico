@@ -7,7 +7,9 @@ using TMPro;
     /// </summary>
 public class Trivia1 : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas
+        /// <summary>
+        /// Referencia al controlador de paneles para avanzar entre preguntas.
+        /// </summary>
     public Paneles1 Paneles1;
 
     // Componente TextMeshPro donde se mostrará la pregunta
