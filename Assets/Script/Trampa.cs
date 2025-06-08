@@ -1,7 +1,9 @@
-// Importamos la librería principal de Unity para funciones básicas y eventos físicos
 using UnityEngine;
 
-// Esta clase controla el comportamiento de un objeto tipo "espina" que inflige daño al jugador cuando colisiona desde arriba
+    /// <summary>
+    /// Controla el comportamiento de un objeto tipo "espina" que inflige daño al jugador 
+    /// al colisionar desde arriba.
+    /// </summary>
 public class Espina : MonoBehaviour
 {
     // Cantidad de daño que la espina inflige al jugador al colisionar
