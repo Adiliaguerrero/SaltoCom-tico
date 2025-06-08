@@ -10,22 +10,34 @@ using System.Collections.Generic;
     /// </summary>
 public class PreguntaOpcionMultiple : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas
+    /// <summary>
+    /// Referencia al controlador de paneles para avanzar entre preguntas.
+    /// </summary>
     public Paneles1 Paneles1;
 
-    // Texto donde se mostrará la pregunta (TextMeshPro)
+    /// <summary>
+    /// Texto que muestra la pregunta actual.
+    /// </summary>
     public TextMeshProUGUI textoPregunta;
 
-    // Array de botones que representan las opciones para responder
+    /// <summary>
+    /// Botones que representan las opciones posibles.
+    /// </summary>
     public Button[] botonesOpciones;
-
-    // Array con los textos asociados a cada opción (TextMeshPro)
+    
+    /// <summary>
+    /// Textos asociados a cada opción del array de botones.
+    /// </summary>
     public TextMeshProUGUI[] textosOpciones;
 
-    // Botón para confirmar las opciones seleccionadas
+    /// <summary>
+    /// Botón utilizado para confirmar la selección del jugador.
+    /// </summary>
     public Button botonConfirmar;
 
-    // Texto donde se mostrará el resultado o retroalimentación al usuario
+    /// <summary>
+    /// Texto que muestra el resultado de la selección del jugador.
+    /// </summary>
     public TextMeshProUGUI textoResultado;
 
     // Clip de audio que se reproducirá al pulsar cualquier botón, asignado desde el Inspector
