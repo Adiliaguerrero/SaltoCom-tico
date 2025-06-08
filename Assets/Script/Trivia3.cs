@@ -93,8 +93,10 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         // Actualiza los colores para reflejar las opciones seleccionadas
 
     }
-
-    // Método que verifica las respuestas seleccionadas al confirmar
+    
+    /// <summary>
+    /// Verifica si las opciones seleccionadas son correctas y proporciona retroalimentación.
+    /// </summary>
     public void VerificarRespuestas()
     {
         // Reproduce el sonido del botón al confirmar
