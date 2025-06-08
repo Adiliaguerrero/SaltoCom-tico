@@ -1,7 +1,8 @@
-// Importamos la librería principal de Unity para usar funciones básicas y detectar colisiones
 using UnityEngine;
 
-// Esta clase representa una cuchilla que inflige daño al jugador cuando colisionan
+    /// <summary>
+    /// Representa una cuchilla que inflige daño al jugador al colisionar con él.
+    /// </summary>
 public class Cuchilla : MonoBehaviour
 {
     // Cantidad de daño que la cuchilla inflige al jugador al tocarlo
