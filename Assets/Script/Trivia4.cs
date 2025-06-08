@@ -7,19 +7,29 @@ using UnityEngine.UI;
     /// </summary>
 public class OpcionUnica2 : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas o escenas
+        /// <summary>
+        /// Referencia al controlador de paneles para avanzar entre preguntas o escenas.
+        /// </summary>
     public Paneles1 Paneles1;
 
-    // Texto donde se muestra la pregunta (TextMeshPro)
+        /// <summary>
+        /// Texto que muestra la pregunta en pantalla.
+        /// </summary>
     public TMP_Text preguntaTexto;
 
-    // Array de botones para las opciones de respuesta
+        /// <summary>
+        /// Botones que representan las diferentes opciones de respuesta.
+        /// </summary>
     public Button[] botonesOpciones;
 
-    // Texto donde se muestra la retroalimentación ("Correcto", "Incorrecto", etc.)
+        /// <summary>
+        /// Texto que muestra la retroalimentación sobre la respuesta del jugador.
+        /// </summary>
     public TextMeshProUGUI retroalimentacionTexto;
 
-    // Clip de sonido que se reproduce al pulsar un botón, asignado desde Inspector
+        /// <summary>
+        /// Clip de sonido que se reproduce al pulsar un botón.
+        /// </summary>
     public AudioClip sonidoBoton;
 
     // Texto de la pregunta que se mostrará al usuario (privado porque no es necesario en Inspector)
