@@ -4,8 +4,10 @@ using TMPro;
 using UnityEngine.EventSystems;
 
 
-// Esta clase permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas).
-// Utiliza una línea para representar la conexión entre ambas oraciones
+    /// <summary>
+    /// Permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas).
+    /// Utiliza una línea para representar la conexión entre ambas oraciones.
+    /// </summary>
 public class UnirFrasesInteractivo : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar en la trivia o actividades
