@@ -11,26 +11,34 @@ public class Trivia1 : MonoBehaviour
         /// Referencia al controlador de paneles para avanzar entre preguntas.
         /// </summary>
     public Paneles1 Paneles1;
-
-    // Componente TextMeshPro donde se mostrará la pregunta
+   
+    /// <summary>
+    /// Componente de texto donde se mostrará la pregunta.
+    /// </summary>
     public TextMeshProUGUI preguntaTexto;
 
-    // Botón para seleccionar "Verdadero"
+
+    /// <summary>
+    /// Botón para seleccionar "Verdadero".
+    /// </summary>
     public Button botonVerdadero;
 
-    // Botón para seleccionar "Falso"
+    /// <summary>
+    /// Botón para seleccionar "Falso".
+    /// </summary>
     public Button botonFalso;
 
-    // Texto donde se mostrará la retroalimentación (correcto o incorrecto)
+    /// <summary>
+    /// Texto donde se mostrará la retroalimentación (correcto o incorrecto).
+    /// </summary>
     public TextMeshProUGUI retroalimentacionTexto;
 
-    // Clip de audio que se reproduce al pulsar cualquier botón, asignado desde el Inspector
     public AudioClip sonidoBoton;
 
-    // Texto que contiene la pregunta de la trivia
+
     public string pregunta = "¿El sol es una estrella?";
 
-    // Valor booleano que indica cuál es la respuesta correcta (true = Verdadero, false = Falso)
+    
     public bool respuestaCorrecta = true;
 
     // Método que se ejecuta al iniciar el script
