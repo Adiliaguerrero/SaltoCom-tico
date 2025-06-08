@@ -8,7 +8,9 @@ using UnityEngine.UI;
     /// </summary>
 public class OpcionUnica : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas
+        /// <summary>
+        /// Referencia al controlador de paneles que permite avanzar entre preguntas.
+        /// </summary>
     public Paneles1 Paneles1;
 
     // Componente TextMeshPro donde se mostrará la pregunta
