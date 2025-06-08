@@ -1,9 +1,11 @@
-// Importamos las librerías necesarias para Unity, TextMeshPro y UI
 using UnityEngine;              
-using TMPro;                   
-using UnityEngine.UI;          // Para manejar botones UI
+using TMPro;
+using UnityEngine.UI;
 
-// Clase que controla una pregunta de opción única 
+
+/// <summary>
+/// Controla una pregunta de opción única en el nivel avanzado del juego, evaluando el uso correcto de la coma.
+/// </summary>
 public class OpcionUnica3 : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar entre preguntas
@@ -19,7 +21,7 @@ public class OpcionUnica3 : MonoBehaviour
     public TextMeshProUGUI retroalimentacionTexto;
 
     // Clip de audio que se reproduce al pulsar un botón
-    public AudioClip sonidoBoton;  
+    public AudioClip sonidoBoton;
 
     // Pregunta a mostrar
     private string pregunta = " ¿Dónde deberías empezar a colocar una coma en la siguiente oración: Traje lápices bolígrafos marcadores y borradores";
@@ -96,17 +98,14 @@ public class OpcionUnica3 : MonoBehaviour
         Paneles1.SiguienteTrivia();
     }
 
-    // Método que incrementa el puntaje para respuestas correctas avanzadas en PlayerPrefs
     void IncrementarPuntajeAvanzadoCorrecto()
     {
         int puntajeCorrectoAvanzado = PlayerPrefs.GetInt("PuntajeCorrectoAvanzado", 0);
         PlayerPrefs.SetInt("PuntajeCorrectoAvanzado", ++puntajeCorrectoAvanzado);
     }
 
-    // Método que incrementa el puntaje para respuestas incorrectas avanzadas en PlayerPrefs
     void IncrementarPuntajeAvanzadoIncorrecto()
     {
-        // Nota: Aquí había un error tipográfico en la clave "PuntajeIncorrectAvanzado", corregido a "PuntajeIncorrectoAvanzado"
         int puntajeIncorrectoAvanzado = PlayerPrefs.GetInt("PuntajeIncorrectoAvanzado", 0);
         PlayerPrefs.SetInt("PuntajeIncorrectoAvanzado", ++puntajeIncorrectoAvanzado);
     }
