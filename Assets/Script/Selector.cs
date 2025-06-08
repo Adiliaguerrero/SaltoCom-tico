@@ -9,21 +9,36 @@ using TMPro;
     /// </summary>
 public class SelectorPersonaje : MonoBehaviour
 {
-    // Array con los personajes disponibles (GameObjects con SpriteRenderer)
+        /// <summary>
+        /// Lista de objetos de personajes disponibles para selección.
+        /// </summary>
     public GameObject[] personajes;
 
-    // Nombres correspondientes a cada personaje para mostrar en pantalla
+        /// <summary>
+        /// Nombres correspondientes a cada personaje para mostrar en la interfaz.
+        /// </summary>
     public string[] nombresPersonajes;
-
-    // Imagen UI donde se mostrará el sprite del personaje seleccionado
+    
+    /// <summary>
+    /// Imagen UI donde se muestra el sprite del personaje seleccionado.
+    /// </summary>
     public Image imagenPersonaje;
 
-    // Índice del personaje actualmente seleccionado
     private int indicePersonaje = 0;
-
-    // Botones para navegar entre personajes y seleccionar
+    
+        /// <summary>
+        /// Botón para ir al siguiente personaje.
+        /// </summary>
     public Button siguienteButton;
+
+        /// <summary>
+        /// Botón para ir al personaje anterior.
+        /// </summary>
     public Button anteriorButton;
+
+        /// <summary>
+        /// Botón para confirmar la selección del personaje actual.
+        /// </summary>
     public Button seleccionarButton;
 
     // Texto UI para mostrar el nombre del personaje seleccionado
