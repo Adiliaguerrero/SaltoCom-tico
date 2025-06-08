@@ -1,0 +1,1916 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assembly-CSharp</name>
+    </assembly>
+    <members>
+        <member name="T:DestruirParticulasAlColisionar">
+            <summary>
+            Elimina visualmente las partículas de un <see cref="T:UnityEngine.ParticleSystem"/> cuando colisionan con un objeto etiquetado como "Suelo".
+            </summary>
+            <remarks>
+            Utiliza el evento <c>OnParticleCollision</c> para detectar colisiones y forzar la expiración de las partículas activas.
+            Requiere que el <c>GameObject</c> tenga un componente <c>ParticleSystem</c> y colisionadores configurados.
+            </remarks>
+        </member>
+        <member name="F:DestruirParticulasAlColisionar.ps">
+            <summary>
+            Referencia al componente <see cref="T:UnityEngine.ParticleSystem"/> asociado a este objeto.
+            </summary>
+        </member>
+        <member name="T:ForzarEscala">
+            <summary>
+            Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha).
+            </summary>
+            <remarks>
+            Se recomienda usar este script para personajes o sprites que deban conservar su tamaño original sin distorsión,
+            pero aún puedan girar horizontalmente.
+            </remarks>
+            <example>
+            Asigna este script a un GameObject y configura su <see cref="F:ForzarEscala.escalaCorrecta"/> desde el Inspector.
+            </example>
+        </member>
+        <member name="F:ForzarEscala.escalaCorrecta">
+            <summary>
+            Escala correcta que debe aplicarse al objeto en los ejes X e Y.
+            </summary>
+            <value>
+            Vector2 con la escala deseada. El valor X puede invertirse internamente para reflejar la dirección.
+            </value>
+        </member>
+        <member name="M:ForzarEscala.LateUpdate">
+            <summary>
+            Se llama automáticamente después de todos los métodos Update.
+            Aplica la escala fija y ajusta la orientación según la dirección.
+            </summary>
+            <remarks>
+            Si el objeto está volteado horizontalmente, se conserva esa inversión al aplicar la escala.
+            </remarks>
+        </member>
+        <member name="T:InstruccionesVisuales">
+            <summary>
+            Esta clase gestiona una instrucción visual en el manejo de controles en pantalla usando imágenes animadas de manos.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.manoIzquierda">
+            <summary>
+            Imagen de la mano izquierda mostrada en pantalla.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.manoDerecha">
+            <summary>
+            Imagen de la mano derecha mostrada en pantalla.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.manoTocar">
+            <summary>
+            Imagen de la mano que indica el toque en pantalla.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.duracionAnimacion">
+            <summary>
+            Duración de la animación para cada mano.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.desplazamiento">
+            <summary>
+            Cantidad de desplazamiento que realiza cada mano en su animación.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.joystick">
+            <summary>
+            Referencia al joystick utilizado para detectar movimientos.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.izquierdaMostrada">
+            <summary>
+            Indica si la mano izquierda sigue activa en pantalla.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.derechaMostrada">
+            <summary>
+            Indica si la mano derecha sigue activa en pantalla.
+            </summary>
+        </member>
+        <member name="F:InstruccionesVisuales.tocarMostrado">
+            <summary>
+            Indica si la mano de toque sigue activa en pantalla.
+            </summary>
+        </member>
+        <member name="M:InstruccionesVisuales.Start">
+            <summary>
+            Inicializa las animaciones de manos al comenzar la escena.
+            </summary>
+        </member>
+        <member name="M:InstruccionesVisuales.Update">
+            <summary>
+            Verifica la interacción del jugador y elimina las instrucciones visuales correspondientes.
+            </summary>
+        </member>
+        <member name="M:InstruccionesVisuales.AnimarMovimiento(UnityEngine.RectTransform,System.Single)">
+            <summary>
+            Anima una mano con movimiento horizontal hacia una dirección específica.
+            </summary>
+            <param name="mano">RectTransform de la mano a animar.</param>
+            <param name="direccionX">Desplazamiento horizontal.</param>
+        </member>
+        <member name="M:InstruccionesVisuales.AnimarToque(UnityEngine.RectTransform)">
+            <summary>
+            Anima la mano de toque con un movimiento vertical hacia abajo.
+            </summary>
+            <param name="mano">RectTransform de la mano de toque.</param>
+        </member>
+        <member name="M:InstruccionesVisuales.MoverMano(UnityEngine.RectTransform,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Corrutina que mueve la mano entre dos posiciones y repite la animación en bucle.
+            </summary>
+            <param name="mano">RectTransform de la mano a animar.</param>
+            <param name="desde">Posición inicial.</param>
+            <param name="hasta">Posición final.</param>
+            <returns>IEnumerator para control de corrutina.</returns>
+        </member>
+        <member name="T:BotonMusica">
+            <summary>
+            Esta clase controla la interacción del botón que activa o desactiva la música del juego.
+            </summary>
+        </member>
+        <member name="F:BotonMusica.musicaManagerPrefab">
+            <summary>
+            Prefab que contiene el controlador de música a instanciar si no existe.
+            </summary>
+        </member>
+        <member name="F:BotonMusica.musicaManager">
+            <summary>
+            Referencia al script que gestiona la música de fondo en el juego.
+            </summary>
+        </member>
+        <member name="F:BotonMusica.boton">
+            <summary>
+            Referencia al componente Button que ejecuta la acción de alternar la música.
+            </summary>
+        </member>
+        <member name="M:BotonMusica.Awake">
+            <summary>
+            Se ejecuta al instanciar el objeto, antes de Start.
+            </summary>
+        </member>
+        <member name="M:BotonMusica.Start">
+            <summary>
+            Se ejecuta al comenzar la escena, después de Awake.
+            </summary>
+        </member>
+        <member name="M:BotonMusica.OnClick">
+            <summary>
+            Método que se llama al hacer clic en el botón para alternar el estado de la música.
+            </summary>
+        </member>
+        <member name="T:TranscribirOracion2">
+            <summary>
+            Controla la transcripción de una oración en la que el usuario debe colocar correctamente las comas.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion2.Paneles1">
+            <summary>
+            Referencia al controlador de paneles para avanzar entre preguntas o escenas.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion2.textoOracion">
+            <summary>
+            Componente TMP_Text donde se muestra la oración original sin comas.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion2.campoRespuesta">
+            <summary>
+            Campo de entrada donde el usuario debe escribir la oración corregida con comas.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion2.textoRetroalimentacion">
+            <summary>
+            Texto que muestra la retroalimentación tras verificar la respuesta (correcta o incorrecta).
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion2.sonidoBoton">
+            <summary>
+            Sonido que se reproduce al verificar la respuesta, asignado desde el Inspector.
+            </summary>
+        </member>
+        <member name="M:TranscribirOracion2.VerificarRespuesta">
+            <summary>
+            Verifica si la respuesta ingresada por el usuario coincide con la oración correcta.
+            </summary>
+        </member>
+        <member name="T:PajaroEnemigo">
+            <summary>
+            Gestiona el comportamiento de un pájaro enemigo que se mueve horizontalmente y daña al jugador al contacto.
+            </summary>
+            <remarks>
+            El pájaro vuela de un lado a otro en un rango definido y cambia de dirección tras un tiempo de espera.
+            Si colisiona con el jugador, le inflige daño usando el método <c>RecibeDanio</c>.
+            </remarks>
+        </member>
+        <member name="F:PajaroEnemigo.velocidad">
+            <summary>
+            Velocidad de movimiento del pájaro.
+            </summary>
+        </member>
+        <member name="F:PajaroEnemigo.distanciaVuelo">
+            <summary>
+            Distancia máxima que el pájaro recorre en una dirección antes de cambiar.
+            </summary>
+        </member>
+        <member name="F:PajaroEnemigo.tiempoEspera">
+            <summary>
+            Tiempo de espera antes de invertir la dirección del vuelo.
+            </summary>
+        </member>
+        <member name="F:PajaroEnemigo.danio">
+            <summary>
+            Cantidad de daño que se aplica al jugador al entrar en contacto.
+            </summary>
+        </member>
+        <member name="T:AbismoCaida">
+            <summary>
+            Controla el comportamiento del abismo de caída. 
+            Si el jugador entra en contacto con esta zona, el personaje muere y se muestra el panel de Game Over.
+            </summary>
+            <remarks>
+            Esta clase debe ser añadida a un GameObject con un Collider2D marcado como "Trigger".
+            Se utiliza <see cref="M:AbismoCaida.OnTriggerEnter2D(UnityEngine.Collider2D)"/> para detectar la colisión del jugador.
+            </remarks>
+        </member>
+        <member name="F:AbismoCaida.gameOverPanel">
+            <summary>
+            Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo.
+            </summary>
+        </member>
+        <member name="M:AbismoCaida.OnTriggerEnter2D(UnityEngine.Collider2D)">
+            <summary>
+             Se ejecuta automáticamente cuando otro objeto con un Collider2D entra en el área del trigger.
+             Detecta si el jugador ha caído en el abismo.
+             </summary>
+             
+             <param name="other">El Collider2D del objeto que entró en el área del trigger.
+             </param>
+             <remarks>
+             Si el objeto tiene la etiqueta "Player", se elimina de la escena y se inicia la rutina de Game Over.
+             </remarks>
+        </member>
+        <member name="M:AbismoCaida.ShowGameOver">
+            <summary>
+            Corrutina que espera 2 segundos antes de mostrar el panel de Game Over.
+            </summary>
+            <returns>
+            Devuelve un <see cref="T:UnityEngine.WaitForSeconds"/> de 2 segundos antes de activar el panel.
+            </returns>
+            <remarks>
+            Una vez mostrado el panel, se pausa el tiempo del juego usando <see cref="P:UnityEngine.Time.timeScale"/>.
+            </remarks>
+        </member>
+        <member name="M:AbismoCaida.RestartGame">
+            <summary>
+            Reinicia la escena actual, restaurando el tiempo y reiniciando el nivel desde el inicio.
+            </summary>
+            <remarks>
+            Este método debe estar vinculado a un botón en el panel de Game Over.
+            Utiliza <see cref="M:UnityEngine.SceneManagement.SceneManager.GetActiveScene"/> y <see cref="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.String)"/>.
+            </remarks>
+        </member>
+        <member name="T:SistemaDialogo">
+            <summary>
+            Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,
+            el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.panelDialogo">
+            <summary>
+            Panel de diálogo que contiene el texto y el botón de avance.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.lineasIniciales">
+            <summary>
+            Líneas del diálogo inicial mostradas la primera vez que se interactúa con el NPC.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.lineasReaparicion">
+            <summary>
+            Líneas del diálogo mostradas cuando el NPC reaparece.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.velocidadEscritura">
+            <summary>
+            Velocidad con la que se escribe cada letra del texto (en segundos).
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.textoDialogo">
+            <summary>
+            Objeto de texto (TextMeshProUGUI) donde se mostrará el diálogo.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.npcPrefab">
+            <summary>
+            Prefab del NPC que se instanciará cuando reaparezca con otro diálogo.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.puntoReaparicion">
+            <summary>
+            Punto donde aparecerá el NPC reaparecido.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.esReaparicion">
+            <summary>
+            Indica si el diálogo actual es parte de la reaparición del NPC.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.joystickUI">
+            <summary>
+            UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar.
+            </summary>
+        </member>
+        <member name="F:SistemaDialogo.sonidoPanel">
+            <summary>
+            Sonido que se reproduce al avanzar en el diálogo.
+            </summary>
+        </member>
+        <member name="M:SistemaDialogo.ActivarDialogo">
+            <summary>
+            Activa el sistema de diálogo, bloqueando al jugador y mostrando las líneas de texto.
+            </summary>
+        </member>
+        <member name="M:SistemaDialogo.MostrarLinea">
+            <summary>
+            Muestra la siguiente línea de diálogo con animación de escritura y gestiona el fin del diálogo.
+            </summary>
+        </member>
+        <member name="T:AudioManager">
+            <summary>
+            Gestiona globalmente el sistema de sonido del juego.
+            Permite activar o desactivar sonidos, reproducir clips de audio y guardar preferencias del jugador.
+            </summary>
+        </member>
+        <member name="F:AudioManager.sonidosActivos">
+            <summary>
+            Determina si los sonidos están habilitados o deshabilitados.
+            </summary>.
+        </member>
+        <member name="F:AudioManager.instancia">
+            <summary>
+            Instancia única del AudioManager en la escena (patrón Singleton).
+            </summary>
+        </member>
+        <member name="F:AudioManager.audioSource">
+            <summary>
+            Componente que permite reproducir sonidos en la escena.
+            </summary>
+        </member>
+        <member name="M:AudioManager.Awake">
+            <summary>
+            Awake se ejecuta cuando se instancia el objeto en la escena, antes de Start.
+            Se ejecuta al iniciar el objeto. Establece el Singleton, configura el AudioSource y carga preferencias.
+            </summary>
+        </member>
+        <member name="M:AudioManager.CargarEstadoSonido">
+            <summary>
+            Carga la preferencia de sonido del jugador desde PlayerPrefs.
+            Si no hay preferencia guardada, los sonidos se activan por defecto.
+            </summary>
+        </member>
+        <member name="M:AudioManager.CambiarEstadoSonido(System.Boolean)">
+            <summary>
+            Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.
+            </summary>
+            <param name="estado">Nuevo estado del sonido: <c>true</c> para activar, <c>false</c> para desactivar.
+            </param>
+        </member>
+        <member name="M:AudioManager.ReproducirSonido(UnityEngine.AudioClip)">
+            <summary>
+            Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.
+            </summary>
+            <param name="clip">Clip de audio a reproducir.</param>
+        </member>
+        <member name="M:AudioManager.ObtenerEstadoSonido">
+            <summary>
+            Obtiene el estado actual de los sonidos.
+            </summary>
+            <returns>
+            <c>true</c> si los sonidos están activos; de lo contrario, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:MusicaManager">
+            <summary>
+            Esta clase gestiona la música de fondo global en el juego.
+            Implementa el patrón Singleton para mantenerse persistente entre escenas.
+            </summary>
+        </member>
+        <member name="F:MusicaManager.instancia">
+            <summary>
+            Instancia estática del <see cref="T:MusicaManager"/> para aplicar el patrón Singleton.
+            </summary>
+        </member>
+        <member name="F:MusicaManager.musicaFondo">
+            <summary>
+            Componente <see cref="T:UnityEngine.AudioSource"/> que reproduce la música de fondo.
+            </summary>
+        </member>
+        <member name="F:MusicaManager.musicaActiva">
+            <summary>
+            Variable booleana que indica si la música está activa o no.
+            </summary>
+        </member>
+        <member name="M:MusicaManager.Awake">
+            <summary>
+            Se ejecuta al cargar el objeto. Inicializa la instancia Singleton y aplica el estado de la música.
+            </summary>
+        </member>
+        <member name="M:MusicaManager.AlternarMusica">
+            <summary>
+            Alterna entre activar y desactivar la música de fondo,
+            y guarda el estado en las preferencias del jugador.
+            </summary>
+        </member>
+        <member name="M:MusicaManager.AplicarEstadoMusica">
+            <summary>
+            Aplica el estado actual de la música al componente <see cref="T:UnityEngine.AudioSource"/>.
+            </summary>
+        </member>
+        <member name="T:ColisionadorTrigger2D">
+            <summary>
+            Maneja la colisión del jugador con un objeto trigger que activa un portal,
+            detiene al jugador y cambia de escena mostrando un mensaje de bienvenida.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.haColisionado">
+            <summary>
+            Controla si ya ha ocurrido la colisión para evitar múltiples activaciones.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.portal">
+            <summary>
+            Portal que se activará para permitir el cambio de escena.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.joystickUI">
+            <summary>
+            Interfaz del joystick, que será deshabilitada al cambiar de escena.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.rbJugador">
+            <summary>
+            Referencia al Rigidbody2D del jugador.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.playerController">
+            <summary>
+            Referencia al script de control del jugador.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.nombreEscena">
+            <summary>
+            Nombre de la escena destino, asignado desde el Inspector.
+            </summary>
+        </member>
+        <member name="M:ColisionadorTrigger2D.OnCollisionEnter2D(UnityEngine.Collision2D)">
+            <summary>
+            Detecta colisiones físicas con el trigger.
+            </summary>
+            <param name="collision">Datos de la colisión.
+            </param>
+        </member>
+        <member name="M:ColisionadorTrigger2D.EsperarYMostrarDialogo">
+            <summary>
+            Corrutina que espera unos segundos antes de mostrar el diálogo o continuar.
+            </summary>
+        </member>
+        <member name="T:ColisionadorTrigger2D.PortalTrigger">
+            <summary>
+            Clase interna que detecta la entrada al portal y realiza el cambio de escena.
+            </summary>
+        </member>
+        <member name="F:ColisionadorTrigger2D.PortalTrigger.nombreEscena">
+            <summary>
+            Nombre de la escena destino.
+            </summary>
+        </member>
+        <member name="M:ColisionadorTrigger2D.PortalTrigger.OnTriggerEnter2D(UnityEngine.Collider2D)">
+            <summary>
+            Detecta si el jugador entra al área del portal.
+            </summary>
+            <param name="other">Collider del objeto entrante.
+            </param>
+        </member>
+        <member name="M:ColisionadorTrigger2D.OnSceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)">
+            <summary>
+            Método ejecutado al cargar una nueva escena.
+            Busca y muestra el mensaje de bienvenida si está activado.
+            </summary>
+            <param name="scene">Escena cargada.
+            </param>
+            <param name="mode">Modo de carga.
+            </param>
+        </member>
+        <member name="M:ColisionadorTrigger2D.DesactivarTexto(UnityEngine.GameObject,System.Single)">
+            <summary>
+            Corrutina que desactiva el texto tras cierto tiempo.
+            </summary>
+            <param name="obj">Objeto de texto a desactivar.</param>
+            <param name="delay">Tiempo en segundos antes de desactivarlo.</param>
+            <returns>
+            Enumerator para la corrutina.
+            </returns>
+        </member>
+        <member name="T:ColisionadorTrigger2D.DummyMonoBehaviour">
+            <summary>
+            Clase auxiliar para correr corrutinas desde objetos que no sean MonoBehaviour.
+            </summary>
+        </member>
+        <member name="T:TranscribirOracion3">
+            <summary>
+            Controla la transcripción de una oración avanzada en la que el usuario debe colocar correctamente las comas.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion3.Paneles1">
+            <summary>
+            Referencia al controlador de paneles encargado de avanzar entre las trivias del juego.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion3.textoOracion">
+            <summary>
+            Componente TMP_Text donde se muestra la oración original sin comas para que el usuario la corrija.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion3.campoRespuesta">
+            <summary>
+            Campo de entrada donde el usuario escribe la oración corregida con puntuación adecuada.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion3.textoRetroalimentacion">
+            <summary>
+            Componente de texto que muestra la retroalimentación (correcta o incorrecta) después de verificar la respuesta.
+            </summary>
+        </member>
+        <member name="F:TranscribirOracion3.sonidoBoton">
+            <summary>
+            Clip de audio que se reproduce cuando el usuario presiona el botón de verificación.
+            </summary>
+        </member>
+        <member name="M:TranscribirOracion3.VerificarRespuesta">
+            <summary>
+            Verifica si la respuesta ingresada por el usuario coincide exactamente con la oración correcta.
+            </summary>
+        </member>
+        <member name="T:DialogoController">
+            <summary>
+            Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.
+            </summary>
+            <remarks>
+            Este componente se encarga de mostrar líneas de diálogo una por una en un panel UI,
+            utilizando un <see cref="T:TMPro.TextMeshProUGUI"/> y un panel contenedor.
+            </remarks>
+            <example>
+            Para mostrar el diálogo desde otro script:
+            <code>
+            var dialogo = FindObjectOfType&lt;DialogoController&gt;();
+            dialogo.MostrarDialogo(() => Debug.Log("Diálogo finalizado"));
+            </code>
+            </example>
+            <seealso cref="T:TMPro.TextMeshProUGUI"/>
+        </member>
+        <member name="F:DialogoController.panelDialogo">
+            <summary>
+            Panel de UI que contiene el diálogo completo, incluyendo fondo y texto.
+            </summary>
+            <remarks>
+            Debe estar desactivado por defecto y se activa al iniciar el diálogo.
+            </remarks>
+        </member>
+        <member name="F:DialogoController.textoDialogo">
+            <summary>
+            Componente de texto TMP que mostrará cada línea del diálogo.
+            </summary>
+        </member>
+        <member name="F:DialogoController.lineasDialogo">
+            <summary>
+            Lista de líneas que serán mostradas una a una en el diálogo.
+            </summary>
+            <remarks>
+            El atributo <c>[TextArea]</c> permite una mejor edición en el Inspector.
+            </remarks>
+        </member>
+        <member name="F:DialogoController.tiempoEntreLineas">
+            <summary>
+            Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.
+            </summary>
+        </member>
+        <member name="M:DialogoController.MostrarDialogo(System.Action)">
+            <summary>
+            Inicia la visualización del diálogo.
+            </summary>
+            <param name="alTerminar">Acción a ejecutar cuando termine el diálogo.</param>
+            <remarks>
+            Esta función activa el panel y comienza a mostrar las líneas mediante una corrutina.
+            </remarks>
+            <exception cref="T:System.NullReferenceException">
+            Se lanza si <see cref="F:DialogoController.textoDialogo"/> no está asignado en el Inspector.
+            </exception>
+        </member>
+        <member name="M:DialogoController.MostrarLineas(System.Action)">
+            <summary>
+            Corrutina que recorre cada línea del diálogo y la muestra en pantalla con una pausa entre cada una.
+            </summary>
+            <param name="callback">Función a invocar al finalizar el diálogo.</param>
+            <returns>Un enumerador para manejar el retardo entre líneas.</returns>
+            <remarks>
+            Al terminar el diálogo, limpia el texto y desactiva el panel.
+            </remarks>
+            <seealso cref="T:System.Collections.IEnumerator"/>
+        </member>
+        <member name="T:Fruta">
+            <summary>
+            Representa una fruta recolectable que restaura vida al jugador al entrar en contacto.
+            </summary>
+            <remarks>
+            Este script debe estar adjunto a un objeto con un Collider2D marcado como Trigger.
+            Se espera que el jugador tenga un componente <see cref="T:PlayerController"/> con el método <c>RestaurarVidaParcial</c>.
+            </remarks>
+            <example>
+            Asigna este script a una fruta y asegúrate de configurar <see cref="F:Fruta.cantidadVida"/> desde el Inspector.
+            </example>
+        </member>
+        <member name="F:Fruta.cantidadVida">
+            <summary>
+            Cantidad de vida que esta fruta restaurará al jugador.
+            </summary>
+            <value>
+            Valor en puntos de vida, por defecto 1.
+            </value>
+        </member>
+        <member name="M:Fruta.OnTriggerEnter2D(UnityEngine.Collider2D)">
+            <summary>
+            Se ejecuta automáticamente cuando otro objeto con Collider2D entra en el trigger de la fruta.
+            </summary>
+            <param name="collision">El objeto que colisionó con la fruta.</param>
+            <remarks>
+            Si el objeto colisionado tiene la etiqueta "Player" y contiene un <see cref="T:PlayerController"/>, restaurará su vida y se destruirá esta fruta.
+            </remarks>
+        </member>
+        <member name="T:RotarCuchilla">
+            <summary>
+            Hace que un objeto gire continuamente sobre su eje Z, simulando una cuchilla giratoria dañina.
+            Ideal para trampas en niveles de juego.
+            </summary>
+        </member>
+        <member name="F:RotarCuchilla.velocidadRotacion">
+            <summary>
+            Velocidad de rotación en grados por segundo.
+            Puede configurarse desde el Inspector de Unity.
+            </summary>
+        </member>
+        <member name="M:RotarCuchilla.Update">
+            <summary>
+            Se ejecuta una vez por fotograma.
+            Rota el objeto en el eje Z, de forma suave y constante, independiente del frame rate.
+            </summary>
+        </member>
+        <member name="T:Espina">
+            <summary>
+            Controla el comportamiento de un objeto tipo "espina" que inflige daño al jugador 
+            al colisionar desde arriba.
+            </summary>
+        </member>
+        <member name="F:Espina.danio">
+            <summary>
+            Cantidad de daño que esta espina inflige al jugador al ser tocada desde arriba.
+            </summary>
+        </member>
+        <member name="T:PreguntaOpcionMultiple">
+            <summary>
+            Controla una pregunta de opción múltiple, permite seleccionar varias respuestas y muestra retroalimentación.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.Paneles1">
+            <summary>
+            Referencia al controlador de paneles para avanzar entre preguntas.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.textoPregunta">
+            <summary>
+            Texto que muestra la pregunta actual.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.botonesOpciones">
+            <summary>
+            Botones que representan las opciones posibles.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.textosOpciones">
+            <summary>
+            Textos asociados a cada opción del array de botones.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.botonConfirmar">
+            <summary>
+            Botón utilizado para confirmar la selección del jugador.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.textoResultado">
+            <summary>
+            Texto que muestra el resultado de la selección del jugador.
+            </summary>
+        </member>
+        <member name="F:PreguntaOpcionMultiple.sonidoBoton">
+            <summary>
+            Clip de audio que se reproduce al seleccionar o confirmar una opción.
+            </summary>
+        </member>
+        <member name="M:PreguntaOpcionMultiple.SeleccionarOpcion(System.Int32)">
+            <summary>
+            Método público llamado cuando el jugador selecciona una opción.
+            </summary>
+            <param name="indice">Índice de la opción seleccionada.</param>
+        </member>
+        <member name="M:PreguntaOpcionMultiple.VerificarRespuestas">
+            <summary>
+            Verifica si las opciones seleccionadas son correctas y proporciona retroalimentación.
+            </summary>
+        </member>
+        <member name="T:ComaDrag">
+            <summary>
+            Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma.
+            </summary>
+        </member>
+        <member name="F:ComaDrag.rectTransform">
+            <summary>
+            Referencia al componente RectTransform del objeto actual.
+            </summary>
+        </member>
+        <member name="F:ComaDrag.canvasGroup">
+            <summary>
+            Componente que controla si el objeto bloquea interacciones de clic mientras se arrastra.
+            </summary>
+        </member>
+        <member name="F:ComaDrag.originalPosition">
+            <summary>
+            Posición inicial del objeto coma, para restaurarla si no se coloca correctamente.
+            </summary>
+        </member>
+        <member name="F:ComaDrag.yaClonada">
+            <summary>
+            Evita que el objeto se clone más de una vez al ser soltado 
+            </summary>
+        </member>
+        <member name="F:ComaDrag.dropAreas">
+            <summary>
+            Áreas o zonas válidas donde  las comas podran ser soltadas correc3ctamente
+            </summary>
+        </member>
+        <member name="F:ComaDrag.padreContenedor">
+            <summary>
+            Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas
+            </summary>    
+        </member>
+        <member name="M:ComaDrag.Start">
+            <summary>
+            Inicializa referencias necesarias y guarda la posición original del objeto.
+            </summary>
+        </member>
+        <member name="M:ComaDrag.OnDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Mueve el objeto siguiendo el puntero mientras se arrastra.
+            </summary>
+            <param name="eventData">Datos del evento de arrastre.
+            </param>
+        </member>
+        <member name="M:ComaDrag.OnEndDrag(UnityEngine.EventSystems.PointerEventData)">
+            <summary>
+            Se ejecuta al soltar el objeto. Verifica si fue colocado en una zona válida y, si es así, clona una nueva coma.
+            </summary>
+            <param name="eventData">Datos del evento al soltar el objeto.
+            </param>
+        </member>
+        <member name="T:PuntosManager">
+            <summary>
+            Gestiona la puntuación de trivias, actualización de UI, reinicio de puntajes y navegación al menú.
+            Implementa un patrón Singleton para persistencia entre escenas.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.instancia">
+            <summary>
+            Instancia estática única del gestor de puntos.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.BasicoCorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas correctas en nivel básico.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.BasicoIncorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas incorrectas en nivel básico.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.IntermedioCorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas correctas en nivel intermedio.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.IntermedioIncorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas incorrectas en nivel intermedio.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.AvanzadoCorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas correctas en nivel avanzado.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.AvanzadoIncorrectoText">
+            <summary>
+            Texto que muestra el número de respuestas incorrectas en nivel avanzado.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.limpiarPuntajeButton">
+            <summary>
+            Botón para limpiar los puntajes acumulados.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.cambiarEscenaButton">
+            <summary>
+            Botón para cambiar a otra escena.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.botonSonido">
+            <summary>
+            Clip de audio que se reproducirá al presionar un botón.
+            </summary>
+        </member>
+        <member name="F:PuntosManager.nombreEscena">
+            <summary>
+            Nombre de la escena a cargar cuando se presione el botón de cambiar escena.
+            </summary>
+        </member>
+        <member name="M:PuntosManager.ActualizarPuntajes">
+            <summary>
+            Actualiza los textos en pantalla con los valores almacenados en PlayerPrefs.
+            </summary>
+        </member>
+        <member name="M:PuntosManager.LimpiarPuntaje">
+            <summary>
+            Reinicia todos los puntajes guardados en PlayerPrefs y actualiza la UI.
+            </summary>
+        </member>
+        <member name="M:PuntosManager.CambiarEscena">
+            <summary>
+            Carga la escena especificada en <see cref="F:PuntosManager.nombreEscena"/>.
+            </summary>
+        </member>
+        <member name="T:OpcionUnica2">
+            <summary>
+            Controla una pregunta de opción única con retroalimentación al jugador.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica2.Paneles1">
+            <summary>
+            Referencia al controlador de paneles para avanzar entre preguntas o escenas.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica2.preguntaTexto">
+            <summary>
+            Texto que muestra la pregunta en pantalla.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica2.botonesOpciones">
+            <summary>
+            Botones que representan las diferentes opciones de respuesta.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica2.retroalimentacionTexto">
+            <summary>
+            Texto que muestra la retroalimentación sobre la respuesta del jugador.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica2.sonidoBoton">
+            <summary>
+            Clip de sonido que se reproduce al pulsar un botón.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica2.SeleccionarOpcion0">
+            <summary>
+            Selecciona la primera opción (índice 0) y la verifica.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica2.SeleccionarOpcion1">
+            <summary>
+            Selecciona la segunda opción (índice 1) y la verifica.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica2.SeleccionarOpcion2">
+            <summary>
+            Selecciona la tercera opción (índice 2) y la verifica.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica2.SeleccionarOpcion3">
+            <summary>
+            Selecciona la cuarta opción (índice 3) y la verifica.
+            </summary>
+        </member>
+        <member name="T:SelectorPersonaje">
+            <summary>
+            Permite al jugador seleccionar un personaje, mostrando su sprite e información,
+            y luego carga la escena de aventura con el personaje elegido.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.personajes">
+            <summary>
+            Lista de objetos de personajes disponibles para selección.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.nombresPersonajes">
+            <summary>
+            Nombres correspondientes a cada personaje para mostrar en la interfaz.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.imagenPersonaje">
+            <summary>
+            Imagen UI donde se muestra el sprite del personaje seleccionado.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.siguienteButton">
+            <summary>
+            Botón para ir al siguiente personaje.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.anteriorButton">
+            <summary>
+            Botón para ir al personaje anterior.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.seleccionarButton">
+            <summary>
+            Botón para confirmar la selección del personaje actual.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.nombrePersonajeTexto">
+            <summary>
+            Texto UI para mostrar el nombre del personaje seleccionado.
+            </summary>
+        </member>
+        <member name="F:SelectorPersonaje.sonidoBoton">
+            <summary>
+            Sonido que se reproduce al interactuar con los botones.
+            </summary>
+        </member>
+        <member name="M:SelectorPersonaje.SiguientePersonaje">
+            <summary>
+            Avanza al siguiente personaje disponible en el array de personajes.
+            </summary>
+        </member>
+        <member name="M:SelectorPersonaje.AnteriorPersonaje">
+            <summary>
+            Retrocede al personaje anterior en la lista de selección.
+            </summary>
+        </member>
+        <member name="M:SelectorPersonaje.SeleccionarPersonaje">
+            <summary>
+            Guarda el personaje seleccionado en PlayerPrefs y carga la escena de aventura.
+            </summary>
+        </member>
+        <member name="T:ConfiguracionUI">
+            <summary>
+            Controla la visualización de los paneles de configuración y créditos,
+            así como la asignación de eventos a los botones respectivos.
+            </summary>
+            <remarks>
+            Este script debe estar asignado a un GameObject en la escena.
+            Asegúrate de asignar correctamente los objetos del Inspector antes de ejecutar.
+            </remarks>
+            <seealso cref="T:AudioManager"/>
+        </member>
+        <member name="F:ConfiguracionUI.panelConfiguracion">
+            <summary>
+            Panel que contiene las opciones de configuración.
+            </summary>
+            <value>Debe estar desactivado al inicio del juego.
+            </value>
+        </member>
+        <member name="F:ConfiguracionUI.botonAbrir">
+            <summary>
+            Botón que abre el panel de configuración.
+            </summary>
+        </member>
+        <member name="F:ConfiguracionUI.botonCerrar">
+            <summary>
+            Botón que cierra el panel de configuración.
+            </summary>
+        </member>
+        <member name="F:ConfiguracionUI.panelCreditos">
+            <summary>
+            Panel que muestra los créditos del juego.
+            </summary>
+            <value>
+            Se recomienda desactivarlo en el inicio del juego.
+            </value>
+        </member>
+        <member name="F:ConfiguracionUI.botonCreditosAbrir">
+            <summary>
+            Botón que abre el panel de créditos.
+            </summary>
+        </member>
+        <member name="F:ConfiguracionUI.botonCreditosCerrar">
+            <summary>
+            Botón que cierra el panel de créditos.
+            </summary>
+        </member>
+        <member name="F:ConfiguracionUI.sonidoBoton">
+            <summary>
+            Sonido que se reproduce al presionar cualquier botón.
+            </summary>
+            <seealso cref="M:AudioManager.ReproducirSonido(UnityEngine.AudioClip)"/>
+        </member>
+        <member name="M:ConfiguracionUI.Start">
+            <summary>
+            Se ejecuta al iniciar el objeto y configura la visibilidad de los paneles
+            y la asignación de eventos a los botones.
+            </summary>
+            <remarks>
+            Este método desactiva inicialmente los paneles y vincula los métodos a los botones.
+            </remarks>
+        </member>
+        <member name="M:ConfiguracionUI.AbrirConfiguracion">
+            <summary>
+            Muestra el panel de configuración, reproduce un sonido y pausa el juego.
+            </summary>
+            <example>
+            Este método se llama automáticamente al hacer clic en el botón <c>botonAbrir</c>.
+            </example>
+            <exception cref="T:System.NullReferenceException">
+            Se lanza si el <c>AudioManager</c> o el <c>panelConfiguracion</c> no están asignados.
+            </exception>
+        </member>
+        <member name="M:ConfiguracionUI.CerrarConfiguracion">
+            <summary>
+            Oculta el panel de configuración, reproduce un sonido y reanuda el juego.
+            </summary>
+            <example>
+            Este método se llama al presionar el botón <c>botonCerrar</c>.
+            </example>
+        </member>
+        <member name="M:ConfiguracionUI.AbrirCreditos">
+            <summary>
+            Muestra el panel de créditos y reproduce un sonido.
+            </summary>
+            <remarks>
+            El tiempo del juego no se pausa al mostrar créditos.
+            </remarks>
+        </member>
+        <member name="M:ConfiguracionUI.CerrarCreditos">
+            <summary>
+            Oculta el panel de créditos y reproduce un sonido.
+            </summary>
+            <remarks>
+            Se recomienda ocultar el panel con animación si deseas una mejor experiencia de usuario.
+            </remarks>
+        </member>
+        <member name="T:BarraVida">
+            <summary>
+            Controla el sistema de vida del jugador y activa el panel de Game Over cuando la vida llega a cero.
+            </summary>
+        </member>
+        <member name="F:BarraVida.rellenoBarraVida">
+            <summary>
+            Imagen que representa el relleno de la barra de vida en la interfaz gráfica.
+            </summary>
+        </member>
+        <member name="F:BarraVida.VidaMaxima">
+            <summary>
+            Valor máximo de vida que puede tener el jugador.
+            </summary>
+        </member>
+        <member name="F:BarraVida.panelGameOver">
+            <summary>
+            Panel de Game Over que se muestra cuando el jugador pierde.
+            </summary>
+        </member>
+        <member name="F:BarraVida.imagenAEliminar">
+            <summary>
+            Imagen u objeto que debe ser eliminado al activarse el Game Over.
+            </summary>
+        </member>
+        <member name="F:BarraVida.gameOverActivado">
+            <summary>
+            Bandera booleana para evitar que se active el Game Over más de una vez.
+            </summary>
+        </member>
+        <member name="M:BarraVida.ActualizarBarra(System.Single)">
+            <summary>
+            Actualiza visualmente la barra de vida del jugador.
+            Si la vida es igual o menor a cero, se activa el panel de Game Over.
+            </summary>
+            <param name="vidaActual">Valor actual de la vida del jugador.
+            </param>
+        </member>
+        <member name="M:BarraVida.ActivarGameOver">
+            <summary>
+            Activa la interfaz de Game Over, destruye objetos asociados y elimina al jugador de la escena.
+            </summary>
+        </member>
+        <member name="T:CargaInicial">
+            <summary>
+            Controla la simulación de una barra de carga con un <see cref="T:UnityEngine.UI.Slider"/> y texto porcentual,
+            que culmina cargando una nueva escena.
+            </summary>
+        </member>
+        <member name="F:CargaInicial.slider">
+            <summary>
+            Referencia al componente Slider que representa visualmente el progreso de carga.
+            </summary>
+        </member>
+        <member name="F:CargaInicial.tiempoCarga">
+            <summary>
+            Tiempo total (en segundos) que durará la simulación de carga.
+            </summary>
+        </member>
+        <member name="F:CargaInicial.textoCarga">
+            <summary>
+            Texto que mostrará el porcentaje de carga en pantalla.
+            </summary>
+        </member>
+        <member name="F:CargaInicial.nombreEscena">
+            <summary>
+            Nombre de la escena que se cargará al completar la carga.
+            </summary>
+        </member>
+        <member name="M:CargaInicial.Start">
+            <summary>
+            Se ejecuta al iniciar la escena. Verifica referencias y comienza la carga simulada.
+            </summary>
+        </member>
+        <member name="M:CargaInicial.Cargar">
+            <summary>
+            Corrutina que simula una barra de carga progresiva y muestra el porcentaje en texto.
+            </summary>
+            <returns>
+            Enumerator para ejecución por frames.
+            </returns>
+        </member>
+        <member name="M:CargaInicial.OnCargaCompleta">
+            <summary>
+            Cambia a la escena especificada una vez completada la simulación de carga.
+            </summary>
+        </member>
+        <member name="T:Trivia1">
+            <summary>
+            Controla una pregunta de tipo Verdadero/Falso en una trivia.
+            </summary>
+        </member>
+        <member name="F:Trivia1.Paneles1">
+            <summary>
+            Referencia al controlador de paneles para avanzar entre preguntas.
+            </summary>
+        </member>
+        <member name="F:Trivia1.preguntaTexto">
+            <summary>
+            Componente de texto donde se mostrará la pregunta.
+            </summary>
+        </member>
+        <member name="F:Trivia1.botonVerdadero">
+            <summary>
+            Botón para seleccionar "Verdadero".
+            </summary>
+        </member>
+        <member name="F:Trivia1.botonFalso">
+            <summary>
+            Botón para seleccionar "Falso".
+            </summary>
+        </member>
+        <member name="F:Trivia1.retroalimentacionTexto">
+            <summary>
+            Texto donde se mostrará la retroalimentación (correcto o incorrecto).
+            </summary>
+        </member>
+        <member name="F:Trivia1.sonidoBoton">
+            <summary>
+            Clip de audio que se reproduce al pulsar cualquier botón.
+            </summary>
+        </member>
+        <member name="F:Trivia1.pregunta">
+            <summary>
+            Texto que contiene la pregunta de la trivia.
+            </summary>
+        </member>
+        <member name="F:Trivia1.respuestaCorrecta">
+            <summary>
+            Valor booleano que indica cuál es la respuesta correcta.
+            </summary>
+        </member>
+        <member name="M:Trivia1.PresionarVerdadero">
+            <summary>
+            Método público que se llama cuando el usuario presiona el botón "Verdadero".
+            </summary>
+        </member>
+        <member name="M:Trivia1.PresionarFalso">
+            <summary>
+            Método público que se llama cuando el usuario presiona el botón "Falso".
+            </summary>
+        </member>
+        <member name="T:EscenaRestraurar">
+            <summary>
+            Permite recargar una escena actual o cambiar a otra escena específica mediante botones.
+            </summary>
+            <remarks>
+            Usa <see cref="T:UnityEngine.SceneManagement.SceneManager"/> para cambiar entre escenas y <see cref="T:AudioManager"/> para reproducir efectos de sonido al hacer clic.
+            </remarks>
+            <example>
+            Este script puede estar vinculado a botones de UI:
+            <code>
+            public EscenaRestraurar escenaController;
+            escenaController.CargarEscena1();
+            </code>
+            </example>
+            <seealso cref="T:UnityEngine.SceneManagement.SceneManager"/>
+            <seealso cref="T:AudioManager"/>
+        </member>
+        <member name="F:EscenaRestraurar.escena1">
+            <summary>
+            Nombre de la primera escena a cargar cuando se pulsa el primer botón.
+            </summary>
+            <value>
+            Nombre exacto de la escena tal como aparece en el Build Settings.
+            </value>
+        </member>
+        <member name="F:EscenaRestraurar.escena2">
+            <summary>
+            Nombre de la segunda escena, normalmente el menú principal.
+            </summary>
+            <value>
+            Debe coincidir con el nombre definido en el sistema de escenas.
+            </value>
+        </member>
+        <member name="F:EscenaRestraurar.sonidoBoton">
+            <summary>
+            Sonido que se reproducirá al pulsar un botón de cambio de escena.
+            </summary>
+            <remarks>
+            Debe ser asignado en el Inspector
+            </remarks>
+        </member>
+        <member name="M:EscenaRestraurar.CargarEscena1">
+            <summary>
+            Carga la escena almacenada en <see cref="F:EscenaRestraurar.escena1"/> y reproduce el sonido de botón.
+            </summary>
+            <exception cref="T:System.ArgumentException">Se lanza si el nombre de la escena está vacío o nulo.
+            </exception>
+        </member>
+        <member name="M:EscenaRestraurar.CargarEscena2">
+            <summary>
+            Carga la escena almacenada en <see cref="F:EscenaRestraurar.escena2"/> y reproduce el sonido de botón.
+            </summary>
+            <exception cref="T:System.ArgumentException">Se lanza si el nombre de la escena está vacío o nulo.
+            </exception>
+        </member>
+        <member name="T:Ninja">
+            <summary>
+            Controla el comportamiento de un enemigo tipo Ninja, incluyendo detección del jugador, movimiento, ataque y muerte.
+            </summary>
+        </member>
+        <member name="F:Ninja.detectionRadius">
+            <summary>
+            Distancia máxima a la que el ninja puede detectar al jugador.
+            </summary>
+        </member>
+        <member name="F:Ninja.attackRadius">
+            <summary>
+            Distancia mínima para que el ninja inicie un ataque.
+            </summary>
+        </member>
+        <member name="F:Ninja.speed">
+            <summary>
+            Velocidad de movimiento del ninja.
+            </summary>
+        </member>
+        <member name="F:Ninja.attackCooldown">
+            <summary>
+            Tiempo de espera entre ataques consecutivos.
+            </summary>
+        </member>
+        <member name="F:Ninja.tiempoAnimacionMuerte">
+            <summary>
+            Tiempo que dura la animación de muerte antes de eliminar al ninja.
+            </summary>
+        </member>
+        <member name="M:Ninja.Start">
+            <summary>
+            Inicializa componentes del ninja y animaciones al comenzar el juego.
+            </summary>
+        </member>
+        <member name="M:Ninja.Update">
+            <summary>
+            Lógica de detección, movimiento y ataque que se ejecuta cada frame.
+            </summary>
+        </member>
+        <member name="M:Ninja.AtacarJugador">
+            <summary>
+            Ejecuta el ataque al jugador si está dentro del rango.
+            </summary>
+        </member>
+        <member name="M:Ninja.CancelarAtaque">
+            <summary>
+            Cancela un ataque en curso y detiene su animación.
+            </summary>
+        </member>
+        <member name="M:Ninja.IniciarCooldown">
+            <summary>
+            Inicia un período de espera entre ataques para evitar ataques consecutivos inmediatos.
+            </summary>
+            <returns>
+            Una corrutina que espera el tiempo definido antes de permitir otro ataque.
+            </returns>
+        </member>
+        <member name="M:Ninja.OnCollisionEnter2D(UnityEngine.Collision2D)">
+            <summary>
+            Maneja la lógica cuando el ninja colisiona con el jugador desde abajo, provocando su muerte.
+            </summary>
+            <param name="collision">Información sobre la colisión detectada.
+            </param>
+            
+        </member>
+        <member name="M:Ninja.DesvanecerYDestruir">
+            <summary>
+            Corrutina que desvanecerá suavemente al ninja antes de destruirlo.
+            </summary>
+            <returns>Una corrutina que se ejecuta durante el proceso de desaparición.
+            </returns>
+        </member>
+        <member name="T:TextoConComasTMP">
+            <summary>
+            Controla la verificación de comas colocadas correctamente en un texto usando espacios válidos.
+            </summary>
+        </member>
+        <member name="F:TextoConComasTMP.textoTMP">
+            <summary>
+            Componente TextMeshProUGUI que contiene el texto con espacios para colocar comas.
+            </summary>
+        </member>
+        <member name="F:TextoConComasTMP.textoRetroalimentacion">
+            <summary>
+            Texto que muestra la retroalimentación sobre el resultado de la verificación.
+            </summary>
+        </member>
+        <member name="F:TextoConComasTMP.espaciosValidos">
+            <summary>
+            Arreglo de RectTransforms que representan las posiciones válidas donde deben ir las comas.
+            </summary>
+        </member>
+        <member name="F:TextoConComasTMP.Paneles1">
+            <summary>
+            Referencia al controlador de paneles encargado de avanzar entre preguntas o escenas.
+            </summary> 
+        </member>
+        <member name="F:TextoConComasTMP.sonidoBoton">
+            <summary>
+            Clip de sonido que se reproduce al verificar las comas.
+            </summary>
+        </member>
+        <member name="M:TextoConComasTMP.VerificarComas">
+            <summary>
+            Verifica si las comas han sido colocadas correctamente en los espacios válidos.
+            </summary>
+        </member>
+        <member name="T:OpcionUnica">
+            <summary>
+            Controla una pregunta de opción única con botones interactivos y retroalimentación.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica.Paneles1">
+            <summary>
+            Referencia al controlador de paneles que permite avanzar entre preguntas.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica.preguntaTexto">
+            <summary>
+            Componente de texto donde se mostrará la pregunta.
+            </summary>    
+        </member>
+        <member name="F:OpcionUnica.botonesOpciones">
+            <summary>
+            Botones que representan las posibles respuestas.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica.retroalimentacionTexto">
+            <summary>
+            Texto para mostrar si la respuesta fue correcta o incorrecta.
+            </summary> 
+        </member>
+        <member name="F:OpcionUnica.sonidoBoton">
+            <summary>
+            Clip de sonido que se reproduce al seleccionar una opción.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica.SeleccionarOpcion0">
+            <summary>
+            Método público que se llama cuando el jugador selecciona la primera opción.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica.SeleccionarOpcion1">
+            <summary>
+            Método público que se llama cuando el jugador selecciona la segunda opción.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica.SeleccionarOpcion2">
+            <summary>
+            Método público que se llama cuando el jugador selecciona la tercera opción.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica.SeleccionarOpcion3">
+            <summary>
+            Método público que se llama cuando el jugador selecciona la cuarta opción.
+            </summary>
+        </member>
+        <member name="T:AparicionPersonaje">
+            <summary>
+            Gestiona la aparición del personaje seleccionado al iniciar la escena.
+            </summary>
+            <remarks>
+            Instancia el prefab correspondiente desde un arreglo de personajes, asigna joystick y configura la cámara para seguir al jugador.
+            </remarks>
+            <example>
+            Asigna este script a un GameObject vacío y configura los prefabs de personajes, punto de aparición, joystick y cámara desde el Inspector.
+            </example>
+        </member>
+        <member name="F:AparicionPersonaje.personajes">
+            <summary>
+            Arreglo de prefabs disponibles para el jugador.
+            </summary>
+            <value>
+            Cada elemento del arreglo representa un personaje seleccionable.
+            </value>
+        </member>
+        <member name="F:AparicionPersonaje.puntoAparicion">
+            <summary>
+            Posición donde aparecerá el personaje instanciado.
+            </summary>
+        </member>
+        <member name="F:AparicionPersonaje.joystick">
+            <summary>
+            Referencia al joystick usado para controlar al personaje.
+            </summary>
+        </member>
+        <member name="F:AparicionPersonaje.camara">
+            <summary>
+            Objeto de cámara que seguirá al personaje instanciado.
+            </summary>
+        </member>
+        <member name="M:AparicionPersonaje.Start">
+            <summary>
+            Instancia el personaje seleccionado y configura sus dependencias.
+            </summary>
+            <remarks>
+            Recupera el índice del personaje desde PlayerPrefs, instancia el personaje, asigna joystick y configura la cámara.
+            </remarks>
+        </member>
+        <member name="T:PantallaDialogo">
+            <summary>
+            Controla la presentación secuencial de diálogos en pantalla, letra por letra, con una animación de puntos al final y cambio automático de escena.
+            </summary>
+            <remarks>
+            Ideal para escenas introductorias o transiciones narrativas.
+            Utiliza corutinas para mostrar texto gradualmente y gestionar tiempos.
+            </remarks>
+        </member>
+        <member name="F:PantallaDialogo.textoPantalla">
+            <summary>
+            Componente de texto donde se muestra el diálogo actual.
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.dialogos">
+            <summary>
+            Arreglo de líneas de diálogo a mostrar.
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.tiempoEntreLetras">
+            <summary>
+            Tiempo de espera entre cada letra del texto (efecto de máquina de escribir).
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.tiempoEntreDialogos">
+            <summary>
+            Tiempo de espera entre cada línea de diálogo.
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.puntosCargaTexto">
+            <summary>
+            Texto que muestra una animación de puntos suspensivos como indicador de carga.
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.tiempoAntesCambioEscena">
+            <summary>
+            Tiempo que se espera después de los puntos antes de cambiar de escena.
+            </summary>
+        </member>
+        <member name="F:PantallaDialogo.nombreEscenaSiguiente">
+            <summary>
+            Nombre de la escena que se cargará una vez finalizada toda la secuencia de diálogo.
+            </summary>
+        </member>
+        <member name="M:PantallaDialogo.Start">
+            <summary>
+            Inicia la secuencia de diálogo si hay contenido disponible.
+            </summary>
+        </member>
+        <member name="T:Cuchilla">
+            <summary>
+            Representa una cuchilla que inflige daño al jugador al colisionar con él.
+            </summary>
+        </member>
+        <member name="F:Cuchilla.danio">
+            <summary>
+            Cantidad de daño que la cuchilla inflige al jugador al tocarlo.
+            </summary>
+        </member>
+        <member name="T:OpcionUnica3">
+            <summary>
+            Controla una pregunta de opción única en el nivel avanzado del juego, evaluando el uso correcto de la coma.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica3.Paneles1">
+            <summary>
+            Referencia al controlador de paneles encargado de mostrar la siguiente trivia.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica3.preguntaTexto">
+            <summary>
+            Texto donde se muestra la pregunta planteada al jugador.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica3.botonesOpciones">
+            <summary>
+            Arreglo de botones que contienen las opciones disponibles como respuesta.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica3.retroalimentacionTexto">
+            <summary>
+            Texto donde se muestra la retroalimentación sobre la respuesta seleccionada.
+            </summary>
+        </member>
+        <member name="F:OpcionUnica3.sonidoBoton">
+            <summary>
+            Clip de audio que se reproduce al seleccionar una opción.
+            </summary>
+        </member>
+        <member name="M:OpcionUnica3.SeleccionarOpcion0">
+            <summary>
+            Método invocado al seleccionar la opción A (índice 0).
+            </summary>
+        </member>
+        <member name="M:OpcionUnica3.SeleccionarOpcion1">
+            <summary>
+            Método invocado al seleccionar la opción B (índice 1).
+            </summary>
+        </member>
+        <member name="M:OpcionUnica3.SeleccionarOpcion2">
+            <summary>
+            Método invocado al seleccionar la opción C (índice 2).
+            </summary>
+        </member>
+        <member name="M:OpcionUnica3.SeleccionarOpcion3">
+            <summary>
+            Método invocado al seleccionar la opción D (índice 3).
+            </summary>
+        </member>
+        <member name="T:PortalCambioEscena">
+            <summary>
+            Controla el cambio de escena al entrar en contacto con un portal.
+            Muestra un mensaje de bienvenida temporal en la nueva escena.
+            </summary>
+        </member>
+        <member name="F:PortalCambioEscena.nombreEscenaDestino">
+            <summary>
+            Nombre de la escena de destino a cargar al colisionar con el portal.
+            </summary>
+        </member>
+        <member name="F:PortalCambioEscena.nombreObjetoTextoBienvenida">
+            <summary>
+            Nombre del objeto que contiene el texto de bienvenida en la nueva escena.
+            </summary>
+        </member>
+        <member name="F:PortalCambioEscena.mensajeBienvenida">
+            <summary>
+            Mensaje de bienvenida que se mostrará al llegar a la nueva escena.
+            </summary>
+        </member>
+        <member name="F:PortalCambioEscena.duracionMensaje">
+            <summary>
+            Duración (en segundos) del mensaje de bienvenida.
+            </summary>
+        </member>
+        <member name="T:BotonClipControl">
+            <summary>
+            Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonido cuando se pulsa.
+            </summary>
+        </member>
+        <member name="F:BotonClipControl.botonSonido">
+            <summary>
+            Referencia al botón que se utiliza para controlar el sonido.
+            </summary>
+        </member>
+        <member name="F:BotonClipControl.sonidoBoton">
+            <summary>
+            Clip de sonido que se reproduce cuando se presiona el botón.
+            </summary>           
+        </member>
+        <member name="M:BotonClipControl.Awake">
+            <summary>
+            Inicializa el AudioManager si no existe en la escena.
+            Se ejecuta antes de <see cref="M:BotonClipControl.Start"/> y es útil para configuración temprana.
+            </summary>
+        </member>
+        <member name="M:BotonClipControl.Start">
+            <summary>
+            Se llama al inicio de la escena, justo después de Awake. Aquí se configura el botón.
+            </summary>
+        </member>
+        <member name="M:BotonClipControl.ToggleSonido">
+            <summary>
+            Alterna el estado del sonido global y reproduce un clip de audio si está asignado.
+            </summary>
+        </member>
+        <member name="T:PlayerController">
+            <summary>
+            Gestiona el comportamiento integral del personaje.
+            Incluye movimiento, salto, animaciones, sistema de vida, daño, entrada táctil y compatibilidad con joystick.
+            </summary>
+        </member>
+        <member name="F:PlayerController.velocidad">
+            <summary>
+            Velocidad horizontal del personaje.
+            </summary>
+        </member>
+        <member name="F:PlayerController.fuerzaSalto">
+            <summary>
+            Fuerza aplicada para el salto del personaje.
+            </summary>
+        </member>
+        <member name="F:PlayerController.animator">
+            <summary>
+            Referencia al Animator para controlar animaciones.
+            </summary>
+        </member>
+        <member name="F:PlayerController.rb">
+            <summary>
+            Referencia al Rigidbody2D para aplicar físicas.
+            </summary>
+        </member>
+        <member name="F:PlayerController.puedeMoverse">
+            <summary>
+            Determina si el personaje puede moverse.
+            </summary>
+        </member>
+        <member name="F:PlayerController.vida">
+            <summary>
+            Vida actual del personaje.
+            </summary>
+        </member>
+        <member name="F:PlayerController.joystick">
+            <summary>
+            Referencia al joystick para controles móviles.
+            </summary>
+        </member>
+        <member name="F:PlayerController.FuerzaRebote">
+            <summary>
+            Fuerza del rebote al recibir daño.
+            </summary>
+        </member>
+        <member name="F:PlayerController.barraVida">
+            <summary>
+            Referencia al componente que controla la barra de vida.
+            </summary>
+        </member>
+        <member name="M:PlayerController.Start">
+            <summary>
+            Inicializa variables y referencias necesarias al comenzar la escena.
+            </summary>
+        </member>
+        <member name="M:PlayerController.RecibeDanio(UnityEngine.Vector2,System.Int32)">
+            <summary>
+            Gestiona la recepción de daño por parte del personaje.
+            </summary>
+            <param name="direccion">Dirección del daño recibido.</param>
+            <param name="cantDanio">Cantidad de daño recibido.</param>
+        </member>
+        <member name="M:PlayerController.RestaurarVida">
+            <summary>
+            Restaura la vida del personaje a su valor máximo.
+            </summary>
+        </member>
+        <member name="M:PlayerController.RestaurarVidaParcial(System.Single)">
+            <summary>Restaura una cantidad parcial de vida al personaje.</summary>
+            <param name="cantidad">Cantidad de vida a restaurar.</param>
+        </member>
+        <member name="T:CameraShake">
+            <summary>
+            Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños.
+            </summary>
+        </member>
+        <member name="F:CameraShake.duracion">
+            <summary>
+            Duración total de la sacudida en segundos.
+            </summary>
+        </member>
+        <member name="F:CameraShake.magnitud">
+            <summary>
+            Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara.
+            </summary>
+        </member>
+        <member name="M:CameraShake.Sacudir">
+            <summary>
+            Método público que inicia el efecto de sacudida de la cámara.
+            Puede ser llamado desde otros scripts o eventos del juego.
+            </summary>
+        </member>
+        <member name="M:CameraShake.Shake">
+            <summary>
+            Corrutina que implementa la sacudida de la cámara durante el tiempo definido.
+            </summary>
+            <returns>
+            Devuelve un enumerador necesario para la ejecución como corrutina.
+            </returns>
+        </member>
+        <member name="T:Paneles1">
+            <summary>
+            Controla la activación secuencial de paneles tipo trivia y gestiona el estado del jugador durante su visualización.
+            </summary>
+            <remarks>
+            Los paneles de trivia se activan uno por uno al presionar un botón.
+            Durante la visualización, se desactivan elementos de la interfaz y se congela al jugador.
+            </remarks>
+        </member>
+        <member name="F:Paneles1.panel1">
+            <summary>
+            Primer panel de trivia.
+            </summary>
+        </member>
+        <member name="F:Paneles1.panel2">
+            <summary>
+            Segundo panel de trivia.
+            </summary>
+        </member>
+        <member name="F:Paneles1.panel3">
+            <summary>
+            Tercer panel de trivia.
+            </summary>
+        </member>
+        <member name="F:Paneles1.joystick">
+            <summary>
+            Joystick virtual que se desactiva durante la trivia.
+            </summary>
+        </member>
+        <member name="F:Paneles1.imagen1">
+            <summary>
+            Primer elemento visual auxiliar de la interfaz.
+            </summary>
+        </member>
+        <member name="F:Paneles1.imagen2">
+            <summary>
+            Segundo elemento visual auxiliar de la interfaz.
+            </summary>
+        </member>
+        <member name="F:Paneles1.triviaActual">
+            <summary>
+            Índice de la trivia actualmente mostrada.
+            </summary>
+        </member>
+        <member name="M:Paneles1.Start">
+            <summary>
+            Inicializa referencias, desactiva paneles y activa elementos de interfaz al iniciar la escena.
+            </summary>
+        </member>
+        <member name="M:Paneles1.SiguienteTrivia">
+            <summary>
+            Método público que se llama desde un botón para avanzar a la siguiente trivia.
+            </summary>
+        </member>
+        <member name="T:UnirFrasesInteractivo">
+            <summary>
+            Permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas).
+            Utiliza una línea para representar la conexión entre ambas oraciones.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.Paneles1">
+            <summary>
+            Controlador de paneles que gestiona la transición entre trivias o actividades.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.textoIzquierdo">
+            <summary>
+            Texto de la frase sin comas que se muestra a la izquierda.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.textosDerechos">
+            <summary>
+            Arreglo de textos con opciones que contienen comas, mostrados a la derecha.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.textoResultado">
+            <summary>
+            Texto donde se muestra el resultado o retroalimentación al usuario.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.imagenLinea">
+            <summary>
+            Imagen que representa la línea que se dibuja al unir frases.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.puntoInicioManual">
+            <summary>
+            Punto de inicio manual para la línea cuando se arrastra desde el texto izquierdo.
+            </summary>
+        </member>
+        <member name="F:UnirFrasesInteractivo.puntosDerechos">
+            <summary>
+            Arreglo de puntos de inicio visual para las opciones del lado derecho.
+            </summary>
+        </member>
+        <member name="M:UnirFrasesInteractivo.IniciarArrastreDesdeTexto(UnityEngine.GameObject)">
+            <summary>
+            Inicia el arrastre visual desde un texto.
+            </summary>
+            <param name="textoGO">El objeto de texto desde el cual comienza el arrastre.</param>
+        </member>
+        <member name="T:Camara">
+            <summary>
+            Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento.
+            </summary>
+        </member>
+        <member name="F:Camara.Player2">
+            <summary>
+            Objeto del jugador que la cámara debe seguir.
+            </summary>
+        </member>
+        <member name="F:Camara.suavizado">
+            <summary>
+            Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave.
+            </summary>
+        </member>
+        <member name="F:Camara.desplazamiento">
+            <summary>
+            Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él.
+            </summary>
+        </member>
+        <member name="F:Camara.velocidadSuavizado">
+            <summary>
+            Velocidad utilizada internamente por SmoothDamp para interpolar posiciones.
+            </summary>
+        </member>
+        <member name="F:Camara.ultimaDireccionX">
+            <summary>
+            Última dirección horizontal conocida del jugador para que la cámara mire hacia adelante.
+            </summary>
+        </member>
+        <member name="M:Camara.LateUpdate">
+            <summary>
+            Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena.
+            Ideal para seguir al jugador sin causar saltos o retrasos visuales.
+            </summary>
+        </member>
+        <member name="T:MenuController">
+            <summary>
+            Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego.
+            </summary>
+        </member>
+        <member name="F:MenuController.sonidoBoton">
+            <summary>
+            Sonido que se reproduce al pulsar un botón del menú.
+            </summary>
+        </member>
+        <member name="M:MenuController.IrAInicio">
+            <summary>
+            Método que se llama para ir a la escena de introducción o selección de niveles.
+            </summary>
+        </member>
+        <member name="M:MenuController.IrALogros">
+            <summary>
+            Método que se llama para ir a la escena de logros o estadísticas del juego.
+            </summary>
+        </member>
+        <member name="M:MenuController.SalirDelJuego">
+            <summary>
+            Método que se llama para salir del juego.
+            </summary>
+        </member>
+        <member name="M:MenuController.CargarEscenaConDelay(System.String,System.Single)">
+            <summary>
+            Corrutina que espera un tiempo específico antes de cargar una escena.
+            </summary>
+            <param name="nombreEscena">Nombre de la escena a cargar.</param>
+            <param name="delay">Duración de la espera antes de cargar la escena.</param>
+            <returns>IEnumerator para control de la corrutina.</returns>
+        </member>
+        <member name="M:MenuController.SalirConDelay(System.Single)">
+            <summary>
+            Corrutina que espera un tiempo antes de cerrar la aplicación.
+            </summary>
+            <param name="delay">Duración de la espera antes de cerrar la aplicación.</param>
+            <returns>
+            IEnumerator para control de la corrutina.
+            </returns>
+        </member>
+    </members>
+</doc>
