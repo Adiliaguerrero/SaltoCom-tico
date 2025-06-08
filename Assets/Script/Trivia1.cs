@@ -70,14 +70,18 @@ public class Trivia1 : MonoBehaviour
         botonFalso.interactable = true;
     }
 
-    // Método público que se llama cuando el usuario presiona el botón "Verdadero"
+        /// <summary>
+        /// Método público que se llama cuando el usuario presiona el botón "Verdadero".
+        /// </summary>
     public void PresionarVerdadero()
     {
         // Llama a la función para evaluar la respuesta, pasando true porque eligió "Verdadero"
         SeleccionarRespuesta(true);
     }
 
-    // Método público que se llama cuando el usuario presiona el botón "Falso"
+        /// <summary>
+        /// Método público que se llama cuando el usuario presiona el botón "Falso".
+        /// </summary>
     public void PresionarFalso()
     {
         // Llama a la función para evaluar la respuesta, pasando false porque eligió "Falso"
