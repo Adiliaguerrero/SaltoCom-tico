@@ -8,19 +8,31 @@ using UnityEngine.UI;
 /// </summary>
 public class OpcionUnica3 : MonoBehaviour
 {
-    // Referencia al controlador de paneles para avanzar entre preguntas
+
+    /// <summary>
+    /// Referencia al controlador de paneles encargado de mostrar la siguiente trivia.
+    /// </summary>
     public Paneles1 Paneles1;
 
-    // Texto donde se muestra la pregunta
+    /// <summary>
+    /// Texto donde se muestra la pregunta planteada al jugador.
+    /// </summary>
     public TMP_Text preguntaTexto;
 
-    // Array de botones que representan las opciones para responder
+
+    /// <summary>
+    /// Arreglo de botones que contienen las opciones disponibles como respuesta.
+    /// </summary>
     public Button[] botonesOpciones;
 
-    // Texto donde se muestra la retroalimentación (correcto o incorrecto)
+    /// <summary>
+    /// Texto donde se muestra la retroalimentación sobre la respuesta seleccionada.
+    /// </summary>
     public TextMeshProUGUI retroalimentacionTexto;
 
-    // Clip de audio que se reproduce al pulsar un botón
+    /// <summary>
+    /// Clip de audio que se reproduce al seleccionar una opción.
+    /// </summary>
     public AudioClip sonidoBoton;
 
     // Pregunta a mostrar
