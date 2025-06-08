@@ -1,9 +1,10 @@
-// Importamos librerías básicas de Unity, UI y TextMeshPro
 using UnityEngine;
-using TMPro;                   // Para manejar textos con TextMeshPro
-using UnityEngine.UI;          // Para componentes UI, como botones
+using TMPro;                 
+using UnityEngine.UI;
 
-// Clase para manejar una pregunta de opción única 
+    /// <summary>
+    /// Controla una pregunta de opción única con retroalimentación al jugador.
+    /// </summary>
 public class OpcionUnica2 : MonoBehaviour
 {
     // Referencia al controlador de paneles para avanzar entre preguntas o escenas
