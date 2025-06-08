@@ -4,55 +4,71 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-/// <summary>
-/// Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,
-/// el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC.
-/// </summary>
+    /// <summary>
+    /// Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,
+    /// el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC.
+    /// </summary>
 public class SistemaDialogo : MonoBehaviour
 {
-    // Panel que contiene la UI del diálogo (texto y botón)
+        /// <summary>
+        /// Panel de diálogo que contiene el texto y el botón de avance.
+        /// </summary>
     public GameObject panelDialogo;
 
-    // Líneas del diálogo inicial que se mostrarán la primera vez que se interactúa con el NPC
+        /// <summary>
+        /// Líneas del diálogo inicial mostradas la primera vez que se interactúa con el NPC.
+        /// </summary>
     public string[] lineasIniciales;
 
-    // Líneas del diálogo que se muestran cuando el NPC reaparece tras la primera interacción
+        /// <summary>
+        /// Líneas del diálogo mostradas cuando el NPC reaparece.
+        /// </summary>
     public string[] lineasReaparicion;
 
-    // Velocidad a la que se escribe cada letra en el texto (en segundos)
+        /// <summary>
+        /// Velocidad con la que se escribe cada letra del texto (en segundos).
+        /// </summary>
     public float velocidadEscritura = 0.05f;
 
-    // Referencia a la corrutina actual que escribe el texto para poder detenerla si es necesario
     private Coroutine escrituraActual;
 
-    // Componente TextMeshPro donde se mostrará el texto del diálogo
+        /// <summary>
+        /// Objeto de texto (TextMeshProUGUI) donde se mostrará el diálogo.
+        /// </summary>
     public TextMeshProUGUI textoDialogo;
 
-    // Índice que lleva el control de qué línea de diálogo se está mostrando
     private int indice = 0;
 
-    // Prefab del NPC que se instancia para que reaparezca tras el primer diálogo
+        /// <summary>
+        /// Prefab del NPC que se instanciará cuando reaparezca con otro diálogo.
+        /// </summary>
     public GameObject npcPrefab;
 
-    // Punto en el mundo donde aparecerá el NPC reaparecido
+        /// <summary>
+        /// Punto donde aparecerá el NPC reaparecido.
+        /// </summary>
     public Transform puntoReaparicion;
 
-    // Variable para evitar que el diálogo se active múltiples veces simultáneamente
     private bool dialogoIniciado = false;
 
-    // Variable que indica si este diálogo corresponde a la reaparición del NPC
+    
+        /// <summary>
+        /// Indica si el diálogo actual es parte de la reaparición del NPC.
+        /// </summary>
     public bool esReaparicion = false;
 
-    // Rigidbody2D del jugador para bloquear y desbloquear su movimiento durante el diálogo
     private Rigidbody2D rbJugadorOriginal;
 
-    // Referencia al script del jugador para permitir o impedir que se mueva
     private PlayerController playerController;
 
-    // Objeto UI del joystick para controlar el movimiento táctil, que se desactivará durante el diálogo
+        /// <summary>
+        /// UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar.
+        /// </summary>
     public GameObject joystickUI;
 
-    // Clip de audio que se reproduce cada vez que se avanza una línea del diálogo
+        /// <summary>
+        /// Sonido que se reproduce al avanzar en el diálogo.
+        /// </summary>
     public AudioClip sonidoPanel;
 
     // Método que se llama al iniciar el juego o la escena
