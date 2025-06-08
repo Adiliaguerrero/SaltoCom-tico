@@ -5,10 +5,11 @@ using UnityEngine;
     /// </summary>
 public class Cuchilla : MonoBehaviour
 {
-    // Cantidad de daño que la cuchilla inflige al jugador al tocarlo
+    /// <summary>
+    /// Cantidad de daño que la cuchilla inflige al jugador al tocarlo.
+    /// </summary>
     public int danio = 1;
 
-    // Método que se ejecuta automáticamente cuando otro objeto colisiona con este objeto (usando Rigidbody2D y Collider2D)
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Intentamos obtener el componente PlayerController del objeto que colisionó, para verificar si es el jugador
