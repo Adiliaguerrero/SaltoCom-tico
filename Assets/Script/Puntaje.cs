@@ -180,7 +180,10 @@ public static PuntosManager instancia;
         ActualizarPuntajes();
     }
 
-    // Método para cambiar la escena actual por la escena indicada en nombreEscena
+
+    /// <summary>
+    /// Carga la escena especificada en <see cref="nombreEscena"/>.
+    /// </summary>
     public void CambiarEscena()
     {
         if (!string.IsNullOrEmpty(nombreEscena))
