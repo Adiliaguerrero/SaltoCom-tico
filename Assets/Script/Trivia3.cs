@@ -70,7 +70,10 @@ public class PreguntaOpcionMultiple : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Método público llamado cuando el jugador selecciona una opción.
+    /// </summary>
+    /// <param name="indice">Índice de la opción seleccionada.</param>
     public void SeleccionarOpcion(int indice)
     {
         // Reproduce el sonido del botón usando el AudioManager global
