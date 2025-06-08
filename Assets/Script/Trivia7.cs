@@ -51,7 +51,10 @@ public class TranscribirOracion3 : MonoBehaviour
         campoRespuesta.text = "";
     }
 
-    // Método público que verifica si la respuesta del usuario es correcta o no
+
+    /// <summary>
+    /// Verifica si la respuesta ingresada por el usuario coincide exactamente con la oración correcta.
+    /// </summary>
     public void VerificarRespuesta()
     {
         // Reproduce el sonido del botón usando el AudioManager global
