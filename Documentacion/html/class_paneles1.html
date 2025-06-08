@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_paneles1.html','',''); });
   <div class="headertitle"><div class="title">Paneles1 Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla la activación secuencial de paneles tipo trivia y gestiona el estado del jugador durante su visualización.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Paneles1:</div>
 <div class="dyncontent">
@@ -103,25 +106,37 @@ Inheritance diagram for Paneles1:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c8e0a68251948580a968bffc2a709b7" id="r_a6c8e0a68251948580a968bffc2a709b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c8e0a68251948580a968bffc2a709b7">SiguienteTrivia</a> ()</td></tr>
+<tr class="memdesc:a6c8e0a68251948580a968bffc2a709b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método público que se llama desde un botón para avanzar a la siguiente trivia.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a1f9bd1b0f2b5a082f1146529bbefccb6" id="r_a1f9bd1b0f2b5a082f1146529bbefccb6"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f9bd1b0f2b5a082f1146529bbefccb6">panel1</a></td></tr>
+<tr class="memdesc:a1f9bd1b0f2b5a082f1146529bbefccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primer panel de trivia.  <br /></td></tr>
 <tr class="memitem:af3b18412cf955c393d13a9bd15edc804" id="r_af3b18412cf955c393d13a9bd15edc804"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3b18412cf955c393d13a9bd15edc804">panel2</a></td></tr>
+<tr class="memdesc:af3b18412cf955c393d13a9bd15edc804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segundo panel de trivia.  <br /></td></tr>
 <tr class="memitem:ad628fbc096ce9aa8df481e3c29ce665f" id="r_ad628fbc096ce9aa8df481e3c29ce665f"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad628fbc096ce9aa8df481e3c29ce665f">panel3</a></td></tr>
+<tr class="memdesc:ad628fbc096ce9aa8df481e3c29ce665f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tercer panel de trivia.  <br /></td></tr>
 <tr class="memitem:a9726a1d081588f411f01929f8e9a84a9" id="r_a9726a1d081588f411f01929f8e9a84a9"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9726a1d081588f411f01929f8e9a84a9">joystick</a></td></tr>
+<tr class="memdesc:a9726a1d081588f411f01929f8e9a84a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick virtual que se desactiva durante la trivia.  <br /></td></tr>
 <tr class="memitem:a4a4e32424fca4936a835fa74305a996b" id="r_a4a4e32424fca4936a835fa74305a996b"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a4e32424fca4936a835fa74305a996b">imagen1</a></td></tr>
+<tr class="memdesc:a4a4e32424fca4936a835fa74305a996b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primer elemento visual auxiliar de la interfaz.  <br /></td></tr>
 <tr class="memitem:aa739f5a1685c1daf0ef172aa443f85c9" id="r_aa739f5a1685c1daf0ef172aa443f85c9"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa739f5a1685c1daf0ef172aa443f85c9">imagen2</a></td></tr>
+<tr class="memdesc:aa739f5a1685c1daf0ef172aa443f85c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segundo elemento visual auxiliar de la interfaz.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00005">5</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<div class="textblock"><p>Controla la activación secuencial de paneles tipo trivia y gestiona el estado del jugador durante su visualización. </p>
+<p>Los paneles de trivia se activan uno por uno al presionar un botón. Durante la visualización, se desactivan elementos de la interfaz y se congela al jugador. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00010">10</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a6c8e0a68251948580a968bffc2a709b7" name="a6c8e0a68251948580a968bffc2a709b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c8e0a68251948580a968bffc2a709b7">&#9670;&#160;</a></span>SiguienteTrivia()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Paneles1.SiguienteTrivia </td>
@@ -130,68 +145,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00049">49</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">// Vuelve a obtener referencias del jugador por si no estaban asignadas aún</span></div>
-<div class="line"><span class="lineno">   52</span>        GameObject jugador = GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Player&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (jugador != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            rbJugador = jugador.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><span class="lineno">   56</span>            playerController = jugador.GetComponent&lt;PlayerController&gt;();</div>
-<div class="line"><span class="lineno">   57</span>        }</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <span class="comment">// Activa el panel correspondiente según el índice actual</span></div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span> (triviaActual == 0)</div>
-<div class="line"><span class="lineno">   61</span>            ActivarPanel(0);</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (triviaActual == 1)</div>
-<div class="line"><span class="lineno">   63</span>            ActivarPanel(1);</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (triviaActual == 2)</div>
-<div class="line"><span class="lineno">   65</span>            ActivarPanel(2);</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   67</span>        {</div>
-<div class="line"><span class="lineno">   68</span>            <span class="comment">// Si ya no hay más trivias, desactiva todos los paneles y reactiva el control del jugador</span></div>
-<div class="line"><span class="lineno">   69</span>            Debug.Log(<span class="stringliteral">&quot;Todas las trivias han terminado.&quot;</span>);</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>            <a class="code hl_variable" href="#a1f9bd1b0f2b5a082f1146529bbefccb6">panel1</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   72</span>            <a class="code hl_variable" href="#af3b18412cf955c393d13a9bd15edc804">panel2</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_variable" href="#ad628fbc096ce9aa8df481e3c29ce665f">panel3</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>            <span class="comment">// Activa el joystick</span></div>
-<div class="line"><span class="lineno">   76</span>            <a class="code hl_variable" href="#a9726a1d081588f411f01929f8e9a84a9">joystick</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>            <span class="comment">// Vuelve a habilitar el componente de joystick si existe</span></div>
-<div class="line"><span class="lineno">   79</span>            FixedJoystick joyComponent = <a class="code hl_variable" href="#a9726a1d081588f411f01929f8e9a84a9">joystick</a>.GetComponent&lt;FixedJoystick&gt;();</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (joyComponent != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                joyComponent.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="comment">// Vuelve a activar las imágenes</span></div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="#a4a4e32424fca4936a835fa74305a996b">imagen1</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   87</span>            <a class="code hl_variable" href="#aa739f5a1685c1daf0ef172aa443f85c9">imagen2</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>            <span class="comment">// Reactiva el movimiento del jugador</span></div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (rbJugador != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   91</span>                rbJugador.bodyType = RigidbodyType2D.Dynamic;</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   94</span>                playerController.puedeMoverse = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        <span class="comment">// Aumenta el contador para pasar a la siguiente trivia la próxima vez</span></div>
-<div class="line"><span class="lineno">  100</span>        triviaActual++;</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="ttc" id="aclass_paneles1_html_a1f9bd1b0f2b5a082f1146529bbefccb6"><div class="ttname"><a href="#a1f9bd1b0f2b5a082f1146529bbefccb6">Paneles1.panel1</a></div><div class="ttdeci">GameObject panel1</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00008">Paneles1.cs:8</a></div></div>
-<div class="ttc" id="aclass_paneles1_html_a4a4e32424fca4936a835fa74305a996b"><div class="ttname"><a href="#a4a4e32424fca4936a835fa74305a996b">Paneles1.imagen1</a></div><div class="ttdeci">GameObject imagen1</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00014">Paneles1.cs:14</a></div></div>
-<div class="ttc" id="aclass_paneles1_html_a9726a1d081588f411f01929f8e9a84a9"><div class="ttname"><a href="#a9726a1d081588f411f01929f8e9a84a9">Paneles1.joystick</a></div><div class="ttdeci">GameObject joystick</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00013">Paneles1.cs:13</a></div></div>
-<div class="ttc" id="aclass_paneles1_html_aa739f5a1685c1daf0ef172aa443f85c9"><div class="ttname"><a href="#aa739f5a1685c1daf0ef172aa443f85c9">Paneles1.imagen2</a></div><div class="ttdeci">GameObject imagen2</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00015">Paneles1.cs:15</a></div></div>
-<div class="ttc" id="aclass_paneles1_html_ad628fbc096ce9aa8df481e3c29ce665f"><div class="ttname"><a href="#ad628fbc096ce9aa8df481e3c29ce665f">Paneles1.panel3</a></div><div class="ttdeci">GameObject panel3</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00010">Paneles1.cs:10</a></div></div>
-<div class="ttc" id="aclass_paneles1_html_af3b18412cf955c393d13a9bd15edc804"><div class="ttname"><a href="#af3b18412cf955c393d13a9bd15edc804">Paneles1.panel2</a></div><div class="ttdeci">GameObject panel2</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00009">Paneles1.cs:9</a></div></div>
-</div><!-- fragment -->
+<p>Método público que se llama desde un botón para avanzar a la siguiente trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00080">80</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -207,7 +171,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00014">14</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Primer elemento visual auxiliar de la interfaz. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00038">38</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
@@ -223,7 +189,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00015">15</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Segundo elemento visual auxiliar de la interfaz. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00044">44</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
@@ -239,7 +207,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00013">13</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Joystick virtual que se desactiva durante la trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00032">32</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
@@ -255,7 +225,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00008">8</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Primer panel de trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00016">16</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
@@ -271,7 +243,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00009">9</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Segundo panel de trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00021">21</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
@@ -287,12 +261,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00010">10</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
+<p>Tercer panel de trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_paneles1_8cs_source.html#l00026">26</a> of file <a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_paneles1_8cs_source.html">Paneles1.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

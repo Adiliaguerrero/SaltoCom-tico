@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/BarraVida.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/BarraVida.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,94 +93,85 @@ $(function(){initNavTree('_barra_vida_8cs_source.html','',''); });
   <div class="headertitle"><div class="title">BarraVida.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_barra_vida_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;       <span class="comment">// Librería principal de Unity para componentes y funciones base.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;    <span class="comment">// Librería necesaria para trabajar con UI, en este caso la barra de vida (Image).</span></div>
+<a href="_barra_vida_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;       </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Esta clase para controlar el sistema de vida del jugador y activar el obejto llamado game over</span></div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_barra_vida.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_barra_vida.html">BarraVida</a> : MonoBehaviour</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">    7</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">rellenoBarraVida</a>;  <span class="comment">// Referencia al componente Image que representa el relleno de la barra de vida.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> VidaMaxima = 5f;  <span class="comment">// Vida  que puede tener el jugador. Valor fijo.</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">   11</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a>;      <span class="comment">// Panel UI que se muestra cuando el jugador pierde (Game Over).</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">   12</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a>;    <span class="comment">// Imagen u objeto que debe eliminarse al perder.</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> gameOverActivado = <span class="keyword">false</span>;  <span class="comment">// Bandera boleana  para evitar activar Game Over varias veces.</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Método público para la barra de vida  que actualizara visualmente con el daño.</span></div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">   17</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">ActualizarBarra</a>(<span class="keywordtype">float</span> vidaActual)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// Limita el valor de vidaActual para que no sea menor que 0 ni mayor que VidaMaxima.</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        vidaActual = Mathf.Clamp(vidaActual, 0f, VidaMaxima);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Actualiza el fillAmount es un componente  imagen que sirve para el relleno de vida del Image esto reflejara la vida  como porcentaje (0 a 1).</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        rellenoBarraVida.fillAmount = vidaActual / VidaMaxima;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// Muestra en consola el valor actualizado de la barra para depuración.</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        Debug.Log(<span class="stringliteral">&quot;Barra de vida actualizada: &quot;</span> + <a class="code hl_variable" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">rellenoBarraVida</a>.fillAmount);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// Si la vida llega a 0 o menos, activa la pantalla de Game Over.</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (vidaActual &lt;= 0f)</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_function" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">ActivarGameOver</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_barra_vida.html">    8</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_barra_vida.html">BarraVida</a> : MonoBehaviour</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">   13</a></span>    <span class="keyword">public</span> Image <a class="code hl_variable" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">rellenoBarraVida</a>;  <span class="comment">// Referencia al componente Image que representa el relleno de la barra de vida.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> VidaMaxima = 5f;  </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">   23</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a>;      </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">   28</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a>;    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> gameOverActivado = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">   41</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">ActualizarBarra</a>(<span class="keywordtype">float</span> vidaActual)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        vidaActual = Mathf.Clamp(vidaActual, 0f, VidaMaxima);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        rellenoBarraVida.fillAmount = vidaActual / VidaMaxima;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// Muestra en consola el valor actualizado de la barra para depuración.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        Debug.Log(<span class="stringliteral">&quot;Barra de vida actualizada: &quot;</span> + <a class="code hl_variable" href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">rellenoBarraVida</a>.fillAmount);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (vidaActual &lt;= 0f)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_function" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">ActivarGameOver</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Método para activar la pantalla de Game Over y realizar acciones relacionadas.</span></div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">   36</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">ActivarGameOver</a>()</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">// Si el Game Over ya fue activado, evita que se ejecute otra vez.</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">if</span> (gameOverActivado) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        gameOverActivado = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">// Activa el panel de Game Over si está asignado en el Inspector.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="comment">// Si no está asignado, muestra un error en consola para que el desarrollador lo corrija.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            Debug.LogError(<span class="stringliteral">&quot;Panel de Game Over no asignado.&quot;</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// Destruye la imagen u objeto asignado para eliminarlo de la escena.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            Destroy(<a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">// Muestra una advertencia si no se asignó la imagen para eliminar.</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            Debug.LogWarning(<span class="stringliteral">&quot;Imagen a eliminar no asignada.&quot;</span>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// Busca en la escena el objeto con el tag &quot;Player&quot; para destruirlo (simulando la muerte).</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        GameObject player = GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Player&quot;</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (player != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Método para activar la pantalla de Game Over y realizar acciones relacionadas.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">   61</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">ActivarGameOver</a>()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (gameOverActivado) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        gameOverActivado = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            Destroy(player);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">panelGameOver</a>.SetActive(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="comment">// Si no se encuentra el jugador, avisa en consola.</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            Debug.LogWarning(<span class="stringliteral">&quot;No se encontró un objeto con el tag &#39;Player&#39;.&quot;</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            Debug.LogError(<span class="stringliteral">&quot;Panel de Game Over no asignado.&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            Destroy(<a class="code hl_variable" href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            Debug.LogWarning(<span class="stringliteral">&quot;Imagen a eliminar no asignada.&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        GameObject player = GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Player&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (player != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            Destroy(player);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            Debug.LogWarning(<span class="stringliteral">&quot;No se encontró un objeto con el tag &#39;Player&#39;.&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
 </div>
-<div class="ttc" id="aclass_barra_vida_html"><div class="ttname"><a href="class_barra_vida.html">BarraVida</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">BarraVida.cs:6</a></div></div>
-<div class="ttc" id="aclass_barra_vida_html_a0703d20e309ee43765aa88dd03c0b7e6"><div class="ttname"><a href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">BarraVida.ActualizarBarra</a></div><div class="ttdeci">void ActualizarBarra(float vidaActual)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">BarraVida.cs:17</a></div></div>
-<div class="ttc" id="aclass_barra_vida_html_a11dbbd3b3cf2d658adcf23fce71a3d48"><div class="ttname"><a href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">BarraVida.ActivarGameOver</a></div><div class="ttdeci">void ActivarGameOver()</div><div class="ttdef"><b>Definition</b> <a href="#l00036">BarraVida.cs:36</a></div></div>
-<div class="ttc" id="aclass_barra_vida_html_a716f8bb07e88786accab3459bd15873f"><div class="ttname"><a href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">BarraVida.rellenoBarraVida</a></div><div class="ttdeci">Image rellenoBarraVida</div><div class="ttdef"><b>Definition</b> <a href="#l00007">BarraVida.cs:7</a></div></div>
-<div class="ttc" id="aclass_barra_vida_html_ae919c8cbd88f05e4a1140b181969aca3"><div class="ttname"><a href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">BarraVida.panelGameOver</a></div><div class="ttdeci">GameObject panelGameOver</div><div class="ttdef"><b>Definition</b> <a href="#l00011">BarraVida.cs:11</a></div></div>
-<div class="ttc" id="aclass_barra_vida_html_aea5f0961ab4cf297a9b10281f29b1455"><div class="ttname"><a href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">BarraVida.imagenAEliminar</a></div><div class="ttdeci">GameObject imagenAEliminar</div><div class="ttdef"><b>Definition</b> <a href="#l00012">BarraVida.cs:12</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html"><div class="ttname"><a href="class_barra_vida.html">BarraVida</a></div><div class="ttdoc">Controla el sistema de vida del jugador y activa el panel de Game Over cuando la vida llega a cero.</div><div class="ttdef"><b>Definition</b> <a href="#l00008">BarraVida.cs:9</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html_a0703d20e309ee43765aa88dd03c0b7e6"><div class="ttname"><a href="class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6">BarraVida.ActualizarBarra</a></div><div class="ttdeci">void ActualizarBarra(float vidaActual)</div><div class="ttdoc">Actualiza visualmente la barra de vida del jugador. Si la vida es igual o menor a cero,...</div><div class="ttdef"><b>Definition</b> <a href="#l00041">BarraVida.cs:41</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html_a11dbbd3b3cf2d658adcf23fce71a3d48"><div class="ttname"><a href="class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48">BarraVida.ActivarGameOver</a></div><div class="ttdeci">void ActivarGameOver()</div><div class="ttdoc">Activa la interfaz de Game Over, destruye objetos asociados y elimina al jugador de la escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">BarraVida.cs:61</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html_a716f8bb07e88786accab3459bd15873f"><div class="ttname"><a href="class_barra_vida.html#a716f8bb07e88786accab3459bd15873f">BarraVida.rellenoBarraVida</a></div><div class="ttdeci">Image rellenoBarraVida</div><div class="ttdoc">Imagen que representa el relleno de la barra de vida en la interfaz gráfica.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">BarraVida.cs:13</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html_ae919c8cbd88f05e4a1140b181969aca3"><div class="ttname"><a href="class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3">BarraVida.panelGameOver</a></div><div class="ttdeci">GameObject panelGameOver</div><div class="ttdoc">Panel de Game Over que se muestra cuando el jugador pierde.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">BarraVida.cs:23</a></div></div>
+<div class="ttc" id="aclass_barra_vida_html_aea5f0961ab4cf297a9b10281f29b1455"><div class="ttname"><a href="class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455">BarraVida.imagenAEliminar</a></div><div class="ttdeci">GameObject imagenAEliminar</div><div class="ttdoc">Imagen u objeto que debe ser eliminado al activarse el Game Over.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">BarraVida.cs:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

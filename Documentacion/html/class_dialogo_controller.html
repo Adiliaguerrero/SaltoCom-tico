@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_dialogo_controller.html','',''); });
   <div class="headertitle"><div class="title">DialogoController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for DialogoController:</div>
 <div class="dyncontent">
@@ -103,23 +106,36 @@ Inheritance diagram for DialogoController:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fa61ce9a80902999374b385416008b2" id="r_a3fa61ce9a80902999374b385416008b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa61ce9a80902999374b385416008b2">MostrarDialogo</a> (System.Action alTerminar)</td></tr>
+<tr class="memdesc:a3fa61ce9a80902999374b385416008b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia la visualización del diálogo.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a8aaf08416957973cff7afb2c02a674b4" id="r_a8aaf08416957973cff7afb2c02a674b4"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a></td></tr>
+<tr class="memdesc:a8aaf08416957973cff7afb2c02a674b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panel de UI que contiene el diálogo completo, incluyendo fondo y texto.  <br /></td></tr>
 <tr class="memitem:a187c83ff9d12fb9da311072c8a2806bc" id="r_a187c83ff9d12fb9da311072c8a2806bc"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a187c83ff9d12fb9da311072c8a2806bc">textoDialogo</a></td></tr>
+<tr class="memdesc:a187c83ff9d12fb9da311072c8a2806bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente de texto TMP que mostrará cada línea del diálogo.  <br /></td></tr>
 <tr class="memitem:a577d9974bf82a2fe7be36a45792330fc" id="r_a577d9974bf82a2fe7be36a45792330fc"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a></td></tr>
+<tr class="memdesc:a577d9974bf82a2fe7be36a45792330fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista de líneas que serán mostradas una a una en el diálogo.  <br /></td></tr>
 <tr class="memitem:a6195ef4b24971b5c8fdbcaac6208b8e8" id="r_a6195ef4b24971b5c8fdbcaac6208b8e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a> = 2f</td></tr>
+<tr class="memdesc:a6195ef4b24971b5c8fdbcaac6208b8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00009">9</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+<div class="textblock"><p>Controla la visualización de un sistema de diálogo en pantalla después de activar un portal. </p>
+<p>Este componente se encarga de mostrar líneas de diálogo una por una en un panel UI, utilizando un TextMeshProUGUI y un panel contenedor. </p>
+<p>Para mostrar el diálogo desde otro script: </p><div class="fragment"><div class="line">var dialogo = FindObjectOfType&lt;DialogoController&gt;();</div>
+<div class="line">dialogo.MostrarDialogo(() =&gt; Debug.Log(<span class="stringliteral">&quot;Diálogo finalizado&quot;</span>));</div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>TextMeshProUGUI</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00022">22</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a3fa61ce9a80902999374b385416008b2" name="a3fa61ce9a80902999374b385416008b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3fa61ce9a80902999374b385416008b2">&#9670;&#160;</a></span>MostrarDialogo()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void DialogoController.MostrarDialogo </td>
@@ -128,18 +144,30 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00027">27</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="comment">// Activamos el panel para que el diálogo se muestre en pantalla</span></div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">// Iniciamos la corutina MostrarLineas para mostrar las líneas de diálogo una a una</span></div>
-<div class="line"><span class="lineno">   33</span>        StartCoroutine(MostrarLineas(alTerminar));</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="ttc" id="aclass_dialogo_controller_html_a8aaf08416957973cff7afb2c02a674b4"><div class="ttname"><a href="#a8aaf08416957973cff7afb2c02a674b4">DialogoController.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdef"><b>Definition</b> <a href="_dialog_contr_8cs_source.html#l00012">DialogContr.cs:12</a></div></div>
-</div><!-- fragment -->
+<p>Inicia la visualización del diálogo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alTerminar</td><td>Acción a ejecutar cuando termine el diálogo.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esta función activa el panel y comienza a mostrar las líneas mediante una corrutina. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">System.NullReferenceException</td><td>Se lanza si <a class="el" href="#a187c83ff9d12fb9da311072c8a2806bc" title="Componente de texto TMP que mostrará cada línea del diálogo.">textoDialogo</a> no está asignado en el Inspector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00062">62</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -155,7 +183,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00020">20</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+<p>Lista de líneas que serán mostradas una a una en el diálogo. </p>
+<p>El atributo <code>[TextArea]</code> permite una mejor edición en el Inspector. </p>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00044">44</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 
 </div>
 </div>
@@ -171,7 +202,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00012">12</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+<p>Panel de UI que contiene el diálogo completo, incluyendo fondo y texto. </p>
+<p>Debe estar desactivado por defecto y se activa al iniciar el diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00030">30</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 
 </div>
 </div>
@@ -187,7 +221,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00015">15</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+<p>Componente de texto TMP que mostrará cada línea del diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00035">35</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 
 </div>
 </div>
@@ -203,12 +239,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00023">23</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+<p>Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente. </p>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00050">50</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

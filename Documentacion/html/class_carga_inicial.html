@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_carga_inicial.html','',''); });
   <div class="headertitle"><div class="title">CargaInicial Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla la simulación de una barra de carga con un Slider y texto porcentual, que culmina cargando una nueva escena.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CargaInicial:</div>
 <div class="dyncontent">
@@ -103,13 +106,18 @@ Inheritance diagram for CargaInicial:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a76b8ad70f3a82d8389e1b337e88ede66" id="r_a76b8ad70f3a82d8389e1b337e88ede66"><td class="memItemLeft" align="right" valign="top">Slider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b8ad70f3a82d8389e1b337e88ede66">slider</a></td></tr>
+<tr class="memdesc:a76b8ad70f3a82d8389e1b337e88ede66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al componente Slider que representa visualmente el progreso de carga.  <br /></td></tr>
 <tr class="memitem:a6822859abb1db039703b28673a739d42" id="r_a6822859abb1db039703b28673a739d42"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6822859abb1db039703b28673a739d42">tiempoCarga</a> = 5f</td></tr>
+<tr class="memdesc:a6822859abb1db039703b28673a739d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo total (en segundos) que durará la simulación de carga.  <br /></td></tr>
 <tr class="memitem:aa223bd682fbb5f2985ed053acc0176d1" id="r_aa223bd682fbb5f2985ed053acc0176d1"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa223bd682fbb5f2985ed053acc0176d1">textoCarga</a></td></tr>
+<tr class="memdesc:aa223bd682fbb5f2985ed053acc0176d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que mostrará el porcentaje de carga en pantalla.  <br /></td></tr>
 <tr class="memitem:ad9366ac31537ad04af26a9c0157e5f54" id="r_ad9366ac31537ad04af26a9c0157e5f54"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9366ac31537ad04af26a9c0157e5f54">nombreEscena</a></td></tr>
+<tr class="memdesc:ad9366ac31537ad04af26a9c0157e5f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la escena que se cargará al completar la carga.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00009">9</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
+<div class="textblock"><p>Controla la simulación de una barra de carga con un Slider y texto porcentual, que culmina cargando una nueva escena. </p>
+
+<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00011">11</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ad9366ac31537ad04af26a9c0157e5f54" name="ad9366ac31537ad04af26a9c0157e5f54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9366ac31537ad04af26a9c0157e5f54">&#9670;&#160;</a></span>nombreEscena</h2>
@@ -123,7 +131,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00022">22</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
+<p>Nombre de la escena que se cargará al completar la carga. </p>
+
+<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00036">36</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
 
 </div>
 </div>
@@ -139,7 +149,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00013">13</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
+<p>Referencia al componente Slider que representa visualmente el progreso de carga. </p>
+
+<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00018">18</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
 
 </div>
 </div>
@@ -155,7 +167,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00019">19</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
+<p>Texto que mostrará el porcentaje de carga en pantalla. </p>
+
+<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00030">30</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
 
 </div>
 </div>
@@ -171,12 +185,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00016">16</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
+<p>Tiempo total (en segundos) que durará la simulación de carga. </p>
+
+<p class="definition">Definition at line <a class="el" href="_carga_barra_8cs_source.html#l00024">24</a> of file <a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_carga_barra_8cs_source.html">CargaBarra.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

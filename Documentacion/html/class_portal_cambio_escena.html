@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_portal_cambio_escena.html','',''); });
   <div class="headertitle"><div class="title">PortalCambioEscena Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla el cambio de escena al entrar en contacto con un portal. Muestra un mensaje de bienvenida temporal en la nueva escena.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for PortalCambioEscena:</div>
 <div class="dyncontent">
@@ -103,13 +106,18 @@ Inheritance diagram for PortalCambioEscena:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a9d4495138c5d66ff6d2816a901e32ca7" id="r_a9d4495138c5d66ff6d2816a901e32ca7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d4495138c5d66ff6d2816a901e32ca7">nombreEscenaDestino</a></td></tr>
+<tr class="memdesc:a9d4495138c5d66ff6d2816a901e32ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la escena de destino a cargar al colisionar con el portal.  <br /></td></tr>
 <tr class="memitem:a380b14499e246b801f276fc18b2adbdf" id="r_a380b14499e246b801f276fc18b2adbdf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380b14499e246b801f276fc18b2adbdf">nombreObjetoTextoBienvenida</a></td></tr>
+<tr class="memdesc:a380b14499e246b801f276fc18b2adbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre del objeto que contiene el texto de bienvenida en la nueva escena.  <br /></td></tr>
 <tr class="memitem:a19f8c683a47c376d8f0ccc60d94fd990" id="r_a19f8c683a47c376d8f0ccc60d94fd990"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19f8c683a47c376d8f0ccc60d94fd990">mensajeBienvenida</a> = &quot;¡Bienvenido!&quot;</td></tr>
+<tr class="memdesc:a19f8c683a47c376d8f0ccc60d94fd990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mensaje de bienvenida que se mostrará al llegar a la nueva escena.  <br /></td></tr>
 <tr class="memitem:ad6c50ac58301586bfe90cb35aa3f577a" id="r_ad6c50ac58301586bfe90cb35aa3f577a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6c50ac58301586bfe90cb35aa3f577a">duracionMensaje</a> = 3f</td></tr>
+<tr class="memdesc:ad6c50ac58301586bfe90cb35aa3f577a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duración (en segundos) del mensaje de bienvenida.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00008">8</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
+<div class="textblock"><p>Controla el cambio de escena al entrar en contacto con un portal. Muestra un mensaje de bienvenida temporal en la nueva escena. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00009">9</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ad6c50ac58301586bfe90cb35aa3f577a" name="ad6c50ac58301586bfe90cb35aa3f577a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6c50ac58301586bfe90cb35aa3f577a">&#9670;&#160;</a></span>duracionMensaje</h2>
@@ -123,7 +131,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00020">20</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
+<p>Duración (en segundos) del mensaje de bienvenida. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00029">29</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
 
 </div>
 </div>
@@ -139,7 +149,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00017">17</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
+<p>Mensaje de bienvenida que se mostrará al llegar a la nueva escena. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00024">24</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
 
 </div>
 </div>
@@ -155,7 +167,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00011">11</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
+<p>Nombre de la escena de destino a cargar al colisionar con el portal. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00014">14</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
 
 </div>
 </div>
@@ -171,12 +185,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00014">14</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
+<p>Nombre del objeto que contiene el texto de bienvenida en la nueva escena. </p>
+
+<p class="definition">Definition at line <a class="el" href="_portales_8cs_source.html#l00019">19</a> of file <a class="el" href="_portales_8cs_source.html">Portales.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_portales_8cs_source.html">Portales.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_portales_8cs_source.html">Portales.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

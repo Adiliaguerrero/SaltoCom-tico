@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/AbismoCaida.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/AbismoCaida.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,65 +93,49 @@ $(function(){initNavTree('_abismo_caida_8cs_source.html','',''); });
   <div class="headertitle"><div class="title">AbismoCaida.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_abismo_caida_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine; <span class="comment">// Importa las herramientas principales de Unity (Componentes, GameObject, Transform, etc.)</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.SceneManagement; <span class="comment">// Permite gestionar escenas (cargar, reiniciar, etc.)</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections; <span class="comment">// Necesario para usar corrutinas (funciones que permiten pausas temporales)</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//Este clase permite que el personaje muera por un abismo de caida </span></div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_abismo_caida.html">    8</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_abismo_caida.html">AbismoCaida</a> : MonoBehaviour</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// Referencia al panel de Game Over (se activa cuando el jugador muere)</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">   11</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Método OnTriggerEnter2D se llama automáticamente y se activa cuando otro objeto entra en el trigger de este objeto (abismo)</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter2D(Collider2D other)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// Verificamos si el objeto que entra al abismo tiene la etiqueta &quot;Player&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">if</span> (other.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="comment">// Muestra un mensaje en la consola indicando que el jugador cayó</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            Debug.Log(<span class="stringliteral">&quot;Jugador ha tocado la zona de muerte&quot;</span>);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="comment">// Destruye el objeto del jugador (lo elimina de la escena)</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            Destroy(other.gameObject);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="comment">// Inicia una corrutina que mostrará el panel de Game Over luego de 2 segundos</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            StartCoroutine(ShowGameOver());</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Corrutina que espera 2 segundos antes de mostrar el panel de Game Over</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    IEnumerator ShowGameOver()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// Espera 2 segundos</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(2f);</div>
+<a href="_abismo_caida_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine; </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.SceneManagement; </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_abismo_caida.html">   13</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_abismo_caida.html">AbismoCaida</a> : MonoBehaviour</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">   18</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter2D(Collider2D other)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (other.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Debug.Log(<span class="stringliteral">&quot;Jugador ha tocado la zona de muerte&quot;</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// Activa el panel de Game Over para que sea visible en pantalla</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// Detiene el tiempo del juego (pausa todos los objetos y animaciones excepto la UI)</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Time.timeScale = 0f;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Método público que se puede llamar desde un botón para reiniciar el juego</span></div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">   44</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">RestartGame</a>()</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">// Reactiva el tiempo del juego (lo normaliza)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        Time.timeScale = 1f;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">// Recarga la escena actual (reinicia el nivel)</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        SceneManager.LoadScene(SceneManager.GetActiveScene().name);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            Destroy(other.gameObject);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            StartCoroutine(ShowGameOver());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    IEnumerator ShowGameOver()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(2f);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        Time.timeScale = 0f;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">   67</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">RestartGame</a>()</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        Time.timeScale = 1f;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        SceneManager.LoadScene(SceneManager.GetActiveScene().name);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 </div>
-<div class="ttc" id="aclass_abismo_caida_html"><div class="ttname"><a href="class_abismo_caida.html">AbismoCaida</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">AbismoCaida.cs:9</a></div></div>
-<div class="ttc" id="aclass_abismo_caida_html_ab810370d2a20b0284140e4fdbd51f523"><div class="ttname"><a href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">AbismoCaida.gameOverPanel</a></div><div class="ttdeci">GameObject gameOverPanel</div><div class="ttdef"><b>Definition</b> <a href="#l00011">AbismoCaida.cs:11</a></div></div>
-<div class="ttc" id="aclass_abismo_caida_html_af04d1da03001883982584f9156cd0378"><div class="ttname"><a href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">AbismoCaida.RestartGame</a></div><div class="ttdeci">void RestartGame()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">AbismoCaida.cs:44</a></div></div>
+<div class="ttc" id="aclass_abismo_caida_html"><div class="ttname"><a href="class_abismo_caida.html">AbismoCaida</a></div><div class="ttdoc">Controla el comportamiento del abismo de caída. Si el jugador entra en contacto con esta zona,...</div><div class="ttdef"><b>Definition</b> <a href="#l00013">AbismoCaida.cs:14</a></div></div>
+<div class="ttc" id="aclass_abismo_caida_html_ab810370d2a20b0284140e4fdbd51f523"><div class="ttname"><a href="class_abismo_caida.html#ab810370d2a20b0284140e4fdbd51f523">AbismoCaida.gameOverPanel</a></div><div class="ttdeci">GameObject gameOverPanel</div><div class="ttdoc">Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">AbismoCaida.cs:18</a></div></div>
+<div class="ttc" id="aclass_abismo_caida_html_af04d1da03001883982584f9156cd0378"><div class="ttname"><a href="class_abismo_caida.html#af04d1da03001883982584f9156cd0378">AbismoCaida.RestartGame</a></div><div class="ttdeci">void RestartGame()</div><div class="ttdoc">Reinicia la escena actual, restaurando el tiempo y reiniciando el nivel desde el inicio.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">AbismoCaida.cs:67</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

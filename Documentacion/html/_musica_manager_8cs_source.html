@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/MusicaManager.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/MusicaManager.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,91 +93,71 @@ $(function(){initNavTree('_musica_manager_8cs_source.html','',''); });
   <div class="headertitle"><div class="title">MusicaManager.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_musica_manager_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Importamos el espacio de nombres de Unity</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Esta clase gestiona la música de fondo glo0bal en el juego y la mantiene persistente entre escenas</span></div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_musica_manager.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_musica_manager.html">MusicaManager</a> : MonoBehaviour</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="comment">// Instancia estática del MusicaManager (patrón Singleton)</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">    8</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_musica_manager.html">MusicaManager</a> <a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a>; </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// Componente AudioSource que reproduce la música de fondo</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">   11</a></span>    <span class="keyword">public</span> AudioSource <a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>;  </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Variable booleana que indica si la música está activa o no</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> musicaActiva;  </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Método Awake que se ejecuta al cargar el objeto (antes de Start)</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// Si no hay una instancia activa, esta se convierte en la principal</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a> == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a> = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="comment">// Evita que este objeto se destruya al cambiar de escena</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            DontDestroyOnLoad(gameObject); </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="comment">// Si ya existe una instancia, destruye esta para evitar duplicados</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            Destroy(gameObject);  </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<a href="_musica_manager_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_musica_manager.html">    8</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_musica_manager.html">MusicaManager</a> : MonoBehaviour</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">   13</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_musica_manager.html">MusicaManager</a> <a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">   18</a></span>    <span class="keyword">public</span> AudioSource <a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> musicaActiva;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_variable" href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">instancia</a> = <span class="keyword">this</span>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">// Carga el estado guardado de la música (1 = activa, 0 = desactivada)</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        musicaActiva = PlayerPrefs.GetInt(<span class="stringliteral">&quot;MusicaActiva&quot;</span>, 1) == 1;  </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// Aplica el estado guardado a la música de fondo</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        AplicarEstadoMusica();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Método público que alterna el estado de la música (encendida/apagada)</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">   42</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">AlternarMusica</a>()</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Cambia el estado booleano a su valor opuesto</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        musicaActiva = !musicaActiva;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// Guarda el nuevo estado en PlayerPrefs para que se mantenga entre sesiones</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;MusicaActiva&quot;</span>, musicaActiva ? 1 : 0);  </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        PlayerPrefs.Save();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// Aplica el nuevo estado a la música de fondo</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        AplicarEstadoMusica();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            DontDestroyOnLoad(gameObject);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            Destroy(gameObject);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        musicaActiva = PlayerPrefs.GetInt(<span class="stringliteral">&quot;MusicaActiva&quot;</span>, 1) == 1;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        AplicarEstadoMusica();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">   51</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">AlternarMusica</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        musicaActiva = !musicaActiva;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Método privado que aplica el estado de la música al componente AudioSource</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> AplicarEstadoMusica()</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="comment">// Verifica que el componente de música esté asignado</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="comment">// Si la música está activa</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">if</span> (musicaActiva)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="comment">// Si no está sonando, la reproduce</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>.isPlaying) <a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>.Play();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="comment">// Asegura que el volumen esté al máximo</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                musicaFondo.volume = 1f; </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="comment">// Si la música está desactivada, baja el volumen a cero</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                musicaFondo.volume = 0f; </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;MusicaActiva&quot;</span>, musicaActiva ? 1 : 0);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        PlayerPrefs.Save();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        AplicarEstadoMusica();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 </div>
-<div class="ttc" id="aclass_musica_manager_html"><div class="ttname"><a href="class_musica_manager.html">MusicaManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">MusicaManager.cs:6</a></div></div>
-<div class="ttc" id="aclass_musica_manager_html_a4dbd5693f39d33414f05cc74ff8a183b"><div class="ttname"><a href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">MusicaManager.AlternarMusica</a></div><div class="ttdeci">void AlternarMusica()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">MusicaManager.cs:42</a></div></div>
-<div class="ttc" id="aclass_musica_manager_html_a798507bd3844b8928a43931398d4739e"><div class="ttname"><a href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">MusicaManager.instancia</a></div><div class="ttdeci">static MusicaManager instancia</div><div class="ttdef"><b>Definition</b> <a href="#l00008">MusicaManager.cs:8</a></div></div>
-<div class="ttc" id="aclass_musica_manager_html_a945f92b6f35199cc287aa876883dd10f"><div class="ttname"><a href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">MusicaManager.musicaFondo</a></div><div class="ttdeci">AudioSource musicaFondo</div><div class="ttdef"><b>Definition</b> <a href="#l00011">MusicaManager.cs:11</a></div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> AplicarEstadoMusica()</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (musicaActiva)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>.isPlaying) <a class="code hl_variable" href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a>.Play();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                musicaFondo.volume = 1f;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                musicaFondo.volume = 0f;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+</div>
+<div class="ttc" id="aclass_musica_manager_html"><div class="ttname"><a href="class_musica_manager.html">MusicaManager</a></div><div class="ttdoc">Esta clase gestiona la música de fondo global en el juego. Implementa el patrón Singleton para manten...</div><div class="ttdef"><b>Definition</b> <a href="#l00008">MusicaManager.cs:9</a></div></div>
+<div class="ttc" id="aclass_musica_manager_html_a4dbd5693f39d33414f05cc74ff8a183b"><div class="ttname"><a href="class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b">MusicaManager.AlternarMusica</a></div><div class="ttdeci">void AlternarMusica()</div><div class="ttdoc">Alterna entre activar y desactivar la música de fondo, y guarda el estado en las preferencias del jug...</div><div class="ttdef"><b>Definition</b> <a href="#l00051">MusicaManager.cs:51</a></div></div>
+<div class="ttc" id="aclass_musica_manager_html_a798507bd3844b8928a43931398d4739e"><div class="ttname"><a href="class_musica_manager.html#a798507bd3844b8928a43931398d4739e">MusicaManager.instancia</a></div><div class="ttdeci">static MusicaManager instancia</div><div class="ttdoc">Instancia estática del MusicaManager para aplicar el patrón Singleton.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">MusicaManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_musica_manager_html_a945f92b6f35199cc287aa876883dd10f"><div class="ttname"><a href="class_musica_manager.html#a945f92b6f35199cc287aa876883dd10f">MusicaManager.musicaFondo</a></div><div class="ttdeci">AudioSource musicaFondo</div><div class="ttdoc">Componente AudioSource que reproduce la música de fondo.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">MusicaManager.cs:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

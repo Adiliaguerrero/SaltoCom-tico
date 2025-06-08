@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_ninja.html','',''); });
   <div class="headertitle"><div class="title">Ninja Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla el comportamiento de un enemigo tipo <a class="el" href="class_ninja.html" title="Controla el comportamiento de un enemigo tipo Ninja, incluyendo detección del jugador,...">Ninja</a>, incluyendo detección del jugador, movimiento, ataque y muerte.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Ninja:</div>
 <div class="dyncontent">
@@ -103,13 +106,19 @@ Inheritance diagram for Ninja:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aab6cefcbdffd3539e89fa1f07077acf2" id="r_aab6cefcbdffd3539e89fa1f07077acf2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab6cefcbdffd3539e89fa1f07077acf2">detectionRadius</a> = 5.0f</td></tr>
+<tr class="memdesc:aab6cefcbdffd3539e89fa1f07077acf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distancia máxima a la que el ninja puede detectar al jugador.  <br /></td></tr>
 <tr class="memitem:a0b8fd1cc8651a2549b440629e5addad1" id="r_a0b8fd1cc8651a2549b440629e5addad1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b8fd1cc8651a2549b440629e5addad1">attackRadius</a> = 1.0f</td></tr>
+<tr class="memdesc:a0b8fd1cc8651a2549b440629e5addad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distancia mínima para que el ninja inicie un ataque.  <br /></td></tr>
 <tr class="memitem:afa384eb5ef9119060c3f35e83b402d95" id="r_afa384eb5ef9119060c3f35e83b402d95"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa384eb5ef9119060c3f35e83b402d95">speed</a> = 2.0f</td></tr>
+<tr class="memdesc:afa384eb5ef9119060c3f35e83b402d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidad de movimiento del ninja.  <br /></td></tr>
 <tr class="memitem:a958a7f2654ecc5c5aee8cf85b97a8b5c" id="r_a958a7f2654ecc5c5aee8cf85b97a8b5c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958a7f2654ecc5c5aee8cf85b97a8b5c">attackCooldown</a> = 1.0f</td></tr>
+<tr class="memdesc:a958a7f2654ecc5c5aee8cf85b97a8b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo de espera entre ataques consecutivos.  <br /></td></tr>
 <tr class="memitem:a83a444a693d8efe42f2f121d2c343df8" id="r_a83a444a693d8efe42f2f121d2c343df8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83a444a693d8efe42f2f121d2c343df8">tiempoAnimacionMuerte</a> = 0.8f</td></tr>
+<tr class="memdesc:a83a444a693d8efe42f2f121d2c343df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo que dura la animación de muerte antes de eliminar al ninja.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Controla el comportamiento de un enemigo tipo <a class="el" href="class_ninja.html" title="Controla el comportamiento de un enemigo tipo Ninja, incluyendo detección del jugador,...">Ninja</a>, incluyendo detección del jugador, movimiento, ataque y muerte. </p>
+
 <p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00007">7</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a958a7f2654ecc5c5aee8cf85b97a8b5c" name="a958a7f2654ecc5c5aee8cf85b97a8b5c"></a>
@@ -124,7 +133,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00019">19</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+<p>Tiempo de espera entre ataques consecutivos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00029">29</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>
@@ -140,7 +151,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00013">13</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+<p>Distancia mínima para que el ninja inicie un ataque. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00019">19</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>
@@ -156,7 +169,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00010">10</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+<p>Distancia máxima a la que el ninja puede detectar al jugador. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00013">13</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>
@@ -172,7 +187,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00016">16</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+<p>Velocidad de movimiento del ninja. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00024">24</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>
@@ -188,12 +205,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00022">22</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+<p>Tiempo que dura la animación de muerte antes de eliminar al ninja. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00034">34</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_ninja_8cs_source.html">Ninja.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_ninja_8cs_source.html">Ninja.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

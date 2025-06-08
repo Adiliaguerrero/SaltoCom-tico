@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_musica_manager.html','',''); });
   <div class="headertitle"><div class="title">MusicaManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Esta clase gestiona la música de fondo global en el juego. Implementa el patrón Singleton para mantenerse persistente entre escenas.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MusicaManager:</div>
 <div class="dyncontent">
@@ -103,24 +106,31 @@ Inheritance diagram for MusicaManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4dbd5693f39d33414f05cc74ff8a183b" id="r_a4dbd5693f39d33414f05cc74ff8a183b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dbd5693f39d33414f05cc74ff8a183b">AlternarMusica</a> ()</td></tr>
+<tr class="memdesc:a4dbd5693f39d33414f05cc74ff8a183b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alterna entre activar y desactivar la música de fondo, y guarda el estado en las preferencias del jugador.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a945f92b6f35199cc287aa876883dd10f" id="r_a945f92b6f35199cc287aa876883dd10f"><td class="memItemLeft" align="right" valign="top">AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a945f92b6f35199cc287aa876883dd10f">musicaFondo</a></td></tr>
+<tr class="memdesc:a945f92b6f35199cc287aa876883dd10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente AudioSource que reproduce la música de fondo.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a798507bd3844b8928a43931398d4739e" id="r_a798507bd3844b8928a43931398d4739e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_musica_manager.html">MusicaManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a798507bd3844b8928a43931398d4739e">instancia</a></td></tr>
+<tr class="memdesc:a798507bd3844b8928a43931398d4739e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancia estática del <a class="el" href="class_musica_manager.html" title="Esta clase gestiona la música de fondo global en el juego. Implementa el patrón Singleton para manten...">MusicaManager</a> para aplicar el patrón Singleton.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00005">5</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
+<div class="textblock"><p>Esta clase gestiona la música de fondo global en el juego. Implementa el patrón Singleton para mantenerse persistente entre escenas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00008">8</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a4dbd5693f39d33414f05cc74ff8a183b" name="a4dbd5693f39d33414f05cc74ff8a183b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dbd5693f39d33414f05cc74ff8a183b">&#9670;&#160;</a></span>AlternarMusica()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void MusicaManager.AlternarMusica </td>
@@ -129,21 +139,17 @@ Static Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00042">42</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="comment">// Cambia el estado booleano a su valor opuesto</span></div>
-<div class="line"><span class="lineno">   45</span>        musicaActiva = !musicaActiva;</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>        <span class="comment">// Guarda el nuevo estado en PlayerPrefs para que se mantenga entre sesiones</span></div>
-<div class="line"><span class="lineno">   48</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;MusicaActiva&quot;</span>, musicaActiva ? 1 : 0);  </div>
-<div class="line"><span class="lineno">   49</span>        PlayerPrefs.Save();</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">// Aplica el nuevo estado a la música de fondo</span></div>
-<div class="line"><span class="lineno">   52</span>        AplicarEstadoMusica();</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+<p>Alterna entre activar y desactivar la música de fondo, y guarda el estado en las preferencias del jugador. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00051">51</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -167,7 +173,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00008">8</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
+<p>Instancia estática del <a class="el" href="class_musica_manager.html" title="Esta clase gestiona la música de fondo global en el juego. Implementa el patrón Singleton para manten...">MusicaManager</a> para aplicar el patrón Singleton. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00013">13</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
 
 </div>
 </div>
@@ -183,12 +191,14 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00011">11</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
+<p>Componente AudioSource que reproduce la música de fondo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_manager_8cs_source.html#l00018">18</a> of file <a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_musica_manager_8cs_source.html">MusicaManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

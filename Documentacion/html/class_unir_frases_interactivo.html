@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_unir_frases_interactivo.html','',''); });
   <div class="headertitle"><div class="title">UnirFrasesInteractivo Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas). Utiliza una línea para representar la conexión entre ambas oraciones.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for UnirFrasesInteractivo:</div>
 <div class="dyncontent">
@@ -103,26 +106,38 @@ Inheritance diagram for UnirFrasesInteractivo:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac545fc01d7faea567f1b4ff3d85274b0" id="r_ac545fc01d7faea567f1b4ff3d85274b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac545fc01d7faea567f1b4ff3d85274b0">IniciarArrastreDesdeTexto</a> (GameObject textoGO)</td></tr>
+<tr class="memdesc:ac545fc01d7faea567f1b4ff3d85274b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el arrastre visual desde un texto.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a9db1e30ff5c57ed5b429c09847637c5a" id="r_a9db1e30ff5c57ed5b429c09847637c5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_paneles1.html">Paneles1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9db1e30ff5c57ed5b429c09847637c5a">Paneles1</a></td></tr>
+<tr class="memdesc:a9db1e30ff5c57ed5b429c09847637c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controlador de paneles que gestiona la transición entre trivias o actividades.  <br /></td></tr>
 <tr class="memitem:a63fa02430caa60dba497118813ccc3e2" id="r_a63fa02430caa60dba497118813ccc3e2"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a></td></tr>
+<tr class="memdesc:a63fa02430caa60dba497118813ccc3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto de la frase sin comas que se muestra a la izquierda.  <br /></td></tr>
 <tr class="memitem:a804e8dc31c30b980136e1deed8d0e87f" id="r_a804e8dc31c30b980136e1deed8d0e87f"><td class="memItemLeft" align="right" valign="top">TMP_Text[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a></td></tr>
+<tr class="memdesc:a804e8dc31c30b980136e1deed8d0e87f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo de textos con opciones que contienen comas, mostrados a la derecha.  <br /></td></tr>
 <tr class="memitem:a169715f926ac6c91306139383c324b05" id="r_a169715f926ac6c91306139383c324b05"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169715f926ac6c91306139383c324b05">textoResultado</a></td></tr>
+<tr class="memdesc:a169715f926ac6c91306139383c324b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto donde se muestra el resultado o retroalimentación al usuario.  <br /></td></tr>
 <tr class="memitem:a8e66262f7e44e86fc7e612a0ac21cb40" id="r_a8e66262f7e44e86fc7e612a0ac21cb40"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e66262f7e44e86fc7e612a0ac21cb40">imagenLinea</a></td></tr>
+<tr class="memdesc:a8e66262f7e44e86fc7e612a0ac21cb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imagen que representa la línea que se dibuja al unir frases.  <br /></td></tr>
 <tr class="memitem:a02b26fb7175e866f0d7eea93b7479637" id="r_a02b26fb7175e866f0d7eea93b7479637"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a></td></tr>
+<tr class="memdesc:a02b26fb7175e866f0d7eea93b7479637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de inicio manual para la línea cuando se arrastra desde el texto izquierdo.  <br /></td></tr>
 <tr class="memitem:add97c2d73332da3da180c532d98de964" id="r_add97c2d73332da3da180c532d98de964"><td class="memItemLeft" align="right" valign="top">Transform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add97c2d73332da3da180c532d98de964">puntosDerechos</a></td></tr>
+<tr class="memdesc:add97c2d73332da3da180c532d98de964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo de puntos de inicio visual para las opciones del lado derecho.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00009">9</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<div class="textblock"><p>Permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas). Utiliza una línea para representar la conexión entre ambas oraciones. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00011">11</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ac545fc01d7faea567f1b4ff3d85274b0" name="ac545fc01d7faea567f1b4ff3d85274b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac545fc01d7faea567f1b4ff3d85274b0">&#9670;&#160;</a></span>IniciarArrastreDesdeTexto()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void UnirFrasesInteractivo.IniciarArrastreDesdeTexto </td>
@@ -131,51 +146,23 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00079">79</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>        <span class="comment">// Si ya se unió una frase correctamente o si ya está arrastrando, no hacer nada</span></div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (yaUnido || arrastrando) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>        <span class="comment">// Obtener el componente TMP_Text del objeto presionado</span></div>
-<div class="line"><span class="lineno">   85</span>        origenSeleccionado = textoGO.GetComponent&lt;TMP_Text&gt;();</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>        <span class="comment">// Si el texto origen es el texto izquierdo (la frase sin comas) y hay un punto de inicio manual definido</span></div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (origenSeleccionado == <a class="code hl_variable" href="#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a> &amp;&amp; <a class="code hl_variable" href="#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="comment">// Usar la posición del punto manual como inicio de la línea</span></div>
-<div class="line"><span class="lineno">   91</span>            puntoInicio = <a class="code hl_variable" href="#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a>.position;</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            <span class="comment">// Para los textos derechos, buscar el punto de inicio correspondiente</span></div>
-<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>.Length; i++)</div>
-<div class="line"><span class="lineno">   97</span>            {</div>
-<div class="line"><span class="lineno">   98</span>                <span class="comment">// Si el texto origen coincide con uno de los textos derechos y existe un punto derecho definido para ese índice</span></div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (origenSeleccionado == <a class="code hl_variable" href="#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i] &amp;&amp; i &lt; <a class="code hl_variable" href="#add97c2d73332da3da180c532d98de964">puntosDerechos</a>.Length &amp;&amp; <a class="code hl_variable" href="#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i] != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  100</span>                {</div>
-<div class="line"><span class="lineno">  101</span>                    <span class="comment">// Usar la posición del punto derecho como inicio de la línea</span></div>
-<div class="line"><span class="lineno">  102</span>                    puntoInicio = <a class="code hl_variable" href="#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i].position;</div>
-<div class="line"><span class="lineno">  103</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  104</span>                }</div>
-<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  106</span>                {</div>
-<div class="line"><span class="lineno">  107</span>                    <span class="comment">// Si no hay punto derecho, usar el centro del rectángulo del texto para iniciar la línea</span></div>
-<div class="line"><span class="lineno">  108</span>                    puntoInicio = ObtenerCentro(origenSeleccionado.rectTransform);</div>
-<div class="line"><span class="lineno">  109</span>                }</div>
-<div class="line"><span class="lineno">  110</span>            }</div>
-<div class="line"><span class="lineno">  111</span>        }</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>        <span class="comment">// Indicar que se está arrastrando la línea y activar la imagen de la línea para que sea visible</span></div>
-<div class="line"><span class="lineno">  114</span>        arrastrando = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  115</span>        imagenLinea.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="ttc" id="aclass_unir_frases_interactivo_html_a02b26fb7175e866f0d7eea93b7479637"><div class="ttname"><a href="#a02b26fb7175e866f0d7eea93b7479637">UnirFrasesInteractivo.puntoInicioManual</a></div><div class="ttdeci">Transform puntoInicioManual</div><div class="ttdef"><b>Definition</b> <a href="_trivia9_8cs_source.html#l00023">Trivia9.cs:23</a></div></div>
-<div class="ttc" id="aclass_unir_frases_interactivo_html_a63fa02430caa60dba497118813ccc3e2"><div class="ttname"><a href="#a63fa02430caa60dba497118813ccc3e2">UnirFrasesInteractivo.textoIzquierdo</a></div><div class="ttdeci">TMP_Text textoIzquierdo</div><div class="ttdef"><b>Definition</b> <a href="_trivia9_8cs_source.html#l00015">Trivia9.cs:15</a></div></div>
-<div class="ttc" id="aclass_unir_frases_interactivo_html_a804e8dc31c30b980136e1deed8d0e87f"><div class="ttname"><a href="#a804e8dc31c30b980136e1deed8d0e87f">UnirFrasesInteractivo.textosDerechos</a></div><div class="ttdeci">TMP_Text[] textosDerechos</div><div class="ttdef"><b>Definition</b> <a href="_trivia9_8cs_source.html#l00017">Trivia9.cs:17</a></div></div>
-<div class="ttc" id="aclass_unir_frases_interactivo_html_add97c2d73332da3da180c532d98de964"><div class="ttname"><a href="#add97c2d73332da3da180c532d98de964">UnirFrasesInteractivo.puntosDerechos</a></div><div class="ttdeci">Transform[] puntosDerechos</div><div class="ttdef"><b>Definition</b> <a href="_trivia9_8cs_source.html#l00025">Trivia9.cs:25</a></div></div>
-</div><!-- fragment -->
+<p>Inicia el arrastre visual desde un texto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textoGO</td><td>El objeto de texto desde el cual comienza el arrastre.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00093">93</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -191,7 +178,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00021">21</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Imagen que representa la línea que se dibuja al unir frases. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00036">36</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -207,7 +196,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00012">12</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Controlador de paneles que gestiona la transición entre trivias o actividades. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00016">16</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -223,7 +214,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00023">23</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Punto de inicio manual para la línea cuando se arrastra desde el texto izquierdo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00041">41</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -239,7 +232,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00025">25</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Arreglo de puntos de inicio visual para las opciones del lado derecho. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00046">46</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -255,7 +250,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00015">15</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Texto de la frase sin comas que se muestra a la izquierda. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00021">21</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -271,7 +268,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00019">19</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Texto donde se muestra el resultado o retroalimentación al usuario. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00031">31</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
@@ -287,12 +286,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00017">17</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
+<p>Arreglo de textos con opciones que contienen comas, mostrados a la derecha. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia9_8cs_source.html#l00026">26</a> of file <a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_trivia9_8cs_source.html">Trivia9.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

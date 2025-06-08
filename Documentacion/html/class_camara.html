@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_camara.html','',''); });
   <div class="headertitle"><div class="title">Camara Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Camara:</div>
 <div class="dyncontent">
@@ -103,11 +106,15 @@ Inheritance diagram for Camara:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a8d5ccd1ec7673520e0309a1b1ad1add1" id="r_a8d5ccd1ec7673520e0309a1b1ad1add1"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d5ccd1ec7673520e0309a1b1ad1add1">Player2</a></td></tr>
+<tr class="memdesc:a8d5ccd1ec7673520e0309a1b1ad1add1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto del jugador que la cámara debe seguir.  <br /></td></tr>
 <tr class="memitem:a10100e406eb82a9c1ba16789a2ed32c9" id="r_a10100e406eb82a9c1ba16789a2ed32c9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10100e406eb82a9c1ba16789a2ed32c9">suavizado</a> = 5f</td></tr>
+<tr class="memdesc:a10100e406eb82a9c1ba16789a2ed32c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave.  <br /></td></tr>
 <tr class="memitem:ab46c6317d7732b4012d45f43ddea97af" id="r_ab46c6317d7732b4012d45f43ddea97af"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a> = new Vector2(2f, 1f)</td></tr>
+<tr class="memdesc:ab46c6317d7732b4012d45f43ddea97af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento. </p>
+
 <p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00006">6</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ab46c6317d7732b4012d45f43ddea97af" name="ab46c6317d7732b4012d45f43ddea97af"></a>
@@ -122,7 +129,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00015">15</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+<p>Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00023">23</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
 
 </div>
 </div>
@@ -138,7 +147,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00009">9</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+<p>Objeto del jugador que la cámara debe seguir. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00012">12</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
 
 </div>
 </div>
@@ -154,12 +165,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00012">12</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+<p>Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00018">18</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_camara_8cs_source.html">Camara.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_camara_8cs_source.html">Camara.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

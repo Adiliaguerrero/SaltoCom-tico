@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_camera_shake.html','',''); });
   <div class="headertitle"><div class="title">CameraShake Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CameraShake:</div>
 <div class="dyncontent">
@@ -103,14 +106,18 @@ Inheritance diagram for CameraShake:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a87df378e2b4cfa6d4a515c31dd0269c7" id="r_a87df378e2b4cfa6d4a515c31dd0269c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87df378e2b4cfa6d4a515c31dd0269c7">Sacudir</a> ()</td></tr>
+<tr class="memdesc:a87df378e2b4cfa6d4a515c31dd0269c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método público que inicia el efecto de sacudida de la cámara. Puede ser llamado desde otros scripts o eventos del juego.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a5d15d6793ebbae009a425617e5f2f82a" id="r_a5d15d6793ebbae009a425617e5f2f82a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d15d6793ebbae009a425617e5f2f82a">duracion</a> = 0.2f</td></tr>
+<tr class="memdesc:a5d15d6793ebbae009a425617e5f2f82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duración total de la sacudida en segundos.  <br /></td></tr>
 <tr class="memitem:a668286886a4bbeea8a2838f11f43f8bc" id="r_a668286886a4bbeea8a2838f11f43f8bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a668286886a4bbeea8a2838f11f43f8bc">magnitud</a> = 0.3f</td></tr>
+<tr class="memdesc:a668286886a4bbeea8a2838f11f43f8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños. </p>
+
 <p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00008">8</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a87df378e2b4cfa6d4a515c31dd0269c7" name="a87df378e2b4cfa6d4a515c31dd0269c7"></a>
@@ -118,6 +125,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CameraShake.Sacudir </td>
@@ -126,14 +136,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00019">19</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
-<div class="line"><span class="lineno">   21</span>        <span class="comment">// Aquí empezamos una &quot;corutina&quot;, que es como una función que se ejecuta poco a poco con el tiempo.</span></div>
-<div class="line"><span class="lineno">   22</span>        StartCoroutine(Shake());</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-</div><!-- fragment -->
+<p>Método público que inicia el efecto de sacudida de la cámara. Puede ser llamado desde otros scripts o eventos del juego. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00026">26</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -149,7 +162,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00012">12</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
+<p>Duración total de la sacudida en segundos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00014">14</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
 
 </div>
 </div>
@@ -165,12 +180,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00015">15</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
+<p>Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00019">19</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_trivia1.html','',''); });
   <div class="headertitle"><div class="title">Trivia1 Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla una pregunta de tipo Verdadero/Falso en una trivia.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Trivia1:</div>
 <div class="dyncontent">
@@ -103,28 +106,42 @@ Inheritance diagram for Trivia1:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b53d0deb54ef58fa566a88913da5ed4" id="r_a6b53d0deb54ef58fa566a88913da5ed4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b53d0deb54ef58fa566a88913da5ed4">PresionarVerdadero</a> ()</td></tr>
+<tr class="memdesc:a6b53d0deb54ef58fa566a88913da5ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método público que se llama cuando el usuario presiona el botón "Verdadero".  <br /></td></tr>
 <tr class="memitem:aa3b1be5a76fedff58842fb6284544e7e" id="r_aa3b1be5a76fedff58842fb6284544e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3b1be5a76fedff58842fb6284544e7e">PresionarFalso</a> ()</td></tr>
+<tr class="memdesc:aa3b1be5a76fedff58842fb6284544e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método público que se llama cuando el usuario presiona el botón "Falso".  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a95309334386c421a19cdb9d279ce0d8e" id="r_a95309334386c421a19cdb9d279ce0d8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_paneles1.html">Paneles1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95309334386c421a19cdb9d279ce0d8e">Paneles1</a></td></tr>
+<tr class="memdesc:a95309334386c421a19cdb9d279ce0d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al controlador de paneles para avanzar entre preguntas.  <br /></td></tr>
 <tr class="memitem:a0ef1789f7e160be9fa1850f6eb2218e6" id="r_a0ef1789f7e160be9fa1850f6eb2218e6"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ef1789f7e160be9fa1850f6eb2218e6">preguntaTexto</a></td></tr>
+<tr class="memdesc:a0ef1789f7e160be9fa1850f6eb2218e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente de texto donde se mostrará la pregunta.  <br /></td></tr>
 <tr class="memitem:a58050b83948132b6537fd86b54fbfde8" id="r_a58050b83948132b6537fd86b54fbfde8"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58050b83948132b6537fd86b54fbfde8">botonVerdadero</a></td></tr>
+<tr class="memdesc:a58050b83948132b6537fd86b54fbfde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para seleccionar "Verdadero".  <br /></td></tr>
 <tr class="memitem:a23f8ec3296ecbc0befc876a58e224442" id="r_a23f8ec3296ecbc0befc876a58e224442"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23f8ec3296ecbc0befc876a58e224442">botonFalso</a></td></tr>
+<tr class="memdesc:a23f8ec3296ecbc0befc876a58e224442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para seleccionar "Falso".  <br /></td></tr>
 <tr class="memitem:ac208d801d5863436a51ba53038b33437" id="r_ac208d801d5863436a51ba53038b33437"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac208d801d5863436a51ba53038b33437">retroalimentacionTexto</a></td></tr>
+<tr class="memdesc:ac208d801d5863436a51ba53038b33437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto donde se mostrará la retroalimentación (correcto o incorrecto).  <br /></td></tr>
 <tr class="memitem:a16ec03356d3efedee23362908aa30f25" id="r_a16ec03356d3efedee23362908aa30f25"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16ec03356d3efedee23362908aa30f25">sonidoBoton</a></td></tr>
+<tr class="memdesc:a16ec03356d3efedee23362908aa30f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip de audio que se reproduce al pulsar cualquier botón.  <br /></td></tr>
 <tr class="memitem:a393690f12cb359ff3f5a1f42afc68b74" id="r_a393690f12cb359ff3f5a1f42afc68b74"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a393690f12cb359ff3f5a1f42afc68b74">pregunta</a> = &quot;¿El sol es una estrella?&quot;</td></tr>
+<tr class="memdesc:a393690f12cb359ff3f5a1f42afc68b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que contiene la pregunta de la trivia.  <br /></td></tr>
 <tr class="memitem:ae6e1860dff66dfb14b0e338e052e0c5b" id="r_ae6e1860dff66dfb14b0e338e052e0c5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6e1860dff66dfb14b0e338e052e0c5b">respuestaCorrecta</a> = true</td></tr>
+<tr class="memdesc:ae6e1860dff66dfb14b0e338e052e0c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor booleano que indica cuál es la respuesta correcta.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00007">7</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<div class="textblock"><p>Controla una pregunta de tipo Verdadero/Falso en una trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00008">8</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aa3b1be5a76fedff58842fb6284544e7e" name="aa3b1be5a76fedff58842fb6284544e7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3b1be5a76fedff58842fb6284544e7e">&#9670;&#160;</a></span>PresionarFalso()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Trivia1.PresionarFalso </td>
@@ -133,14 +150,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00062">62</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="comment">// Llama a la función para evaluar la respuesta, pasando false porque eligió &quot;Falso&quot;</span></div>
-<div class="line"><span class="lineno">   65</span>        SeleccionarRespuesta(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-</div><!-- fragment -->
+<p>Método público que se llama cuando el usuario presiona el botón "Falso". </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00078">78</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6b53d0deb54ef58fa566a88913da5ed4" name="a6b53d0deb54ef58fa566a88913da5ed4"></a>
@@ -148,6 +168,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Trivia1.PresionarVerdadero </td>
@@ -156,14 +179,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00055">55</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
-<div class="line"><span class="lineno">   57</span>        <span class="comment">// Llama a la función para evaluar la respuesta, pasando true porque eligió &quot;Verdadero&quot;</span></div>
-<div class="line"><span class="lineno">   58</span>        SeleccionarRespuesta(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-</div><!-- fragment -->
+<p>Método público que se llama cuando el usuario presiona el botón "Verdadero". </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00070">70</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -179,7 +205,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00019">19</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Botón para seleccionar "Falso". </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00029">29</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -195,7 +223,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00016">16</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Botón para seleccionar "Verdadero". </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00024">24</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -211,7 +241,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00010">10</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Referencia al controlador de paneles para avanzar entre preguntas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00013">13</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -227,7 +259,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00028">28</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Texto que contiene la pregunta de la trivia. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00045">45</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -243,7 +277,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00013">13</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Componente de texto donde se mostrará la pregunta. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00018">18</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -259,7 +295,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00031">31</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Valor booleano que indica cuál es la respuesta correcta. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00050">50</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -275,7 +313,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00022">22</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Texto donde se mostrará la retroalimentación (correcto o incorrecto). </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00034">34</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
@@ -291,12 +331,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00025">25</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
+<p>Clip de audio que se reproduce al pulsar cualquier botón. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia1_8cs_source.html#l00040">40</a> of file <a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_trivia1_8cs_source.html">Trivia1.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_selector_personaje.html','',''); });
   <div class="headertitle"><div class="title">SelectorPersonaje Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite al jugador seleccionar un personaje, mostrando su sprite e información, y luego carga la escena de aventura con el personaje elegido.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SelectorPersonaje:</div>
 <div class="dyncontent">
@@ -103,29 +106,44 @@ Inheritance diagram for SelectorPersonaje:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa627d5ac9a85f752d64ce4a6f81d4804" id="r_aa627d5ac9a85f752d64ce4a6f81d4804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa627d5ac9a85f752d64ce4a6f81d4804">SiguientePersonaje</a> ()</td></tr>
+<tr class="memdesc:aa627d5ac9a85f752d64ce4a6f81d4804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza al siguiente personaje disponible en el array de personajes.  <br /></td></tr>
 <tr class="memitem:afc303c94dd5b485a296d8f34b29beb52" id="r_afc303c94dd5b485a296d8f34b29beb52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc303c94dd5b485a296d8f34b29beb52">AnteriorPersonaje</a> ()</td></tr>
+<tr class="memdesc:afc303c94dd5b485a296d8f34b29beb52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrocede al personaje anterior en la lista de selección.  <br /></td></tr>
 <tr class="memitem:a65b42b4780b03cdab6fdd17998282e9f" id="r_a65b42b4780b03cdab6fdd17998282e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65b42b4780b03cdab6fdd17998282e9f">SeleccionarPersonaje</a> ()</td></tr>
+<tr class="memdesc:a65b42b4780b03cdab6fdd17998282e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda el personaje seleccionado en PlayerPrefs y carga la escena de aventura.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a7b8672547cf0403ab52b3a3c94bb4ef9" id="r_a7b8672547cf0403ab52b3a3c94bb4ef9"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b8672547cf0403ab52b3a3c94bb4ef9">personajes</a></td></tr>
+<tr class="memdesc:a7b8672547cf0403ab52b3a3c94bb4ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista de objetos de personajes disponibles para selección.  <br /></td></tr>
 <tr class="memitem:a6cdb7130267c7cd9df6bd60329bd259e" id="r_a6cdb7130267c7cd9df6bd60329bd259e"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cdb7130267c7cd9df6bd60329bd259e">nombresPersonajes</a></td></tr>
+<tr class="memdesc:a6cdb7130267c7cd9df6bd60329bd259e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombres correspondientes a cada personaje para mostrar en la interfaz.  <br /></td></tr>
 <tr class="memitem:afe3546ceb2ac87c414cfd81c72690a90" id="r_afe3546ceb2ac87c414cfd81c72690a90"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe3546ceb2ac87c414cfd81c72690a90">imagenPersonaje</a></td></tr>
+<tr class="memdesc:afe3546ceb2ac87c414cfd81c72690a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imagen UI donde se muestra el sprite del personaje seleccionado.  <br /></td></tr>
 <tr class="memitem:ae0a9bff6b054ba50e9a0c57e308279a5" id="r_ae0a9bff6b054ba50e9a0c57e308279a5"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0a9bff6b054ba50e9a0c57e308279a5">siguienteButton</a></td></tr>
+<tr class="memdesc:ae0a9bff6b054ba50e9a0c57e308279a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para ir al siguiente personaje.  <br /></td></tr>
 <tr class="memitem:a3daee2648113b4f2fdc6db516a501745" id="r_a3daee2648113b4f2fdc6db516a501745"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3daee2648113b4f2fdc6db516a501745">anteriorButton</a></td></tr>
+<tr class="memdesc:a3daee2648113b4f2fdc6db516a501745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para ir al personaje anterior.  <br /></td></tr>
 <tr class="memitem:a152b3cae172e00487a7beae751b237e5" id="r_a152b3cae172e00487a7beae751b237e5"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152b3cae172e00487a7beae751b237e5">seleccionarButton</a></td></tr>
+<tr class="memdesc:a152b3cae172e00487a7beae751b237e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón para confirmar la selección del personaje actual.  <br /></td></tr>
 <tr class="memitem:abc0be0bd6c22ec7a25da04037c6e219f" id="r_abc0be0bd6c22ec7a25da04037c6e219f"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc0be0bd6c22ec7a25da04037c6e219f">nombrePersonajeTexto</a></td></tr>
+<tr class="memdesc:abc0be0bd6c22ec7a25da04037c6e219f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto UI para mostrar el nombre del personaje seleccionado.  <br /></td></tr>
 <tr class="memitem:afb846de560f448259439b2aca008616a" id="r_afb846de560f448259439b2aca008616a"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb846de560f448259439b2aca008616a">sonidoBoton</a></td></tr>
+<tr class="memdesc:afb846de560f448259439b2aca008616a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al interactuar con los botones.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00009">9</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<div class="textblock"><p>Permite al jugador seleccionar un personaje, mostrando su sprite e información, y luego carga la escena de aventura con el personaje elegido. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00010">10</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="afc303c94dd5b485a296d8f34b29beb52" name="afc303c94dd5b485a296d8f34b29beb52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc303c94dd5b485a296d8f34b29beb52">&#9670;&#160;</a></span>AnteriorPersonaje()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SelectorPersonaje.AnteriorPersonaje </td>
@@ -134,19 +152,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00047">47</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        ReproducirSonidoBoton();</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">// Decrementa el índice, asegurando que sea positivo y dentro del rango</span></div>
-<div class="line"><span class="lineno">   52</span>        indicePersonaje = (indicePersonaje - 1 + <a class="code hl_variable" href="#a7b8672547cf0403ab52b3a3c94bb4ef9">personajes</a>.Length) % <a class="code hl_variable" href="#a7b8672547cf0403ab52b3a3c94bb4ef9">personajes</a>.Length;</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        CambiarPersonaje();</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="ttc" id="aclass_selector_personaje_html_a7b8672547cf0403ab52b3a3c94bb4ef9"><div class="ttname"><a href="#a7b8672547cf0403ab52b3a3c94bb4ef9">SelectorPersonaje.personajes</a></div><div class="ttdeci">GameObject[] personajes</div><div class="ttdef"><b>Definition</b> <a href="_selector_8cs_source.html#l00012">Selector.cs:12</a></div></div>
-</div><!-- fragment -->
+<p>Retrocede al personaje anterior en la lista de selección. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00071">71</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
 </div>
 </div>
 <a id="a65b42b4780b03cdab6fdd17998282e9f" name="a65b42b4780b03cdab6fdd17998282e9f"></a>
@@ -154,6 +170,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SelectorPersonaje.SeleccionarPersonaje </td>
@@ -162,20 +181,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00077">77</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        ReproducirSonidoBoton();</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        <span class="comment">// Guardamos el índice del personaje seleccionado en PlayerPrefs para usarlo en la siguiente escena</span></div>
-<div class="line"><span class="lineno">   82</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;PersonajeSeleccionado&quot;</span>, indicePersonaje);</div>
-<div class="line"><span class="lineno">   83</span>        PlayerPrefs.Save();</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">// Cargamos la escena de aventura</span></div>
-<div class="line"><span class="lineno">   86</span>        SceneManager.LoadScene(<span class="stringliteral">&quot;Aventura&quot;</span>);</div>
-<div class="line"><span class="lineno">   87</span>    }</div>
-</div><!-- fragment -->
+<p>Guarda el personaje seleccionado en PlayerPrefs y carga la escena de aventura. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00100">100</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa627d5ac9a85f752d64ce4a6f81d4804" name="aa627d5ac9a85f752d64ce4a6f81d4804"></a>
@@ -183,6 +199,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SelectorPersonaje.SiguientePersonaje </td>
@@ -191,18 +210,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00036">36</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
-<div class="line"><span class="lineno">   38</span>        ReproducirSonidoBoton();</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>        <span class="comment">// Incrementa el índice y lo mantiene dentro del rango del array</span></div>
-<div class="line"><span class="lineno">   41</span>        indicePersonaje = (indicePersonaje + 1) % <a class="code hl_variable" href="#a7b8672547cf0403ab52b3a3c94bb4ef9">personajes</a>.Length;</div>
-<div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>        CambiarPersonaje();</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
-</div><!-- fragment -->
+<p>Avanza al siguiente personaje disponible en el array de personajes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00059">59</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -218,7 +236,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00025">25</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Botón para ir al personaje anterior. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00037">37</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -234,7 +254,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00018">18</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Imagen UI donde se muestra el sprite del personaje seleccionado. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00025">25</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -250,7 +272,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00029">29</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Texto UI para mostrar el nombre del personaje seleccionado. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00047">47</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -266,7 +290,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00015">15</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Nombres correspondientes a cada personaje para mostrar en la interfaz. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00020">20</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -282,7 +308,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00012">12</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Lista de objetos de personajes disponibles para selección. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00015">15</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -298,7 +326,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00026">26</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Botón para confirmar la selección del personaje actual. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00042">42</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -314,7 +344,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00024">24</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Botón para ir al siguiente personaje. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00032">32</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -330,12 +362,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00033">33</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+<p>Sonido que se reproduce al interactuar con los botones. </p>
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00054">54</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_selector_8cs_source.html">Selector.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_selector_8cs_source.html">Selector.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

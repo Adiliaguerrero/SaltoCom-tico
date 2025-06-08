@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/ForzarTamaño.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/ForzarTamaño.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,31 +93,27 @@ $(function(){initNavTree('_forzar_tama_xC3_xB1o_8cs_source.html','',''); });
   <div class="headertitle"><div class="title">ForzarTamaño.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_forzar_tama_xC3_xB1o_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Importamos la librería principal de Unity para trabajar con componentes y funciones del motor</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Esta clase se encarga de mantener una escala fija en el objeto al que está asignado,</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// permitiendo que se voltee horizontalmente si es necesario (por ejemplo, al mirar hacia la izquierda o derecha)</span></div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_forzar_escala.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_forzar_escala.html">ForzarEscala</a> : MonoBehaviour</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// Variable pública que permite definir desde el Inspector la escala correcta del objeto (X, Y)</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">    9</a></span>    <span class="keyword">public</span> Vector2 <a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a> = <span class="keyword">new</span> Vector2(0.48f, 0.45f);</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Este método se llama una vez por frame, pero después de que todos los demás métodos Update hayan sido ejecutados</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// Se utiliza para asegurar que la escala se aplique correctamente al final del frame</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> LateUpdate()</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="comment">// Determina si el objeto está mirando hacia la derecha (1) o hacia la izquierda (-1) según su escala en X</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">float</span> direccion = transform.localScale.x &gt;= 0 ? 1 : -1;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="comment">// Aplica la escala correcta, manteniendo la dirección original del objeto (positiva o negativa en X)</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        transform.localScale = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.x * direccion, <a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.y, 1f);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<a href="_forzar_tama_xC3_xB1o_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_forzar_escala.html">   14</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_forzar_escala.html">ForzarEscala</a> : MonoBehaviour</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">   23</a></span>    <span class="keyword">public</span> Vector2 <a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a> = <span class="keyword">new</span> Vector2(0.48f, 0.45f);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> LateUpdate()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">float</span> direccion = transform.localScale.x &gt;= 0 ? 1 : -1;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        transform.localScale = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.x * direccion, <a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.y, 1f);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 </div>
-<div class="ttc" id="aclass_forzar_escala_html"><div class="ttname"><a href="class_forzar_escala.html">ForzarEscala</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">ForzarTamaño.cs:7</a></div></div>
-<div class="ttc" id="aclass_forzar_escala_html_a02cca4bdb149539ddfa7bdee72ce2cff"><div class="ttname"><a href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">ForzarEscala.escalaCorrecta</a></div><div class="ttdeci">Vector2 escalaCorrecta</div><div class="ttdef"><b>Definition</b> <a href="#l00009">ForzarTamaño.cs:9</a></div></div>
+<div class="ttc" id="aclass_forzar_escala_html"><div class="ttname"><a href="class_forzar_escala.html">ForzarEscala</a></div><div class="ttdoc">Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda...</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ForzarTamaño.cs:15</a></div></div>
+<div class="ttc" id="aclass_forzar_escala_html_a02cca4bdb149539ddfa7bdee72ce2cff"><div class="ttname"><a href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">ForzarEscala.escalaCorrecta</a></div><div class="ttdeci">Vector2 escalaCorrecta</div><div class="ttdoc">Escala correcta que debe aplicarse al objeto en los ejes X e Y.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ForzarTamaño.cs:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

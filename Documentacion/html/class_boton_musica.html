@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_boton_musica.html','',''); });
   <div class="headertitle"><div class="title">BotonMusica Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Esta clase controla la interacción del botón que activa o desactiva la música del juego.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for BotonMusica:</div>
 <div class="dyncontent">
@@ -103,21 +106,28 @@ Inheritance diagram for BotonMusica:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8419c2d6141c048c1f8e4de96b1caa71" id="r_a8419c2d6141c048c1f8e4de96b1caa71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8419c2d6141c048c1f8e4de96b1caa71">OnClick</a> ()</td></tr>
+<tr class="memdesc:a8419c2d6141c048c1f8e4de96b1caa71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que se llama al hacer clic en el botón para alternar el estado de la música.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:afcfe69edd6eadc3d4f0abe3391686810" id="r_afcfe69edd6eadc3d4f0abe3391686810"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcfe69edd6eadc3d4f0abe3391686810">musicaManagerPrefab</a></td></tr>
+<tr class="memdesc:afcfe69edd6eadc3d4f0abe3391686810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab que contiene el controlador de música a instanciar si no existe.  <br /></td></tr>
 <tr class="memitem:a9c65d0ae30c7fb0c1ebb9c3ce445bead" id="r_a9c65d0ae30c7fb0c1ebb9c3ce445bead"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c65d0ae30c7fb0c1ebb9c3ce445bead">boton</a></td></tr>
+<tr class="memdesc:a9c65d0ae30c7fb0c1ebb9c3ce445bead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al componente Button que ejecuta la acción de alternar la música.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00006">6</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
+<div class="textblock"><p>Esta clase controla la interacción del botón que activa o desactiva la música del juego. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00007">7</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8419c2d6141c048c1f8e4de96b1caa71" name="a8419c2d6141c048c1f8e4de96b1caa71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8419c2d6141c048c1f8e4de96b1caa71">&#9670;&#160;</a></span>OnClick()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void BotonMusica.OnClick </td>
@@ -126,18 +136,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00045">45</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="comment">// Si hay una instancia válida del manager de música</span></div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (musicaManager != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            <span class="comment">// Llama al método que alterna (activa o desactiva) la música</span></div>
-<div class="line"><span class="lineno">   51</span>            musicaManager.AlternarMusica();</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+<p>Método que se llama al hacer clic en el botón para alternar el estado de la música. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00054">54</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -153,7 +162,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00015">15</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
+<p>Referencia al componente Button que ejecuta la acción de alternar la música. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00022">22</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
 
 </div>
 </div>
@@ -169,12 +180,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00009">9</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
+<p>Prefab que contiene el controlador de música a instanciar si no existe. </p>
+
+<p class="definition">Definition at line <a class="el" href="_musica_8cs_source.html#l00012">12</a> of file <a class="el" href="_musica_8cs_source.html">Musica.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_musica_8cs_source.html">Musica.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_musica_8cs_source.html">Musica.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

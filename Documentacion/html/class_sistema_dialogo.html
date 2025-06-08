@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_sistema_dialogo.html','',''); });
   <div class="headertitle"><div class="title">SistemaDialogo Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto, el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for SistemaDialogo:</div>
 <div class="dyncontent">
@@ -103,30 +106,46 @@ Inheritance diagram for SistemaDialogo:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d76a73120cac7936f01f5dfee159da0" id="r_a7d76a73120cac7936f01f5dfee159da0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d76a73120cac7936f01f5dfee159da0">ActivarDialogo</a> ()</td></tr>
+<tr class="memdesc:a7d76a73120cac7936f01f5dfee159da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activa el sistema de diálogo, bloqueando al jugador y mostrando las líneas de texto.  <br /></td></tr>
 <tr class="memitem:a6963f01bf1b72c7d0e8cf18c3a775f06" id="r_a6963f01bf1b72c7d0e8cf18c3a775f06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6963f01bf1b72c7d0e8cf18c3a775f06">MostrarLinea</a> ()</td></tr>
+<tr class="memdesc:a6963f01bf1b72c7d0e8cf18c3a775f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra la siguiente línea de diálogo con animación de escritura y gestiona el fin del diálogo.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a0a6505f03018529ea5d59dad5ade1ec9" id="r_a0a6505f03018529ea5d59dad5ade1ec9"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a6505f03018529ea5d59dad5ade1ec9">panelDialogo</a></td></tr>
+<tr class="memdesc:a0a6505f03018529ea5d59dad5ade1ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panel de diálogo que contiene el texto y el botón de avance.  <br /></td></tr>
 <tr class="memitem:a617bca046d04b8591761fdd580b2de4e" id="r_a617bca046d04b8591761fdd580b2de4e"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a617bca046d04b8591761fdd580b2de4e">lineasIniciales</a></td></tr>
+<tr class="memdesc:a617bca046d04b8591761fdd580b2de4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Líneas del diálogo inicial mostradas la primera vez que se interactúa con el NPC.  <br /></td></tr>
 <tr class="memitem:a5d53c20b372b8a8af4209e049d84fc12" id="r_a5d53c20b372b8a8af4209e049d84fc12"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d53c20b372b8a8af4209e049d84fc12">lineasReaparicion</a></td></tr>
+<tr class="memdesc:a5d53c20b372b8a8af4209e049d84fc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Líneas del diálogo mostradas cuando el NPC reaparece.  <br /></td></tr>
 <tr class="memitem:a4a5aae6c240ef1d274ca525798ac99d8" id="r_a4a5aae6c240ef1d274ca525798ac99d8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a5aae6c240ef1d274ca525798ac99d8">velocidadEscritura</a> = 0.05f</td></tr>
+<tr class="memdesc:a4a5aae6c240ef1d274ca525798ac99d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidad con la que se escribe cada letra del texto (en segundos).  <br /></td></tr>
 <tr class="memitem:acf496337d984a8508e91e0a5805c258e" id="r_acf496337d984a8508e91e0a5805c258e"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf496337d984a8508e91e0a5805c258e">textoDialogo</a></td></tr>
+<tr class="memdesc:acf496337d984a8508e91e0a5805c258e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto de texto (TextMeshProUGUI) donde se mostrará el diálogo.  <br /></td></tr>
 <tr class="memitem:a78922b801e5e4a329e7d058712b94059" id="r_a78922b801e5e4a329e7d058712b94059"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78922b801e5e4a329e7d058712b94059">npcPrefab</a></td></tr>
+<tr class="memdesc:a78922b801e5e4a329e7d058712b94059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab del NPC que se instanciará cuando reaparezca con otro diálogo.  <br /></td></tr>
 <tr class="memitem:a7322d867e0a85c72552c130f8776ffa5" id="r_a7322d867e0a85c72552c130f8776ffa5"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7322d867e0a85c72552c130f8776ffa5">puntoReaparicion</a></td></tr>
+<tr class="memdesc:a7322d867e0a85c72552c130f8776ffa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto donde aparecerá el NPC reaparecido.  <br /></td></tr>
 <tr class="memitem:ae15899abe1a7980960758d7ee5751a2d" id="r_ae15899abe1a7980960758d7ee5751a2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a> = false</td></tr>
+<tr class="memdesc:ae15899abe1a7980960758d7ee5751a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si el diálogo actual es parte de la reaparición del NPC.  <br /></td></tr>
 <tr class="memitem:ae5bf440805129617bdf127b888a731dd" id="r_ae5bf440805129617bdf127b888a731dd"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a></td></tr>
+<tr class="memdesc:ae5bf440805129617bdf127b888a731dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar.  <br /></td></tr>
 <tr class="memitem:ab47bc2b13b27da77695a8686e22d1514" id="r_ab47bc2b13b27da77695a8686e22d1514"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab47bc2b13b27da77695a8686e22d1514">sonidoPanel</a></td></tr>
+<tr class="memdesc:ab47bc2b13b27da77695a8686e22d1514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al avanzar en el diálogo.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00009">9</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<div class="textblock"><p>Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto, el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00011">11</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a7d76a73120cac7936f01f5dfee159da0" name="a7d76a73120cac7936f01f5dfee159da0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d76a73120cac7936f01f5dfee159da0">&#9670;&#160;</a></span>ActivarDialogo()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SistemaDialogo.ActivarDialogo </td>
@@ -135,61 +154,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00071">71</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
-<div class="line"><span class="lineno">   73</span>        <span class="comment">// Si el diálogo ya se inició, no se vuelve a activar</span></div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (dialogoIniciado) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>        <span class="comment">// Marca que el diálogo está en curso</span></div>
-<div class="line"><span class="lineno">   77</span>        dialogoIniciado = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>        <span class="comment">// Muestra el panel de diálogo en pantalla</span></div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_variable" href="#a0a6505f03018529ea5d59dad5ade1ec9">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>        <span class="comment">// Reinicia el índice para mostrar desde la primera línea</span></div>
-<div class="line"><span class="lineno">   83</span>        indice = 0;</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>        <span class="comment">// Busca el jugador en la escena para detener su movimiento durante el diálogo</span></div>
-<div class="line"><span class="lineno">   86</span>        GameObject jugador = GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Player&quot;</span>);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (jugador != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="comment">// Obtiene el Rigidbody2D del jugador y detiene su física</span></div>
-<div class="line"><span class="lineno">   90</span>            rbJugadorOriginal = jugador.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (rbJugadorOriginal != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   92</span>            {</div>
-<div class="line"><span class="lineno">   93</span>                rbJugadorOriginal.velocity = Vector2.zero;</div>
-<div class="line"><span class="lineno">   94</span>                rbJugadorOriginal.bodyType = RigidbodyType2D.Static;</div>
-<div class="line"><span class="lineno">   95</span>            }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>            <span class="comment">// Obtiene el script que controla el movimiento del jugador y lo desactiva</span></div>
-<div class="line"><span class="lineno">   98</span>            playerController = jugador.GetComponent&lt;PlayerController&gt;();</div>
-<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  100</span>            {</div>
-<div class="line"><span class="lineno">  101</span>                playerController.puedeMoverse = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  102</span>            }</div>
-<div class="line"><span class="lineno">  103</span>        }</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>        <span class="comment">// Desactiva el joystick para evitar que el jugador se mueva con controles táctiles mientras se muestra el diálogo</span></div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  107</span>        {</div>
-<div class="line"><span class="lineno">  108</span>            FixedJoystick joystick = <a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  110</span>            {</div>
-<div class="line"><span class="lineno">  111</span>                joystick.OnPointerUp(<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  112</span>                joystick.enabled = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  113</span>            }</div>
-<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>        <span class="comment">// Comienza a mostrar la primera línea del diálogo</span></div>
-<div class="line"><span class="lineno">  118</span>        <a class="code hl_function" href="#a6963f01bf1b72c7d0e8cf18c3a775f06">MostrarLinea</a>();</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a0a6505f03018529ea5d59dad5ade1ec9"><div class="ttname"><a href="#a0a6505f03018529ea5d59dad5ade1ec9">SistemaDialogo.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00012">SistemaDailogo.cs:12</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a6963f01bf1b72c7d0e8cf18c3a775f06"><div class="ttname"><a href="#a6963f01bf1b72c7d0e8cf18c3a775f06">SistemaDialogo.MostrarLinea</a></div><div class="ttdeci">void MostrarLinea()</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00122">SistemaDailogo.cs:122</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_ae5bf440805129617bdf127b888a731dd"><div class="ttname"><a href="#ae5bf440805129617bdf127b888a731dd">SistemaDialogo.joystickUI</a></div><div class="ttdeci">GameObject joystickUI</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00051">SistemaDailogo.cs:51</a></div></div>
-</div><!-- fragment -->
+<p>Activa el sistema de diálogo, bloqueando al jugador y mostrando las líneas de texto. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00088">88</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6963f01bf1b72c7d0e8cf18c3a775f06" name="a6963f01bf1b72c7d0e8cf18c3a775f06"></a>
@@ -197,6 +172,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SistemaDialogo.MostrarLinea </td>
@@ -205,96 +183,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00122">122</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="comment">// Reproduce el sonido asociado al avance de diálogo si está configurado y el AudioManager existe</span></div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab47bc2b13b27da77695a8686e22d1514">sonidoPanel</a> != <span class="keyword">null</span> &amp;&amp; AudioManager.instancia != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  126</span>        {</div>
-<div class="line"><span class="lineno">  127</span>            AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="#ab47bc2b13b27da77695a8686e22d1514">sonidoPanel</a>);</div>
-<div class="line"><span class="lineno">  128</span>        }</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>        <span class="comment">// Elige qué diálogo mostrar según si es la reaparición o el diálogo inicial</span></div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordtype">string</span>[] dialogoActual = <a class="code hl_variable" href="#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a> ? <a class="code hl_variable" href="#a5d53c20b372b8a8af4209e049d84fc12">lineasReaparicion</a> : <a class="code hl_variable" href="#a617bca046d04b8591761fdd580b2de4e">lineasIniciales</a>;</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>        <span class="comment">// Si todavía quedan líneas por mostrar</span></div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span> (indice &lt; dialogoActual.Length)</div>
-<div class="line"><span class="lineno">  135</span>        {</div>
-<div class="line"><span class="lineno">  136</span>            <span class="comment">// Si hay una corrutina escribiendo el texto, la detiene para mostrar la siguiente línea</span></div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (escrituraActual != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  138</span>            {</div>
-<div class="line"><span class="lineno">  139</span>                StopCoroutine(escrituraActual);</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>            <span class="comment">// Inicia la corrutina para escribir la línea letra a letra</span></div>
-<div class="line"><span class="lineno">  143</span>            escrituraActual = StartCoroutine(EscribirLinea(dialogoActual[indice]));</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>            <span class="comment">// Incrementa el índice para la siguiente vez</span></div>
-<div class="line"><span class="lineno">  146</span>            indice++;</div>
-<div class="line"><span class="lineno">  147</span>        }</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  149</span>        {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="comment">// Si ya no hay más líneas, cierra el panel de diálogo</span></div>
-<div class="line"><span class="lineno">  151</span>            <a class="code hl_variable" href="#a0a6505f03018529ea5d59dad5ade1ec9">panelDialogo</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>            <span class="comment">// Si es el diálogo inicial (no reaparición)</span></div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a>)</div>
-<div class="line"><span class="lineno">  155</span>            {</div>
-<div class="line"><span class="lineno">  156</span>                <span class="comment">// Reactiva la física y movimiento del jugador</span></div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (rbJugadorOriginal != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  158</span>                    rbJugadorOriginal.bodyType = RigidbodyType2D.Dynamic;</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  161</span>                    playerController.puedeMoverse = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>                <span class="comment">// Reactiva el joystick</span></div>
-<div class="line"><span class="lineno">  164</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  165</span>                {</div>
-<div class="line"><span class="lineno">  166</span>                    <a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  167</span>                    FixedJoystick joystick = <a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
-<div class="line"><span class="lineno">  168</span>                    <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  169</span>                        joystick.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  170</span>                }</div>
-<div class="line"><span class="lineno">  171</span>            }</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>            <span class="comment">// Si no es diálogo de reaparición, instancia el NPC reaparecido con diálogo diferente</span></div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a> &amp;&amp; <a class="code hl_variable" href="#a78922b801e5e4a329e7d058712b94059">npcPrefab</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="#a7322d867e0a85c72552c130f8776ffa5">puntoReaparicion</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  175</span>            {</div>
-<div class="line"><span class="lineno">  176</span>                GameObject nuevoNPC = Instantiate(<a class="code hl_variable" href="#a78922b801e5e4a329e7d058712b94059">npcPrefab</a>, <a class="code hl_variable" href="#a7322d867e0a85c72552c130f8776ffa5">puntoReaparicion</a>.position, Quaternion.identity);</div>
-<div class="line"><span class="lineno">  177</span>                SistemaDialogo nuevoDialogo = nuevoNPC.GetComponent&lt;SistemaDialogo&gt;();</div>
-<div class="line"><span class="lineno">  178</span>                <span class="keywordflow">if</span> (nuevoDialogo != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  179</span>                {</div>
-<div class="line"><span class="lineno">  180</span>                    <span class="comment">// Marca que es diálogo de reaparición para que muestre las líneas correspondientes</span></div>
-<div class="line"><span class="lineno">  181</span>                    nuevoDialogo.esReaparicion = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  182</span> </div>
-<div class="line"><span class="lineno">  183</span>                    <span class="comment">// Le pasa la referencia del joystick para manejarlo correctamente</span></div>
-<div class="line"><span class="lineno">  184</span>                    nuevoDialogo.joystickUI = <a class="code hl_variable" href="#ae5bf440805129617bdf127b888a731dd">joystickUI</a>;</div>
-<div class="line"><span class="lineno">  185</span>                }</div>
-<div class="line"><span class="lineno">  186</span>            }</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>            <span class="comment">// Si es diálogo de reaparición, avanza la trivia o lógica siguiente</span></div>
-<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a>)</div>
-<div class="line"><span class="lineno">  190</span>            {</div>
-<div class="line"><span class="lineno">  191</span>                Paneles1 trivias = FindObjectOfType&lt;Paneles1&gt;();</div>
-<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (trivias != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  193</span>                {</div>
-<div class="line"><span class="lineno">  194</span>                    trivias.<a class="code hl_function" href="class_paneles1.html#a6c8e0a68251948580a968bffc2a709b7">SiguienteTrivia</a>();</div>
-<div class="line"><span class="lineno">  195</span>                }</div>
-<div class="line"><span class="lineno">  196</span>            }</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>            <span class="comment">// Destruye este objeto NPC para que no quede duplicado en la escena</span></div>
-<div class="line"><span class="lineno">  199</span>            Destroy(gameObject);</div>
-<div class="line"><span class="lineno">  200</span>        }</div>
-<div class="line"><span class="lineno">  201</span>    }</div>
-<div class="ttc" id="aclass_paneles1_html_a6c8e0a68251948580a968bffc2a709b7"><div class="ttname"><a href="class_paneles1.html#a6c8e0a68251948580a968bffc2a709b7">Paneles1.SiguienteTrivia</a></div><div class="ttdeci">void SiguienteTrivia()</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00049">Paneles1.cs:49</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a5d53c20b372b8a8af4209e049d84fc12"><div class="ttname"><a href="#a5d53c20b372b8a8af4209e049d84fc12">SistemaDialogo.lineasReaparicion</a></div><div class="ttdeci">string[] lineasReaparicion</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00018">SistemaDailogo.cs:18</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a617bca046d04b8591761fdd580b2de4e"><div class="ttname"><a href="#a617bca046d04b8591761fdd580b2de4e">SistemaDialogo.lineasIniciales</a></div><div class="ttdeci">string[] lineasIniciales</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00015">SistemaDailogo.cs:15</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a7322d867e0a85c72552c130f8776ffa5"><div class="ttname"><a href="#a7322d867e0a85c72552c130f8776ffa5">SistemaDialogo.puntoReaparicion</a></div><div class="ttdeci">Transform puntoReaparicion</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00036">SistemaDailogo.cs:36</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_a78922b801e5e4a329e7d058712b94059"><div class="ttname"><a href="#a78922b801e5e4a329e7d058712b94059">SistemaDialogo.npcPrefab</a></div><div class="ttdeci">GameObject npcPrefab</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00033">SistemaDailogo.cs:33</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_ab47bc2b13b27da77695a8686e22d1514"><div class="ttname"><a href="#ab47bc2b13b27da77695a8686e22d1514">SistemaDialogo.sonidoPanel</a></div><div class="ttdeci">AudioClip sonidoPanel</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00054">SistemaDailogo.cs:54</a></div></div>
-<div class="ttc" id="aclass_sistema_dialogo_html_ae15899abe1a7980960758d7ee5751a2d"><div class="ttname"><a href="#ae15899abe1a7980960758d7ee5751a2d">SistemaDialogo.esReaparicion</a></div><div class="ttdeci">bool esReaparicion</div><div class="ttdef"><b>Definition</b> <a href="_sistema_dailogo_8cs_source.html#l00042">SistemaDailogo.cs:42</a></div></div>
-</div><!-- fragment -->
+<p>Muestra la siguiente línea de diálogo con animación de escritura y gestiona el fin del diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00132">132</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -310,7 +209,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00042">42</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Indica si el diálogo actual es parte de la reaparición del NPC. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00058">58</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -326,7 +227,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00051">51</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00067">67</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -342,7 +245,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00015">15</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Líneas del diálogo inicial mostradas la primera vez que se interactúa con el NPC. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00021">21</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -358,7 +263,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00018">18</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Líneas del diálogo mostradas cuando el NPC reaparece. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00026">26</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -374,7 +281,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00033">33</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Prefab del NPC que se instanciará cuando reaparezca con otro diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00045">45</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -390,7 +299,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00012">12</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Panel de diálogo que contiene el texto y el botón de avance. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00016">16</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -406,7 +317,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00036">36</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Punto donde aparecerá el NPC reaparecido. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00050">50</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -422,7 +335,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00054">54</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Sonido que se reproduce al avanzar en el diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00072">72</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -438,7 +353,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00027">27</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Objeto de texto (TextMeshProUGUI) donde se mostrará el diálogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00038">38</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -454,12 +371,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00021">21</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+<p>Velocidad con la que se escribe cada letra del texto (en segundos). </p>
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00031">31</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

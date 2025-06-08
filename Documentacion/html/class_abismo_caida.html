@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_abismo_caida.html','',''); });
   <div class="headertitle"><div class="title">AbismoCaida Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla el comportamiento del abismo de caída. Si el jugador entra en contacto con esta zona, el personaje muere y se muestra el panel de Game Over.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AbismoCaida:</div>
 <div class="dyncontent">
@@ -103,20 +106,27 @@ Inheritance diagram for AbismoCaida:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af04d1da03001883982584f9156cd0378" id="r_af04d1da03001883982584f9156cd0378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af04d1da03001883982584f9156cd0378">RestartGame</a> ()</td></tr>
+<tr class="memdesc:af04d1da03001883982584f9156cd0378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reinicia la escena actual, restaurando el tiempo y reiniciando el nivel desde el inicio.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ab810370d2a20b0284140e4fdbd51f523" id="r_ab810370d2a20b0284140e4fdbd51f523"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a></td></tr>
+<tr class="memdesc:ab810370d2a20b0284140e4fdbd51f523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00008">8</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
+<div class="textblock"><p>Controla el comportamiento del abismo de caída. Si el jugador entra en contacto con esta zona, el personaje muere y se muestra el panel de Game Over. </p>
+<p>Esta clase debe ser añadida a un GameObject con un Collider2D marcado como "Trigger". Se utiliza OnTriggerEnter2D(Collider2D) para detectar la colisión del jugador. </p>
+
+<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00013">13</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="af04d1da03001883982584f9156cd0378" name="af04d1da03001883982584f9156cd0378"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af04d1da03001883982584f9156cd0378">&#9670;&#160;</a></span>RestartGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void AbismoCaida.RestartGame </td>
@@ -125,17 +135,18 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00044">44</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="comment">// Reactiva el tiempo del juego (lo normaliza)</span></div>
-<div class="line"><span class="lineno">   47</span>        Time.timeScale = 1f;</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>        <span class="comment">// Recarga la escena actual (reinicia el nivel)</span></div>
-<div class="line"><span class="lineno">   50</span>        SceneManager.LoadScene(SceneManager.GetActiveScene().name);</div>
-<div class="line"><span class="lineno">   51</span>    }</div>
-</div><!-- fragment -->
+<p>Reinicia la escena actual, restaurando el tiempo y reiniciando el nivel desde el inicio. </p>
+<p>Este método debe estar vinculado a un botón en el panel de Game Over. Utiliza SceneManager.GetActiveScene y SceneManager.LoadScene(string). </p>
+
+<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00067">67</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -151,12 +162,22 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00011">11</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
+<p>Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo. </p>
+<p>summary&gt; Se ejecuta automáticamente cuando otro objeto con un Collider2D entra en el área del trigger. Detecta si el jugador ha caído en el abismo.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>El Collider2D del objeto que entró en el área del trigger. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Si el objeto tiene la etiqueta "Player", se elimina de la escena y se inicia la rutina de Game Over. </p>
+
+<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00018">18</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

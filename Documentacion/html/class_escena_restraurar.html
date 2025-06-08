@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_escena_restraurar.html','',''); });
   <div class="headertitle"><div class="title">EscenaRestraurar Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite recargar una escena actual o cambiar a otra escena específica mediante botones.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for EscenaRestraurar:</div>
 <div class="dyncontent">
@@ -103,23 +106,38 @@ Inheritance diagram for EscenaRestraurar:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0130cf3027ff93fdf2516239a69680e" id="r_ab0130cf3027ff93fdf2516239a69680e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0130cf3027ff93fdf2516239a69680e">CargarEscena1</a> ()</td></tr>
+<tr class="memdesc:ab0130cf3027ff93fdf2516239a69680e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga la escena almacenada en <a class="el" href="#a44d1887096456208956e4160f39caa3e" title="Nombre de la primera escena a cargar cuando se pulsa el primer botón.">escena1</a> y reproduce el sonido de botón.  <br /></td></tr>
 <tr class="memitem:a2f7e18e43b212c7fa93bb379130a82bc" id="r_a2f7e18e43b212c7fa93bb379130a82bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7e18e43b212c7fa93bb379130a82bc">CargarEscena2</a> ()</td></tr>
+<tr class="memdesc:a2f7e18e43b212c7fa93bb379130a82bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga la escena almacenada en <a class="el" href="#aeb97509f566a779c3a61472974b48e0d" title="Nombre de la segunda escena, normalmente el menú principal.">escena2</a> y reproduce el sonido de botón.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a44d1887096456208956e4160f39caa3e" id="r_a44d1887096456208956e4160f39caa3e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44d1887096456208956e4160f39caa3e">escena1</a></td></tr>
+<tr class="memdesc:a44d1887096456208956e4160f39caa3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la primera escena a cargar cuando se pulsa el primer botón.  <br /></td></tr>
 <tr class="memitem:aeb97509f566a779c3a61472974b48e0d" id="r_aeb97509f566a779c3a61472974b48e0d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb97509f566a779c3a61472974b48e0d">escena2</a></td></tr>
+<tr class="memdesc:aeb97509f566a779c3a61472974b48e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la segunda escena, normalmente el menú principal.  <br /></td></tr>
 <tr class="memitem:aba96c50a2acf797afec1eaab8c72c85e" id="r_aba96c50a2acf797afec1eaab8c72c85e"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba96c50a2acf797afec1eaab8c72c85e">sonidoBoton</a></td></tr>
+<tr class="memdesc:aba96c50a2acf797afec1eaab8c72c85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproducirá al pulsar un botón de cambio de escena.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00008">8</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+<div class="textblock"><p>Permite recargar una escena actual o cambiar a otra escena específica mediante botones. </p>
+<p>Usa SceneManager para cambiar entre escenas y <a class="el" href="class_audio_manager.html" title="Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...">AudioManager</a> para reproducir efectos de sonido al hacer clic. </p>
+<p>Este script puede estar vinculado a botones de UI: </p><div class="fragment"><div class="line"><span class="keyword">public</span> <a class="code hl_class" href="class_escena_restraurar.html">EscenaRestraurar</a> escenaController;</div>
+<div class="line">escenaController.<a class="code hl_function" href="#ab0130cf3027ff93fdf2516239a69680e">CargarEscena1</a>();</div>
+<div class="ttc" id="aclass_escena_restraurar_html"><div class="ttname"><a href="class_escena_restraurar.html">EscenaRestraurar</a></div><div class="ttdoc">Permite recargar una escena actual o cambiar a otra escena específica mediante botones.</div><div class="ttdef"><b>Definition</b> <a href="_escena_restraurar_8cs_source.html#l00021">EscenaRestraurar.cs:22</a></div></div>
+<div class="ttc" id="aclass_escena_restraurar_html_ab0130cf3027ff93fdf2516239a69680e"><div class="ttname"><a href="#ab0130cf3027ff93fdf2516239a69680e">EscenaRestraurar.CargarEscena1</a></div><div class="ttdeci">void CargarEscena1()</div><div class="ttdoc">Carga la escena almacenada en escena1 y reproduce el sonido de botón.</div><div class="ttdef"><b>Definition</b> <a href="_escena_restraurar_8cs_source.html#l00055">EscenaRestraurar.cs:55</a></div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd>SceneManager, <a class="el" href="class_audio_manager.html" title="Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...">AudioManager</a></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00021">21</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ab0130cf3027ff93fdf2516239a69680e" name="ab0130cf3027ff93fdf2516239a69680e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0130cf3027ff93fdf2516239a69680e">&#9670;&#160;</a></span>CargarEscena1()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void EscenaRestraurar.CargarEscena1 </td>
@@ -128,19 +146,23 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00020">20</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="comment">// Reproduce el sonido usando el sistema de AudioManager global</span></div>
-<div class="line"><span class="lineno">   23</span>        AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="#aba96c50a2acf797afec1eaab8c72c85e">sonidoBoton</a>);</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">// Carga la escena cuyo nombre está escrito en &quot;escena1&quot;</span></div>
-<div class="line"><span class="lineno">   26</span>        SceneManager.LoadScene(<a class="code hl_variable" href="#a44d1887096456208956e4160f39caa3e">escena1</a>);</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclass_escena_restraurar_html_a44d1887096456208956e4160f39caa3e"><div class="ttname"><a href="#a44d1887096456208956e4160f39caa3e">EscenaRestraurar.escena1</a></div><div class="ttdeci">string escena1</div><div class="ttdef"><b>Definition</b> <a href="_escena_restraurar_8cs_source.html#l00011">EscenaRestraurar.cs:11</a></div></div>
-<div class="ttc" id="aclass_escena_restraurar_html_aba96c50a2acf797afec1eaab8c72c85e"><div class="ttname"><a href="#aba96c50a2acf797afec1eaab8c72c85e">EscenaRestraurar.sonidoBoton</a></div><div class="ttdeci">AudioClip sonidoBoton</div><div class="ttdef"><b>Definition</b> <a href="_escena_restraurar_8cs_source.html#l00017">EscenaRestraurar.cs:17</a></div></div>
-</div><!-- fragment -->
+<p>Carga la escena almacenada en <a class="el" href="#a44d1887096456208956e4160f39caa3e" title="Nombre de la primera escena a cargar cuando se pulsa el primer botón.">escena1</a> y reproduce el sonido de botón. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">System.ArgumentException</td><td>Se lanza si el nombre de la escena está vacío o nulo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00055">55</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2f7e18e43b212c7fa93bb379130a82bc" name="a2f7e18e43b212c7fa93bb379130a82bc"></a>
@@ -148,6 +170,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void EscenaRestraurar.CargarEscena2 </td>
@@ -156,18 +181,23 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00030">30</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">// Reproduce el sonido usando el sistema de AudioManager global</span></div>
-<div class="line"><span class="lineno">   33</span>        AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="#aba96c50a2acf797afec1eaab8c72c85e">sonidoBoton</a>);</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>        <span class="comment">// Carga la escena cuyo nombre está escrito en &quot;escena2&quot;</span></div>
-<div class="line"><span class="lineno">   36</span>        SceneManager.LoadScene(<a class="code hl_variable" href="#aeb97509f566a779c3a61472974b48e0d">escena2</a>);</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
-<div class="ttc" id="aclass_escena_restraurar_html_aeb97509f566a779c3a61472974b48e0d"><div class="ttname"><a href="#aeb97509f566a779c3a61472974b48e0d">EscenaRestraurar.escena2</a></div><div class="ttdeci">string escena2</div><div class="ttdef"><b>Definition</b> <a href="_escena_restraurar_8cs_source.html#l00014">EscenaRestraurar.cs:14</a></div></div>
-</div><!-- fragment -->
+<p>Carga la escena almacenada en <a class="el" href="#aeb97509f566a779c3a61472974b48e0d" title="Nombre de la segunda escena, normalmente el menú principal.">escena2</a> y reproduce el sonido de botón. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">System.ArgumentException</td><td>Se lanza si el nombre de la escena está vacío o nulo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00069">69</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -183,7 +213,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00011">11</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+<p>Nombre de la primera escena a cargar cuando se pulsa el primer botón. </p>
+<p>Nombre exacto de la escena tal como aparece en el Build Settings. </p>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00030">30</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
 
 </div>
 </div>
@@ -199,7 +232,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00014">14</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+<p>Nombre de la segunda escena, normalmente el menú principal. </p>
+<p>Debe coincidir con el nombre definido en el sistema de escenas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00039">39</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
 
 </div>
 </div>
@@ -215,12 +251,15 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00017">17</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
+<p>Sonido que se reproducirá al pulsar un botón de cambio de escena. </p>
+<p>Debe ser asignado en el Inspector </p>
+
+<p class="definition">Definition at line <a class="el" href="_escena_restraurar_8cs_source.html#l00047">47</a> of file <a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_escena_restraurar_8cs_source.html">EscenaRestraurar.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

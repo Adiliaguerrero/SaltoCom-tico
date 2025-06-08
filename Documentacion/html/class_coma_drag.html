@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_coma_drag.html','',''); });
   <div class="headertitle"><div class="title">ComaDrag Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ComaDrag:</div>
 <div class="dyncontent">
@@ -103,15 +106,20 @@ Inheritance diagram for ComaDrag:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acc2bd41e568f778a5e5bbbf8781a7096" id="r_acc2bd41e568f778a5e5bbbf8781a7096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc2bd41e568f778a5e5bbbf8781a7096">OnDrag</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:acc2bd41e568f778a5e5bbbf8781a7096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mueve el objeto siguiendo el puntero mientras se arrastra.  <br /></td></tr>
 <tr class="memitem:a82610b6ac5e1e277bb71835e20d5e652" id="r_a82610b6ac5e1e277bb71835e20d5e652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82610b6ac5e1e277bb71835e20d5e652">OnEndDrag</a> (PointerEventData eventData)</td></tr>
+<tr class="memdesc:a82610b6ac5e1e277bb71835e20d5e652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se ejecuta al soltar el objeto. Verifica si fue colocado en una zona válida y, si es así, clona una nueva coma.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a670d7540186e07ca8ffc79203872af28" id="r_a670d7540186e07ca8ffc79203872af28"><td class="memItemLeft" align="right" valign="top">RectTransform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a670d7540186e07ca8ffc79203872af28">dropAreas</a></td></tr>
+<tr class="memdesc:a670d7540186e07ca8ffc79203872af28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Áreas o zonas válidas donde las comas podran ser soltadas correc3ctamente.  <br /></td></tr>
 <tr class="memitem:a34a81acdb61fda66dcd45b3e171efaec" id="r_a34a81acdb61fda66dcd45b3e171efaec"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a></td></tr>
+<tr class="memdesc:a34a81acdb61fda66dcd45b3e171efaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Permite arrastrar y soltar un objeto coma dentro de zonas válidas. Si se suelta correctamente, se clona una nueva coma. </p>
+
 <p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00008">8</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="acc2bd41e568f778a5e5bbbf8781a7096" name="acc2bd41e568f778a5e5bbbf8781a7096"></a>
@@ -119,6 +127,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ComaDrag.OnDrag </td>
@@ -127,17 +138,23 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00046">46</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// Actualiza la posición del objeto al seguir la posición del puntero o dedo en pantalla</span></div>
-<div class="line"><span class="lineno">   49</span>        rectTransform.position = eventData.position;</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">// Desactiva temporalmente los raycasts para que el objeto no interfiera con detección de áreas debajo</span></div>
-<div class="line"><span class="lineno">   52</span>        canvasGroup.blocksRaycasts = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-</div><!-- fragment -->
+<p>Mueve el objeto siguiendo el puntero mientras se arrastra. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Datos del evento de arrastre. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00066">66</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
+
 </div>
 </div>
 <a id="a82610b6ac5e1e277bb71835e20d5e652" name="a82610b6ac5e1e277bb71835e20d5e652"></a>
@@ -145,6 +162,9 @@ Data Fields</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ComaDrag.OnEndDrag </td>
@@ -153,63 +173,23 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00056">56</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="comment">// Vuelve a activar los raycasts para que el objeto vuelva a responder a interacciones</span></div>
-<div class="line"><span class="lineno">   59</span>        canvasGroup.blocksRaycasts = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">// Bandera que indica si el objeto fue soltado en una zona válida</span></div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">bool</span> colocado = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <span class="comment">// Recorre cada zona de soltado en las areas válida</span></div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">foreach</span> (var area <span class="keywordflow">in</span> <a class="code hl_variable" href="#a670d7540186e07ca8ffc79203872af28">dropAreas</a>)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="comment">// Verifica si el objeto fue soltado dentro de una posicion  de las zonas permitidas</span></div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (RectTransformUtility.RectangleContainsScreenPoint(area, eventData.position, eventData.pressEventCamera))</div>
-<div class="line"><span class="lineno">   69</span>            {</div>
-<div class="line"><span class="lineno">   70</span>                <span class="comment">// Coloca el objeto justo en el centro de la zona de destino</span></div>
-<div class="line"><span class="lineno">   71</span>                rectTransform.position = area.position;</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>                <span class="comment">// Marca como colocado exitosamente</span></div>
-<div class="line"><span class="lineno">   74</span>                colocado = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>                <span class="comment">// Si aún no se ha clonado el objeto:</span></div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (!yaClonada)</div>
-<div class="line"><span class="lineno">   78</span>                {</div>
-<div class="line"><span class="lineno">   79</span>                    <span class="comment">// Crea una copia del objeto actual dentro del mismo contenedor padre</span></div>
-<div class="line"><span class="lineno">   80</span>                    GameObject clon = Instantiate(gameObject, <a class="code hl_variable" href="#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a>);</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>                    <span class="comment">// Coloca el clon en la posición original</span></div>
-<div class="line"><span class="lineno">   83</span>                    clon.transform.position = originalPosition;</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>                    <span class="comment">// Asegura que la escala sea 1 para evitar distorsión visual</span></div>
-<div class="line"><span class="lineno">   86</span>                    clon.transform.localScale = Vector3.one;</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>                    <span class="comment">// Accede al script del clon para actualizar sus propiedades internas</span></div>
-<div class="line"><span class="lineno">   89</span>                    var clonScript = clon.GetComponent&lt;ComaDrag&gt;();</div>
-<div class="line"><span class="lineno">   90</span>                    clonScript.originalPosition = clon.transform.position; <span class="comment">// Actualiza su nueva posición original</span></div>
-<div class="line"><span class="lineno">   91</span>                    clonScript.yaClonada = <span class="keyword">false</span>; <span class="comment">// Permite que el nuevo clon pueda ser clonado también</span></div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>                    <span class="comment">// Marca el objeto original como ya clonado para no crear más copias</span></div>
-<div class="line"><span class="lineno">   94</span>                    yaClonada = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   95</span>                }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>                <span class="comment">// Ya se colocó correctamente, salimos del ciclo con un breack</span></div>
-<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   99</span>            }</div>
-<div class="line"><span class="lineno">  100</span>        }</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>        <span class="comment">// Si el objeto no se soltó en una zona válida, regresa a su posición inicial</span></div>
-<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (!colocado)</div>
-<div class="line"><span class="lineno">  104</span>        {</div>
-<div class="line"><span class="lineno">  105</span>            rectTransform.position = originalPosition;</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="ttc" id="aclass_coma_drag_html_a34a81acdb61fda66dcd45b3e171efaec"><div class="ttname"><a href="#a34a81acdb61fda66dcd45b3e171efaec">ComaDrag.padreContenedor</a></div><div class="ttdeci">Transform padreContenedor</div><div class="ttdef"><b>Definition</b> <a href="_arrastrar_soltar_8cs_source.html#l00026">ArrastrarSoltar.cs:26</a></div></div>
-<div class="ttc" id="aclass_coma_drag_html_a670d7540186e07ca8ffc79203872af28"><div class="ttname"><a href="#a670d7540186e07ca8ffc79203872af28">ComaDrag.dropAreas</a></div><div class="ttdeci">RectTransform[] dropAreas</div><div class="ttdef"><b>Definition</b> <a href="_arrastrar_soltar_8cs_source.html#l00023">ArrastrarSoltar.cs:23</a></div></div>
-</div><!-- fragment -->
+<p>Se ejecuta al soltar el objeto. Verifica si fue colocado en una zona válida y, si es así, clona una nueva coma. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventData</td><td>Datos del evento al soltar el objeto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00080">80</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -225,7 +205,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00023">23</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
+<p>Áreas o zonas válidas donde las comas podran ser soltadas correc3ctamente. </p>
+
+<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00033">33</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
 
 </div>
 </div>
@@ -241,12 +223,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00026">26</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
+<p>Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_arrastrar_soltar_8cs_source.html#l00038">38</a> of file <a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_arrastrar_soltar_8cs_source.html">ArrastrarSoltar.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

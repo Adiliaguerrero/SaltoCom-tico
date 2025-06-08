@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_transcribir_oracion2.html','',''); });
   <div class="headertitle"><div class="title">TranscribirOracion2 Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla la transcripción de una oración en la que el usuario debe colocar correctamente las comas.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for TranscribirOracion2:</div>
 <div class="dyncontent">
@@ -103,24 +106,34 @@ Inheritance diagram for TranscribirOracion2:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3016ac6e4bb4c07e8bd6c667bdba6bda" id="r_a3016ac6e4bb4c07e8bd6c667bdba6bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3016ac6e4bb4c07e8bd6c667bdba6bda">VerificarRespuesta</a> ()</td></tr>
+<tr class="memdesc:a3016ac6e4bb4c07e8bd6c667bdba6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si la respuesta ingresada por el usuario coincide con la oración correcta.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a8411f26e766b971ebabe1d3e39665a68" id="r_a8411f26e766b971ebabe1d3e39665a68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_paneles1.html">Paneles1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8411f26e766b971ebabe1d3e39665a68">Paneles1</a></td></tr>
+<tr class="memdesc:a8411f26e766b971ebabe1d3e39665a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al controlador de paneles para avanzar entre preguntas o escenas.  <br /></td></tr>
 <tr class="memitem:ad1ded7a632224f285f19c489fc2b0d28" id="r_ad1ded7a632224f285f19c489fc2b0d28"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1ded7a632224f285f19c489fc2b0d28">textoOracion</a></td></tr>
+<tr class="memdesc:ad1ded7a632224f285f19c489fc2b0d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente TMP_Text donde se muestra la oración original sin comas.  <br /></td></tr>
 <tr class="memitem:a37eff0834892a6891ac59df31beacac4" id="r_a37eff0834892a6891ac59df31beacac4"><td class="memItemLeft" align="right" valign="top">TMP_InputField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37eff0834892a6891ac59df31beacac4">campoRespuesta</a></td></tr>
+<tr class="memdesc:a37eff0834892a6891ac59df31beacac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Campo de entrada donde el usuario debe escribir la oración corregida con comas.  <br /></td></tr>
 <tr class="memitem:a5bc8c27e60c60dea802feabca9ef009b" id="r_a5bc8c27e60c60dea802feabca9ef009b"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc8c27e60c60dea802feabca9ef009b">textoRetroalimentacion</a></td></tr>
+<tr class="memdesc:a5bc8c27e60c60dea802feabca9ef009b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que muestra la retroalimentación tras verificar la respuesta (correcta o incorrecta).  <br /></td></tr>
 <tr class="memitem:a0f7a0d391d723182a4596f074bf9be9e" id="r_a0f7a0d391d723182a4596f074bf9be9e"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f7a0d391d723182a4596f074bf9be9e">sonidoBoton</a></td></tr>
+<tr class="memdesc:a0f7a0d391d723182a4596f074bf9be9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al verificar la respuesta, asignado desde el Inspector.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00006">6</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<div class="textblock"><p>Controla la transcripción de una oración en la que el usuario debe colocar correctamente las comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00007">7</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a3016ac6e4bb4c07e8bd6c667bdba6bda" name="a3016ac6e4bb4c07e8bd6c667bdba6bda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3016ac6e4bb4c07e8bd6c667bdba6bda">&#9670;&#160;</a></span>VerificarRespuesta()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TranscribirOracion2.VerificarRespuesta </td>
@@ -129,40 +142,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00043">43</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">// Reproduce el sonido del botón usando el AudioManager global</span></div>
-<div class="line"><span class="lineno">   46</span>        AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="#a0f7a0d391d723182a4596f074bf9be9e">sonidoBoton</a>);</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// Obtiene la respuesta del usuario y elimina espacios al inicio y final</span></div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">string</span> respuestaUsuario = <a class="code hl_variable" href="#a37eff0834892a6891ac59df31beacac4">campoRespuesta</a>.text.Trim();</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>        <span class="comment">// Compara la respuesta del usuario con la oración correcta</span></div>
-<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (respuestaUsuario == oracionCorrecta)</div>
-<div class="line"><span class="lineno">   53</span>        {</div>
-<div class="line"><span class="lineno">   54</span>            <span class="comment">// Si es correcta, muestra el mensaje &quot;¡Correcto!&quot;</span></div>
-<div class="line"><span class="lineno">   55</span>            textoRetroalimentacion.text = <span class="stringliteral">&quot;¡Correcto! &quot;</span>;</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>            <span class="comment">// Incrementa el puntaje de respuestas correctas en nivel intermedio</span></div>
-<div class="line"><span class="lineno">   58</span>            IncrementarPuntajeIntermedioCorrecto();</div>
-<div class="line"><span class="lineno">   59</span>        }</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="comment">// Si es incorrecta, muestra el mensaje &quot;Incorrecto.&quot;</span></div>
-<div class="line"><span class="lineno">   63</span>            textoRetroalimentacion.text = <span class="stringliteral">&quot;Incorrecto. &quot;</span>;</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>            <span class="comment">// Incrementa el puntaje de respuestas incorrectas en nivel intermedio</span></div>
-<div class="line"><span class="lineno">   66</span>            IncrementarPuntajeIntermedioIncorrecto();</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>        <span class="comment">// Llama al método para pasar a la siguiente trivia después de 2 segundos</span></div>
-<div class="line"><span class="lineno">   70</span>        Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
-<div class="line"><span class="lineno">   71</span>    }</div>
-<div class="ttc" id="aclass_transcribir_oracion2_html_a0f7a0d391d723182a4596f074bf9be9e"><div class="ttname"><a href="#a0f7a0d391d723182a4596f074bf9be9e">TranscribirOracion2.sonidoBoton</a></div><div class="ttdeci">AudioClip sonidoBoton</div><div class="ttdef"><b>Definition</b> <a href="_trivia6_8cs_source.html#l00021">Trivia6.cs:21</a></div></div>
-<div class="ttc" id="aclass_transcribir_oracion2_html_a37eff0834892a6891ac59df31beacac4"><div class="ttname"><a href="#a37eff0834892a6891ac59df31beacac4">TranscribirOracion2.campoRespuesta</a></div><div class="ttdeci">TMP_InputField campoRespuesta</div><div class="ttdef"><b>Definition</b> <a href="_trivia6_8cs_source.html#l00015">Trivia6.cs:15</a></div></div>
-</div><!-- fragment -->
+<p>Verifica si la respuesta ingresada por el usuario coincide con la oración correcta. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00051">51</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -178,7 +168,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00015">15</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<p>Campo de entrada donde el usuario debe escribir la oración corregida con comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00022">22</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>
@@ -194,7 +186,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00009">9</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<p>Referencia al controlador de paneles para avanzar entre preguntas o escenas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00012">12</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>
@@ -210,7 +204,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00021">21</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<p>Sonido que se reproduce al verificar la respuesta, asignado desde el Inspector. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00033">33</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>
@@ -226,7 +222,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00012">12</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<p>Componente TMP_Text donde se muestra la oración original sin comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00017">17</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>
@@ -242,12 +240,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00018">18</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+<p>Texto que muestra la retroalimentación tras verificar la respuesta (correcta o incorrecta). </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00027">27</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

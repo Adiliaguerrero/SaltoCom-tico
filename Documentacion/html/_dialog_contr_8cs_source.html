@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/DialogContr.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/DialogContr.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,75 +93,57 @@ $(function(){initNavTree('_dialog_contr_8cs_source.html','',''); });
   <div class="headertitle"><div class="title">DialogContr.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_dialog_contr_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Importamos librerías necesarias para el manejo de listas, corutinas y Unity</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections;                <span class="comment">// Para usar corutinas (funciones que se ejecutan en varios frames)</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;        <span class="comment">// Para usar Listas genéricas, en este caso para las líneas de diálogo</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UnityEngine;                       <span class="comment">// Funciones básicas y objetos de Unity</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>TMPro;                            <span class="comment">// Para usar TextMeshPro, que mejora la visualización de texto</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Esta clase controla la visualización de un sistema de dialogo de texto despues de activarse un portal </span></div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_dialogo_controller.html">DialogoController</a> : MonoBehaviour</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Panel que contiene todo el diálogo, que se mostrará y ocultará, asignado desde el Inspector</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">   12</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Componente TextMeshProUGUI donde se mostrará cada línea del diálogo</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">   15</a></span>    <span class="keyword">public</span> TextMeshProUGUI <a class="code hl_variable" href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">textoDialogo</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Lista pública que contiene todas las líneas de diálogo a mostrar</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// El atributo [TextArea(2, 4)] permite editar mejor en el Inspector, mostrando un área de texto con entre 2 y 4 líneas visibles</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    [TextArea(2, 4)]</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">   20</a></span>    <span class="keyword">public</span> List&lt;string&gt; <a class="code hl_variable" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Tiempo en segundos que permanecerá visible cada línea antes de pasar a la siguiente</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a> = 2f;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Método público que inicia la muestra del diálogo</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// Recibe un parámetro de tipo System.Action llamado &#39;alTerminar&#39;, que es una función que se ejecutará cuando termine el diálogo</span></div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">   27</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">MostrarDialogo</a>(System.Action alTerminar)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Activamos el panel para que el diálogo se muestre en pantalla</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">// Iniciamos la corutina MostrarLineas para mostrar las líneas de diálogo una a una</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        StartCoroutine(MostrarLineas(alTerminar));</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Corutina privada que muestra las líneas del diálogo una a una, esperando un tiempo entre ellas</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// Recibe un parámetro &#39;callback&#39;, que es la función que se ejecutará al terminar todas las líneas</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span> IEnumerator MostrarLineas(System.Action callback)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// Recorremos cada línea en la lista lineasDialogo</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> linea <span class="keywordflow">in</span> <a class="code hl_variable" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="comment">// Actualizamos el texto mostrado con la línea actual</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            textoDialogo.text = linea;</div>
+<a href="_dialog_contr_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;               </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;        </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>TMPro;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html">   22</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_dialogo_controller.html">DialogoController</a> : MonoBehaviour</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">   30</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">   35</a></span>    <span class="keyword">public</span> TextMeshProUGUI <a class="code hl_variable" href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">textoDialogo</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        [TextArea(2, 4)]</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">   44</a></span>    <span class="keyword">public</span> List&lt;string&gt; <a class="code hl_variable" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="comment">// Esperamos el tiempo definido antes de mostrar la siguiente línea</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// Al terminar todas las líneas, limpiamos el texto para que no quede nada visible</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        textoDialogo.text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// Ocultamos el panel del diálogo para que desaparezca de la pantalla</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// Invocamos la función callback si fue asignada, para avisar que el diálogo terminó</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        callback?.Invoke();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">   50</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a> = 2f;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">   62</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">MostrarDialogo</a>(System.Action alTerminar)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        StartCoroutine(MostrarLineas(alTerminar));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
-<div class="ttc" id="aclass_dialogo_controller_html"><div class="ttname"><a href="class_dialogo_controller.html">DialogoController</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">DialogContr.cs:10</a></div></div>
-<div class="ttc" id="aclass_dialogo_controller_html_a187c83ff9d12fb9da311072c8a2806bc"><div class="ttname"><a href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">DialogoController.textoDialogo</a></div><div class="ttdeci">TextMeshProUGUI textoDialogo</div><div class="ttdef"><b>Definition</b> <a href="#l00015">DialogContr.cs:15</a></div></div>
-<div class="ttc" id="aclass_dialogo_controller_html_a3fa61ce9a80902999374b385416008b2"><div class="ttname"><a href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">DialogoController.MostrarDialogo</a></div><div class="ttdeci">void MostrarDialogo(System.Action alTerminar)</div><div class="ttdef"><b>Definition</b> <a href="#l00027">DialogContr.cs:27</a></div></div>
-<div class="ttc" id="aclass_dialogo_controller_html_a577d9974bf82a2fe7be36a45792330fc"><div class="ttname"><a href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">DialogoController.lineasDialogo</a></div><div class="ttdeci">List&lt; string &gt; lineasDialogo</div><div class="ttdef"><b>Definition</b> <a href="#l00020">DialogContr.cs:20</a></div></div>
-<div class="ttc" id="aclass_dialogo_controller_html_a6195ef4b24971b5c8fdbcaac6208b8e8"><div class="ttname"><a href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">DialogoController.tiempoEntreLineas</a></div><div class="ttdeci">float tiempoEntreLineas</div><div class="ttdef"><b>Definition</b> <a href="#l00023">DialogContr.cs:23</a></div></div>
-<div class="ttc" id="aclass_dialogo_controller_html_a8aaf08416957973cff7afb2c02a674b4"><div class="ttname"><a href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">DialogoController.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdef"><b>Definition</b> <a href="#l00012">DialogContr.cs:12</a></div></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">private</span> IEnumerator MostrarLineas(System.Action callback)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> linea <span class="keywordflow">in</span> <a class="code hl_variable" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            textoDialogo.text = linea;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        textoDialogo.text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        callback?.Invoke();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+</div>
+<div class="ttc" id="aclass_dialogo_controller_html"><div class="ttname"><a href="class_dialogo_controller.html">DialogoController</a></div><div class="ttdoc">Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DialogContr.cs:23</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a187c83ff9d12fb9da311072c8a2806bc"><div class="ttname"><a href="class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc">DialogoController.textoDialogo</a></div><div class="ttdeci">TextMeshProUGUI textoDialogo</div><div class="ttdoc">Componente de texto TMP que mostrará cada línea del diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">DialogContr.cs:35</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a3fa61ce9a80902999374b385416008b2"><div class="ttname"><a href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">DialogoController.MostrarDialogo</a></div><div class="ttdeci">void MostrarDialogo(System.Action alTerminar)</div><div class="ttdoc">Inicia la visualización del diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">DialogContr.cs:62</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a577d9974bf82a2fe7be36a45792330fc"><div class="ttname"><a href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">DialogoController.lineasDialogo</a></div><div class="ttdeci">List&lt; string &gt; lineasDialogo</div><div class="ttdoc">Lista de líneas que serán mostradas una a una en el diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">DialogContr.cs:44</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a6195ef4b24971b5c8fdbcaac6208b8e8"><div class="ttname"><a href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">DialogoController.tiempoEntreLineas</a></div><div class="ttdeci">float tiempoEntreLineas</div><div class="ttdoc">Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">DialogContr.cs:50</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a8aaf08416957973cff7afb2c02a674b4"><div class="ttname"><a href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">DialogoController.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdoc">Panel de UI que contiene el diálogo completo, incluyendo fondo y texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">DialogContr.cs:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

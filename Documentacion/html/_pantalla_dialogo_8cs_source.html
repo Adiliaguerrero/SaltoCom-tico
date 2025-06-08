@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SaltoComatico: Assets/Script/PantallaDialogo.cs Source File</title>
+<title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/PantallaDialogo.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -100,99 +100,81 @@ $(function(){initNavTree('_pantalla_dialogo_8cs_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UnityEngine.SceneManagement;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Esta clase controla una secuencia de diálogos que se muestran en pantalla letra por letra y puntos de carga animados.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html">    9</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_pantalla_dialogo.html">PantallaDialogo</a> : MonoBehaviour</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Referencia al componente TMP_Text donde se mostrarán los diálogos</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">   12</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">textoPantalla</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// Arreglo de cadenas que contiene todas las líneas de diálogo que se mostrarán</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [TextArea(2, 5)]</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">   16</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span>[] <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Tiempo que se espera entre cada letra al mostrar el texto (efecto de máquina de escribir)</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">   19</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">tiempoEntreLetras</a> = 0.05f;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Tiempo que se espera entre cada línea de diálogo</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">tiempoEntreDialogos</a> = 3f;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Texto que mostrará puntos animados como indicador de carga</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">   25</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">puntosCargaTexto</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Tiempo a esperar después de mostrar los puntos antes de cambiar de escena</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">   28</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">tiempoAntesCambioEscena</a> = 2f;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Nombre de la escena que se cargará al finalizar todos los diálogos</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">   31</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Índice para llevar el control de qué línea de diálogo se está mostrando</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> indiceDialogo = 0;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Método que se ejecuta al iniciar el dialogo</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// Si hay al menos un diálogo, comienza la secuencia de diálogo</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length &gt; 0)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            StartCoroutine(MostrarDialogo());</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Corrutina que muestra los diálogos letra por letra y espera entre líneas</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    IEnumerator MostrarDialogo()</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// Mientras haya más diálogos por mostrar</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">while</span> (indiceDialogo &lt; <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            textoPantalla.text = <span class="stringliteral">&quot;&quot;</span>; <span class="comment">// Limpia el texto actual</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordtype">string</span> linea = <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>[indiceDialogo]; <span class="comment">// Obtiene la línea actual</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="comment">// Añade cada letra poco a poco con espera entre cada una</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">char</span> letra <span class="keywordflow">in</span> linea)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                textoPantalla.text += letra;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">tiempoEntreLetras</a>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">// Espera antes de mostrar la siguiente línea</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">tiempoEntreDialogos</a>);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            indiceDialogo++;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// Activa el texto de puntos de carga y comienza su animación</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">puntosCargaTexto</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        StartCoroutine(AnimarPuntos());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// Espera un tiempo antes de cambiar de escena</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">tiempoAntesCambioEscena</a>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// Cambia a la escena especificada</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        SceneManager.LoadScene(<a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// Corrutina que anima los puntos de carga (., .., ...)</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    IEnumerator AnimarPuntos()</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">string</span>[] puntos = { <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;..&quot;</span>, <span class="stringliteral">&quot;...&quot;</span> };</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">int</span> index = 0;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// Bucle infinito para animar los puntos mientras la escena no cambia</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            puntosCargaTexto.text = puntos[index];</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            index = (index + 1) % puntos.Length;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(0.4f);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_pantalla_dialogo.html">PantallaDialogo</a> : MonoBehaviour</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">   20</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">textoPantalla</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    [TextArea(2, 5)]</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">   26</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span>[] <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">   32</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">tiempoEntreLetras</a> = 0.05f;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">   38</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">tiempoEntreDialogos</a> = 3f;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">   43</a></span>    <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">puntosCargaTexto</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">   49</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">tiempoAntesCambioEscena</a> = 2f;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">   54</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> indiceDialogo = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length &gt; 0)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            StartCoroutine(MostrarDialogo());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    IEnumerator MostrarDialogo()</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">while</span> (indiceDialogo &lt; <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            textoPantalla.text = <span class="stringliteral">&quot;&quot;</span>; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordtype">string</span> linea = <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>[indiceDialogo]; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">char</span> letra <span class="keywordflow">in</span> linea)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                textoPantalla.text += letra;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">tiempoEntreLetras</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">tiempoEntreDialogos</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            indiceDialogo++;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">puntosCargaTexto</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        StartCoroutine(AnimarPuntos());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">tiempoAntesCambioEscena</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        SceneManager.LoadScene(<a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    IEnumerator AnimarPuntos()</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">string</span>[] puntos = { <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;..&quot;</span>, <span class="stringliteral">&quot;...&quot;</span> };</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            puntosCargaTexto.text = puntos[index];</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            index = (index + 1) % puntos.Length;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(0.4f);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 </div>
-<div class="ttc" id="aclass_pantalla_dialogo_html"><div class="ttname"><a href="class_pantalla_dialogo.html">PantallaDialogo</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">PantallaDialogo.cs:10</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a11e1e3cfe4dd87e67a32a2cf45122956"><div class="ttname"><a href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">PantallaDialogo.textoPantalla</a></div><div class="ttdeci">TMP_Text textoPantalla</div><div class="ttdef"><b>Definition</b> <a href="#l00012">PantallaDialogo.cs:12</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a3cc024907357a5028c31d304a30a4b87"><div class="ttname"><a href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">PantallaDialogo.nombreEscenaSiguiente</a></div><div class="ttdeci">string nombreEscenaSiguiente</div><div class="ttdef"><b>Definition</b> <a href="#l00031">PantallaDialogo.cs:31</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a40eaf4c46b9ac96a1b85a03a6f092879"><div class="ttname"><a href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">PantallaDialogo.puntosCargaTexto</a></div><div class="ttdeci">TMP_Text puntosCargaTexto</div><div class="ttdef"><b>Definition</b> <a href="#l00025">PantallaDialogo.cs:25</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a5849cdf517bf5b9318bc5285022cd4ae"><div class="ttname"><a href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">PantallaDialogo.dialogos</a></div><div class="ttdeci">string[] dialogos</div><div class="ttdef"><b>Definition</b> <a href="#l00016">PantallaDialogo.cs:16</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a78be9ad2e23aa429a9cf8e51060d5642"><div class="ttname"><a href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">PantallaDialogo.tiempoEntreDialogos</a></div><div class="ttdeci">float tiempoEntreDialogos</div><div class="ttdef"><b>Definition</b> <a href="#l00022">PantallaDialogo.cs:22</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_a82d58fd4fdba695240e2bb7d41ce56ce"><div class="ttname"><a href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">PantallaDialogo.tiempoAntesCambioEscena</a></div><div class="ttdeci">float tiempoAntesCambioEscena</div><div class="ttdef"><b>Definition</b> <a href="#l00028">PantallaDialogo.cs:28</a></div></div>
-<div class="ttc" id="aclass_pantalla_dialogo_html_ade0fd938ac2b31492f17eb2e10a5b76e"><div class="ttname"><a href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">PantallaDialogo.tiempoEntreLetras</a></div><div class="ttdeci">float tiempoEntreLetras</div><div class="ttdef"><b>Definition</b> <a href="#l00019">PantallaDialogo.cs:19</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html"><div class="ttname"><a href="class_pantalla_dialogo.html">PantallaDialogo</a></div><div class="ttdoc">Controla la presentación secuencial de diálogos en pantalla, letra por letra, con una animación de pu...</div><div class="ttdef"><b>Definition</b> <a href="#l00015">PantallaDialogo.cs:16</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a11e1e3cfe4dd87e67a32a2cf45122956"><div class="ttname"><a href="class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956">PantallaDialogo.textoPantalla</a></div><div class="ttdeci">TMP_Text textoPantalla</div><div class="ttdoc">Componente de texto donde se muestra el diálogo actual.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">PantallaDialogo.cs:20</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a3cc024907357a5028c31d304a30a4b87"><div class="ttname"><a href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">PantallaDialogo.nombreEscenaSiguiente</a></div><div class="ttdeci">string nombreEscenaSiguiente</div><div class="ttdoc">Nombre de la escena que se cargará una vez finalizada toda la secuencia de diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">PantallaDialogo.cs:54</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a40eaf4c46b9ac96a1b85a03a6f092879"><div class="ttname"><a href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">PantallaDialogo.puntosCargaTexto</a></div><div class="ttdeci">TMP_Text puntosCargaTexto</div><div class="ttdoc">Texto que muestra una animación de puntos suspensivos como indicador de carga.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">PantallaDialogo.cs:43</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a5849cdf517bf5b9318bc5285022cd4ae"><div class="ttname"><a href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">PantallaDialogo.dialogos</a></div><div class="ttdeci">string[] dialogos</div><div class="ttdoc">Arreglo de líneas de diálogo a mostrar.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">PantallaDialogo.cs:26</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a78be9ad2e23aa429a9cf8e51060d5642"><div class="ttname"><a href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">PantallaDialogo.tiempoEntreDialogos</a></div><div class="ttdeci">float tiempoEntreDialogos</div><div class="ttdoc">Tiempo de espera entre cada línea de diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">PantallaDialogo.cs:38</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a82d58fd4fdba695240e2bb7d41ce56ce"><div class="ttname"><a href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">PantallaDialogo.tiempoAntesCambioEscena</a></div><div class="ttdeci">float tiempoAntesCambioEscena</div><div class="ttdoc">Tiempo que se espera después de los puntos antes de cambiar de escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">PantallaDialogo.cs:49</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_ade0fd938ac2b31492f17eb2e10a5b76e"><div class="ttname"><a href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">PantallaDialogo.tiempoEntreLetras</a></div><div class="ttdeci">float tiempoEntreLetras</div><div class="ttdoc">Tiempo de espera entre cada letra del texto (efecto de máquina de escribir).</div><div class="ttdef"><b>Definition</b> <a href="#l00032">PantallaDialogo.cs:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

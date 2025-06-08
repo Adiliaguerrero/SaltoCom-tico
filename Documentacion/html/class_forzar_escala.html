@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_forzar_escala.html','',''); });
   <div class="headertitle"><div class="title">ForzarEscala Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha).  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ForzarEscala:</div>
 <div class="dyncontent">
@@ -103,10 +106,14 @@ Inheritance diagram for ForzarEscala:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a02cca4bdb149539ddfa7bdee72ce2cff" id="r_a02cca4bdb149539ddfa7bdee72ce2cff"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a> = new Vector2(0.48f, 0.45f)</td></tr>
+<tr class="memdesc:a02cca4bdb149539ddfa7bdee72ce2cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escala correcta que debe aplicarse al objeto en los ejes X e Y.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00006">6</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
+<div class="textblock"><p>Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha). </p>
+<p>Se recomienda usar este script para personajes o sprites que deban conservar su tamaño original sin distorsión, pero aún puedan girar horizontalmente. </p>
+<p>Asigna este script a un GameObject y configura su <a class="el" href="#a02cca4bdb149539ddfa7bdee72ce2cff" title="Escala correcta que debe aplicarse al objeto en los ejes X e Y.">escalaCorrecta</a> desde el Inspector. </p>
+
+<p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00014">14</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a02cca4bdb149539ddfa7bdee72ce2cff" name="a02cca4bdb149539ddfa7bdee72ce2cff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02cca4bdb149539ddfa7bdee72ce2cff">&#9670;&#160;</a></span>escalaCorrecta</h2>
@@ -120,12 +127,15 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00009">9</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
+<p>Escala correcta que debe aplicarse al objeto en los ejes X e Y. </p>
+<p>Vector2 con la escala deseada. El valor X puede invertirse internamente para reflejar la dirección. </p>
+
+<p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00023">23</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

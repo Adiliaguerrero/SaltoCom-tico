@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_pajaro_enemigo.html','',''); });
   <div class="headertitle"><div class="title">PajaroEnemigo Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Gestiona el comportamiento de un pájaro enemigo que se mueve horizontalmente y daña al jugador al contacto.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for PajaroEnemigo:</div>
 <div class="dyncontent">
@@ -103,13 +106,19 @@ Inheritance diagram for PajaroEnemigo:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ab82d49e8b100fb72320ce32fee0b6b05" id="r_ab82d49e8b100fb72320ce32fee0b6b05"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab82d49e8b100fb72320ce32fee0b6b05">velocidad</a> = 2f</td></tr>
+<tr class="memdesc:ab82d49e8b100fb72320ce32fee0b6b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidad de movimiento del pájaro.  <br /></td></tr>
 <tr class="memitem:a9b5c927118bdf4177c5a432cf5bec0e1" id="r_a9b5c927118bdf4177c5a432cf5bec0e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5c927118bdf4177c5a432cf5bec0e1">distanciaVuelo</a> = 5f</td></tr>
+<tr class="memdesc:a9b5c927118bdf4177c5a432cf5bec0e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distancia máxima que el pájaro recorre en una dirección antes de cambiar.  <br /></td></tr>
 <tr class="memitem:a11f9ae6e43c65ecc227db304b35fa0e8" id="r_a11f9ae6e43c65ecc227db304b35fa0e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11f9ae6e43c65ecc227db304b35fa0e8">tiempoEspera</a> = 2f</td></tr>
+<tr class="memdesc:a11f9ae6e43c65ecc227db304b35fa0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo de espera antes de invertir la dirección del vuelo.  <br /></td></tr>
 <tr class="memitem:aceb1231f8167df291b2253a58aed8b16" id="r_aceb1231f8167df291b2253a58aed8b16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceb1231f8167df291b2253a58aed8b16">danio</a> = 1</td></tr>
+<tr class="memdesc:aceb1231f8167df291b2253a58aed8b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cantidad de daño que se aplica al jugador al entrar en contacto.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00008">8</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
+<div class="textblock"><p>Gestiona el comportamiento de un pájaro enemigo que se mueve horizontalmente y daña al jugador al contacto. </p>
+<p>El pájaro vuela de un lado a otro en un rango definido y cambia de dirección tras un tiempo de espera. Si colisiona con el jugador, le inflige daño usando el método <code>RecibeDanio</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00012">12</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="aceb1231f8167df291b2253a58aed8b16" name="aceb1231f8167df291b2253a58aed8b16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aceb1231f8167df291b2253a58aed8b16">&#9670;&#160;</a></span>danio</h2>
@@ -123,7 +132,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00026">26</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
+<p>Cantidad de daño que se aplica al jugador al entrar en contacto. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00036">36</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
 
 </div>
 </div>
@@ -139,7 +150,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00017">17</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
+<p>Distancia máxima que el pájaro recorre en una dirección antes de cambiar. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00024">24</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
 
 </div>
 </div>
@@ -155,7 +168,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00020">20</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
+<p>Tiempo de espera antes de invertir la dirección del vuelo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00030">30</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
 
 </div>
 </div>
@@ -171,12 +186,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00014">14</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
+<p>Velocidad de movimiento del pájaro. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pajaro_enemigo_8cs_source.html#l00019">19</a> of file <a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_pajaro_enemigo_8cs_source.html">PajaroEnemigo.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

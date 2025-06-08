@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
-   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
-   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie.</div>
+   <div id="projectbrief">Videojuego educativo de aventura y trivia desarrollado en Unity sobre la coma para separar elementos de una serie..</div>
   </td>
  </tr>
  </tbody>
@@ -93,6 +93,9 @@ $(function(){initNavTree('class_texto_con_comas_t_m_p.html','',''); });
   <div class="headertitle"><div class="title">TextoConComasTMP Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controla la verificación de comas colocadas correctamente en un texto usando espacios válidos.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for TextoConComasTMP:</div>
 <div class="dyncontent">
@@ -103,24 +106,34 @@ Inheritance diagram for TextoConComasTMP:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a03bdd64d982783231d31487b52dac021" id="r_a03bdd64d982783231d31487b52dac021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03bdd64d982783231d31487b52dac021">VerificarComas</a> ()</td></tr>
+<tr class="memdesc:a03bdd64d982783231d31487b52dac021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si las comas han sido colocadas correctamente en los espacios válidos.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ad85e04ae670f2176fd58897e31ae2d56" id="r_ad85e04ae670f2176fd58897e31ae2d56"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85e04ae670f2176fd58897e31ae2d56">textoTMP</a></td></tr>
+<tr class="memdesc:ad85e04ae670f2176fd58897e31ae2d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente TextMeshProUGUI que contiene el texto con espacios para colocar comas.  <br /></td></tr>
 <tr class="memitem:a862ae23b6eba3c78f3e82d78ce4588c8" id="r_a862ae23b6eba3c78f3e82d78ce4588c8"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a862ae23b6eba3c78f3e82d78ce4588c8">textoRetroalimentacion</a></td></tr>
+<tr class="memdesc:a862ae23b6eba3c78f3e82d78ce4588c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que muestra la retroalimentación sobre el resultado de la verificación.  <br /></td></tr>
 <tr class="memitem:a15c2d189fa3d55505bb060b7e25d09c1" id="r_a15c2d189fa3d55505bb060b7e25d09c1"><td class="memItemLeft" align="right" valign="top">RectTransform[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15c2d189fa3d55505bb060b7e25d09c1">espaciosValidos</a></td></tr>
+<tr class="memdesc:a15c2d189fa3d55505bb060b7e25d09c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo de RectTransforms que representan las posiciones válidas donde deben ir las comas.  <br /></td></tr>
 <tr class="memitem:ac6fb08d62dd712581a35eb2edf2973b1" id="r_ac6fb08d62dd712581a35eb2edf2973b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_paneles1.html">Paneles1</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6fb08d62dd712581a35eb2edf2973b1">Paneles1</a></td></tr>
+<tr class="memdesc:ac6fb08d62dd712581a35eb2edf2973b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al controlador de paneles encargado de avanzar entre preguntas o escenas.  <br /></td></tr>
 <tr class="memitem:ac9173116d2b94f311b34552bd4aeea11" id="r_ac9173116d2b94f311b34552bd4aeea11"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9173116d2b94f311b34552bd4aeea11">sonidoBoton</a></td></tr>
+<tr class="memdesc:ac9173116d2b94f311b34552bd4aeea11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip de sonido que se reproduce al verificar las comas.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00005">5</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<div class="textblock"><p>Controla la verificación de comas colocadas correctamente en un texto usando espacios válidos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00008">8</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a03bdd64d982783231d31487b52dac021" name="a03bdd64d982783231d31487b52dac021"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03bdd64d982783231d31487b52dac021">&#9670;&#160;</a></span>VerificarComas()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void TextoConComasTMP.VerificarComas </td>
@@ -129,75 +142,17 @@ Data Fields</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00037">37</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="comment">// Reproducimos el sonido al verificar</span></div>
-<div class="line"><span class="lineno">   40</span>        AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="#ac9173116d2b94f311b34552bd4aeea11">sonidoBoton</a>);</div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>        <span class="comment">// Contador de espacios donde se haya detectado una coma correctamente posicionada</span></div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> espaciosOcupados = 0;</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        <span class="comment">// Buscamos todos los objetos que tengan el componente ComaDrag (las comas que se arrastran)</span></div>
-<div class="line"><span class="lineno">   46</span>        ComaDrag[] todasLasComas = FindObjectsOfType&lt;ComaDrag&gt;();</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="comment">// Recorremos cada espacio válido para verificar si alguna coma está suficientemente cerca</span></div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">foreach</span> (var espacio <span class="keywordflow">in</span> <a class="code hl_variable" href="#a15c2d189fa3d55505bb060b7e25d09c1">espaciosValidos</a>)</div>
-<div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">foreach</span> (var coma <span class="keywordflow">in</span> todasLasComas)</div>
-<div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="comment">// Si la distancia entre la coma y el espacio es menor a 0.1 unidades, consideramos que la coma está en el lugar correcto</span></div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">if</span> (Vector3.Distance(coma.transform.position, espacio.position) &lt; 0.1f)</div>
-<div class="line"><span class="lineno">   55</span>                {</div>
-<div class="line"><span class="lineno">   56</span>                    espaciosOcupados++;</div>
-<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">break</span>;  <span class="comment">// Salimos del loop para la siguiente posición válida, porque ya encontramos una coma aquí</span></div>
-<div class="line"><span class="lineno">   58</span>                }</div>
-<div class="line"><span class="lineno">   59</span>            }</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// Si el texto de retroalimentación está asignado, lo mostramos</span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a862ae23b6eba3c78f3e82d78ce4588c8">textoRetroalimentacion</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="#a862ae23b6eba3c78f3e82d78ce4588c8">textoRetroalimentacion</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>        <span class="comment">// Verificamos si el número de comas colocadas coincide con la cantidad de espacios válidos</span></div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (espaciosOcupados == <a class="code hl_variable" href="#a15c2d189fa3d55505bb060b7e25d09c1">espaciosValidos</a>.Length)</div>
-<div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <span class="comment">// Mensaje en consola para debug (puedes eliminarlo si quieres)</span></div>
-<div class="line"><span class="lineno">   70</span>            Debug.Log(<span class="stringliteral">&quot;¡Comas correctamente colocadas!&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            <span class="comment">// Actualizamos el texto para mostrarlo con las comas correctas ya colocadas</span></div>
-<div class="line"><span class="lineno">   73</span>            textoTMP.text = <span class="stringliteral">&quot;Compré plátano, manzana, uvas, peras y pan.&quot;</span>;</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>            <span class="comment">// Mostramos retroalimentación positiva</span></div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a862ae23b6eba3c78f3e82d78ce4588c8">textoRetroalimentacion</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   77</span>                textoRetroalimentacion.text = <span class="stringliteral">&quot;¡Muy bien! Has colocado correctamente las comas.&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>            <span class="comment">// Incrementamos puntaje de respuestas correctas</span></div>
-<div class="line"><span class="lineno">   80</span>            IncrementarPuntajeIntermedioCorrecto();</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="comment">// Si no están todas las comas bien colocadas, mostramos retroalimentación negativa</span></div>
-<div class="line"><span class="lineno">   85</span>            textoRetroalimentacion.text = <span class="stringliteral">&quot;Incorrecto. No has colocado todas las comas correctamente.&quot;</span>;</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>            <span class="comment">// Incrementamos puntaje de respuestas incorrectas</span></div>
-<div class="line"><span class="lineno">   88</span>            IncrementarPuntajeIntermedioIncorrecto();</div>
-<div class="line"><span class="lineno">   89</span>        }</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>        <span class="comment">// Eliminamos todas las comas (objetos ComaDrag) de la escena para evitar que queden tras la verificación</span></div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">foreach</span> (var coma <span class="keywordflow">in</span> todasLasComas)</div>
-<div class="line"><span class="lineno">   93</span>        {</div>
-<div class="line"><span class="lineno">   94</span>            Destroy(coma.gameObject);</div>
-<div class="line"><span class="lineno">   95</span>        }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>        <span class="comment">// Llamamos para pasar a la siguiente pregunta o escena después de 2 segundos</span></div>
-<div class="line"><span class="lineno">   98</span>        Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="ttc" id="aclass_texto_con_comas_t_m_p_html_a15c2d189fa3d55505bb060b7e25d09c1"><div class="ttname"><a href="#a15c2d189fa3d55505bb060b7e25d09c1">TextoConComasTMP.espaciosValidos</a></div><div class="ttdeci">RectTransform[] espaciosValidos</div><div class="ttdef"><b>Definition</b> <a href="_trivia5_8cs_source.html#l00014">Trivia5.cs:14</a></div></div>
-<div class="ttc" id="aclass_texto_con_comas_t_m_p_html_a862ae23b6eba3c78f3e82d78ce4588c8"><div class="ttname"><a href="#a862ae23b6eba3c78f3e82d78ce4588c8">TextoConComasTMP.textoRetroalimentacion</a></div><div class="ttdeci">TextMeshProUGUI textoRetroalimentacion</div><div class="ttdef"><b>Definition</b> <a href="_trivia5_8cs_source.html#l00011">Trivia5.cs:11</a></div></div>
-<div class="ttc" id="aclass_texto_con_comas_t_m_p_html_ac9173116d2b94f311b34552bd4aeea11"><div class="ttname"><a href="#ac9173116d2b94f311b34552bd4aeea11">TextoConComasTMP.sonidoBoton</a></div><div class="ttdeci">AudioClip sonidoBoton</div><div class="ttdef"><b>Definition</b> <a href="_trivia5_8cs_source.html#l00020">Trivia5.cs:20</a></div></div>
-</div><!-- fragment -->
+<p>Verifica si las comas han sido colocadas correctamente en los espacios válidos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00048">48</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
@@ -213,7 +168,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00014">14</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<p>Arreglo de RectTransforms que representan las posiciones válidas donde deben ir las comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00023">23</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 
 </div>
 </div>
@@ -229,7 +186,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00017">17</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<p>Referencia al controlador de paneles encargado de avanzar entre preguntas o escenas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00028">28</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 
 </div>
 </div>
@@ -245,7 +204,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00020">20</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<p>Clip de sonido que se reproduce al verificar las comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00033">33</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 
 </div>
 </div>
@@ -261,7 +222,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00011">11</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<p>Texto que muestra la retroalimentación sobre el resultado de la verificación. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00018">18</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 
 </div>
 </div>
@@ -277,12 +240,14 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00008">8</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
+<p>Componente TextMeshProUGUI que contiene el texto con espacios para colocar comas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_trivia5_8cs_source.html#l00013">13</a> of file <a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Script/<a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a></li>
+<li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_trivia5_8cs_source.html">Trivia5.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
