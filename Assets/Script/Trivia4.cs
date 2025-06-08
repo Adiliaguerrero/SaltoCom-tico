@@ -45,20 +45,15 @@ public class OpcionUnica2 : MonoBehaviour
 
     void Start()
     {
-        // Asignamos el texto de la pregunta al componente correspondiente
         preguntaTexto.text = pregunta;
 
-        // Limpiamos el texto de retroalimentación para que empiece vacío
         retroalimentacionTexto.text = "";
 
-        // Recorremos todos los botones para asignarles el texto de las opciones correspondientes
         for (int i = 0; i < botonesOpciones.Length; i++)
         {
-            // Obtenemos el componente TextMeshProUGUI que está dentro del botón
             TextMeshProUGUI textoBoton = botonesOpciones[i].GetComponentInChildren<TextMeshProUGUI>();
             if (textoBoton != null)
             {
-                // Asignamos el texto de la opción correspondiente
                 textoBoton.text = opciones[i];
             }
         }
@@ -87,47 +82,38 @@ public class OpcionUnica2 : MonoBehaviour
 
     void VerificarRespuesta(int indiceSeleccionado)
     {
-        // Reproducimos el sonido al pulsar el botón
         AudioManager.instancia.ReproducirSonido(sonidoBoton);
 
-        // Comparamos el índice seleccionado con el índice de la respuesta correcta
         if (indiceSeleccionado == indiceRespuestaCorrecta)
         {
-            // Si es correcto, mostramos mensaje y aumentamos puntaje correcto
             retroalimentacionTexto.text = "¡Correcto!";
             IncrementarPuntajeIntermedioCorrecto();
         }
         else
         {
-            // Si es incorrecto, mostramos mensaje y aumentamos puntaje incorrecto
             retroalimentacionTexto.text = "Incorrecto.";
             IncrementarPuntajeIntermedioIncorrecto();
         }
 
-        // Deshabilitamos la interacción de todos los botones para evitar múltiples respuestas
         foreach (Button b in botonesOpciones)
         {
             b.interactable = false;
         }
 
-        // Llamamos para pasar a la siguiente pregunta o escena después de 2 segundos
         Invoke("PasarASiguienteTrivia", 2f);
     }
 
-    // Método para avanzar a la siguiente trivia usando el controlador Paneles1
     void PasarASiguienteTrivia()
     {
         Paneles1.SiguienteTrivia();
     }
 
-    // Incrementa el contador de respuestas correctas en PlayerPrefs (guardado persistente)
     void IncrementarPuntajeIntermedioCorrecto()
     {
         int puntajeCorrectoIntermedio = PlayerPrefs.GetInt("PuntajeCorrectoIntermedio", 0);
         PlayerPrefs.SetInt("PuntajeCorrectoIntermedio", ++puntajeCorrectoIntermedio);
     }
 
-    // Incrementa el contador de respuestas incorrectas en PlayerPrefs
     void IncrementarPuntajeIntermedioIncorrecto()
     {
         int puntajeIncorrectoIntermedio = PlayerPrefs.GetInt("PuntajeIncorrectoIntermedio", 0);
