@@ -60,7 +60,6 @@ public class SelectorPersonaje : MonoBehaviour
     {
         ReproducirSonidoBoton();
 
-        // Incrementa el índice y lo mantiene dentro del rango del array
         indicePersonaje = (indicePersonaje + 1) % personajes.Length;
 
         CambiarPersonaje();
@@ -73,7 +72,6 @@ public class SelectorPersonaje : MonoBehaviour
     {
         ReproducirSonidoBoton();
 
-        // Decrementa el índice, asegurando que sea positivo y dentro del rango
         indicePersonaje = (indicePersonaje - 1 + personajes.Length) % personajes.Length;
 
         CambiarPersonaje();
