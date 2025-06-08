@@ -13,7 +13,11 @@ public class RotarCuchilla : MonoBehaviour
         /// </summary>
     public float velocidadRotacion = 180f;
 
-    // Método llamado una vez por frame
+    
+    /// <summary>
+    /// Se ejecuta una vez por fotograma.
+    /// Rota el objeto en el eje Z, de forma suave y constante, independiente del frame rate.
+    /// </summary>
     void Update()
     {
         // Rotamos el objeto alrededor del eje Z
