@@ -96,7 +96,10 @@ public class UnirFrasesInteractivo : MonoBehaviour
         }
     }
 
-    // Método público que inicia el arrastre cuando se presiona un texto (desde UI)
+    /// <summary>
+    /// Inicia el arrastre visual desde un texto.
+    /// </summary>
+    /// <param name="textoGO">El objeto de texto desde el cual comienza el arrastre.</param>
     public void IniciarArrastreDesdeTexto(GameObject textoGO)
     {
         // Si ya se unió una frase correctamente o si ya está arrastrando, no hacer nada
