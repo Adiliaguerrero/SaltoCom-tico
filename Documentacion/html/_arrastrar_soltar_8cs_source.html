@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/ArrastrarSoltar.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -100,34 +100,36 @@ $(function(){initNavTree('_arrastrar_soltar_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_coma_drag.html">    8</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_coma_drag.html">ComaDrag</a> : MonoBehaviour, IDragHandler, IEndDragHandler</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span> RectTransform rectTransform;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_coma_drag.html#ab390fe78f7549110e86d24ec9d4cc2c2">   13</a></span>    <span class="keyword">private</span> RectTransform <a class="code hl_variable" href="class_coma_drag.html#ab390fe78f7549110e86d24ec9d4cc2c2">rectTransform</a>;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">private</span> CanvasGroup canvasGroup;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_coma_drag.html#ac946a6c613ebef06f821cf7e05b64aa3">   18</a></span>    <span class="keyword">private</span> CanvasGroup <a class="code hl_variable" href="class_coma_drag.html#ac946a6c613ebef06f821cf7e05b64aa3">canvasGroup</a>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> Vector3 originalPosition;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">   23</a></span>    <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">originalPosition</a>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> yaClonada = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_coma_drag.html#ac823516f681677b3d810e2decb004eb3">   28</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_coma_drag.html#ac823516f681677b3d810e2decb004eb3">yaClonada</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_coma_drag.html#a670d7540186e07ca8ffc79203872af28">   33</a></span>    <span class="keyword">public</span> RectTransform[] <a class="code hl_variable" href="class_coma_drag.html#a670d7540186e07ca8ffc79203872af28">dropAreas</a>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">   38</a></span>    <span class="keyword">public</span> Transform <a class="code hl_variable" href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Método Start se ejecuta una vez al comenzar la escena o al activarse el objeto</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_coma_drag.html#af70802dcf901b5157f553fcf970653e1">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_coma_drag.html#af70802dcf901b5157f553fcf970653e1">Start</a>()</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// Se obtiene el componente RectTransform del objeto actual</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        rectTransform = GetComponent&lt;RectTransform&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="class_coma_drag.html#ab390fe78f7549110e86d24ec9d4cc2c2">rectTransform</a> = GetComponent&lt;RectTransform&gt;();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// Se obtiene el CanvasGroup para controlar si bloquea raycasts (clics)</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        canvasGroup = GetComponent&lt;CanvasGroup&gt;();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="class_coma_drag.html#ac946a6c613ebef06f821cf7e05b64aa3">canvasGroup</a> = GetComponent&lt;CanvasGroup&gt;();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// Guarda la posición original del objeto para poder volver si no se suelta la coma en una area valida</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        originalPosition = transform.position;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">originalPosition</a> = transform.position;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a> == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a> = transform.parent;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
 <div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
@@ -156,11 +158,11 @@ $(function(){initNavTree('_arrastrar_soltar_8cs_source.html','',''); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                colocado = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span> (!yaClonada)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_coma_drag.html#ac823516f681677b3d810e2decb004eb3">yaClonada</a>)</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    GameObject clon = Instantiate(gameObject, <a class="code hl_variable" href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">padreContenedor</a>);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    clon.transform.position = originalPosition;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    clon.transform.position = <a class="code hl_variable" href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">originalPosition</a>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    clon.transform.localScale = Vector3.one;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
@@ -168,7 +170,7 @@ $(function(){initNavTree('_arrastrar_soltar_8cs_source.html','',''); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    clonScript.originalPosition = clon.transform.position; <span class="comment">// Actualiza su nueva posición original</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    clonScript.yaClonada = <span class="keyword">false</span>; <span class="comment">// Permite que el nuevo clon pueda ser clonado también</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    yaClonada = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    <a class="code hl_variable" href="class_coma_drag.html#ac823516f681677b3d810e2decb004eb3">yaClonada</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keywordflow">break</span>;</div>
@@ -177,7 +179,7 @@ $(function(){initNavTree('_arrastrar_soltar_8cs_source.html','',''); });
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">if</span> (!colocado)</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            rectTransform.position = originalPosition;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            rectTransform.position = <a class="code hl_variable" href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">originalPosition</a>;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
 </div>
@@ -187,7 +189,12 @@ $(function(){initNavTree('_arrastrar_soltar_8cs_source.html','',''); });
 <div class="ttc" id="aclass_coma_drag_html_a34a81acdb61fda66dcd45b3e171efaec"><div class="ttname"><a href="class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec">ComaDrag.padreContenedor</a></div><div class="ttdeci">Transform padreContenedor</div><div class="ttdoc">Contenedor que servira como obejto padre donde se instanciarán o crearan mas comas.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">ArrastrarSoltar.cs:38</a></div></div>
 <div class="ttc" id="aclass_coma_drag_html_a670d7540186e07ca8ffc79203872af28"><div class="ttname"><a href="class_coma_drag.html#a670d7540186e07ca8ffc79203872af28">ComaDrag.dropAreas</a></div><div class="ttdeci">RectTransform[] dropAreas</div><div class="ttdoc">Áreas o zonas válidas donde las comas podran ser soltadas correc3ctamente.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">ArrastrarSoltar.cs:33</a></div></div>
 <div class="ttc" id="aclass_coma_drag_html_a82610b6ac5e1e277bb71835e20d5e652"><div class="ttname"><a href="class_coma_drag.html#a82610b6ac5e1e277bb71835e20d5e652">ComaDrag.OnEndDrag</a></div><div class="ttdeci">void OnEndDrag(PointerEventData eventData)</div><div class="ttdoc">Se ejecuta al soltar el objeto. Verifica si fue colocado en una zona válida y, si es así,...</div><div class="ttdef"><b>Definition</b> <a href="#l00080">ArrastrarSoltar.cs:80</a></div></div>
+<div class="ttc" id="aclass_coma_drag_html_a8892cb527e65a4444d78256f783ec959"><div class="ttname"><a href="class_coma_drag.html#a8892cb527e65a4444d78256f783ec959">ComaDrag.originalPosition</a></div><div class="ttdeci">Vector3 originalPosition</div><div class="ttdoc">Posición inicial del objeto coma, para restaurarla si no se coloca correctamente.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ArrastrarSoltar.cs:23</a></div></div>
+<div class="ttc" id="aclass_coma_drag_html_ab390fe78f7549110e86d24ec9d4cc2c2"><div class="ttname"><a href="class_coma_drag.html#ab390fe78f7549110e86d24ec9d4cc2c2">ComaDrag.rectTransform</a></div><div class="ttdeci">RectTransform rectTransform</div><div class="ttdoc">Referencia al componente RectTransform del objeto actual.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ArrastrarSoltar.cs:13</a></div></div>
+<div class="ttc" id="aclass_coma_drag_html_ac823516f681677b3d810e2decb004eb3"><div class="ttname"><a href="class_coma_drag.html#ac823516f681677b3d810e2decb004eb3">ComaDrag.yaClonada</a></div><div class="ttdeci">bool yaClonada</div><div class="ttdoc">Evita que el objeto se clone más de una vez al ser soltado.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">ArrastrarSoltar.cs:28</a></div></div>
+<div class="ttc" id="aclass_coma_drag_html_ac946a6c613ebef06f821cf7e05b64aa3"><div class="ttname"><a href="class_coma_drag.html#ac946a6c613ebef06f821cf7e05b64aa3">ComaDrag.canvasGroup</a></div><div class="ttdeci">CanvasGroup canvasGroup</div><div class="ttdoc">Componente que controla si el objeto bloquea interacciones de clic mientras se arrastra.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ArrastrarSoltar.cs:18</a></div></div>
 <div class="ttc" id="aclass_coma_drag_html_acc2bd41e568f778a5e5bbbf8781a7096"><div class="ttname"><a href="class_coma_drag.html#acc2bd41e568f778a5e5bbbf8781a7096">ComaDrag.OnDrag</a></div><div class="ttdeci">void OnDrag(PointerEventData eventData)</div><div class="ttdoc">Mueve el objeto siguiendo el puntero mientras se arrastra.</div><div class="ttdef"><b>Definition</b> <a href="#l00066">ArrastrarSoltar.cs:66</a></div></div>
+<div class="ttc" id="aclass_coma_drag_html_af70802dcf901b5157f553fcf970653e1"><div class="ttname"><a href="class_coma_drag.html#af70802dcf901b5157f553fcf970653e1">ComaDrag.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Inicializa referencias necesarias y guarda la posición original del objeto.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">ArrastrarSoltar.cs:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -1,9 +1,20 @@
 var searchData=
 [
-  ['activardialogo_0',['ActivarDialogo',['../class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0',1,'SistemaDialogo']]],
-  ['activargameover_1',['ActivarGameOver',['../class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48',1,'BarraVida']]],
-  ['actualizarbarra_2',['ActualizarBarra',['../class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6',1,'BarraVida']]],
-  ['actualizarpuntajes_3',['ActualizarPuntajes',['../class_puntos_manager.html#a858e875328e084f4db16111b7bd530a1',1,'PuntosManager']]],
-  ['alternarmusica_4',['AlternarMusica',['../class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b',1,'MusicaManager']]],
-  ['anteriorpersonaje_5',['AnteriorPersonaje',['../class_selector_personaje.html#afc303c94dd5b485a296d8f34b29beb52',1,'SelectorPersonaje']]]
+  ['abrirconfiguracion_0',['AbrirConfiguracion',['../class_configuracion_u_i.html#a56f16e89b5b197663a2b29b341d7751a',1,'ConfiguracionUI']]],
+  ['abrircreditos_1',['AbrirCreditos',['../class_configuracion_u_i.html#a7db7fce20afdeb7cd9df73674d92f190',1,'ConfiguracionUI']]],
+  ['activardialogo_2',['ActivarDialogo',['../class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0',1,'SistemaDialogo']]],
+  ['activargameover_3',['ActivarGameOver',['../class_barra_vida.html#a11dbbd3b3cf2d658adcf23fce71a3d48',1,'BarraVida']]],
+  ['activarpanel_4',['ActivarPanel',['../class_paneles1.html#a797e034aea32a4f6b3a1c91feb1da45e',1,'Paneles1']]],
+  ['actualizarbarra_5',['ActualizarBarra',['../class_barra_vida.html#a0703d20e309ee43765aa88dd03c0b7e6',1,'BarraVida']]],
+  ['actualizarpuntajes_6',['ActualizarPuntajes',['../class_puntos_manager.html#a858e875328e084f4db16111b7bd530a1',1,'PuntosManager']]],
+  ['actualizarreferencias_7',['ActualizarReferencias',['../class_puntos_manager.html#ae1eb63f253f648ff486d2dc001512cd5',1,'PuntosManager']]],
+  ['alternarmusica_8',['AlternarMusica',['../class_musica_manager.html#a4dbd5693f39d33414f05cc74ff8a183b',1,'MusicaManager']]],
+  ['animarmovimiento_9',['AnimarMovimiento',['../class_instrucciones_visuales.html#a58b87be697010c6a05d4bd8fdab26528',1,'InstruccionesVisuales']]],
+  ['animarpuntos_10',['AnimarPuntos',['../class_pantalla_dialogo.html#ace6979983e9b7cbd057934513cefeefc',1,'PantallaDialogo']]],
+  ['animartoque_11',['AnimarToque',['../class_instrucciones_visuales.html#a7ce5594c649be837d5b036cd52bac9f4',1,'InstruccionesVisuales']]],
+  ['anteriorpersonaje_12',['AnteriorPersonaje',['../class_selector_personaje.html#afc303c94dd5b485a296d8f34b29beb52',1,'SelectorPersonaje']]],
+  ['aplicarestadomusica_13',['AplicarEstadoMusica',['../class_musica_manager.html#a03fd96a5eb7ff1703f7bb205df576d94',1,'MusicaManager']]],
+  ['atacarjugador_14',['AtacarJugador',['../class_enemigo.html#a1f348cd898efd7cc9eb0156403ffebc2',1,'Enemigo.AtacarJugador()'],['../class_ninja.html#a392b11be8db38c1540cf27d4a415756e',1,'Ninja.AtacarJugador()']]],
+  ['awake_15',['Awake',['../class_boton_clip_control.html#a1266993d1de99774d4b86752e3daa71d',1,'BotonClipControl.Awake()'],['../class_audio_manager.html#a631d7d42b921bcbd82bd1baec2ec3ea7',1,'AudioManager.Awake()'],['../class_boton_musica.html#aa420ea6b1c0ca151bcded668ffc75ea9',1,'BotonMusica.Awake()'],['../class_musica_manager.html#a2b60f9427a1a80b3ebb14c9501d8ee88',1,'MusicaManager.Awake()'],['../class_puntos_manager.html#a1b47efd0b538c11d30b079e02abdcdf5',1,'PuntosManager.Awake()']]],
+  ['axischanged_16',['AxisChanged',['../class_joystick_setter_example.html#ad17ffb07b9e8b400b127b703e34ff625',1,'JoystickSetterExample']]]
 ];

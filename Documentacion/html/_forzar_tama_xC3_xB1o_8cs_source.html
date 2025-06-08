@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/ForzarTamaño.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -104,16 +104,19 @@ $(function(){initNavTree('_forzar_tama_xC3_xB1o_8cs_source.html','',''); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> LateUpdate()</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_forzar_escala.html#a057859e49de05bf7f64167894c41cc81">   34</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forzar_escala.html#a057859e49de05bf7f64167894c41cc81">LateUpdate</a>()</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">float</span> direccion = transform.localScale.x &gt;= 0 ? 1 : -1;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        transform.localScale = <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.x * direccion, <a class="code hl_variable" href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a>.y, 1f);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 </div>
 <div class="ttc" id="aclass_forzar_escala_html"><div class="ttname"><a href="class_forzar_escala.html">ForzarEscala</a></div><div class="ttdoc">Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda...</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ForzarTamaño.cs:15</a></div></div>
 <div class="ttc" id="aclass_forzar_escala_html_a02cca4bdb149539ddfa7bdee72ce2cff"><div class="ttname"><a href="class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff">ForzarEscala.escalaCorrecta</a></div><div class="ttdeci">Vector2 escalaCorrecta</div><div class="ttdoc">Escala correcta que debe aplicarse al objeto en los ejes X e Y.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ForzarTamaño.cs:23</a></div></div>
+<div class="ttc" id="aclass_forzar_escala_html_a057859e49de05bf7f64167894c41cc81"><div class="ttname"><a href="class_forzar_escala.html#a057859e49de05bf7f64167894c41cc81">ForzarEscala.LateUpdate</a></div><div class="ttdeci">void LateUpdate()</div><div class="ttdoc">Se llama automáticamente después de todos los métodos Update. Aplica la escala fija y ajusta la orien...</div><div class="ttdef"><b>Definition</b> <a href="#l00034">ForzarTamaño.cs:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

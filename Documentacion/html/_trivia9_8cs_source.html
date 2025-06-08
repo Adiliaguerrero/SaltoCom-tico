@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/Trivia9.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -116,109 +116,118 @@ $(function(){initNavTree('_trivia9_8cs_source.html','',''); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">   46</a></span>    <span class="keyword">public</span> Transform[] <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span> TMP_Text origenSeleccionado = <span class="keyword">null</span>;   </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span> TMP_Text destinoSeleccionado = <span class="keyword">null</span>;  </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> arrastrando = <span class="keyword">false</span>;              </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> yaUnido = <span class="keyword">false</span>;                  </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> Vector3 puntoInicio;                   </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">   48</a></span>    <span class="keyword">private</span> TMP_Text <a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a> = <span class="keyword">null</span>;   </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">   49</a></span>    <span class="keyword">private</span> TMP_Text <a class="code hl_variable" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">destinoSeleccionado</a> = <span class="keyword">null</span>;  </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">   50</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">arrastrando</a> = <span class="keyword">false</span>;              </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e">   51</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e">yaUnido</a> = <span class="keyword">false</span>;                  </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">   52</a></span>    <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a>;                   </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">private</span> <span class="keywordtype">string</span> fraseSinComas = <span class="stringliteral">&quot;Mi papá compró plátano manzana uvas peras y pan&quot;</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">private</span> <span class="keywordtype">string</span>[] opcionesConComas = <span class="keyword">new</span> <span class="keywordtype">string</span>[] {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986">   54</a></span>    <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986">fraseSinComas</a> = <span class="stringliteral">&quot;Mi papá compró plátano manzana uvas peras y pan&quot;</span>;</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a604d37deed43dc471b1314a3352ca261">   55</a></span>    <span class="keyword">private</span> <span class="keywordtype">string</span>[] <a class="code hl_variable" href="class_unir_frases_interactivo.html#a604d37deed43dc471b1314a3352ca261">opcionesConComas</a> = <span class="keyword">new</span> <span class="keywordtype">string</span>[] {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;Mi papá compró plátano, manzana, uvas, peras y pan&quot;</span>,</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="stringliteral">&quot;Mi papá compró plátano manzana uvas, peras y pan&quot;</span>,</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="stringliteral">&quot;Mi papá compró plátano, manzana uvas peras, y pan&quot;</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> indiceCorrecto = 0;</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de">   60</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de">indiceCorrecto</a> = 0;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aa7c897966f5709e465fa8316128aa324">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#aa7c897966f5709e465fa8316128aa324">Start</a>()</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        textoIzquierdo.text = fraseSinComas;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        textoIzquierdo.text = <a class="code hl_variable" href="class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986">fraseSinComas</a>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>.Length; i++)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i].text = opcionesConComas[i];</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i].text = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a604d37deed43dc471b1314a3352ca261">opcionesConComas</a>[i];</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        imagenLinea.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        textoResultado.text = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> Update()</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aef08094cd6563b8dea37b99248531287">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#aef08094cd6563b8dea37b99248531287">Update</a>()</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (arrastrando)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">arrastrando</a>)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            DibujarLinea(puntoInicio, Input.mousePosition);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_function" href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">DibujarLinea</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a>, Input.mousePosition);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (Input.GetMouseButtonUp(0))</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                DetectarDestino();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <a class="code hl_function" href="class_unir_frases_interactivo.html#ace0fb6405474f680be4e9d5e589ebcfe">DetectarDestino</a>();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
 <div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#ac545fc01d7faea567f1b4ff3d85274b0">   93</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#ac545fc01d7faea567f1b4ff3d85274b0">IniciarArrastreDesdeTexto</a>(GameObject textoGO)</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (yaUnido || arrastrando) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e">yaUnido</a> || <a class="code hl_variable" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">arrastrando</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        origenSeleccionado = textoGO.GetComponent&lt;TMP_Text&gt;();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a> = textoGO.GetComponent&lt;TMP_Text&gt;();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (origenSeleccionado == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a> &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a> == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a> &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            puntoInicio = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a>.position;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a> = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a>.position;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>.Length; i++)</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keywordflow">if</span> (origenSeleccionado == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i] &amp;&amp; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>.Length &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i] != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a> == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i] &amp;&amp; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>.Length &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i] != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    puntoInicio = <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i].position;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                    <a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a> = <a class="code hl_variable" href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">puntosDerechos</a>[i].position;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                }</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    puntoInicio = ObtenerCentro(origenSeleccionado.rectTransform);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    <a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a> = <a class="code hl_function" href="class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd">ObtenerCentro</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a>.rectTransform);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        arrastrando = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <a class="code hl_variable" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">arrastrando</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        imagenLinea.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
 </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> DetectarDestino()</div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#ace0fb6405474f680be4e9d5e589ebcfe">  122</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#ace0fb6405474f680be4e9d5e589ebcfe">DetectarDestino</a>()</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        arrastrando = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_variable" href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">arrastrando</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        TMP_Text posibleDestino = DetectarTextoDebajoDelMouse();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        TMP_Text posibleDestino = <a class="code hl_function" href="class_unir_frases_interactivo.html#ab6b07a49b01a7734a988d7468ff6df98">DetectarTextoDebajoDelMouse</a>();</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (posibleDestino != <span class="keyword">null</span> &amp;&amp; posibleDestino != origenSeleccionado)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (posibleDestino != <span class="keyword">null</span> &amp;&amp; posibleDestino != <a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a>)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            destinoSeleccionado = posibleDestino;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <a class="code hl_variable" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">destinoSeleccionado</a> = posibleDestino;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            Vector3 puntoFin = ObtenerPuntoDeDestino(destinoSeleccionado);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            Vector3 puntoFin = <a class="code hl_function" href="class_unir_frases_interactivo.html#aff1d4da57e3ea495cb9575cd8382ba78">ObtenerPuntoDeDestino</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">destinoSeleccionado</a>);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            DibujarLinea(puntoInicio, puntoFin);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <a class="code hl_function" href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">DibujarLinea</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a>, puntoFin);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            VerificarRespuesta(destinoSeleccionado);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_function" href="class_unir_frases_interactivo.html#a387332e602c32fe0f0fdeb3039b6fab3">VerificarRespuesta</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">destinoSeleccionado</a>);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">if</span> (destinoSeleccionado == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a> &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">destinoSeleccionado</a> == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a> &amp;&amp; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                Vector3 nuevoDestinoVisual = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">puntoInicioManual</a>.position;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                DibujarLinea(puntoInicio, nuevoDestinoVisual);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <a class="code hl_function" href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">DibujarLinea</a>(<a class="code hl_variable" href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">puntoInicio</a>, nuevoDestinoVisual);</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            yaUnido = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <a class="code hl_variable" href="class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e">yaUnido</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        {</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            imagenLinea.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    TMP_Text DetectarTextoDebajoDelMouse()</div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#ab6b07a49b01a7734a988d7468ff6df98">  152</a></span>    TMP_Text <a class="code hl_function" href="class_unir_frases_interactivo.html#ab6b07a49b01a7734a988d7468ff6df98">DetectarTextoDebajoDelMouse</a>()</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        PointerEventData data = <span class="keyword">new</span> PointerEventData(EventSystem.current) { position = Input.mousePosition };</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
@@ -235,24 +244,26 @@ $(function(){initNavTree('_trivia9_8cs_source.html','',''); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">void</span> VerificarRespuesta(TMP_Text destino)</div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a387332e602c32fe0f0fdeb3039b6fab3">  170</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#a387332e602c32fe0f0fdeb3039b6fab3">VerificarRespuesta</a>(TMP_Text destino)</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    {</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>.Length; i++)</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        {</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="keywordflow">if</span> (destino == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[i])</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span> (i == indiceCorrecto)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de">indiceCorrecto</a>)</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    textoResultado.text = <span class="stringliteral">&quot;¡Correcto!&quot;</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    IncrementarPuntajeAvanzadoCorrecto();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    <a class="code hl_function" href="class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8">IncrementarPuntajeAvanzadoCorrecto</a>();</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                    Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                }</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                {</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    textoResultado.text = <span class="stringliteral">&quot;Incorrecto.&quot;</span>;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    IncrementarPuntajeAvanzadoIncorrecto();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    <a class="code hl_function" href="class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7">IncrementarPuntajeAvanzadoIncorrecto</a>();</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                    Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                }</div>
@@ -261,27 +272,31 @@ $(function(){initNavTree('_trivia9_8cs_source.html','',''); });
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (origenSeleccionado == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[indiceCorrecto] &amp;&amp; destino == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a>)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">origenSeleccionado</a> == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>[<a class="code hl_variable" href="class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de">indiceCorrecto</a>] &amp;&amp; destino == <a class="code hl_variable" href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">textoIzquierdo</a>)</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        {</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            textoResultado.text = <span class="stringliteral">&quot;¡Correcto!&quot;</span>;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            IncrementarPuntajeAvanzadoCorrecto();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <a class="code hl_function" href="class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8">IncrementarPuntajeAvanzadoCorrecto</a>();</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        }</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        {</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            textoResultado.text = <span class="stringliteral">&quot;Incorrecto.&quot;</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            IncrementarPuntajeAvanzadoIncorrecto();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <a class="code hl_function" href="class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7">IncrementarPuntajeAvanzadoIncorrecto</a>();</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            Invoke(<span class="stringliteral">&quot;PasarASiguienteTrivia&quot;</span>, 2f);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> PasarASiguienteTrivia()</div>
+<div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#ae0f1319eac4805d815ee628b3a0a35ee">  210</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#ae0f1319eac4805d815ee628b3a0a35ee">PasarASiguienteTrivia</a>()</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    {</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_variable" href="class_unir_frases_interactivo.html#a9db1e30ff5c57ed5b429c09847637c5a">Paneles1</a>.SiguienteTrivia();</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordtype">void</span> DibujarLinea(Vector3 inicio, Vector3 fin)</div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">  215</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">DibujarLinea</a>(Vector3 inicio, Vector3 fin)</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        Vector3 localInicio = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40">imagenLinea</a>.rectTransform.parent.InverseTransformPoint(inicio);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        Vector3 localFin = <a class="code hl_variable" href="class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40">imagenLinea</a>.rectTransform.parent.InverseTransformPoint(fin);</div>
@@ -295,15 +310,19 @@ $(function(){initNavTree('_trivia9_8cs_source.html','',''); });
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordtype">float</span> angulo = Mathf.Atan2(localFin.y - localInicio.y, localFin.x - localInicio.x) * Mathf.Rad2Deg;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        imagenLinea.rectTransform.localRotation = Quaternion.Euler(0, 0, angulo);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
+</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    Vector3 ObtenerCentro(RectTransform rect)</div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd">  230</a></span>    Vector3 <a class="code hl_function" href="class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd">ObtenerCentro</a>(RectTransform rect)</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        Vector3[] corners = <span class="keyword">new</span> Vector3[4]; </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        rect.GetWorldCorners(corners);     </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">return</span> (corners[0] + corners[1]) / 2f; </div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    Vector3 ObtenerPuntoDeDestino(TMP_Text destino)</div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#aff1d4da57e3ea495cb9575cd8382ba78">  237</a></span>    Vector3 <a class="code hl_function" href="class_unir_frases_interactivo.html#aff1d4da57e3ea495cb9575cd8382ba78">ObtenerPuntoDeDestino</a>(TMP_Text destino)</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    {</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">textosDerechos</a>.Length; i++)</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        {</div>
@@ -313,33 +332,57 @@ $(function(){initNavTree('_trivia9_8cs_source.html','',''); });
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">return</span> ObtenerCentro(destino.rectTransform);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd">ObtenerCentro</a>(destino.rectTransform);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordtype">void</span> IncrementarPuntajeAvanzadoCorrecto()</div>
+<div class="foldopen" id="foldopen00251" data-start="{" data-end="}">
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8">  251</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8">IncrementarPuntajeAvanzadoCorrecto</a>()</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordtype">int</span> puntaje = PlayerPrefs.GetInt(<span class="stringliteral">&quot;PuntajeCorrectoAvanzado&quot;</span>, 0); </div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;PuntajeCorrectoAvanzado&quot;</span>, ++puntaje);       </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>   </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">void</span> IncrementarPuntajeAvanzadoIncorrecto()</div>
+<div class="foldopen" id="foldopen00258" data-start="{" data-end="}">
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7">  258</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7">IncrementarPuntajeAvanzadoIncorrecto</a>()</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    {</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordtype">int</span> puntaje = PlayerPrefs.GetInt(<span class="stringliteral">&quot;PuntajeIncorrectoAvanzado&quot;</span>, 0); </div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;PuntajeIncorrectoAvanzado&quot;</span>, ++puntaje);      </div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
+</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}</div>
 </div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html"><div class="ttname"><a href="class_unir_frases_interactivo.html">UnirFrasesInteractivo</a></div><div class="ttdoc">Permite al usuario unir visualmente una oración sin comas con su versión correcta (con comas)....</div><div class="ttdef"><b>Definition</b> <a href="#l00011">Trivia9.cs:12</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a02b26fb7175e866f0d7eea93b7479637"><div class="ttname"><a href="class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637">UnirFrasesInteractivo.puntoInicioManual</a></div><div class="ttdeci">Transform puntoInicioManual</div><div class="ttdoc">Punto de inicio manual para la línea cuando se arrastra desde el texto izquierdo.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Trivia9.cs:41</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a141eb8c8638d2054518d9b41d3afbddd"><div class="ttname"><a href="class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd">UnirFrasesInteractivo.ObtenerCentro</a></div><div class="ttdeci">Vector3 ObtenerCentro(RectTransform rect)</div><div class="ttdef"><b>Definition</b> <a href="#l00230">Trivia9.cs:230</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a169715f926ac6c91306139383c324b05"><div class="ttname"><a href="class_unir_frases_interactivo.html#a169715f926ac6c91306139383c324b05">UnirFrasesInteractivo.textoResultado</a></div><div class="ttdeci">TMP_Text textoResultado</div><div class="ttdoc">Texto donde se muestra el resultado o retroalimentación al usuario.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Trivia9.cs:31</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a26f510ffd2a130c3153ccceb6c557ab8"><div class="ttname"><a href="class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8">UnirFrasesInteractivo.IncrementarPuntajeAvanzadoCorrecto</a></div><div class="ttdeci">void IncrementarPuntajeAvanzadoCorrecto()</div><div class="ttdef"><b>Definition</b> <a href="#l00251">Trivia9.cs:251</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a387332e602c32fe0f0fdeb3039b6fab3"><div class="ttname"><a href="class_unir_frases_interactivo.html#a387332e602c32fe0f0fdeb3039b6fab3">UnirFrasesInteractivo.VerificarRespuesta</a></div><div class="ttdeci">void VerificarRespuesta(TMP_Text destino)</div><div class="ttdef"><b>Definition</b> <a href="#l00170">Trivia9.cs:170</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a460d438856e5f595368937ec8a7a4c9e"><div class="ttname"><a href="class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e">UnirFrasesInteractivo.yaUnido</a></div><div class="ttdeci">bool yaUnido</div><div class="ttdef"><b>Definition</b> <a href="#l00051">Trivia9.cs:51</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a4d9d68184b7897982b913b3557f0ee61"><div class="ttname"><a href="class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61">UnirFrasesInteractivo.origenSeleccionado</a></div><div class="ttdeci">TMP_Text origenSeleccionado</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Trivia9.cs:48</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a604d37deed43dc471b1314a3352ca261"><div class="ttname"><a href="class_unir_frases_interactivo.html#a604d37deed43dc471b1314a3352ca261">UnirFrasesInteractivo.opcionesConComas</a></div><div class="ttdeci">string[] opcionesConComas</div><div class="ttdef"><b>Definition</b> <a href="#l00055">Trivia9.cs:55</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a63fa02430caa60dba497118813ccc3e2"><div class="ttname"><a href="class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2">UnirFrasesInteractivo.textoIzquierdo</a></div><div class="ttdeci">TMP_Text textoIzquierdo</div><div class="ttdoc">Texto de la frase sin comas que se muestra a la izquierda.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">Trivia9.cs:21</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a804e8dc31c30b980136e1deed8d0e87f"><div class="ttname"><a href="class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f">UnirFrasesInteractivo.textosDerechos</a></div><div class="ttdeci">TMP_Text[] textosDerechos</div><div class="ttdoc">Arreglo de textos con opciones que contienen comas, mostrados a la derecha.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Trivia9.cs:26</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a8725640d4f983514d45470af1ae13afd"><div class="ttname"><a href="class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd">UnirFrasesInteractivo.destinoSeleccionado</a></div><div class="ttdeci">TMP_Text destinoSeleccionado</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Trivia9.cs:49</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a8e66262f7e44e86fc7e612a0ac21cb40"><div class="ttname"><a href="class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40">UnirFrasesInteractivo.imagenLinea</a></div><div class="ttdeci">Image imagenLinea</div><div class="ttdoc">Imagen que representa la línea que se dibuja al unir frases.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Trivia9.cs:36</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_a95aba5be1274de091d55bfda12603ab8"><div class="ttname"><a href="class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8">UnirFrasesInteractivo.DibujarLinea</a></div><div class="ttdeci">void DibujarLinea(Vector3 inicio, Vector3 fin)</div><div class="ttdef"><b>Definition</b> <a href="#l00215">Trivia9.cs:215</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_a9db1e30ff5c57ed5b429c09847637c5a"><div class="ttname"><a href="class_unir_frases_interactivo.html#a9db1e30ff5c57ed5b429c09847637c5a">UnirFrasesInteractivo.Paneles1</a></div><div class="ttdeci">Paneles1 Paneles1</div><div class="ttdoc">Controlador de paneles que gestiona la transición entre trivias o actividades.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Trivia9.cs:16</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aa0e0374d6a44d6e2f30a1c3125a9e986"><div class="ttname"><a href="class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986">UnirFrasesInteractivo.fraseSinComas</a></div><div class="ttdeci">string fraseSinComas</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Trivia9.cs:54</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aa7c897966f5709e465fa8316128aa324"><div class="ttname"><a href="class_unir_frases_interactivo.html#aa7c897966f5709e465fa8316128aa324">UnirFrasesInteractivo.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">Trivia9.cs:62</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_ab146dcf5e533d8ca90533febac0e3c87"><div class="ttname"><a href="class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87">UnirFrasesInteractivo.puntoInicio</a></div><div class="ttdeci">Vector3 puntoInicio</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Trivia9.cs:52</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_ab6b07a49b01a7734a988d7468ff6df98"><div class="ttname"><a href="class_unir_frases_interactivo.html#ab6b07a49b01a7734a988d7468ff6df98">UnirFrasesInteractivo.DetectarTextoDebajoDelMouse</a></div><div class="ttdeci">TMP_Text DetectarTextoDebajoDelMouse()</div><div class="ttdef"><b>Definition</b> <a href="#l00152">Trivia9.cs:152</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_ac545fc01d7faea567f1b4ff3d85274b0"><div class="ttname"><a href="class_unir_frases_interactivo.html#ac545fc01d7faea567f1b4ff3d85274b0">UnirFrasesInteractivo.IniciarArrastreDesdeTexto</a></div><div class="ttdeci">void IniciarArrastreDesdeTexto(GameObject textoGO)</div><div class="ttdoc">Inicia el arrastre visual desde un texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">Trivia9.cs:93</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_ace0fb6405474f680be4e9d5e589ebcfe"><div class="ttname"><a href="class_unir_frases_interactivo.html#ace0fb6405474f680be4e9d5e589ebcfe">UnirFrasesInteractivo.DetectarDestino</a></div><div class="ttdeci">void DetectarDestino()</div><div class="ttdef"><b>Definition</b> <a href="#l00122">Trivia9.cs:122</a></div></div>
 <div class="ttc" id="aclass_unir_frases_interactivo_html_add97c2d73332da3da180c532d98de964"><div class="ttname"><a href="class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964">UnirFrasesInteractivo.puntosDerechos</a></div><div class="ttdeci">Transform[] puntosDerechos</div><div class="ttdoc">Arreglo de puntos de inicio visual para las opciones del lado derecho.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">Trivia9.cs:46</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_ae0f1319eac4805d815ee628b3a0a35ee"><div class="ttname"><a href="class_unir_frases_interactivo.html#ae0f1319eac4805d815ee628b3a0a35ee">UnirFrasesInteractivo.PasarASiguienteTrivia</a></div><div class="ttdeci">void PasarASiguienteTrivia()</div><div class="ttdef"><b>Definition</b> <a href="#l00210">Trivia9.cs:210</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aeac0acd3af34396ae7bee4717abf88de"><div class="ttname"><a href="class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de">UnirFrasesInteractivo.indiceCorrecto</a></div><div class="ttdeci">int indiceCorrecto</div><div class="ttdef"><b>Definition</b> <a href="#l00060">Trivia9.cs:60</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aec79863b38ea4e0e38178b0667ce42b3"><div class="ttname"><a href="class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3">UnirFrasesInteractivo.arrastrando</a></div><div class="ttdeci">bool arrastrando</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Trivia9.cs:50</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aef08094cd6563b8dea37b99248531287"><div class="ttname"><a href="class_unir_frases_interactivo.html#aef08094cd6563b8dea37b99248531287">UnirFrasesInteractivo.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Trivia9.cs:76</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_af619858c2d9b5abc5ea98b9b984831d7"><div class="ttname"><a href="class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7">UnirFrasesInteractivo.IncrementarPuntajeAvanzadoIncorrecto</a></div><div class="ttdeci">void IncrementarPuntajeAvanzadoIncorrecto()</div><div class="ttdef"><b>Definition</b> <a href="#l00258">Trivia9.cs:258</a></div></div>
+<div class="ttc" id="aclass_unir_frases_interactivo_html_aff1d4da57e3ea495cb9575cd8382ba78"><div class="ttname"><a href="class_unir_frases_interactivo.html#aff1d4da57e3ea495cb9575cd8382ba78">UnirFrasesInteractivo.ObtenerPuntoDeDestino</a></div><div class="ttdeci">Vector3 ObtenerPuntoDeDestino(TMP_Text destino)</div><div class="ttdef"><b>Definition</b> <a href="#l00237">Trivia9.cs:237</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

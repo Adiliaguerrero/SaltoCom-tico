@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: ForzarEscala Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -107,6 +107,11 @@ Inheritance diagram for ForzarEscala:</div>
 Data Fields</h2></td></tr>
 <tr class="memitem:a02cca4bdb149539ddfa7bdee72ce2cff" id="r_a02cca4bdb149539ddfa7bdee72ce2cff"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02cca4bdb149539ddfa7bdee72ce2cff">escalaCorrecta</a> = new Vector2(0.48f, 0.45f)</td></tr>
 <tr class="memdesc:a02cca4bdb149539ddfa7bdee72ce2cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escala correcta que debe aplicarse al objeto en los ejes X e Y.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a057859e49de05bf7f64167894c41cc81" id="r_a057859e49de05bf7f64167894c41cc81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a057859e49de05bf7f64167894c41cc81">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:a057859e49de05bf7f64167894c41cc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se llama automáticamente después de todos los métodos Update. Aplica la escala fija y ajusta la orientación según la dirección.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mantiene una escala constante en el objeto y ajusta su orientación horizontal (mirando a la izquierda o derecha). </p>
@@ -114,7 +119,38 @@ Data Fields</h2></td></tr>
 <p>Asigna este script a un GameObject y configura su <a class="el" href="#a02cca4bdb149539ddfa7bdee72ce2cff" title="Escala correcta que debe aplicarse al objeto en los ejes X e Y.">escalaCorrecta</a> desde el Inspector. </p>
 
 <p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00014">14</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a057859e49de05bf7f64167894c41cc81" name="a057859e49de05bf7f64167894c41cc81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057859e49de05bf7f64167894c41cc81">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ForzarEscala.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Se llama automáticamente después de todos los métodos Update. Aplica la escala fija y ajusta la orientación según la dirección. </p>
+<p>Si el objeto está volteado horizontalmente, se conserva esa inversión al aplicar la escala. </p>
+
+<p class="definition">Definition at line <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html#l00034">34</a> of file <a class="el" href="_forzar_tama_xC3_xB1o_8cs_source.html">ForzarTamaño.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a02cca4bdb149539ddfa7bdee72ce2cff" name="a02cca4bdb149539ddfa7bdee72ce2cff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02cca4bdb149539ddfa7bdee72ce2cff">&#9670;&#160;</a></span>escalaCorrecta</h2>
 

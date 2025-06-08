@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: DestruirParticulasAlColisionar Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -102,12 +102,105 @@ Inheritance diagram for DestruirParticulasAlColisionar:</div>
  <div class="center">
   <img src="class_destruir_particulas_al_colisionar.png" alt=""/>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0e495e05d954b7941671377d98d4b30e" id="r_a0e495e05d954b7941671377d98d4b30e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e495e05d954b7941671377d98d4b30e">Start</a> ()</td></tr>
+<tr class="memitem:ac4f29594e6b3b29ad8f7afb702298060" id="r_ac4f29594e6b3b29ad8f7afb702298060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4f29594e6b3b29ad8f7afb702298060">OnParticleCollision</a> (GameObject other)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0f37cab83cfc42eb0b4fd4bc49181e0a" id="r_a0f37cab83cfc42eb0b4fd4bc49181e0a"><td class="memItemLeft" align="right" valign="top">ParticleSystem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f37cab83cfc42eb0b4fd4bc49181e0a">ps</a></td></tr>
+<tr class="memdesc:a0f37cab83cfc42eb0b4fd4bc49181e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al componente ParticleSystem asociado a este objeto.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Elimina visualmente las partículas de un ParticleSystem cuando colisionan con un objeto etiquetado como "Suelo". </p>
 <p>Utiliza el evento <code>OnParticleCollision</code> para detectar colisiones y forzar la expiración de las partículas activas. Requiere que el <code>GameObject</code> tenga un componente <code>ParticleSystem</code> y colisionadores configurados. </p>
 
 <p class="definition">Definition at line <a class="el" href="_particulas_8cs_source.html#l00010">10</a> of file <a class="el" href="_particulas_8cs_source.html">Particulas.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac4f29594e6b3b29ad8f7afb702298060" name="ac4f29594e6b3b29ad8f7afb702298060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f29594e6b3b29ad8f7afb702298060">&#9670;&#160;</a></span>OnParticleCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DestruirParticulasAlColisionar.OnParticleCollision </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_particulas_8cs_source.html#l00022">22</a> of file <a class="el" href="_particulas_8cs_source.html">Particulas.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0e495e05d954b7941671377d98d4b30e" name="a0e495e05d954b7941671377d98d4b30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e495e05d954b7941671377d98d4b30e">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DestruirParticulasAlColisionar.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_particulas_8cs_source.html#l00017">17</a> of file <a class="el" href="_particulas_8cs_source.html">Particulas.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a0f37cab83cfc42eb0b4fd4bc49181e0a" name="a0f37cab83cfc42eb0b4fd4bc49181e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f37cab83cfc42eb0b4fd4bc49181e0a">&#9670;&#160;</a></span>ps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParticleSystem DestruirParticulasAlColisionar.ps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referencia al componente ParticleSystem asociado a este objeto. </p>
+
+<p class="definition">Definition at line <a class="el" href="_particulas_8cs_source.html#l00015">15</a> of file <a class="el" href="_particulas_8cs_source.html">Particulas.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/molin/SaltoComatico/Assets/Script/<a class="el" href="_particulas_8cs_source.html">Particulas.cs</a></li>
 </ul>
 </div><!-- contents -->

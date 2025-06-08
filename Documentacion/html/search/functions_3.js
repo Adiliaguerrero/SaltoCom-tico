@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['limpiarpuntaje_0',['LimpiarPuntaje',['../class_puntos_manager.html#a26525271f9f3ba399fcb0fbcb827f7d2',1,'PuntosManager']]]
+  ['escribirlinea_0',['EscribirLinea',['../class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1',1,'SistemaDialogo']]],
+  ['esperarymostrardialogo_1',['EsperarYMostrarDialogo',['../class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8',1,'ColisionadorTrigger2D']]]
 ];

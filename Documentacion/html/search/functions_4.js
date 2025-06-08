@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mostrardialogo_0',['MostrarDialogo',['../class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2',1,'DialogoController']]],
-  ['mostrarlinea_1',['MostrarLinea',['../class_sistema_dialogo.html#a6963f01bf1b72c7d0e8cf18c3a775f06',1,'SistemaDialogo']]]
+  ['fixedupdate_0',['FixedUpdate',['../class_joystick_player_example.html#a7c65ff7b923cc08c30138d317cc0f780',1,'JoystickPlayerExample']]],
+  ['formatinput_1',['FormatInput',['../class_joystick.html#a7fe35f556b605f57580304bf4b7bd5b8',1,'Joystick']]]
 ];

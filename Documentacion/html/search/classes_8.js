@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ninja_0',['Ninja',['../class_ninja.html',1,'']]]
+  ['menucontroller_0',['MenuController',['../class_menu_controller.html',1,'']]],
+  ['musicamanager_1',['MusicaManager',['../class_musica_manager.html',1,'']]]
 ];

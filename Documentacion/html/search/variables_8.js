@@ -1,5 +1,19 @@
 var searchData=
 [
-  ['joystick_0',['joystick',['../class_aparicion_personaje.html#a89f60862111227897dd0a3e1fd0109df',1,'AparicionPersonaje.joystick'],['../class_instrucciones_visuales.html#a1ac697defcec82cc09622f1c2684798f',1,'InstruccionesVisuales.joystick'],['../class_paneles1.html#a9726a1d081588f411f01929f8e9a84a9',1,'Paneles1.joystick'],['../class_player_controller.html#a6faf51b0ca7a800c3ff7b6967a17caa3',1,'PlayerController.joystick']]],
-  ['joystickui_1',['joystickUI',['../class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3',1,'ColisionadorTrigger2D.joystickUI'],['../class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd',1,'SistemaDialogo.joystickUI']]]
+  ['imagen1_0',['imagen1',['../class_paneles1.html#a4a4e32424fca4936a835fa74305a996b',1,'Paneles1']]],
+  ['imagen2_1',['imagen2',['../class_paneles1.html#aa739f5a1685c1daf0ef172aa443f85c9',1,'Paneles1']]],
+  ['imagenaeliminar_2',['imagenAEliminar',['../class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455',1,'BarraVida']]],
+  ['imagenlinea_3',['imagenLinea',['../class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40',1,'UnirFrasesInteractivo']]],
+  ['imagenpersonaje_4',['imagenPersonaje',['../class_selector_personaje.html#afe3546ceb2ac87c414cfd81c72690a90',1,'SelectorPersonaje']]],
+  ['indice_5',['indice',['../class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83',1,'SistemaDialogo']]],
+  ['indicecorrecto_6',['indiceCorrecto',['../class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de',1,'UnirFrasesInteractivo']]],
+  ['indicedialogo_7',['indiceDialogo',['../class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40',1,'PantallaDialogo']]],
+  ['indicepersonaje_8',['indicePersonaje',['../class_selector_personaje.html#a874ae89d8fd2a9a6716d8d43bbbe4517',1,'SelectorPersonaje']]],
+  ['indicerespuestacorrecta_9',['indiceRespuestaCorrecta',['../class_opcion_unica.html#acc1ec99a273441ed4140f016d5290c59',1,'OpcionUnica.indiceRespuestaCorrecta'],['../class_opcion_unica2.html#aaf61c1a724a4d5a0721e42adfff9040f',1,'OpcionUnica2.indiceRespuestaCorrecta'],['../class_opcion_unica3.html#a2029573c173fc0d9b29ae2797222cf22',1,'OpcionUnica3.indiceRespuestaCorrecta']]],
+  ['indicescorrectos_10',['indicesCorrectos',['../class_pregunta_opcion_multiple.html#a965c7aab54ca365e502273f84efff157',1,'PreguntaOpcionMultiple']]],
+  ['input_11',['input',['../class_joystick.html#af71063f9072dc68b7b2681759184c899',1,'Joystick']]],
+  ['instancia_12',['instancia',['../class_audio_manager.html#ac112d1957778ad900886e38e20628fd6',1,'AudioManager.instancia'],['../class_musica_manager.html#a798507bd3844b8928a43931398d4739e',1,'MusicaManager.instancia'],['../class_puntos_manager.html#aa66fc0aad749b11cc5f183734f95f614',1,'PuntosManager.instancia']]],
+  ['intermediocorrectotext_13',['IntermedioCorrectoText',['../class_puntos_manager.html#ae27ec47af7abe25bfc203b741be0d533',1,'PuntosManager']]],
+  ['intermedioincorrectotext_14',['IntermedioIncorrectoText',['../class_puntos_manager.html#ac0ca757ef5146fe0278118cd8ca33680',1,'PuntosManager']]],
+  ['izquierdamostrada_15',['izquierdaMostrada',['../class_instrucciones_visuales.html#ab566de3e87225959f08305b2e47e9625',1,'InstruccionesVisuales']]]
 ];

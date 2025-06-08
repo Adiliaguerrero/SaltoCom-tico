@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/PantallaDialogo.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -121,20 +121,23 @@ $(function(){initNavTree('_pantalla_dialogo_8cs_source.html','',''); });
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">   54</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> indiceDialogo = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">   56</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">indiceDialogo</a> = 0;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#aa80ba61cdb1bff2ded62a3f260907e73">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pantalla_dialogo.html#aa80ba61cdb1bff2ded62a3f260907e73">Start</a>()</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length &gt; 0)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            StartCoroutine(MostrarDialogo());</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            StartCoroutine(<a class="code hl_function" href="class_pantalla_dialogo.html#a9e27663ed8532e6f7d9110458ddaadaa">MostrarDialogo</a>());</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    IEnumerator MostrarDialogo()</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#a9e27663ed8532e6f7d9110458ddaadaa">   67</a></span>    IEnumerator <a class="code hl_function" href="class_pantalla_dialogo.html#a9e27663ed8532e6f7d9110458ddaadaa">MostrarDialogo</a>()</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">while</span> (indiceDialogo &lt; <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">indiceDialogo</a> &lt; <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>.Length)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            textoPantalla.text = <span class="stringliteral">&quot;&quot;</span>; </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordtype">string</span> linea = <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>[indiceDialogo]; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordtype">string</span> linea = <a class="code hl_variable" href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">dialogos</a>[<a class="code hl_variable" href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">indiceDialogo</a>]; </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">char</span> letra <span class="keywordflow">in</span> linea)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                textoPantalla.text += letra;</div>
@@ -142,18 +145,20 @@ $(function(){initNavTree('_pantalla_dialogo_8cs_source.html','',''); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">tiempoEntreDialogos</a>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            indiceDialogo++;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_variable" href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">indiceDialogo</a>++;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879">puntosCargaTexto</a>.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        StartCoroutine(AnimarPuntos());</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        StartCoroutine(<a class="code hl_function" href="class_pantalla_dialogo.html#ace6979983e9b7cbd057934513cefeefc">AnimarPuntos</a>());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">tiempoAntesCambioEscena</a>);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        SceneManager.LoadScene(<a class="code hl_variable" href="class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87">nombreEscenaSiguiente</a>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    IEnumerator AnimarPuntos()</div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_pantalla_dialogo.html#ace6979983e9b7cbd057934513cefeefc">   91</a></span>    IEnumerator <a class="code hl_function" href="class_pantalla_dialogo.html#ace6979983e9b7cbd057934513cefeefc">AnimarPuntos</a>()</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">string</span>[] puntos = { <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;..&quot;</span>, <span class="stringliteral">&quot;...&quot;</span> };</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">int</span> index = 0;</div>
@@ -165,6 +170,7 @@ $(function(){initNavTree('_pantalla_dialogo_8cs_source.html','',''); });
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(0.4f);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 </div>
 <div class="ttc" id="aclass_pantalla_dialogo_html"><div class="ttname"><a href="class_pantalla_dialogo.html">PantallaDialogo</a></div><div class="ttdoc">Controla la presentación secuencial de diálogos en pantalla, letra por letra, con una animación de pu...</div><div class="ttdef"><b>Definition</b> <a href="#l00015">PantallaDialogo.cs:16</a></div></div>
@@ -174,6 +180,10 @@ $(function(){initNavTree('_pantalla_dialogo_8cs_source.html','',''); });
 <div class="ttc" id="aclass_pantalla_dialogo_html_a5849cdf517bf5b9318bc5285022cd4ae"><div class="ttname"><a href="class_pantalla_dialogo.html#a5849cdf517bf5b9318bc5285022cd4ae">PantallaDialogo.dialogos</a></div><div class="ttdeci">string[] dialogos</div><div class="ttdoc">Arreglo de líneas de diálogo a mostrar.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">PantallaDialogo.cs:26</a></div></div>
 <div class="ttc" id="aclass_pantalla_dialogo_html_a78be9ad2e23aa429a9cf8e51060d5642"><div class="ttname"><a href="class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642">PantallaDialogo.tiempoEntreDialogos</a></div><div class="ttdeci">float tiempoEntreDialogos</div><div class="ttdoc">Tiempo de espera entre cada línea de diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">PantallaDialogo.cs:38</a></div></div>
 <div class="ttc" id="aclass_pantalla_dialogo_html_a82d58fd4fdba695240e2bb7d41ce56ce"><div class="ttname"><a href="class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce">PantallaDialogo.tiempoAntesCambioEscena</a></div><div class="ttdeci">float tiempoAntesCambioEscena</div><div class="ttdoc">Tiempo que se espera después de los puntos antes de cambiar de escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">PantallaDialogo.cs:49</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_a9e27663ed8532e6f7d9110458ddaadaa"><div class="ttname"><a href="class_pantalla_dialogo.html#a9e27663ed8532e6f7d9110458ddaadaa">PantallaDialogo.MostrarDialogo</a></div><div class="ttdeci">IEnumerator MostrarDialogo()</div><div class="ttdef"><b>Definition</b> <a href="#l00067">PantallaDialogo.cs:67</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_aa80ba61cdb1bff2ded62a3f260907e73"><div class="ttname"><a href="class_pantalla_dialogo.html#aa80ba61cdb1bff2ded62a3f260907e73">PantallaDialogo.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Inicia la secuencia de diálogo si hay contenido disponible.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">PantallaDialogo.cs:61</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_ace6979983e9b7cbd057934513cefeefc"><div class="ttname"><a href="class_pantalla_dialogo.html#ace6979983e9b7cbd057934513cefeefc">PantallaDialogo.AnimarPuntos</a></div><div class="ttdeci">IEnumerator AnimarPuntos()</div><div class="ttdef"><b>Definition</b> <a href="#l00091">PantallaDialogo.cs:91</a></div></div>
+<div class="ttc" id="aclass_pantalla_dialogo_html_ad2255c8e844e4085fbfe4f670ce67f40"><div class="ttname"><a href="class_pantalla_dialogo.html#ad2255c8e844e4085fbfe4f670ce67f40">PantallaDialogo.indiceDialogo</a></div><div class="ttdeci">int indiceDialogo</div><div class="ttdef"><b>Definition</b> <a href="#l00056">PantallaDialogo.cs:56</a></div></div>
 <div class="ttc" id="aclass_pantalla_dialogo_html_ade0fd938ac2b31492f17eb2e10a5b76e"><div class="ttname"><a href="class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e">PantallaDialogo.tiempoEntreLetras</a></div><div class="ttdeci">float tiempoEntreLetras</div><div class="ttdoc">Tiempo de espera entre cada letra del texto (efecto de máquina de escribir).</div><div class="ttdef"><b>Definition</b> <a href="#l00032">PantallaDialogo.cs:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

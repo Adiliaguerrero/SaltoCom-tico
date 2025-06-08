@@ -1,23 +1,10 @@
 var searchData=
 [
-  ['padrecontenedor_0',['padreContenedor',['../class_coma_drag.html#a34a81acdb61fda66dcd45b3e171efaec',1,'ComaDrag']]],
-  ['panel1_1',['panel1',['../class_paneles1.html#a1f9bd1b0f2b5a082f1146529bbefccb6',1,'Paneles1']]],
-  ['panel2_2',['panel2',['../class_paneles1.html#af3b18412cf955c393d13a9bd15edc804',1,'Paneles1']]],
-  ['panel3_3',['panel3',['../class_paneles1.html#ad628fbc096ce9aa8df481e3c29ce665f',1,'Paneles1']]],
-  ['panelconfiguracion_4',['panelConfiguracion',['../class_configuracion_u_i.html#a874b6c5066cc185d8f3b1814147e7af4',1,'ConfiguracionUI']]],
-  ['panelcreditos_5',['panelCreditos',['../class_configuracion_u_i.html#afc351a843cdc3dce9aa0e2493ec48cf8',1,'ConfiguracionUI']]],
-  ['paneldialogo_6',['panelDialogo',['../class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4',1,'DialogoController.panelDialogo'],['../class_sistema_dialogo.html#a0a6505f03018529ea5d59dad5ade1ec9',1,'SistemaDialogo.panelDialogo']]],
-  ['paneles1_7',['Paneles1',['../class_trivia1.html#a95309334386c421a19cdb9d279ce0d8e',1,'Trivia1.Paneles1'],['../class_opcion_unica.html#aebb9223dc780623b3d482ec2fda4c1b1',1,'OpcionUnica.Paneles1'],['../class_pregunta_opcion_multiple.html#abce8c33147a0f11e80766ad26978a2ea',1,'PreguntaOpcionMultiple.Paneles1'],['../class_opcion_unica2.html#acf4e9a6da1fcbdbd0788872f4c06dd27',1,'OpcionUnica2.Paneles1'],['../class_texto_con_comas_t_m_p.html#ac6fb08d62dd712581a35eb2edf2973b1',1,'TextoConComasTMP.Paneles1'],['../class_transcribir_oracion2.html#a8411f26e766b971ebabe1d3e39665a68',1,'TranscribirOracion2.Paneles1'],['../class_transcribir_oracion3.html#af87661cf8cf3d4cd0e74da0d25635c79',1,'TranscribirOracion3.Paneles1'],['../class_opcion_unica3.html#afe92733973d33dd0ff02e336d382d72a',1,'OpcionUnica3.Paneles1'],['../class_unir_frases_interactivo.html#a9db1e30ff5c57ed5b429c09847637c5a',1,'UnirFrasesInteractivo.Paneles1']]],
-  ['panelgameover_8',['panelGameOver',['../class_barra_vida.html#ae919c8cbd88f05e4a1140b181969aca3',1,'BarraVida']]],
-  ['personajes_9',['personajes',['../class_aparicion_personaje.html#ab03885d56e82db222f851f974ce15643',1,'AparicionPersonaje.personajes'],['../class_selector_personaje.html#a7b8672547cf0403ab52b3a3c94bb4ef9',1,'SelectorPersonaje.personajes']]],
-  ['player2_10',['Player2',['../class_camara.html#a8d5ccd1ec7673520e0309a1b1ad1add1',1,'Camara']]],
-  ['portal_11',['portal',['../class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9',1,'ColisionadorTrigger2D']]],
-  ['pregunta_12',['pregunta',['../class_trivia1.html#a393690f12cb359ff3f5a1f42afc68b74',1,'Trivia1']]],
-  ['preguntatexto_13',['preguntaTexto',['../class_trivia1.html#a0ef1789f7e160be9fa1850f6eb2218e6',1,'Trivia1.preguntaTexto'],['../class_opcion_unica.html#a679e74298f27b67388614bb206948132',1,'OpcionUnica.preguntaTexto'],['../class_opcion_unica2.html#a3a61d938844bc9a4ca21fc6077290ba4',1,'OpcionUnica2.preguntaTexto'],['../class_opcion_unica3.html#a24432232b9fad647ff94677c35027b27',1,'OpcionUnica3.preguntaTexto']]],
-  ['puedemoverse_14',['puedeMoverse',['../class_player_controller.html#aeb12a6cb2c5386cb09a23868d5a89a5e',1,'PlayerController']]],
-  ['puntoaparicion_15',['puntoAparicion',['../class_aparicion_personaje.html#a4de4b1603a7a7eb86569c660f8c2e100',1,'AparicionPersonaje']]],
-  ['puntoiniciomanual_16',['puntoInicioManual',['../class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637',1,'UnirFrasesInteractivo']]],
-  ['puntoreaparicion_17',['puntoReaparicion',['../class_sistema_dialogo.html#a7322d867e0a85c72552c130f8776ffa5',1,'SistemaDialogo']]],
-  ['puntoscargatexto_18',['puntosCargaTexto',['../class_pantalla_dialogo.html#a40eaf4c46b9ac96a1b85a03a6f092879',1,'PantallaDialogo']]],
-  ['puntosderechos_19',['puntosDerechos',['../class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964',1,'UnirFrasesInteractivo']]]
+  ['nombreescena_0',['nombreEscena',['../class_carga_inicial.html#ad9366ac31537ad04af26a9c0157e5f54',1,'CargaInicial.nombreEscena'],['../class_colisionador_trigger2_d.html#aaafe84494cca4764332ce02f454bb854',1,'ColisionadorTrigger2D.nombreEscena'],['../class_colisionador_trigger2_d_1_1_portal_trigger.html#a47fe3f59ea0b050a2e197c0dcba5ea3f',1,'ColisionadorTrigger2D.PortalTrigger.nombreEscena'],['../class_puntos_manager.html#adbaf8e444d3b105c04ace2b8287960fa',1,'PuntosManager.nombreEscena']]],
+  ['nombreescenadestino_1',['nombreEscenaDestino',['../class_portal_cambio_escena.html#a9d4495138c5d66ff6d2816a901e32ca7',1,'PortalCambioEscena']]],
+  ['nombreescenasiguiente_2',['nombreEscenaSiguiente',['../class_pantalla_dialogo.html#a3cc024907357a5028c31d304a30a4b87',1,'PantallaDialogo']]],
+  ['nombreobjetotextobienvenida_3',['nombreObjetoTextoBienvenida',['../class_colisionador_trigger2_d.html#a5ccf966f166fc336f965df1ab3a11855',1,'ColisionadorTrigger2D.nombreObjetoTextoBienvenida'],['../class_portal_cambio_escena.html#a380b14499e246b801f276fc18b2adbdf',1,'PortalCambioEscena.nombreObjetoTextoBienvenida']]],
+  ['nombrepersonajetexto_4',['nombrePersonajeTexto',['../class_selector_personaje.html#abc0be0bd6c22ec7a25da04037c6e219f',1,'SelectorPersonaje']]],
+  ['nombrespersonajes_5',['nombresPersonajes',['../class_selector_personaje.html#a6cdb7130267c7cd9df6bd60329bd259e',1,'SelectorPersonaje']]],
+  ['npcprefab_6',['npcPrefab',['../class_sistema_dialogo.html#a78922b801e5e4a329e7d058712b94059',1,'SistemaDialogo']]]
 ];

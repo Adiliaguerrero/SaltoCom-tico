@@ -31,12 +31,17 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Enumerations", "globals_enum.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
@@ -44,7 +49,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_abismo_caida_8cs.html",
-"class_pregunta_opcion_multiple.html#a1d64ed1738108314ddc46dab5c550b12"
+"class_dynamic_joystick_editor.html#afc8f7d151c766e98bd8665526756b239",
+"class_player_controller.html#a6faf51b0ca7a800c3ff7b6967a17caa3",
+"functions_t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

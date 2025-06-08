@@ -1,4 +1,4 @@
 var _particulas_8cs =
 [
-    [ "DestruirParticulasAlColisionar", "class_destruir_particulas_al_colisionar.html", null ]
+    [ "DestruirParticulasAlColisionar", "class_destruir_particulas_al_colisionar.html", "class_destruir_particulas_al_colisionar" ]
 ];

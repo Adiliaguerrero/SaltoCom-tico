@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: Ninja Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -115,12 +115,327 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a958a7f2654ecc5c5aee8cf85b97a8b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo de espera entre ataques consecutivos.  <br /></td></tr>
 <tr class="memitem:a83a444a693d8efe42f2f121d2c343df8" id="r_a83a444a693d8efe42f2f121d2c343df8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83a444a693d8efe42f2f121d2c343df8">tiempoAnimacionMuerte</a> = 0.8f</td></tr>
 <tr class="memdesc:a83a444a693d8efe42f2f121d2c343df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo que dura la animación de muerte antes de eliminar al ninja.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aaf108f1f954d93614156cd5d93260c1a" id="r_aaf108f1f954d93614156cd5d93260c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf108f1f954d93614156cd5d93260c1a">Start</a> ()</td></tr>
+<tr class="memdesc:aaf108f1f954d93614156cd5d93260c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa componentes del ninja y animaciones al comenzar el juego.  <br /></td></tr>
+<tr class="memitem:a65133d0328e9d2f2f098278513993278" id="r_a65133d0328e9d2f2f098278513993278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65133d0328e9d2f2f098278513993278">Update</a> ()</td></tr>
+<tr class="memdesc:a65133d0328e9d2f2f098278513993278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lógica de detección, movimiento y ataque que se ejecuta cada frame.  <br /></td></tr>
+<tr class="memitem:a392b11be8db38c1540cf27d4a415756e" id="r_a392b11be8db38c1540cf27d4a415756e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a392b11be8db38c1540cf27d4a415756e">AtacarJugador</a> ()</td></tr>
+<tr class="memdesc:a392b11be8db38c1540cf27d4a415756e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta el ataque al jugador si está dentro del rango.  <br /></td></tr>
+<tr class="memitem:a3b7fbecd3e1445ca9cf86785b2c93bb6" id="r_a3b7fbecd3e1445ca9cf86785b2c93bb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b7fbecd3e1445ca9cf86785b2c93bb6">CancelarAtaque</a> ()</td></tr>
+<tr class="memdesc:a3b7fbecd3e1445ca9cf86785b2c93bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancela un ataque en curso y detiene su animación.  <br /></td></tr>
+<tr class="memitem:aeef3f552bc4a9537bbb6ac63324eba2b" id="r_aeef3f552bc4a9537bbb6ac63324eba2b"><td class="memItemLeft" align="right" valign="top">System.Collections.IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef3f552bc4a9537bbb6ac63324eba2b">IniciarCooldown</a> ()</td></tr>
+<tr class="memdesc:aeef3f552bc4a9537bbb6ac63324eba2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia un período de espera entre ataques para evitar ataques consecutivos inmediatos.  <br /></td></tr>
+<tr class="memitem:ab24db7101b58a7747496791be4412d37" id="r_ab24db7101b58a7747496791be4412d37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab24db7101b58a7747496791be4412d37">OnCollisionEnter2D</a> (Collision2D collision)</td></tr>
+<tr class="memdesc:ab24db7101b58a7747496791be4412d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maneja la lógica cuando el ninja colisiona con el jugador desde abajo, provocando su muerte.  <br /></td></tr>
+<tr class="memitem:ab77bf1d76e6b3b1bace1fcbce9d46e38" id="r_ab77bf1d76e6b3b1bace1fcbce9d46e38"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab77bf1d76e6b3b1bace1fcbce9d46e38">DesvanecerYDestruir</a> ()</td></tr>
+<tr class="memdesc:ab77bf1d76e6b3b1bace1fcbce9d46e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que desvanecerá suavemente al ninja antes de destruirlo.  <br /></td></tr>
+<tr class="memitem:aa9fe38ded90973c16271eb95e6ece56a" id="r_aa9fe38ded90973c16271eb95e6ece56a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9fe38ded90973c16271eb95e6ece56a">OnDrawGizmosSelected</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a88c65859770bad2763aaa8b33db9c805" id="r_a88c65859770bad2763aaa8b33db9c805"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c65859770bad2763aaa8b33db9c805">rb</a></td></tr>
+<tr class="memitem:aa4fd9867cf4d8fc3edf7b2b24e000fe1" id="r_aa4fd9867cf4d8fc3edf7b2b24e000fe1"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4fd9867cf4d8fc3edf7b2b24e000fe1">movement</a></td></tr>
+<tr class="memitem:ae81c1461e8bdaed16467acf7148ea1b6" id="r_ae81c1461e8bdaed16467acf7148ea1b6"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae81c1461e8bdaed16467acf7148ea1b6">animator</a></td></tr>
+<tr class="memitem:a67ca641481ba0abce516047801b68793" id="r_a67ca641481ba0abce516047801b68793"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67ca641481ba0abce516047801b68793">atacando</a> = false</td></tr>
+<tr class="memitem:aa111cce7fc9a32a93a6eed9619114297" id="r_aa111cce7fc9a32a93a6eed9619114297"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa111cce7fc9a32a93a6eed9619114297">enCooldown</a> = false</td></tr>
+<tr class="memitem:ac5743be2bf50351f659a649d3f52689c" id="r_ac5743be2bf50351f659a649d3f52689c"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5743be2bf50351f659a649d3f52689c">player</a></td></tr>
+<tr class="memitem:a1bb11010f79f8540351f40442250cac7" id="r_a1bb11010f79f8540351f40442250cac7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bb11010f79f8540351f40442250cac7">estaMuerto</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla el comportamiento de un enemigo tipo <a class="el" href="class_ninja.html" title="Controla el comportamiento de un enemigo tipo Ninja, incluyendo detección del jugador,...">Ninja</a>, incluyendo detección del jugador, movimiento, ataque y muerte. </p>
 
 <p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00007">7</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a392b11be8db38c1540cf27d4a415756e" name="a392b11be8db38c1540cf27d4a415756e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392b11be8db38c1540cf27d4a415756e">&#9670;&#160;</a></span>AtacarJugador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.AtacarJugador </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ejecuta el ataque al jugador si está dentro del rango. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00117">117</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3b7fbecd3e1445ca9cf86785b2c93bb6" name="a3b7fbecd3e1445ca9cf86785b2c93bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7fbecd3e1445ca9cf86785b2c93bb6">&#9670;&#160;</a></span>CancelarAtaque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.CancelarAtaque </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cancela un ataque en curso y detiene su animación. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00150">150</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab77bf1d76e6b3b1bace1fcbce9d46e38" name="ab77bf1d76e6b3b1bace1fcbce9d46e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77bf1d76e6b3b1bace1fcbce9d46e38">&#9670;&#160;</a></span>DesvanecerYDestruir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator Ninja.DesvanecerYDestruir </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que desvanecerá suavemente al ninja antes de destruirlo. </p>
+<dl class="section return"><dt>Returns</dt><dd>Una corrutina que se ejecuta durante el proceso de desaparición. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00213">213</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeef3f552bc4a9537bbb6ac63324eba2b" name="aeef3f552bc4a9537bbb6ac63324eba2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef3f552bc4a9537bbb6ac63324eba2b">&#9670;&#160;</a></span>IniciarCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Collections.IEnumerator Ninja.IniciarCooldown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicia un período de espera entre ataques para evitar ataques consecutivos inmediatos. </p>
+<dl class="section return"><dt>Returns</dt><dd>Una corrutina que espera el tiempo definido antes de permitir otro ataque. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00167">167</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab24db7101b58a7747496791be4412d37" name="ab24db7101b58a7747496791be4412d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24db7101b58a7747496791be4412d37">&#9670;&#160;</a></span>OnCollisionEnter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.OnCollisionEnter2D </td>
+          <td>(</td>
+          <td class="paramtype">Collision2D</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maneja la lógica cuando el ninja colisiona con el jugador desde abajo, provocando su muerte. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision</td><td>Información sobre la colisión detectada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00180">180</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa9fe38ded90973c16271eb95e6ece56a" name="aa9fe38ded90973c16271eb95e6ece56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fe38ded90973c16271eb95e6ece56a">&#9670;&#160;</a></span>OnDrawGizmosSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.OnDrawGizmosSelected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00237">237</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="aaf108f1f954d93614156cd5d93260c1a" name="aaf108f1f954d93614156cd5d93260c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf108f1f954d93614156cd5d93260c1a">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicializa componentes del ninja y animaciones al comenzar el juego. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00049">49</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="a65133d0328e9d2f2f098278513993278" name="a65133d0328e9d2f2f098278513993278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65133d0328e9d2f2f098278513993278">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ninja.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lógica de detección, movimiento y ataque que se ejecuta cada frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00061">61</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="ae81c1461e8bdaed16467acf7148ea1b6" name="ae81c1461e8bdaed16467acf7148ea1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81c1461e8bdaed16467acf7148ea1b6">&#9670;&#160;</a></span>animator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator Ninja.animator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00039">39</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="a67ca641481ba0abce516047801b68793" name="a67ca641481ba0abce516047801b68793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ca641481ba0abce516047801b68793">&#9670;&#160;</a></span>atacando</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ninja.atacando = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00040">40</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
 <a id="a958a7f2654ecc5c5aee8cf85b97a8b5c" name="a958a7f2654ecc5c5aee8cf85b97a8b5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a958a7f2654ecc5c5aee8cf85b97a8b5c">&#9670;&#160;</a></span>attackCooldown</h2>
 
@@ -172,6 +487,126 @@ Data Fields</h2></td></tr>
 <p>Distancia máxima a la que el ninja puede detectar al jugador. </p>
 
 <p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00013">13</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa111cce7fc9a32a93a6eed9619114297" name="aa111cce7fc9a32a93a6eed9619114297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa111cce7fc9a32a93a6eed9619114297">&#9670;&#160;</a></span>enCooldown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ninja.enCooldown = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00041">41</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1bb11010f79f8540351f40442250cac7" name="a1bb11010f79f8540351f40442250cac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb11010f79f8540351f40442250cac7">&#9670;&#160;</a></span>estaMuerto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Ninja.estaMuerto = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00043">43</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa4fd9867cf4d8fc3edf7b2b24e000fe1" name="aa4fd9867cf4d8fc3edf7b2b24e000fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fd9867cf4d8fc3edf7b2b24e000fe1">&#9670;&#160;</a></span>movement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 Ninja.movement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00038">38</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac5743be2bf50351f659a649d3f52689c" name="ac5743be2bf50351f659a649d3f52689c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5743be2bf50351f659a649d3f52689c">&#9670;&#160;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform Ninja.player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00042">42</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
+
+</div>
+</div>
+<a id="a88c65859770bad2763aaa8b33db9c805" name="a88c65859770bad2763aaa8b33db9c805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c65859770bad2763aaa8b33db9c805">&#9670;&#160;</a></span>rb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D Ninja.rb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_ninja_8cs_source.html#l00037">37</a> of file <a class="el" href="_ninja_8cs_source.html">Ninja.cs</a>.</p>
 
 </div>
 </div>

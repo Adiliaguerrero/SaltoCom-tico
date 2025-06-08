@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/AudioManager.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -98,14 +98,15 @@ $(function(){initNavTree('_audio_manager_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_audio_manager.html">    7</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_audio_manager.html">AudioManager</a> : MonoBehaviour</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> sonidosActivos = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">   12</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> = <span class="keyword">true</span>; </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">   17</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_class" href="class_audio_manager.html">AudioManager</a> <a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>; </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> AudioSource audioSource;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a0c2aea6ea779d69228564aca9476ea80">   22</a></span>    <span class="keyword">private</span> AudioSource <a class="code hl_variable" href="class_audio_manager.html#a0c2aea6ea779d69228564aca9476ea80">audioSource</a>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a631d7d42b921bcbd82bd1baec2ec3ea7">   29</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_audio_manager.html#a631d7d42b921bcbd82bd1baec2ec3ea7">Awake</a>()</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a> == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
@@ -119,30 +120,33 @@ $(function(){initNavTree('_audio_manager_8cs_source.html','',''); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">return</span>; <span class="comment">// Sale del método para evitar ejecutar el resto del código.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        audioSource = gameObject.AddComponent&lt;AudioSource&gt;();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="class_audio_manager.html#a0c2aea6ea779d69228564aca9476ea80">audioSource</a> = gameObject.AddComponent&lt;AudioSource&gt;();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        CargarEstadoSonido();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_function" href="class_audio_manager.html#a54b8d6efe43eb79254e79d62c9778655">CargarEstadoSonido</a>();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> CargarEstadoSonido()</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a54b8d6efe43eb79254e79d62c9778655">   52</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_audio_manager.html#a54b8d6efe43eb79254e79d62c9778655">CargarEstadoSonido</a>()</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// Verifica si hay una clave guardada llamada &quot;SonidosActivos&quot;</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (PlayerPrefs.HasKey(<span class="stringliteral">&quot;SonidosActivos&quot;</span>))</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            sonidosActivos = PlayerPrefs.GetInt(<span class="stringliteral">&quot;SonidosActivos&quot;</span>) == 1;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> = PlayerPrefs.GetInt(<span class="stringliteral">&quot;SonidosActivos&quot;</span>) == 1;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            sonidosActivos = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
 <div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0">   70</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0">CambiarEstadoSonido</a>(<span class="keywordtype">bool</span> estado)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        sonidosActivos = estado;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> = estado;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;SonidosActivos&quot;</span>, sonidosActivos ? 1 : 0);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        PlayerPrefs.SetInt(<span class="stringliteral">&quot;SonidosActivos&quot;</span>, <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> ? 1 : 0);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        PlayerPrefs.Save(); <span class="comment">// Asegura que la preferencia se escriba en disco.</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
 </div>
@@ -151,9 +155,9 @@ $(function(){initNavTree('_audio_manager_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">   83</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">ReproducirSonido</a>(AudioClip clip)</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (sonidosActivos &amp;&amp; clip != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a> &amp;&amp; clip != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            audioSource.PlayOneShot(clip);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_variable" href="class_audio_manager.html#a0c2aea6ea779d69228564aca9476ea80">audioSource</a>.PlayOneShot(clip);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 </div>
@@ -162,12 +166,16 @@ $(function(){initNavTree('_audio_manager_8cs_source.html','',''); });
 <div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb">   98</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb">ObtenerEstadoSonido</a>()</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> sonidosActivos;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">sonidosActivos</a>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
 </div>
 <div class="ttc" id="aclass_audio_manager_html"><div class="ttname"><a href="class_audio_manager.html">AudioManager</a></div><div class="ttdoc">Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...</div><div class="ttdef"><b>Definition</b> <a href="#l00007">AudioManager.cs:8</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a0c2aea6ea779d69228564aca9476ea80"><div class="ttname"><a href="class_audio_manager.html#a0c2aea6ea779d69228564aca9476ea80">AudioManager.audioSource</a></div><div class="ttdeci">AudioSource audioSource</div><div class="ttdoc">Componente que permite reproducir sonidos en la escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">AudioManager.cs:22</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a54b8d6efe43eb79254e79d62c9778655"><div class="ttname"><a href="class_audio_manager.html#a54b8d6efe43eb79254e79d62c9778655">AudioManager.CargarEstadoSonido</a></div><div class="ttdeci">void CargarEstadoSonido()</div><div class="ttdoc">Carga la preferencia de sonido del jugador desde PlayerPrefs. Si no hay preferencia guardada,...</div><div class="ttdef"><b>Definition</b> <a href="#l00052">AudioManager.cs:52</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a631d7d42b921bcbd82bd1baec2ec3ea7"><div class="ttname"><a href="class_audio_manager.html#a631d7d42b921bcbd82bd1baec2ec3ea7">AudioManager.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">Awake se ejecuta cuando se instancia el objeto en la escena, antes de Start. Se ejecuta al iniciar el...</div><div class="ttdef"><b>Definition</b> <a href="#l00029">AudioManager.cs:29</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a6f9196b93e87a91c6d6cf2eb65de68c5"><div class="ttname"><a href="class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5">AudioManager.sonidosActivos</a></div><div class="ttdeci">bool sonidosActivos</div><div class="ttdoc">Determina si los sonidos están habilitados o deshabilitados.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">AudioManager.cs:12</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_a79bab6d2dc9af3c3a27d587ab2a32f57"><div class="ttname"><a href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">AudioManager.ReproducirSonido</a></div><div class="ttdeci">void ReproducirSonido(AudioClip clip)</div><div class="ttdoc">Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.</div><div class="ttdef"><b>Definition</b> <a href="#l00083">AudioManager.cs:83</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_a894636d6991c11ba8044eb40a85b84fb"><div class="ttname"><a href="class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb">AudioManager.ObtenerEstadoSonido</a></div><div class="ttdeci">bool ObtenerEstadoSonido()</div><div class="ttdoc">Obtiene el estado actual de los sonidos.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">AudioManager.cs:98</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_aba79eea3842530b82f73e77eda36d2a0"><div class="ttname"><a href="class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0">AudioManager.CambiarEstadoSonido</a></div><div class="ttdeci">void CambiarEstadoSonido(bool estado)</div><div class="ttdoc">Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">AudioManager.cs:70</a></div></div>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/Audio.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -108,7 +108,8 @@ $(function(){initNavTree('_audio_8cs_source.html','',''); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">//  Método Awake se ejecuta al inicio, antes de Start o que comienze el juego.</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_boton_clip_control.html#a1266993d1de99774d4b86752e3daa71d">   28</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_boton_clip_control.html#a1266993d1de99774d4b86752e3daa71d">Awake</a>()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// Verifica si ya existe una instancia u obejeto del AudioManager en la escena.</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a> == <span class="keyword">null</span>)</div>
@@ -123,33 +124,44 @@ $(function(){initNavTree('_audio_8cs_source.html','',''); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            DontDestroyOnLoad(audioManagerObj);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_boton_clip_control.html#a2daa680e31529baf5d8a548f20b65298">   48</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_boton_clip_control.html#a2daa680e31529baf5d8a548f20b65298">Start</a>()</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_boton_clip_control.html#aa782427cbca519cb24551e787da39564">botonSonido</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="class_boton_clip_control.html#aa782427cbca519cb24551e787da39564">botonSonido</a>.onClick.AddListener(ToggleSonido);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="class_boton_clip_control.html#aa782427cbca519cb24551e787da39564">botonSonido</a>.onClick.AddListener(<a class="code hl_function" href="class_boton_clip_control.html#ab6226db98f1e025f9ec59d6982afd45f">ToggleSonido</a>);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            Debug.LogWarning(<span class="stringliteral">&quot;Botón de sonido no asignado.&quot;</span>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> ToggleSonido()</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_boton_clip_control.html#ab6226db98f1e025f9ec59d6982afd45f">   59</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_boton_clip_control.html#ab6226db98f1e025f9ec59d6982afd45f">ToggleSonido</a>()</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">bool</span> sonidoActivo = AudioManager.instancia.ObtenerEstadoSonido();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">bool</span> sonidoActivo = <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb">ObtenerEstadoSonido</a>();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        AudioManager.instancia.CambiarEstadoSonido(!sonidoActivo);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0">CambiarEstadoSonido</a>(!sonidoActivo);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c">sonidoBoton</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            AudioManager.instancia.ReproducirSonido(<a class="code hl_variable" href="class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c">sonidoBoton</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">ReproducirSonido</a>(<a class="code hl_variable" href="class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c">sonidoBoton</a>);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
 </div>
 <div class="ttc" id="aclass_audio_manager_html"><div class="ttname"><a href="class_audio_manager.html">AudioManager</a></div><div class="ttdoc">Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00007">AudioManager.cs:8</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a79bab6d2dc9af3c3a27d587ab2a32f57"><div class="ttname"><a href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">AudioManager.ReproducirSonido</a></div><div class="ttdeci">void ReproducirSonido(AudioClip clip)</div><div class="ttdoc">Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00083">AudioManager.cs:83</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_a894636d6991c11ba8044eb40a85b84fb"><div class="ttname"><a href="class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb">AudioManager.ObtenerEstadoSonido</a></div><div class="ttdeci">bool ObtenerEstadoSonido()</div><div class="ttdoc">Obtiene el estado actual de los sonidos.</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00098">AudioManager.cs:98</a></div></div>
+<div class="ttc" id="aclass_audio_manager_html_aba79eea3842530b82f73e77eda36d2a0"><div class="ttname"><a href="class_audio_manager.html#aba79eea3842530b82f73e77eda36d2a0">AudioManager.CambiarEstadoSonido</a></div><div class="ttdeci">void CambiarEstadoSonido(bool estado)</div><div class="ttdoc">Cambia el estado del sonido (activado o desactivado) y guarda la preferencia en PlayerPrefs.</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00070">AudioManager.cs:70</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_ac112d1957778ad900886e38e20628fd6"><div class="ttname"><a href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">AudioManager.instancia</a></div><div class="ttdeci">static AudioManager instancia</div><div class="ttdoc">Instancia única del AudioManager en la escena (patrón Singleton).</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00017">AudioManager.cs:17</a></div></div>
 <div class="ttc" id="aclass_boton_clip_control_html"><div class="ttname"><a href="class_boton_clip_control.html">BotonClipControl</a></div><div class="ttdoc">Esta clase controla un botón que permite activar/desactivar el sonido y reproducir un efecto de sonid...</div><div class="ttdef"><b>Definition</b> <a href="#l00008">Audio.cs:11</a></div></div>
+<div class="ttc" id="aclass_boton_clip_control_html_a1266993d1de99774d4b86752e3daa71d"><div class="ttname"><a href="class_boton_clip_control.html#a1266993d1de99774d4b86752e3daa71d">BotonClipControl.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">Inicializa el AudioManager si no existe en la escena. Se ejecuta antes de Start y es útil para config...</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Audio.cs:28</a></div></div>
+<div class="ttc" id="aclass_boton_clip_control_html_a2daa680e31529baf5d8a548f20b65298"><div class="ttname"><a href="class_boton_clip_control.html#a2daa680e31529baf5d8a548f20b65298">BotonClipControl.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Se llama al inicio de la escena, justo después de Awake. Aquí se configura el botón.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Audio.cs:48</a></div></div>
 <div class="ttc" id="aclass_boton_clip_control_html_aa782427cbca519cb24551e787da39564"><div class="ttname"><a href="class_boton_clip_control.html#aa782427cbca519cb24551e787da39564">BotonClipControl.botonSonido</a></div><div class="ttdeci">Button botonSonido</div><div class="ttdoc">Referencia al botón que se utiliza para controlar el sonido.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">Audio.cs:15</a></div></div>
+<div class="ttc" id="aclass_boton_clip_control_html_ab6226db98f1e025f9ec59d6982afd45f"><div class="ttname"><a href="class_boton_clip_control.html#ab6226db98f1e025f9ec59d6982afd45f">BotonClipControl.ToggleSonido</a></div><div class="ttdeci">void ToggleSonido()</div><div class="ttdoc">Alterna el estado del sonido global y reproduce un clip de audio si está asignado.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">Audio.cs:59</a></div></div>
 <div class="ttc" id="aclass_boton_clip_control_html_acaea4f565c696a65bd2bc36b216e964c"><div class="ttname"><a href="class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c">BotonClipControl.sonidoBoton</a></div><div class="ttdeci">AudioClip sonidoBoton</div><div class="ttdoc">Clip de sonido que se reproduce cuando se presiona el botón.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Audio.cs:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

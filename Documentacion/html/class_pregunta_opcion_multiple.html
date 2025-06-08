@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: PreguntaOpcionMultiple Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -126,12 +126,107 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a1d64ed1738108314ddc46dab5c550b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que muestra el resultado de la selección del jugador.  <br /></td></tr>
 <tr class="memitem:af22788fb0908c8f06bfb6087bb8454a0" id="r_af22788fb0908c8f06bfb6087bb8454a0"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af22788fb0908c8f06bfb6087bb8454a0">sonidoBoton</a></td></tr>
 <tr class="memdesc:af22788fb0908c8f06bfb6087bb8454a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip de audio que se reproduce al seleccionar o confirmar una opción.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa3649eff57f3e3f43278685a3f312089" id="r_aa3649eff57f3e3f43278685a3f312089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3649eff57f3e3f43278685a3f312089">Start</a> ()</td></tr>
+<tr class="memitem:ab1e13d332dc38c58402b54c2ccb752bd" id="r_ab1e13d332dc38c58402b54c2ccb752bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e13d332dc38c58402b54c2ccb752bd">PasarASiguienteTrivia</a> ()</td></tr>
+<tr class="memitem:ad429c32c40b98d7660a672c1f1f4581f" id="r_ad429c32c40b98d7660a672c1f1f4581f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad429c32c40b98d7660a672c1f1f4581f">IncrementarPuntajeBasicoCorrecto</a> ()</td></tr>
+<tr class="memitem:ac378e860f20083602f262b3cee50754f" id="r_ac378e860f20083602f262b3cee50754f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac378e860f20083602f262b3cee50754f">IncrementarPuntajeBasicoIncorrecto</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9a78b3a3996ee5ef9f1fa412149d80fb" id="r_a9a78b3a3996ee5ef9f1fa412149d80fb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a78b3a3996ee5ef9f1fa412149d80fb">pregunta</a> = &quot;¿Cuál de las siguientes oraciones usa correctamente la coma para separar elementos de una serie?&quot;</td></tr>
+<tr class="memitem:a4083e5050f285a3bae6a0db08cdc32d8" id="r_a4083e5050f285a3bae6a0db08cdc32d8"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4083e5050f285a3bae6a0db08cdc32d8">opciones</a></td></tr>
+<tr class="memitem:a965c7aab54ca365e502273f84efff157" id="r_a965c7aab54ca365e502273f84efff157"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a965c7aab54ca365e502273f84efff157">indicesCorrectos</a> = { 0, 3 }</td></tr>
+<tr class="memitem:aee3aa1de25a2da8dffc0e6365ae0831e" id="r_aee3aa1de25a2da8dffc0e6365ae0831e"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3aa1de25a2da8dffc0e6365ae0831e">seleccionadas</a> = new List&lt;int&gt;()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla una pregunta de opción múltiple, permite seleccionar varias respuestas y muestra retroalimentación. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00011">11</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad429c32c40b98d7660a672c1f1f4581f" name="ad429c32c40b98d7660a672c1f1f4581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad429c32c40b98d7660a672c1f1f4581f">&#9670;&#160;</a></span>IncrementarPuntajeBasicoCorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreguntaOpcionMultiple.IncrementarPuntajeBasicoCorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00157">157</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac378e860f20083602f262b3cee50754f" name="ac378e860f20083602f262b3cee50754f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac378e860f20083602f262b3cee50754f">&#9670;&#160;</a></span>IncrementarPuntajeBasicoIncorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreguntaOpcionMultiple.IncrementarPuntajeBasicoIncorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00163">163</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab1e13d332dc38c58402b54c2ccb752bd" name="ab1e13d332dc38c58402b54c2ccb752bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e13d332dc38c58402b54c2ccb752bd">&#9670;&#160;</a></span>PasarASiguienteTrivia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreguntaOpcionMultiple.PasarASiguienteTrivia </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00150">150</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
 <a id="a2e7f88d0c71d63b7354e71e93424a4d8" name="a2e7f88d0c71d63b7354e71e93424a4d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e7f88d0c71d63b7354e71e93424a4d8">&#9670;&#160;</a></span>SeleccionarOpcion()</h2>
 
@@ -164,6 +259,33 @@ Data Fields</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00075">75</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa3649eff57f3e3f43278685a3f312089" name="aa3649eff57f3e3f43278685a3f312089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3649eff57f3e3f43278685a3f312089">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreguntaOpcionMultiple.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00061">61</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
 
 </div>
 </div>
@@ -233,6 +355,60 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a965c7aab54ca365e502273f84efff157" name="a965c7aab54ca365e502273f84efff157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965c7aab54ca365e502273f84efff157">&#9670;&#160;</a></span>indicesCorrectos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] PreguntaOpcionMultiple.indicesCorrectos = { 0, 3 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00057">57</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4083e5050f285a3bae6a0db08cdc32d8" name="a4083e5050f285a3bae6a0db08cdc32d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4083e5050f285a3bae6a0db08cdc32d8">&#9670;&#160;</a></span>opciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] PreguntaOpcionMultiple.opciones</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;A.Me gusta comer pizza hamburguesa y helado.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;B.En el parque hay árboles, flores y bancos.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;C.Compré una camiseta, unos pantalones, y unos zapatos.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;D.Mis colores favoritos son rojo, azul y verde&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00050">50</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
 <a id="abce8c33147a0f11e80766ad26978a2ea" name="abce8c33147a0f11e80766ad26978a2ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abce8c33147a0f11e80766ad26978a2ea">&#9670;&#160;</a></span>Paneles1</h2>
 
@@ -248,6 +424,54 @@ Data Fields</h2></td></tr>
 <p>Referencia al controlador de paneles para avanzar entre preguntas. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00016">16</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9a78b3a3996ee5ef9f1fa412149d80fb" name="a9a78b3a3996ee5ef9f1fa412149d80fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a78b3a3996ee5ef9f1fa412149d80fb">&#9670;&#160;</a></span>pregunta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PreguntaOpcionMultiple.pregunta = &quot;¿Cuál de las siguientes oraciones usa correctamente la coma para separar elementos de una serie?&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00048">48</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
+
+</div>
+</div>
+<a id="aee3aa1de25a2da8dffc0e6365ae0831e" name="aee3aa1de25a2da8dffc0e6365ae0831e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee3aa1de25a2da8dffc0e6365ae0831e">&#9670;&#160;</a></span>seleccionadas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; PreguntaOpcionMultiple.seleccionadas = new List&lt;int&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia3_8cs_source.html#l00059">59</a> of file <a class="el" href="_trivia3_8cs_source.html">Trivia3.cs</a>.</p>
 
 </div>
 </div>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: PuntosManager Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -139,6 +139,16 @@ Data Fields</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa66fc0aad749b11cc5f183734f95f614" id="r_aa66fc0aad749b11cc5f183734f95f614"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_puntos_manager.html">PuntosManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa66fc0aad749b11cc5f183734f95f614">instancia</a></td></tr>
 <tr class="memdesc:aa66fc0aad749b11cc5f183734f95f614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancia estática única del gestor de puntos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1b47efd0b538c11d30b079e02abdcdf5" id="r_a1b47efd0b538c11d30b079e02abdcdf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b47efd0b538c11d30b079e02abdcdf5">Awake</a> ()</td></tr>
+<tr class="memitem:a25f262b2c1135015e6e98814f53cd482" id="r_a25f262b2c1135015e6e98814f53cd482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25f262b2c1135015e6e98814f53cd482">Start</a> ()</td></tr>
+<tr class="memitem:a740dca6594a21885f7e1cc310aaa7899" id="r_a740dca6594a21885f7e1cc310aaa7899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740dca6594a21885f7e1cc310aaa7899">OnEnable</a> ()</td></tr>
+<tr class="memitem:a9eb6baf17cafbb72d421c83bdd718bb6" id="r_a9eb6baf17cafbb72d421c83bdd718bb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eb6baf17cafbb72d421c83bdd718bb6">OnDisable</a> ()</td></tr>
+<tr class="memitem:ae8de0ad1f96d19f32a0832aabcf2b749" id="r_ae8de0ad1f96d19f32a0832aabcf2b749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8de0ad1f96d19f32a0832aabcf2b749">OnSceneLoaded</a> (Scene escena, LoadSceneMode modo)</td></tr>
+<tr class="memitem:ae1eb63f253f648ff486d2dc001512cd5" id="r_ae1eb63f253f648ff486d2dc001512cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1eb63f253f648ff486d2dc001512cd5">ActualizarReferencias</a> ()</td></tr>
+<tr class="memitem:a5bbbd511a3b52c11dad3d96c81332301" id="r_a5bbbd511a3b52c11dad3d96c81332301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bbbd511a3b52c11dad3d96c81332301">ReproducirSonido</a> (System.Action accion)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gestiona la puntuación de trivias, actualización de UI, reinicio de puntajes y navegación al menú. Implementa un patrón Singleton para persistencia entre escenas. </p>
@@ -171,6 +181,60 @@ Static Public Attributes</h2></td></tr>
 <p>Actualiza los textos en pantalla con los valores almacenados en PlayerPrefs. </p>
 
 <p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00137">137</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae1eb63f253f648ff486d2dc001512cd5" name="ae1eb63f253f648ff486d2dc001512cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1eb63f253f648ff486d2dc001512cd5">&#9670;&#160;</a></span>ActualizarReferencias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.ActualizarReferencias </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00106">106</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1b47efd0b538c11d30b079e02abdcdf5" name="a1b47efd0b538c11d30b079e02abdcdf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b47efd0b538c11d30b079e02abdcdf5">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00067">67</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
 
 </div>
 </div>
@@ -229,6 +293,145 @@ Static Public Attributes</h2></td></tr>
 <p>Reinicia todos los puntajes guardados en PlayerPrefs y actualiza la UI. </p>
 
 <p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00161">161</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9eb6baf17cafbb72d421c83bdd718bb6" name="a9eb6baf17cafbb72d421c83bdd718bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb6baf17cafbb72d421c83bdd718bb6">&#9670;&#160;</a></span>OnDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00094">94</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="a740dca6594a21885f7e1cc310aaa7899" name="a740dca6594a21885f7e1cc310aaa7899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740dca6594a21885f7e1cc310aaa7899">&#9670;&#160;</a></span>OnEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00089">89</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae8de0ad1f96d19f32a0832aabcf2b749" name="ae8de0ad1f96d19f32a0832aabcf2b749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8de0ad1f96d19f32a0832aabcf2b749">&#9670;&#160;</a></span>OnSceneLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.OnSceneLoaded </td>
+          <td>(</td>
+          <td class="paramtype">Scene</td>          <td class="paramname"><span class="paramname"><em>escena</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoadSceneMode</td>          <td class="paramname"><span class="paramname"><em>modo</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00099">99</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5bbbd511a3b52c11dad3d96c81332301" name="a5bbbd511a3b52c11dad3d96c81332301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbbd511a3b52c11dad3d96c81332301">&#9670;&#160;</a></span>ReproducirSonido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.ReproducirSonido </td>
+          <td>(</td>
+          <td class="paramtype">System.Action</td>          <td class="paramname"><span class="paramname"><em>accion</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00186">186</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
+
+</div>
+</div>
+<a id="a25f262b2c1135015e6e98814f53cd482" name="a25f262b2c1135015e6e98814f53cd482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f262b2c1135015e6e98814f53cd482">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuntosManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_puntaje_8cs_source.html#l00080">80</a> of file <a class="el" href="_puntaje_8cs_source.html">Puntaje.cs</a>.</p>
 
 </div>
 </div>

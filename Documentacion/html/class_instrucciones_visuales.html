@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: InstruccionesVisuales Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -115,14 +115,243 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a117e22f5649c57e5d89bd08f474af8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duración de la animación para cada mano.  <br /></td></tr>
 <tr class="memitem:abf8cf0eacf4f8f70696239ada80e5b9b" id="r_abf8cf0eacf4f8f70696239ada80e5b9b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf8cf0eacf4f8f70696239ada80e5b9b">desplazamiento</a> = 50f</td></tr>
 <tr class="memdesc:abf8cf0eacf4f8f70696239ada80e5b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cantidad de desplazamiento que realiza cada mano en su animación.  <br /></td></tr>
-<tr class="memitem:a1ac697defcec82cc09622f1c2684798f" id="r_a1ac697defcec82cc09622f1c2684798f"><td class="memItemLeft" align="right" valign="top">Joystick&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ac697defcec82cc09622f1c2684798f">joystick</a></td></tr>
+<tr class="memitem:a1ac697defcec82cc09622f1c2684798f" id="r_a1ac697defcec82cc09622f1c2684798f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joystick.html">Joystick</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ac697defcec82cc09622f1c2684798f">joystick</a></td></tr>
 <tr class="memdesc:a1ac697defcec82cc09622f1c2684798f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al joystick utilizado para detectar movimientos.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a82968c85831e9513fcaa12f9dc303071" id="r_a82968c85831e9513fcaa12f9dc303071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82968c85831e9513fcaa12f9dc303071">Start</a> ()</td></tr>
+<tr class="memdesc:a82968c85831e9513fcaa12f9dc303071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa las animaciones de manos al comenzar la escena.  <br /></td></tr>
+<tr class="memitem:aa6ae0e7ec59ebb4501e6edec672c85db" id="r_aa6ae0e7ec59ebb4501e6edec672c85db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6ae0e7ec59ebb4501e6edec672c85db">Update</a> ()</td></tr>
+<tr class="memdesc:aa6ae0e7ec59ebb4501e6edec672c85db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica la interacción del jugador y elimina las instrucciones visuales correspondientes.  <br /></td></tr>
+<tr class="memitem:a58b87be697010c6a05d4bd8fdab26528" id="r_a58b87be697010c6a05d4bd8fdab26528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b87be697010c6a05d4bd8fdab26528">AnimarMovimiento</a> (RectTransform mano, float direccionX)</td></tr>
+<tr class="memdesc:a58b87be697010c6a05d4bd8fdab26528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anima una mano con movimiento horizontal hacia una dirección específica.  <br /></td></tr>
+<tr class="memitem:a7ce5594c649be837d5b036cd52bac9f4" id="r_a7ce5594c649be837d5b036cd52bac9f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ce5594c649be837d5b036cd52bac9f4">AnimarToque</a> (RectTransform mano)</td></tr>
+<tr class="memdesc:a7ce5594c649be837d5b036cd52bac9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anima la mano de toque con un movimiento vertical hacia abajo.  <br /></td></tr>
+<tr class="memitem:a0d612b9d9b6ed883049fbcaaee258fd6" id="r_a0d612b9d9b6ed883049fbcaaee258fd6"><td class="memItemLeft" align="right" valign="top">System.Collections.IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d612b9d9b6ed883049fbcaaee258fd6">MoverMano</a> (RectTransform mano, Vector3 desde, Vector3 hasta)</td></tr>
+<tr class="memdesc:a0d612b9d9b6ed883049fbcaaee258fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que mueve la mano entre dos posiciones y repite la animación en bucle.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab566de3e87225959f08305b2e47e9625" id="r_ab566de3e87225959f08305b2e47e9625"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab566de3e87225959f08305b2e47e9625">izquierdaMostrada</a> = true</td></tr>
+<tr class="memdesc:ab566de3e87225959f08305b2e47e9625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la mano izquierda sigue activa en pantalla.  <br /></td></tr>
+<tr class="memitem:abeee9b587cb2726ffb27a9f20600f89b" id="r_abeee9b587cb2726ffb27a9f20600f89b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeee9b587cb2726ffb27a9f20600f89b">derechaMostrada</a> = true</td></tr>
+<tr class="memdesc:abeee9b587cb2726ffb27a9f20600f89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la mano derecha sigue activa en pantalla.  <br /></td></tr>
+<tr class="memitem:a9421d74e67667b1967e1c7d5fdd0bb01" id="r_a9421d74e67667b1967e1c7d5fdd0bb01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9421d74e67667b1967e1c7d5fdd0bb01">tocarMostrado</a> = true</td></tr>
+<tr class="memdesc:a9421d74e67667b1967e1c7d5fdd0bb01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si la mano de toque sigue activa en pantalla.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Esta clase gestiona una instrucción visual en el manejo de controles en pantalla usando imágenes animadas de manos. </p>
 
 <p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00008">8</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a58b87be697010c6a05d4bd8fdab26528" name="a58b87be697010c6a05d4bd8fdab26528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b87be697010c6a05d4bd8fdab26528">&#9670;&#160;</a></span>AnimarMovimiento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InstruccionesVisuales.AnimarMovimiento </td>
+          <td>(</td>
+          <td class="paramtype">RectTransform</td>          <td class="paramname"><span class="paramname"><em>mano</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>direccionX</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anima una mano con movimiento horizontal hacia una dirección específica. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mano</td><td>RectTransform de la mano a animar.</td></tr>
+    <tr><td class="paramname">direccionX</td><td>Desplazamiento horizontal.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00118">118</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7ce5594c649be837d5b036cd52bac9f4" name="a7ce5594c649be837d5b036cd52bac9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce5594c649be837d5b036cd52bac9f4">&#9670;&#160;</a></span>AnimarToque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InstruccionesVisuales.AnimarToque </td>
+          <td>(</td>
+          <td class="paramtype">RectTransform</td>          <td class="paramname"><span class="paramname"><em>mano</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anima la mano de toque con un movimiento vertical hacia abajo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mano</td><td>RectTransform de la mano de toque.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00132">132</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0d612b9d9b6ed883049fbcaaee258fd6" name="a0d612b9d9b6ed883049fbcaaee258fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d612b9d9b6ed883049fbcaaee258fd6">&#9670;&#160;</a></span>MoverMano()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Collections.IEnumerator InstruccionesVisuales.MoverMano </td>
+          <td>(</td>
+          <td class="paramtype">RectTransform</td>          <td class="paramname"><span class="paramname"><em>mano</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>desde</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>hasta</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que mueve la mano entre dos posiciones y repite la animación en bucle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mano</td><td>RectTransform de la mano a animar.</td></tr>
+    <tr><td class="paramname">desde</td><td>Posición inicial.</td></tr>
+    <tr><td class="paramname">hasta</td><td>Posición final.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>IEnumerator para control de corrutina.</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00148">148</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a82968c85831e9513fcaa12f9dc303071" name="a82968c85831e9513fcaa12f9dc303071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82968c85831e9513fcaa12f9dc303071">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InstruccionesVisuales.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicializa las animaciones de manos al comenzar la escena. </p>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00061">61</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa6ae0e7ec59ebb4501e6edec672c85db" name="aa6ae0e7ec59ebb4501e6edec672c85db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ae0e7ec59ebb4501e6edec672c85db">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InstruccionesVisuales.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica la interacción del jugador y elimina las instrucciones visuales correspondientes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00073">73</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="abeee9b587cb2726ffb27a9f20600f89b" name="abeee9b587cb2726ffb27a9f20600f89b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeee9b587cb2726ffb27a9f20600f89b">&#9670;&#160;</a></span>derechaMostrada</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InstruccionesVisuales.derechaMostrada = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica si la mano derecha sigue activa en pantalla. </p>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00051">51</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
 <a id="abf8cf0eacf4f8f70696239ada80e5b9b" name="abf8cf0eacf4f8f70696239ada80e5b9b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf8cf0eacf4f8f70696239ada80e5b9b">&#9670;&#160;</a></span>desplazamiento</h2>
 
@@ -159,6 +388,32 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="ab566de3e87225959f08305b2e47e9625" name="ab566de3e87225959f08305b2e47e9625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab566de3e87225959f08305b2e47e9625">&#9670;&#160;</a></span>izquierdaMostrada</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InstruccionesVisuales.izquierdaMostrada = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica si la mano izquierda sigue activa en pantalla. </p>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00045">45</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
 <a id="a1ac697defcec82cc09622f1c2684798f" name="a1ac697defcec82cc09622f1c2684798f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ac697defcec82cc09622f1c2684798f">&#9670;&#160;</a></span>joystick</h2>
 
@@ -166,7 +421,7 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Joystick InstruccionesVisuales.joystick</td>
+          <td class="memname"><a class="el" href="class_joystick.html">Joystick</a> InstruccionesVisuales.joystick</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,6 +483,32 @@ Data Fields</h2></td></tr>
 <p>Imagen de la mano que indica el toque en pantalla. </p>
 
 <p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00024">24</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9421d74e67667b1967e1c7d5fdd0bb01" name="a9421d74e67667b1967e1c7d5fdd0bb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9421d74e67667b1967e1c7d5fdd0bb01">&#9670;&#160;</a></span>tocarMostrado</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InstruccionesVisuales.tocarMostrado = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indica si la mano de toque sigue activa en pantalla. </p>
+
+<p class="definition">Definition at line <a class="el" href="_instruccion_8cs_source.html#l00056">56</a> of file <a class="el" href="_instruccion_8cs_source.html">Instruccion.cs</a>.</p>
 
 </div>
 </div>

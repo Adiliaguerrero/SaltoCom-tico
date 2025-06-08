@@ -1,11 +1,30 @@
 var class_unir_frases_interactivo =
 [
+    [ "DetectarDestino", "class_unir_frases_interactivo.html#ace0fb6405474f680be4e9d5e589ebcfe", null ],
+    [ "DetectarTextoDebajoDelMouse", "class_unir_frases_interactivo.html#ab6b07a49b01a7734a988d7468ff6df98", null ],
+    [ "DibujarLinea", "class_unir_frases_interactivo.html#a95aba5be1274de091d55bfda12603ab8", null ],
+    [ "IncrementarPuntajeAvanzadoCorrecto", "class_unir_frases_interactivo.html#a26f510ffd2a130c3153ccceb6c557ab8", null ],
+    [ "IncrementarPuntajeAvanzadoIncorrecto", "class_unir_frases_interactivo.html#af619858c2d9b5abc5ea98b9b984831d7", null ],
     [ "IniciarArrastreDesdeTexto", "class_unir_frases_interactivo.html#ac545fc01d7faea567f1b4ff3d85274b0", null ],
+    [ "ObtenerCentro", "class_unir_frases_interactivo.html#a141eb8c8638d2054518d9b41d3afbddd", null ],
+    [ "ObtenerPuntoDeDestino", "class_unir_frases_interactivo.html#aff1d4da57e3ea495cb9575cd8382ba78", null ],
+    [ "PasarASiguienteTrivia", "class_unir_frases_interactivo.html#ae0f1319eac4805d815ee628b3a0a35ee", null ],
+    [ "Start", "class_unir_frases_interactivo.html#aa7c897966f5709e465fa8316128aa324", null ],
+    [ "Update", "class_unir_frases_interactivo.html#aef08094cd6563b8dea37b99248531287", null ],
+    [ "VerificarRespuesta", "class_unir_frases_interactivo.html#a387332e602c32fe0f0fdeb3039b6fab3", null ],
+    [ "arrastrando", "class_unir_frases_interactivo.html#aec79863b38ea4e0e38178b0667ce42b3", null ],
+    [ "destinoSeleccionado", "class_unir_frases_interactivo.html#a8725640d4f983514d45470af1ae13afd", null ],
+    [ "fraseSinComas", "class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986", null ],
     [ "imagenLinea", "class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40", null ],
+    [ "indiceCorrecto", "class_unir_frases_interactivo.html#aeac0acd3af34396ae7bee4717abf88de", null ],
+    [ "opcionesConComas", "class_unir_frases_interactivo.html#a604d37deed43dc471b1314a3352ca261", null ],
+    [ "origenSeleccionado", "class_unir_frases_interactivo.html#a4d9d68184b7897982b913b3557f0ee61", null ],
     [ "Paneles1", "class_unir_frases_interactivo.html#a9db1e30ff5c57ed5b429c09847637c5a", null ],
+    [ "puntoInicio", "class_unir_frases_interactivo.html#ab146dcf5e533d8ca90533febac0e3c87", null ],
     [ "puntoInicioManual", "class_unir_frases_interactivo.html#a02b26fb7175e866f0d7eea93b7479637", null ],
     [ "puntosDerechos", "class_unir_frases_interactivo.html#add97c2d73332da3da180c532d98de964", null ],
     [ "textoIzquierdo", "class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2", null ],
     [ "textoResultado", "class_unir_frases_interactivo.html#a169715f926ac6c91306139383c324b05", null ],
-    [ "textosDerechos", "class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f", null ]
+    [ "textosDerechos", "class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f", null ],
+    [ "yaUnido", "class_unir_frases_interactivo.html#a460d438856e5f595368937ec8a7a4c9e", null ]
 ];

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/DialogContr.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -117,11 +117,12 @@ $(function(){initNavTree('_dialog_contr_8cs_source.html','',''); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        StartCoroutine(MostrarLineas(alTerminar));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        StartCoroutine(<a class="code hl_function" href="class_dialogo_controller.html#a638bd87144dae0199efd64cf3c8daed3">MostrarLineas</a>(alTerminar));</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">private</span> IEnumerator MostrarLineas(System.Action callback)</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_dialogo_controller.html#a638bd87144dae0199efd64cf3c8daed3">   78</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_dialogo_controller.html#a638bd87144dae0199efd64cf3c8daed3">MostrarLineas</a>(System.Action callback)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">foreach</span> (<span class="keywordtype">string</span> linea <span class="keywordflow">in</span> <a class="code hl_variable" href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">lineasDialogo</a>)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
@@ -136,6 +137,7 @@ $(function(){initNavTree('_dialog_contr_8cs_source.html','',''); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        callback?.Invoke();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 </div>
 <div class="ttc" id="aclass_dialogo_controller_html"><div class="ttname"><a href="class_dialogo_controller.html">DialogoController</a></div><div class="ttdoc">Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DialogContr.cs:23</a></div></div>
@@ -143,6 +145,7 @@ $(function(){initNavTree('_dialog_contr_8cs_source.html','',''); });
 <div class="ttc" id="aclass_dialogo_controller_html_a3fa61ce9a80902999374b385416008b2"><div class="ttname"><a href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">DialogoController.MostrarDialogo</a></div><div class="ttdeci">void MostrarDialogo(System.Action alTerminar)</div><div class="ttdoc">Inicia la visualización del diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">DialogContr.cs:62</a></div></div>
 <div class="ttc" id="aclass_dialogo_controller_html_a577d9974bf82a2fe7be36a45792330fc"><div class="ttname"><a href="class_dialogo_controller.html#a577d9974bf82a2fe7be36a45792330fc">DialogoController.lineasDialogo</a></div><div class="ttdeci">List&lt; string &gt; lineasDialogo</div><div class="ttdoc">Lista de líneas que serán mostradas una a una en el diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">DialogContr.cs:44</a></div></div>
 <div class="ttc" id="aclass_dialogo_controller_html_a6195ef4b24971b5c8fdbcaac6208b8e8"><div class="ttname"><a href="class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8">DialogoController.tiempoEntreLineas</a></div><div class="ttdeci">float tiempoEntreLineas</div><div class="ttdoc">Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">DialogContr.cs:50</a></div></div>
+<div class="ttc" id="aclass_dialogo_controller_html_a638bd87144dae0199efd64cf3c8daed3"><div class="ttname"><a href="class_dialogo_controller.html#a638bd87144dae0199efd64cf3c8daed3">DialogoController.MostrarLineas</a></div><div class="ttdeci">IEnumerator MostrarLineas(System.Action callback)</div><div class="ttdoc">Corrutina que recorre cada línea del diálogo y la muestra en pantalla con una pausa entre cada una.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">DialogContr.cs:78</a></div></div>
 <div class="ttc" id="aclass_dialogo_controller_html_a8aaf08416957973cff7afb2c02a674b4"><div class="ttname"><a href="class_dialogo_controller.html#a8aaf08416957973cff7afb2c02a674b4">DialogoController.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdoc">Panel de UI que contiene el diálogo completo, incluyendo fondo y texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">DialogContr.cs:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

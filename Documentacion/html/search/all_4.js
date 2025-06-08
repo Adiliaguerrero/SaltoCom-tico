@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['escalacorrecta_0',['escalaCorrecta',['../class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff',1,'ForzarEscala']]],
-  ['escena1_1',['escena1',['../class_escena_restraurar.html#a44d1887096456208956e4160f39caa3e',1,'EscenaRestraurar']]],
-  ['escena2_2',['escena2',['../class_escena_restraurar.html#aeb97509f566a779c3a61472974b48e0d',1,'EscenaRestraurar']]],
-  ['escenarestraurar_3',['EscenaRestraurar',['../class_escena_restraurar.html',1,'']]],
-  ['escenarestraurar_2ecs_4',['EscenaRestraurar.cs',['../_escena_restraurar_8cs.html',1,'']]],
-  ['espaciosvalidos_5',['espaciosValidos',['../class_texto_con_comas_t_m_p.html#a15c2d189fa3d55505bb060b7e25d09c1',1,'TextoConComasTMP']]],
-  ['espina_6',['Espina',['../class_espina.html',1,'']]],
-  ['esreaparicion_7',['esReaparicion',['../class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d',1,'SistemaDialogo']]]
+  ['encooldown_0',['enCooldown',['../class_enemigo.html#a023d98e37bcc0dada01e504a5c63cc9a',1,'Enemigo.enCooldown'],['../class_ninja.html#aa111cce7fc9a32a93a6eed9619114297',1,'Ninja.enCooldown']]],
+  ['enemigo_1',['Enemigo',['../class_enemigo.html',1,'']]],
+  ['enemigo_2ecs_2',['Enemigo.cs',['../_enemigo_8cs.html',1,'']]],
+  ['ensuelo_3',['enSuelo',['../class_player_controller.html#a0346ffa5d4122489ebeadd9ec277482c',1,'PlayerController']]],
+  ['escalacorrecta_4',['escalaCorrecta',['../class_forzar_escala.html#a02cca4bdb149539ddfa7bdee72ce2cff',1,'ForzarEscala']]],
+  ['escena1_5',['escena1',['../class_escena_restraurar.html#a44d1887096456208956e4160f39caa3e',1,'EscenaRestraurar']]],
+  ['escena2_6',['escena2',['../class_escena_restraurar.html#aeb97509f566a779c3a61472974b48e0d',1,'EscenaRestraurar']]],
+  ['escenarestraurar_7',['EscenaRestraurar',['../class_escena_restraurar.html',1,'']]],
+  ['escenarestraurar_2ecs_8',['EscenaRestraurar.cs',['../_escena_restraurar_8cs.html',1,'']]],
+  ['escribirlinea_9',['EscribirLinea',['../class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1',1,'SistemaDialogo']]],
+  ['escrituraactual_10',['escrituraActual',['../class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c',1,'SistemaDialogo']]],
+  ['espaciosvalidos_11',['espaciosValidos',['../class_texto_con_comas_t_m_p.html#a15c2d189fa3d55505bb060b7e25d09c1',1,'TextoConComasTMP']]],
+  ['esperarymostrardialogo_12',['EsperarYMostrarDialogo',['../class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8',1,'ColisionadorTrigger2D']]],
+  ['espina_13',['Espina',['../class_espina.html',1,'']]],
+  ['esreaparicion_14',['esReaparicion',['../class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d',1,'SistemaDialogo']]],
+  ['estamuerto_15',['estaMuerto',['../class_enemigo.html#a482cae1fa65c5179f4130bac570f5edb',1,'Enemigo.estaMuerto'],['../class_ninja.html#a1bb11010f79f8540351f40442250cac7',1,'Ninja.estaMuerto']]]
 ];

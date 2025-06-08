@@ -1,9 +1,21 @@
 var searchData=
 [
-  ['forzarescala_0',['ForzarEscala',['../class_forzar_escala.html',1,'']]],
-  ['forzartamaño_2ecs_1',['ForzarTamaño.cs',['../_forzar_tama_xC3_xB1o_8cs.html',1,'']]],
-  ['fruta_2',['Fruta',['../class_fruta.html',1,'']]],
-  ['fruta_2ecs_3',['Fruta.cs',['../_fruta_8cs.html',1,'']]],
-  ['fuerzarebote_4',['FuerzaRebote',['../class_player_controller.html#a0f0f8da9666cf0beeee49aa552bcab0b',1,'PlayerController']]],
-  ['fuerzasalto_5',['fuerzaSalto',['../class_player_controller.html#a57283fb6f5a78a8663be9995acdea49c',1,'PlayerController']]]
+  ['fixed_0',['Fixed',['../_variable_joystick_8cs.html#a8de4939237efe914e87ff0af9d50cd0ca4457d440870ad6d42bab9082d9bf9b61',1,'VariableJoystick.cs']]],
+  ['fixedjoystick_1',['FixedJoystick',['../class_fixed_joystick.html',1,'']]],
+  ['fixedjoystick_2ecs_2',['FixedJoystick.cs',['../_fixed_joystick_8cs.html',1,'']]],
+  ['fixedposition_3',['fixedPosition',['../class_variable_joystick.html#a187c7ac63f32b040192f6a59614893c8',1,'VariableJoystick']]],
+  ['fixedupdate_4',['FixedUpdate',['../class_joystick_player_example.html#a7c65ff7b923cc08c30138d317cc0f780',1,'JoystickPlayerExample']]],
+  ['floating_5',['Floating',['../_variable_joystick_8cs.html#a8de4939237efe914e87ff0af9d50cd0cac8df43648942ec3a9aec140f07f47b7c',1,'VariableJoystick.cs']]],
+  ['floatingjoystick_6',['FloatingJoystick',['../class_floating_joystick.html',1,'']]],
+  ['floatingjoystick_2ecs_7',['FloatingJoystick.cs',['../_floating_joystick_8cs.html',1,'']]],
+  ['floatingjoystickeditor_8',['FloatingJoystickEditor',['../class_floating_joystick_editor.html',1,'']]],
+  ['floatingjoystickeditor_2ecs_9',['FloatingJoystickEditor.cs',['../_floating_joystick_editor_8cs.html',1,'']]],
+  ['formatinput_10',['FormatInput',['../class_joystick.html#a7fe35f556b605f57580304bf4b7bd5b8',1,'Joystick']]],
+  ['forzarescala_11',['ForzarEscala',['../class_forzar_escala.html',1,'']]],
+  ['forzartamaño_2ecs_12',['ForzarTamaño.cs',['../_forzar_tama_xC3_xB1o_8cs.html',1,'']]],
+  ['frasesincomas_13',['fraseSinComas',['../class_unir_frases_interactivo.html#aa0e0374d6a44d6e2f30a1c3125a9e986',1,'UnirFrasesInteractivo']]],
+  ['fruta_14',['Fruta',['../class_fruta.html',1,'']]],
+  ['fruta_2ecs_15',['Fruta.cs',['../_fruta_8cs.html',1,'']]],
+  ['fuerzarebote_16',['FuerzaRebote',['../class_player_controller.html#a0f0f8da9666cf0beeee49aa552bcab0b',1,'PlayerController']]],
+  ['fuerzasalto_17',['fuerzaSalto',['../class_player_controller.html#a57283fb6f5a78a8663be9995acdea49c',1,'PlayerController']]]
 ];

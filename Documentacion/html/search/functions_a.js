@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['pasarasiguientetrivia_0',['PasarASiguienteTrivia',['../class_trivia1.html#ab9643db0ad69310e288cfcb0854f17a3',1,'Trivia1.PasarASiguienteTrivia()'],['../class_opcion_unica.html#a94660cd2d22242faf7e18674d45fab3f',1,'OpcionUnica.PasarASiguienteTrivia()'],['../class_pregunta_opcion_multiple.html#ab1e13d332dc38c58402b54c2ccb752bd',1,'PreguntaOpcionMultiple.PasarASiguienteTrivia()'],['../class_opcion_unica2.html#a744b47d64925a2d167e54f268f78a28b',1,'OpcionUnica2.PasarASiguienteTrivia()'],['../class_texto_con_comas_t_m_p.html#a87c21fbef36df3911f916343acfcf840',1,'TextoConComasTMP.PasarASiguienteTrivia()'],['../class_transcribir_oracion2.html#a9571230879aacadda9f1caf3b45a4080',1,'TranscribirOracion2.PasarASiguienteTrivia()'],['../class_transcribir_oracion3.html#a8fd6488eda3a1ca9da812af3f09d1be8',1,'TranscribirOracion3.PasarASiguienteTrivia()'],['../class_opcion_unica3.html#ac62cf8be8b08b700b462965994fc0b42',1,'OpcionUnica3.PasarASiguienteTrivia()'],['../class_unir_frases_interactivo.html#ae0f1319eac4805d815ee628b3a0a35ee',1,'UnirFrasesInteractivo.PasarASiguienteTrivia()']]],
+  ['presionarfalso_1',['PresionarFalso',['../class_trivia1.html#aa3b1be5a76fedff58842fb6284544e7e',1,'Trivia1']]],
+  ['presionarverdadero_2',['PresionarVerdadero',['../class_trivia1.html#a6b53d0deb54ef58fa566a88913da5ed4',1,'Trivia1']]]
+];

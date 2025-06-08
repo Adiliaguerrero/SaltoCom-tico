@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['textocarga_0',['textoCarga',['../class_carga_inicial.html#aa223bd682fbb5f2985ed053acc0176d1',1,'CargaInicial']]],
+  ['textodialogo_1',['textoDialogo',['../class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc',1,'DialogoController.textoDialogo'],['../class_sistema_dialogo.html#acf496337d984a8508e91e0a5805c258e',1,'SistemaDialogo.textoDialogo']]],
+  ['textoduracion_2',['textoDuracion',['../class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc',1,'PortalCambioEscena']]],
+  ['textoizquierdo_3',['textoIzquierdo',['../class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2',1,'UnirFrasesInteractivo']]],
+  ['textomensaje_4',['textoMensaje',['../class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1',1,'ColisionadorTrigger2D.textoMensaje'],['../class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c',1,'PortalCambioEscena.textoMensaje']]],
+  ['textonombreobj_5',['textoNombreObj',['../class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4',1,'PortalCambioEscena']]],
+  ['textooracion_6',['textoOracion',['../class_transcribir_oracion2.html#ad1ded7a632224f285f19c489fc2b0d28',1,'TranscribirOracion2.textoOracion'],['../class_transcribir_oracion3.html#a95c0896424cf83a1d7ea26b7ceb51b32',1,'TranscribirOracion3.textoOracion']]],
+  ['textooriginal_7',['textoOriginal',['../class_texto_con_comas_t_m_p.html#a5d03a57303c741e6bf4995f2c2cc7fce',1,'TextoConComasTMP']]],
+  ['textopantalla_8',['textoPantalla',['../class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956',1,'PantallaDialogo']]],
+  ['textopregunta_9',['textoPregunta',['../class_pregunta_opcion_multiple.html#a87b89b8e53e73a4b1da407cfc9a2caff',1,'PreguntaOpcionMultiple']]],
+  ['textoresultado_10',['textoResultado',['../class_pregunta_opcion_multiple.html#a1d64ed1738108314ddc46dab5c550b12',1,'PreguntaOpcionMultiple.textoResultado'],['../class_unir_frases_interactivo.html#a169715f926ac6c91306139383c324b05',1,'UnirFrasesInteractivo.textoResultado']]],
+  ['textoretroalimentacion_11',['textoRetroalimentacion',['../class_texto_con_comas_t_m_p.html#a862ae23b6eba3c78f3e82d78ce4588c8',1,'TextoConComasTMP.textoRetroalimentacion'],['../class_transcribir_oracion2.html#a5bc8c27e60c60dea802feabca9ef009b',1,'TranscribirOracion2.textoRetroalimentacion'],['../class_transcribir_oracion3.html#aa949c78a7228c26c07a89e37b0fc2165',1,'TranscribirOracion3.textoRetroalimentacion']]],
+  ['textosderechos_12',['textosDerechos',['../class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f',1,'UnirFrasesInteractivo']]],
+  ['textosopciones_13',['textosOpciones',['../class_pregunta_opcion_multiple.html#aa9ccedb8beb61b0b90bf551b1916e2b9',1,'PreguntaOpcionMultiple']]],
+  ['textotmp_14',['textoTMP',['../class_texto_con_comas_t_m_p.html#ad85e04ae670f2176fd58897e31ae2d56',1,'TextoConComasTMP']]],
+  ['tiempoanimacionmuerte_15',['tiempoAnimacionMuerte',['../class_ninja.html#a83a444a693d8efe42f2f121d2c343df8',1,'Ninja']]],
+  ['tiempoantescambioescena_16',['tiempoAntesCambioEscena',['../class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce',1,'PantallaDialogo']]],
+  ['tiempocarga_17',['tiempoCarga',['../class_carga_inicial.html#a6822859abb1db039703b28673a739d42',1,'CargaInicial']]],
+  ['tiempoentredialogos_18',['tiempoEntreDialogos',['../class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642',1,'PantallaDialogo']]],
+  ['tiempoentreletras_19',['tiempoEntreLetras',['../class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e',1,'PantallaDialogo']]],
+  ['tiempoentrelineas_20',['tiempoEntreLineas',['../class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8',1,'DialogoController']]],
+  ['tiempoespera_21',['tiempoEspera',['../class_pajaro_enemigo.html#a11f9ae6e43c65ecc227db304b35fa0e8',1,'PajaroEnemigo']]],
+  ['tocarmostrado_22',['tocarMostrado',['../class_instrucciones_visuales.html#a9421d74e67667b1967e1c7d5fdd0bb01',1,'InstruccionesVisuales']]],
+  ['triviaactual_23',['triviaActual',['../class_paneles1.html#a5e53750b2bc7c7e049b1b872d5cb048b',1,'Paneles1']]]
+];

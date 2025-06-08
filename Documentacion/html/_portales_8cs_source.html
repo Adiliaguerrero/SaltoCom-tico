@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/Portales.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -108,33 +108,36 @@ $(function(){initNavTree('_portales_8cs_source.html','',''); });
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#ad6c50ac58301586bfe90cb35aa3f577a">   29</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_portal_cambio_escena.html#ad6c50ac58301586bfe90cb35aa3f577a">duracionMensaje</a> = 3f;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> textoNombreObj;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> textoMensaje;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">float</span> textoDuracion;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> mostrarBienvenida = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4">   31</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4">textoNombreObj</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c">   32</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c">textoMensaje</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc">   33</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc">textoDuracion</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">   34</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">mostrarBienvenida</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnCollisionEnter2D(Collision2D collision)</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a99ef0c40d34883326c240ee1213a80f4">   36</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_portal_cambio_escena.html#a99ef0c40d34883326c240ee1213a80f4">OnCollisionEnter2D</a>(Collision2D collision)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (collision.collider.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            textoNombreObj = <a class="code hl_variable" href="class_portal_cambio_escena.html#a380b14499e246b801f276fc18b2adbdf">nombreObjetoTextoBienvenida</a>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            textoMensaje = <a class="code hl_variable" href="class_portal_cambio_escena.html#a19f8c683a47c376d8f0ccc60d94fd990">mensajeBienvenida</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            textoDuracion = <a class="code hl_variable" href="class_portal_cambio_escena.html#ad6c50ac58301586bfe90cb35aa3f577a">duracionMensaje</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            mostrarBienvenida = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4">textoNombreObj</a> = <a class="code hl_variable" href="class_portal_cambio_escena.html#a380b14499e246b801f276fc18b2adbdf">nombreObjetoTextoBienvenida</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c">textoMensaje</a> = <a class="code hl_variable" href="class_portal_cambio_escena.html#a19f8c683a47c376d8f0ccc60d94fd990">mensajeBienvenida</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc">textoDuracion</a> = <a class="code hl_variable" href="class_portal_cambio_escena.html#ad6c50ac58301586bfe90cb35aa3f577a">duracionMensaje</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">mostrarBienvenida</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            DontDestroyOnLoad(this.gameObject);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            SceneManager.sceneLoaded += OnSceneLoaded;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            SceneManager.sceneLoaded += <a class="code hl_function" href="class_portal_cambio_escena.html#a7f253140bdfc3a5e6df89670904dabf7">OnSceneLoaded</a>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            SceneManager.LoadScene(<a class="code hl_variable" href="class_portal_cambio_escena.html#a9d4495138c5d66ff6d2816a901e32ca7">nombreEscenaDestino</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnSceneLoaded(Scene scene, LoadSceneMode mode)</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a7f253140bdfc3a5e6df89670904dabf7">   53</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_portal_cambio_escena.html#a7f253140bdfc3a5e6df89670904dabf7">OnSceneLoaded</a>(Scene scene, LoadSceneMode mode)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (mostrarBienvenida)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">mostrarBienvenida</a>)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            GameObject obj = GameObject.Find(textoNombreObj);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            GameObject obj = GameObject.Find(<a class="code hl_variable" href="class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4">textoNombreObj</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (obj != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
@@ -142,31 +145,41 @@ $(function(){initNavTree('_portales_8cs_source.html','',''); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">if</span> (texto != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    texto.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    texto.text = textoMensaje;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    texto.text = <a class="code hl_variable" href="class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c">textoMensaje</a>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    obj.GetComponent&lt;MonoBehaviour&gt;()?.StartCoroutine(DesactivarTexto(obj, textoDuracion));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    obj.GetComponent&lt;MonoBehaviour&gt;()?.StartCoroutine(<a class="code hl_function" href="class_portal_cambio_escena.html#a14fd7e5961bc8a1a7de09e38db5c45f8">DesactivarTexto</a>(obj, <a class="code hl_variable" href="class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc">textoDuracion</a>));</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            mostrarBienvenida = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_variable" href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">mostrarBienvenida</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            SceneManager.sceneLoaded -= OnSceneLoaded;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            SceneManager.sceneLoaded -= <a class="code hl_function" href="class_portal_cambio_escena.html#a7f253140bdfc3a5e6df89670904dabf7">OnSceneLoaded</a>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            Destroy(this.gameObject);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">private</span> System.Collections.IEnumerator DesactivarTexto(GameObject obj, <span class="keywordtype">float</span> delay)</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_portal_cambio_escena.html#a14fd7e5961bc8a1a7de09e38db5c45f8">   79</a></span>    <span class="keyword">private</span> System.Collections.IEnumerator <a class="code hl_function" href="class_portal_cambio_escena.html#a14fd7e5961bc8a1a7de09e38db5c45f8">DesactivarTexto</a>(GameObject obj, <span class="keywordtype">float</span> delay)</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(delay);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        obj.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
 </div>
 <div class="ttc" id="aclass_portal_cambio_escena_html"><div class="ttname"><a href="class_portal_cambio_escena.html">PortalCambioEscena</a></div><div class="ttdoc">Controla el cambio de escena al entrar en contacto con un portal. Muestra un mensaje de bienvenida te...</div><div class="ttdef"><b>Definition</b> <a href="#l00009">Portales.cs:10</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a14fd7e5961bc8a1a7de09e38db5c45f8"><div class="ttname"><a href="class_portal_cambio_escena.html#a14fd7e5961bc8a1a7de09e38db5c45f8">PortalCambioEscena.DesactivarTexto</a></div><div class="ttdeci">System.Collections.IEnumerator DesactivarTexto(GameObject obj, float delay)</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Portales.cs:79</a></div></div>
 <div class="ttc" id="aclass_portal_cambio_escena_html_a19f8c683a47c376d8f0ccc60d94fd990"><div class="ttname"><a href="class_portal_cambio_escena.html#a19f8c683a47c376d8f0ccc60d94fd990">PortalCambioEscena.mensajeBienvenida</a></div><div class="ttdeci">string mensajeBienvenida</div><div class="ttdoc">Mensaje de bienvenida que se mostrará al llegar a la nueva escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Portales.cs:24</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a2cb566eb45cccaa7bd10634d30442ecc"><div class="ttname"><a href="class_portal_cambio_escena.html#a2cb566eb45cccaa7bd10634d30442ecc">PortalCambioEscena.textoDuracion</a></div><div class="ttdeci">static float textoDuracion</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Portales.cs:33</a></div></div>
 <div class="ttc" id="aclass_portal_cambio_escena_html_a380b14499e246b801f276fc18b2adbdf"><div class="ttname"><a href="class_portal_cambio_escena.html#a380b14499e246b801f276fc18b2adbdf">PortalCambioEscena.nombreObjetoTextoBienvenida</a></div><div class="ttdeci">string nombreObjetoTextoBienvenida</div><div class="ttdoc">Nombre del objeto que contiene el texto de bienvenida en la nueva escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">Portales.cs:19</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a5f21f344fa180a8ae124d40ab932607c"><div class="ttname"><a href="class_portal_cambio_escena.html#a5f21f344fa180a8ae124d40ab932607c">PortalCambioEscena.textoMensaje</a></div><div class="ttdeci">static string textoMensaje</div><div class="ttdef"><b>Definition</b> <a href="#l00032">Portales.cs:32</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a724c9206f95b18b40ffed5735e6de7a2"><div class="ttname"><a href="class_portal_cambio_escena.html#a724c9206f95b18b40ffed5735e6de7a2">PortalCambioEscena.mostrarBienvenida</a></div><div class="ttdeci">static bool mostrarBienvenida</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Portales.cs:34</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a7f253140bdfc3a5e6df89670904dabf7"><div class="ttname"><a href="class_portal_cambio_escena.html#a7f253140bdfc3a5e6df89670904dabf7">PortalCambioEscena.OnSceneLoaded</a></div><div class="ttdeci">void OnSceneLoaded(Scene scene, LoadSceneMode mode)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Portales.cs:53</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a92540827fbd361a5e1f7a4d96bdd1cc4"><div class="ttname"><a href="class_portal_cambio_escena.html#a92540827fbd361a5e1f7a4d96bdd1cc4">PortalCambioEscena.textoNombreObj</a></div><div class="ttdeci">static string textoNombreObj</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Portales.cs:31</a></div></div>
+<div class="ttc" id="aclass_portal_cambio_escena_html_a99ef0c40d34883326c240ee1213a80f4"><div class="ttname"><a href="class_portal_cambio_escena.html#a99ef0c40d34883326c240ee1213a80f4">PortalCambioEscena.OnCollisionEnter2D</a></div><div class="ttdeci">void OnCollisionEnter2D(Collision2D collision)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Portales.cs:36</a></div></div>
 <div class="ttc" id="aclass_portal_cambio_escena_html_a9d4495138c5d66ff6d2816a901e32ca7"><div class="ttname"><a href="class_portal_cambio_escena.html#a9d4495138c5d66ff6d2816a901e32ca7">PortalCambioEscena.nombreEscenaDestino</a></div><div class="ttdeci">string nombreEscenaDestino</div><div class="ttdoc">Nombre de la escena de destino a cargar al colisionar con el portal.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Portales.cs:14</a></div></div>
 <div class="ttc" id="aclass_portal_cambio_escena_html_ad6c50ac58301586bfe90cb35aa3f577a"><div class="ttname"><a href="class_portal_cambio_escena.html#ad6c50ac58301586bfe90cb35aa3f577a">PortalCambioEscena.duracionMensaje</a></div><div class="ttdeci">float duracionMensaje</div><div class="ttdoc">Duración (en segundos) del mensaje de bienvenida.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Portales.cs:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

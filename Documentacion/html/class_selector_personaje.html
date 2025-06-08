@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: SelectorPersonaje Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -130,6 +130,16 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:abc0be0bd6c22ec7a25da04037c6e219f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto UI para mostrar el nombre del personaje seleccionado.  <br /></td></tr>
 <tr class="memitem:afb846de560f448259439b2aca008616a" id="r_afb846de560f448259439b2aca008616a"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb846de560f448259439b2aca008616a">sonidoBoton</a></td></tr>
 <tr class="memdesc:afb846de560f448259439b2aca008616a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al interactuar con los botones.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0f5216e38287b3567201b0a7892db60c" id="r_a0f5216e38287b3567201b0a7892db60c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5216e38287b3567201b0a7892db60c">CambiarPersonaje</a> ()</td></tr>
+<tr class="memitem:a0443554faaca901e55d20af1ae1146da" id="r_a0443554faaca901e55d20af1ae1146da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0443554faaca901e55d20af1ae1146da">Start</a> ()</td></tr>
+<tr class="memitem:a2e94a913a2b296ed9617fb8621fb1ad6" id="r_a2e94a913a2b296ed9617fb8621fb1ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e94a913a2b296ed9617fb8621fb1ad6">ReproducirSonidoBoton</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a874ae89d8fd2a9a6716d8d43bbbe4517" id="r_a874ae89d8fd2a9a6716d8d43bbbe4517"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a874ae89d8fd2a9a6716d8d43bbbe4517">indicePersonaje</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Permite al jugador seleccionar un personaje, mostrando su sprite e información, y luego carga la escena de aventura con el personaje elegido. </p>
@@ -162,6 +172,60 @@ Data Fields</h2></td></tr>
 <p>Retrocede al personaje anterior en la lista de selección. </p>
 
 <p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00071">71</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0f5216e38287b3567201b0a7892db60c" name="a0f5216e38287b3567201b0a7892db60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5216e38287b3567201b0a7892db60c">&#9670;&#160;</a></span>CambiarPersonaje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectorPersonaje.CambiarPersonaje </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00080">80</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2e94a913a2b296ed9617fb8621fb1ad6" name="a2e94a913a2b296ed9617fb8621fb1ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e94a913a2b296ed9617fb8621fb1ad6">&#9670;&#160;</a></span>ReproducirSonidoBoton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectorPersonaje.ReproducirSonidoBoton </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00121">121</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>
@@ -223,6 +287,33 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a0443554faaca901e55d20af1ae1146da" name="a0443554faaca901e55d20af1ae1146da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0443554faaca901e55d20af1ae1146da">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectorPersonaje.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00112">112</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a3daee2648113b4f2fdc6db516a501745" name="a3daee2648113b4f2fdc6db516a501745"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3daee2648113b4f2fdc6db516a501745">&#9670;&#160;</a></span>anteriorButton</h2>
@@ -257,6 +348,30 @@ Data Fields</h2></td></tr>
 <p>Imagen UI donde se muestra el sprite del personaje seleccionado. </p>
 
 <p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00025">25</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
+
+</div>
+</div>
+<a id="a874ae89d8fd2a9a6716d8d43bbbe4517" name="a874ae89d8fd2a9a6716d8d43bbbe4517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874ae89d8fd2a9a6716d8d43bbbe4517">&#9670;&#160;</a></span>indicePersonaje</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SelectorPersonaje.indicePersonaje = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_selector_8cs_source.html#l00027">27</a> of file <a class="el" href="_selector_8cs_source.html">Selector.cs</a>.</p>
 
 </div>
 </div>

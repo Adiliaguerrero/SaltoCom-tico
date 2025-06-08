@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/Camara.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -107,12 +107,13 @@ $(function(){initNavTree('_camara_8cs_source.html','',''); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">   23</a></span>    <span class="keyword">public</span> Vector2 <a class="code hl_variable" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a> = <span class="keyword">new</span> Vector2(2f, 1f);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> Vector3 velocidadSuavizado = Vector3.zero;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_camara.html#a4e3143acc67a9b0c0a68593fca83e7b9">   29</a></span>    <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_camara.html#a4e3143acc67a9b0c0a68593fca83e7b9">velocidadSuavizado</a> = Vector3.zero;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> <span class="keywordtype">float</span> ultimaDireccionX = 1f;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_camara.html#ad49c315667fa375837196c47a74f997d">   34</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_camara.html#ad49c315667fa375837196c47a74f997d">ultimaDireccionX</a> = 1f;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> LateUpdate()</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_camara.html#abf779e459fa41e35d764dc53f2cfab40">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_camara.html#abf779e459fa41e35d764dc53f2cfab40">LateUpdate</a>()</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_camara.html#a8d5ccd1ec7673520e0309a1b1ad1add1">Player2</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
@@ -120,22 +121,26 @@ $(function(){initNavTree('_camara_8cs_source.html','',''); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (direccionX != 0)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                ultimaDireccionX = direccionX;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <a class="code hl_variable" href="class_camara.html#ad49c315667fa375837196c47a74f997d">ultimaDireccionX</a> = direccionX;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            Vector3 posicionObjetivo = Player2.transform.position + <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a>.x * ultimaDireccionX, <a class="code hl_variable" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a>.y, 0f);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            Vector3 posicionObjetivo = Player2.transform.position + <span class="keyword">new</span> Vector3(<a class="code hl_variable" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a>.x * <a class="code hl_variable" href="class_camara.html#ad49c315667fa375837196c47a74f997d">ultimaDireccionX</a>, <a class="code hl_variable" href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a>.y, 0f);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            posicionObjetivo.z = transform.position.z;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            transform.position = Vector3.SmoothDamp(transform.position, posicionObjetivo, ref velocidadSuavizado, 2f / <a class="code hl_variable" href="class_camara.html#a10100e406eb82a9c1ba16789a2ed32c9">suavizado</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            transform.position = Vector3.SmoothDamp(transform.position, posicionObjetivo, ref <a class="code hl_variable" href="class_camara.html#a4e3143acc67a9b0c0a68593fca83e7b9">velocidadSuavizado</a>, 2f / <a class="code hl_variable" href="class_camara.html#a10100e406eb82a9c1ba16789a2ed32c9">suavizado</a>);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 </div>
 <div class="ttc" id="aclass_camara_html"><div class="ttname"><a href="class_camara.html">Camara</a></div><div class="ttdoc">Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento.</div><div class="ttdef"><b>Definition</b> <a href="#l00006">Camara.cs:7</a></div></div>
 <div class="ttc" id="aclass_camara_html_a10100e406eb82a9c1ba16789a2ed32c9"><div class="ttname"><a href="class_camara.html#a10100e406eb82a9c1ba16789a2ed32c9">Camara.suavizado</a></div><div class="ttdeci">float suavizado</div><div class="ttdoc">Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y sua...</div><div class="ttdef"><b>Definition</b> <a href="#l00018">Camara.cs:18</a></div></div>
+<div class="ttc" id="aclass_camara_html_a4e3143acc67a9b0c0a68593fca83e7b9"><div class="ttname"><a href="class_camara.html#a4e3143acc67a9b0c0a68593fca83e7b9">Camara.velocidadSuavizado</a></div><div class="ttdeci">Vector3 velocidadSuavizado</div><div class="ttdoc">Velocidad utilizada internamente por SmoothDamp para interpolar posiciones.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Camara.cs:29</a></div></div>
 <div class="ttc" id="aclass_camara_html_a8d5ccd1ec7673520e0309a1b1ad1add1"><div class="ttname"><a href="class_camara.html#a8d5ccd1ec7673520e0309a1b1ad1add1">Camara.Player2</a></div><div class="ttdeci">GameObject Player2</div><div class="ttdoc">Objeto del jugador que la cámara debe seguir.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">Camara.cs:12</a></div></div>
 <div class="ttc" id="aclass_camara_html_ab46c6317d7732b4012d45f43ddea97af"><div class="ttname"><a href="class_camara.html#ab46c6317d7732b4012d45f43ddea97af">Camara.desplazamiento</a></div><div class="ttdeci">Vector2 desplazamiento</div><div class="ttdoc">Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él...</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Camara.cs:23</a></div></div>
+<div class="ttc" id="aclass_camara_html_abf779e459fa41e35d764dc53f2cfab40"><div class="ttname"><a href="class_camara.html#abf779e459fa41e35d764dc53f2cfab40">Camara.LateUpdate</a></div><div class="ttdeci">void LateUpdate()</div><div class="ttdoc">Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena....</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Camara.cs:41</a></div></div>
+<div class="ttc" id="aclass_camara_html_ad49c315667fa375837196c47a74f997d"><div class="ttname"><a href="class_camara.html#ad49c315667fa375837196c47a74f997d">Camara.ultimaDireccionX</a></div><div class="ttdeci">float ultimaDireccionX</div><div class="ttdoc">Última dirección horizontal conocida del jugador para que la cámara mire hacia adelante.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Camara.cs:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: CameraShake Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -114,6 +114,11 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a5d15d6793ebbae009a425617e5f2f82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duración total de la sacudida en segundos.  <br /></td></tr>
 <tr class="memitem:a668286886a4bbeea8a2838f11f43f8bc" id="r_a668286886a4bbeea8a2838f11f43f8bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a668286886a4bbeea8a2838f11f43f8bc">magnitud</a> = 0.3f</td></tr>
 <tr class="memdesc:a668286886a4bbeea8a2838f11f43f8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad52801226c1585557d82071161a065c0" id="r_ad52801226c1585557d82071161a065c0"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52801226c1585557d82071161a065c0">Shake</a> ()</td></tr>
+<tr class="memdesc:ad52801226c1585557d82071161a065c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que implementa la sacudida de la cámara durante el tiempo definido.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Permite aplicar un efecto de sacudida o "temblor" a la cámara, ideal para representar impactos o daños. </p>
@@ -146,6 +151,36 @@ Data Fields</h2></td></tr>
 <p>Método público que inicia el efecto de sacudida de la cámara. Puede ser llamado desde otros scripts o eventos del juego. </p>
 
 <p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00026">26</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad52801226c1585557d82071161a065c0" name="ad52801226c1585557d82071161a065c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52801226c1585557d82071161a065c0">&#9670;&#160;</a></span>Shake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator CameraShake.Shake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que implementa la sacudida de la cámara durante el tiempo definido. </p>
+<dl class="section return"><dt>Returns</dt><dd>Devuelve un enumerador necesario para la ejecución como corrutina. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_camara_temblar_8cs_source.html#l00041">41</a> of file <a class="el" href="_camara_temblar_8cs_source.html">CamaraTemblar.cs</a>.</p>
 
 </div>
 </div>

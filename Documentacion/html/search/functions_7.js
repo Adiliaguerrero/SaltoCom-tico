@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['recibedanio_0',['RecibeDanio',['../class_player_controller.html#a0329f53e40e6dffbd41deb0011fd4840',1,'PlayerController']]],
-  ['reproducirsonido_1',['ReproducirSonido',['../class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57',1,'AudioManager']]],
-  ['restartgame_2',['RestartGame',['../class_abismo_caida.html#af04d1da03001883982584f9156cd0378',1,'AbismoCaida']]],
-  ['restaurarvida_3',['RestaurarVida',['../class_player_controller.html#aa2309df47ec0b422ac2d2987196ee4d2',1,'PlayerController']]],
-  ['restaurarvidaparcial_4',['RestaurarVidaParcial',['../class_player_controller.html#ae72a8621ff71be31adbb70738a9a0b79',1,'PlayerController']]]
+  ['lateupdate_0',['LateUpdate',['../class_camara.html#abf779e459fa41e35d764dc53f2cfab40',1,'Camara.LateUpdate()'],['../class_forzar_escala.html#a057859e49de05bf7f64167894c41cc81',1,'ForzarEscala.LateUpdate()']]],
+  ['limpiarpuntaje_1',['LimpiarPuntaje',['../class_puntos_manager.html#a26525271f9f3ba399fcb0fbcb827f7d2',1,'PuntosManager']]]
 ];

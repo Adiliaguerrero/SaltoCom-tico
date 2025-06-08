@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: Camara Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -111,12 +111,54 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a10100e406eb82a9c1ba16789a2ed32c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave.  <br /></td></tr>
 <tr class="memitem:ab46c6317d7732b4012d45f43ddea97af" id="r_ab46c6317d7732b4012d45f43ddea97af"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46c6317d7732b4012d45f43ddea97af">desplazamiento</a> = new Vector2(2f, 1f)</td></tr>
 <tr class="memdesc:ab46c6317d7732b4012d45f43ddea97af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desplazamiento en X e Y respecto al jugador para que la cámara no esté centrada directamente sobre él.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abf779e459fa41e35d764dc53f2cfab40" id="r_abf779e459fa41e35d764dc53f2cfab40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf779e459fa41e35d764dc53f2cfab40">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:abf779e459fa41e35d764dc53f2cfab40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena. Ideal para seguir al jugador sin causar saltos o retrasos visuales.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4e3143acc67a9b0c0a68593fca83e7b9" id="r_a4e3143acc67a9b0c0a68593fca83e7b9"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e3143acc67a9b0c0a68593fca83e7b9">velocidadSuavizado</a> = Vector3.zero</td></tr>
+<tr class="memdesc:a4e3143acc67a9b0c0a68593fca83e7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocidad utilizada internamente por SmoothDamp para interpolar posiciones.  <br /></td></tr>
+<tr class="memitem:ad49c315667fa375837196c47a74f997d" id="r_ad49c315667fa375837196c47a74f997d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad49c315667fa375837196c47a74f997d">ultimaDireccionX</a> = 1f</td></tr>
+<tr class="memdesc:ad49c315667fa375837196c47a74f997d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Última dirección horizontal conocida del jugador para que la cámara mire hacia adelante.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla el seguimiento suave de la cámara al jugador en una dirección ajustada según su movimiento. </p>
 
 <p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00006">6</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="abf779e459fa41e35d764dc53f2cfab40" name="abf779e459fa41e35d764dc53f2cfab40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf779e459fa41e35d764dc53f2cfab40">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Camara.LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actualiza la posición de la cámara de forma suave tras actualizar todos los objetos de la escena. Ideal para seguir al jugador sin causar saltos o retrasos visuales. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00041">41</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ab46c6317d7732b4012d45f43ddea97af" name="ab46c6317d7732b4012d45f43ddea97af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab46c6317d7732b4012d45f43ddea97af">&#9670;&#160;</a></span>desplazamiento</h2>
 
@@ -168,6 +210,58 @@ Data Fields</h2></td></tr>
 <p>Factor de suavizado del movimiento de la cámara. Un valor mayor produce un movimiento más lento y suave. </p>
 
 <p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00018">18</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad49c315667fa375837196c47a74f997d" name="ad49c315667fa375837196c47a74f997d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad49c315667fa375837196c47a74f997d">&#9670;&#160;</a></span>ultimaDireccionX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Camara.ultimaDireccionX = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Última dirección horizontal conocida del jugador para que la cámara mire hacia adelante. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00034">34</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4e3143acc67a9b0c0a68593fca83e7b9" name="a4e3143acc67a9b0c0a68593fca83e7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3143acc67a9b0c0a68593fca83e7b9">&#9670;&#160;</a></span>velocidadSuavizado</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Camara.velocidadSuavizado = Vector3.zero</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Velocidad utilizada internamente por SmoothDamp para interpolar posiciones. </p>
+
+<p class="definition">Definition at line <a class="el" href="_camara_8cs_source.html#l00029">29</a> of file <a class="el" href="_camara_8cs_source.html">Camara.cs</a>.</p>
 
 </div>
 </div>

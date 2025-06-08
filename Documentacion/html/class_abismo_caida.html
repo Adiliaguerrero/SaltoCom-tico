@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: AbismoCaida Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -112,13 +112,46 @@ Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:ab810370d2a20b0284140e4fdbd51f523" id="r_ab810370d2a20b0284140e4fdbd51f523"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab810370d2a20b0284140e4fdbd51f523">gameOverPanel</a></td></tr>
 <tr class="memdesc:ab810370d2a20b0284140e4fdbd51f523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al panel de Game Over que se activa cuando el jugador cae en el abismo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8677dd2f9d62df40b7cfede9fa5a72bc" id="r_a8677dd2f9d62df40b7cfede9fa5a72bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8677dd2f9d62df40b7cfede9fa5a72bc">OnTriggerEnter2D</a> (Collider2D other)</td></tr>
+<tr class="memitem:aa5b72db0f0d733d86ad8cfa6d7f25db4" id="r_aa5b72db0f0d733d86ad8cfa6d7f25db4"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5b72db0f0d733d86ad8cfa6d7f25db4">ShowGameOver</a> ()</td></tr>
+<tr class="memdesc:aa5b72db0f0d733d86ad8cfa6d7f25db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que espera 2 segundos antes de mostrar el panel de Game Over.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla el comportamiento del abismo de caída. Si el jugador entra en contacto con esta zona, el personaje muere y se muestra el panel de Game Over. </p>
-<p>Esta clase debe ser añadida a un GameObject con un Collider2D marcado como "Trigger". Se utiliza OnTriggerEnter2D(Collider2D) para detectar la colisión del jugador. </p>
+<p>Esta clase debe ser añadida a un GameObject con un Collider2D marcado como "Trigger". Se utiliza <a class="el" href="#a8677dd2f9d62df40b7cfede9fa5a72bc">OnTriggerEnter2D(Collider2D)</a> para detectar la colisión del jugador. </p>
 
 <p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00013">13</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8677dd2f9d62df40b7cfede9fa5a72bc" name="a8677dd2f9d62df40b7cfede9fa5a72bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8677dd2f9d62df40b7cfede9fa5a72bc">&#9670;&#160;</a></span>OnTriggerEnter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbismoCaida.OnTriggerEnter2D </td>
+          <td>(</td>
+          <td class="paramtype">Collider2D</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00030">30</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
+
+</div>
+</div>
 <a id="af04d1da03001883982584f9156cd0378" name="af04d1da03001883982584f9156cd0378"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af04d1da03001883982584f9156cd0378">&#9670;&#160;</a></span>RestartGame()</h2>
 
@@ -146,6 +179,37 @@ Data Fields</h2></td></tr>
 <p>Este método debe estar vinculado a un botón en el panel de Game Over. Utiliza SceneManager.GetActiveScene y SceneManager.LoadScene(string). </p>
 
 <p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00067">67</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa5b72db0f0d733d86ad8cfa6d7f25db4" name="aa5b72db0f0d733d86ad8cfa6d7f25db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b72db0f0d733d86ad8cfa6d7f25db4">&#9670;&#160;</a></span>ShowGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator AbismoCaida.ShowGameOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que espera 2 segundos antes de mostrar el panel de Game Over. </p>
+<dl class="section return"><dt>Returns</dt><dd>Devuelve un WaitForSeconds de 2 segundos antes de activar el panel. </dd></dl>
+<p>Una vez mostrado el panel, se pausa el tiempo del juego usando Time.timeScale. </p>
+
+<p class="definition">Definition at line <a class="el" href="_abismo_caida_8cs_source.html#l00051">51</a> of file <a class="el" href="_abismo_caida_8cs_source.html">AbismoCaida.cs</a>.</p>
 
 </div>
 </div>

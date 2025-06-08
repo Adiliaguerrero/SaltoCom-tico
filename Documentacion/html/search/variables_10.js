@@ -1,7 +1,14 @@
 var searchData=
 [
-  ['velocidad_0',['velocidad',['../class_pajaro_enemigo.html#ab82d49e8b100fb72320ce32fee0b6b05',1,'PajaroEnemigo.velocidad'],['../class_player_controller.html#a03e7fa279c5e3053e43b870c6f6bc826',1,'PlayerController.velocidad']]],
-  ['velocidadescritura_1',['velocidadEscritura',['../class_sistema_dialogo.html#a4a5aae6c240ef1d274ca525798ac99d8',1,'SistemaDialogo']]],
-  ['velocidadrotacion_2',['velocidadRotacion',['../class_rotar_cuchilla.html#ac135b99b5220c748ec2ef41d78de0b84',1,'RotarCuchilla']]],
-  ['vida_3',['vida',['../class_player_controller.html#a68e47063ed5ab53162264270614172b4',1,'PlayerController']]]
+  ['seleccionadas_0',['seleccionadas',['../class_pregunta_opcion_multiple.html#aee3aa1de25a2da8dffc0e6365ae0831e',1,'PreguntaOpcionMultiple']]],
+  ['seleccionarbutton_1',['seleccionarButton',['../class_selector_personaje.html#a152b3cae172e00487a7beae751b237e5',1,'SelectorPersonaje']]],
+  ['siguientebutton_2',['siguienteButton',['../class_selector_personaje.html#ae0a9bff6b054ba50e9a0c57e308279a5',1,'SelectorPersonaje']]],
+  ['slider_3',['slider',['../class_carga_inicial.html#a76b8ad70f3a82d8389e1b337e88ede66',1,'CargaInicial']]],
+  ['snapx_4',['snapX',['../class_joystick.html#adf678ce033426c8b9aea4d157eb9121c',1,'Joystick.snapX'],['../class_joystick_editor.html#ac179b76f7388c52246048ec728dec5c7',1,'JoystickEditor.snapX']]],
+  ['snapy_5',['snapY',['../class_joystick.html#a716e97b7e7900556e9fbb58e3705bfad',1,'Joystick.snapY'],['../class_joystick_editor.html#a4cd8018b1dad040ed362aabb760bcf09',1,'JoystickEditor.snapY']]],
+  ['sonidoboton_6',['sonidoBoton',['../class_boton_clip_control.html#acaea4f565c696a65bd2bc36b216e964c',1,'BotonClipControl.sonidoBoton'],['../class_configuracion_u_i.html#a3f48867cd2151933dc049b7c32b1a281',1,'ConfiguracionUI.sonidoBoton'],['../class_escena_restraurar.html#aba96c50a2acf797afec1eaab8c72c85e',1,'EscenaRestraurar.sonidoBoton'],['../class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24',1,'MenuController.sonidoBoton'],['../class_selector_personaje.html#afb846de560f448259439b2aca008616a',1,'SelectorPersonaje.sonidoBoton'],['../class_trivia1.html#a16ec03356d3efedee23362908aa30f25',1,'Trivia1.sonidoBoton'],['../class_opcion_unica.html#a786abebd39d6d97007c4b1b745753461',1,'OpcionUnica.sonidoBoton'],['../class_pregunta_opcion_multiple.html#af22788fb0908c8f06bfb6087bb8454a0',1,'PreguntaOpcionMultiple.sonidoBoton'],['../class_opcion_unica2.html#ad7fa0fb9e1ff872d2da15afd102b2b65',1,'OpcionUnica2.sonidoBoton'],['../class_texto_con_comas_t_m_p.html#ac9173116d2b94f311b34552bd4aeea11',1,'TextoConComasTMP.sonidoBoton'],['../class_transcribir_oracion2.html#a0f7a0d391d723182a4596f074bf9be9e',1,'TranscribirOracion2.sonidoBoton'],['../class_transcribir_oracion3.html#a43841c9deec898241e91dabdefaa7971',1,'TranscribirOracion3.sonidoBoton'],['../class_opcion_unica3.html#afcc74aa9d300627a035a95d3452cb39a',1,'OpcionUnica3.sonidoBoton']]],
+  ['sonidopanel_7',['sonidoPanel',['../class_sistema_dialogo.html#ab47bc2b13b27da77695a8686e22d1514',1,'SistemaDialogo']]],
+  ['sonidosactivos_8',['sonidosActivos',['../class_audio_manager.html#a6f9196b93e87a91c6d6cf2eb65de68c5',1,'AudioManager']]],
+  ['speed_9',['speed',['../class_enemigo.html#a70d62c6b259a9054483352764139a4e2',1,'Enemigo.speed'],['../class_joystick_player_example.html#a6d67106bfb195f0b90eb33948d7c3f51',1,'JoystickPlayerExample.speed'],['../class_ninja.html#afa384eb5ef9119060c3f35e83b402d95',1,'Ninja.speed']]],
+  ['suavizado_10',['suavizado',['../class_camara.html#a10100e406eb82a9c1ba16789a2ed32c9',1,'Camara']]]
 ];

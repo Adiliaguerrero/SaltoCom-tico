@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/ColisiionObj.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -103,7 +103,7 @@ $(function(){initNavTree('_colisiion_obj_8cs_source.html','',''); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_colisionador_trigger2_d.html">ColisionadorTrigger2D</a> : MonoBehaviour</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> haColisionado = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386">   17</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386">haColisionado</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">   22</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -111,46 +111,47 @@ $(function(){initNavTree('_colisiion_obj_8cs_source.html','',''); });
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">   28</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Referencias internas para manipular el Rigidbody y el controlador del jugador</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> Rigidbody2D rbJugador;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">   34</a></span>    <span class="keyword">private</span> Rigidbody2D <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">rbJugador</a>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span> <a class="code hl_class" href="class_player_controller.html">PlayerController</a> playerController;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">   39</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="class_player_controller.html">PlayerController</a> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">playerController</a>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>   </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#aaafe84494cca4764332ce02f454bb854">   45</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#aaafe84494cca4764332ce02f454bb854">nombreEscena</a> = <span class="stringliteral">&quot;Escena&quot;</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> textoMensaje = <span class="stringliteral">&quot;¡Nivel Basico!&quot;</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nombreObjetoTextoBienvenida = <span class="stringliteral">&quot;TextoBienvenida&quot;</span>;     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">float</span> duracionMensaje = 3f; </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> mostrarMensaje = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1">   47</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1">textoMensaje</a> = <span class="stringliteral">&quot;¡Nivel Basico!&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#a00134ba7458cbf751a9cd9c3016e8764">   48</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a5ccf966f166fc336f965df1ab3a11855">nombreObjetoTextoBienvenida</a> = <span class="stringliteral">&quot;TextoBienvenida&quot;</span>;     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a00134ba7458cbf751a9cd9c3016e8764">duracionMensaje</a> = 3f; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">   49</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">mostrarMensaje</a> = <span class="keyword">false</span>; </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnCollisionEnter2D(Collision2D collision)</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#a29fc78fc06ca187c4de077461e024322">   57</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_colisionador_trigger2_d.html#a29fc78fc06ca187c4de077461e024322">OnCollisionEnter2D</a>(Collision2D collision)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (haColisionado) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386">haColisionado</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (collision.gameObject.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            haColisionado = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_variable" href="class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386">haColisionado</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                FixedJoystick joystick = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a> joystick = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.GetComponent&lt;<a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a>&gt;();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    joystick.OnPointerUp(<span class="keyword">null</span>); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    joystick.<a class="code hl_function" href="class_joystick.html#ad56badf3ee242443cb4f5940d6b00701">OnPointerUp</a>(<span class="keyword">null</span>); </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    joystick.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            rbJugador = collision.gameObject.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (rbJugador != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">rbJugador</a> = collision.gameObject.GetComponent&lt;Rigidbody2D&gt;();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">rbJugador</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                rbJugador.velocity = Vector2.zero;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                rbJugador.bodyType = RigidbodyType2D.Static;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            playerController = collision.gameObject.GetComponent&lt;<a class="code hl_class" href="class_player_controller.html">PlayerController</a>&gt;();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">playerController</a> = collision.gameObject.GetComponent&lt;<a class="code hl_class" href="class_player_controller.html">PlayerController</a>&gt;();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">playerController</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                playerController.puedeMoverse = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
@@ -158,19 +159,21 @@ $(function(){initNavTree('_colisiion_obj_8cs_source.html','',''); });
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                PortalTrigger trigger = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>.GetComponent&lt;PortalTrigger&gt;();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <a class="code hl_class" href="class_colisionador_trigger2_d_1_1_portal_trigger.html">PortalTrigger</a> trigger = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>.GetComponent&lt;<a class="code hl_class" href="class_colisionador_trigger2_d_1_1_portal_trigger.html">PortalTrigger</a>&gt;();</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordflow">if</span> (trigger == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    trigger = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>.AddComponent&lt;PortalTrigger&gt;();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    trigger = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">portal</a>.AddComponent&lt;<a class="code hl_class" href="class_colisionador_trigger2_d_1_1_portal_trigger.html">PortalTrigger</a>&gt;();</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                trigger.nombreEscena = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#aaafe84494cca4764332ce02f454bb854">nombreEscena</a>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            StartCoroutine(EsperarYMostrarDialogo());</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            StartCoroutine(<a class="code hl_function" href="class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8">EsperarYMostrarDialogo</a>());</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">private</span> IEnumerator EsperarYMostrarDialogo()</div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8">  107</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8">EsperarYMostrarDialogo</a>()</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(3f);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
@@ -182,15 +185,15 @@ $(function(){initNavTree('_colisiion_obj_8cs_source.html','',''); });
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    FixedJoystick joystick = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a> joystick = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">joystickUI</a>.GetComponent&lt;<a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a>&gt;();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        joystick.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">if</span> (rbJugador != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">rbJugador</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    rbJugador.bodyType = RigidbodyType2D.Dynamic;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">playerController</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    playerController.puedeMoverse = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                Destroy(GetComponent&lt;Collider2D&gt;());</div>
@@ -198,73 +201,99 @@ $(function(){initNavTree('_colisiion_obj_8cs_source.html','',''); });
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            });</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">private</span> <span class="keyword">class </span>PortalTrigger : MonoBehaviour</div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="};">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d_1_1_portal_trigger.html">  139</a></span>    <span class="keyword">private</span> <span class="keyword">class </span><a class="code hl_class" href="class_colisionador_trigger2_d_1_1_portal_trigger.html">PortalTrigger</a> : MonoBehaviour</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>       </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> nombreEscena;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d_1_1_portal_trigger.html#a47fe3f59ea0b050a2e197c0dcba5ea3f">  145</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="class_colisionador_trigger2_d_1_1_portal_trigger.html#a47fe3f59ea0b050a2e197c0dcba5ea3f">nombreEscena</a>;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter2D(Collider2D other)</div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d_1_1_portal_trigger.html#ab374db8e0df22f64f0fc6ac2383953db">  153</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_colisionador_trigger2_d_1_1_portal_trigger.html#ab374db8e0df22f64f0fc6ac2383953db">OnTriggerEnter2D</a>(Collider2D other)</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">if</span> (other.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                textoMensaje = <span class="stringliteral">&quot;Nivel Básico&quot;</span>;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                nombreObjetoTextoBienvenida = <span class="stringliteral">&quot;TextoBienvenida&quot;</span>; <span class="comment">// Ajusta según tu UI en la escena destino</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                duracionMensaje = 3f;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                mostrarMensaje = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1">textoMensaje</a> = <span class="stringliteral">&quot;Nivel Básico&quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a5ccf966f166fc336f965df1ab3a11855">nombreObjetoTextoBienvenida</a> = <span class="stringliteral">&quot;TextoBienvenida&quot;</span>; <span class="comment">// Ajusta según tu UI en la escena destino</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a00134ba7458cbf751a9cd9c3016e8764">duracionMensaje</a> = 3f;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">mostrarMensaje</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                SceneManager.sceneLoaded += OnSceneLoaded;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                SceneManager.sceneLoaded += <a class="code hl_function" href="class_colisionador_trigger2_d.html#ac3bf017e2198843cca387615468c0a3c">OnSceneLoaded</a>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                SceneManager.LoadScene(nombreEscena);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                SceneManager.LoadScene(<a class="code hl_variable" href="class_colisionador_trigger2_d_1_1_portal_trigger.html#a47fe3f59ea0b050a2e197c0dcba5ea3f">nombreEscena</a>);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        }</div>
+</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> OnSceneLoaded(Scene scene, LoadSceneMode mode)</div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ac3bf017e2198843cca387615468c0a3c">  178</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_colisionador_trigger2_d.html#ac3bf017e2198843cca387615468c0a3c">OnSceneLoaded</a>(Scene scene, LoadSceneMode mode)</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    {</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">if</span> (mostrarMensaje)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">mostrarMensaje</a>)</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            GameObject objTexto = GameObject.Find(nombreObjetoTextoBienvenida);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            GameObject objTexto = GameObject.Find(<a class="code hl_variable" href="class_colisionador_trigger2_d.html#a5ccf966f166fc336f965df1ab3a11855">nombreObjetoTextoBienvenida</a>);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">if</span> (objTexto != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            {</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                var textoTMP = objTexto.GetComponent&lt;TextMeshProUGUI&gt;();</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordflow">if</span> (textoTMP != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                {</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                    textoTMP.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    textoTMP.text = textoMensaje;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    textoTMP.text = <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1">textoMensaje</a>;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    MonoBehaviour coroutineRunner = objTexto.GetComponent&lt;MonoBehaviour&gt;();</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    <span class="keywordflow">if</span> (coroutineRunner == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                        coroutineRunner = objTexto.AddComponent&lt;DummyMonoBehaviour&gt;();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                        coroutineRunner = objTexto.AddComponent&lt;<a class="code hl_class" href="class_colisionador_trigger2_d_1_1_dummy_mono_behaviour.html">DummyMonoBehaviour</a>&gt;();</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                    }</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    coroutineRunner.StartCoroutine(DesactivarTexto(objTexto, duracionMensaje));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    coroutineRunner.StartCoroutine(<a class="code hl_function" href="class_colisionador_trigger2_d.html#ac82103a0950696e206e40fb20a0bd1fe">DesactivarTexto</a>(objTexto, <a class="code hl_variable" href="class_colisionador_trigger2_d.html#a00134ba7458cbf751a9cd9c3016e8764">duracionMensaje</a>));</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                }</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            mostrarMensaje = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            SceneManager.sceneLoaded -= OnSceneLoaded;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <a class="code hl_variable" href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">mostrarMensaje</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            SceneManager.sceneLoaded -= <a class="code hl_function" href="class_colisionador_trigger2_d.html#ac3bf017e2198843cca387615468c0a3c">OnSceneLoaded</a>;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        }</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">private</span> <span class="keyword">static</span> IEnumerator DesactivarTexto(GameObject obj, <span class="keywordtype">float</span> delay)</div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d.html#ac82103a0950696e206e40fb20a0bd1fe">  213</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> IEnumerator <a class="code hl_function" href="class_colisionador_trigger2_d.html#ac82103a0950696e206e40fb20a0bd1fe">DesactivarTexto</a>(GameObject obj, <span class="keywordtype">float</span> delay)</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(delay);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        obj.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">private</span> <span class="keyword">class </span>DummyMonoBehaviour : MonoBehaviour { }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_colisionador_trigger2_d_1_1_dummy_mono_behaviour.html">  223</a></span>    <span class="keyword">private</span> <span class="keyword">class </span><a class="code hl_class" href="class_colisionador_trigger2_d_1_1_dummy_mono_behaviour.html">DummyMonoBehaviour</a> : MonoBehaviour { }</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
 </div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_1_1_dummy_mono_behaviour_html"><div class="ttname"><a href="class_colisionador_trigger2_d_1_1_dummy_mono_behaviour.html">ColisionadorTrigger2D.DummyMonoBehaviour</a></div><div class="ttdoc">Clase auxiliar para correr corrutinas desde objetos que no sean MonoBehaviour.</div><div class="ttdef"><b>Definition</b> <a href="#l00223">ColisiionObj.cs:223</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_1_1_portal_trigger_html"><div class="ttname"><a href="class_colisionador_trigger2_d_1_1_portal_trigger.html">ColisionadorTrigger2D.PortalTrigger</a></div><div class="ttdoc">Clase interna que detecta la entrada al portal y realiza el cambio de escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">ColisiionObj.cs:140</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_1_1_portal_trigger_html_a47fe3f59ea0b050a2e197c0dcba5ea3f"><div class="ttname"><a href="class_colisionador_trigger2_d_1_1_portal_trigger.html#a47fe3f59ea0b050a2e197c0dcba5ea3f">ColisionadorTrigger2D.PortalTrigger.nombreEscena</a></div><div class="ttdeci">string nombreEscena</div><div class="ttdoc">Nombre de la escena destino.</div><div class="ttdef"><b>Definition</b> <a href="#l00145">ColisiionObj.cs:145</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_1_1_portal_trigger_html_ab374db8e0df22f64f0fc6ac2383953db"><div class="ttname"><a href="class_colisionador_trigger2_d_1_1_portal_trigger.html#ab374db8e0df22f64f0fc6ac2383953db">ColisionadorTrigger2D.PortalTrigger.OnTriggerEnter2D</a></div><div class="ttdeci">void OnTriggerEnter2D(Collider2D other)</div><div class="ttdoc">Detecta si el jugador entra al área del portal.</div><div class="ttdef"><b>Definition</b> <a href="#l00153">ColisiionObj.cs:153</a></div></div>
 <div class="ttc" id="aclass_colisionador_trigger2_d_html"><div class="ttname"><a href="class_colisionador_trigger2_d.html">ColisionadorTrigger2D</a></div><div class="ttdoc">Maneja la colisión del jugador con un objeto trigger que activa un portal, detiene al jugador y cambi...</div><div class="ttdef"><b>Definition</b> <a href="#l00011">ColisiionObj.cs:12</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_a00134ba7458cbf751a9cd9c3016e8764"><div class="ttname"><a href="class_colisionador_trigger2_d.html#a00134ba7458cbf751a9cd9c3016e8764">ColisionadorTrigger2D.duracionMensaje</a></div><div class="ttdeci">static float duracionMensaje</div><div class="ttdef"><b>Definition</b> <a href="#l00048">ColisiionObj.cs:48</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_a29fc78fc06ca187c4de077461e024322"><div class="ttname"><a href="class_colisionador_trigger2_d.html#a29fc78fc06ca187c4de077461e024322">ColisionadorTrigger2D.OnCollisionEnter2D</a></div><div class="ttdeci">void OnCollisionEnter2D(Collision2D collision)</div><div class="ttdoc">Detecta colisiones físicas con el trigger.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">ColisiionObj.cs:57</a></div></div>
 <div class="ttc" id="aclass_colisionador_trigger2_d_html_a3db0e30429f01d793c6cb2b93287d3f9"><div class="ttname"><a href="class_colisionador_trigger2_d.html#a3db0e30429f01d793c6cb2b93287d3f9">ColisionadorTrigger2D.portal</a></div><div class="ttdeci">GameObject portal</div><div class="ttdoc">Portal que se activará para permitir el cambio de escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ColisiionObj.cs:22</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_a5ccf966f166fc336f965df1ab3a11855"><div class="ttname"><a href="class_colisionador_trigger2_d.html#a5ccf966f166fc336f965df1ab3a11855">ColisionadorTrigger2D.nombreObjetoTextoBienvenida</a></div><div class="ttdeci">static string nombreObjetoTextoBienvenida</div><div class="ttdef"><b>Definition</b> <a href="#l00048">ColisiionObj.cs:48</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_a7a278b169ebe502f46df3bd516c02586"><div class="ttname"><a href="class_colisionador_trigger2_d.html#a7a278b169ebe502f46df3bd516c02586">ColisionadorTrigger2D.playerController</a></div><div class="ttdeci">PlayerController playerController</div><div class="ttdoc">Referencia al script de control del jugador.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">ColisiionObj.cs:39</a></div></div>
 <div class="ttc" id="aclass_colisionador_trigger2_d_html_aaafe84494cca4764332ce02f454bb854"><div class="ttname"><a href="class_colisionador_trigger2_d.html#aaafe84494cca4764332ce02f454bb854">ColisionadorTrigger2D.nombreEscena</a></div><div class="ttdeci">string nombreEscena</div><div class="ttdoc">Nombre de la escena destino, asignado desde el Inspector.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">ColisiionObj.cs:45</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ab062685d617e10ad486bc7702d74ff73"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ab062685d617e10ad486bc7702d74ff73">ColisionadorTrigger2D.mostrarMensaje</a></div><div class="ttdeci">static bool mostrarMensaje</div><div class="ttdef"><b>Definition</b> <a href="#l00049">ColisiionObj.cs:49</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ac3bf017e2198843cca387615468c0a3c"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ac3bf017e2198843cca387615468c0a3c">ColisionadorTrigger2D.OnSceneLoaded</a></div><div class="ttdeci">static void OnSceneLoaded(Scene scene, LoadSceneMode mode)</div><div class="ttdoc">Método ejecutado al cargar una nueva escena. Busca y muestra el mensaje de bienvenida si está activad...</div><div class="ttdef"><b>Definition</b> <a href="#l00178">ColisiionObj.cs:178</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ac4bd53981e2d230d87f8ca7c4155b823"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823">ColisionadorTrigger2D.rbJugador</a></div><div class="ttdeci">Rigidbody2D rbJugador</div><div class="ttdoc">Referencia al Rigidbody2D del jugador.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">ColisiionObj.cs:34</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ac82103a0950696e206e40fb20a0bd1fe"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ac82103a0950696e206e40fb20a0bd1fe">ColisionadorTrigger2D.DesactivarTexto</a></div><div class="ttdeci">static IEnumerator DesactivarTexto(GameObject obj, float delay)</div><div class="ttdoc">Corrutina que desactiva el texto tras cierto tiempo.</div><div class="ttdef"><b>Definition</b> <a href="#l00213">ColisiionObj.cs:213</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ac9c9f7092e83bab2eecc9bb6779b31e8"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ac9c9f7092e83bab2eecc9bb6779b31e8">ColisionadorTrigger2D.EsperarYMostrarDialogo</a></div><div class="ttdeci">IEnumerator EsperarYMostrarDialogo()</div><div class="ttdoc">Corrutina que espera unos segundos antes de mostrar el diálogo o continuar.</div><div class="ttdef"><b>Definition</b> <a href="#l00107">ColisiionObj.cs:107</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_ad481985094bc1fd71b23e1d406730ae1"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ad481985094bc1fd71b23e1d406730ae1">ColisionadorTrigger2D.textoMensaje</a></div><div class="ttdeci">static string textoMensaje</div><div class="ttdef"><b>Definition</b> <a href="#l00047">ColisiionObj.cs:47</a></div></div>
+<div class="ttc" id="aclass_colisionador_trigger2_d_html_addabd1a68e5c18ad4e9fde63d4d4e386"><div class="ttname"><a href="class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386">ColisionadorTrigger2D.haColisionado</a></div><div class="ttdeci">bool haColisionado</div><div class="ttdoc">Controla si ya ha ocurrido la colisión para evitar múltiples activaciones.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ColisiionObj.cs:17</a></div></div>
 <div class="ttc" id="aclass_colisionador_trigger2_d_html_ae6e86dcef2098ed990da551737e1a4e3"><div class="ttname"><a href="class_colisionador_trigger2_d.html#ae6e86dcef2098ed990da551737e1a4e3">ColisionadorTrigger2D.joystickUI</a></div><div class="ttdeci">GameObject joystickUI</div><div class="ttdoc">Interfaz del joystick, que será deshabilitada al cambiar de escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">ColisiionObj.cs:28</a></div></div>
 <div class="ttc" id="aclass_dialogo_controller_html"><div class="ttname"><a href="class_dialogo_controller.html">DialogoController</a></div><div class="ttdoc">Controla la visualización de un sistema de diálogo en pantalla después de activar un portal.</div><div class="ttdef"><b>Definition</b> <a href="_dialog_contr_8cs_source.html#l00022">DialogContr.cs:23</a></div></div>
 <div class="ttc" id="aclass_dialogo_controller_html_a3fa61ce9a80902999374b385416008b2"><div class="ttname"><a href="class_dialogo_controller.html#a3fa61ce9a80902999374b385416008b2">DialogoController.MostrarDialogo</a></div><div class="ttdeci">void MostrarDialogo(System.Action alTerminar)</div><div class="ttdoc">Inicia la visualización del diálogo.</div><div class="ttdef"><b>Definition</b> <a href="_dialog_contr_8cs_source.html#l00062">DialogContr.cs:62</a></div></div>
+<div class="ttc" id="aclass_fixed_joystick_html"><div class="ttname"><a href="class_fixed_joystick.html">FixedJoystick</a></div><div class="ttdef"><b>Definition</b> <a href="_fixed_joystick_8cs_source.html#l00005">FixedJoystick.cs:6</a></div></div>
+<div class="ttc" id="aclass_joystick_html_ad56badf3ee242443cb4f5940d6b00701"><div class="ttname"><a href="class_joystick.html#ad56badf3ee242443cb4f5940d6b00701">Joystick.OnPointerUp</a></div><div class="ttdeci">virtual void OnPointerUp(PointerEventData eventData)</div><div class="ttdef"><b>Definition</b> <a href="_joystick_8cs_source.html#l00132">Joystick.cs:132</a></div></div>
 <div class="ttc" id="aclass_player_controller_html"><div class="ttname"><a href="class_player_controller.html">PlayerController</a></div><div class="ttdoc">Gestiona el comportamiento integral del personaje. Incluye movimiento, salto, animaciones,...</div><div class="ttdef"><b>Definition</b> <a href="_personaje_controller_8cs_source.html#l00009">PersonajeController.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

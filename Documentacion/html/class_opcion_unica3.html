@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: OpcionUnica3 Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -126,12 +126,107 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:ad83d0e64bdc92bf9313851effed718fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto donde se muestra la retroalimentación sobre la respuesta seleccionada.  <br /></td></tr>
 <tr class="memitem:afcc74aa9d300627a035a95d3452cb39a" id="r_afcc74aa9d300627a035a95d3452cb39a"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc74aa9d300627a035a95d3452cb39a">sonidoBoton</a></td></tr>
 <tr class="memdesc:afcc74aa9d300627a035a95d3452cb39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip de audio que se reproduce al seleccionar una opción.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af339eb193ca5f48011c22eb051f09e85" id="r_af339eb193ca5f48011c22eb051f09e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af339eb193ca5f48011c22eb051f09e85">Start</a> ()</td></tr>
+<tr class="memitem:a0dd4686824279658dee4cc3ac27ed69c" id="r_a0dd4686824279658dee4cc3ac27ed69c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dd4686824279658dee4cc3ac27ed69c">VerificarRespuesta</a> (int indiceSeleccionado)</td></tr>
+<tr class="memitem:ac62cf8be8b08b700b462965994fc0b42" id="r_ac62cf8be8b08b700b462965994fc0b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac62cf8be8b08b700b462965994fc0b42">PasarASiguienteTrivia</a> ()</td></tr>
+<tr class="memitem:ac7c3891c6ba58a4f903ddd82e4e47249" id="r_ac7c3891c6ba58a4f903ddd82e4e47249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7c3891c6ba58a4f903ddd82e4e47249">IncrementarPuntajeAvanzadoCorrecto</a> ()</td></tr>
+<tr class="memitem:ad6cbb57c0079fd33d4ae8bae1e1097e9" id="r_ad6cbb57c0079fd33d4ae8bae1e1097e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6cbb57c0079fd33d4ae8bae1e1097e9">IncrementarPuntajeAvanzadoIncorrecto</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a02e956e66302c88a578e42f2569fe0a5" id="r_a02e956e66302c88a578e42f2569fe0a5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02e956e66302c88a578e42f2569fe0a5">pregunta</a> = &quot; ¿Dónde deberías empezar a colocar una coma en la siguiente oración: Traje lápices bolígrafos marcadores y borradores&quot;</td></tr>
+<tr class="memitem:a657f232359cc4b1ff183b5014edcec9d" id="r_a657f232359cc4b1ff183b5014edcec9d"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a657f232359cc4b1ff183b5014edcec9d">opciones</a> = { &quot;A. Después de lápices&quot;, &quot;B.Después de bolígrafos&quot;, &quot;C.Después de marcadores.&quot;, &quot;D.Después de borradores.&quot; }</td></tr>
+<tr class="memitem:a2029573c173fc0d9b29ae2797222cf22" id="r_a2029573c173fc0d9b29ae2797222cf22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2029573c173fc0d9b29ae2797222cf22">indiceRespuestaCorrecta</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla una pregunta de opción única en el nivel avanzado del juego, evaluando el uso correcto de la coma. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00009">9</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac7c3891c6ba58a4f903ddd82e4e47249" name="ac7c3891c6ba58a4f903ddd82e4e47249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c3891c6ba58a4f903ddd82e4e47249">&#9670;&#160;</a></span>IncrementarPuntajeAvanzadoCorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica3.IncrementarPuntajeAvanzadoCorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00111">111</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad6cbb57c0079fd33d4ae8bae1e1097e9" name="ad6cbb57c0079fd33d4ae8bae1e1097e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6cbb57c0079fd33d4ae8bae1e1097e9">&#9670;&#160;</a></span>IncrementarPuntajeAvanzadoIncorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica3.IncrementarPuntajeAvanzadoIncorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00117">117</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac62cf8be8b08b700b462965994fc0b42" name="ac62cf8be8b08b700b462965994fc0b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62cf8be8b08b700b462965994fc0b42">&#9670;&#160;</a></span>PasarASiguienteTrivia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica3.PasarASiguienteTrivia </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00106">106</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
 <a id="a7415531291b83308cb0a605a7d7130ac" name="a7415531291b83308cb0a605a7d7130ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7415531291b83308cb0a605a7d7130ac">&#9670;&#160;</a></span>SeleccionarOpcion0()</h2>
 
@@ -208,6 +303,60 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="af339eb193ca5f48011c22eb051f09e85" name="af339eb193ca5f48011c22eb051f09e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af339eb193ca5f48011c22eb051f09e85">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica3.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00044">44</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0dd4686824279658dee4cc3ac27ed69c" name="a0dd4686824279658dee4cc3ac27ed69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd4686824279658dee4cc3ac27ed69c">&#9670;&#160;</a></span>VerificarRespuesta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica3.VerificarRespuesta </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indiceSeleccionado</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00081">81</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="aaa26190a5be95f68c2af0f08669fda7b" name="aaa26190a5be95f68c2af0f08669fda7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa26190a5be95f68c2af0f08669fda7b">&#9670;&#160;</a></span>botonesOpciones</h2>
@@ -227,6 +376,54 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a2029573c173fc0d9b29ae2797222cf22" name="a2029573c173fc0d9b29ae2797222cf22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2029573c173fc0d9b29ae2797222cf22">&#9670;&#160;</a></span>indiceRespuestaCorrecta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OpcionUnica3.indiceRespuestaCorrecta = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00042">42</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
+<a id="a657f232359cc4b1ff183b5014edcec9d" name="a657f232359cc4b1ff183b5014edcec9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657f232359cc4b1ff183b5014edcec9d">&#9670;&#160;</a></span>opciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] OpcionUnica3.opciones = { &quot;A. Después de lápices&quot;, &quot;B.Después de bolígrafos&quot;, &quot;C.Después de marcadores.&quot;, &quot;D.Después de borradores.&quot; }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00040">40</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
 <a id="afe92733973d33dd0ff02e336d382d72a" name="afe92733973d33dd0ff02e336d382d72a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe92733973d33dd0ff02e336d382d72a">&#9670;&#160;</a></span>Paneles1</h2>
 
@@ -242,6 +439,30 @@ Data Fields</h2></td></tr>
 <p>Referencia al controlador de paneles encargado de mostrar la siguiente trivia. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00015">15</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
+
+</div>
+</div>
+<a id="a02e956e66302c88a578e42f2569fe0a5" name="a02e956e66302c88a578e42f2569fe0a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e956e66302c88a578e42f2569fe0a5">&#9670;&#160;</a></span>pregunta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string OpcionUnica3.pregunta = &quot; ¿Dónde deberías empezar a colocar una coma en la siguiente oración: Traje lápices bolígrafos marcadores y borradores&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia8_8cs_source.html#l00038">38</a> of file <a class="el" href="_trivia8_8cs_source.html">Trivia8.cs</a>.</p>
 
 </div>
 </div>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/PajaroEnemigo.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -112,26 +112,29 @@ $(function(){initNavTree('_pajaro_enemigo_8cs_source.html','',''); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    [Header(<span class="stringliteral">&quot;Daño&quot;</span>)]</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#aceb1231f8167df291b2253a58aed8b16">   36</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_pajaro_enemigo.html#aceb1231f8167df291b2253a58aed8b16">danio</a> = 1;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span> Vector3 posicionInicial;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#a3ee93015b0befea2b605441a52413f2c">   38</a></span>    <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_pajaro_enemigo.html#a3ee93015b0befea2b605441a52413f2c">posicionInicial</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> moviendoDerecha = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">   40</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">moviendoDerecha</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#aa8e35c48b84a80778ed8473d58f1595b">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pajaro_enemigo.html#aa8e35c48b84a80778ed8473d58f1595b">Start</a>()</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        posicionInicial = transform.position;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="class_pajaro_enemigo.html#a3ee93015b0befea2b605441a52413f2c">posicionInicial</a> = transform.position;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        StartCoroutine(RutinaVuelo());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        StartCoroutine(<a class="code hl_function" href="class_pajaro_enemigo.html#aa130ece0d65ba76c882b423cc9ba1b5e">RutinaVuelo</a>());</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    IEnumerator RutinaVuelo()</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#aa130ece0d65ba76c882b423cc9ba1b5e">   49</a></span>    IEnumerator <a class="code hl_function" href="class_pajaro_enemigo.html#aa130ece0d65ba76c882b423cc9ba1b5e">RutinaVuelo</a>()</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">float</span> objetivoX = moviendoDerecha ? posicionInicial.x + <a class="code hl_variable" href="class_pajaro_enemigo.html#a9b5c927118bdf4177c5a432cf5bec0e1">distanciaVuelo</a> : posicionInicial.x - <a class="code hl_variable" href="class_pajaro_enemigo.html#a9b5c927118bdf4177c5a432cf5bec0e1">distanciaVuelo</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">float</span> objetivoX = <a class="code hl_variable" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">moviendoDerecha</a> ? posicionInicial.x + <a class="code hl_variable" href="class_pajaro_enemigo.html#a9b5c927118bdf4177c5a432cf5bec0e1">distanciaVuelo</a> : posicionInicial.x - <a class="code hl_variable" href="class_pajaro_enemigo.html#a9b5c927118bdf4177c5a432cf5bec0e1">distanciaVuelo</a>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">while</span> (Mathf.Abs(transform.position.x - objetivoX) &gt; 0.1f)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                Vector3 direccion = moviendoDerecha ? Vector3.right : Vector3.left;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                Vector3 direccion = <a class="code hl_variable" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">moviendoDerecha</a> ? Vector3.right : Vector3.left;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                transform.Translate(direccion * <a class="code hl_variable" href="class_pajaro_enemigo.html#ab82d49e8b100fb72320ce32fee0b6b05">velocidad</a> * Time.deltaTime);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
@@ -140,13 +143,15 @@ $(function(){initNavTree('_pajaro_enemigo_8cs_source.html','',''); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_pajaro_enemigo.html#a11f9ae6e43c65ecc227db304b35fa0e8">tiempoEspera</a>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            moviendoDerecha = !moviendoDerecha;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_variable" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">moviendoDerecha</a> = !<a class="code hl_variable" href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">moviendoDerecha</a>;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            Voltear();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_function" href="class_pajaro_enemigo.html#ab9b49032dfe95e66daefafaad569a8a9">Voltear</a>();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> Voltear()</div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#ab9b49032dfe95e66daefafaad569a8a9">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pajaro_enemigo.html#ab9b49032dfe95e66daefafaad569a8a9">Voltear</a>()</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        Vector3 escala = transform.localScale;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
@@ -154,10 +159,12 @@ $(function(){initNavTree('_pajaro_enemigo_8cs_source.html','',''); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        transform.localScale = escala;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter2D(Collider2D otro)</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_pajaro_enemigo.html#a39e125f0d537e81410fe8e93044208dd">   81</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_pajaro_enemigo.html#a39e125f0d537e81410fe8e93044208dd">OnTriggerEnter2D</a>(Collider2D otro)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        PlayerController jugador = otro.GetComponent&lt;PlayerController&gt;();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="class_player_controller.html">PlayerController</a> jugador = otro.GetComponent&lt;<a class="code hl_class" href="class_player_controller.html">PlayerController</a>&gt;();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (jugador != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
@@ -166,13 +173,21 @@ $(function(){initNavTree('_pajaro_enemigo_8cs_source.html','',''); });
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            jugador.<a class="code hl_function" href="class_player_controller.html#a0329f53e40e6dffbd41deb0011fd4840">RecibeDanio</a>(direccionDanio, <a class="code hl_variable" href="class_pajaro_enemigo.html#aceb1231f8167df291b2253a58aed8b16">danio</a>);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 </div>
 <div class="ttc" id="aclass_pajaro_enemigo_html"><div class="ttname"><a href="class_pajaro_enemigo.html">PajaroEnemigo</a></div><div class="ttdoc">Gestiona el comportamiento de un pájaro enemigo que se mueve horizontalmente y daña al jugador al con...</div><div class="ttdef"><b>Definition</b> <a href="#l00012">PajaroEnemigo.cs:13</a></div></div>
 <div class="ttc" id="aclass_pajaro_enemigo_html_a11f9ae6e43c65ecc227db304b35fa0e8"><div class="ttname"><a href="class_pajaro_enemigo.html#a11f9ae6e43c65ecc227db304b35fa0e8">PajaroEnemigo.tiempoEspera</a></div><div class="ttdeci">float tiempoEspera</div><div class="ttdoc">Tiempo de espera antes de invertir la dirección del vuelo.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">PajaroEnemigo.cs:30</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_a1abdf9f5a7a490eaa623b3bbfc22c4e4"><div class="ttname"><a href="class_pajaro_enemigo.html#a1abdf9f5a7a490eaa623b3bbfc22c4e4">PajaroEnemigo.moviendoDerecha</a></div><div class="ttdeci">bool moviendoDerecha</div><div class="ttdef"><b>Definition</b> <a href="#l00040">PajaroEnemigo.cs:40</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_a39e125f0d537e81410fe8e93044208dd"><div class="ttname"><a href="class_pajaro_enemigo.html#a39e125f0d537e81410fe8e93044208dd">PajaroEnemigo.OnTriggerEnter2D</a></div><div class="ttdeci">void OnTriggerEnter2D(Collider2D otro)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">PajaroEnemigo.cs:81</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_a3ee93015b0befea2b605441a52413f2c"><div class="ttname"><a href="class_pajaro_enemigo.html#a3ee93015b0befea2b605441a52413f2c">PajaroEnemigo.posicionInicial</a></div><div class="ttdeci">Vector3 posicionInicial</div><div class="ttdef"><b>Definition</b> <a href="#l00038">PajaroEnemigo.cs:38</a></div></div>
 <div class="ttc" id="aclass_pajaro_enemigo_html_a9b5c927118bdf4177c5a432cf5bec0e1"><div class="ttname"><a href="class_pajaro_enemigo.html#a9b5c927118bdf4177c5a432cf5bec0e1">PajaroEnemigo.distanciaVuelo</a></div><div class="ttdeci">float distanciaVuelo</div><div class="ttdoc">Distancia máxima que el pájaro recorre en una dirección antes de cambiar.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">PajaroEnemigo.cs:24</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_aa130ece0d65ba76c882b423cc9ba1b5e"><div class="ttname"><a href="class_pajaro_enemigo.html#aa130ece0d65ba76c882b423cc9ba1b5e">PajaroEnemigo.RutinaVuelo</a></div><div class="ttdeci">IEnumerator RutinaVuelo()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">PajaroEnemigo.cs:49</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_aa8e35c48b84a80778ed8473d58f1595b"><div class="ttname"><a href="class_pajaro_enemigo.html#aa8e35c48b84a80778ed8473d58f1595b">PajaroEnemigo.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">PajaroEnemigo.cs:42</a></div></div>
 <div class="ttc" id="aclass_pajaro_enemigo_html_ab82d49e8b100fb72320ce32fee0b6b05"><div class="ttname"><a href="class_pajaro_enemigo.html#ab82d49e8b100fb72320ce32fee0b6b05">PajaroEnemigo.velocidad</a></div><div class="ttdeci">float velocidad</div><div class="ttdoc">Velocidad de movimiento del pájaro.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">PajaroEnemigo.cs:19</a></div></div>
+<div class="ttc" id="aclass_pajaro_enemigo_html_ab9b49032dfe95e66daefafaad569a8a9"><div class="ttname"><a href="class_pajaro_enemigo.html#ab9b49032dfe95e66daefafaad569a8a9">PajaroEnemigo.Voltear</a></div><div class="ttdeci">void Voltear()</div><div class="ttdef"><b>Definition</b> <a href="#l00072">PajaroEnemigo.cs:72</a></div></div>
 <div class="ttc" id="aclass_pajaro_enemigo_html_aceb1231f8167df291b2253a58aed8b16"><div class="ttname"><a href="class_pajaro_enemigo.html#aceb1231f8167df291b2253a58aed8b16">PajaroEnemigo.danio</a></div><div class="ttdeci">int danio</div><div class="ttdoc">Cantidad de daño que se aplica al jugador al entrar en contacto.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">PajaroEnemigo.cs:36</a></div></div>
+<div class="ttc" id="aclass_player_controller_html"><div class="ttname"><a href="class_player_controller.html">PlayerController</a></div><div class="ttdoc">Gestiona el comportamiento integral del personaje. Incluye movimiento, salto, animaciones,...</div><div class="ttdef"><b>Definition</b> <a href="_personaje_controller_8cs_source.html#l00009">PersonajeController.cs:10</a></div></div>
 <div class="ttc" id="aclass_player_controller_html_a0329f53e40e6dffbd41deb0011fd4840"><div class="ttname"><a href="class_player_controller.html#a0329f53e40e6dffbd41deb0011fd4840">PlayerController.RecibeDanio</a></div><div class="ttdeci">void RecibeDanio(Vector2 direccion, int cantDanio)</div><div class="ttdoc">Gestiona la recepción de daño por parte del personaje.</div><div class="ttdef"><b>Definition</b> <a href="_personaje_controller_8cs_source.html#l00185">PersonajeController.cs:185</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

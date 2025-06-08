@@ -1,21 +1,11 @@
 var searchData=
 [
-  ['textocarga_0',['textoCarga',['../class_carga_inicial.html#aa223bd682fbb5f2985ed053acc0176d1',1,'CargaInicial']]],
-  ['textodialogo_1',['textoDialogo',['../class_dialogo_controller.html#a187c83ff9d12fb9da311072c8a2806bc',1,'DialogoController.textoDialogo'],['../class_sistema_dialogo.html#acf496337d984a8508e91e0a5805c258e',1,'SistemaDialogo.textoDialogo']]],
-  ['textoizquierdo_2',['textoIzquierdo',['../class_unir_frases_interactivo.html#a63fa02430caa60dba497118813ccc3e2',1,'UnirFrasesInteractivo']]],
-  ['textooracion_3',['textoOracion',['../class_transcribir_oracion2.html#ad1ded7a632224f285f19c489fc2b0d28',1,'TranscribirOracion2.textoOracion'],['../class_transcribir_oracion3.html#a95c0896424cf83a1d7ea26b7ceb51b32',1,'TranscribirOracion3.textoOracion']]],
-  ['textopantalla_4',['textoPantalla',['../class_pantalla_dialogo.html#a11e1e3cfe4dd87e67a32a2cf45122956',1,'PantallaDialogo']]],
-  ['textopregunta_5',['textoPregunta',['../class_pregunta_opcion_multiple.html#a87b89b8e53e73a4b1da407cfc9a2caff',1,'PreguntaOpcionMultiple']]],
-  ['textoresultado_6',['textoResultado',['../class_pregunta_opcion_multiple.html#a1d64ed1738108314ddc46dab5c550b12',1,'PreguntaOpcionMultiple.textoResultado'],['../class_unir_frases_interactivo.html#a169715f926ac6c91306139383c324b05',1,'UnirFrasesInteractivo.textoResultado']]],
-  ['textoretroalimentacion_7',['textoRetroalimentacion',['../class_texto_con_comas_t_m_p.html#a862ae23b6eba3c78f3e82d78ce4588c8',1,'TextoConComasTMP.textoRetroalimentacion'],['../class_transcribir_oracion2.html#a5bc8c27e60c60dea802feabca9ef009b',1,'TranscribirOracion2.textoRetroalimentacion'],['../class_transcribir_oracion3.html#aa949c78a7228c26c07a89e37b0fc2165',1,'TranscribirOracion3.textoRetroalimentacion']]],
-  ['textosderechos_8',['textosDerechos',['../class_unir_frases_interactivo.html#a804e8dc31c30b980136e1deed8d0e87f',1,'UnirFrasesInteractivo']]],
-  ['textosopciones_9',['textosOpciones',['../class_pregunta_opcion_multiple.html#aa9ccedb8beb61b0b90bf551b1916e2b9',1,'PreguntaOpcionMultiple']]],
-  ['textotmp_10',['textoTMP',['../class_texto_con_comas_t_m_p.html#ad85e04ae670f2176fd58897e31ae2d56',1,'TextoConComasTMP']]],
-  ['tiempoanimacionmuerte_11',['tiempoAnimacionMuerte',['../class_ninja.html#a83a444a693d8efe42f2f121d2c343df8',1,'Ninja']]],
-  ['tiempoantescambioescena_12',['tiempoAntesCambioEscena',['../class_pantalla_dialogo.html#a82d58fd4fdba695240e2bb7d41ce56ce',1,'PantallaDialogo']]],
-  ['tiempocarga_13',['tiempoCarga',['../class_carga_inicial.html#a6822859abb1db039703b28673a739d42',1,'CargaInicial']]],
-  ['tiempoentredialogos_14',['tiempoEntreDialogos',['../class_pantalla_dialogo.html#a78be9ad2e23aa429a9cf8e51060d5642',1,'PantallaDialogo']]],
-  ['tiempoentreletras_15',['tiempoEntreLetras',['../class_pantalla_dialogo.html#ade0fd938ac2b31492f17eb2e10a5b76e',1,'PantallaDialogo']]],
-  ['tiempoentrelineas_16',['tiempoEntreLineas',['../class_dialogo_controller.html#a6195ef4b24971b5c8fdbcaac6208b8e8',1,'DialogoController']]],
-  ['tiempoespera_17',['tiempoEspera',['../class_pajaro_enemigo.html#a11f9ae6e43c65ecc227db304b35fa0e8',1,'PajaroEnemigo']]]
+  ['rb_0',['rb',['../class_enemigo.html#ad21d186fc4ebcb533fdfffe5acc6a1d8',1,'Enemigo.rb'],['../class_joystick_player_example.html#a3d4b143a21bd42643497893f389bfa3b',1,'JoystickPlayerExample.rb'],['../class_ninja.html#a88c65859770bad2763aaa8b33db9c805',1,'Ninja.rb'],['../class_player_controller.html#af656c35d14d18c09958ce86e6fb874d1',1,'PlayerController.rb']]],
+  ['rbjugador_1',['rbJugador',['../class_colisionador_trigger2_d.html#ac4bd53981e2d230d87f8ca7c4155b823',1,'ColisionadorTrigger2D.rbJugador'],['../class_paneles1.html#a62ef41c4c1c5f6fb9adc81174d7932bc',1,'Paneles1.rbJugador']]],
+  ['rbjugadororiginal_2',['rbJugadorOriginal',['../class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612',1,'SistemaDialogo']]],
+  ['recibiendodanio_3',['recibiendoDanio',['../class_player_controller.html#a20f9419a4c76fd6c20af16c53d4e90ce',1,'PlayerController']]],
+  ['recttransform_4',['rectTransform',['../class_coma_drag.html#ab390fe78f7549110e86d24ec9d4cc2c2',1,'ComaDrag']]],
+  ['rellenobarravida_5',['rellenoBarraVida',['../class_barra_vida.html#a716f8bb07e88786accab3459bd15873f',1,'BarraVida']]],
+  ['respuestacorrecta_6',['respuestaCorrecta',['../class_trivia1.html#ae6e1860dff66dfb14b0e338e052e0c5b',1,'Trivia1']]],
+  ['retroalimentaciontexto_7',['retroalimentacionTexto',['../class_trivia1.html#ac208d801d5863436a51ba53038b33437',1,'Trivia1.retroalimentacionTexto'],['../class_opcion_unica.html#a4f7e4b60f48b6275dc40d0dc866fac7e',1,'OpcionUnica.retroalimentacionTexto'],['../class_opcion_unica2.html#a554beecfcfd522ee2f6129103da83b0d',1,'OpcionUnica2.retroalimentacionTexto'],['../class_opcion_unica3.html#ad83d0e64bdc92bf9313851effed718fd',1,'OpcionUnica3.retroalimentacionTexto']]]
 ];

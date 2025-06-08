@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: OpcionUnica2 Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -126,12 +126,107 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a554beecfcfd522ee2f6129103da83b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que muestra la retroalimentación sobre la respuesta del jugador.  <br /></td></tr>
 <tr class="memitem:ad7fa0fb9e1ff872d2da15afd102b2b65" id="r_ad7fa0fb9e1ff872d2da15afd102b2b65"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7fa0fb9e1ff872d2da15afd102b2b65">sonidoBoton</a></td></tr>
 <tr class="memdesc:ad7fa0fb9e1ff872d2da15afd102b2b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip de sonido que se reproduce al pulsar un botón.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a22306d4509d8f13a7322ff1edccd7029" id="r_a22306d4509d8f13a7322ff1edccd7029"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22306d4509d8f13a7322ff1edccd7029">Start</a> ()</td></tr>
+<tr class="memitem:ac5da9bad4567460eac25132e8ebb31eb" id="r_ac5da9bad4567460eac25132e8ebb31eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5da9bad4567460eac25132e8ebb31eb">VerificarRespuesta</a> (int indiceSeleccionado)</td></tr>
+<tr class="memitem:a744b47d64925a2d167e54f268f78a28b" id="r_a744b47d64925a2d167e54f268f78a28b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a744b47d64925a2d167e54f268f78a28b">PasarASiguienteTrivia</a> ()</td></tr>
+<tr class="memitem:af6a087a21deb35bc3f30c6c3c8b5b1b2" id="r_af6a087a21deb35bc3f30c6c3c8b5b1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6a087a21deb35bc3f30c6c3c8b5b1b2">IncrementarPuntajeIntermedioCorrecto</a> ()</td></tr>
+<tr class="memitem:a149ece7af27c9540cf5a0aa4167e0be1" id="r_a149ece7af27c9540cf5a0aa4167e0be1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a149ece7af27c9540cf5a0aa4167e0be1">IncrementarPuntajeIntermedioIncorrecto</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afa50189d588375e5b7438745ba251c6c" id="r_afa50189d588375e5b7438745ba251c6c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa50189d588375e5b7438745ba251c6c">pregunta</a> = &quot;¿Dónde se debería colocar la primera coma?\n\&quot;Compré manzanas peras uvas y plátanos.\&quot;&quot;</td></tr>
+<tr class="memitem:ab952c27dbb86cc3cea9f83eb759165bb" id="r_ab952c27dbb86cc3cea9f83eb759165bb"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab952c27dbb86cc3cea9f83eb759165bb">opciones</a></td></tr>
+<tr class="memitem:aaf61c1a724a4d5a0721e42adfff9040f" id="r_aaf61c1a724a4d5a0721e42adfff9040f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf61c1a724a4d5a0721e42adfff9040f">indiceRespuestaCorrecta</a> = 1</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla una pregunta de opción única con retroalimentación al jugador. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00008">8</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af6a087a21deb35bc3f30c6c3c8b5b1b2" name="af6a087a21deb35bc3f30c6c3c8b5b1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a087a21deb35bc3f30c6c3c8b5b1b2">&#9670;&#160;</a></span>IncrementarPuntajeIntermedioCorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica2.IncrementarPuntajeIntermedioCorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00111">111</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
+<a id="a149ece7af27c9540cf5a0aa4167e0be1" name="a149ece7af27c9540cf5a0aa4167e0be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149ece7af27c9540cf5a0aa4167e0be1">&#9670;&#160;</a></span>IncrementarPuntajeIntermedioIncorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica2.IncrementarPuntajeIntermedioIncorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00117">117</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
+<a id="a744b47d64925a2d167e54f268f78a28b" name="a744b47d64925a2d167e54f268f78a28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744b47d64925a2d167e54f268f78a28b">&#9670;&#160;</a></span>PasarASiguienteTrivia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica2.PasarASiguienteTrivia </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00106">106</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
 <a id="aaba611ee550c0a83f42aef839de19b05" name="aaba611ee550c0a83f42aef839de19b05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaba611ee550c0a83f42aef839de19b05">&#9670;&#160;</a></span>SeleccionarOpcion0()</h2>
 
@@ -208,6 +303,60 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a22306d4509d8f13a7322ff1edccd7029" name="a22306d4509d8f13a7322ff1edccd7029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22306d4509d8f13a7322ff1edccd7029">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica2.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00046">46</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac5da9bad4567460eac25132e8ebb31eb" name="ac5da9bad4567460eac25132e8ebb31eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5da9bad4567460eac25132e8ebb31eb">&#9670;&#160;</a></span>VerificarRespuesta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpcionUnica2.VerificarRespuesta </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indiceSeleccionado</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00083">83</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a42dcb3470de7f098ef670e523dc25018" name="a42dcb3470de7f098ef670e523dc25018"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42dcb3470de7f098ef670e523dc25018">&#9670;&#160;</a></span>botonesOpciones</h2>
@@ -227,6 +376,60 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="aaf61c1a724a4d5a0721e42adfff9040f" name="aaf61c1a724a4d5a0721e42adfff9040f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf61c1a724a4d5a0721e42adfff9040f">&#9670;&#160;</a></span>indiceRespuestaCorrecta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OpcionUnica2.indiceRespuestaCorrecta = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00044">44</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab952c27dbb86cc3cea9f83eb759165bb" name="ab952c27dbb86cc3cea9f83eb759165bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab952c27dbb86cc3cea9f83eb759165bb">&#9670;&#160;</a></span>opciones</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] OpcionUnica2.opciones</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;A.Después de &#39;compré&#39;.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;B.Después de &#39;manzanas&#39; y &#39;peras&#39;.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;C.Después de &#39;uvas&#39;.&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;D.Después de &#39;peras&#39; y &#39;uvas&#39;.&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00037">37</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
 <a id="acf4e9a6da1fcbdbd0788872f4c06dd27" name="acf4e9a6da1fcbdbd0788872f4c06dd27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf4e9a6da1fcbdbd0788872f4c06dd27">&#9670;&#160;</a></span>Paneles1</h2>
 
@@ -242,6 +445,30 @@ Data Fields</h2></td></tr>
 <p>Referencia al controlador de paneles para avanzar entre preguntas o escenas. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00013">13</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
+
+</div>
+</div>
+<a id="afa50189d588375e5b7438745ba251c6c" name="afa50189d588375e5b7438745ba251c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa50189d588375e5b7438745ba251c6c">&#9670;&#160;</a></span>pregunta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string OpcionUnica2.pregunta = &quot;¿Dónde se debería colocar la primera coma?\n\&quot;Compré manzanas peras uvas y plátanos.\&quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia4_8cs_source.html#l00035">35</a> of file <a class="el" href="_trivia4_8cs_source.html">Trivia4.cs</a>.</p>
 
 </div>
 </div>

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: SistemaDialogo Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -132,6 +132,20 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:ae5bf440805129617bdf127b888a731dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar.  <br /></td></tr>
 <tr class="memitem:ab47bc2b13b27da77695a8686e22d1514" id="r_ab47bc2b13b27da77695a8686e22d1514"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab47bc2b13b27da77695a8686e22d1514">sonidoPanel</a></td></tr>
 <tr class="memdesc:ab47bc2b13b27da77695a8686e22d1514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al avanzar en el diálogo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4a9963dbd38a80ecbca6c4d85a48c283" id="r_a4a9963dbd38a80ecbca6c4d85a48c283"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a9963dbd38a80ecbca6c4d85a48c283">Start</a> ()</td></tr>
+<tr class="memitem:a21bc2b53b822d34ad55f5888e03babb3" id="r_a21bc2b53b822d34ad55f5888e03babb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21bc2b53b822d34ad55f5888e03babb3">OnCollisionEnter2D</a> (Collision2D collision)</td></tr>
+<tr class="memitem:ab6b8bd4d427deb45117d355107e280b1" id="r_ab6b8bd4d427deb45117d355107e280b1"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6b8bd4d427deb45117d355107e280b1">EscribirLinea</a> (string linea)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a86260521a008d5f592a02760f30cbe9c" id="r_a86260521a008d5f592a02760f30cbe9c"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86260521a008d5f592a02760f30cbe9c">escrituraActual</a></td></tr>
+<tr class="memitem:a521fb55f63947f63d82d50dd5f8edf83" id="r_a521fb55f63947f63d82d50dd5f8edf83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a521fb55f63947f63d82d50dd5f8edf83">indice</a> = 0</td></tr>
+<tr class="memitem:abfbcceeab633ff2b3dd63336d6f6248f" id="r_abfbcceeab633ff2b3dd63336d6f6248f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfbcceeab633ff2b3dd63336d6f6248f">dialogoIniciado</a> = false</td></tr>
+<tr class="memitem:ac5f8a1438fc75d3de8d996afff0dd612" id="r_ac5f8a1438fc75d3de8d996afff0dd612"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5f8a1438fc75d3de8d996afff0dd612">rbJugadorOriginal</a></td></tr>
+<tr class="memitem:aa2969f932073feada7c666295d8431d4" id="r_aa2969f932073feada7c666295d8431d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_controller.html">PlayerController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2969f932073feada7c666295d8431d4">playerController</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto, el bloqueo del movimiento del jugador durante el diálogo y la reaparición del NPC. </p>
@@ -167,6 +181,33 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="ab6b8bd4d427deb45117d355107e280b1" name="ab6b8bd4d427deb45117d355107e280b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b8bd4d427deb45117d355107e280b1">&#9670;&#160;</a></span>EscribirLinea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator SistemaDialogo.EscribirLinea </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>linea</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00206">206</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
 <a id="a6963f01bf1b72c7d0e8cf18c3a775f06" name="a6963f01bf1b72c7d0e8cf18c3a775f06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6963f01bf1b72c7d0e8cf18c3a775f06">&#9670;&#160;</a></span>MostrarLinea()</h2>
 
@@ -196,7 +237,109 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a21bc2b53b822d34ad55f5888e03babb3" name="a21bc2b53b822d34ad55f5888e03babb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bc2b53b822d34ad55f5888e03babb3">&#9670;&#160;</a></span>OnCollisionEnter2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SistemaDialogo.OnCollisionEnter2D </td>
+          <td>(</td>
+          <td class="paramtype">Collision2D</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00198">198</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4a9963dbd38a80ecbca6c4d85a48c283" name="a4a9963dbd38a80ecbca6c4d85a48c283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9963dbd38a80ecbca6c4d85a48c283">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SistemaDialogo.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00074">74</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="abfbcceeab633ff2b3dd63336d6f6248f" name="abfbcceeab633ff2b3dd63336d6f6248f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbcceeab633ff2b3dd63336d6f6248f">&#9670;&#160;</a></span>dialogoIniciado</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SistemaDialogo.dialogoIniciado = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00052">52</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
+<a id="a86260521a008d5f592a02760f30cbe9c" name="a86260521a008d5f592a02760f30cbe9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86260521a008d5f592a02760f30cbe9c">&#9670;&#160;</a></span>escrituraActual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Coroutine SistemaDialogo.escrituraActual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00033">33</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
 <a id="ae15899abe1a7980960758d7ee5751a2d" name="ae15899abe1a7980960758d7ee5751a2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae15899abe1a7980960758d7ee5751a2d">&#9670;&#160;</a></span>esReaparicion</h2>
 
@@ -212,6 +355,30 @@ Data Fields</h2></td></tr>
 <p>Indica si el diálogo actual es parte de la reaparición del NPC. </p>
 
 <p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00058">58</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
+<a id="a521fb55f63947f63d82d50dd5f8edf83" name="a521fb55f63947f63d82d50dd5f8edf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a521fb55f63947f63d82d50dd5f8edf83">&#9670;&#160;</a></span>indice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SistemaDialogo.indice = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00040">40</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>
@@ -305,6 +472,30 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="aa2969f932073feada7c666295d8431d4" name="aa2969f932073feada7c666295d8431d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2969f932073feada7c666295d8431d4">&#9670;&#160;</a></span>playerController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_controller.html">PlayerController</a> SistemaDialogo.playerController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00062">62</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
 <a id="a7322d867e0a85c72552c130f8776ffa5" name="a7322d867e0a85c72552c130f8776ffa5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7322d867e0a85c72552c130f8776ffa5">&#9670;&#160;</a></span>puntoReaparicion</h2>
 
@@ -320,6 +511,30 @@ Data Fields</h2></td></tr>
 <p>Punto donde aparecerá el NPC reaparecido. </p>
 
 <p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00050">50</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac5f8a1438fc75d3de8d996afff0dd612" name="ac5f8a1438fc75d3de8d996afff0dd612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f8a1438fc75d3de8d996afff0dd612">&#9670;&#160;</a></span>rbJugadorOriginal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody2D SistemaDialogo.rbJugadorOriginal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_sistema_dailogo_8cs_source.html#l00060">60</a> of file <a class="el" href="_sistema_dailogo_8cs_source.html">SistemaDailogo.cs</a>.</p>
 
 </div>
 </div>

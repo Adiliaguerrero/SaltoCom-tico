@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: AparicionPersonaje Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -109,10 +109,15 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:ab03885d56e82db222f851f974ce15643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arreglo de prefabs disponibles para el jugador.  <br /></td></tr>
 <tr class="memitem:a4de4b1603a7a7eb86569c660f8c2e100" id="r_a4de4b1603a7a7eb86569c660f8c2e100"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4de4b1603a7a7eb86569c660f8c2e100">puntoAparicion</a></td></tr>
 <tr class="memdesc:a4de4b1603a7a7eb86569c660f8c2e100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posición donde aparecerá el personaje instanciado.  <br /></td></tr>
-<tr class="memitem:a89f60862111227897dd0a3e1fd0109df" id="r_a89f60862111227897dd0a3e1fd0109df"><td class="memItemLeft" align="right" valign="top">Joystick&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89f60862111227897dd0a3e1fd0109df">joystick</a></td></tr>
+<tr class="memitem:a89f60862111227897dd0a3e1fd0109df" id="r_a89f60862111227897dd0a3e1fd0109df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joystick.html">Joystick</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89f60862111227897dd0a3e1fd0109df">joystick</a></td></tr>
 <tr class="memdesc:a89f60862111227897dd0a3e1fd0109df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referencia al joystick usado para controlar al personaje.  <br /></td></tr>
 <tr class="memitem:adce94405f233ab9d09152470f7b1cc87" id="r_adce94405f233ab9d09152470f7b1cc87"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adce94405f233ab9d09152470f7b1cc87">camara</a></td></tr>
 <tr class="memdesc:adce94405f233ab9d09152470f7b1cc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objeto de cámara que seguirá al personaje instanciado.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aad05e73afb0faefac4275843b8a97915" id="r_aad05e73afb0faefac4275843b8a97915"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad05e73afb0faefac4275843b8a97915">Start</a> ()</td></tr>
+<tr class="memdesc:aad05e73afb0faefac4275843b8a97915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancia el personaje seleccionado y configura sus dependencias.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gestiona la aparición del personaje seleccionado al iniciar la escena. </p>
@@ -120,7 +125,38 @@ Data Fields</h2></td></tr>
 <p>Asigna este script a un GameObject vacío y configura los prefabs de personajes, punto de aparición, joystick y cámara desde el Inspector. </p>
 
 <p class="definition">Definition at line <a class="el" href="_inicio_perso_8cs_source.html#l00013">13</a> of file <a class="el" href="_inicio_perso_8cs_source.html">InicioPerso.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aad05e73afb0faefac4275843b8a97915" name="aad05e73afb0faefac4275843b8a97915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad05e73afb0faefac4275843b8a97915">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AparicionPersonaje.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instancia el personaje seleccionado y configura sus dependencias. </p>
+<p>Recupera el índice del personaje desde PlayerPrefs, instancia el personaje, asigna joystick y configura la cámara. </p>
+
+<p class="definition">Definition at line <a class="el" href="_inicio_perso_8cs_source.html#l00048">48</a> of file <a class="el" href="_inicio_perso_8cs_source.html">InicioPerso.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="adce94405f233ab9d09152470f7b1cc87" name="adce94405f233ab9d09152470f7b1cc87"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adce94405f233ab9d09152470f7b1cc87">&#9670;&#160;</a></span>camara</h2>
 
@@ -146,7 +182,7 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Joystick AparicionPersonaje.joystick</td>
+          <td class="memname"><a class="el" href="class_joystick.html">Joystick</a> AparicionPersonaje.joystick</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: BarraVida Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -118,6 +118,13 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:ae919c8cbd88f05e4a1140b181969aca3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Panel de Game Over que se muestra cuando el jugador pierde.  <br /></td></tr>
 <tr class="memitem:aea5f0961ab4cf297a9b10281f29b1455" id="r_aea5f0961ab4cf297a9b10281f29b1455"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea5f0961ab4cf297a9b10281f29b1455">imagenAEliminar</a></td></tr>
 <tr class="memdesc:aea5f0961ab4cf297a9b10281f29b1455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imagen u objeto que debe ser eliminado al activarse el Game Over.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a213fe3626ab245976beb91d65416b183" id="r_a213fe3626ab245976beb91d65416b183"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a213fe3626ab245976beb91d65416b183">VidaMaxima</a> = 5f</td></tr>
+<tr class="memdesc:a213fe3626ab245976beb91d65416b183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor máximo de vida que puede tener el jugador.  <br /></td></tr>
+<tr class="memitem:a8ea4f41761331ed481289d3de5c21414" id="r_a8ea4f41761331ed481289d3de5c21414"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ea4f41761331ed481289d3de5c21414">gameOverActivado</a> = false</td></tr>
+<tr class="memdesc:a8ea4f41761331ed481289d3de5c21414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bandera booleana para evitar que se active el Game Over más de una vez.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla el sistema de vida del jugador y activa el panel de Game Over cuando la vida llega a cero. </p>
@@ -189,6 +196,32 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a8ea4f41761331ed481289d3de5c21414" name="a8ea4f41761331ed481289d3de5c21414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea4f41761331ed481289d3de5c21414">&#9670;&#160;</a></span>gameOverActivado</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BarraVida.gameOverActivado = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bandera booleana para evitar que se active el Game Over más de una vez. </p>
+
+<p class="definition">Definition at line <a class="el" href="_barra_vida_8cs_source.html#l00033">33</a> of file <a class="el" href="_barra_vida_8cs_source.html">BarraVida.cs</a>.</p>
+
+</div>
+</div>
 <a id="aea5f0961ab4cf297a9b10281f29b1455" name="aea5f0961ab4cf297a9b10281f29b1455"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea5f0961ab4cf297a9b10281f29b1455">&#9670;&#160;</a></span>imagenAEliminar</h2>
 
@@ -240,6 +273,32 @@ Data Fields</h2></td></tr>
 <p>Imagen que representa el relleno de la barra de vida en la interfaz gráfica. </p>
 
 <p class="definition">Definition at line <a class="el" href="_barra_vida_8cs_source.html#l00013">13</a> of file <a class="el" href="_barra_vida_8cs_source.html">BarraVida.cs</a>.</p>
+
+</div>
+</div>
+<a id="a213fe3626ab245976beb91d65416b183" name="a213fe3626ab245976beb91d65416b183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213fe3626ab245976beb91d65416b183">&#9670;&#160;</a></span>VidaMaxima</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BarraVida.VidaMaxima = 5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Valor máximo de vida que puede tener el jugador. </p>
+
+<p class="definition">Definition at line <a class="el" href="_barra_vida_8cs_source.html#l00018">18</a> of file <a class="el" href="_barra_vida_8cs_source.html">BarraVida.cs</a>.</p>
 
 </div>
 </div>

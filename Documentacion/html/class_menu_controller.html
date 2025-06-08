@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: MenuController Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -116,12 +116,60 @@ Public Member Functions</h2></td></tr>
 Data Fields</h2></td></tr>
 <tr class="memitem:a3971c1d71ea1570d304e166f0cd6ae24" id="r_a3971c1d71ea1570d304e166f0cd6ae24"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a></td></tr>
 <tr class="memdesc:a3971c1d71ea1570d304e166f0cd6ae24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al pulsar un botón del menú.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aef6a887232793162ab61b183e76982bc" id="r_aef6a887232793162ab61b183e76982bc"><td class="memItemLeft" align="right" valign="top">System.Collections.IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef6a887232793162ab61b183e76982bc">CargarEscenaConDelay</a> (string nombreEscena, float delay)</td></tr>
+<tr class="memdesc:aef6a887232793162ab61b183e76982bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que espera un tiempo específico antes de cargar una escena.  <br /></td></tr>
+<tr class="memitem:aa23037b231eb293a6e0eeca7859bd49a" id="r_aa23037b231eb293a6e0eeca7859bd49a"><td class="memItemLeft" align="right" valign="top">System.Collections.IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa23037b231eb293a6e0eeca7859bd49a">SalirConDelay</a> (float delay)</td></tr>
+<tr class="memdesc:aa23037b231eb293a6e0eeca7859bd49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que espera un tiempo antes de cerrar la aplicación.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego. </p>
 
 <p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00007">7</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aef6a887232793162ab61b183e76982bc" name="aef6a887232793162ab61b183e76982bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6a887232793162ab61b183e76982bc">&#9670;&#160;</a></span>CargarEscenaConDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Collections.IEnumerator MenuController.CargarEscenaConDelay </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>nombreEscena</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>delay</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que espera un tiempo específico antes de cargar una escena. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombreEscena</td><td>Nombre de la escena a cargar.</td></tr>
+    <tr><td class="paramname">delay</td><td>Duración de la espera antes de cargar la escena.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>IEnumerator para control de la corrutina.</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00054">54</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
+
+</div>
+</div>
 <a id="aa2b3f331725788163115d327cba8120c" name="aa2b3f331725788163115d327cba8120c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2b3f331725788163115d327cba8120c">&#9670;&#160;</a></span>IrAInicio()</h2>
 
@@ -177,6 +225,42 @@ Data Fields</h2></td></tr>
 <p>Método que se llama para ir a la escena de logros o estadísticas del juego. </p>
 
 <p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00028">28</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa23037b231eb293a6e0eeca7859bd49a" name="aa23037b231eb293a6e0eeca7859bd49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23037b231eb293a6e0eeca7859bd49a">&#9670;&#160;</a></span>SalirConDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Collections.IEnumerator MenuController.SalirConDelay </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>delay</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que espera un tiempo antes de cerrar la aplicación. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>Duración de la espera antes de cerrar la aplicación.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>IEnumerator para control de la corrutina. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_menu_8cs_source.html#l00069">69</a> of file <a class="el" href="_menu_8cs_source.html">Menu.cs</a>.</p>
 
 </div>
 </div>

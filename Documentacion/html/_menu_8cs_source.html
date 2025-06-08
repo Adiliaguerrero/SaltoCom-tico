@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/Menu.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -107,7 +107,7 @@ $(function(){initNavTree('_menu_8cs_source.html','',''); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">ReproducirSonido</a>(<a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        StartCoroutine(CargarEscenaConDelay(<span class="stringliteral">&quot;Dialogo&quot;</span>, <a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        StartCoroutine(<a class="code hl_function" href="class_menu_controller.html#aef6a887232793162ab61b183e76982bc">CargarEscenaConDelay</a>(<span class="stringliteral">&quot;Dialogo&quot;</span>, <a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
@@ -116,7 +116,7 @@ $(function(){initNavTree('_menu_8cs_source.html','',''); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">ReproducirSonido</a>(<a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        StartCoroutine(CargarEscenaConDelay(<span class="stringliteral">&quot;Logros&quot;</span>, <a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        StartCoroutine(<a class="code hl_function" href="class_menu_controller.html#aef6a887232793162ab61b183e76982bc">CargarEscenaConDelay</a>(<span class="stringliteral">&quot;Logros&quot;</span>, <a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -126,21 +126,24 @@ $(function(){initNavTree('_menu_8cs_source.html','',''); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="class_audio_manager.html">AudioManager</a>.<a class="code hl_variable" href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">instancia</a>.<a class="code hl_function" href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">ReproducirSonido</a>(<a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        StartCoroutine(SalirConDelay(<a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        StartCoroutine(<a class="code hl_function" href="class_menu_controller.html#aa23037b231eb293a6e0eeca7859bd49a">SalirConDelay</a>(<a class="code hl_variable" href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">sonidoBoton</a>.length));</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">private</span> System.Collections.IEnumerator CargarEscenaConDelay(<span class="keywordtype">string</span> nombreEscena, <span class="keywordtype">float</span> delay)</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_menu_controller.html#aef6a887232793162ab61b183e76982bc">   54</a></span>    <span class="keyword">private</span> System.Collections.IEnumerator <a class="code hl_function" href="class_menu_controller.html#aef6a887232793162ab61b183e76982bc">CargarEscenaConDelay</a>(<span class="keywordtype">string</span> nombreEscena, <span class="keywordtype">float</span> delay)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(delay);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        SceneManager.LoadScene(nombreEscena);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">private</span> System.Collections.IEnumerator SalirConDelay(<span class="keywordtype">float</span> delay)</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_menu_controller.html#aa23037b231eb293a6e0eeca7859bd49a">   69</a></span>    <span class="keyword">private</span> System.Collections.IEnumerator <a class="code hl_function" href="class_menu_controller.html#aa23037b231eb293a6e0eeca7859bd49a">SalirConDelay</a>(<span class="keywordtype">float</span> delay)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(delay);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
@@ -153,6 +156,7 @@ $(function(){initNavTree('_menu_8cs_source.html','',''); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            Application.Quit();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
 </div>
 <div class="ttc" id="aclass_audio_manager_html"><div class="ttname"><a href="class_audio_manager.html">AudioManager</a></div><div class="ttdoc">Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00007">AudioManager.cs:8</a></div></div>
@@ -161,8 +165,10 @@ $(function(){initNavTree('_menu_8cs_source.html','',''); });
 <div class="ttc" id="aclass_menu_controller_html"><div class="ttname"><a href="class_menu_controller.html">MenuController</a></div><div class="ttdoc">Esta clase controla las acciones del menú principal, como cambiar de escena y salir del juego.</div><div class="ttdef"><b>Definition</b> <a href="#l00007">Menu.cs:8</a></div></div>
 <div class="ttc" id="aclass_menu_controller_html_a3971c1d71ea1570d304e166f0cd6ae24"><div class="ttname"><a href="class_menu_controller.html#a3971c1d71ea1570d304e166f0cd6ae24">MenuController.sonidoBoton</a></div><div class="ttdeci">AudioClip sonidoBoton</div><div class="ttdoc">Sonido que se reproduce al pulsar un botón del menú.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">Menu.cs:12</a></div></div>
 <div class="ttc" id="aclass_menu_controller_html_a80cbb79a80231ddadb26e5267bd1099a"><div class="ttname"><a href="class_menu_controller.html#a80cbb79a80231ddadb26e5267bd1099a">MenuController.IrALogros</a></div><div class="ttdeci">void IrALogros()</div><div class="ttdoc">Método que se llama para ir a la escena de logros o estadísticas del juego.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Menu.cs:28</a></div></div>
+<div class="ttc" id="aclass_menu_controller_html_aa23037b231eb293a6e0eeca7859bd49a"><div class="ttname"><a href="class_menu_controller.html#aa23037b231eb293a6e0eeca7859bd49a">MenuController.SalirConDelay</a></div><div class="ttdeci">System.Collections.IEnumerator SalirConDelay(float delay)</div><div class="ttdoc">Corrutina que espera un tiempo antes de cerrar la aplicación.</div><div class="ttdef"><b>Definition</b> <a href="#l00069">Menu.cs:69</a></div></div>
 <div class="ttc" id="aclass_menu_controller_html_aa2b3f331725788163115d327cba8120c"><div class="ttname"><a href="class_menu_controller.html#aa2b3f331725788163115d327cba8120c">MenuController.IrAInicio</a></div><div class="ttdeci">void IrAInicio()</div><div class="ttdoc">Método que se llama para ir a la escena de introducción o selección de niveles.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">Menu.cs:18</a></div></div>
 <div class="ttc" id="aclass_menu_controller_html_abce5f2b82bc49a20b910748210f08382"><div class="ttname"><a href="class_menu_controller.html#abce5f2b82bc49a20b910748210f08382">MenuController.SalirDelJuego</a></div><div class="ttdeci">void SalirDelJuego()</div><div class="ttdoc">Método que se llama para salir del juego.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Menu.cs:39</a></div></div>
+<div class="ttc" id="aclass_menu_controller_html_aef6a887232793162ab61b183e76982bc"><div class="ttname"><a href="class_menu_controller.html#aef6a887232793162ab61b183e76982bc">MenuController.CargarEscenaConDelay</a></div><div class="ttdeci">System.Collections.IEnumerator CargarEscenaConDelay(string nombreEscena, float delay)</div><div class="ttdoc">Corrutina que espera un tiempo específico antes de cargar una escena.</div><div class="ttdef"><b>Definition</b> <a href="#l00054">Menu.cs:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: TranscribirOracion2 Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -120,12 +120,132 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a5bc8c27e60c60dea802feabca9ef009b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texto que muestra la retroalimentación tras verificar la respuesta (correcta o incorrecta).  <br /></td></tr>
 <tr class="memitem:a0f7a0d391d723182a4596f074bf9be9e" id="r_a0f7a0d391d723182a4596f074bf9be9e"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f7a0d391d723182a4596f074bf9be9e">sonidoBoton</a></td></tr>
 <tr class="memdesc:a0f7a0d391d723182a4596f074bf9be9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al verificar la respuesta, asignado desde el Inspector.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a66fd691683ddaa19ef0cf3d1d0e49add" id="r_a66fd691683ddaa19ef0cf3d1d0e49add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66fd691683ddaa19ef0cf3d1d0e49add">Start</a> ()</td></tr>
+<tr class="memitem:a9571230879aacadda9f1caf3b45a4080" id="r_a9571230879aacadda9f1caf3b45a4080"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9571230879aacadda9f1caf3b45a4080">PasarASiguienteTrivia</a> ()</td></tr>
+<tr class="memitem:af94718a0ea6be05d128a79d3b86d1b48" id="r_af94718a0ea6be05d128a79d3b86d1b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af94718a0ea6be05d128a79d3b86d1b48">IncrementarPuntajeIntermedioCorrecto</a> ()</td></tr>
+<tr class="memitem:ad8a2a0a06dfc0c3fd935f1c82e35ecdb" id="r_ad8a2a0a06dfc0c3fd935f1c82e35ecdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8a2a0a06dfc0c3fd935f1c82e35ecdb">IncrementarPuntajeIntermedioIncorrecto</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a302a158d8485438e0d4acc3c6986d2c4" id="r_a302a158d8485438e0d4acc3c6986d2c4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a302a158d8485438e0d4acc3c6986d2c4">oracionSinComas</a> = &quot;Reescriba la siguiente oración colocando la coma en los lugares correctos \n\&quot;En cuanto me levanté me bañé comí y cepillé mis dientes.\&quot;&quot;</td></tr>
+<tr class="memitem:a73b454fc084eb69c3d4a8e9ae291f0f1" id="r_a73b454fc084eb69c3d4a8e9ae291f0f1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73b454fc084eb69c3d4a8e9ae291f0f1">oracionCorrecta</a> = &quot;En cuanto me levanté me bañé, comí y cepillé mis dientes.&quot;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla la transcripción de una oración en la que el usuario debe colocar correctamente las comas. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00007">7</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="af94718a0ea6be05d128a79d3b86d1b48" name="af94718a0ea6be05d128a79d3b86d1b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94718a0ea6be05d128a79d3b86d1b48">&#9670;&#160;</a></span>IncrementarPuntajeIntermedioCorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TranscribirOracion2.IncrementarPuntajeIntermedioCorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00078">78</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad8a2a0a06dfc0c3fd935f1c82e35ecdb" name="ad8a2a0a06dfc0c3fd935f1c82e35ecdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a2a0a06dfc0c3fd935f1c82e35ecdb">&#9670;&#160;</a></span>IncrementarPuntajeIntermedioIncorrecto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TranscribirOracion2.IncrementarPuntajeIntermedioIncorrecto </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00087">87</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9571230879aacadda9f1caf3b45a4080" name="a9571230879aacadda9f1caf3b45a4080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9571230879aacadda9f1caf3b45a4080">&#9670;&#160;</a></span>PasarASiguienteTrivia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TranscribirOracion2.PasarASiguienteTrivia </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00073">73</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
+<a id="a66fd691683ddaa19ef0cf3d1d0e49add" name="a66fd691683ddaa19ef0cf3d1d0e49add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fd691683ddaa19ef0cf3d1d0e49add">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TranscribirOracion2.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00039">39</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
 <a id="a3016ac6e4bb4c07e8bd6c667bdba6bda" name="a3016ac6e4bb4c07e8bd6c667bdba6bda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3016ac6e4bb4c07e8bd6c667bdba6bda">&#9670;&#160;</a></span>VerificarRespuesta()</h2>
 
@@ -171,6 +291,54 @@ Data Fields</h2></td></tr>
 <p>Campo de entrada donde el usuario debe escribir la oración corregida con comas. </p>
 
 <p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00022">22</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
+<a id="a73b454fc084eb69c3d4a8e9ae291f0f1" name="a73b454fc084eb69c3d4a8e9ae291f0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b454fc084eb69c3d4a8e9ae291f0f1">&#9670;&#160;</a></span>oracionCorrecta</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TranscribirOracion2.oracionCorrecta = &quot;En cuanto me levanté me bañé, comí y cepillé mis dientes.&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00037">37</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
+
+</div>
+</div>
+<a id="a302a158d8485438e0d4acc3c6986d2c4" name="a302a158d8485438e0d4acc3c6986d2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302a158d8485438e0d4acc3c6986d2c4">&#9670;&#160;</a></span>oracionSinComas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TranscribirOracion2.oracionSinComas = &quot;Reescriba la siguiente oración colocando la coma en los lugares correctos \n\&quot;En cuanto me levanté me bañé comí y cepillé mis dientes.\&quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_trivia6_8cs_source.html#l00035">35</a> of file <a class="el" href="_trivia6_8cs_source.html">Trivia6.cs</a>.</p>
 
 </div>
 </div>

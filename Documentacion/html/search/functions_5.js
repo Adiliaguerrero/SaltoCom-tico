@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['obtenerestadosonido_0',['ObtenerEstadoSonido',['../class_audio_manager.html#a894636d6991c11ba8044eb40a85b84fb',1,'AudioManager']]],
-  ['onclick_1',['OnClick',['../class_boton_musica.html#a8419c2d6141c048c1f8e4de96b1caa71',1,'BotonMusica']]],
-  ['ondrag_2',['OnDrag',['../class_coma_drag.html#acc2bd41e568f778a5e5bbbf8781a7096',1,'ComaDrag']]],
-  ['onenddrag_3',['OnEndDrag',['../class_coma_drag.html#a82610b6ac5e1e277bb71835e20d5e652',1,'ComaDrag']]]
+  ['handleinput_0',['HandleInput',['../class_joystick.html#aa97db68bee288b2a414342244ca19d93',1,'Joystick.HandleInput()'],['../class_dynamic_joystick.html#a5690b2fcec265e43258cce9ea4d79c20',1,'DynamicJoystick.HandleInput()'],['../class_variable_joystick.html#a6d058f316d7fdd67f4d72b2470080b9b',1,'VariableJoystick.HandleInput()']]]
 ];

@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: ConfiguracionUI Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -119,6 +119,19 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a8fc5e2bda981a2527531a20a78d9bc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Botón que cierra el panel de créditos.  <br /></td></tr>
 <tr class="memitem:a3f48867cd2151933dc049b7c32b1a281" id="r_a3f48867cd2151933dc049b7c32b1a281"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f48867cd2151933dc049b7c32b1a281">sonidoBoton</a></td></tr>
 <tr class="memdesc:a3f48867cd2151933dc049b7c32b1a281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonido que se reproduce al presionar cualquier botón.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aede1a8021ead3e1ce35384eeb4871156" id="r_aede1a8021ead3e1ce35384eeb4871156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aede1a8021ead3e1ce35384eeb4871156">Start</a> ()</td></tr>
+<tr class="memdesc:aede1a8021ead3e1ce35384eeb4871156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Se ejecuta al iniciar el objeto y configura la visibilidad de los paneles y la asignación de eventos a los botones.  <br /></td></tr>
+<tr class="memitem:a56f16e89b5b197663a2b29b341d7751a" id="r_a56f16e89b5b197663a2b29b341d7751a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56f16e89b5b197663a2b29b341d7751a">AbrirConfiguracion</a> ()</td></tr>
+<tr class="memdesc:a56f16e89b5b197663a2b29b341d7751a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el panel de configuración, reproduce un sonido y pausa el juego.  <br /></td></tr>
+<tr class="memitem:a3fee6f634a29b8cd87be947ed300df61" id="r_a3fee6f634a29b8cd87be947ed300df61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fee6f634a29b8cd87be947ed300df61">CerrarConfiguracion</a> ()</td></tr>
+<tr class="memdesc:a3fee6f634a29b8cd87be947ed300df61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oculta el panel de configuración, reproduce un sonido y reanuda el juego.  <br /></td></tr>
+<tr class="memitem:a7db7fce20afdeb7cd9df73674d92f190" id="r_a7db7fce20afdeb7cd9df73674d92f190"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7db7fce20afdeb7cd9df73674d92f190">AbrirCreditos</a> ()</td></tr>
+<tr class="memdesc:a7db7fce20afdeb7cd9df73674d92f190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el panel de créditos y reproduce un sonido.  <br /></td></tr>
+<tr class="memitem:abcb78832379c7a8e049b291d535cdf6c" id="r_abcb78832379c7a8e049b291d535cdf6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb78832379c7a8e049b291d535cdf6c">CerrarCreditos</a> ()</td></tr>
+<tr class="memdesc:abcb78832379c7a8e049b291d535cdf6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oculta el panel de créditos y reproduce un sonido.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla la visualización de los paneles de configuración y créditos, así como la asignación de eventos a los botones respectivos. </p>
@@ -126,7 +139,164 @@ Data Fields</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_audio_manager.html" title="Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...">AudioManager</a></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00015">15</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
-</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a56f16e89b5b197663a2b29b341d7751a" name="a56f16e89b5b197663a2b29b341d7751a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f16e89b5b197663a2b29b341d7751a">&#9670;&#160;</a></span>AbrirConfiguracion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConfiguracionUI.AbrirConfiguracion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Muestra el panel de configuración, reproduce un sonido y pausa el juego. </p>
+<p>Este método se llama automáticamente al hacer clic en el botón <code>botonAbrir</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">System.NullReferenceException</td><td>Se lanza si el <code><a class="el" href="class_audio_manager.html" title="Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...">AudioManager</a></code> o el <code>panelConfiguracion</code> no están asignados. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00099">99</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7db7fce20afdeb7cd9df73674d92f190" name="a7db7fce20afdeb7cd9df73674d92f190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db7fce20afdeb7cd9df73674d92f190">&#9670;&#160;</a></span>AbrirCreditos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConfiguracionUI.AbrirCreditos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Muestra el panel de créditos y reproduce un sonido. </p>
+<p>El tiempo del juego no se pausa al mostrar créditos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00131">131</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3fee6f634a29b8cd87be947ed300df61" name="a3fee6f634a29b8cd87be947ed300df61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fee6f634a29b8cd87be947ed300df61">&#9670;&#160;</a></span>CerrarConfiguracion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConfiguracionUI.CerrarConfiguracion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oculta el panel de configuración, reproduce un sonido y reanuda el juego. </p>
+<p>Este método se llama al presionar el botón <code>botonCerrar</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00115">115</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
+
+</div>
+</div>
+<a id="abcb78832379c7a8e049b291d535cdf6c" name="abcb78832379c7a8e049b291d535cdf6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb78832379c7a8e049b291d535cdf6c">&#9670;&#160;</a></span>CerrarCreditos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConfiguracionUI.CerrarCreditos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oculta el panel de créditos y reproduce un sonido. </p>
+<p>Se recomienda ocultar el panel con animación si deseas una mejor experiencia de usuario. </p>
+
+<p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00145">145</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
+
+</div>
+</div>
+<a id="aede1a8021ead3e1ce35384eeb4871156" name="aede1a8021ead3e1ce35384eeb4871156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede1a8021ead3e1ce35384eeb4871156">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConfiguracionUI.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Se ejecuta al iniciar el objeto y configura la visibilidad de los paneles y la asignación de eventos a los botones. </p>
+<p>Este método desactiva inicialmente los paneles y vincula los métodos a los botones. </p>
+
+<p class="definition">Definition at line <a class="el" href="_configuracion_8cs_source.html#l00073">73</a> of file <a class="el" href="_configuracion_8cs_source.html">Configuracion.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a656636c0defa36180fc586cb18087931" name="a656636c0defa36180fc586cb18087931"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a656636c0defa36180fc586cb18087931">&#9670;&#160;</a></span>botonAbrir</h2>
 

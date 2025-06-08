@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/CamaraTemblar.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -110,14 +110,15 @@ $(function(){initNavTree('_camara_temblar_8cs_source.html','',''); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_camera_shake.html#a87df378e2b4cfa6d4a515c31dd0269c7">   26</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_shake.html#a87df378e2b4cfa6d4a515c31dd0269c7">Sacudir</a>()</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// Aquí empezamos una &quot;corutina&quot;, que es como una función que se ejecuta poco a poco con el tiempo.</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        StartCoroutine(Shake());</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        StartCoroutine(<a class="code hl_function" href="class_camera_shake.html#ad52801226c1585557d82071161a065c0">Shake</a>());</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Esta es la función que realmente hace que la cámara se sacuda.</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// IEnumerator permite que esta función se ejecute con pausas entre cada paso (no todo de golpe).</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span> IEnumerator Shake()</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_camera_shake.html#ad52801226c1585557d82071161a065c0">   41</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_camera_shake.html#ad52801226c1585557d82071161a065c0">Shake</a>()</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Vector3 posicionOriginal = transform.localPosition;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -140,12 +141,14 @@ $(function(){initNavTree('_camara_temblar_8cs_source.html','',''); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        transform.localPosition = posicionOriginal;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 </div>
 <div class="ttc" id="aclass_camera_shake_html"><div class="ttname"><a href="class_camera_shake.html">CameraShake</a></div><div class="ttdoc">Permite aplicar un efecto de sacudida o &quot;temblor&quot; a la cámara, ideal para representar impactos o daño...</div><div class="ttdef"><b>Definition</b> <a href="#l00008">CamaraTemblar.cs:9</a></div></div>
 <div class="ttc" id="aclass_camera_shake_html_a5d15d6793ebbae009a425617e5f2f82a"><div class="ttname"><a href="class_camera_shake.html#a5d15d6793ebbae009a425617e5f2f82a">CameraShake.duracion</a></div><div class="ttdeci">float duracion</div><div class="ttdoc">Duración total de la sacudida en segundos.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">CamaraTemblar.cs:14</a></div></div>
 <div class="ttc" id="aclass_camera_shake_html_a668286886a4bbeea8a2838f11f43f8bc"><div class="ttname"><a href="class_camera_shake.html#a668286886a4bbeea8a2838f11f43f8bc">CameraShake.magnitud</a></div><div class="ttdeci">float magnitud</div><div class="ttdoc">Magnitud o intensidad del temblor. Controla qué tanto se moverá la cámara.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">CamaraTemblar.cs:19</a></div></div>
 <div class="ttc" id="aclass_camera_shake_html_a87df378e2b4cfa6d4a515c31dd0269c7"><div class="ttname"><a href="class_camera_shake.html#a87df378e2b4cfa6d4a515c31dd0269c7">CameraShake.Sacudir</a></div><div class="ttdeci">void Sacudir()</div><div class="ttdoc">Método público que inicia el efecto de sacudida de la cámara. Puede ser llamado desde otros scripts o...</div><div class="ttdef"><b>Definition</b> <a href="#l00026">CamaraTemblar.cs:26</a></div></div>
+<div class="ttc" id="aclass_camera_shake_html_ad52801226c1585557d82071161a065c0"><div class="ttname"><a href="class_camera_shake.html#ad52801226c1585557d82071161a065c0">CameraShake.Shake</a></div><div class="ttdeci">IEnumerator Shake()</div><div class="ttdoc">Corrutina que implementa la sacudida de la cámara durante el tiempo definido.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">CamaraTemblar.cs:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

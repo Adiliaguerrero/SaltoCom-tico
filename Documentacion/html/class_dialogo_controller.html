@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: DialogoController Class Reference</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -118,6 +118,11 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a577d9974bf82a2fe7be36a45792330fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista de líneas que serán mostradas una a una en el diálogo.  <br /></td></tr>
 <tr class="memitem:a6195ef4b24971b5c8fdbcaac6208b8e8" id="r_a6195ef4b24971b5c8fdbcaac6208b8e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6195ef4b24971b5c8fdbcaac6208b8e8">tiempoEntreLineas</a> = 2f</td></tr>
 <tr class="memdesc:a6195ef4b24971b5c8fdbcaac6208b8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tiempo (en segundos) que cada línea permanecerá en pantalla antes de pasar a la siguiente.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a638bd87144dae0199efd64cf3c8daed3" id="r_a638bd87144dae0199efd64cf3c8daed3"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a638bd87144dae0199efd64cf3c8daed3">MostrarLineas</a> (System.Action callback)</td></tr>
+<tr class="memdesc:a638bd87144dae0199efd64cf3c8daed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corrutina que recorre cada línea del diálogo y la muestra en pantalla con una pausa entre cada una.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controla la visualización de un sistema de diálogo en pantalla después de activar un portal. </p>
@@ -167,6 +172,44 @@ Data Fields</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00062">62</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
+
+</div>
+</div>
+<a id="a638bd87144dae0199efd64cf3c8daed3" name="a638bd87144dae0199efd64cf3c8daed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a638bd87144dae0199efd64cf3c8daed3">&#9670;&#160;</a></span>MostrarLineas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator DialogoController.MostrarLineas </td>
+          <td>(</td>
+          <td class="paramtype">System.Action</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Corrutina que recorre cada línea del diálogo y la muestra en pantalla con una pausa entre cada una. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Función a invocar al finalizar el diálogo.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Un enumerador para manejar el retardo entre líneas.</dd></dl>
+<p>Al terminar el diálogo, limpia el texto y desactiva el panel. </p>
+<dl class="section see"><dt>See also</dt><dd>IEnumerator</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_dialog_contr_8cs_source.html#l00078">78</a> of file <a class="el" href="_dialog_contr_8cs_source.html">DialogContr.cs</a>.</p>
 
 </div>
 </div>

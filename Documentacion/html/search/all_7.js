@@ -1,17 +1,9 @@
 var searchData=
 [
-  ['imagen1_0',['imagen1',['../class_paneles1.html#a4a4e32424fca4936a835fa74305a996b',1,'Paneles1']]],
-  ['imagen2_1',['imagen2',['../class_paneles1.html#aa739f5a1685c1daf0ef172aa443f85c9',1,'Paneles1']]],
-  ['imagenaeliminar_2',['imagenAEliminar',['../class_barra_vida.html#aea5f0961ab4cf297a9b10281f29b1455',1,'BarraVida']]],
-  ['imagenlinea_3',['imagenLinea',['../class_unir_frases_interactivo.html#a8e66262f7e44e86fc7e612a0ac21cb40',1,'UnirFrasesInteractivo']]],
-  ['imagenpersonaje_4',['imagenPersonaje',['../class_selector_personaje.html#afe3546ceb2ac87c414cfd81c72690a90',1,'SelectorPersonaje']]],
-  ['iniciararrastredesdetexto_5',['IniciarArrastreDesdeTexto',['../class_unir_frases_interactivo.html#ac545fc01d7faea567f1b4ff3d85274b0',1,'UnirFrasesInteractivo']]],
-  ['inicioperso_2ecs_6',['InicioPerso.cs',['../_inicio_perso_8cs.html',1,'']]],
-  ['instancia_7',['instancia',['../class_audio_manager.html#ac112d1957778ad900886e38e20628fd6',1,'AudioManager.instancia'],['../class_musica_manager.html#a798507bd3844b8928a43931398d4739e',1,'MusicaManager.instancia'],['../class_puntos_manager.html#aa66fc0aad749b11cc5f183734f95f614',1,'PuntosManager.instancia']]],
-  ['instruccion_2ecs_8',['Instruccion.cs',['../_instruccion_8cs.html',1,'']]],
-  ['instruccionesvisuales_9',['InstruccionesVisuales',['../class_instrucciones_visuales.html',1,'']]],
-  ['intermediocorrectotext_10',['IntermedioCorrectoText',['../class_puntos_manager.html#ae27ec47af7abe25bfc203b741be0d533',1,'PuntosManager']]],
-  ['intermedioincorrectotext_11',['IntermedioIncorrectoText',['../class_puntos_manager.html#ac0ca757ef5146fe0278118cd8ca33680',1,'PuntosManager']]],
-  ['irainicio_12',['IrAInicio',['../class_menu_controller.html#aa2b3f331725788163115d327cba8120c',1,'MenuController']]],
-  ['iralogros_13',['IrALogros',['../class_menu_controller.html#a80cbb79a80231ddadb26e5267bd1099a',1,'MenuController']]]
+  ['hacolisionado_0',['haColisionado',['../class_colisionador_trigger2_d.html#addabd1a68e5c18ad4e9fde63d4d4e386',1,'ColisionadorTrigger2D']]],
+  ['handle_1',['handle',['../class_joystick.html#aca64551fcfa66b5a9558d80a64b426c8',1,'Joystick.handle'],['../class_joystick_editor.html#a166bc651bdb3cbcf254eb4ab7001eab2',1,'JoystickEditor.handle']]],
+  ['handleinput_2',['HandleInput',['../class_joystick.html#aa97db68bee288b2a414342244ca19d93',1,'Joystick.HandleInput()'],['../class_dynamic_joystick.html#a5690b2fcec265e43258cce9ea4d79c20',1,'DynamicJoystick.HandleInput()'],['../class_variable_joystick.html#a6d058f316d7fdd67f4d72b2470080b9b',1,'VariableJoystick.HandleInput()']]],
+  ['handlerange_3',['HandleRange',['../class_joystick.html#a4466f9c002c281142fbf344d4f8f7163',1,'Joystick']]],
+  ['handlerange_4',['handleRange',['../class_joystick.html#a8ba2590935eea18e74297cc56c8e5605',1,'Joystick.handleRange'],['../class_joystick_editor.html#ab6b95e9254be1bbfefac07d4ca3907d3',1,'JoystickEditor.handleRange']]],
+  ['horizontal_5',['Horizontal',['../class_joystick.html#aa96a7d4d3f9c4b3d79747b0fb4a0d4f7',1,'Joystick.Horizontal'],['../_joystick_8cs.html#a83e7790355456a5daea7dce17053e530ac1b5fa03ecdb95d4a45dd1c40b02527f',1,'Horizontal:&#160;Joystick.cs']]]
 ];

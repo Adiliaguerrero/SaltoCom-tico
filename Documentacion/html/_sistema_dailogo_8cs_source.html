@@ -6,6 +6,7 @@
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SaltoComatico: C:/Users/molin/SaltoComatico/Assets/Script/SistemaDailogo.cs Source File</title>
+<link rel="icon" href="Logo1.1.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Logo1.1.png"/></td>
   <td id="projectalign">
    <div id="projectname">SaltoComatico<span id="projectnumber">&#160;2.0</span>
    </div>
@@ -110,30 +110,31 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a4a5aae6c240ef1d274ca525798ac99d8">   31</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_sistema_dialogo.html#a4a5aae6c240ef1d274ca525798ac99d8">velocidadEscritura</a> = 0.05f;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> Coroutine escrituraActual;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">   33</a></span>    <span class="keyword">private</span> Coroutine <a class="code hl_variable" href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">escrituraActual</a>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#acf496337d984a8508e91e0a5805c258e">   38</a></span>    <span class="keyword">public</span> TextMeshProUGUI <a class="code hl_variable" href="class_sistema_dialogo.html#acf496337d984a8508e91e0a5805c258e">textoDialogo</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> indice = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">   40</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">indice</a> = 0;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a78922b801e5e4a329e7d058712b94059">   45</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_sistema_dialogo.html#a78922b801e5e4a329e7d058712b94059">npcPrefab</a>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a7322d867e0a85c72552c130f8776ffa5">   50</a></span>    <span class="keyword">public</span> Transform <a class="code hl_variable" href="class_sistema_dialogo.html#a7322d867e0a85c72552c130f8776ffa5">puntoReaparicion</a>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> dialogoIniciado = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#abfbcceeab633ff2b3dd63336d6f6248f">   52</a></span>    <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_sistema_dialogo.html#abfbcceeab633ff2b3dd63336d6f6248f">dialogoIniciado</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d">   58</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span> Rigidbody2D rbJugadorOriginal;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">   60</a></span>    <span class="keyword">private</span> Rigidbody2D <a class="code hl_variable" href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">rbJugadorOriginal</a>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">private</span> <a class="code hl_class" href="class_player_controller.html">PlayerController</a> playerController;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">   62</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="class_player_controller.html">PlayerController</a> <a class="code hl_variable" href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">playerController</a>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">   67</a></span>    <span class="keyword">public</span> GameObject <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#ab47bc2b13b27da77695a8686e22d1514">   72</a></span>    <span class="keyword">public</span> AudioClip <a class="code hl_variable" href="class_sistema_dialogo.html#ab47bc2b13b27da77695a8686e22d1514">sonidoPanel</a>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> Start()</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a4a9963dbd38a80ecbca6c4d85a48c283">   74</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema_dialogo.html#a4a9963dbd38a80ecbca6c4d85a48c283">Start</a>()</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_variable" href="class_sistema_dialogo.html#a0a6505f03018529ea5d59dad5ade1ec9">panelDialogo</a>.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
@@ -143,30 +144,31 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            boton.onClick.AddListener(<a class="code hl_function" href="class_sistema_dialogo.html#a6963f01bf1b72c7d0e8cf18c3a775f06">MostrarLinea</a>);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
 <div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0">ActivarDialogo</a>()</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (dialogoIniciado) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#abfbcceeab633ff2b3dd63336d6f6248f">dialogoIniciado</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        dialogoIniciado = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_variable" href="class_sistema_dialogo.html#abfbcceeab633ff2b3dd63336d6f6248f">dialogoIniciado</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_variable" href="class_sistema_dialogo.html#a0a6505f03018529ea5d59dad5ade1ec9">panelDialogo</a>.SetActive(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        indice = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_variable" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">indice</a> = 0;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        GameObject jugador = GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Player&quot;</span>);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (jugador != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            rbJugadorOriginal = jugador.GetComponent&lt;Rigidbody2D&gt;();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">if</span> (rbJugadorOriginal != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_variable" href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">rbJugadorOriginal</a> = jugador.GetComponent&lt;Rigidbody2D&gt;();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">rbJugadorOriginal</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                rbJugadorOriginal.velocity = Vector2.zero;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                rbJugadorOriginal.bodyType = RigidbodyType2D.Static;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            playerController = jugador.GetComponent&lt;<a class="code hl_class" href="class_player_controller.html">PlayerController</a>&gt;();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_variable" href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">playerController</a> = jugador.GetComponent&lt;<a class="code hl_class" href="class_player_controller.html">PlayerController</a>&gt;();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">playerController</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                playerController.puedeMoverse = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            }</div>
@@ -174,10 +176,10 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            FixedJoystick joystick = <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a> joystick = <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;<a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a>&gt;();</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                joystick.OnPointerUp(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                joystick.<a class="code hl_function" href="class_joystick.html#ad56badf3ee242443cb4f5940d6b00701">OnPointerUp</a>(<span class="keyword">null</span>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                joystick.enabled = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.SetActive(<span class="keyword">false</span>);</div>
@@ -197,16 +199,16 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordtype">string</span>[] dialogoActual = <a class="code hl_variable" href="class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a> ? <a class="code hl_variable" href="class_sistema_dialogo.html#a5d53c20b372b8a8af4209e049d84fc12">lineasReaparicion</a> : <a class="code hl_variable" href="class_sistema_dialogo.html#a617bca046d04b8591761fdd580b2de4e">lineasIniciales</a>;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (indice &lt; dialogoActual.Length)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">indice</a> &lt; dialogoActual.Length)</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span> (escrituraActual != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">escrituraActual</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                StopCoroutine(escrituraActual);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                StopCoroutine(<a class="code hl_variable" href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">escrituraActual</a>);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            escrituraActual = StartCoroutine(EscribirLinea(dialogoActual[indice]));</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <a class="code hl_variable" href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">escrituraActual</a> = StartCoroutine(<a class="code hl_function" href="class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1">EscribirLinea</a>(dialogoActual[<a class="code hl_variable" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">indice</a>]));</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            indice++;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <a class="code hl_variable" href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">indice</a>++;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
@@ -214,16 +216,16 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d">esReaparicion</a>)</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">if</span> (rbJugadorOriginal != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">rbJugadorOriginal</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    rbJugadorOriginal.bodyType = RigidbodyType2D.Dynamic;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                <span class="keywordflow">if</span> (playerController != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">playerController</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    playerController.puedeMoverse = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a> != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                {</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    FixedJoystick joystick = <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;FixedJoystick&gt;();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    <a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a> joystick = <a class="code hl_variable" href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">joystickUI</a>.GetComponent&lt;<a class="code hl_class" href="class_fixed_joystick.html">FixedJoystick</a>&gt;();</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    <span class="keywordflow">if</span> (joystick != <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        joystick.enabled = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                }</div>
@@ -255,15 +257,18 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
 </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> OnCollisionEnter2D(Collision2D collision)</div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#a21bc2b53b822d34ad55f5888e03babb3">  198</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema_dialogo.html#a21bc2b53b822d34ad55f5888e03babb3">OnCollisionEnter2D</a>(Collision2D collision)</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">if</span> (collision.gameObject.CompareTag(<span class="stringliteral">&quot;Player&quot;</span>))</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        {</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <a class="code hl_function" href="class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0">ActivarDialogo</a>();</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">private</span> IEnumerator EscribirLinea(<span class="keywordtype">string</span> linea)</div>
+<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1">  206</a></span>    <span class="keyword">private</span> IEnumerator <a class="code hl_function" href="class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1">EscribirLinea</a>(<span class="keywordtype">string</span> linea)</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    {</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        textoDialogo.text = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
@@ -274,24 +279,35 @@ $(function(){initNavTree('_sistema_dailogo_8cs_source.html','',''); });
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code hl_variable" href="class_sistema_dialogo.html#a4a5aae6c240ef1d274ca525798ac99d8">velocidadEscritura</a>);</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
 </div>
 <div class="ttc" id="aclass_audio_manager_html"><div class="ttname"><a href="class_audio_manager.html">AudioManager</a></div><div class="ttdoc">Gestiona globalmente el sistema de sonido del juego. Permite activar o desactivar sonidos,...</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00007">AudioManager.cs:8</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_a79bab6d2dc9af3c3a27d587ab2a32f57"><div class="ttname"><a href="class_audio_manager.html#a79bab6d2dc9af3c3a27d587ab2a32f57">AudioManager.ReproducirSonido</a></div><div class="ttdeci">void ReproducirSonido(AudioClip clip)</div><div class="ttdoc">Reproduce un clip de sonido si los sonidos están activos y el clip no es nulo.</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00083">AudioManager.cs:83</a></div></div>
 <div class="ttc" id="aclass_audio_manager_html_ac112d1957778ad900886e38e20628fd6"><div class="ttname"><a href="class_audio_manager.html#ac112d1957778ad900886e38e20628fd6">AudioManager.instancia</a></div><div class="ttdeci">static AudioManager instancia</div><div class="ttdoc">Instancia única del AudioManager en la escena (patrón Singleton).</div><div class="ttdef"><b>Definition</b> <a href="_audio_manager_8cs_source.html#l00017">AudioManager.cs:17</a></div></div>
+<div class="ttc" id="aclass_fixed_joystick_html"><div class="ttname"><a href="class_fixed_joystick.html">FixedJoystick</a></div><div class="ttdef"><b>Definition</b> <a href="_fixed_joystick_8cs_source.html#l00005">FixedJoystick.cs:6</a></div></div>
+<div class="ttc" id="aclass_joystick_html_ad56badf3ee242443cb4f5940d6b00701"><div class="ttname"><a href="class_joystick.html#ad56badf3ee242443cb4f5940d6b00701">Joystick.OnPointerUp</a></div><div class="ttdeci">virtual void OnPointerUp(PointerEventData eventData)</div><div class="ttdef"><b>Definition</b> <a href="_joystick_8cs_source.html#l00132">Joystick.cs:132</a></div></div>
 <div class="ttc" id="aclass_paneles1_html"><div class="ttname"><a href="class_paneles1.html">Paneles1</a></div><div class="ttdoc">Controla la activación secuencial de paneles tipo trivia y gestiona el estado del jugador durante su ...</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00010">Paneles1.cs:11</a></div></div>
 <div class="ttc" id="aclass_paneles1_html_a6c8e0a68251948580a968bffc2a709b7"><div class="ttname"><a href="class_paneles1.html#a6c8e0a68251948580a968bffc2a709b7">Paneles1.SiguienteTrivia</a></div><div class="ttdeci">void SiguienteTrivia()</div><div class="ttdoc">Método público que se llama desde un botón para avanzar a la siguiente trivia.</div><div class="ttdef"><b>Definition</b> <a href="_paneles1_8cs_source.html#l00080">Paneles1.cs:80</a></div></div>
 <div class="ttc" id="aclass_player_controller_html"><div class="ttname"><a href="class_player_controller.html">PlayerController</a></div><div class="ttdoc">Gestiona el comportamiento integral del personaje. Incluye movimiento, salto, animaciones,...</div><div class="ttdef"><b>Definition</b> <a href="_personaje_controller_8cs_source.html#l00009">PersonajeController.cs:10</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html"><div class="ttname"><a href="class_sistema_dialogo.html">SistemaDialogo</a></div><div class="ttdoc">Controla el sistema de diálogo de un NPC, incluyendo la escritura progresiva del texto,...</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SistemaDailogo.cs:12</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a0a6505f03018529ea5d59dad5ade1ec9"><div class="ttname"><a href="class_sistema_dialogo.html#a0a6505f03018529ea5d59dad5ade1ec9">SistemaDialogo.panelDialogo</a></div><div class="ttdeci">GameObject panelDialogo</div><div class="ttdoc">Panel de diálogo que contiene el texto y el botón de avance.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">SistemaDailogo.cs:16</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_a21bc2b53b822d34ad55f5888e03babb3"><div class="ttname"><a href="class_sistema_dialogo.html#a21bc2b53b822d34ad55f5888e03babb3">SistemaDialogo.OnCollisionEnter2D</a></div><div class="ttdeci">void OnCollisionEnter2D(Collision2D collision)</div><div class="ttdef"><b>Definition</b> <a href="#l00198">SistemaDailogo.cs:198</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a4a5aae6c240ef1d274ca525798ac99d8"><div class="ttname"><a href="class_sistema_dialogo.html#a4a5aae6c240ef1d274ca525798ac99d8">SistemaDialogo.velocidadEscritura</a></div><div class="ttdeci">float velocidadEscritura</div><div class="ttdoc">Velocidad con la que se escribe cada letra del texto (en segundos).</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SistemaDailogo.cs:31</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_a4a9963dbd38a80ecbca6c4d85a48c283"><div class="ttname"><a href="class_sistema_dialogo.html#a4a9963dbd38a80ecbca6c4d85a48c283">SistemaDialogo.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition</b> <a href="#l00074">SistemaDailogo.cs:74</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_a521fb55f63947f63d82d50dd5f8edf83"><div class="ttname"><a href="class_sistema_dialogo.html#a521fb55f63947f63d82d50dd5f8edf83">SistemaDialogo.indice</a></div><div class="ttdeci">int indice</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SistemaDailogo.cs:40</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a5d53c20b372b8a8af4209e049d84fc12"><div class="ttname"><a href="class_sistema_dialogo.html#a5d53c20b372b8a8af4209e049d84fc12">SistemaDialogo.lineasReaparicion</a></div><div class="ttdeci">string[] lineasReaparicion</div><div class="ttdoc">Líneas del diálogo mostradas cuando el NPC reaparece.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">SistemaDailogo.cs:26</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a617bca046d04b8591761fdd580b2de4e"><div class="ttname"><a href="class_sistema_dialogo.html#a617bca046d04b8591761fdd580b2de4e">SistemaDialogo.lineasIniciales</a></div><div class="ttdeci">string[] lineasIniciales</div><div class="ttdoc">Líneas del diálogo inicial mostradas la primera vez que se interactúa con el NPC.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">SistemaDailogo.cs:21</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a6963f01bf1b72c7d0e8cf18c3a775f06"><div class="ttname"><a href="class_sistema_dialogo.html#a6963f01bf1b72c7d0e8cf18c3a775f06">SistemaDialogo.MostrarLinea</a></div><div class="ttdeci">void MostrarLinea()</div><div class="ttdoc">Muestra la siguiente línea de diálogo con animación de escritura y gestiona el fin del diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00132">SistemaDailogo.cs:132</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a7322d867e0a85c72552c130f8776ffa5"><div class="ttname"><a href="class_sistema_dialogo.html#a7322d867e0a85c72552c130f8776ffa5">SistemaDialogo.puntoReaparicion</a></div><div class="ttdeci">Transform puntoReaparicion</div><div class="ttdoc">Punto donde aparecerá el NPC reaparecido.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SistemaDailogo.cs:50</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a78922b801e5e4a329e7d058712b94059"><div class="ttname"><a href="class_sistema_dialogo.html#a78922b801e5e4a329e7d058712b94059">SistemaDialogo.npcPrefab</a></div><div class="ttdeci">GameObject npcPrefab</div><div class="ttdoc">Prefab del NPC que se instanciará cuando reaparezca con otro diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SistemaDailogo.cs:45</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_a7d76a73120cac7936f01f5dfee159da0"><div class="ttname"><a href="class_sistema_dialogo.html#a7d76a73120cac7936f01f5dfee159da0">SistemaDialogo.ActivarDialogo</a></div><div class="ttdeci">void ActivarDialogo()</div><div class="ttdoc">Activa el sistema de diálogo, bloqueando al jugador y mostrando las líneas de texto.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">SistemaDailogo.cs:88</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_a86260521a008d5f592a02760f30cbe9c"><div class="ttname"><a href="class_sistema_dialogo.html#a86260521a008d5f592a02760f30cbe9c">SistemaDialogo.escrituraActual</a></div><div class="ttdeci">Coroutine escrituraActual</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SistemaDailogo.cs:33</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_aa2969f932073feada7c666295d8431d4"><div class="ttname"><a href="class_sistema_dialogo.html#aa2969f932073feada7c666295d8431d4">SistemaDialogo.playerController</a></div><div class="ttdeci">PlayerController playerController</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SistemaDailogo.cs:62</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_ab47bc2b13b27da77695a8686e22d1514"><div class="ttname"><a href="class_sistema_dialogo.html#ab47bc2b13b27da77695a8686e22d1514">SistemaDialogo.sonidoPanel</a></div><div class="ttdeci">AudioClip sonidoPanel</div><div class="ttdoc">Sonido que se reproduce al avanzar en el diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">SistemaDailogo.cs:72</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_ab6b8bd4d427deb45117d355107e280b1"><div class="ttname"><a href="class_sistema_dialogo.html#ab6b8bd4d427deb45117d355107e280b1">SistemaDialogo.EscribirLinea</a></div><div class="ttdeci">IEnumerator EscribirLinea(string linea)</div><div class="ttdef"><b>Definition</b> <a href="#l00206">SistemaDailogo.cs:206</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_abfbcceeab633ff2b3dd63336d6f6248f"><div class="ttname"><a href="class_sistema_dialogo.html#abfbcceeab633ff2b3dd63336d6f6248f">SistemaDialogo.dialogoIniciado</a></div><div class="ttdeci">bool dialogoIniciado</div><div class="ttdef"><b>Definition</b> <a href="#l00052">SistemaDailogo.cs:52</a></div></div>
+<div class="ttc" id="aclass_sistema_dialogo_html_ac5f8a1438fc75d3de8d996afff0dd612"><div class="ttname"><a href="class_sistema_dialogo.html#ac5f8a1438fc75d3de8d996afff0dd612">SistemaDialogo.rbJugadorOriginal</a></div><div class="ttdeci">Rigidbody2D rbJugadorOriginal</div><div class="ttdef"><b>Definition</b> <a href="#l00060">SistemaDailogo.cs:60</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_acf496337d984a8508e91e0a5805c258e"><div class="ttname"><a href="class_sistema_dialogo.html#acf496337d984a8508e91e0a5805c258e">SistemaDialogo.textoDialogo</a></div><div class="ttdeci">TextMeshProUGUI textoDialogo</div><div class="ttdoc">Objeto de texto (TextMeshProUGUI) donde se mostrará el diálogo.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SistemaDailogo.cs:38</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_ae15899abe1a7980960758d7ee5751a2d"><div class="ttname"><a href="class_sistema_dialogo.html#ae15899abe1a7980960758d7ee5751a2d">SistemaDialogo.esReaparicion</a></div><div class="ttdeci">bool esReaparicion</div><div class="ttdoc">Indica si el diálogo actual es parte de la reaparición del NPC.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">SistemaDailogo.cs:58</a></div></div>
 <div class="ttc" id="aclass_sistema_dialogo_html_ae5bf440805129617bdf127b888a731dd"><div class="ttname"><a href="class_sistema_dialogo.html#ae5bf440805129617bdf127b888a731dd">SistemaDialogo.joystickUI</a></div><div class="ttdeci">GameObject joystickUI</div><div class="ttdoc">UI del joystick que se desactiva durante el diálogo y se reactiva al finalizar.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">SistemaDailogo.cs:67</a></div></div>
