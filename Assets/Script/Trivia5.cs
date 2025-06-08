@@ -1,7 +1,10 @@
 using UnityEngine;
 using TMPro;
 
-// Clase que maneja la verificación de comas colocadas en zonas válidas sobre un texto
+
+    /// <summary>
+    /// Controla la verificación de comas colocadas correctamente en un texto usando espacios válidos.
+    /// </summary>
 public class TextoConComasTMP : MonoBehaviour
 {
     // Referencia al componente TextMeshProUGUI que contiene el texto con espacios para comas
