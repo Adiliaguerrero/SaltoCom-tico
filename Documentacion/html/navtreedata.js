@@ -25,22 +25,22 @@
 var NAVTREE =
 [
   [ "SaltoComatico", "index.html", [
-    [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
+    [ "Estructuras de datos", "annotated.html", [
+      [ "Estructuras de datos", "annotated.html", "annotated_dup" ],
+      [ "Índice de estructuras de datos", "classes.html", null ],
+      [ "Jerarquía de clases", "hierarchy.html", "hierarchy" ],
+      [ "Campos de datos", "functions.html", [
+        [ "Todos", "functions.html", "functions_dup" ],
+        [ "Funciones", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
-        [ "Properties", "functions_prop.html", null ]
+        [ "Propiedades", "functions_prop.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Enumerations", "globals_enum.html", null ]
+    [ "Archivos", "files.html", [
+      [ "Lista de archivos", "files.html", "files_dup" ],
+      [ "Globales", "globals.html", [
+        [ "Todos", "globals.html", null ],
+        [ "Enumeraciones", "globals_enum.html", null ]
       ] ]
     ] ]
   ] ]
@@ -54,6 +54,6 @@ var NAVTREEINDEX =
 "functions_t.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+var SYNCONMSG = 'pulsar para deshabilitar sincronización';
+var SYNCOFFMSG = 'pulsar para habilitar sincronización';
+var LISTOFALLMEMBERS = 'Lista de todos los miembros';

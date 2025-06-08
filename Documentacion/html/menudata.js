@@ -23,13 +23,13 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Data Structures",url:"annotated.html",children:[
-{text:"Data Structures",url:"annotated.html"},
-{text:"Data Structure Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
-{text:"Data Fields",url:"functions.html",children:[
-{text:"All",url:"functions.html",children:[
+{text:"Página principal",url:"index.html"},
+{text:"Estructuras de datos",url:"annotated.html",children:[
+{text:"Estructuras de datos",url:"annotated.html"},
+{text:"Índice de estructuras de datos",url:"classes.html"},
+{text:"Jerarquía de clases",url:"hierarchy.html"},
+{text:"Campos de datos",url:"functions.html",children:[
+{text:"Todos",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions_b.html#index_b"},
 {text:"c",url:"functions_c.html#index_c"},
@@ -51,7 +51,7 @@ var menudata={children:[
 {text:"u",url:"functions_u.html#index_u"},
 {text:"v",url:"functions_v.html#index_v"},
 {text:"y",url:"functions_y.html#index_y"}]},
-{text:"Functions",url:"functions_func.html",children:[
+{text:"Funciones",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func_c.html#index_c"},
 {text:"d",url:"functions_func_d.html#index_d"},
@@ -90,9 +90,9 @@ var menudata={children:[
 {text:"u",url:"functions_vars_u.html#index_u"},
 {text:"v",url:"functions_vars_v.html#index_v"},
 {text:"y",url:"functions_vars_y.html#index_y"}]},
-{text:"Properties",url:"functions_prop.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"Globals",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Enumerations",url:"globals_enum.html"}]}]}]}
+{text:"Propiedades",url:"functions_prop.html"}]}]},
+{text:"Archivos",url:"files.html",children:[
+{text:"Lista de archivos",url:"files.html"},
+{text:"Globales",url:"globals.html",children:[
+{text:"Todos",url:"globals.html"},
+{text:"Enumeraciones",url:"globals_enum.html"}]}]}]}
