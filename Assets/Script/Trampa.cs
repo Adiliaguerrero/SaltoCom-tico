@@ -6,7 +6,9 @@ using UnityEngine;
     /// </summary>
 public class Espina : MonoBehaviour
 {
-    // Cantidad de daño que la espina inflige al jugador al colisionar
+    /// <summary>
+    /// Cantidad de daño que esta espina inflige al jugador al ser tocada desde arriba.
+    /// </summary>
     public int danio = 1;
 
     // Método que se ejecuta automáticamente cuando otro objeto colisiona con este objeto (con Rigidbody2D y Collider2D)
