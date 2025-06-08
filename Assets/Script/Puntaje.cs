@@ -64,22 +64,19 @@ public static PuntosManager instancia;
         /// </summary>
     public string nombreEscena;
 
-    // Método llamado automáticamente por Unity al instanciar este objeto
     void Awake()
     {
-        // Verificamos si ya existe una instancia para mantener solo una
         if (instancia != null && instancia != this)
         {
-            Destroy(gameObject); // Destruye duplicados
+            Destroy(gameObject); 
         }
         else
         {
             instancia = this;
-            DontDestroyOnLoad(gameObject); // Persistencia entre escenas
+            DontDestroyOnLoad(gameObject); 
         }
     }
 
-    // Método llamado cuando la escena inicia o el objeto se activa
     void Start()
     {
         // Actualizamos las referencias a los objetos UI en la escena
@@ -89,29 +86,23 @@ public static PuntosManager instancia;
         ActualizarPuntajes();
     }
 
-    // Método para suscribirnos al evento de carga de escena
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // Método para desuscribirnos del evento de carga de escena (cuando se desactiva el objeto)
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Método que se ejecuta cada vez que se carga una nueva escena
     void OnSceneLoaded(Scene escena, LoadSceneMode modo)
     {
-        // Actualizamos las referencias a los objetos UI en la nueva escena
         ActualizarReferencias();
 
-        // Actualizamos los puntajes en la UI con los datos guardados
         ActualizarPuntajes();
     }
 
-    // Método para buscar los objetos en la escena y obtener sus componentes
     void ActualizarReferencias()
     {
         BasicoCorrectoText = GameObject.Find("BasicoCorrecto")?.GetComponent<TextMeshProUGUI>();
@@ -192,7 +183,6 @@ public static PuntosManager instancia;
         }
     }
 
-    // Método que reproduce el sonido y luego ejecuta la acción indicada (limpiar o cambiar escena)
     void ReproducirSonido(System.Action accion)
     {
         if (botonSonido != null && AudioManager.instancia != null)
